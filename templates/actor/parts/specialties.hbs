@@ -1,0 +1,18 @@
+{{#if isEdit}}
+<div class="specialties">
+  {{#each entry.specialties as |specialty index|}}
+  <span class="specialty-chip">
+    {{specialty}}
+    <a class="specialty-remove" data-action="removeSpecialty" data-path="{{../entry.specialtiesPath}}" data-index="{{index}}" data-tooltip="{{localize "DTD.Sheet.RemoveSpecialty"}}" aria-label="{{localize "DTD.Sheet.RemoveSpecialty"}}"><i class="fa-solid fa-xmark"></i></a>
+  </span>
+  {{/each}}
+  <span class="specialty-add">
+    <input class="specialty-input" type="text" placeholder="{{localize "DTD.Sheet.NewSpecialty"}}" aria-label="{{localize "DTD.Sheet.NewSpecialty"}}">
+    <a data-action="addSpecialty" data-path="{{entry.specialtiesPath}}" data-tooltip="{{localize "DTD.Sheet.AddSpecialty"}}" aria-label="{{localize "DTD.Sheet.AddSpecialty"}}"><i class="fa-solid fa-plus"></i></a>
+  </span>
+</div>
+{{else if entry.specialties.length}}
+<div class="specialties readonly">
+  {{#each entry.specialties as |specialty|}}<span class="specialty-chip">{{specialty}}</span>{{/each}}
+</div>
+{{/if}}

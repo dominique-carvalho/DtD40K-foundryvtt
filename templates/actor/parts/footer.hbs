@@ -1,0 +1,31 @@
+<footer class="sheet-footer">
+  <div class="footer-stats">
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.speed"}}</span><span class="stat-value">{{system.derived.speed}} {{localize "DTD.Sheet.SpeedMeters"}}</span></div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Sheet.Initiative"}}</span><span class="stat-value">1d10 + {{initiativeBonus}}</span></div>
+  </div>
+  {{#if isEdit}}
+  <details class="gm-adjustments">
+    <summary>{{localize "DTD.Sheet.GmAdjustments"}}</summary>
+    <table class="derived-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>{{localize "DTD.Sheet.Value"}}</th>
+          <th>{{localize "DTD.Sheet.Bonus"}}</th>
+          <th>{{localize "DTD.Sheet.Override"}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each derived as |row|}}
+        <tr class="derived-row{{#if row.overridden}} overridden{{/if}}" data-key="{{row.key}}">
+          <th scope="row">{{localize row.label}}</th>
+          <td class="derived-value">{{row.value}}</td>
+          <td><input type="number" name="system.derivedMods.{{row.key}}.bonus" value="{{row.bonus}}" step="1"></td>
+          <td><input type="number" name="system.derivedMods.{{row.key}}.override" value="{{row.override}}" step="1" placeholder="—"></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </details>
+  {{/if}}
+</footer>

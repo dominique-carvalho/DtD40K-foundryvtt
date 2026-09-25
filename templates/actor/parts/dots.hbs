@@ -1,0 +1,9 @@
+<span class="dots{{#if editable}} editable{{/if}}" data-path="{{path}}">
+  {{#each dots as |dot|}}
+  {{#if ../editable}}
+  <a class="dot{{#if dot.filled}} filled{{/if}}{{#if dot.superhuman}} superhuman{{/if}}" data-action="setDots" data-path="{{../path}}" data-value="{{dot.index}}" aria-label="{{dot.index}}"></a>
+  {{else}}
+  <span class="dot{{#if dot.filled}} filled{{/if}}{{#if dot.superhuman}} superhuman{{/if}}"></span>
+  {{/if}}
+  {{/each}}
+</span>

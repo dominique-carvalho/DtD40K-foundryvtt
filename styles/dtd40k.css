@@ -1,0 +1,602 @@
+/* Dungeons the Dragoning — system styles. All rules are scoped under .dtd40k.
+   Colors come only from Foundry v13 theme variables (light and dark themes). */
+
+.dtd40k {
+  --dtd-text: var(--color-text-primary);
+  --dtd-text-muted: var(--color-text-secondary);
+  --dtd-text-subtle: var(--color-text-subtle);
+  --dtd-border: var(--color-border);
+  --dtd-accent: var(--color-border-highlight);
+  --dtd-hp: #c0392b;
+  --dtd-resolve: #2e86c1;
+  --dtd-dot-size: 0.7rem;
+}
+
+/* ---------- Window & layout ---------- */
+
+.dtd40k.sheet.character {
+  min-width: 720px;
+}
+
+.dtd40k.sheet.character .window-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 0.75rem 0.75rem;
+  overflow-y: auto;
+  color: var(--dtd-text);
+}
+
+.dtd40k .section-title {
+  margin: 0 0 0.4rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--dtd-accent);
+  font-size: 1rem;
+  color: var(--dtd-text);
+}
+
+.dtd40k input[type="number"] {
+  width: 3rem;
+  height: 1.6rem;
+  text-align: center;
+}
+
+/* ---------- Sticky header (FR-026) ---------- */
+
+.dtd40k .sheet-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.6rem 0 0.5rem;
+  background: var(--color-cool-5, inherit);
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k.themed.theme-light .sheet-header {
+  background: var(--color-light-1, #f3f3f3);
+}
+
+.dtd40k .identity {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dtd40k .profile-img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border: 1px solid var(--dtd-border);
+  border-radius: 4px;
+}
+
+.dtd40k.mode-edit .profile-img {
+  cursor: pointer;
+}
+
+.dtd40k .identity-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.dtd40k .actor-name {
+  margin: 0;
+  font-size: 1.4rem;
+  height: auto;
+  border: none;
+  color: var(--dtd-text);
+}
+
+.dtd40k input.actor-name {
+  width: 100%;
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k .identity-line {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .identity-line label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dtd40k .mode-toggle {
+  display: flex;
+  gap: 0;
+}
+
+.dtd40k .mode-button {
+  min-width: 5.5rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  opacity: 0.65;
+}
+
+.dtd40k .mode-button.active {
+  opacity: 1;
+  border-color: var(--dtd-accent);
+  box-shadow: inset 0 -2px 0 var(--dtd-accent);
+}
+
+.dtd40k .vitals {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.dtd40k .tracks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.dtd40k .track-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .track-values {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--dtd-text);
+}
+
+.dtd40k .bar {
+  height: 0.5rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dtd40k .bar .fill {
+  display: block;
+  height: 100%;
+}
+
+.dtd40k .track.hp .fill {
+  background: var(--dtd-hp);
+}
+
+.dtd40k .track.resolve .fill {
+  background: var(--dtd-resolve);
+}
+
+.dtd40k .stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  padding: 0.3rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.dtd40k .stat-label {
+  font-size: 0.7rem;
+  line-height: 1.1;
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .stat-value {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--dtd-text);
+}
+
+.dtd40k .stat-value.pair {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 1rem;
+}
+
+.dtd40k .stat-value input[type="number"] {
+  width: 2.4rem;
+}
+
+/* ---------- Dots (FR-025) ---------- */
+
+.dtd40k .dots {
+  display: inline-flex;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.dtd40k .dot {
+  width: var(--dtd-dot-size);
+  height: var(--dtd-dot-size);
+  border: 1px solid var(--dtd-text-muted);
+  border-radius: 50%;
+}
+
+.dtd40k .dot.filled {
+  background: var(--dtd-text);
+  border-color: var(--dtd-text);
+}
+
+.dtd40k .dot.superhuman {
+  margin-left: 0.2rem;
+  border-style: dashed;
+  border-color: var(--dtd-accent);
+}
+
+.dtd40k .dot.superhuman.filled {
+  background: var(--dtd-accent);
+}
+
+.dtd40k .dots.editable .dot {
+  cursor: pointer;
+}
+
+.dtd40k .dots.editable .dot:hover {
+  box-shadow: 0 0 0 2px var(--dtd-accent);
+}
+
+/* ---------- Traits (shared) ---------- */
+
+.dtd40k .trait {
+  padding: 0.2rem 0.3rem;
+  border-bottom: 1px dotted var(--dtd-border);
+}
+
+.dtd40k .trait-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.dtd40k .trait-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dtd40k .trait-char {
+  margin-left: 0.25rem;
+  font-size: 0.75em;
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .advanced-mark {
+  color: var(--dtd-accent);
+  font-weight: bold;
+}
+
+.dtd40k .pool:empty {
+  display: none;
+}
+
+/* ---------- Characteristics grid (FR-023) ---------- */
+
+.dtd40k .char-grid {
+  display: grid;
+  grid-template-columns: 5.5rem repeat(3, minmax(0, 1fr));
+  gap: 0.2rem 0.75rem;
+  align-items: start;
+}
+
+.dtd40k .grid-column-label,
+.dtd40k .grid-row-label {
+  font-size: 0.75rem;
+  color: var(--dtd-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dtd40k .grid-row-label {
+  padding-top: 0.3rem;
+}
+
+/* ---------- Skills (FR-024, FR-027) ---------- */
+
+.dtd40k .skills-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.dtd40k .skills-header .section-title {
+  flex: 1;
+}
+
+.dtd40k .skill-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.dtd40k .skill-search {
+  width: 11rem;
+  height: 1.6rem;
+}
+
+.dtd40k .only-trained {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.dtd40k .skill-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.dtd40k .skill-column h3 {
+  margin: 0 0 0.2rem;
+  font-size: 0.75rem;
+  color: var(--dtd-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: none;
+}
+
+.dtd40k .trait-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dtd40k .trait[hidden] {
+  display: none;
+}
+
+/* ---------- Specialties ---------- */
+
+.dtd40k .specialties {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+}
+
+.dtd40k .specialty-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0 0.4rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 0.6rem;
+}
+
+.dtd40k .specialty-add {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.dtd40k .specialty-input {
+  width: 7rem;
+  height: 1.3rem;
+  font-size: 0.72rem;
+}
+
+/* ---------- Footer (FR-028, FR-029) ---------- */
+
+.dtd40k .sheet-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--dtd-border);
+}
+
+.dtd40k .footer-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 0.5rem;
+}
+
+.dtd40k .gm-adjustments summary {
+  cursor: pointer;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .derived-table {
+  width: 100%;
+  margin-top: 0.4rem;
+  border-collapse: collapse;
+}
+
+.dtd40k .derived-table th,
+.dtd40k .derived-table td {
+  padding: 0.2rem 0.4rem;
+  text-align: center;
+  color: var(--dtd-text);
+}
+
+.dtd40k .derived-table th[scope="row"] {
+  text-align: left;
+}
+
+.dtd40k .derived-value {
+  font-weight: bold;
+}
+
+.dtd40k .derived-row.overridden .derived-value {
+  color: var(--dtd-accent);
+}
+
+/* ---------- Play mode rolling (US2) ---------- */
+
+.dtd40k .roll-link {
+  cursor: pointer;
+  color: var(--dtd-text);
+}
+
+.dtd40k .roll-link:hover {
+  color: var(--dtd-accent);
+  text-shadow: none;
+}
+
+.dtd40k .roll-link .fa-dice-d10 {
+  font-size: 0.75em;
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .trait-name.blocked {
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .pool {
+  min-width: 2.6rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  text-align: right;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .pool.untrained {
+  font-style: italic;
+}
+
+/* ---------- Chat roll card (US2) ---------- */
+
+.dtd40k.roll-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.dtd40k .roll-card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--color-border-highlight);
+}
+
+.dtd40k .roll-card-title {
+  margin: 0;
+  font-size: 1rem;
+  border: none;
+}
+
+.dtd40k .roll-card-formula {
+  font-family: var(--font-mono, monospace);
+  font-weight: bold;
+}
+
+.dtd40k .roll-card-note {
+  margin: 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+.dtd40k .roll-card-dice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k .roll-die {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: var(--font-mono, monospace);
+}
+
+.dtd40k .roll-die.kept {
+  border-color: var(--color-border-highlight);
+  font-weight: bold;
+}
+
+.dtd40k .roll-die.dropped {
+  opacity: 0.55;
+}
+
+.dtd40k .roll-die .chain {
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+
+.dtd40k .roll-die .rerolled {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.dtd40k .roll-card-total {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.dtd40k .roll-card-total strong {
+  font-size: 1.4rem;
+}
+
+.dtd40k .roll-card-tn {
+  margin-left: auto;
+  color: var(--color-text-secondary);
+}
+
+.dtd40k .roll-card-outcome {
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dtd40k .roll-card-outcome.success {
+  border: 1px solid #2e8b57;
+  color: #2e8b57;
+}
+
+.dtd40k .roll-card-outcome.failure {
+  border: 1px solid #c0392b;
+  color: #c0392b;
+}
+
+/* ---------- Roll dialog (US3) ---------- */
+
+.dtd40k.roll-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.dtd40k .roll-dialog-summary {
+  margin: 0 0 0.25rem;
+  font-weight: bold;
+}
+
+.dtd40k .roll-dialog .dice-mod {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dtd40k .roll-dialog .dice-mod input {
+  width: 3.5rem;
+}

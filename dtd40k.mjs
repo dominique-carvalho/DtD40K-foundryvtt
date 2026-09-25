@@ -3,7 +3,9 @@
  */
 import { DTD } from "./module/config.mjs";
 import { CharacterData } from "./module/data/character-data.mjs";
+import { RaceData } from "./module/data/race-data.mjs";
 import { DtdActor } from "./module/documents/actor.mjs";
+import { DtdItem } from "./module/documents/item.mjs";
 import { CharacterSheet } from "./module/apps/character-sheet.mjs";
 
 Hooks.once("init", () => {
@@ -12,6 +14,9 @@ Hooks.once("init", () => {
 
   CONFIG.Actor.documentClass = DtdActor;
   CONFIG.Actor.dataModels.character = CharacterData;
+
+  CONFIG.Item.documentClass = DtdItem;
+  CONFIG.Item.dataModels.race = RaceData;
 
   // Initiative: 1d10 + Dexterity + Composure, no explosion (DtD 1.6 p. 241).
   CONFIG.Combat.initiative = {

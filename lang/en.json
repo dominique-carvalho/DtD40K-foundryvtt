@@ -2,6 +2,9 @@
   "TYPES": {
     "Actor": {
       "character": "Character"
+    },
+    "Item": {
+      "race": "Race"
     }
   },
   "DTD": {
@@ -103,6 +106,15 @@
         "mental": "Mental",
         "physical": "Physical",
         "social": "Social"
+      }
+    },
+    "Race": {
+      "Automation": {
+        "none": "Text only",
+        "usesPerScene": "Uses per scene",
+        "heroicHeritage": "Heroic Heritage",
+        "shifty": "Shifty",
+        "squatToughness": "Squat Toughness"
       }
     }
   }

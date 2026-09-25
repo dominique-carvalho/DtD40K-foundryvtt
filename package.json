@@ -13,10 +13,12 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build:packs": "node scripts/build-packs.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@foundryvtt/foundryvtt-cli": "^3.0.4",
     "@vitest/coverage-v8": "^5.0.1",
     "eslint": "^10.11.0",
     "globals": "^17.12.0",

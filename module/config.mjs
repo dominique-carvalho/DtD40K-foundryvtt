@@ -104,10 +104,21 @@ export const SKILLS = {
 /** Derived values that accept a manual bonus and override. */
 export const DERIVED_KEYS = ["staticDefense", "hpMax", "mentalDefense", "resolveMax", "speed", "resilience"];
 
+/** Highest characteristic or skill rating, racial bonuses included (spec 002, FR-015). */
+export const MAX_RATING = 6;
+
+/**
+ * How a racial power is handled (spec 002, FR-016 to FR-018).
+ * none: text only · usesPerScene: 1/2/3 uses at Level 1/3/5 · the others are automated.
+ */
+export const RACE_POWER_AUTOMATION = ["none", "usesPerScene", "heroicHeritage", "shifty", "squatToughness"];
+
 export const DTD = {
   GROUPS,
   CHARACTERISTICS,
   CHARACTERISTIC_GRID,
   SKILLS,
-  DERIVED_KEYS
+  DERIVED_KEYS,
+  MAX_RATING,
+  RACE_POWER_AUTOMATION
 };

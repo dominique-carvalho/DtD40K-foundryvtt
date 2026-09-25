@@ -31,11 +31,11 @@ personagem, US3 poderes raciais).
 
 **Purpose**: ferramental de build do compêndio e manifesto
 
-- [ ] T001 Adicionar a devDependency `@foundryvtt/foundryvtt-cli` (`^3.0.4`) e o script `"build:packs": "node scripts/build-packs.mjs"` em `package.json`; rodar `npm install` (atualiza `package-lock.json`)
-- [ ] T002 [P] Criar `scripts/build-packs.mjs` (ESM, Node): importa `compilePack` de `@foundryvtt/foundryvtt-cli`, compila `src/packs/races` → `packs/races` com `{ log: true }`, remove antes a pasta de destino se existir, e sai com código ≠ 0 em erro (mensagem pedindo para fechar o Foundry se o LevelDB estiver bloqueado)
-- [ ] T003 [P] Adicionar `packs/` ao `.gitignore` na seção "Foundry VTT" (a saída binária não é versionada — research R8), mantendo as linhas existentes
-- [ ] T004 [P] Em `eslint.config.mjs`, acrescentar aos globais somente leitura do Foundry: `Item`, `ActiveEffect`, `CONST` (não declarar `TextEditor`: alias obsoleto no v13 — usar `foundry.applications.ux.TextEditor.implementation`); incluir `scripts/**` com `globals.node`
-- [ ] T005 [P] Em `system.json`: acrescentar `documentTypes.Item.race: { "htmlFields": ["description", "power.description"] }` e `packs: [{ "name": "races", "label": "Races", "path": "packs/races", "type": "Item", "system": "dtd40k", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }]` (contracts/foundry-api.md)
+- [X] T001 Adicionar a devDependency `@foundryvtt/foundryvtt-cli` (`^3.0.4`) e o script `"build:packs": "node scripts/build-packs.mjs"` em `package.json`; rodar `npm install` (atualiza `package-lock.json`)
+- [X] T002 [P] Criar `scripts/build-packs.mjs` (ESM, Node): importa `compilePack` de `@foundryvtt/foundryvtt-cli`, compila `src/packs/races` → `packs/races` com `{ log: true }`, remove antes a pasta de destino se existir, e sai com código ≠ 0 em erro (mensagem pedindo para fechar o Foundry se o LevelDB estiver bloqueado)
+- [X] T003 [P] Adicionar `packs/` ao `.gitignore` na seção "Foundry VTT" (a saída binária não é versionada — research R8), mantendo as linhas existentes
+- [X] T004 [P] Em `eslint.config.mjs`, acrescentar aos globais somente leitura do Foundry: `Item`, `ActiveEffect`, `CONST` (não declarar `TextEditor`: alias obsoleto no v13 — usar `foundry.applications.ux.TextEditor.implementation`); incluir `scripts/**` com `globals.node`
+- [X] T005 [P] Em `system.json`: acrescentar `documentTypes.Item.race: { "htmlFields": ["description", "power.description"] }` e `packs: [{ "name": "races", "label": "Races", "path": "packs/races", "type": "Item", "system": "dtd40k", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }]` (contracts/foundry-api.md)
 
 ---
 
@@ -45,12 +45,12 @@ personagem, US3 poderes raciais).
 
 **⚠️ CRITICAL**: nenhuma história começa antes desta fase
 
-- [ ] T006 [P] Acrescentar em `tests/unit/config.test.mjs`: `RACE_POWER_AUTOMATION` é exatamente `["none", "usesPerScene", "heroicHeritage", "shifty", "squatToughness"]`; `MAX_RATING === 6`; ambos exportados em `DTD`
-- [ ] T007 Em `module/config.mjs` (PURO): exportar `RACE_POWER_AUTOMATION` e `MAX_RATING = 6` e incluí-los no objeto `DTD`; fazer T006 passar
-- [ ] T008 Criar `module/data/race-data.mjs` (`RaceData extends foundry.abstract.TypeDataModel`) com `defineSchema()` exatamente conforme data-model.md: `description` HTMLField; `source.book` string "padrão `\"DtD 1.6\"`"; `source.page` "inteiro ≥ 1" (nullable, inicial null); `characteristicBonus.options` "lista de chaves de característica, única" (StringField com `choices` = chaves de `CHARACTERISTICS`); `characteristicBonus.any` booleano (inicial false); `skillBonus.skills` "lista de chaves de perícia, única" (`choices` = chaves de `SKILLS`); `skillBonus.choose` "inteiro 0–27" (inicial 0); `size` "inteiro 1–10" (inicial 4); `power.name` string; `power.description` HTMLField; `power.automation` com `choices` = `RACE_POWER_AUTOMATION` e "padrão `\"none\"`"; `power.uses.spent` "inteiro ≥ 0" (inicial 0); `lore.height`, `lore.weight` strings; `lore.languages`, `lore.personality`, `lore.physical`, `lore.names` listas de strings não vazias; `choice.characteristic` "chave de característica ou `\"\"`" (blank permitido); `choice.skills` lista de chaves de perícia. Deduplicar as listas "únicas" em `static migrateData`/`_cleanData` ou validar com `validate` do ArrayField
-- [ ] T009 Criar `module/documents/item.mjs` (`DtdItem extends Item`), por enquanto sem lógica extra (a regra de uma raça por ator entra na US2)
-- [ ] T010 Registrar em `dtd40k.mjs` (hook `init`): `CONFIG.Item.documentClass = DtdItem`, `CONFIG.Item.dataModels.race = RaceData`
-- [ ] T011 [P] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `TYPES.Item.race` ("Race"/"Raça") e `DTD.Race.Automation.{none,usesPerScene,heroicHeritage,shifty,squatToughness}` ("Text only"/"Só texto", "Uses per scene"/"Usos por cena", "Heroic Heritage", "Shifty", "Squat Toughness")
+- [X] T006 [P] Acrescentar em `tests/unit/config.test.mjs`: `RACE_POWER_AUTOMATION` é exatamente `["none", "usesPerScene", "heroicHeritage", "shifty", "squatToughness"]`; `MAX_RATING === 6`; ambos exportados em `DTD`
+- [X] T007 Em `module/config.mjs` (PURO): exportar `RACE_POWER_AUTOMATION` e `MAX_RATING = 6` e incluí-los no objeto `DTD`; fazer T006 passar
+- [X] T008 Criar `module/data/race-data.mjs` (`RaceData extends foundry.abstract.TypeDataModel`) com `defineSchema()` exatamente conforme data-model.md: `description` HTMLField; `source.book` string "padrão `\"DtD 1.6\"`"; `source.page` "inteiro ≥ 1" (nullable, inicial null); `characteristicBonus.options` "lista de chaves de característica, única" (StringField com `choices` = chaves de `CHARACTERISTICS`); `characteristicBonus.any` booleano (inicial false); `skillBonus.skills` "lista de chaves de perícia, única" (`choices` = chaves de `SKILLS`); `skillBonus.choose` "inteiro 0–27" (inicial 0); `size` "inteiro 1–10" (inicial 4); `power.name` string; `power.description` HTMLField; `power.automation` com `choices` = `RACE_POWER_AUTOMATION` e "padrão `\"none\"`"; `power.uses.spent` "inteiro ≥ 0" (inicial 0); `lore.height`, `lore.weight` strings; `lore.languages`, `lore.personality`, `lore.physical`, `lore.names` listas de strings não vazias; `choice.characteristic` "chave de característica ou `\"\"`" (blank permitido); `choice.skills` lista de chaves de perícia. Deduplicar as listas "únicas" em `static migrateData`/`_cleanData` ou validar com `validate` do ArrayField
+- [X] T009 Criar `module/documents/item.mjs` (`DtdItem extends Item`), por enquanto sem lógica extra (a regra de uma raça por ator entra na US2)
+- [X] T010 Registrar em `dtd40k.mjs` (hook `init`): `CONFIG.Item.documentClass = DtdItem`, `CONFIG.Item.dataModels.race = RaceData`
+- [X] T011 [P] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `TYPES.Item.race` ("Race"/"Raça") e `DTD.Race.Automation.{none,usesPerScene,heroicHeritage,shifty,squatToughness}` ("Text only"/"Só texto", "Uses per scene"/"Usos por cena", "Heroic Heritage", "Shifty", "Squat Toughness")
 
 **Checkpoint**: o sistema carrega no v13 e permite criar um Item "Raça" no diretório de itens (ficha padrão do core), sem erros no console
 

@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { CHARACTERISTIC_GRID, CHARACTERISTICS, DERIVED_KEYS, GROUPS, SKILLS } from "../../module/config.mjs";
+import {
+  CHARACTERISTIC_GRID, CHARACTERISTICS, DERIVED_KEYS, DTD, GROUPS, MAX_RATING, RACE_POWER_AUTOMATION, SKILLS
+} from "../../module/config.mjs";
 
 describe("CHARACTERISTIC_GRID (classic sheet layout, FR-023)", () => {
   it("has the Power/Finesse/Resistance rows and Mental/Physical/Social columns", () => {
@@ -82,5 +84,20 @@ describe("DERIVED_KEYS", () => {
     expect(DERIVED_KEYS).toEqual([
       "staticDefense", "hpMax", "mentalDefense", "resolveMax", "speed", "resilience"
     ]);
+  });
+});
+
+describe("race constants (002)", () => {
+  it("lists the racial power automation modes", () => {
+    expect(RACE_POWER_AUTOMATION).toEqual(["none", "usesPerScene", "heroicHeritage", "shifty", "squatToughness"]);
+  });
+
+  it("caps ratings at 6", () => {
+    expect(MAX_RATING).toBe(6);
+  });
+
+  it("exposes both in DTD", () => {
+    expect(DTD.RACE_POWER_AUTOMATION).toBe(RACE_POWER_AUTOMATION);
+    expect(DTD.MAX_RATING).toBe(MAX_RATING);
   });
 });

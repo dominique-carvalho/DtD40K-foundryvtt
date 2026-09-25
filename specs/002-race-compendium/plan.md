@@ -94,7 +94,8 @@ module/
 ├── config.mjs                      # + RACE_POWER_AUTOMATION, MAX_RATING = 6
 ├── rules/
 │   ├── race.mjs                    # NOVO, PURO: usesPerScene, validateRaceChoice, buildRaceEffects, capValue…
-│   └── derived.mjs                 # + modifiers (shifty, resilience)
+│   ├── derived.mjs                 # + modifiers (shifty, resilience)
+│   └── sheet.mjs                   # + buildDots(base), nextBaseValue (pontos raciais)
 ├── data/
 │   ├── character-data.mjs          # + modifiers, limite de 6, capped
 │   └── race-data.mjs               # NOVO: TypeDataModel do item race
@@ -113,7 +114,8 @@ lang/en.json, lang/pt-BR.json       # + chaves de contracts/foundry-api.md
 tests/unit/
 ├── race.test.mjs                   # NOVO
 ├── packs.test.mjs                  # NOVO
-└── derived.test.mjs                # + casos Shifty/Squat
+├── derived.test.mjs                # + casos Shifty/Squat
+└── sheet.test.mjs                  # + pontos raciais, nextBaseValue
 ```
 
 **Structure Decision**: mantém o projeto único da 001, com a mesma separação entre módulos

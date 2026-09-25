@@ -23,6 +23,9 @@ Size, Level e Hero Points).
   valor definido pelo Mestre).
 - Q: Quem pode aplicar, trocar, remover ou refazer a escolha da raça? → A: qualquer dono do
   personagem (jogador ou Mestre), a qualquer momento; observadores só veem.
+- Q: Com bônus racial, o que o clique no ponto N faz? (achado U1 do `/speckit-analyze`) → A:
+  torna N o valor final; grava o valor distribuído (base) = N − bônus racial, mínimo 0; o final
+  nunca fica abaixo do bônus racial.
 - Q: Onde o poder racial e o contador de usos aparecem na ficha do personagem? → A: o nome da
   raça fica na linha de identidade do cabeçalho; poder e contador ficam numa nova aba "Traits"
   (que depois recebe feats e poderes de exaltação).
@@ -94,9 +97,10 @@ recalculados; depois arrastar Ork e conferir que só os bônus do Ork permanecem
 6. **Given** um personagem com raça, **When** o jogador ou o Mestre pede para refazer a escolha,
    **Then** pode trocar a característica (e, para Human, as perícias) bonificada sem remover e
    arrastar a raça de novo.
-7. **Given** a ficha em modo edição com Wisdom 2 + 1 racial, **When** o jogador clica nos pontos de
-   Wisdom, **Then** ele altera o valor distribuído (2), a ficha mostra o valor final (3) e indica
-   que 1 ponto vem da raça.
+7. **Given** a ficha em modo edição com Wisdom 2 + 1 racial (final 3, com 1 ponto indicado como
+   racial), **When** o jogador clica no 4º ponto de Wisdom, **Then** o valor final passa a 4
+   (valor distribuído 3 + 1 racial); **When** clica de novo no ponto do valor final atual,
+   **Then** o final volta a 3. O valor final nunca fica abaixo do bônus racial.
 8. **Given** uma perícia Avançada com 0 pontos que recebe +1 racial, **When** a ficha é exibida,
    **Then** a perícia conta como treinada (valor 1).
 
@@ -212,8 +216,10 @@ Points, Static Defense, Resilience e o contador de usos do Elf nos Levels 1, 3 e
   qualquer usuário com permissão de dono do personagem (jogador ou Mestre), a qualquer momento;
   usuários sem essa permissão veem a raça e o poder apenas como leitura.
 - **FR-014**: A ficha do personagem MUST exibir o valor final (distribuído + racial) de
-  características e perícias, indicar visualmente quando há bônus racial, e a edição por pontos
-  MUST alterar apenas o valor distribuído. Os derivados MUST usar o valor final.
+  características e perícias e indicar visualmente quando há bônus racial. Clicar no ponto N
+  MUST tornar N o valor final, gravando só o valor distribuído (base) = N − bônus racial,
+  mínimo 0; clicar no ponto do valor final atual reduz o final em 1. Os derivados MUST usar o
+  valor final.
 - **FR-015**: O valor final de característica e perícia MUST ficar limitado a 6.
 
 **Poderes raciais**

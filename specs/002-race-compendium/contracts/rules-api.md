@@ -1,7 +1,8 @@
-# Contract — Regras puras de raça (`module/rules/race.mjs`, `derived.mjs`)
+# Contract — Regras puras de raça (`module/rules/race.mjs`, `derived.mjs`, `sheet.mjs`)
 
 Sem dependência de `foundry`, `game` ou `CONFIG` (constituição III). Cobertura obrigatória por
-Vitest (`tests/unit/race.test.mjs`, `tests/unit/derived.test.mjs`, `tests/unit/packs.test.mjs`).
+Vitest (`tests/unit/race.test.mjs`, `tests/unit/derived.test.mjs`, `tests/unit/sheet.test.mjs`,
+`tests/unit/packs.test.mjs`).
 
 ## Tipos
 
@@ -63,6 +64,20 @@ mesmos valores de `CONST.ACTIVE_EFFECT_MODES` (conferido no 13.351), para ele co
 
 **Casos obrigatórios**: Halfling Dex 3, Wis 4, Size 2 → SD 24; Squat Size 3, Level 1 → Resilience 4;
 Squat com override de Resilience 2 → 2; chamada sem `modifiers` mantém todos os resultados da 001.
+
+## `sheet.mjs` (alteração)
+
+| Função | Contrato |
+|---|---|
+| `buildDots(value, max = 6, base = value)` → `Dot[]` | igual à 001; cada ponto ganha `racial: index > base && index <= value`. Sem `base`, nenhum ponto é racial (chamadas da 001 inalteradas) |
+| `nextBaseValue({ base, final, clicked, max = 6 })` → inteiro | `clamp(nextDotValue(final, clicked) − (final − base), 0, max)`: o ponto N vira o valor final; o bônus usado é o já limitado (`final − base`) |
+
+**Casos obrigatórios**:
+- `buildDots(3, 6, 2)` → pontos 1–2 cheios e não raciais, ponto 3 cheio e `racial`, 4–6 vazios;
+  `buildDots(3)` → nenhum `racial`; testes da 001 continuam passando.
+- `nextBaseValue`: base 2, final 3, clique 3 → 1; base 2, final 3, clique 5 → 4; base 0, final 1,
+  clique 1 → 0; base 6, final 6 (limitado), clique 6 → 5; sem bônus (base = final = 3), clique 3 → 2
+  (mesmo resultado de `nextDotValue`).
 
 ## `tests/unit/packs.test.mjs` (dados do compêndio)
 

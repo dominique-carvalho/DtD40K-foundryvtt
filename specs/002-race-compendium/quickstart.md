@@ -43,7 +43,7 @@ Esperado: `packs/races/` gerado sem erros; abrir o Foundry depois.
 | 9 | Aplicar Human: Charisma + Pilot + Command; tentar Pilot duas vezes | Bônus aplicados; repetição impedida | US2-4 |
 | 10 | Remover a raça na aba Traits | Bônus somem; Size volta a 4 (base) | US2-5, clarificação 1 |
 | 11 | Aplicar Elf; "refazer escolha" trocando Wisdom por Dexterity | Wis volta ao base; Dex +1; nada duplicado | US2-6, FR-013 |
-| 12 | Modo edição com Wis 2 + 1 racial: clicar no 3º ponto | Valor base vira 3, final 4; derivados atualizam | US2-7, FR-014 |
+| 12 | Modo edição com Wis 2 + 1 racial (final 3): clicar no 4º ponto; depois clicar de novo no 4º | Final 4 (base 3), derivados atualizam; depois final 3 (base 2) | US2-7, FR-014 |
 | 13 | Aplicar Aasimar a um personagem com Ballistics 0 | Ballistics 1, tratada como treinada | US2-8 |
 | 14 | Personagem com Wis 6 + raça que dá Wis | Final 6, aviso de valor limitado | Edge, FR-015 |
 | 15 | Human com Hero Points 2/2 | 3/3; remover a raça → 2/2 | US3-1 |

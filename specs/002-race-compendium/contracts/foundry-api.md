@@ -35,7 +35,8 @@ Raças do compêndio bloqueado: somente leitura (padrão do core).
 - **Cabeçalho**: linha de identidade ganha `Race: <nome>` (`data-action="openRace"`) ou
   "—" sem raça. Inputs `system.size` e `system.heroPoints.max` mostram o valor **base**
   (`_source`) no modo edição, com o valor final ao lado quando diferente (research R3).
-- **Pontos** (`setDots`): leem o valor base do `_source`; pontos do bônus racial com estilo
+- **Pontos** (`setDots`): leem `base` do `_source` e `final` do documento e gravam
+  `nextBaseValue({ base, final, clicked })` (contracts/rules-api.md); pontos do bônus racial com estilo
   próprio (`.dot.racial`), valor limitado com ícone/tooltip `DTD.Race.Capped`.
 - **Aba Traits**:
   - Sem raça: aviso `DTD.Race.DropHint`.
@@ -58,8 +59,13 @@ getRace(actor);                       // → Item|null
 - Escolha: `DialogV2.wait` com `templates/dialog/race-choice.hbs` (radio de característica;
   checkboxes de perícia limitadas a `choose`); pulada quando `needsChoice` é falso.
   Cancelar → `null`, nada muda. Escolha inválida → aviso e o diálogo continua aberto.
-- Ordem ao aplicar: apagar raça atual → criar item com `system.choice` e
-  `effects: buildRaceEffects(...)` (nomes i18n) → Human: `heroPoints.value += 1`.
+- Ordem ao aplicar: montar os dados do item (`system.choice` + `effects: buildRaceEffects(...)`,
+  nomes i18n) → validar com `new Item.implementation(data, { parent: actor }).validate({ strict: true })`
+  (falha → aviso `DTD.Race.InvalidChoice`, `null`, nada muda) → apagar raça atual → criar item
+  → Human: `heroPoints.value += 1`. Uma falha de rede entre apagar e criar deixa o personagem
+  sem raça; basta arrastar de novo (risco aceito, sem transação no Foundry).
+- Drop de uma raça que já pertence ao próprio ator (`item.parent?.uuid === actor.uuid`): segue
+  o `super._onDropItem` (reordenação), sem chamar o serviço.
 - Ao remover/trocar: após apagar, `heroPoints.value = min(value, max)`.
 - `DtdItem#_preCreate`: recusa um segundo `race` no mesmo ator com
   `ui.notifications.warn(localize("DTD.Race.OnlyOne"))`.

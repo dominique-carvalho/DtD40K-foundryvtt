@@ -93,7 +93,11 @@ Data: 2026-09-25. Fontes: código-fonte do Foundry **13.351** instalado
   `applyRace(actor, raceItem)`: pergunta a escolha (DialogV2; pulada se não houver o que
   escolher), apaga os itens `race` existentes, cria a nova raça com `system.choice` e os
   efeitos gerados. Cancelar não altera nada. Um `DtdItem#_preCreate` recusa (retorna `false`)
-  uma segunda raça criada fora do serviço, como rede de segurança.
+  uma segunda raça criada fora do serviço, como rede de segurança. Arrastar a raça **dentro da
+  própria ficha** (`item.parent?.uuid === actor.uuid`) segue o core (só reordena) e não chama o
+  serviço. Os dados da nova raça são validados **antes** de apagar a atual; uma falha de rede
+  entre apagar e criar deixa o personagem sem raça (risco aceito: o Foundry não tem transação;
+  basta arrastar de novo).
 - **Permissões** (clarificação 2): qualquer dono do personagem; o próprio core já recusa o drop
   de não-donos.
 

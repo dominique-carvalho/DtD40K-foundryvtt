@@ -35,6 +35,6 @@
   foram traduzidos para linguagem de negócio ("modificadores desativáveis pelo Mestre", "tipo de
   item", "ficha própria", "arquivos de texto versionados"); ficam para o `/speckit-plan`.
 - Decisões tomadas por padrão razoável (revisar no `/speckit-clarify` se desejado): remover a
-  raça não reverte o Size; bônus limitado a 6; Human +1 Hero Point também no atual; usos por
+  raça devolve o Size base (clarificação 1); bônus limitado a 6; Human +1 Hero Point também no atual; usos por
   cena restaurados manualmente.
 - Gnome e Halfling com o mesmo bônus (Int/Fel) mantidos como no livro (pp. 38 e 40).

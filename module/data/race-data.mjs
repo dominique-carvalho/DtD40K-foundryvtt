@@ -1,4 +1,5 @@
 import { CHARACTERISTICS, RACE_POWER_AUTOMATION, SKILLS } from "../config.mjs";
+import { remainingUses, usesPerScene } from "../rules/race.mjs";
 
 const { ArrayField, BooleanField, HTMLField, NumberField, SchemaField, StringField } = foundry.data.fields;
 
@@ -65,5 +66,18 @@ export class RaceData extends foundry.abstract.TypeDataModel {
         skills: keyList(skillKeys)
       })
     };
+  }
+
+  /**
+   * Uses per scene follow the owning character's Level (FR-017, research R5).
+   * @override
+   */
+  prepareDerivedData() {
+    super.prepareDerivedData();
+    const actor = this.parent?.actor;
+    if (!actor || this.power.automation !== "usesPerScene") return;
+    const level = actor.system.level;
+    this.power.uses.max = usesPerScene(level);
+    this.power.uses.remaining = remainingUses(level, this.power.uses.spent);
   }
 }

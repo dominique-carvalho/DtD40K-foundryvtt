@@ -36,19 +36,26 @@ function applyMod(base, mod) {
  * Compute all derived values of a character.
  * @param {{characteristics: Record<string, {value: number}>, size: number, level: number}} source
  * @param {Record<string, DerivedMod>} [derivedMods]
+ * @param {{staticDefenseFormula?: "standard"|"shifty", resilience?: number}} [modifiers]
+ *   racial power modifiers (spec 002, FR-016), applied before the GM bonus/override
  * @returns {DerivedValues}
  */
-export function computeDerived({ characteristics, size, level }, derivedMods = {}) {
+export function computeDerived({ characteristics, size, level }, derivedMods = {}, modifiers = {}) {
   const c = (key) => characteristics[key]?.value ?? 0;
+  const { staticDefenseFormula = "standard", resilience = 0 } = modifiers;
 
   const base = {
-    staticDefense: 10 + 3 * c("dex") + 3 * c("wis") - 2 * size,
+    // Halfling "Shifty" (DtD 1.6 p. 40): 10 + 6×Dex − 2×Size instead of Dex + Wis.
+    staticDefense: staticDefenseFormula === "shifty"
+      ? 10 + 6 * c("dex") - 2 * size
+      : 10 + 3 * c("dex") + 3 * c("wis") - 2 * size,
     // Decision (spec clarification): 2×(Con + Wil), book pp. 14/17.
     hpMax: 2 * (c("con") + c("wil")),
     mentalDefense: 5 + 5 * c("cmp"),
     resolveMax: c("wil") + c("cmp"),
     speed: c("str") + c("dex"),
-    resilience: Math.ceil((size + level) / 2) + 1
+    // Squat Toughness (p. 46) adds to Resilience.
+    resilience: Math.ceil((size + level) / 2) + 1 + (Number(resilience) || 0)
   };
 
   const result = Object.fromEntries(

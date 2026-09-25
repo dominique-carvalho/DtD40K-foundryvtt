@@ -11,7 +11,7 @@ export class DtdActor extends Actor {
 
     if (this.type === "character") {
       // Start fully healed and composed.
-      const derived = computeDerived(this.system, this.system.derivedMods);
+      const derived = computeDerived(this.system, this.system.derivedMods, this.system.modifiers);
       this.updateSource({
         "system.hp.value": derived.hpMax,
         "system.resolve.value": derived.resolveMax

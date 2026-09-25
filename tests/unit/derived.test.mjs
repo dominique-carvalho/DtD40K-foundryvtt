@@ -93,3 +93,35 @@ describe("computeDerived", () => {
     expect(() => computeDerived({ characteristics: chars(), size: 4, level: 1 })).not.toThrow();
   });
 });
+
+describe("computeDerived with racial modifiers (spec 002, FR-016/FR-019)", () => {
+  const halfling = { characteristics: chars({ dex: 3, wis: 4 }), size: 2, level: 1 };
+  const squat = { characteristics: chars(), size: 3, level: 1 };
+
+  it("uses the Halfling Shifty formula: 10 + 6×Dex − 2×Size (p. 40)", () => {
+    expect(computeDerived(halfling, {}, { staticDefenseFormula: "shifty" }).staticDefense).toBe(24);
+    expect(computeDerived(halfling).staticDefense).toBe(27);
+  });
+
+  it("keeps the GM bonus and override on top of Shifty", () => {
+    expect(computeDerived(halfling, { staticDefense: { bonus: 2, override: null } }, { staticDefenseFormula: "shifty" })
+      .staticDefense).toBe(26);
+    expect(computeDerived(halfling, { staticDefense: { bonus: 0, override: 18 } }, { staticDefenseFormula: "shifty" })
+      .staticDefense).toBe(18);
+  });
+
+  it("adds Squat Toughness to Resilience (p. 46)", () => {
+    expect(computeDerived(squat, {}, { resilience: 1 }).resilience).toBe(4);
+  });
+
+  it("lets the GM override and bonus win over Squat Toughness", () => {
+    expect(computeDerived(squat, { resilience: { bonus: 0, override: 2 } }, { resilience: 1 }).resilience).toBe(2);
+    expect(computeDerived(squat, { resilience: { bonus: 1, override: null } }, { resilience: 1 }).resilience).toBe(5);
+  });
+
+  it("changes nothing without modifiers (001 results unchanged)", () => {
+    const traya = { characteristics: chars({ str: 4, dex: 3, con: 4, wil: 2, wis: 2, cmp: 2 }), size: 5, level: 1 };
+    expect(computeDerived(traya, {}, {})).toEqual(computeDerived(traya));
+    expect(computeDerived(traya, {}, { staticDefenseFormula: "standard", resilience: 0 })).toEqual(computeDerived(traya));
+  });
+});

@@ -125,3 +125,25 @@ export function buildRaceEffects(race, choice) {
 export function capValue(value, max = MAX_RATING) {
   return value > max ? { value: max, capped: true } : { value, capped: false };
 }
+
+/**
+ * Uses per scene of a limited racial power: 1/2/3 at Level 1/3/5
+ * (Dark Eldarin, Dragonborn, Eldarin, Elf — DtD 1.6 pp. 30–36).
+ * @param {number} level
+ * @returns {1|2|3}
+ */
+export function usesPerScene(level) {
+  if (level >= 5) return 3;
+  if (level >= 3) return 2;
+  return 1;
+}
+
+/**
+ * Uses left this scene (research R5: the item stores uses spent, not uses left).
+ * @param {number} level
+ * @param {number} spent
+ * @returns {number}
+ */
+export function remainingUses(level, spent) {
+  return Math.max(0, usesPerScene(level) - spent);
+}

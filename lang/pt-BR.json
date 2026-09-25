@@ -162,7 +162,11 @@
         "characteristic": "{race}: +1 {name}",
         "skill": "{race}: +1 {name}",
         "power": "{race}: {name}"
-      }
+      },
+      "Uses": "Usos nesta cena",
+      "SpendUse": "Usar",
+      "NewScene": "Nova cena",
+      "Automated": "Automático"
     }
   }
 }

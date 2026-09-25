@@ -59,6 +59,11 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       }),
       devotion: new SchemaField({ value: integer(6, { min: 0, max: 10 }) }),
       derivedMods: new SchemaField(derivedMods),
+      // Targets of racial power effects only — never rendered as sheet inputs (spec 002, research R3/R4).
+      modifiers: new SchemaField({
+        staticDefenseFormula: new StringField({ required: true, choices: ["standard", "shifty"], initial: "standard" }),
+        resilience: integer(0)
+      }),
       biography: new HTMLField({ required: true, blank: true })
     };
   }
@@ -70,7 +75,7 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
   prepareDerivedData() {
     super.prepareDerivedData();
     this.#capRatings();
-    const derived = computeDerived(this, this.derivedMods);
+    const derived = computeDerived(this, this.derivedMods, this.modifiers);
     this.derived = {
       staticDefense: derived.staticDefense,
       mentalDefense: derived.mentalDefense,

@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { CHARACTERISTICS } from "../../module/config.mjs";
 import {
-  ADD, OVERRIDE, buildRaceEffects, capValue, characteristicOptions, defaultChoice, needsChoice, validateRaceChoice
+  ADD, OVERRIDE, buildRaceEffects, capValue, characteristicOptions, defaultChoice, needsChoice, remainingUses,
+  usesPerScene, validateRaceChoice
 } from "../../module/rules/race.mjs";
 
 /** Minimal race data, as stored in RaceData. */
@@ -118,5 +119,36 @@ describe("capValue (FR-015)", () => {
     expect(capValue(7)).toEqual({ value: 6, capped: true });
     expect(capValue(5)).toEqual({ value: 5, capped: false });
     expect(capValue(6)).toEqual({ value: 6, capped: false });
+  });
+});
+
+describe("usesPerScene (FR-003, research R5)", () => {
+  it("grants 1/2/3 uses at Level 1/3/5", () => {
+    const table = { 0: 1, 1: 1, 2: 1, 3: 2, 4: 2, 5: 3, 6: 3, 10: 3 };
+    for (const [level, uses] of Object.entries(table)) expect(usesPerScene(Number(level))).toBe(uses);
+  });
+
+  it("never reports negative remaining uses", () => {
+    expect(remainingUses(1, 1)).toBe(0);
+    expect(remainingUses(1, 5)).toBe(0);
+    expect(remainingUses(5, 1)).toBe(2);
+  });
+});
+
+describe("buildRaceEffects — automated powers (FR-016)", () => {
+  const power = (automation, extra = {}) =>
+    byId(buildRaceEffects(race({ options: ["dex"], automation, ...extra }), { characteristic: "dex", skills: [] })).power;
+
+  it("Human Heroic Heritage adds 1 to maximum Hero Points", () => {
+    expect(power("heroicHeritage").changes).toEqual([{ key: "system.heroPoints.max", mode: ADD, value: "1" }]);
+  });
+
+  it("Halfling Shifty switches the Static Defense formula", () => {
+    expect(power("shifty").changes)
+      .toEqual([{ key: "system.modifiers.staticDefenseFormula", mode: OVERRIDE, value: "shifty" }]);
+  });
+
+  it("Squat Toughness adds 1 to Resilience", () => {
+    expect(power("squatToughness").changes).toEqual([{ key: "system.modifiers.resilience", mode: ADD, value: "1" }]);
   });
 });

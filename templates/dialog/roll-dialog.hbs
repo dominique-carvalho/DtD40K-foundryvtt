@@ -1,0 +1,76 @@
+<div class="dtd40k roll-dialog">
+  <p class="roll-dialog-summary">{{summary}}</p>
+
+  <div class="form-group">
+    <label for="dtd-roll-tn">{{localize "DTD.Roll.Dialog.TN"}}</label>
+    <div class="form-fields">
+      <input id="dtd-roll-tn" type="number" name="tn" value="{{tn}}" min="0" step="1" placeholder="—">
+    </div>
+    <p class="hint">{{localize "DTD.Roll.Dialog.TNHint"}}</p>
+  </div>
+
+  {{#if characteristics}}
+  <div class="form-group">
+    <label for="dtd-roll-char">{{localize "DTD.Roll.Dialog.Characteristic"}}</label>
+    <div class="form-fields">
+      <select id="dtd-roll-char" name="characteristic">
+        {{#each characteristics as |char|}}
+        <option value="{{char.key}}"{{#if char.selected}} selected{{/if}}>{{char.label}} ({{char.value}})</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+  {{/if}}
+
+  <div class="form-group">
+    <label>{{localize "DTD.Roll.Dialog.DiceMod"}}</label>
+    <div class="form-fields dice-mod">
+      <input type="number" name="rolledMod" value="0" step="1" aria-label="{{localize "DTD.Roll.Dialog.RolledMod"}}" data-tooltip="{{localize "DTD.Roll.Dialog.RolledMod"}}">
+      <span>k</span>
+      <input type="number" name="keptMod" value="0" step="1" aria-label="{{localize "DTD.Roll.Dialog.KeptMod"}}" data-tooltip="{{localize "DTD.Roll.Dialog.KeptMod"}}">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="dtd-roll-flat">{{localize "DTD.Roll.Dialog.FlatMod"}}</label>
+    <div class="form-fields">
+      <input id="dtd-roll-flat" type="number" name="flatMod" value="0" step="1">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="dtd-roll-raises">{{localize "DTD.Roll.Dialog.FreeRaises"}}</label>
+    <div class="form-fields">
+      <input id="dtd-roll-raises" type="number" name="freeRaises" value="0" min="0" step="1">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="dtd-roll-stunt">{{localize "DTD.Roll.Dialog.StuntDice"}}</label>
+    <div class="form-fields">
+      <input id="dtd-roll-stunt" type="number" name="stuntDice" value="0" min="0" max="3" step="1">
+    </div>
+    <p class="hint">{{localize "DTD.Roll.Dialog.StuntHint"}}</p>
+  </div>
+
+  {{#if specialties.length}}
+  <div class="form-group">
+    <label for="dtd-roll-specialty">{{localize "DTD.Roll.Dialog.Specialty"}}</label>
+    <div class="form-fields">
+      <input id="dtd-roll-specialty" type="checkbox" name="specialty">
+    </div>
+    <p class="hint">{{specialtyList}} — {{localize "DTD.Roll.Dialog.SpecialtyHint"}}</p>
+  </div>
+  {{/if}}
+
+  <div class="form-group">
+    <label for="dtd-roll-mode">{{localize "DTD.Roll.Dialog.RollMode"}}</label>
+    <div class="form-fields">
+      <select id="dtd-roll-mode" name="rollMode">
+        {{#each rollModes as |mode|}}
+        <option value="{{mode.key}}"{{#if mode.selected}} selected{{/if}}>{{localize mode.label}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+</div>

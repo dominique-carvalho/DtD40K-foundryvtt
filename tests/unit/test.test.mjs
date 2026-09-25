@@ -52,3 +52,30 @@ describe("runTest", () => {
     expect(result.flags.specialty).toBe(true);
   });
 });
+
+describe("runTest with modifiers (US3)", () => {
+  it("a free raise turns 14 vs TN 15 into 19, a success (US3-3)", () => {
+    // Die 9 + flat modifier 5 = 14: a failure against TN 15.
+    const plain = runTest({ base: { rolled: 1, kept: 1 }, modifiers: { flat: 5 }, tn: 15, rng: facesRng([9]) });
+    expect(plain.total).toBe(14);
+    expect(plain.outcome.success).toBe(false);
+    // Same roll with one free raise (+5) = 19: a success.
+    const boosted = runTest({ base: { rolled: 1, kept: 1 }, modifiers: { flat: 5, freeRaises: 1 }, tn: 15, rng: facesRng([9]) });
+    expect(boosted.total).toBe(19);
+    expect(boosted.outcome).toEqual({ success: true, raises: 0, checks: 0 });
+  });
+
+  it("stunt dice enlarge the pool before normalization", () => {
+    const result = runTest({ base: { rolled: 9, kept: 5 }, modifiers: { stuntDice: 3 }, tn: null, rng: facesRng(Array(10).fill(2)) });
+    expect(result.pool).toMatchObject({ rolled: 10, kept: 6 });
+    expect(result.pool.conversion).toEqual({ from: "12k5", to: "10k6", bonus: 0 });
+  });
+
+  it("choosing another characteristic changes the pool (Persuasion 2 + Fellowship 4 → 6k4)", async () => {
+    const { buildSkillPool } = await import("../../module/rules/pool.mjs");
+    const base = buildSkillPool({ skill: 2, characteristic: 4, advanced: false });
+    const result = runTest({ base, tn: 15, rng: facesRng([3, 3, 3, 3, 3, 3]) });
+    expect(result.pool).toMatchObject({ rolled: 6, kept: 4 });
+    expect(result.total).toBe(12);
+  });
+});

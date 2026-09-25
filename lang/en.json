@@ -120,7 +120,25 @@
       "Kept": "Kept",
       "Dropped": "Dropped",
       "Rerolled": "Rerolled",
-      "RollTooltip": "Roll (Shift: fast roll)"
+      "RollTooltip": "Roll (Shift: fast roll)",
+      "Dialog": {
+        "Title": "Roll {name}",
+        "TN": "Target number",
+        "TNHint": "Leave blank to show only the total.",
+        "Characteristic": "Characteristic",
+        "DiceMod": "Dice modifier (±rolled k ±kept)",
+        "RolledMod": "Rolled dice modifier",
+        "KeptMod": "Kept dice modifier",
+        "FlatMod": "Flat modifier",
+        "FreeRaises": "Free raises (+5 each)",
+        "StuntDice": "Stunt dice",
+        "StuntHint": "0 to 3 extra rolled dice awarded by the Story Master.",
+        "Specialty": "Specialty applies",
+        "SpecialtyHint": "reroll 1s once",
+        "RollMode": "Roll mode",
+        "Roll": "Roll",
+        "Cancel": "Cancel"
+      }
     }
   }
 }

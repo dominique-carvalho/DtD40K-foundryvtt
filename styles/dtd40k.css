@@ -577,3 +577,26 @@
   border: 1px solid #c0392b;
   color: #c0392b;
 }
+
+/* ---------- Roll dialog (US3) ---------- */
+
+.dtd40k.roll-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.dtd40k .roll-dialog-summary {
+  margin: 0 0 0.25rem;
+  font-weight: bold;
+}
+
+.dtd40k .roll-dialog .dice-mod {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dtd40k .roll-dialog .dice-mod input {
+  width: 3.5rem;
+}

@@ -3,7 +3,7 @@
  * PURE module: must never reference Foundry globals (constitution, principle III).
  */
 import { rollAndKeep } from "./dice.mjs";
-import { normalizePool } from "./pool.mjs";
+import { applyModifiers, normalizePool } from "./pool.mjs";
 import { evaluateOutcome } from "./results.mjs";
 
 /**
@@ -18,25 +18,17 @@ import { evaluateOutcome } from "./results.mjs";
  */
 
 /**
- * Apply roll modifiers to a base pool. Identity until the roll dialog (US3) adds modifiers.
- * @param {{rolled: number, kept: number, flat?: number}} base
- * @returns {{rolled: number, kept: number, flat: number}}
- */
-function applyModifiers(base) {
-  return { rolled: base.rolled, kept: base.kept, flat: base.flat ?? 0 };
-}
-
-/**
  * Run a test: modifiers → normalization → roll → outcome.
  * @param {object} input
  * @param {{rolled: number, kept: number, flat?: number, untrained?: boolean, zeroCharacteristic?: boolean}} input.base
+ * @param {{rolled?: number, kept?: number, flat?: number, freeRaises?: number, stuntDice?: number}} [input.modifiers]
  * @param {number|string|null} [input.tn]
  * @param {boolean} [input.specialty=false]  reroll 1s once
  * @param {() => number} input.rng
  * @returns {TestResult}
  */
-export function runTest({ base, tn = null, specialty = false, rng }) {
-  const pool = normalizePool(applyModifiers(base));
+export function runTest({ base, modifiers = {}, tn = null, specialty = false, rng }) {
+  const pool = normalizePool(applyModifiers(base, modifiers));
   const zeroCharacteristic = Boolean(base.zeroCharacteristic);
   const { dice, keptSum, total } = rollAndKeep(pool, { rng, rerollOnes: specialty, zeroCharacteristic });
   const target = tn === "" || tn === null || tn === undefined ? null : Number(tn);

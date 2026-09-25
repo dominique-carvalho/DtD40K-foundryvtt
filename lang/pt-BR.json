@@ -120,7 +120,25 @@
       "Kept": "Mantido",
       "Dropped": "Descartado",
       "Rerolled": "Rerrolado",
-      "RollTooltip": "Rolar (Shift: rolagem rápida)"
+      "RollTooltip": "Rolar (Shift: rolagem rápida)",
+      "Dialog": {
+        "Title": "Rolar {name}",
+        "TN": "Target number (TN)",
+        "TNHint": "Deixe em branco para mostrar só o total.",
+        "Characteristic": "Característica",
+        "DiceMod": "Modificador de dados (±rolados k ±mantidos)",
+        "RolledMod": "Modificador de dados rolados",
+        "KeptMod": "Modificador de dados mantidos",
+        "FlatMod": "Modificador fixo",
+        "FreeRaises": "Free raises (+5 cada)",
+        "StuntDice": "Stunt dice",
+        "StuntHint": "0 a 3 dados rolados extras concedidos pelo Mestre.",
+        "Specialty": "Especialidade se aplica",
+        "SpecialtyHint": "rerrola os 1s uma vez",
+        "RollMode": "Modo de rolagem",
+        "Roll": "Rolar",
+        "Cancel": "Cancelar"
+      }
     }
   }
 }

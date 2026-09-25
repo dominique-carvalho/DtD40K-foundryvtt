@@ -27,6 +27,34 @@ export function formatPool({ rolled, kept, flat = 0 }) {
   return `${rolled}k${kept}${bonus}`;
 }
 
+/** Stunt dice awarded by the Story Master: 0 to 3 extra rolled dice (p. 237). */
+const MAX_STUNT_DICE = 3;
+
+/**
+ * Integer value of a modifier field; blank or non-numeric input counts as 0.
+ * @param {unknown} value
+ * @returns {number}
+ */
+function toInt(value) {
+  const n = Number(value);
+  return value === "" || value === null || !Number.isFinite(n) ? 0 : Math.trunc(n);
+}
+
+/**
+ * Apply roll-dialog modifiers to a base pool (before normalization).
+ * @param {Pool} base
+ * @param {{rolled?: number, kept?: number, flat?: number, freeRaises?: number, stuntDice?: number}} [modifiers]
+ * @returns {{rolled: number, kept: number, flat: number}}
+ */
+export function applyModifiers(base, { rolled = 0, kept = 0, flat = 0, freeRaises = 0, stuntDice = 0 } = {}) {
+  const stunts = Math.min(Math.max(toInt(stuntDice), 0), MAX_STUNT_DICE);
+  return {
+    rolled: base.rolled + toInt(rolled) + stunts,
+    kept: base.kept + toInt(kept),
+    flat: (base.flat ?? 0) + toInt(flat) + 5 * toInt(freeRaises)
+  };
+}
+
 /**
  * Normalize a pool: at least 1k1, kept ≤ rolled, then the "more than ten dice" rule —
  * every 2 rolled dice above 10 become +1 kept (an odd leftover is dropped); once 10k10

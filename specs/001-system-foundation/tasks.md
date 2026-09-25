@@ -133,16 +133,16 @@ e confirmar que falham. UI/integração: roteiro manual do quickstart.md.
 
 ### Tests for User Story 3 ⚠️
 
-- [ ] T044 [US3] Acrescentar em `tests/unit/pool.test.mjs` casos de `applyModifiers`: 5k3 + 2 stunt dice → 7k3; `stuntDice` limitado a 0–3 (5 → 3, −1 → 0); 1 free raise → flat +5; modificadores ±rolled/±kept/±flat somam; em `tests/unit/test.test.mjs`: total 14 + 1 free raise vs TN 15 → 19, sucesso; troca de característica (Persuasion 2 + Fel 4 → 6k4)
+- [X] T044 [US3] Acrescentar em `tests/unit/pool.test.mjs` casos de `applyModifiers`: 5k3 + 2 stunt dice → 7k3; `stuntDice` limitado a 0–3 (5 → 3, −1 → 0); 1 free raise → flat +5; modificadores ±rolled/±kept/±flat somam; em `tests/unit/test.test.mjs`: total 14 + 1 free raise vs TN 15 → 19, sucesso; troca de característica (Persuasion 2 + Fel 4 → 6k4)
 
 ### Implementation for User Story 3
 
-- [ ] T045 [US3] Implementar `applyModifiers(base, { rolled = 0, kept = 0, flat = 0, freeRaises = 0, stuntDice = 0 })` em `module/rules/pool.mjs` e usá-lo em `module/rules/test.mjs`; fazer T044 passar
-- [ ] T046 [P] [US3] Criar `templates/dialog/roll-dialog.hbs` com os campos de contracts/foundry-api.md: TN (padrão 15, vazio permitido), seletor de característica (padrão da perícia; oculto em teste de característica), modificador de dados rolados/mantidos, modificador fixo, free raises, stunt dice (0–3), checkbox de especialidade (só se houver especialidades, listando-as) e seletor de modo de rolagem a partir de `CONFIG.Dice.rollModes` (v13)
-- [ ] T047 [US3] Implementar `module/apps/roll-dialog.mjs`: `async function promptRollOptions({ actor, skillKey, characteristicKey, tn })` usando `foundry.applications.api.DialogV2` com o template de T046; retorna `{ characteristic, tn, modifiers, specialty, rollMode }` ou `null` se cancelado
-- [ ] T048 [US3] Integrar o diálogo em `rollSkill`/`rollCharacteristic` de `module/documents/actor.mjs`: sem `fastForward` abre `promptRollOptions` (cancelado → `null`); passa `modifiers`, `specialty` (→ `rerollOnes`), característica escolhida e `rollMode` para `runTest`/`postTest`; com `fastForward` usa padrões
-- [ ] T049 [P] [US3] Adicionar chaves `DTD.Roll.Dialog.*` (Title, TN, Characteristic, RolledMod, KeptMod, FlatMod, FreeRaises, StuntDice, Specialty, RollMode, Roll, Cancel) em `lang/en.json` e `lang/pt-BR.json` e estilos do diálogo em `styles/dtd40k.css`
-- [ ] T050 [US3] Validar manualmente quickstart.md passos 8, 11, 13 e 14 (incluindo Dice So Nice) e registrar em `specs/001-system-foundation/quickstart.md`
+- [X] T045 [US3] Implementar `applyModifiers(base, { rolled = 0, kept = 0, flat = 0, freeRaises = 0, stuntDice = 0 })` em `module/rules/pool.mjs` e usá-lo em `module/rules/test.mjs`; fazer T044 passar
+- [X] T046 [P] [US3] Criar `templates/dialog/roll-dialog.hbs` com os campos de contracts/foundry-api.md: TN (padrão 15, vazio permitido), seletor de característica (padrão da perícia; oculto em teste de característica), modificador de dados rolados/mantidos, modificador fixo, free raises, stunt dice (0–3), checkbox de especialidade (só se houver especialidades, listando-as) e seletor de modo de rolagem a partir de `CONFIG.Dice.rollModes` (v13)
+- [X] T047 [US3] Implementar `module/apps/roll-dialog.mjs`: `async function promptRollOptions({ actor, skillKey, characteristicKey, tn })` usando `foundry.applications.api.DialogV2` com o template de T046; retorna `{ characteristic, tn, modifiers, specialty, rollMode }` ou `null` se cancelado
+- [X] T048 [US3] Integrar o diálogo em `rollSkill`/`rollCharacteristic` de `module/documents/actor.mjs`: sem `fastForward` abre `promptRollOptions` (cancelado → `null`); passa `modifiers`, `specialty` (→ `rerollOnes`), característica escolhida e `rollMode` para `runTest`/`postTest`; com `fastForward` usa padrões
+- [X] T049 [P] [US3] Adicionar chaves `DTD.Roll.Dialog.*` (Title, TN, Characteristic, RolledMod, KeptMod, FlatMod, FreeRaises, StuntDice, Specialty, RollMode, Roll, Cancel) em `lang/en.json` e `lang/pt-BR.json` e estilos do diálogo em `styles/dtd40k.css`
+- [X] T050 [US3] Validar manualmente quickstart.md passos 8, 11, 13 e 14 (incluindo Dice So Nice) e registrar em `specs/001-system-foundation/quickstart.md`
 
 **Checkpoint**: todas as histórias funcionais de forma independente
 

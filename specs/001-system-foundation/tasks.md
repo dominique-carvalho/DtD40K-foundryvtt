@@ -150,11 +150,11 @@ e confirmar que falham. UI/integração: roteiro manual do quickstart.md.
 
 ## Phase 6: Polish & Cross-Cutting Concerns
 
-- [ ] T051 [P] Atualizar `README.md` com descrição do sistema, requisitos (Foundry v13), instalação por manifesto, instalação local por link (junction) e comandos `npm test`/`npm run lint`
-- [ ] T052 [P] Rodar `npm run lint` e corrigir avisos em `dtd40k.mjs` e `module/**`
+- [X] T051 [P] Atualizar `README.md` com descrição do sistema, requisitos (Foundry v13), instalação por manifesto, instalação local por link (junction) e comandos `npm test`/`npm run lint`
+- [X] T052 [P] Rodar `npm run lint` e corrigir avisos em `dtd40k.mjs` e `module/**`
 - [ ] T053 Revisar i18n: nenhuma string literal em `templates/**` ou `module/**` fora de `lang/*.json`; validar quickstart.md passo 15 (pt-BR ↔ en, SC-006)
 - [ ] T054 Executar o roteiro completo de `specs/001-system-foundation/quickstart.md` (passos 1–22) e `npm test` com cobertura de `module/rules/**`
-- [ ] T055 Rodar `graphify update .` na raiz do repositório para atualizar o grafo de conhecimento
+- [X] T055 Rodar `graphify update .` na raiz do repositório para atualizar o grafo de conhecimento
 
 ---
 

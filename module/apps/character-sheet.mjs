@@ -1,5 +1,6 @@
 import { CHARACTERISTIC_GRID, CHARACTERISTICS, DERIVED_KEYS, GROUPS, SKILLS } from "../config.mjs";
 import { buildDots, filterSkills, nextDotValue, sanitizeDerivedMods } from "../rules/sheet.mjs";
+import { buildCharacteristicPool, buildSkillPool, formatPool, normalizePool } from "../rules/pool.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -19,6 +20,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     form: { submitOnChange: true },
     actions: {
       toggleMode: CharacterSheet.#onToggleMode,
+      rollSkill: CharacterSheet.#onRollSkill,
+      rollCharacteristic: CharacterSheet.#onRollCharacteristic,
       setDots: CharacterSheet.#onSetDots,
       addSpecialty: CharacterSheet.#onAddSpecialty,
       removeSpecialty: CharacterSheet.#onRemoveSpecialty
@@ -66,6 +69,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
         abbr: def.abbr,
         value: data.value,
         dots: buildDots(data.value),
+        pool: formatPool(normalizePool(buildCharacteristicPool({ characteristic: data.value }))),
         specialties: data.specialties,
         valuePath: `system.characteristics.${key}.value`,
         specialtiesPath: `system.characteristics.${key}.specialties`
@@ -104,10 +108,18 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
             .filter(([, def]) => def.group === group)
             .map(([key, def]) => {
               const data = system.skills[key];
+              const base = buildSkillPool({
+                skill: data.value,
+                characteristic: system.characteristics[def.characteristic].value,
+                advanced: def.advanced
+              });
               return {
                 key,
                 name: game.i18n.localize(def.label),
                 advanced: def.advanced,
+                blocked: Boolean(base.blocked),
+                untrained: Boolean(base.untrained),
+                pool: base.blocked ? "" : formatPool(normalizePool(base)),
                 charAbbr: CHARACTERISTICS[def.characteristic].abbr,
                 value: data.value,
                 dots: buildDots(data.value),
@@ -202,6 +214,26 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     if (!Object.values(MODES).includes(mode) || mode === this.mode) return;
     await game.user.setFlag("dtd40k", "sheetModes", { [this.document.id]: mode });
     this.render();
+  }
+
+  /**
+   * Roll a skill test from play mode (US2). Shift+click is reserved for fast-forward (US3).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRollSkill(event, target) {
+    await this.document.rollSkill(target.dataset.key, { fastForward: event.shiftKey });
+  }
+
+  /**
+   * Roll a characteristic test from play mode (US2).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRollCharacteristic(event, target) {
+    await this.document.rollCharacteristic(target.dataset.key, { fastForward: event.shiftKey });
   }
 
   /**

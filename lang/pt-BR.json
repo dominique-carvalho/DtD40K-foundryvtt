@@ -104,6 +104,23 @@
         "physical": "Físico",
         "social": "Social"
       }
+    },
+    "Roll": {
+      "Success": "Sucesso",
+      "Failure": "Falha",
+      "Raises": "raises",
+      "Checks": "checks",
+      "Total": "Total",
+      "TN": "TN",
+      "Conversion": "Mais de dez dados",
+      "Untrained": "Sem treino",
+      "ZeroCharacteristic": "Característica 0: 10 vale 0",
+      "SpecialtyApplied": "Especialidade: 1s rerrolados",
+      "AdvancedUntrained": "Perícias avançadas não podem ser roladas sem treino.",
+      "Kept": "Mantido",
+      "Dropped": "Descartado",
+      "Rerolled": "Rerrolado",
+      "RollTooltip": "Rolar (Shift: rolagem rápida)"
     }
   }
 }

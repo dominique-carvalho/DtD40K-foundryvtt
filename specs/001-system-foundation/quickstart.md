@@ -61,3 +61,5 @@ Reiniciar o Foundry → o sistema "Dungeons the Dragoning" aparece em *Game Syst
 |---|---|---|---|
 | 2026-09-25 | 1–2 | ✅ | Personagem criado com valores iniciais corretos (verificado no banco do mundo `teste-dtd`) |
 | 2026-09-25 | 3 | ❌ | Derivados não atualizavam na ficha aberta; layout inutilizável no v13 → reformulação da US1 (layout híbrido A+C) |
+| 2026-09-25 | 3, 6, 17 (ficha híbrida) | ✅ parcial | Pontos clicáveis alteram características e perícias; especialidades são adicionadas. Rolagens (passos 7–16) ainda não existem: pertencem à US2/US3 (Fase 4 e 5). Pendentes de confirmação na US1: derivados atualizando na hora, passos 18–22 |
+| 2026-09-25 | 7, 9, 10, 12, 16 (US2) | ✅ | Rolagens de perícias e características funcionando no Foundry 13.351 (confirmado pelo usuário) |

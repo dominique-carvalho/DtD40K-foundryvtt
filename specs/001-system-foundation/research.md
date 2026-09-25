@@ -135,3 +135,15 @@ Data: 2026-09-24. Fontes: documentação oficial do Foundry (foundryvtt.com/api,
   clicáveis atualizam via `actor.update` direto (sem depender do formulário); (4) re-render
   explícito da ficha após `updateActor` do próprio ator.
 - **Pendente**: confirmar em T029 no Foundry, com o mundo `teste-dtd` ativo e o console aberto.
+
+## R12. Verificação do Roll de exibição (T038, 2026-09-25)
+
+- **Verificado no código-fonte do 13.351** (`client/dice/terms/dice.mjs`, `roll.mjs`,
+  `terms/operator.mjs`): `new Die({ number, faces: 10, results })` com `results` não vazio já
+  nasce avaliado; `OperatorTerm` é sempre avaliado; `NumericTerm` precisa de `_evaluated = true`;
+  `Roll.fromTerms(terms)` com todos os termos avaliados calcula `_total`. → **caminho principal
+  da R2 adotado; fallback não necessário.**
+- Faces de dados mantidos ficam `active`; dados descartados, 1s rerrolados e 10 que valem 0
+  (característica 0) ficam `active: false, discarded: true`; faces que explodiram recebem
+  `exploded: true`. Assim `roll.total` coincide com o total Roll & Keep.
+- **Pendente (T043)**: confirmar em execução a animação do Dice So Nice e o modo de rolagem.

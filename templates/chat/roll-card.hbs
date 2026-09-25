@@ -1,0 +1,39 @@
+<div class="dtd40k roll-card">
+  <header class="roll-card-header">
+    <h3 class="roll-card-title">{{label}}</h3>
+    <span class="roll-card-formula">{{formula}}</span>
+  </header>
+
+  {{#if untrained}}<p class="roll-card-note">{{localize "DTD.Roll.Untrained"}}</p>{{/if}}
+  {{#if zeroCharacteristic}}<p class="roll-card-note">{{localize "DTD.Roll.ZeroCharacteristic"}}</p>{{/if}}
+  {{#if specialty}}<p class="roll-card-note">{{localize "DTD.Roll.SpecialtyApplied"}}</p>{{/if}}
+  {{#if conversion}}
+  <p class="roll-card-note">{{localize "DTD.Roll.Conversion"}}: {{conversion.from}} → {{conversion.to}}{{#if conversion.bonus}} +{{conversion.bonus}}{{/if}}</p>
+  {{/if}}
+
+  <ol class="roll-card-dice">
+    {{#each dice as |die|}}
+    <li class="roll-die{{#if die.kept}} kept{{else}} dropped{{/if}}{{#if die.exploded}} exploded{{/if}}" data-tooltip="{{#if die.kept}}{{localize "DTD.Roll.Kept"}}{{else}}{{localize "DTD.Roll.Dropped"}}{{/if}}">
+      {{#if die.rerolled}}<s class="rerolled" data-tooltip="{{localize "DTD.Roll.Rerolled"}}">{{die.rerolled}}</s>{{/if}}
+      {{#if die.exploded}}<span class="chain">{{die.chainText}} =</span>{{/if}}
+      <span class="die-total">{{die.total}}</span>
+    </li>
+    {{/each}}
+  </ol>
+
+  <div class="roll-card-total">
+    <span>{{localize "DTD.Roll.Total"}}</span>
+    <strong>{{total}}</strong>
+    {{#if tn}}<span class="roll-card-tn">{{localize "DTD.Roll.TN"}} {{tn}}</span>{{/if}}
+  </div>
+
+  {{#if outcome}}
+  <div class="roll-card-outcome {{#if outcome.success}}success{{else}}failure{{/if}}">
+    {{#if outcome.success}}
+    {{localize "DTD.Roll.Success"}}{{#if outcome.raises}}, {{outcome.raises}} {{localize "DTD.Roll.Raises"}}{{/if}}
+    {{else}}
+    {{localize "DTD.Roll.Failure"}}{{#if outcome.checks}}, {{outcome.checks}} {{localize "DTD.Roll.Checks"}}{{/if}}
+    {{/if}}
+  </div>
+  {{/if}}
+</div>

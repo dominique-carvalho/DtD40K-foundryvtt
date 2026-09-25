@@ -104,6 +104,23 @@
         "physical": "Physical",
         "social": "Social"
       }
+    },
+    "Roll": {
+      "Success": "Success",
+      "Failure": "Failure",
+      "Raises": "raises",
+      "Checks": "checks",
+      "Total": "Total",
+      "TN": "TN",
+      "Conversion": "More than ten dice",
+      "Untrained": "Untrained",
+      "ZeroCharacteristic": "Characteristic 0: 10s count as 0",
+      "SpecialtyApplied": "Specialty: 1s rerolled",
+      "AdvancedUntrained": "Advanced skills cannot be rolled untrained.",
+      "Kept": "Kept",
+      "Dropped": "Dropped",
+      "Rerolled": "Rerolled",
+      "RollTooltip": "Roll (Shift: fast roll)"
     }
   }
 }

@@ -440,3 +440,140 @@
 .dtd40k .derived-row.overridden .derived-value {
   color: var(--dtd-accent);
 }
+
+/* ---------- Play mode rolling (US2) ---------- */
+
+.dtd40k .roll-link {
+  cursor: pointer;
+  color: var(--dtd-text);
+}
+
+.dtd40k .roll-link:hover {
+  color: var(--dtd-accent);
+  text-shadow: none;
+}
+
+.dtd40k .roll-link .fa-dice-d10 {
+  font-size: 0.75em;
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .trait-name.blocked {
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .pool {
+  min-width: 2.6rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  text-align: right;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .pool.untrained {
+  font-style: italic;
+}
+
+/* ---------- Chat roll card (US2) ---------- */
+
+.dtd40k.roll-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.dtd40k .roll-card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--color-border-highlight);
+}
+
+.dtd40k .roll-card-title {
+  margin: 0;
+  font-size: 1rem;
+  border: none;
+}
+
+.dtd40k .roll-card-formula {
+  font-family: var(--font-mono, monospace);
+  font-weight: bold;
+}
+
+.dtd40k .roll-card-note {
+  margin: 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+.dtd40k .roll-card-dice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k .roll-die {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: var(--font-mono, monospace);
+}
+
+.dtd40k .roll-die.kept {
+  border-color: var(--color-border-highlight);
+  font-weight: bold;
+}
+
+.dtd40k .roll-die.dropped {
+  opacity: 0.55;
+}
+
+.dtd40k .roll-die .chain {
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+
+.dtd40k .roll-die .rerolled {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.dtd40k .roll-card-total {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.dtd40k .roll-card-total strong {
+  font-size: 1.4rem;
+}
+
+.dtd40k .roll-card-tn {
+  margin-left: auto;
+  color: var(--color-text-secondary);
+}
+
+.dtd40k .roll-card-outcome {
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dtd40k .roll-card-outcome.success {
+  border: 1px solid #2e8b57;
+  color: #2e8b57;
+}
+
+.dtd40k .roll-card-outcome.failure {
+  border: 1px solid #c0392b;
+  color: #c0392b;
+}

@@ -64,3 +64,4 @@ Reiniciar o Foundry → o sistema "Dungeons the Dragoning" aparece em *Game Syst
 | 2026-09-25 | 3, 6, 17 (ficha híbrida) | ✅ parcial | Pontos clicáveis alteram características e perícias; especialidades são adicionadas. Rolagens (passos 7–16) ainda não existem: pertencem à US2/US3 (Fase 4 e 5). Pendentes de confirmação na US1: derivados atualizando na hora, passos 18–22 |
 | 2026-09-25 | 7, 9, 10, 12, 16 (US2) | ✅ | Rolagens de perícias e características funcionando no Foundry 13.351 (confirmado pelo usuário) |
 | 2026-09-25 | 8, 11, 13, 14 (US3) | ✅ | Diálogo de rolagem funcionando no Foundry 13.351 (confirmado pelo usuário) |
+| 2026-09-25 | 1–22 (roteiro completo) | ✅ | Validação completa confirmada pelo usuário no Foundry 13.351, incluindo passos 3, 15 e 18–22 |

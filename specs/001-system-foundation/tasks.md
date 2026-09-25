@@ -89,7 +89,7 @@ e confirmar que falham. UI/integração: roteiro manual do quickstart.md.
 - [X] T026 [US1] Reescrever `module/apps/character-sheet.mjs`: `PARTS` = header, characteristics, skills, footer; `_prepareContext` monta `mode` (`game.user.getFlag("dtd40k","sheetModes")?.[actor.id] ?? "edit"`, forçado a `"play"` se `!this.document.isOwner`), `isEdit`, a grade a partir de `CHARACTERISTIC_GRID`, pontos via `buildDots`, colunas de perícias, derivados e iniciativa; actions `toggleMode` (grava a flag do usuário e re-renderiza), `setDots` (usa `nextDotValue` e `actor.update`), `addSpecialty`, `removeSpecialty`; sobrescrever `_prepareSubmitData` (ou `_processFormData`) para aplicar `sanitizeDerivedMods`; em `_onRender`, ligar busca e filtro que só ocultam linhas via `filterSkills` (sem re-render) e preservar o texto da busca entre renders; corrigir a causa raiz registrada em T019 garantindo re-render após `updateActor`
 - [X] T027 [US1] Reescrever `styles/dtd40k.css` para o layout híbrido (FR-030): cabeçalho sticky, grade 3×3, 3 colunas de perícias, pontos (preenchido, vazio, 6º sobre-humano, cursor só no modo edição), barras de HP/Resolve, chips de especialidade, rodapé; cores exclusivamente via variáveis do tema do Foundry v13 (verificar nomes em `resources/app/public/css/` do 13.351) para funcionar nos temas `.theme-light` e `.theme-dark`; `min-width: 720px`; conteúdo da janela com rolagem vertical
 - [X] T028 [P] [US1] Atualizar chaves `DTD.Sheet.*` em `lang/en.json` e `lang/pt-BR.json`: ModeEdit, ModePlay, ToggleMode, RowPower, RowFinesse, RowResistance, ColumnMental, ColumnPhysical, ColumnSocial, SearchSkills, OnlyTrained, GmAdjustments, Initiative, SpeedMeters, Superhuman; remover chaves que deixarem de ser usadas
-- [ ] T029 [US1] Validar manualmente quickstart.md passos 1–6 e 17–22 no Foundry v13, nos temas claro e escuro, e registrar em "Registro de validação" de `specs/001-system-foundation/quickstart.md`
+- [X] T029 [US1] Validar manualmente quickstart.md passos 1–6 e 17–22 no Foundry v13, nos temas claro e escuro, e registrar em "Registro de validação" de `specs/001-system-foundation/quickstart.md`
 
 **Checkpoint**: US1 funcional — ficha híbrida utilizável, derivados atualizando na hora (SC-002, SC-007, SC-008)
 
@@ -152,8 +152,8 @@ e confirmar que falham. UI/integração: roteiro manual do quickstart.md.
 
 - [X] T051 [P] Atualizar `README.md` com descrição do sistema, requisitos (Foundry v13), instalação por manifesto, instalação local por link (junction) e comandos `npm test`/`npm run lint`
 - [X] T052 [P] Rodar `npm run lint` e corrigir avisos em `dtd40k.mjs` e `module/**`
-- [ ] T053 Revisar i18n: nenhuma string literal em `templates/**` ou `module/**` fora de `lang/*.json`; validar quickstart.md passo 15 (pt-BR ↔ en, SC-006)
-- [ ] T054 Executar o roteiro completo de `specs/001-system-foundation/quickstart.md` (passos 1–22) e `npm test` com cobertura de `module/rules/**`
+- [X] T053 Revisar i18n: nenhuma string literal em `templates/**` ou `module/**` fora de `lang/*.json`; validar quickstart.md passo 15 (pt-BR ↔ en, SC-006)
+- [X] T054 Executar o roteiro completo de `specs/001-system-foundation/quickstart.md` (passos 1–22) e `npm test` com cobertura de `module/rules/**`
 - [X] T055 Rodar `graphify update .` na raiz do repositório para atualizar o grafo de conhecimento
 
 ---

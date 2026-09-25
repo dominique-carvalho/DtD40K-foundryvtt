@@ -8,6 +8,7 @@ as de `module/config.mjs` (`str`, `dex`, …; `academicLore`, `ballistics`, …)
 | Campo | Tipo | Regra / validação | Origem |
 |---|---|---|---|
 | `description` | HTML | resumo em inglês, redação própria | FR-001, FR-008 |
+| `fullText` | HTML | opcional; **sempre vazio no compêndio**; a mesa cola o texto do próprio exemplar no mundo | FR-001, constituição V |
 | `source.book` | string | padrão `"DtD 1.6"` | constituição I |
 | `source.page` | inteiro ≥ 1 | página da raça | FR-001 |
 | `characteristicBonus.options` | lista de chaves de característica, única | vazia quando `any` | FR-001, FR-002 |

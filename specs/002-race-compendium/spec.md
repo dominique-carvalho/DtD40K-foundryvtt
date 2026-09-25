@@ -27,6 +27,7 @@ Size, Level e Hero Points).
   torna N o valor final; grava o valor distribuído (base) = N − bônus racial, mínimo 0; o final
   nunca fica abaixo do bônus racial.
 - Q: Como o Mestre desativa um modificador racial, e onde fica a ambientação completa? (validação manual, 2026-09-25) → A: a aba "Traits" lista os modificadores raciais com uma caixa de marcar cada (só o Mestre altera); um ícone "i" ao lado do nome da raça abre a descrição e a ambientação (altura, peso, idiomas, traços, nomes, página). O texto integral do livro continua fora do compêndio (constituição V).
+- Q: Como ter o texto de lore completo da raça sem copiar o livro no sistema? → A: campo opcional "Texto completo", vazio no compêndio, que cada mesa preenche no próprio mundo (na raça do personagem ou numa cópia no mundo); a janela do ícone "i" o exibe quando preenchido.
 - Q: Onde o poder racial e o contador de usos aparecem na ficha do personagem? → A: o nome da
   raça fica na linha de identidade do cabeçalho; poder e contador ficam numa nova aba "Traits"
   (que depois recebe feats e poderes de exaltação).
@@ -170,7 +171,8 @@ Points, Static Defense, Resilience e o contador de usos do Elf nos Levels 1, 3 e
 **Raça (dados)**
 
 - **FR-001**: O sistema MUST oferecer um tipo de item "Raça" com: nome, imagem, descrição
-  resumida, página de origem, opções de bônus de característica (lista de características
+  resumida, texto completo opcional (sempre vazio no compêndio; preenchido pela mesa no próprio
+  mundo), página de origem, opções de bônus de característica (lista de características
   elegíveis, ou "qualquer uma"), perícias bonificadas (lista fixa, ou "quaisquer N"), Size,
   poder racial (nome, descrição resumida, tipo de automação e, quando aplicável, usos por cena
   por faixa de Level), altura média, peso médio, idiomas, traços de personalidade comuns, traços

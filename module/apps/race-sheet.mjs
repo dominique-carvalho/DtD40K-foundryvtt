@@ -72,6 +72,7 @@ export class RaceSheet extends HandlebarsApplicationMixin(foundry.applications.s
       })),
       enriched: {
         description: await enrich(system.description),
+        fullText: await enrich(system.fullText),
         power: await enrich(system.power.description)
       }
     });

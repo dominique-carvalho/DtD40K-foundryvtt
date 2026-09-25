@@ -92,6 +92,18 @@
     {{/if}}
   </section>
 
+  {{#if (or editable system.fullText)}}
+  <section class="race-section race-full-text">
+    <h2 class="section-title">{{localize "DTD.Race.FullText"}}</h2>
+    {{#if editable}}
+    <p class="hint">{{localize "DTD.Race.FullTextHint"}}</p>
+    <prose-mirror name="system.fullText" value="{{system.fullText}}" toggled>{{{enriched.fullText}}}</prose-mirror>
+    {{else}}
+    <div class="enriched">{{{enriched.fullText}}}</div>
+    {{/if}}
+  </section>
+  {{/if}}
+
   <section class="race-section race-lore">
     <h2 class="section-title">{{localize "DTD.Race.Lore"}}</h2>
     {{#if editable}}

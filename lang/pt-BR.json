@@ -169,7 +169,9 @@
       "Automated": "Automático",
       "Info": "Informações da raça",
       "Modifiers": "Modificadores raciais",
-      "ModifiersHint": "Só o Mestre pode ativar ou desativar os modificadores raciais."
+      "ModifiersHint": "Só o Mestre pode ativar ou desativar os modificadores raciais.",
+      "FullText": "Texto completo",
+      "FullTextHint": "Opcional: cole aqui o texto completo da raça a partir do seu exemplar do livro. Ele fica só neste mundo e não é distribuído com o sistema."
     }
   }
 }

@@ -169,7 +169,9 @@
       "Automated": "Automated",
       "Info": "Race information",
       "Modifiers": "Racial modifiers",
-      "ModifiersHint": "Only the GM can switch racial modifiers on or off."
+      "ModifiersHint": "Only the GM can switch racial modifiers on or off.",
+      "FullText": "Full text",
+      "FullTextHint": "Optional: paste the race's full text from your own copy of the book. It stays in this world only and is not shipped with the system."
     }
   }
 }

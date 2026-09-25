@@ -53,6 +53,7 @@ Esperado: `packs/races/` gerado sem erros; abrir o Foundry depois.
 | 19 | Aasimar na aba Traits | Texto do poder (feats Jaded e Fearless), sem automação | US3-6 |
 | 20 | Como Mestre, na aba Traços, desmarcar o modificador "Size" da raça; como jogador, ver a lista sem poder alterar | Size volta ao base enquanto desmarcado; o jogador vê as caixas desabilitadas | FR-010, FR-015a |
 | 20b | Clicar no ícone "i" ao lado do nome da raça | Janela com descrição, altura, peso, idiomas, traços, nomes e página | FR-015a |
+| 20c | Na raça do personagem (ou numa cópia no mundo), colar um texto em "Texto completo" e clicar no "i" | O texto aparece na janela, abaixo do resumo; no compêndio o campo continua vazio | FR-001 |
 | 21 | Como jogador observador, abrir a ficha e tentar arrastar | Nada muda; aba Traits só leitura | FR-013a |
 | 22 | Arrastar raça para um ator de outro tipo (quando existir) ou forçar criação de 2ª raça por macro | Aviso; nada é duplicado | Edge, R6 |
 | 23 | Trocar de aba e reabrir a ficha | Volta na última aba usada | FR-015a |

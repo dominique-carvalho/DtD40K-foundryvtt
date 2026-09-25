@@ -34,6 +34,8 @@ export class RaceData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     return {
       description: new HTMLField({ required: true, blank: true }),
+      // Filled in by each table in its own world; always empty in the system compendium (constitution V).
+      fullText: new HTMLField({ required: true, blank: true }),
       source: new SchemaField({
         book: new StringField({ required: true, blank: true, initial: "DtD 1.6" }),
         page: integer(null, { min: 1, nullable: true })

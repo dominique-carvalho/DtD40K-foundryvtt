@@ -71,6 +71,8 @@ describe("races compendium source (SC-001)", () => {
       expect(RACE_POWER_AUTOMATION).toContain(system.power.automation);
       expect(system.choice).toEqual({ characteristic: "", skills: [] });
       expect(system.power.uses).toEqual({ spent: 0 });
+      // The book text is never shipped: each table pastes it in its own world (constitution V).
+      expect(system.fullText).toBe("");
     });
 
     it("has summaries and lore", () => {

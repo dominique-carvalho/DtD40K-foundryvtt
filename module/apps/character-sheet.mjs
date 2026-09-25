@@ -390,11 +390,11 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     const lists = ["languages", "personality", "physical", "names"]
       .filter((key) => system.lore[key].length)
       .map((key) => ({ label: `DTD.Race.${key.charAt(0).toUpperCase()}${key.slice(1)}`, text: system.lore[key].join(", ") }));
+    const enrich = (html) =>
+      foundry.applications.ux.TextEditor.implementation.enrichHTML(html, { relativeTo: race, secrets: race.isOwner });
     const content = await foundry.applications.handlebars.renderTemplate("systems/dtd40k/templates/dialog/race-info.hbs", {
-      description: await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.description, {
-        relativeTo: race,
-        secrets: race.isOwner
-      }),
+      description: await enrich(system.description),
+      fullText: system.fullText ? await enrich(system.fullText) : "",
       lore: system.lore,
       lists,
       source: system.source

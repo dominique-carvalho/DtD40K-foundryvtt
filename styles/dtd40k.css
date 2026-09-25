@@ -775,3 +775,14 @@
 .dtd40k.race-info dd {
   margin: 0;
 }
+
+.dtd40k.item.race .hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k.race-info h3 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.95rem;
+}

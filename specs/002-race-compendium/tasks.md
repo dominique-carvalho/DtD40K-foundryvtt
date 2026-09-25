@@ -158,6 +158,7 @@ troca, remoção e reconfiguração; ficha com abas e valores base/final
 
 - [X] T054 [US2] Na aba Traits (`templates/actor/parts/traits.hbs`, `module/apps/character-sheet.mjs`): lista "Modificadores raciais" com os efeitos de `flags.dtd40k.racial` do item de raça e caixa de marcar por efeito (ação `toggleRaceEffect`, alterna `disabled`; só `game.user.isGM`; jogadores veem as caixas desabilitadas) — FR-010, FR-015a
 - [X] T055 [US2] Ícone "i" ao lado do nome da raça (ação `showRaceInfo`) que abre `templates/dialog/race-info.hbs` via `DialogV2.prompt` com descrição enriquecida, altura, peso, listas de ambientação e página; chaves `DTD.Race.{Info, Modifiers, ModifiersHint}` em `lang/*.json`; estilos em `styles/dtd40k.css`
+- [X] T056 [US1] Campo opcional `fullText` (HTMLField) em `module/data/race-data.mjs`, editável na ficha da raça com aviso `DTD.Race.FullTextHint` e exibido na janela do "i" quando preenchido; `""` em todos os `src/packs/races/*.json`, verificado em `tests/unit/packs.test.mjs`; `htmlFields` do manifesto inclui `fullText`
 
 ---
 

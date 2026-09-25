@@ -1,0 +1,47 @@
+{
+  "id": "dtd40k",
+  "title": "Dungeons the Dragoning",
+  "description": "Unofficial game system for Dungeons the Dragoning 1.6 (LawfulNice): Roll & Keep d10, characters, skills and derived values.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "dominique-carvalho",
+      "url": "https://github.com/dominique-carvalho"
+    }
+  ],
+  "esmodules": ["dtd40k.mjs"],
+  "styles": ["styles/dtd40k.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {
+        "htmlFields": ["biography"]
+      }
+    }
+  },
+  "grid": {
+    "distance": 1,
+    "units": "m"
+  },
+  "primaryTokenAttribute": "hp",
+  "secondaryTokenAttribute": "resolve",
+  "initiative": "1d10 + @characteristics.dex.value + @characteristics.cmp.value",
+  "url": "https://github.com/dominique-carvalho/DtD40K-foundryvtt",
+  "manifest": "https://github.com/dominique-carvalho/DtD40K-foundryvtt/releases/latest/download/system.json",
+  "download": "https://github.com/dominique-carvalho/DtD40K-foundryvtt/releases/download/v0.1.0/dtd40k.zip"
+}

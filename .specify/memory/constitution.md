@@ -1,15 +1,16 @@
 <!--
 Sync Impact Report
-- Version change: (template) → 1.0.0
-- Modified principles: n/a (primeira ratificação)
-- Added principles:
-  I. Fidelidade às Regras
-  II. Arquitetura Nativa do Foundry (v13+)
-  III. Lógica de Regras Pura e Testada
-  IV. Automação Pragmática com Controle do Mestre
-  V. Conteúdo como Dados, Sem Texto Integral
-  VI. Entrega Incremental por Fases
-- Added sections: Restrições Técnicas; Fluxo de Desenvolvimento; Governance
+- Version change: 1.0.1 → 1.1.0 (MINOR — muda materialmente a versão-alvo do princípio II)
+- Modified principles:
+  II. Arquitetura Nativa do Foundry (v13+): alvo deixa de ser "a versão estável mais recente"
+  (hoje v14) e passa a ser fixo em v13, versão usada pela mesa (13.351); migração futura exige
+  feature própria + emenda. Origem: decisão do usuário em 2026-09-25.
+- Histórico 1.0.0 → 1.0.1 (PATCH):
+  II. Arquitetura Nativa do Foundry (v13+): a regra de rolagem deixa de exigir a fórmula
+  `Xd10x10kY` (incorreta: o `x` do Foundry não compõe explosões) e passa a exigir `Roll` do
+  Foundry para chat/Dice So Nice com a semântica Roll & Keep no motor puro.
+  Origem: specs/001-system-foundation/research.md R2 e /speckit-analyze (achado C1).
+- Added sections: nenhuma
 - Removed sections: nenhuma
 - Templates: .specify/templates/* não modificados (leem a constituição em runtime)
 - Deferred TODOs: nenhum
@@ -36,13 +37,16 @@ rastreáveis evitam regras "inventadas" e retrabalho.
 
 ### II. Arquitetura Nativa do Foundry (v13+)
 
-- Alvo mínimo e verificado: a versão estável mais recente do Foundry VTT (v13 ou superior).
+- Alvo mínimo e verificado: Foundry VTT **v13** (versão usada pela mesa). Migrar para uma
+  geração mais nova MUST ser uma feature própria, com emenda desta regra.
 - Dados de Actors/Items MUST usar `TypeDataModel` com schema declarado; derivados MUST ser
   calculados em `prepareDerivedData`, nunca persistidos.
 - Interfaces MUST usar ApplicationV2 / HandlebarsApplicationMixin. É proibido jQuery e APIs
   marcadas como deprecated na versão alvo.
-- Modificadores persistentes MUST usar Active Effects; rolagens MUST usar a API `Roll` do
-  Foundry (fórmula base `Xd10x10kY`) e gerar mensagens de chat.
+- Modificadores persistentes MUST usar Active Effects. Rolagens MUST produzir objetos `Roll` do
+  Foundry (com a fonte aleatória do core) para mensagens de chat e Dice So Nice; a semântica
+  Roll & Keep (explosão composta, conversão acima de 10 dados, manter os maiores) MUST viver no
+  motor de regras puro (princípio III), pois o modificador `x` do Foundry não compõe explosões.
 
 **Racional**: APIs nativas reduzem manutenção a cada nova versão do Foundry e mantêm
 compatibilidade com módulos da comunidade.
@@ -122,4 +126,4 @@ permite testar sem subir o Foundry.
   princípio ou seção; PATCH para clarificações de redação.
 - Revisão de conformidade: verificada no `/speckit-plan` (Constitution Check) e em cada PR.
 
-**Version**: 1.0.0 | **Ratified**: 2026-09-24 | **Last Amended**: 2026-09-24
+**Version**: 1.1.0 | **Ratified**: 2026-09-24 | **Last Amended**: 2026-09-25

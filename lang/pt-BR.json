@@ -1,0 +1,109 @@
+{
+  "TYPES": {
+    "Actor": {
+      "character": "Personagem"
+    }
+  },
+  "DTD": {
+    "Characteristic": {
+      "str": "Strength",
+      "dex": "Dexterity",
+      "con": "Constitution",
+      "cha": "Charisma",
+      "fel": "Fellowship",
+      "cmp": "Composure",
+      "int": "Intelligence",
+      "wis": "Wisdom",
+      "wil": "Willpower"
+    },
+    "CharacteristicAbbr": {
+      "str": "Str",
+      "dex": "Dex",
+      "con": "Con",
+      "cha": "Cha",
+      "fel": "Fel",
+      "cmp": "Cmp",
+      "int": "Int",
+      "wis": "Wis",
+      "wil": "Wil"
+    },
+    "Skill": {
+      "academicLore": "Academic Lore",
+      "arcana": "Arcana",
+      "commonLore": "Common Lore",
+      "crafts": "Crafts",
+      "forbiddenLore": "Forbidden Lore",
+      "medicae": "Medicae",
+      "perception": "Perception",
+      "politics": "Politics",
+      "techUse": "Tech-Use",
+      "acrobatics": "Acrobatics",
+      "athletics": "Athletics",
+      "ballistics": "Ballistics",
+      "brawl": "Brawl",
+      "drive": "Drive",
+      "larceny": "Larceny",
+      "pilot": "Pilot",
+      "stealth": "Stealth",
+      "weaponry": "Weaponry",
+      "animalKen": "Animal Ken",
+      "charm": "Charm",
+      "command": "Command",
+      "deceive": "Deceive",
+      "disguise": "Disguise",
+      "intimidation": "Intimidation",
+      "performer": "Performer",
+      "persuasion": "Persuasion",
+      "scrutiny": "Scrutiny"
+    },
+    "SkillGroup": {
+      "physical": "Físico",
+      "social": "Social",
+      "mental": "Mental"
+    },
+    "Derived": {
+      "staticDefense": "Static Defense",
+      "hpMax": "Hit Points máximos",
+      "mentalDefense": "Mental Defense",
+      "resolveMax": "Resolve máximo",
+      "speed": "Speed",
+      "resilience": "Resilience"
+    },
+    "Sheet": {
+      "Character": "Ficha de Personagem DtD",
+      "Characteristics": "Características",
+      "Skills": "Perícias",
+      "Size": "Size",
+      "Level": "Level",
+      "HitPoints": "Hit Points",
+      "Resolve": "Resolve",
+      "HeroPoints": "Hero Points",
+      "Devotion": "Devotion",
+      "Value": "Valor",
+      "Bonus": "Bônus",
+      "Override": "Substituir",
+      "Advanced": "Perícia avançada: não pode ser rolada sem treino",
+      "NewSpecialty": "Nova especialidade",
+      "AddSpecialty": "Adicionar especialidade",
+      "RemoveSpecialty": "Remover especialidade",
+      "ModeEdit": "Edição",
+      "ModePlay": "Jogo",
+      "ToggleMode": "Modo da ficha",
+      "SearchSkills": "Buscar perícia",
+      "OnlyTrained": "Só treinadas",
+      "GmAdjustments": "Ajustes do Mestre",
+      "Initiative": "Iniciativa",
+      "SpeedMeters": "m",
+      "Row": {
+        "power": "Power",
+        "finesse": "Finesse",
+        "resistance": "Resistance"
+      },
+      "Column": {
+        "mental": "Mental",
+        "physical": "Físico",
+        "social": "Social"
+      }
+    }
+  }
+}

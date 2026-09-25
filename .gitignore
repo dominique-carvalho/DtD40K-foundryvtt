@@ -35,3 +35,6 @@ desktop.ini
 !.vscode/extensions.json
 .idea/
 *.swp
+
+# Cobertura de testes
+coverage/

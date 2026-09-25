@@ -1,0 +1,35 @@
+<section class="skills">
+  <div class="skills-header">
+    <h2 class="section-title">{{localize "DTD.Sheet.Skills"}}</h2>
+    {{#unless isEdit}}
+    <div class="skill-filters">
+      <input class="skill-search" type="search" placeholder="{{localize "DTD.Sheet.SearchSkills"}}" aria-label="{{localize "DTD.Sheet.SearchSkills"}}">
+      <label class="only-trained">
+        <input class="skill-only-trained" type="checkbox"> {{localize "DTD.Sheet.OnlyTrained"}}
+      </label>
+    </div>
+    {{/unless}}
+  </div>
+  <div class="skill-columns">
+    {{#each skillColumns as |column|}}
+    <div class="skill-column" data-group="{{column.key}}">
+      <h3>{{localize column.label}}</h3>
+      <ol class="trait-list">
+        {{#each column.entries as |entry|}}
+        <li class="trait skill{{#if entry.advanced}} advanced{{/if}}" data-key="{{entry.key}}" data-skill-name="{{entry.name}}" data-value="{{entry.value}}">
+          <div class="trait-row">
+            <span class="trait-name">
+              {{entry.name}}{{#if entry.advanced}}<span class="advanced-mark" data-tooltip="{{localize "DTD.Sheet.Advanced"}}">*</span>{{/if}}
+              <span class="trait-char">{{localize entry.charAbbr}}</span>
+            </span>
+            {{> "systems/dtd40k/templates/actor/parts/dots.hbs" dots=entry.dots path=entry.valuePath editable=../../isEdit}}
+            <span class="pool"></span>
+          </div>
+          {{> "systems/dtd40k/templates/actor/parts/specialties.hbs" entry=entry isEdit=../../isEdit}}
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+    {{/each}}
+  </div>
+</section>

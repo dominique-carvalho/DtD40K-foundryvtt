@@ -1,0 +1,72 @@
+<header class="sheet-header">
+  <div class="identity">
+    <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}" {{#if isEdit}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if isEdit}}
+      <input class="actor-name" type="text" name="name" value="{{actor.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="actor-name">{{actor.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <label>{{localize "DTD.Sheet.Level"}}
+          {{#if isEdit}}<input type="number" name="system.level" value="{{system.level}}" min="1" max="10" step="1">{{else}}<b>{{system.level}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Sheet.Size"}}
+          {{#if isEdit}}<input type="number" name="system.size" value="{{system.size}}" min="1" max="10" step="1">{{else}}<b>{{system.size}}</b>{{/if}}
+        </label>
+      </div>
+    </div>
+    {{#if canToggle}}
+    <div class="mode-toggle" role="group" aria-label="{{localize "DTD.Sheet.ToggleMode"}}">
+      <button type="button" class="mode-button{{#if isEdit}} active{{/if}}" data-action="toggleMode" data-mode="edit">
+        <i class="fa-solid fa-pen" aria-hidden="true"></i> {{localize "DTD.Sheet.ModeEdit"}}
+      </button>
+      <button type="button" class="mode-button{{#unless isEdit}} active{{/unless}}" data-action="toggleMode" data-mode="play">
+        <i class="fa-solid fa-dice-d10" aria-hidden="true"></i> {{localize "DTD.Sheet.ModePlay"}}
+      </button>
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="vitals">
+    <div class="tracks">
+      <div class="track hp">
+        <div class="track-label">
+          <span>{{localize "DTD.Sheet.HitPoints"}}</span>
+          <span class="track-values">
+            <input type="number" name="system.hp.value" value="{{system.hp.value}}" min="0" step="1">
+            <span>/ {{system.hp.max}}</span>
+          </span>
+        </div>
+        <div class="bar"><span class="fill" style="width: {{hpPct}}%"></span></div>
+      </div>
+      <div class="track resolve">
+        <div class="track-label">
+          <span>{{localize "DTD.Sheet.Resolve"}}</span>
+          <span class="track-values">
+            <input type="number" name="system.resolve.value" value="{{system.resolve.value}}" min="0" step="1">
+            <span>/ {{system.resolve.max}}</span>
+          </span>
+        </div>
+        <div class="bar"><span class="fill" style="width: {{resolvePct}}%"></span></div>
+      </div>
+    </div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.staticDefense"}}</span><span class="stat-value">{{system.derived.staticDefense}}</span></div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.mentalDefense"}}</span><span class="stat-value">{{system.derived.mentalDefense}}</span></div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.resilience"}}</span><span class="stat-value">{{system.derived.resilience}}</span></div>
+    <div class="stat-box">
+      <span class="stat-label">{{localize "DTD.Sheet.HeroPoints"}}</span>
+      <span class="stat-value pair">
+        <input type="number" name="system.heroPoints.value" value="{{system.heroPoints.value}}" min="0" step="1">
+        <span>/</span>
+        {{#if isEdit}}<input type="number" name="system.heroPoints.max" value="{{system.heroPoints.max}}" min="0" step="1">{{else}}<span>{{system.heroPoints.max}}</span>{{/if}}
+      </span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-label">{{localize "DTD.Sheet.Devotion"}}</span>
+      <span class="stat-value">
+        {{#if isEdit}}<input type="number" name="system.devotion.value" value="{{system.devotion.value}}" min="0" max="10" step="1">{{else}}{{system.devotion.value}}{{/if}}
+      </span>
+    </div>
+  </div>
+</header>

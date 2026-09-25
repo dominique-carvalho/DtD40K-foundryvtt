@@ -146,11 +146,11 @@ troca, remoção e reconfiguração; ficha com abas e valores base/final
 
 ## Phase 6: Polish & Cross-Cutting Concerns
 
-- [ ] T049 [P] Rodar `npm run lint` e corrigir avisos em `dtd40k.mjs`, `module/**` e `scripts/**`
+- [X] T049 [P] Rodar `npm run lint` e corrigir avisos em `dtd40k.mjs`, `module/**` e `scripts/**`
 - [ ] T050 [P] Revisar i18n: nenhuma string literal nova em `templates/**` ou `module/**` fora de `lang/*.json`; alternar pt-BR ↔ en (quickstart passo 5, SC-006)
-- [ ] T051 [P] Documentar em `README.md` (criar a seção se o arquivo não existir) o comando `npm run build:packs`, a necessidade de fechar o Foundry durante o build e que `packs/` não é versionado
+- [X] T051 [P] Documentar em `README.md` (criar a seção se o arquivo não existir) o comando `npm run build:packs`, a necessidade de fechar o Foundry durante o build e que `packs/` não é versionado
 - [ ] T052 Executar o roteiro completo de `specs/002-race-compendium/quickstart.md` (passos 1–25) nos temas claro e escuro e `npm test` com cobertura de `module/rules/**`
-- [ ] T053 Rodar `graphify update .` na raiz do repositório para atualizar o grafo de conhecimento
+- [X] T053 Rodar `graphify update .` na raiz do repositório para atualizar o grafo de conhecimento
 
 ---
 

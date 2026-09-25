@@ -14,6 +14,19 @@
 **Depende de**: `001-system-foundation` (ator Personagem, características, perícias, derivados,
 Size, Level e Hero Points).
 
+## Clarifications
+
+### Session 2026-09-25
+
+- Q: Ao remover a raça, o que acontece com o Size? → A: o Size da raça é um modificador racial
+  que substitui o Size base do personagem; removida a raça, volta o Size base (4 por padrão, ou o
+  valor definido pelo Mestre).
+- Q: Quem pode aplicar, trocar, remover ou refazer a escolha da raça? → A: qualquer dono do
+  personagem (jogador ou Mestre), a qualquer momento; observadores só veem.
+- Q: Onde o poder racial e o contador de usos aparecem na ficha do personagem? → A: o nome da
+  raça fica na linha de identidade do cabeçalho; poder e contador ficam numa nova aba "Traits"
+  (que depois recebe feats e poderes de exaltação).
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Consultar as raças do livro no compêndio (Priority: P1)
@@ -76,7 +89,8 @@ recalculados; depois arrastar Ork e conferir que só os bônus do Ork permanecem
    Command, **Then** Charisma, Pilot e Command ganham +1, e o jogador não consegue escolher a
    mesma perícia duas vezes.
 5. **Given** um personagem com raça, **When** o jogador remove a raça da ficha, **Then** todos os
-   bônus e efeitos daquela raça deixam de valer e os valores voltam aos que o jogador distribuiu.
+   bônus e efeitos daquela raça deixam de valer, os valores voltam aos que o jogador distribuiu e
+   o Size volta ao Size base (4, se o Mestre não o alterou).
 6. **Given** um personagem com raça, **When** o jogador ou o Mestre pede para refazer a escolha,
    **Then** pode trocar a característica (e, para Human, as perícias) bonificada sem remover e
    arrastar a raça de novo.
@@ -90,7 +104,7 @@ recalculados; depois arrastar Ork e conferir que só os bônus do Ork permanecem
 
 ### User Story 3 - Poderes raciais na ficha (Priority: P3)
 
-O personagem com raça vê o poder racial na ficha. Poderes com efeito mecânico simples já valem
+O personagem com raça vê o poder racial na aba "Traits" da ficha. Poderes com efeito mecânico simples já valem
 automaticamente (Human, Halfling, Squat); poderes de uso limitado por cena mostram um contador
 de usos com o máximo calculado pelo Level; os demais aparecem como texto de referência.
 
@@ -126,6 +140,10 @@ Points, Static Defense, Resilience e o contador de usos do Elf nos Levels 1, 3 e
 - **Bônus que ultrapassaria 6**: característica ou perícia com valor distribuído 6 + 1 racial
   permanece 6 (limite máximo do sistema) e a ficha indica que o bônus foi limitado.
 - **Raça arrastada para um ator que não é Personagem**: a ação é recusada com aviso.
+- **Personagem sem raça**: a aba "Traits" mostra um aviso para arrastar uma raça do compêndio
+  e a linha de identidade do cabeçalho fica sem raça.
+- **Usuário sem permissão de dono** arrasta uma raça para o personagem: nada é alterado (o
+  Foundry já não aceita o drop).
 - **Mesma raça arrastada de novo**: tratada como troca (substitui a atual), abrindo a escolha de
   novo; nada é duplicado.
 - **Raça editada no compêndio após aplicada**: o personagem mantém a cópia que recebeu; mudanças no
@@ -133,8 +151,8 @@ Points, Static Defense, Resilience e o contador de usos do Elf nos Levels 1, 3 e
 - **Raça criada pelo Mestre (fora do compêndio)**: funciona igual às do livro, desde que tenha os
   campos preenchidos; bônus de característica com uma única opção dispensa a escolha.
 - **Halfling com override de Static Defense**: o override do Mestre vence a fórmula Shifty.
-- **Remoção da raça**: o Size não é revertido automaticamente (mantém o valor atual; o jogador
-  ajusta se quiser); Hero Points máximo volta ao valor sem o bônus Human e o atual é limitado ao
+- **Remoção da raça**: o Size volta ao Size base do personagem (4 por padrão, ou o valor que o
+  Mestre definiu); Hero Points máximo volta ao valor sem o bônus Human e o atual é limitado ao
   novo máximo.
 - **Level abaixo de 1 ou acima de 5** para usos por cena: Level 1–2 → 1 uso; 3–4 → 2; 5+ → 3.
 - **Gnome e Halfling com o mesmo bônus (Intelligence ou Fellowship)**: implementado exatamente
@@ -180,20 +198,31 @@ Points, Static Defense, Resilience e o contador de usos do Elf nos Levels 1, 3 e
 - **FR-009**: Arrastar uma raça para a ficha de um Personagem MUST abrir uma escolha da
   característica bonificada (entre as elegíveis) e, quando a raça pede perícias à escolha, das
   N perícias distintas; confirmar aplica a raça, cancelar não altera nada.
-- **FR-010**: Ao aplicar a raça, o sistema MUST: definir o Size do personagem como o Size da
-  raça; somar +1 na característica escolhida e em cada perícia bonificada, como modificadores
-  que o Mestre pode desativar individualmente; e exibir a raça no cabeçalho da ficha.
+- **FR-010**: Ao aplicar a raça, o sistema MUST: fazer o Size da raça substituir o Size base do
+  personagem, como modificador racial (o Size base continua guardado e volta a valer quando a
+  raça é removida ou o modificador é desativado); somar +1 na característica escolhida e em cada perícia bonificada, como modificadores
+  que o Mestre pode desativar individualmente; e exibir o nome da raça na linha de identidade do
+  cabeçalho da ficha (clicar abre a ficha da raça).
 - **FR-011**: O personagem MUST ter no máximo uma raça. Aplicar outra raça MUST remover a
   anterior e todos os seus modificadores antes de aplicar a nova.
 - **FR-012**: Remover a raça MUST remover todos os seus modificadores.
 - **FR-013**: MUST ser possível refazer a escolha de característica/perícias da raça já aplicada
   sem removê-la.
+- **FR-013a**: Aplicar, trocar, remover e refazer a escolha da raça MUST estar disponível a
+  qualquer usuário com permissão de dono do personagem (jogador ou Mestre), a qualquer momento;
+  usuários sem essa permissão veem a raça e o poder apenas como leitura.
 - **FR-014**: A ficha do personagem MUST exibir o valor final (distribuído + racial) de
   características e perícias, indicar visualmente quando há bônus racial, e a edição por pontos
   MUST alterar apenas o valor distribuído. Os derivados MUST usar o valor final.
 - **FR-015**: O valor final de característica e perícia MUST ficar limitado a 6.
 
 **Poderes raciais**
+
+- **FR-015a**: A ficha do personagem MUST ganhar navegação por abas: a aba principal com o
+  conteúdo atual (características, perícias, derivados) e uma nova aba "Traits", que mostra a
+  raça (nome, imagem, bônus escolhidos, ações de refazer escolha/remover) e o poder racial com
+  seu contador. O cabeçalho fixo continua visível em todas as abas, e a aba ativa é lembrada
+  como o modo da ficha (por usuário e por personagem).
 
 - **FR-016**: Poderes automatizados (com o comportamento do livro como padrão):
   - Human — Heroic Heritage: +1 no máximo de Hero Points; ao aplicar a raça, o atual também
@@ -206,7 +235,7 @@ Points, Static Defense, Resilience e o contador de usos do Elf nos Levels 1, 3 e
   Level), com ações para gastar um uso e para restaurar todos ("nova cena"); o contador não
   rola nada nem aplica efeitos.
 - **FR-018**: Os demais poderes (Aasimar, Gnome, Ork, Tau, Tiefling) MUST aparecer como texto de
-  referência na ficha do personagem, sem automação nesta feature.
+  referência na aba "Traits", sem automação nesta feature.
 - **FR-019**: Todo valor alterado por poder racial MUST continuar sujeito ao bônus/override
   manual do Mestre já existente nos derivados (constituição, IV).
 - **FR-020**: Todo texto de interface novo MUST existir em pt-BR e inglês.

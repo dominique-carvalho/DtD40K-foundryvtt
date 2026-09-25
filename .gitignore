@@ -19,6 +19,9 @@ packs/**/LOG.old
 foundry.config.*
 .foundry/
 
+# graphify — grafo gerado (recriar com `graphify update .`)
+graphify-out/
+
 # Ambiente e segredos
 .env
 .env.*

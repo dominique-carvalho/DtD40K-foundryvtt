@@ -1,0 +1,116 @@
+<div class="race-sheet-body">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}" {{#if editable}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if editable}}
+      <input class="item-name" type="text" name="name" value="{{item.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="item-name">{{item.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <span>{{localize "TYPES.Item.race"}}</span>
+        <label>{{localize "DTD.Race.Source"}}
+          {{#if editable}}
+          <input type="text" name="system.source.book" value="{{system.source.book}}">
+          {{else}}<b>{{system.source.book}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Race.Page"}}
+          {{#if editable}}
+          <input type="number" name="system.source.page" value="{{system.source.page}}" min="1" step="1">
+          {{else}}<b>{{system.source.page}}</b>{{/if}}
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <section class="race-section racial-statistics">
+    <h2 class="section-title">{{localize "DTD.Race.Statistics"}}</h2>
+    {{#if editable}}
+    <div class="form-group">
+      <label>{{localize "DTD.Race.CharacteristicBonus"}}</label>
+      <label class="checkbox"><input type="checkbox" name="system.characteristicBonus.any" {{checked system.characteristicBonus.any}}> {{localize "DTD.Race.AnyCharacteristic"}}</label>
+    </div>
+    <multi-checkbox class="key-grid" name="system.characteristicBonus.options">
+      {{#each characteristicOptions as |option|}}
+      <option value="{{option.key}}" {{#if option.selected}}selected{{/if}}>{{option.label}}</option>
+      {{/each}}
+    </multi-checkbox>
+    <div class="form-group">
+      <label>{{localize "DTD.Race.SkillBonus"}}</label>
+      <label>{{localize "DTD.Race.ChooseLabel"}}
+        <input type="number" name="system.skillBonus.choose" value="{{system.skillBonus.choose}}" min="0" max="27" step="1">
+      </label>
+    </div>
+    <multi-checkbox class="key-grid" name="system.skillBonus.skills">
+      {{#each skillGroups as |group|}}
+      <optgroup label="{{group.label}}">
+        {{#each group.options as |option|}}
+        <option value="{{option.key}}" {{#if option.selected}}selected{{/if}}>{{option.label}}</option>
+        {{/each}}
+      </optgroup>
+      {{/each}}
+    </multi-checkbox>
+    <div class="form-group">
+      <label>{{localize "DTD.Race.Size"}}</label>
+      <input type="number" name="system.size" value="{{system.size}}" min="1" max="10" step="1">
+    </div>
+    {{else}}
+    <dl class="race-stats">
+      <dt>{{localize "DTD.Race.CharacteristicBonus"}}</dt><dd>{{summary.characteristic}}</dd>
+      <dt>{{localize "DTD.Race.SkillBonus"}}</dt><dd>{{summary.skills}}</dd>
+      <dt>{{localize "DTD.Race.Size"}}</dt><dd>{{system.size}}</dd>
+    </dl>
+    {{/if}}
+  </section>
+
+  <section class="race-section racial-power">
+    <h2 class="section-title">{{localize "DTD.Race.Power"}}{{#unless editable}}: {{system.power.name}}{{/unless}}</h2>
+    {{#if editable}}
+    <div class="form-group">
+      <label>{{localize "Name"}}</label>
+      <input type="text" name="system.power.name" value="{{system.power.name}}">
+    </div>
+    <div class="form-group">
+      <label>{{localize "DTD.Race.AutomationLabel"}}</label>
+      <select name="system.power.automation">
+        {{selectOptions automationOptions selected=system.power.automation localize=true}}
+      </select>
+    </div>
+    <prose-mirror name="system.power.description" value="{{system.power.description}}" toggled>{{{enriched.power}}}</prose-mirror>
+    {{else}}
+    <p class="automation-tag">{{localize automationLabel}}</p>
+    <div class="enriched">{{{enriched.power}}}</div>
+    {{/if}}
+  </section>
+
+  <section class="race-section race-description">
+    <h2 class="section-title">{{localize "DTD.Race.Description"}}</h2>
+    {{#if editable}}
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}
+    <div class="enriched">{{{enriched.description}}}</div>
+    {{/if}}
+  </section>
+
+  <section class="race-section race-lore">
+    <h2 class="section-title">{{localize "DTD.Race.Lore"}}</h2>
+    {{#if editable}}
+    <div class="form-group"><label>{{localize "DTD.Race.Height"}}</label><input type="text" name="system.lore.height" value="{{system.lore.height}}"></div>
+    <div class="form-group"><label>{{localize "DTD.Race.Weight"}}</label><input type="text" name="system.lore.weight" value="{{system.lore.weight}}"></div>
+    {{#each loreLists as |list|}}
+    <div class="form-group stacked">
+      <label>{{localize list.label}}</label>
+      <string-tags name="system.lore.{{list.key}}" value="{{list.value}}"></string-tags>
+    </div>
+    {{/each}}
+    {{else}}
+    <dl class="race-lore-list">
+      {{#if system.lore.height}}<dt>{{localize "DTD.Race.Height"}}</dt><dd>{{system.lore.height}}</dd>{{/if}}
+      {{#if system.lore.weight}}<dt>{{localize "DTD.Race.Weight"}}</dt><dd>{{system.lore.weight}}</dd>{{/if}}
+      {{#each loreLists as |list|}}
+      {{#if list.value}}<dt>{{localize list.label}}</dt><dd>{{list.text}}</dd>{{/if}}
+      {{/each}}
+    </dl>
+    {{/if}}
+  </section>
+</div>

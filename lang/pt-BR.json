@@ -106,7 +106,8 @@
         "mental": "Mental",
         "physical": "Físico",
         "social": "Social"
-      }
+      },
+      "Race": "Ficha de Raça DtD"
     },
     "Race": {
       "Automation": {
@@ -115,7 +116,27 @@
         "heroicHeritage": "Heroic Heritage",
         "shifty": "Shifty",
         "squatToughness": "Squat Toughness"
-      }
+      },
+      "Race": "Raça",
+      "Statistics": "Estatísticas Raciais",
+      "Size": "Size",
+      "Power": "Poder Racial",
+      "AutomationLabel": "Automação",
+      "Description": "Descrição",
+      "Lore": "Características Físicas",
+      "Height": "Altura média",
+      "Weight": "Peso médio",
+      "Languages": "Idiomas",
+      "Personality": "Traços de personalidade comuns",
+      "Physical": "Traços físicos comuns",
+      "Names": "Nomes de exemplo",
+      "Source": "Fonte",
+      "Page": "Página",
+      "CharacteristicBonus": "Bônus de característica",
+      "SkillBonus": "Bônus de perícia",
+      "AnyCharacteristic": "+1 em qualquer característica",
+      "ChooseN": "+1 em {n} perícias à escolha",
+      "ChooseLabel": "Perícias à escolha"
     }
   }
 }

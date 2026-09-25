@@ -7,6 +7,7 @@ import { RaceData } from "./module/data/race-data.mjs";
 import { DtdActor } from "./module/documents/actor.mjs";
 import { DtdItem } from "./module/documents/item.mjs";
 import { CharacterSheet } from "./module/apps/character-sheet.mjs";
+import { RaceSheet } from "./module/apps/race-sheet.mjs";
 
 Hooks.once("init", () => {
   console.log("dtd40k | Initializing Dungeons the Dragoning system");
@@ -28,6 +29,12 @@ Hooks.once("init", () => {
     types: ["character"],
     makeDefault: true,
     label: "DTD.Sheet.Character"
+  });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", RaceSheet, {
+    types: ["race"],
+    makeDefault: true,
+    label: "DTD.Sheet.Race"
   });
 
   foundry.applications.handlebars.loadTemplates(CharacterSheet.PARTIALS);

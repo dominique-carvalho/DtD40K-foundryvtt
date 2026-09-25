@@ -106,7 +106,8 @@
         "mental": "Mental",
         "physical": "Physical",
         "social": "Social"
-      }
+      },
+      "Race": "DtD Race Sheet"
     },
     "Race": {
       "Automation": {
@@ -115,7 +116,27 @@
         "heroicHeritage": "Heroic Heritage",
         "shifty": "Shifty",
         "squatToughness": "Squat Toughness"
-      }
+      },
+      "Race": "Race",
+      "Statistics": "Racial Statistics",
+      "Size": "Size",
+      "Power": "Racial Power",
+      "AutomationLabel": "Automation",
+      "Description": "Description",
+      "Lore": "Physical Characteristics",
+      "Height": "Average Height",
+      "Weight": "Average Weight",
+      "Languages": "Languages",
+      "Personality": "Common Personality Traits",
+      "Physical": "Common Physical Traits",
+      "Names": "Example Names",
+      "Source": "Source",
+      "Page": "Page",
+      "CharacteristicBonus": "Characteristic Bonus",
+      "SkillBonus": "Skill Bonus",
+      "AnyCharacteristic": "+1 to any one characteristic",
+      "ChooseN": "+1 to any {n} skills of your choice",
+      "ChooseLabel": "Skills of choice"
     }
   }
 }

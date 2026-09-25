@@ -440,3 +440,119 @@
 .dtd40k .derived-row.overridden .derived-value {
   color: var(--dtd-accent);
 }
+
+/* ---------- Race item sheet (spec 002, FR-004) ---------- */
+
+.dtd40k.sheet.item.race .window-content {
+  padding: 0 0.75rem 0.75rem;
+  overflow-y: auto;
+  color: var(--dtd-text);
+}
+
+.dtd40k.item.race .race-sheet-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dtd40k.item.race .sheet-header {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dtd40k.item.race .profile-img[data-action] {
+  cursor: pointer;
+}
+
+.dtd40k.item.race .item-name {
+  margin: 0;
+  font-size: 1.4rem;
+  height: auto;
+  border: none;
+  color: var(--dtd-text);
+}
+
+.dtd40k.item.race input.item-name {
+  width: 100%;
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k.item.race .identity-line input[type="text"] {
+  width: 6rem;
+}
+
+.dtd40k.item.race .race-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dtd40k.item.race .form-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dtd40k.item.race .form-group > label:first-child {
+  flex: 0 0 11rem;
+  font-weight: bold;
+}
+
+.dtd40k.item.race .form-group.stacked {
+  align-items: flex-start;
+}
+
+.dtd40k.item.race .form-group.stacked string-tags {
+  flex: 1;
+}
+
+.dtd40k.item.race .key-grid,
+.dtd40k.item.race .key-grid fieldset {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.15rem 0.75rem;
+}
+
+.dtd40k.item.race .key-grid fieldset {
+  grid-column: span 1;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 4px;
+}
+
+.dtd40k.item.race .key-grid fieldset legend {
+  padding: 0 0.25rem;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k.item.race .race-stats,
+.dtd40k.item.race .race-lore-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 0.75rem;
+  margin: 0;
+}
+
+.dtd40k.item.race dt {
+  font-weight: bold;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k.item.race dd {
+  margin: 0;
+}
+
+.dtd40k.item.race .automation-tag {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--dtd-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dtd40k.item.race prose-mirror {
+  min-height: 6rem;
+}

@@ -29,7 +29,9 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       reconfigureRace: CharacterSheet.#onReconfigureRace,
       removeRace: CharacterSheet.#onRemoveRace,
       spendRaceUse: CharacterSheet.#onSpendRaceUse,
-      resetRaceUses: CharacterSheet.#onResetRaceUses
+      resetRaceUses: CharacterSheet.#onResetRaceUses,
+      toggleRaceEffect: CharacterSheet.#onToggleRaceEffect,
+      showRaceInfo: CharacterSheet.#onShowRaceInfo
     }
   };
 
@@ -133,6 +135,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       isEdit,
       canToggle: actor.isOwner,
       canEditRace: actor.isOwner,
+      // Individual racial modifiers are switched on and off by the GM (FR-010).
+      canToggleEffects: game.user.isGM,
       race: await this.#prepareRace(),
       // Inputs of fields that racial effects can change show the base value (research R3).
       base: {
@@ -212,6 +216,9 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       size: system.size,
       bonuses,
       needsChoice: needsChoice(system),
+      effects: race.effects
+        .filter((effect) => effect.getFlag("dtd40k", "racial"))
+        .map((effect) => ({ id: effect.id, name: effect.name, active: !effect.disabled })),
       power: {
         name: system.power.name,
         automated: ["heroicHeritage", "shifty", "squatToughness"].includes(system.power.automation),
@@ -358,6 +365,48 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     const uses = race?.system.power.uses;
     if (!this.document.isOwner || !uses || uses.remaining <= 0) return;
     await race.update({ "system.power.uses.spent": uses.spent + 1 });
+  }
+
+  /**
+   * Enable or disable one racial modifier — GM only (FR-010).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onToggleRaceEffect(event, target) {
+    const effect = getRace(this.document)?.effects.get(target.dataset.effectId);
+    if (!game.user.isGM || !effect) return;
+    await effect.update({ disabled: !effect.disabled });
+  }
+
+  /**
+   * Show the race description and lore in a popup (the "i" button of the Traits tab).
+   * @this {CharacterSheet}
+   */
+  static async #onShowRaceInfo() {
+    const race = getRace(this.document);
+    if (!race) return;
+    const system = race.system;
+    const lists = ["languages", "personality", "physical", "names"]
+      .filter((key) => system.lore[key].length)
+      .map((key) => ({ label: `DTD.Race.${key.charAt(0).toUpperCase()}${key.slice(1)}`, text: system.lore[key].join(", ") }));
+    const content = await foundry.applications.handlebars.renderTemplate("systems/dtd40k/templates/dialog/race-info.hbs", {
+      description: await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.description, {
+        relativeTo: race,
+        secrets: race.isOwner
+      }),
+      lore: system.lore,
+      lists,
+      source: system.source
+    });
+    await foundry.applications.api.DialogV2.prompt({
+      window: { title: race.name, icon: "fa-solid fa-circle-info" },
+      classes: ["dtd40k", "race-info-dialog"],
+      position: { width: 520 },
+      content,
+      ok: { label: game.i18n.localize("Close"), icon: "fa-solid fa-check" },
+      rejectClose: false
+    });
   }
 
   /**

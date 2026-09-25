@@ -166,7 +166,10 @@
       "Uses": "Uses this scene",
       "SpendUse": "Use",
       "NewScene": "New scene",
-      "Automated": "Automated"
+      "Automated": "Automated",
+      "Info": "Race information",
+      "Modifiers": "Racial modifiers",
+      "ModifiersHint": "Only the GM can switch racial modifiers on or off."
     }
   }
 }

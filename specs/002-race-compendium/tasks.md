@@ -154,6 +154,13 @@ troca, remoção e reconfiguração; ficha com abas e valores base/final
 
 ---
 
+## Phase 7: Ajustes da validação manual (2026-09-25)
+
+- [X] T054 [US2] Na aba Traits (`templates/actor/parts/traits.hbs`, `module/apps/character-sheet.mjs`): lista "Modificadores raciais" com os efeitos de `flags.dtd40k.racial` do item de raça e caixa de marcar por efeito (ação `toggleRaceEffect`, alterna `disabled`; só `game.user.isGM`; jogadores veem as caixas desabilitadas) — FR-010, FR-015a
+- [X] T055 [US2] Ícone "i" ao lado do nome da raça (ação `showRaceInfo`) que abre `templates/dialog/race-info.hbs` via `DialogV2.prompt` com descrição enriquecida, altura, peso, listas de ambientação e página; chaves `DTD.Race.{Info, Modifiers, ModifiersHint}` em `lang/*.json`; estilos em `styles/dtd40k.css`
+
+---
+
 ## Dependencies & Execution Order
 
 ### Phase Dependencies

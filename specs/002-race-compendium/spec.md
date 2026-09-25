@@ -26,6 +26,7 @@ Size, Level e Hero Points).
 - Q: Com bônus racial, o que o clique no ponto N faz? (achado U1 do `/speckit-analyze`) → A:
   torna N o valor final; grava o valor distribuído (base) = N − bônus racial, mínimo 0; o final
   nunca fica abaixo do bônus racial.
+- Q: Como o Mestre desativa um modificador racial, e onde fica a ambientação completa? (validação manual, 2026-09-25) → A: a aba "Traits" lista os modificadores raciais com uma caixa de marcar cada (só o Mestre altera); um ícone "i" ao lado do nome da raça abre a descrição e a ambientação (altura, peso, idiomas, traços, nomes, página). O texto integral do livro continua fora do compêndio (constituição V).
 - Q: Onde o poder racial e o contador de usos aparecem na ficha do personagem? → A: o nome da
   raça fica na linha de identidade do cabeçalho; poder e contador ficam numa nova aba "Traits"
   (que depois recebe feats e poderes de exaltação).
@@ -227,7 +228,8 @@ Points, Static Defense, Resilience e o contador de usos do Elf nos Levels 1, 3 e
 - **FR-015a**: A ficha do personagem MUST ganhar navegação por abas: a aba principal com o
   conteúdo atual (características, perícias, derivados) e uma nova aba "Traits", que mostra a
   raça (nome, imagem, bônus escolhidos, ações de refazer escolha/remover) e o poder racial com
-  seu contador. O cabeçalho fixo continua visível em todas as abas, e a aba ativa é lembrada
+  seu contador, a lista de modificadores raciais (cada um com uma caixa de marcar que só o Mestre
+  altera) e um ícone "i" que abre a descrição e a ambientação completas da raça. O cabeçalho fixo continua visível em todas as abas, e a aba ativa é lembrada
   como o modo da ficha (por usuário e por personagem).
 
 - **FR-016**: Poderes automatizados (com o comportamento do livro como padrão):

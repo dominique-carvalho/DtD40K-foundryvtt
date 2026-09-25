@@ -51,7 +51,8 @@ Esperado: `packs/races/` gerado sem erros; abrir o Foundry depois.
 | 17 | Squat Size 3, Level 1 | Resilience 4; com override 2 → 2 | US3-3, FR-019 |
 | 18 | Elf nos Levels 1, 3, 5; gastar uso até 0; "Nova cena" | Máximo 1/2/3; não fica negativo; volta ao máximo | US3-4, US3-5 |
 | 19 | Aasimar na aba Traits | Texto do poder (feats Jaded e Fearless), sem automação | US3-6 |
-| 20 | Na aba de efeitos do item de raça (Mestre), desativar o efeito de Size | Size volta ao base enquanto desativado | FR-010 |
+| 20 | Como Mestre, na aba Traços, desmarcar o modificador "Size" da raça; como jogador, ver a lista sem poder alterar | Size volta ao base enquanto desmarcado; o jogador vê as caixas desabilitadas | FR-010, FR-015a |
+| 20b | Clicar no ícone "i" ao lado do nome da raça | Janela com descrição, altura, peso, idiomas, traços, nomes e página | FR-015a |
 | 21 | Como jogador observador, abrir a ficha e tentar arrastar | Nada muda; aba Traits só leitura | FR-013a |
 | 22 | Arrastar raça para um ator de outro tipo (quando existir) ou forçar criação de 2ª raça por macro | Aviso; nada é duplicado | Edge, R6 |
 | 23 | Trocar de aba e reabrir a ficha | Volta na última aba usada | FR-015a |

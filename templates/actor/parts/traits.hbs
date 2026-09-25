@@ -4,7 +4,10 @@
     <header class="race-card-header">
       <img class="race-img" src="{{race.img}}" alt="{{race.name}}">
       <div class="race-card-title">
-        <h2 class="section-title"><a data-action="openRace">{{race.name}}</a></h2>
+        <h2 class="section-title">
+          <a data-action="openRace">{{race.name}}</a>
+          <a class="race-info-button" data-action="showRaceInfo" data-tooltip="{{localize "DTD.Race.Info"}}" aria-label="{{localize "DTD.Race.Info"}}"><i class="fa-solid fa-circle-info" inert></i></a>
+        </h2>
         <ul class="race-bonuses">
           <li>{{localize "DTD.Race.Size"}} {{race.size}}</li>
           {{#each race.bonuses as |bonus|}}<li>+1 {{bonus}}</li>{{/each}}
@@ -35,6 +38,21 @@
       </div>
       {{/if}}
       <div class="enriched">{{{race.power.description}}}</div>
+    </section>
+
+    <section class="race-effects">
+      <h3>{{localize "DTD.Race.Modifiers"}}</h3>
+      {{#unless canToggleEffects}}<p class="hint">{{localize "DTD.Race.ModifiersHint"}}</p>{{/unless}}
+      <ul class="race-effect-list">
+        {{#each race.effects as |effect|}}
+        <li class="race-effect{{#unless effect.active}} inactive{{/unless}}">
+          <label>
+            <input type="checkbox" data-action="toggleRaceEffect" data-effect-id="{{effect.id}}" {{checked effect.active}} {{disabled (not @root.canToggleEffects)}}>
+            {{effect.name}}
+          </label>
+        </li>
+        {{/each}}
+      </ul>
     </section>
   </article>
   {{else}}

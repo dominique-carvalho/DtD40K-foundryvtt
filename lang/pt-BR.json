@@ -166,7 +166,10 @@
       "Uses": "Usos nesta cena",
       "SpendUse": "Usar",
       "NewScene": "Nova cena",
-      "Automated": "Automático"
+      "Automated": "Automático",
+      "Info": "Informações da raça",
+      "Modifiers": "Modificadores raciais",
+      "ModifiersHint": "Só o Mestre pode ativar ou desativar os modificadores raciais."
     }
   }
 }

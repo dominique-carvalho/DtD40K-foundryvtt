@@ -1,0 +1,11 @@
+<div class="dtd40k race-info">
+  <div class="enriched">{{{description}}}</div>
+  <dl class="race-lore-list">
+    {{#if lore.height}}<dt>{{localize "DTD.Race.Height"}}</dt><dd>{{lore.height}}</dd>{{/if}}
+    {{#if lore.weight}}<dt>{{localize "DTD.Race.Weight"}}</dt><dd>{{lore.weight}}</dd>{{/if}}
+    {{#each lists as |list|}}
+    <dt>{{localize list.label}}</dt><dd>{{list.text}}</dd>
+    {{/each}}
+    {{#if source.page}}<dt>{{localize "DTD.Race.Source"}}</dt><dd>{{source.book}}, {{localize "DTD.Race.Page"}} {{source.page}}</dd>{{/if}}
+  </dl>
+</div>

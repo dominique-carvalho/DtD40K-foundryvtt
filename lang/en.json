@@ -107,7 +107,11 @@
         "physical": "Physical",
         "social": "Social"
       },
-      "Race": "DtD Race Sheet"
+      "Race": "DtD Race Sheet",
+      "Tab": {
+        "main": "Characteristics & Skills",
+        "traits": "Traits"
+      }
     },
     "Race": {
       "Automation": {
@@ -136,7 +140,29 @@
       "SkillBonus": "Skill Bonus",
       "AnyCharacteristic": "+1 to any one characteristic",
       "ChooseN": "+1 to any {n} skills of your choice",
-      "ChooseLabel": "Skills of choice"
+      "ChooseLabel": "Skills of choice",
+      "None": "No race",
+      "DropHint": "Drag a race from the Races compendium onto this sheet.",
+      "ChooseTitle": "Racial bonuses — {race}",
+      "ChooseIntro": "Pick where the racial bonuses of {race} go.",
+      "ChooseCharacteristic": "Characteristic (+1)",
+      "ChooseSkills": "Skills (+1) — choose {n}",
+      "Confirm": "Apply",
+      "Reconfigure": "Change choice",
+      "Remove": "Remove race",
+      "RemoveConfirm": "Remove {race} and all of its bonuses from this character?",
+      "Capped": "Capped at 6: part of the racial bonus is lost.",
+      "RacialBonus": "Racial bonus",
+      "FinalValue": "Value with racial effects",
+      "NotCharacter": "Races can only be applied to characters.",
+      "OnlyOne": "A character can only have one race.",
+      "InvalidChoice": "Invalid racial choice. Check the characteristic and the number of skills.",
+      "Effect": {
+        "size": "{race}: Size {name}",
+        "characteristic": "{race}: +1 {name}",
+        "skill": "{race}: +1 {name}",
+        "power": "{race}: {name}"
+      }
     }
   }
 }

@@ -107,7 +107,11 @@
         "physical": "Físico",
         "social": "Social"
       },
-      "Race": "Ficha de Raça DtD"
+      "Race": "Ficha de Raça DtD",
+      "Tab": {
+        "main": "Características e Perícias",
+        "traits": "Traços"
+      }
     },
     "Race": {
       "Automation": {
@@ -136,7 +140,29 @@
       "SkillBonus": "Bônus de perícia",
       "AnyCharacteristic": "+1 em qualquer característica",
       "ChooseN": "+1 em {n} perícias à escolha",
-      "ChooseLabel": "Perícias à escolha"
+      "ChooseLabel": "Perícias à escolha",
+      "None": "Sem raça",
+      "DropHint": "Arraste uma raça do compêndio Races para esta ficha.",
+      "ChooseTitle": "Bônus raciais — {race}",
+      "ChooseIntro": "Escolha onde ficam os bônus raciais de {race}.",
+      "ChooseCharacteristic": "Característica (+1)",
+      "ChooseSkills": "Perícias (+1) — escolha {n}",
+      "Confirm": "Aplicar",
+      "Reconfigure": "Refazer escolha",
+      "Remove": "Remover raça",
+      "RemoveConfirm": "Remover {race} e todos os seus bônus deste personagem?",
+      "Capped": "Limitado a 6: parte do bônus racial foi perdida.",
+      "RacialBonus": "Bônus racial",
+      "FinalValue": "Valor com efeitos raciais",
+      "NotCharacter": "Raças só podem ser aplicadas a personagens.",
+      "OnlyOne": "Um personagem só pode ter uma raça.",
+      "InvalidChoice": "Escolha racial inválida. Confira a característica e o número de perícias.",
+      "Effect": {
+        "size": "{race}: Size {name}",
+        "characteristic": "{race}: +1 {name}",
+        "skill": "{race}: +1 {name}",
+        "power": "{race}: {name}"
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildDots, filterSkills, nextDotValue, sanitizeDerivedMods } from "../../module/rules/sheet.mjs";
+import { buildDots, filterSkills, nextBaseValue, nextDotValue, sanitizeDerivedMods } from "../../module/rules/sheet.mjs";
 
 describe("buildDots", () => {
   it("returns 6 dots, filling the first N and flagging the 6th as superhuman", () => {
@@ -79,5 +79,40 @@ describe("sanitizeDerivedMods (FR-010)", () => {
 
   it("treats non-numeric input as blank", () => {
     expect(sanitizeDerivedMods({ speed: { bonus: "abc", override: "x" } })).toEqual({ speed: { bonus: 0, override: null } });
+  });
+});
+
+describe("buildDots with racial bonus (spec 002, FR-014)", () => {
+  it("marks dots above the base value as racial", () => {
+    const dots = buildDots(3, 6, 2);
+    expect(dots.map((d) => d.filled)).toEqual([true, true, true, false, false, false]);
+    expect(dots.map((d) => d.racial)).toEqual([false, false, true, false, false, false]);
+  });
+
+  it("marks nothing as racial without a base", () => {
+    expect(buildDots(3).some((d) => d.racial)).toBe(false);
+  });
+});
+
+describe("nextBaseValue (spec 002, FR-014)", () => {
+  it("makes the clicked dot the final value", () => {
+    expect(nextBaseValue({ base: 2, final: 3, clicked: 5 })).toBe(4);
+  });
+
+  it("lowers the final value by one when clicking the current final value", () => {
+    expect(nextBaseValue({ base: 2, final: 3, clicked: 3 })).toBe(1);
+  });
+
+  it("never goes below zero (final never below the racial bonus)", () => {
+    expect(nextBaseValue({ base: 0, final: 1, clicked: 1 })).toBe(0);
+  });
+
+  it("uses the capped bonus", () => {
+    expect(nextBaseValue({ base: 6, final: 6, clicked: 6 })).toBe(5);
+  });
+
+  it("behaves like nextDotValue without a bonus", () => {
+    expect(nextBaseValue({ base: 3, final: 3, clicked: 3 })).toBe(2);
+    expect(nextBaseValue({ base: 3, final: 3, clicked: 5 })).toBe(5);
   });
 });

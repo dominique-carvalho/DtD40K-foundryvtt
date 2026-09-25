@@ -1,9 +1,10 @@
 <span class="dots{{#if editable}} editable{{/if}}" data-path="{{path}}">
   {{#each dots as |dot|}}
   {{#if ../editable}}
-  <a class="dot{{#if dot.filled}} filled{{/if}}{{#if dot.superhuman}} superhuman{{/if}}" data-action="setDots" data-path="{{../path}}" data-value="{{dot.index}}" aria-label="{{dot.index}}"></a>
+  <a class="dot{{#if dot.filled}} filled{{/if}}{{#if dot.superhuman}} superhuman{{/if}}{{#if dot.racial}} racial{{/if}}" data-action="setDots" data-path="{{../path}}" data-value="{{dot.index}}" aria-label="{{dot.index}}"{{#if dot.racial}} data-tooltip="{{localize "DTD.Race.RacialBonus"}}"{{/if}}></a>
   {{else}}
-  <span class="dot{{#if dot.filled}} filled{{/if}}{{#if dot.superhuman}} superhuman{{/if}}"></span>
+  <span class="dot{{#if dot.filled}} filled{{/if}}{{#if dot.superhuman}} superhuman{{/if}}{{#if dot.racial}} racial{{/if}}"{{#if dot.racial}} data-tooltip="{{localize "DTD.Race.RacialBonus"}}"{{/if}}></span>
   {{/if}}
   {{/each}}
+  {{#if capped}}<i class="fa-solid fa-circle-exclamation capped-mark" data-tooltip="{{localize "DTD.Race.Capped"}}" inert></i>{{/if}}
 </span>

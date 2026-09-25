@@ -22,7 +22,7 @@
               {{entry.name}}{{#if entry.advanced}}<span class="advanced-mark" data-tooltip="{{localize "DTD.Sheet.Advanced"}}">*</span>{{/if}}
               <span class="trait-char">{{localize entry.charAbbr}}</span>
             </span>
-            {{> "systems/dtd40k/templates/actor/parts/dots.hbs" dots=entry.dots path=entry.valuePath editable=../../isEdit}}
+            {{> "systems/dtd40k/templates/actor/parts/dots.hbs" dots=entry.dots path=entry.valuePath capped=entry.capped editable=../../isEdit}}
             <span class="pool"></span>
           </div>
           {{> "systems/dtd40k/templates/actor/parts/specialties.hbs" entry=entry isEdit=../../isEdit}}

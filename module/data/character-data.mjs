@@ -1,5 +1,6 @@
 import { CHARACTERISTICS, DERIVED_KEYS, SKILLS } from "../config.mjs";
 import { computeDerived } from "../rules/derived.mjs";
+import { capValue } from "../rules/race.mjs";
 
 const { ArrayField, HTMLField, NumberField, SchemaField, StringField } = foundry.data.fields;
 
@@ -68,6 +69,7 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
+    this.#capRatings();
     const derived = computeDerived(this, this.derivedMods);
     this.derived = {
       staticDefense: derived.staticDefense,
@@ -77,5 +79,21 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     };
     this.hp.max = derived.hpMax;
     this.resolve.max = derived.resolveMax;
+  }
+
+  /**
+   * Racial Active Effects are added without schema bounds (research R2), so cap
+   * every characteristic and skill at 6 before deriving anything (spec 002, FR-015).
+   * `capped` records which ratings lost part of a bonus, for the sheet.
+   */
+  #capRatings() {
+    this.capped = {};
+    for (const group of ["characteristics", "skills"]) {
+      for (const [key, data] of Object.entries(this[group])) {
+        const { value, capped } = capValue(data.value);
+        data.value = value;
+        if (capped) this.capped[`${group}.${key}`] = true;
+      }
+    }
   }
 }

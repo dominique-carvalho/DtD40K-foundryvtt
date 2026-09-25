@@ -1,0 +1,30 @@
+<div class="dtd40k race-choice" data-choose="{{choose}}">
+  <p class="race-choice-intro">{{intro}}</p>
+  <fieldset>
+    <legend>{{localize "DTD.Race.ChooseCharacteristic"}}</legend>
+    <div class="choice-grid">
+      {{#each characteristics as |option|}}
+      <label class="checkbox">
+        <input type="radio" name="characteristic" value="{{option.key}}" {{checked option.selected}}> {{option.label}}
+      </label>
+      {{/each}}
+    </div>
+  </fieldset>
+  {{#if choose}}
+  <fieldset>
+    <legend>{{chooseSkillsLabel}}</legend>
+    <div class="choice-grid skill-choice">
+      {{#each skillGroups as |group|}}
+      <div class="choice-group">
+        <h4>{{group.label}}</h4>
+        {{#each group.options as |option|}}
+        <label class="checkbox{{#if option.fixed}} fixed{{/if}}">
+          <input type="checkbox" name="skills" value="{{option.key}}" {{checked option.selected}} {{disabled option.fixed}}> {{option.label}}
+        </label>
+        {{/each}}
+      </div>
+      {{/each}}
+    </div>
+  </fieldset>
+  {{/if}}
+</div>

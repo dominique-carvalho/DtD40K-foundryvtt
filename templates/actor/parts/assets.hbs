@@ -8,6 +8,7 @@
       <a data-action="openAsset" data-item-id="{{asset.id}}">{{asset.name}}</a>
       {{#if asset.group}}<span class="automation-tag">{{localize asset.group}}</span>{{/if}}
       {{#if asset.granted}}<span class="automation-tag">Perfection</span>{{/if}}
+      {{#if asset.grantsCount}}<span class="feat-badge granted">{{localize "DTD.Asset.GrantsFeats" count=asset.grantsCount}}</span>{{/if}}
       {{#if @root.canEditRace}}
       <a class="asset-remove" data-action="removeAsset" data-item-id="{{asset.id}}" data-tooltip="{{localize "DTD.Asset.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
       {{/if}}

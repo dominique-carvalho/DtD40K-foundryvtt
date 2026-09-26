@@ -19,7 +19,8 @@
       "race": "Thri-Kreen",
       "deity": ""
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

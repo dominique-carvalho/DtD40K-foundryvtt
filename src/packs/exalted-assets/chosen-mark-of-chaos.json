@@ -19,7 +19,8 @@
       "race": "",
       "deity": "Chaos Undivided"
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

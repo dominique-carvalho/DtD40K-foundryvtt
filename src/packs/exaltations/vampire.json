@@ -99,7 +99,8 @@
     "selection": {
       "statuesque": "",
       "element": ""
-    }
+    },
+    "grants": []
   },
   "effects": [],
   "flags": {}

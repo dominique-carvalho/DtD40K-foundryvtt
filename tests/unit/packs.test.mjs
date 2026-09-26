@@ -460,3 +460,49 @@ describe("feats compendium source (spec 005, SC-001)", () => {
     expect(byName("Halfling Agility").system.source.page).toBe(202);
   });
 });
+
+/** Grants of races, exaltations and Exalted Assets — spec 005 "Tabela de concessões". */
+const WP_OPTIONS = ["Basic", "Melee 1", "Melee 2", "Melee 3", "Ranged 1", "Ranged 2", "Throwing"];
+const AP_OPTIONS = ["Light", "Medium", "Heavy", "Extreme", "Power"];
+const ORIGIN_GRANTS = {
+  races: {
+    Aasimar: [["Jaded", "", false], ["Fearless", "", false]],
+    Gnome: [...WP_OPTIONS.map((o) => ["Weapon Proficiency", o, false]), ...AP_OPTIONS.map((o) => ["Armor Proficiency", o, false])]
+  },
+  exaltations: {
+    Atlantean: [["Speak Language", "Syrneth", false, 1]],
+    Promethean: AP_OPTIONS.map((o) => ["Armor Proficiency", o, false, 1])
+  },
+  "exalted-assets": {
+    "You Will Not Falter": [["Armor of Contempt", "", false], ["Armor Proficiency", "Power", false], ["Armor Specialization", "Power", false]],
+    Tuning: [["Weapon Specialization", "", true], ["Weapon Focus", "", true], ["Armor Specialization", "", true]],
+    Ventrue: [["Peer", "Ventrue", false]]
+  }
+};
+
+describe("feats granted by races, exaltations and Exalted Assets (spec 005, US4)", () => {
+  describe.each(Object.entries(ORIGIN_GRANTS))("%s", (pack, expected) => {
+    const docs = readPack(`src/packs/${pack}`).filter((doc) => doc.system);
+
+    it("grants exactly the feats of the spec", () => {
+      const granting = Object.fromEntries(docs.filter((doc) => doc.system.grants.length).map((doc) => [
+        doc.name,
+        doc.system.grants.map((g) => (g.rank === undefined ? [g.name, g.subcategory, g.choose] : [g.name, g.subcategory, g.choose, g.rank]))
+      ]));
+      expect(granting).toEqual(expected);
+      for (const doc of docs) expect(Array.isArray(doc.system.grants)).toBe(true);
+    });
+
+    it("only grants feats that exist in the Feats compendium, with valid sub-categories", () => {
+      for (const doc of docs) {
+        for (const grant of doc.system.grants) {
+          const target = byName(grant.name);
+          expect(target, grant.name).toBeDefined();
+          if (grant.subcategory && target.system.featGroup.options.length && grant.name !== "Peer") {
+            expect(target.system.featGroup.options).toContain(grant.subcategory);
+          }
+        }
+      }
+    });
+  });
+});

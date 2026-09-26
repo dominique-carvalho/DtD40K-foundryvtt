@@ -119,7 +119,8 @@
       "Fatigue": "Fatigue",
       "Exaltation": "Exaltation Sheet",
       "Feat": "Feat Sheet",
-      "FromFeat": "From {feat} — removed with the feat"
+      "FromFeat": "From {feat} — removed with the feat",
+      "FromFeatShort": "Granted by a feat — removed with it"
     },
     "Roll": {
       "Success": "Success",
@@ -390,7 +391,8 @@
         "wrongRace": "{asset} requires a Paragon of the {race} race.",
         "duplicate": "The character already has {asset}.",
         "limit": "A character can have only one Exalted Asset (Paragon assets excepted)."
-      }
+      },
+      "GrantsFeats": "grants {count} feat(s)"
     },
     "Item": {
       "LockedPackHint": "This compendium is locked. To edit this entry, right-click the {pack} compendium and choose \"{option}\". Changes to the system compendium are replaced when the system updates — export them with npm run extract:packs, or import the entry into the world and edit the copy."
@@ -475,7 +477,9 @@
         "characteristic2": "Pick a different characteristic to lose 1.",
         "skill": "Pick a skill.",
         "specialty": "Type the specialty."
-      }
+      },
+      "GrantedByShort": "from",
+      "WrongRaceHint": "This racial feat belongs to another race. The GM decides whether to remove it."
     }
   }
 }

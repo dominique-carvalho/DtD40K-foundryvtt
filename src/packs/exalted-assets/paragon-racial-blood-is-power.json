@@ -19,7 +19,8 @@
       "race": "Kobold",
       "deity": ""
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

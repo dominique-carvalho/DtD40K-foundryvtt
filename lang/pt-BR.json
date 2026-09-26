@@ -119,7 +119,8 @@
       "Fatigue": "Fatigue",
       "Exaltation": "Ficha de Exaltação",
       "Feat": "Ficha de Feat",
-      "FromFeat": "De {feat} — sai junto com o feat"
+      "FromFeat": "De {feat} — sai junto com o feat",
+      "FromFeatShort": "Concedida por um feat — sai junto com ele"
     },
     "Roll": {
       "Success": "Sucesso",
@@ -390,7 +391,8 @@
         "wrongRace": "{asset} exige um Paragon da raça {race}.",
         "duplicate": "O personagem já tem {asset}.",
         "limit": "Um personagem só pode ter um Exalted Asset (exceto os de Paragon)."
-      }
+      },
+      "GrantsFeats": "concede {count} feat(s)"
     },
     "Item": {
       "LockedPackHint": "Este compêndio está bloqueado. Para editar esta entrada, clique com o botão direito no compêndio {pack} e escolha \"{option}\". Alterações no compêndio do sistema são substituídas quando o sistema é atualizado — exporte-as com npm run extract:packs, ou importe a entrada para o mundo e edite a cópia."
@@ -475,7 +477,9 @@
         "characteristic2": "Escolha outra característica para perder 1.",
         "skill": "Escolha uma perícia.",
         "specialty": "Digite a especialidade."
-      }
+      },
+      "GrantedByShort": "de",
+      "WrongRaceHint": "Este feat racial é de outra raça. O Mestre decide se remove."
     }
   }
 }

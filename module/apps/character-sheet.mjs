@@ -6,6 +6,8 @@ import {
 } from "../documents/exaltation-service.mjs";
 import { applyRace, getRace, reconfigureRace, removeRace } from "../documents/race-service.mjs";
 import { prepareAssetsContext, prepareExaltationContext } from "./exaltation-context.mjs";
+import { addFeat, removeFeat } from "../documents/feat-service.mjs";
+import { prepareFeatsContext } from "./feats-context.mjs";
 import { needsChoice } from "../rules/race.mjs";
 import { buildDots, filterSkills, nextBaseValue, sanitizeDerivedMods } from "../rules/sheet.mjs";
 import { buildCharacteristicPool, buildSkillPool, formatPool, normalizePool } from "../rules/pool.mjs";
@@ -15,6 +17,21 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 const TEMPLATE_ROOT = "systems/dtd40k/templates/actor/parts";
 const MODES = { EDIT: "edit", PLAY: "play" };
 const TAB_IDS = ["main", "traits"];
+
+/**
+ * Split a specialties list into the stored ones (editable) and those added by feat effects.
+ * @param {string[]} final  list with Active Effects applied
+ * @param {string[]} base   stored list (_source)
+ * @returns {{specialties: string[], featSpecialties: string[], allSpecialties: string[]}}
+ */
+function specialtyLists(final, base) {
+  const extras = [...final];
+  for (const entry of base) {
+    const index = extras.indexOf(entry);
+    if (index >= 0) extras.splice(index, 1);
+  }
+  return { specialties: base, featSpecialties: extras, allSpecialties: final };
+}
 
 /**
  * Character sheet — hybrid layout (classic 3×3 grid + table header) with edit and play modes.
@@ -54,6 +71,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       spendPressure: CharacterSheet.#onSpendPressure,
       regainPressure: CharacterSheet.#onRegainPressure,
       openAsset: CharacterSheet.#onOpenAsset,
+      openFeat: CharacterSheet.#onOpenAsset,
+      removeFeat: CharacterSheet.#onRemoveFeat,
       removeAsset: CharacterSheet.#onRemoveAsset,
       toggleItemEffect: CharacterSheet.#onToggleItemEffect
     }
@@ -84,7 +103,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     `${TEMPLATE_ROOT}/specialties.hbs`,
     `${TEMPLATE_ROOT}/dots.hbs`,
     `${TEMPLATE_ROOT}/exaltation.hbs`,
-    `${TEMPLATE_ROOT}/assets.hbs`
+    `${TEMPLATE_ROOT}/assets.hbs`,
+    `${TEMPLATE_ROOT}/feats.hbs`
   ];
 
   /** Skill search state, kept across re-renders. */
@@ -141,7 +161,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
         dots: buildDots(data.value, 6, source.characteristics[key].value),
         capped: capped[`characteristics.${key}`] ?? false,
         pool: formatPool(normalizePool(buildCharacteristicPool({ characteristic: data.value }))),
-        specialties: data.specialties,
+        ...specialtyLists(data.specialties, source.characteristics[key].specialties),
         valuePath: `system.characteristics.${key}.value`,
         specialtiesPath: `system.characteristics.${key}.specialties`
       };
@@ -168,6 +188,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       race: await this.#prepareRace(),
       exaltation: await prepareExaltationContext(actor),
       assets: await prepareAssetsContext(actor),
+      featsContext: await prepareFeatsContext(actor),
       // Inputs of fields that racial effects can change show the base value (research R3).
       base: {
         size: source.size,
@@ -177,7 +198,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       },
       hpPct: percent(system.hp.value, system.hp.max),
       resolvePct: percent(system.resolve.value, system.resolve.max),
-      initiativeBonus: system.characteristics.dex.value + system.characteristics.cmp.value,
+      initiativeBonus: system.characteristics.dex.value + system.characteristics.cmp.value + system.modifiers.initiative,
       // Social initiative = Fellowship + Composure (DtD 7.7a p. 17).
       socialInitiativeBonus: system.characteristics.fel.value + system.characteristics.cmp.value,
       gridColumns: CHARACTERISTIC_GRID.columns.map((key) => ({ key, label: `DTD.Sheet.Column.${key}` })),
@@ -211,7 +232,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
                 value: data.value,
                 dots: buildDots(data.value, 6, source.skills[key].value),
                 capped: capped[`skills.${key}`] ?? false,
-                specialties: data.specialties,
+                ...specialtyLists(data.specialties, source.skills[key].specialties),
                 valuePath: `system.skills.${key}.value`,
                 specialtiesPath: `system.skills.${key}.specialties`
               };
@@ -281,6 +302,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       // Exaltations and Exalted Assets follow the race pattern (spec 004, FR-010, FR-022).
       let apply = null;
       if (item.type === "race") apply = () => applyRace(this.actor, item);
+      else if (item.type === "feat" && item.system.category !== "exaltedAsset") apply = () => addFeat(this.actor, item);
       else if (item.type === "exaltation") apply = () => applyExaltation(this.actor, item);
       else if (item.type === "feat" && item.system.category === "exaltedAsset") apply = () => addExaltedAsset(this.actor, item);
       if (apply) return this.actor.isOwner ? apply() : null;
@@ -593,6 +615,16 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
   }
 
   /**
+   * Remove a feat, asset or hindrance (spec 005, FR-010).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRemoveFeat(event, target) {
+    if (this.document.isOwner) await removeFeat(this.document, target.dataset.itemId);
+  }
+
+  /**
    * Remove an Exalted Asset (FR-024).
    * @this {CharacterSheet}
    * @param {PointerEvent} event
@@ -657,7 +689,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     const text = input?.value.trim();
     if (!text) return;
     const path = target.dataset.path;
-    const current = foundry.utils.getProperty(this.document, path) ?? [];
+    // Edit the stored list only: specialties granted by feats come from effects (spec 005, research R5).
+    const current = foundry.utils.getProperty(this.document._source, path) ?? [];
     await this.document.update({ [path]: [...current, text] });
   }
 
@@ -670,7 +703,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
   static async #onRemoveSpecialty(event, target) {
     const path = target.dataset.path;
     const index = Number(target.dataset.index);
-    const current = foundry.utils.getProperty(this.document, path) ?? [];
+    const current = foundry.utils.getProperty(this.document._source, path) ?? [];
     await this.document.update({ [path]: current.filter((_, i) => i !== index) });
   }
 }

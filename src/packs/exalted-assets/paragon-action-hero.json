@@ -19,7 +19,8 @@
       "race": "",
       "deity": ""
     },
-    "automation": "actionHero"
+    "automation": "actionHero",
+    "grants": []
   },
   "effects": [],
   "flags": {}

@@ -171,7 +171,11 @@ export async function grantFeats(actor, origin) {
     : origin.system.grants ?? [];
   if (!grants.length) return;
 
-  const plan = grantPlan(grants, getFeats(actor), origin.id);
+  // Feats whose only origins already left the actor are being released: treat them as absent.
+  const live = getFeats(actor).filter((item) => item.getFlag("dtd40k", "purchased")
+    || grantedByOf(item).some((id) => id === "perfection" || actor.items.has(id))
+    || !grantedByOf(item).length);
+  const plan = grantPlan(grants, live, origin.id);
   for (const id of plan.attach) {
     const item = actor.items.get(id);
     await item.setFlag("dtd40k", "grantedBy", [...grantedByOf(item), origin.id]);
@@ -198,7 +202,7 @@ export async function grantFeats(actor, origin) {
       (taken[grant.name] ??= []).push(selection.subcategory.trim());
     }
     const name = fullName({ name: source.name, system: { selection } });
-    const existing = getFeats(actor).find((item) => item.name === name);
+    const existing = live.find((item) => item.name === name && actor.items.has(item.id));
     if (existing) {
       if (!grantedByOf(existing).includes(origin.id)) await existing.setFlag("dtd40k", "grantedBy", [...grantedByOf(existing), origin.id]);
       continue;

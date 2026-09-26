@@ -19,7 +19,8 @@
       "race": "Squat",
       "deity": ""
     },
-    "automation": "longbeard"
+    "automation": "longbeard",
+    "grants": []
   },
   "effects": [],
   "flags": {}

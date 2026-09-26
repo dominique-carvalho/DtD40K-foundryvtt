@@ -19,7 +19,8 @@
       "race": "Dragonborn",
       "deity": ""
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

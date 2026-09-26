@@ -1,0 +1,41 @@
+<section class="feat-sections">
+  {{#*inline "featRow"}}
+  <article class="feat-row{{#if row.wrongRace}} incompatible{{/if}}">
+    <header>
+      <img class="asset-img" src="{{row.img}}" alt="{{row.name}}">
+      <a data-action="openFeat" data-item-id="{{row.id}}">{{row.name}}</a>
+      {{#if row.racial}}<span class="automation-tag">{{row.racial}}</span>{{/if}}
+      {{#if row.automated}}<span class="automation-tag">{{localize "DTD.Race.Automated"}}</span>{{/if}}
+      {{#if row.granted}}<span class="feat-badge granted">{{localize "DTD.Feat.GrantedByShort"}} {{row.grantedBy}}</span>{{/if}}
+      {{#if row.purchased}}<span class="feat-badge">{{localize "DTD.Feat.Purchased"}}</span>{{/if}}
+      {{#if row.wrongRace}}<span class="feat-badge warning" data-tooltip="{{localize "DTD.Feat.WrongRaceHint"}}"><i class="fa-solid fa-triangle-exclamation" inert></i> {{row.wrongRace}}</span>{{/if}}
+      {{#if (and canEditRace row.removable)}}
+      <a class="asset-remove" data-action="removeFeat" data-item-id="{{row.id}}" data-tooltip="{{localize "DTD.Feat.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
+      {{/if}}
+    </header>
+    <details><summary>{{localize "DTD.Race.Description"}}</summary><div class="enriched">{{{row.description}}}</div></details>
+    {{#each row.effects as |effect|}}
+    <label class="race-effect{{#unless effect.active}} inactive{{/unless}}">
+      <input type="checkbox" data-action="toggleItemEffect" data-item-id="{{effect.itemId}}" data-effect-id="{{effect.id}}" {{checked effect.active}} {{disabled (not canToggleEffects)}}>
+      {{effect.name}}
+    </label>
+    {{/each}}
+  </article>
+  {{/inline}}
+
+  <section class="feat-section-list">
+    <h2 class="section-title">{{localize "DTD.Feat.Feats"}}</h2>
+    {{#each featsContext.feats as |row|}}{{> featRow row=row canEditRace=@root.canEditRace canToggleEffects=@root.canToggleEffects}}{{/each}}
+    <p class="hint">{{localize "DTD.Feat.DropHint"}}</p>
+  </section>
+
+  <section class="feat-section-list">
+    <h2 class="section-title">{{localize "DTD.Feat.Assets"}}</h2>
+    {{#each featsContext.assets as |row|}}{{> featRow row=row canEditRace=@root.canEditRace canToggleEffects=@root.canToggleEffects}}{{/each}}
+  </section>
+
+  <section class="feat-section-list">
+    <h2 class="section-title">{{localize "DTD.Feat.Hindrances"}} <span class="hint">{{featsContext.hindranceCount}}</span></h2>
+    {{#each featsContext.hindrances as |row|}}{{> featRow row=row canEditRace=@root.canEditRace canToggleEffects=@root.canToggleEffects}}{{/each}}
+  </section>
+</section>

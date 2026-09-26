@@ -19,7 +19,8 @@
       "race": "Dryad",
       "deity": ""
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

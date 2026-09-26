@@ -19,7 +19,8 @@
       "race": "",
       "deity": "Omnissiah"
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

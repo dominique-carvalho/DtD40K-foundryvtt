@@ -19,7 +19,8 @@
       "race": "",
       "deity": "Acererak"
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

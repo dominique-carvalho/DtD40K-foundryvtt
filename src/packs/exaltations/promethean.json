@@ -102,7 +102,39 @@
     "selection": {
       "statuesque": "",
       "element": ""
-    }
+    },
+    "grants": [
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Light",
+        "choose": false,
+        "rank": 1
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Medium",
+        "choose": false,
+        "rank": 1
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Heavy",
+        "choose": false,
+        "rank": 1
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Extreme",
+        "choose": false,
+        "rank": 1
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Power",
+        "choose": false,
+        "rank": 1
+      }
+    ]
   },
   "effects": [],
   "flags": {}

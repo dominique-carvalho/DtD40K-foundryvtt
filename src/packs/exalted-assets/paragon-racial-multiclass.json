@@ -19,7 +19,8 @@
       "race": "Human",
       "deity": ""
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

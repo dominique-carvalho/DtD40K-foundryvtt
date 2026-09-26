@@ -19,7 +19,8 @@
       "race": "Kenku",
       "deity": ""
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

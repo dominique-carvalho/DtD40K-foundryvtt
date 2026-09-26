@@ -19,7 +19,8 @@
       "race": "",
       "deity": ""
     },
-    "automation": "bloodOfIo"
+    "automation": "bloodOfIo",
+    "grants": []
   },
   "effects": [],
   "flags": {}

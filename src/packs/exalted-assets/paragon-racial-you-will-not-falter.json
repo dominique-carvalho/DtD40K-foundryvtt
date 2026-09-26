@@ -19,7 +19,24 @@
       "race": "Aasimar",
       "deity": ""
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": [
+      {
+        "name": "Armor of Contempt",
+        "subcategory": "",
+        "choose": false
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Power",
+        "choose": false
+      },
+      {
+        "name": "Armor Specialization",
+        "subcategory": "Power",
+        "choose": false
+      }
+    ]
   },
   "effects": [],
   "flags": {}

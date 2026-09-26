@@ -19,7 +19,8 @@
       "race": "",
       "deity": "Moradin"
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

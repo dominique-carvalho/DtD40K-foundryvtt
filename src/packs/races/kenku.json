@@ -67,7 +67,8 @@
     "choice": {
       "characteristic": "",
       "skills": []
-    }
+    },
+    "grants": []
   },
   "effects": [],
   "folder": null,

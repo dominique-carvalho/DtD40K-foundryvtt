@@ -88,12 +88,12 @@ antes e confirmar que falham. UI: roteiro manual do quickstart.
 ### Implementation for User Story 2
 
 - [X] T022 [US2] Implementar `module/rules/feat.mjs` (PURO) — `fullName`, `needsFeatSelection`, `validateFeatSelection`, `validateFeatAdd`; fazer T021 passar
-- [ ] T023 [P] [US2] Criar `templates/dialog/feat-choice.hbs`: subcategoria (datalist das opções + texto livre), característica(s) em rádio, perícia em select agrupado, especialidade em texto; rádios com o tamanho explícito da 004
-- [ ] T024 [US2] Criar `module/documents/feat-service.mjs` (parte US2) conforme contracts/foundry-api.md: `getFeats`, `promptFeatSelection` (valida e reabre), `addFeat` (erros → aviso e, para o Mestre, `DialogV2.confirm`; avisos → confirmação; notices → info; cria com `name = fullName` e `system.selection`), `removeFeat` (confirmação)
-- [ ] T025 [US2] Criar `module/apps/feats-context.mjs` e `templates/actor/parts/feats.hbs` (seções Feats/Assets/Hindrances com "n / 2", nome completo, raça incompatível, remover para donos); incluir em `traits.hbs` e `CharacterSheet.PARTIALS`
-- [ ] T026 [US2] Em `module/apps/character-sheet.mjs`: `_onDropItem` desvia `feat` com `category !== "exaltedAsset"` para `addFeat`; `_prepareContext` expõe `feats`; ações `openFeat`, `removeFeat`; `toggleItemEffect` já cobre os efeitos
-- [ ] T027 [P] [US2] i18n: `DTD.Feat.{DropHint, Remove, RemoveConfirm, GMOverride, MissingDependency, CreationOnly, ExtraHindrances, HindranceCount, WrongRace, ChooseTitle, SubcategoryHint, Error.*}`
-- [ ] T028 [P] [US2] Estilos das seções de feats na aba Traits e do diálogo em `styles/dtd40k.css`
+- [X] T023 [P] [US2] Criar `templates/dialog/feat-choice.hbs`: subcategoria (datalist das opções + texto livre), característica(s) em rádio, perícia em select agrupado, especialidade em texto; rádios com o tamanho explícito da 004
+- [X] T024 [US2] Criar `module/documents/feat-service.mjs` (parte US2) conforme contracts/foundry-api.md: `getFeats`, `promptFeatSelection` (valida e reabre), `addFeat` (erros → aviso e, para o Mestre, `DialogV2.confirm`; avisos → confirmação; notices → info; cria com `name = fullName` e `system.selection`), `removeFeat` (confirmação)
+- [X] T025 [US2] Criar `module/apps/feats-context.mjs` e `templates/actor/parts/feats.hbs` (seções Feats/Assets/Hindrances com "n / 2", nome completo, raça incompatível, remover para donos); incluir em `traits.hbs` e `CharacterSheet.PARTIALS`
+- [X] T026 [US2] Em `module/apps/character-sheet.mjs`: `_onDropItem` desvia `feat` com `category !== "exaltedAsset"` para `addFeat`; `_prepareContext` expõe `feats`; ações `openFeat`, `removeFeat`; `toggleItemEffect` já cobre os efeitos
+- [X] T027 [P] [US2] i18n: `DTD.Feat.{DropHint, Remove, RemoveConfirm, GMOverride, MissingDependency, CreationOnly, ExtraHindrances, HindranceCount, WrongRace, ChooseTitle, SubcategoryHint, Error.*}`
+- [X] T028 [P] [US2] Estilos das seções de feats na aba Traits e do diálogo em `styles/dtd40k.css`
 - [ ] T029 [US2] Validar quickstart passos 4–9 e registrar
 
 **Checkpoint**: feats, assets e hindrances adicionáveis com as regras do livro
@@ -115,10 +115,10 @@ antes e confirmar que falham. UI: roteiro manual do quickstart.
 
 - [X] T032 [US3] Completar `module/rules/feat.mjs` com `lowestCharacteristics`, `characteristicOptions` e `buildFeatEffects`; fazer T030 passar
 - [X] T033 [US3] Em `module/rules/derived.mjs`: modificadores `resolveMax`, `mentalDefense`, `staticDefense`, `fatigueMax` e `staticDefenseCharacteristic` antes do bônus/override do Mestre; fazer T031 passar
-- [ ] T034 [US3] Em `feat-service.addFeat`: efeitos de `buildFeatEffects` (`transfer`, `origin`, nome `DTD.Feat.Effect`, `flags.dtd40k.feat`); Nine Lives soma 1 ao `heroPoints.value`; `removeFeat` limita Hero Points ao máximo
-- [ ] T035 [US3] Especialidades base × final (research R5): em `character-sheet.mjs` o contexto de características/perícias separa as especialidades do `_source` (com remover) das vindas de efeitos (marcadas, sem remover); `#onAddSpecialty`/`#onRemoveSpecialty` leem o `_source`; atualizar `templates/actor/parts/specialties.hbs`
-- [ ] T036 [US3] Iniciativa: `initiativeBonus` do rodapé em `character-sheet.mjs` soma `system.modifiers.initiative`
-- [ ] T037 [P] [US3] i18n: `DTD.Feat.{Effect, ChooseCharacteristic, ChooseCharacteristic2, ChooseSkill, Specialty}`, `DTD.Sheet.FromFeat`
+- [X] T034 [US3] Em `feat-service.addFeat`: efeitos de `buildFeatEffects` (`transfer`, `origin`, nome `DTD.Feat.Effect`, `flags.dtd40k.feat`); Nine Lives soma 1 ao `heroPoints.value`; `removeFeat` limita Hero Points ao máximo
+- [X] T035 [US3] Especialidades base × final (research R5): em `character-sheet.mjs` o contexto de características/perícias separa as especialidades do `_source` (com remover) das vindas de efeitos (marcadas, sem remover); `#onAddSpecialty`/`#onRemoveSpecialty` leem o `_source`; atualizar `templates/actor/parts/specialties.hbs`
+- [X] T036 [US3] Iniciativa: `initiativeBonus` do rodapé em `character-sheet.mjs` soma `system.modifiers.initiative`
+- [X] T037 [P] [US3] i18n: `DTD.Feat.{Effect, ChooseCharacteristic, ChooseCharacteristic2, ChooseSkill, Specialty}`, `DTD.Sheet.FromFeat`
 - [ ] T038 [US3] Validar quickstart passos 10–15 e registrar
 
 **Checkpoint**: derivados já contam os feats
@@ -134,17 +134,17 @@ antes e confirmar que falham. UI: roteiro manual do quickstart.
 ### Tests for User Story 4 ⚠️
 
 - [X] T039 [P] [US4] Acrescentar em `tests/unit/feat.test.mjs`: `grantPlan`, `releasePlan` e `activeGrants` com os casos de contracts/rules-api.md
-- [ ] T040 [P] [US4] Acrescentar em `tests/unit/packs.test.mjs`: `grants` de Aasimar e Gnome (races), Atlantean e Promethean rank 1 (exaltations), You Will Not Falter, Tuning (3 × `choose`) e Ventrue (Peer / Ventrue) (exalted-assets); todo nome concedido existe no pack `feats`; demais entradas com `grants: []`
+- [X] T040 [P] [US4] Acrescentar em `tests/unit/packs.test.mjs`: `grants` de Aasimar e Gnome (races), Atlantean e Promethean rank 1 (exaltations), You Will Not Falter, Tuning (3 × `choose`) e Ventrue (Peer / Ventrue) (exalted-assets); todo nome concedido existe no pack `feats`; demais entradas com `grants: []`
 
 ### Implementation for User Story 4
 
 - [X] T041 [US4] Completar `module/rules/feat.mjs` com `grantPlan`, `releasePlan`, `activeGrants`; fazer T039 passar
-- [ ] T042 [P] [US4] Atualizar os JSON: `src/packs/races/aasimar.json` (Jaded, Fearless), `gnome.json` (Weapon Proficiency × 7 opções, Armor Proficiency × 5); `src/packs/exaltations/atlantean.json` (Speak Language / Syrneth, rank 1), `promethean.json` (Armor Proficiency × 5, rank 1); `src/packs/exalted-assets/paragon-racial-you-will-not-falter.json`, `paragon-racial-tuning.json`, `vampire-ventrue.json`; fazer T040 passar
-- [ ] T043 [US4] Em `module/documents/feat-service.mjs`: `grantFeats(actor, origin)` (resolve nomes pelo índice de `dtd40k.feats` + `getDocuments({ _id__in })`, `choose` → `promptFeatSelection` excluindo as já escolhidas, aplica `grantPlan` com `flags.dtd40k.grantedBy`, aviso `DTD.Feat.GrantMissing`) e `releaseGrants(actor, originId)` (aplica `releasePlan`); `addFeat` marca `purchased` quando o feat já foi concedido; `removeFeat` de concedido só pelo Mestre (desmarca `purchased` quando também comprado)
-- [ ] T044 [US4] Em `module/documents/item.mjs`: `_onCreate`/`_onDelete` no cliente do autor (`userId === game.user.id`) para itens embutidos em `character` chamando `grantFeats`/`releaseGrants` (research R7)
-- [ ] T045 [US4] Em `module/documents/exaltation-service.mjs` `setPowerStat`: ao cruzar o `rank` de uma concessão, chamar `grantFeats`/`releaseGrants` para as concessões afetadas
-- [ ] T046 [US4] Em `feats-context.mjs`/`feats.hbs`: badges "concedido por <origem>" e "comprado"; remover oculto para concedidos (exceto Mestre); nos Exalted Assets (`assets.hbs` da 004), badge com o número de feats concedidos
-- [ ] T047 [P] [US4] i18n: `DTD.Feat.{GrantedBy, Purchased, RemoveGranted, GrantMissing}`
+- [X] T042 [P] [US4] Atualizar os JSON: `src/packs/races/aasimar.json` (Jaded, Fearless), `gnome.json` (Weapon Proficiency × 7 opções, Armor Proficiency × 5); `src/packs/exaltations/atlantean.json` (Speak Language / Syrneth, rank 1), `promethean.json` (Armor Proficiency × 5, rank 1); `src/packs/exalted-assets/paragon-racial-you-will-not-falter.json`, `paragon-racial-tuning.json`, `vampire-ventrue.json`; fazer T040 passar
+- [X] T043 [US4] Em `module/documents/feat-service.mjs`: `grantFeats(actor, origin)` (resolve nomes pelo índice de `dtd40k.feats` + `getDocuments({ _id__in })`, `choose` → `promptFeatSelection` excluindo as já escolhidas, aplica `grantPlan` com `flags.dtd40k.grantedBy`, aviso `DTD.Feat.GrantMissing`) e `releaseGrants(actor, originId)` (aplica `releasePlan`); `addFeat` marca `purchased` quando o feat já foi concedido; `removeFeat` de concedido só pelo Mestre (desmarca `purchased` quando também comprado)
+- [X] T044 [US4] Em `module/documents/item.mjs`: `_onCreate`/`_onDelete` no cliente do autor (`userId === game.user.id`) para itens embutidos em `character` chamando `grantFeats`/`releaseGrants` (research R7)
+- [X] T045 [US4] Em `module/documents/exaltation-service.mjs` `setPowerStat`: ao cruzar o `rank` de uma concessão, chamar `grantFeats`/`releaseGrants` para as concessões afetadas
+- [X] T046 [US4] Em `feats-context.mjs`/`feats.hbs`: badges "concedido por <origem>" e "comprado"; remover oculto para concedidos (exceto Mestre); nos Exalted Assets (`assets.hbs` da 004), badge com o número de feats concedidos
+- [X] T047 [P] [US4] i18n: `DTD.Feat.{GrantedBy, Purchased, RemoveGranted, GrantMissing}`
 - [ ] T048 [US4] Validar quickstart passos 16–23 e registrar
 
 **Checkpoint**: criação de personagem completa com feats concedidos

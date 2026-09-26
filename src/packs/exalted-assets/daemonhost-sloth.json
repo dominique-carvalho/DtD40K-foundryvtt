@@ -19,7 +19,8 @@
       "race": "",
       "deity": ""
     },
-    "automation": "sloth"
+    "automation": "sloth",
+    "grants": []
   },
   "effects": [],
   "flags": {}

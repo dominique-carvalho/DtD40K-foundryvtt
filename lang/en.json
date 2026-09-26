@@ -393,6 +393,37 @@
     },
     "Item": {
       "LockedPackHint": "This compendium is locked. To edit this entry, right-click the {pack} compendium and choose \"{option}\". Changes to the system compendium are replaced when the system updates — export them with npm run extract:packs, or import the entry into the world and edit the copy."
+    },
+    "Feat": {
+      "Category": {
+        "feat": "Feat",
+        "racialFeat": "Racial Feat",
+        "asset": "Asset",
+        "hindrance": "Hindrance",
+        "exaltedAsset": "Exalted Asset"
+      },
+      "Automation": {
+        "none": "Text only",
+        "soundConstitution": "Sound Constitution (+1 HP)",
+        "discipline": "Discipline (+1 Resolve)",
+        "paranoia": "Paranoia (+2 initiative)",
+        "farsighted": "Farsighted (+3 Resolve, +5 Mental Defense)",
+        "halflingAgility": "Halfling Agility (+4 Static Defense)",
+        "noOneTougher": "No One Tougher (Static Defense uses Constitution)",
+        "madeOfMettle": "Made of Mettle (+1 lowest characteristic)",
+        "beneficialMutation": "Beneficial Mutation (+2 lowest, −1 another)",
+        "matron": "Matron (Str +1, Dex −1, Fel −1, Size +2)",
+        "sturdy": "Sturdy (+1 Resilience)",
+        "sand": "Sand (+2 Fatigue)",
+        "nineLives": "Nine Lives (+1 Hero Point)",
+        "veteran": "Veteran o’ the Wheel (+1 characteristic, +1 skill)",
+        "skillFocus": "Skill Focus (specialty)",
+        "noisyCricket": "Noisy Cricket (Acrobatics: Jumping)"
+      },
+      "RequireType": {
+        "feat": "Feat",
+        "racePower": "Racial power"
+      }
     }
   }
 }

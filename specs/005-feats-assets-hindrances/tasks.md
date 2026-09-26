@@ -27,7 +27,7 @@ antes e confirmar que falham. UI: roteiro manual do quickstart.
 
 ## Phase 1: Setup
 
-- [ ] T001 Em `system.json`: acrescentar o pack `{ "name": "feats", "label": "Feats", "path": "packs/feats", "type": "Item", "system": "dtd40k", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }` e trocar `initiative` para `1d10 + @characteristics.dex.value + @characteristics.cmp.value + @modifiers.initiative`; em `dtd40k.mjs`, a mesma fórmula em `CONFIG.Combat.initiative` (contracts/foundry-api.md)
+- [X] T001 Em `system.json`: acrescentar o pack `{ "name": "feats", "label": "Feats", "path": "packs/feats", "type": "Item", "system": "dtd40k", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }` e trocar `initiative` para `1d10 + @characteristics.dex.value + @characteristics.cmp.value + @modifiers.initiative`; em `dtd40k.mjs`, a mesma fórmula em `CONFIG.Combat.initiative` (contracts/foundry-api.md)
 
 ---
 
@@ -35,13 +35,13 @@ antes e confirmar que falham. UI: roteiro manual do quickstart.
 
 **Purpose**: constantes e modelos estendidos usados por todas as histórias
 
-- [ ] T002 [P] Acrescentar em `tests/unit/config.test.mjs`: `FEAT_CATEGORIES` = `["feat", "racialFeat", "asset", "hindrance", "exaltedAsset"]`; `FEAT_AUTOMATION` = `ASSET_AUTOMATION` seguido de `["soundConstitution", "discipline", "paranoia", "farsighted", "halflingAgility", "noOneTougher", "madeOfMettle", "beneficialMutation", "matron", "sturdy", "sand", "nineLives", "veteran", "skillFocus", "noisyCricket"]`; `HINDRANCE_LIMIT === 2`; `FEAT_REQUIREMENT_TYPES` = `["feat", "racePower"]`; todos em `DTD`; `ASSET_AUTOMATION` inalterado
-- [ ] T003 Em `module/config.mjs`: `FEAT_CATEGORIES` ampliado, `FEAT_AUTOMATION`, `HINDRANCE_LIMIT`, `FEAT_REQUIREMENT_TYPES` (com fonte: p. 179, research R4) e no objeto `DTD`; fazer T002 passar
-- [ ] T004 Em `module/data/feat-data.mjs`: `category` choices `FEAT_CATEGORIES` com inicial `"feat"`; `automation` choices `FEAT_AUTOMATION`; novos campos conforme data-model.md — `xpGranted` "inteiro ≥ 0" (inicial 0), `repeatable` booleano, `featGroup: { enabled: booleano, options: lista de strings não vazias }`, `requires: lista de { type: choices FEAT_REQUIREMENT_TYPES, name: string não vazia }`, `grants: lista de { name: string não vazia, subcategory: string, choose: booleano }`, `selection: { subcategory, characteristic ("" ou chave), characteristic2 ("" ou chave), skill ("" ou chave de perícia), specialty }`; manter `group`, `prerequisites`, `xpCost` com o sentido da 004 (research R1)
-- [ ] T005 [P] Em `module/data/race-data.mjs` e `module/data/exaltation-data.mjs`: campo `grants` (race: `{ name, subcategory, choose }`; exaltation: idem + `rank` "inteiro 1–5", inicial 1)
-- [ ] T006 [P] Em `module/data/character-data.mjs` `modifiers`: `resolveMax`, `mentalDefense`, `staticDefense`, `fatigueMax`, `initiative` (inteiros, 0) e `staticDefenseCharacteristic` (choices `["dex", "con"]`, inicial `"dex"`), com o comentário "targets of feat effects only — never sheet inputs"
-- [ ] T007 [P] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `DTD.Feat.Category.{feat,racialFeat,asset,hindrance}` (e `exaltedAsset` reaproveitado de `DTD.Asset.Category`), `DTD.Feat.Automation.*` (15 novos), `DTD.Feat.RequireType.{feat,racePower}`
-- [ ] T008 Rodar `npm test` (suíte existente verde com os schemas estendidos) e `npx eslint .`
+- [X] T002 [P] Acrescentar em `tests/unit/config.test.mjs`: `FEAT_CATEGORIES` = `["feat", "racialFeat", "asset", "hindrance", "exaltedAsset"]`; `FEAT_AUTOMATION` = `ASSET_AUTOMATION` seguido de `["soundConstitution", "discipline", "paranoia", "farsighted", "halflingAgility", "noOneTougher", "madeOfMettle", "beneficialMutation", "matron", "sturdy", "sand", "nineLives", "veteran", "skillFocus", "noisyCricket"]`; `HINDRANCE_LIMIT === 2`; `FEAT_REQUIREMENT_TYPES` = `["feat", "racePower"]`; todos em `DTD`; `ASSET_AUTOMATION` inalterado
+- [X] T003 Em `module/config.mjs`: `FEAT_CATEGORIES` ampliado, `FEAT_AUTOMATION`, `HINDRANCE_LIMIT`, `FEAT_REQUIREMENT_TYPES` (com fonte: p. 179, research R4) e no objeto `DTD`; fazer T002 passar
+- [X] T004 Em `module/data/feat-data.mjs`: `category` choices `FEAT_CATEGORIES` com inicial `"feat"`; `automation` choices `FEAT_AUTOMATION`; novos campos conforme data-model.md — `xpGranted` "inteiro ≥ 0" (inicial 0), `repeatable` booleano, `featGroup: { enabled: booleano, options: lista de strings não vazias }`, `requires: lista de { type: choices FEAT_REQUIREMENT_TYPES, name: string não vazia }`, `grants: lista de { name: string não vazia, subcategory: string, choose: booleano }`, `selection: { subcategory, characteristic ("" ou chave), characteristic2 ("" ou chave), skill ("" ou chave de perícia), specialty }`; manter `group`, `prerequisites`, `xpCost` com o sentido da 004 (research R1)
+- [X] T005 [P] Em `module/data/race-data.mjs` e `module/data/exaltation-data.mjs`: campo `grants` (race: `{ name, subcategory, choose }`; exaltation: idem + `rank` "inteiro 1–5", inicial 1)
+- [X] T006 [P] Em `module/data/character-data.mjs` `modifiers`: `resolveMax`, `mentalDefense`, `staticDefense`, `fatigueMax`, `initiative` (inteiros, 0) e `staticDefenseCharacteristic` (choices `["dex", "con"]`, inicial `"dex"`), com o comentário "targets of feat effects only — never sheet inputs"
+- [X] T007 [P] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `DTD.Feat.Category.{feat,racialFeat,asset,hindrance}` (e `exaltedAsset` reaproveitado de `DTD.Asset.Category`), `DTD.Feat.Automation.*` (15 novos), `DTD.Feat.RequireType.{feat,racePower}`
+- [X] T008 Rodar `npm test` (suíte existente verde com os schemas estendidos) e `npx eslint .`
 
 **Checkpoint**: o sistema carrega e os 75 Exalted Assets da 004 continuam válidos (campos novos com padrão)
 

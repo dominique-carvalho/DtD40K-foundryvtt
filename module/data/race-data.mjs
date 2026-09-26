@@ -1,5 +1,6 @@
 import { CHARACTERISTICS, RACE_POWER_AUTOMATION, SKILLS } from "../config.mjs";
 import { remainingUses, usesPerScene } from "../rules/race.mjs";
+import { grantField } from "./fields.mjs";
 
 const { ArrayField, BooleanField, HTMLField, NumberField, SchemaField, StringField } = foundry.data.fields;
 
@@ -63,6 +64,8 @@ export class RaceData extends foundry.abstract.TypeDataModel {
         physical: textList(),
         names: textList()
       }),
+      // Feats the race grants (e.g. Aasimar: Jaded, Fearless — spec 005, research R6).
+      grants: new ArrayField(grantField()),
       choice: new SchemaField({
         characteristic: new StringField({ required: true, blank: true, initial: "", choices: ["", ...characteristicKeys] }),
         skills: keyList(skillKeys)

@@ -132,8 +132,8 @@ export const RESOURCE_HEALING = ["outOfCombat", "anytime", "never"];
 /** Power Stat caps: Level (p. 65), or Level and half the Devotion for the Chosen (p. 71). */
 export const POWER_STAT_CAPS = ["level", "levelAndDevotion"];
 
-/** Feat categories; the feats feature adds feat, racialFeat, asset and hindrance (research R1). */
-export const FEAT_CATEGORIES = ["exaltedAsset"];
+/** Feat item categories (spec 004 research R1, spec 005 research R1). */
+export const FEAT_CATEGORIES = ["feat", "racialFeat", "asset", "hindrance", "exaltedAsset"];
 
 /** Exalted Asset groups (DtD 7.7a pp. 211–223). */
 export const ASSET_GROUPS = [
@@ -146,6 +146,19 @@ export const ASSET_AUTOMATION = ["none", "actionHero", "extraAction", "bloodOfIo
 
 /** Groups that do not count toward the one-Exalted-Asset limit (p. 179). */
 export const LIMIT_EXEMPT_GROUPS = ["paragon", "paragonRacial"];
+
+/** Automated feats, racial feats, assets and Exalted Assets (spec 005, research R4). */
+export const FEAT_AUTOMATION = [
+  ...ASSET_AUTOMATION,
+  "soundConstitution", "discipline", "paranoia", "farsighted", "halflingAgility", "noOneTougher", "madeOfMettle",
+  "beneficialMutation", "matron", "sturdy", "sand", "nineLives", "veteran", "skillFocus", "noisyCricket"
+];
+
+/** At most two hindrances per character (DtD 7.7a p. 179). */
+export const HINDRANCE_LIMIT = 2;
+
+/** What a feat may depend on: another feat, or a racial power (e.g. Elven Accuracy, Warp Step). */
+export const FEAT_REQUIREMENT_TYPES = ["feat", "racePower"];
 
 /** Generic 1-point resource spends (DtD 7.7a p. 65). */
 export const GENERIC_SPENDS = ["heal", "skill", "reaction", "stunned", "dazed"];
@@ -167,5 +180,8 @@ export const DTD = {
   ASSET_GROUPS,
   ASSET_AUTOMATION,
   LIMIT_EXEMPT_GROUPS,
-  GENERIC_SPENDS
+  GENERIC_SPENDS,
+  FEAT_AUTOMATION,
+  HINDRANCE_LIMIT,
+  FEAT_REQUIREMENT_TYPES
 };

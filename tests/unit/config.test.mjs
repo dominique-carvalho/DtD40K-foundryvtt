@@ -114,7 +114,7 @@ describe("exaltation and feat constants (004)", () => {
     RESOURCE_ACTIONS: ["restoreAll", "regain", "lose", "unravel"],
     RESOURCE_HEALING: ["outOfCombat", "anytime", "never"],
     POWER_STAT_CAPS: ["level", "levelAndDevotion"],
-    FEAT_CATEGORIES: ["exaltedAsset"],
+    FEAT_CATEGORIES: ["feat", "racialFeat", "asset", "hindrance", "exaltedAsset"],
     ASSET_GROUPS: [
       "atlanteanCaste", "chosenMark", "daemonhostSin", "dragonbloodedBloodline", "paragon", "paragonRacial",
       "prometheanMaterial", "vampireClan", "werewolfTribe", "wraithHaunting"
@@ -129,4 +129,19 @@ describe("exaltation and feat constants (004)", () => {
       expect(DTD[name]).toEqual(value);
     });
   }
+});
+
+describe("feat constants (005)", () => {
+  it("adds the feat automations after the Exalted Asset ones", () => {
+    expect(DTD.FEAT_AUTOMATION).toEqual([
+      ...DTD.ASSET_AUTOMATION,
+      "soundConstitution", "discipline", "paranoia", "farsighted", "halflingAgility", "noOneTougher", "madeOfMettle",
+      "beneficialMutation", "matron", "sturdy", "sand", "nineLives", "veteran", "skillFocus", "noisyCricket"
+    ]);
+  });
+
+  it("limits hindrances to two (p. 179) and lists the requirement types", () => {
+    expect(DTD.HINDRANCE_LIMIT).toBe(2);
+    expect(DTD.FEAT_REQUIREMENT_TYPES).toEqual(["feat", "racePower"]);
+  });
 });

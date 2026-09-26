@@ -33,6 +33,7 @@ Esperado: `packs/races/` gerado sem erros; abrir o Foundry depois.
 | # | Passo | Resultado esperado | Spec |
 |---|---|---|---|
 | 1 | Abrir um mundo DtD, aba Compêndios | "Races" com 16 entradas; sem erros no console (F12) | US1-1 |
+| 1b | Abrir Dryad, Kenku, Kobold e Thri-Kreen; aplicar cada uma a um personagem e clicar no "i" | Dados iguais à Tabela de referência (7.7a pp. 37, 49, 51, 59); +1 na característica escolhida e nas 2 perícias; Size aplicado (Kobold Size 2 sobe a Static Defense); poder só como texto; descrição e ambientação completas | FR-006, SC-001 |
 | 2 | Abrir Eldarin no compêndio | +1 Wisdom ou Intelligence; +1 Academic Lore e Arcana; Size 3; Warp Step com 1/2/3 usos; DtD 7.7a, página 39; somente leitura | US1-2, FR-004 |
 | 3 | Abrir Human | "qualquer uma", "escolha 2", Size 4, Heroic Heritage | US1-3 |
 | 4 | Ler as 16 descrições ao lado do PDF | Nenhuma frase igual ao livro; resumo em inglês | US1-4, SC-005 |
@@ -65,10 +66,11 @@ Esperado: `packs/races/` gerado sem erros; abrir o Foundry depois.
 
 | Data | Passos | Resultado | Observações |
 |---|---|---|---|
-| 2026-09-25 | 1–5 (US1) | ✅ Aprovado | Validação feita pela pessoa que mantém o projeto no Foundry 13.351, mundo "teste dtd", após recompilar o pack com a DtD 7.7a: 16 raças no compêndio; Eldarin com fonte 7.7a p. 39; rótulos pt-BR/en. |
+| 2026-09-25 | 1–5 (US1) | ⚠️ Refazer | Validado no Foundry 13.351, mundo "teste dtd", mas com o pack **antigo** (12 raças da 1.6) — ver correção abaixo. Rótulos pt-BR/en ok. |
 | 2026-09-25 | 6–14, 20–24 (US2) | ✅ Aprovado | Inclui os passos 20b (ícone "i"), 20c (Texto completo) e 20d (edição com o compêndio destravado), acrescentados durante a validação. |
 | 2026-09-25 | 15–19 (US3) | ✅ Aprovado | Passo 18 feito com o Eldarin (único com usos por cena na 7.7a); Elf, Dark Eldarin e Dragonborn só com texto. |
-| 2026-09-25 | 25 e roteiro completo | ✅ Aprovado | Temas claro e escuro. |
+| 2026-09-25 | 25 e roteiro completo | ⚠️ Parcial | Temas claro e escuro ok; dados da 7.7a pendentes (ver correção). |
+| 2026-09-25 | **Correção** | ⚠️ | O pack compilado nunca foi atualizado depois do primeiro build (19:51): o Foundry ficou aberto o tempo todo e segurava o LOCK do pack, então todo `npm run build:packs` falhou. As linhas acima valem para a interface e a mecânica (aplicar, trocar, efeitos, abas, contador, permissões), **não** para os dados da 7.7a. Pendentes: passos 1, 1b, 2, 4 e o 24 com as 16 raças, com o pack recompilado com o Foundry fechado. O build agora verifica o bloqueio antes de mexer no pack e compila numa pasta temporária. |
 
 Ajustes feitos durante a validação (já incorporados à spec e às tarefas): lista de modificadores
 raciais com toggle do Mestre e ícone "i" (T054–T055); campo "Texto completo" (T056); descrições

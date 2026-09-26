@@ -78,7 +78,7 @@ Tabela de referência (quickstart passos 1–5)
 - [X] T019 [US1] Registrar em `dtd40k.mjs`: `foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", RaceSheet, { types: ["race"], makeDefault: true, label: "DTD.Sheet.Race" })`
 - [X] T020 [P] [US1] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `DTD.Sheet.Race` e `DTD.Race.{Race, Size, Power, Description, Lore, Height, Weight, Languages, Personality, Physical, Names, Source, Page, AnyCharacteristic, ChooseN, CharacteristicBonus, SkillBonus, Or, And, CommaSeparated}` (nomes de regras do livro ficam em inglês nos dois idiomas)
 - [X] T021 [P] [US1] Estilos da ficha da raça em `styles/dtd40k.css` (`.dtd40k.item.race`): grade de checkboxes em 3 colunas, seções com título, legível nos temas claro e escuro do v13 usando as variáveis de cor do tema
-- [X] T022 [US1] Validar manualmente quickstart.md passos 1–5 e registrar em "Registro de validação" de `specs/002-race-compendium/quickstart.md` (incluir a revisão SC-005: nenhuma frase igual ao livro nas 12 descrições)
+- [ ] T022 [US1] Validar manualmente quickstart.md passos 1–5 e registrar em "Registro de validação" de `specs/002-race-compendium/quickstart.md` (incluir a revisão SC-005: nenhuma frase igual ao livro nas 12 descrições)
 
 **Checkpoint**: compêndio Races utilizável como referência (MVP)
 
@@ -149,7 +149,7 @@ troca, remoção e reconfiguração; ficha com abas e valores base/final
 - [X] T049 [P] Rodar `npm run lint` e corrigir avisos em `dtd40k.mjs`, `module/**` e `scripts/**`
 - [X] T050 [P] Revisar i18n: nenhuma string literal nova em `templates/**` ou `module/**` fora de `lang/*.json`; alternar pt-BR ↔ en (quickstart passo 5, SC-006)
 - [X] T051 [P] Documentar em `README.md` (criar a seção se o arquivo não existir) o comando `npm run build:packs`, a necessidade de fechar o Foundry durante o build e que `packs/` não é versionado
-- [X] T052 Executar o roteiro completo de `specs/002-race-compendium/quickstart.md` (passos 1–25) nos temas claro e escuro e `npm test` com cobertura de `module/rules/**`
+- [ ] T052 Executar o roteiro completo de `specs/002-race-compendium/quickstart.md` (passos 1–25) nos temas claro e escuro e `npm test` com cobertura de `module/rules/**`
 - [X] T053 Rodar `graphify update .` na raiz do repositório para atualizar o grafo de conhecimento
 
 ---
@@ -167,6 +167,9 @@ troca, remoção e reconfiguração; ficha com abas e valores base/final
 - [X] T059 [US1] `src/packs/races/*.json`: fonte `DtD 7.7a` e páginas pp. 31–61; poderes de Dark Eldarin, Dragonborn, Elf, Gnome, Ork e Tau conforme a 7.7a (automação `none`; só Eldarin mantém `usesPerScene`); páginas dos heróis de exemplo atualizadas
 - [X] T060 [US1] Quatro raças novas (Dryad p. 37, Kenku p. 49, Kobold p. 51, Thri-Kreen p. 59) com dados da 7.7a, ambientação e descrição completa em redação própria; verificação automática sem sequências de 6+ palavras iguais à 1.6 ou à 7.7a
 - [X] T061 [US1] `tests/unit/packs.test.mjs` com a tabela da 7.7a (16 raças); `RaceData.source.book` padrão `DtD 7.7a`; spec, plan, research, data-model, contratos, quickstart e README atualizados
+
+- [X] T062 `scripts/build-packs.mjs`: verifica o LOCK de cada pack sem tocar nos arquivos e aborta se o Foundry estiver usando; compila em `packs/.build-<nome>` e só então substitui o pack
+- [ ] T063 [US1] Validar quickstart.md passos 1, 1b, 2, 4 e 24 com o pack da 7.7a (16 raças) e registrar
 
 ---
 

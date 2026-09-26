@@ -61,5 +61,9 @@ Reiniciar o Foundry → o sistema "Dungeons the Dragoning" aparece em *Game Syst
 |---|---|---|---|
 | 2026-09-25 | 1–2 | ✅ | Personagem criado com valores iniciais corretos (verificado no banco do mundo `teste-dtd`) |
 | 2026-09-25 | 3 | ❌ | Derivados não atualizavam na ficha aberta; layout inutilizável no v13 → reformulação da US1 (layout híbrido A+C) |
+| 2026-09-25 | 3, 6, 17 (ficha híbrida) | ✅ parcial | Pontos clicáveis alteram características e perícias; especialidades são adicionadas. Rolagens (passos 7–16) ainda não existem: pertencem à US2/US3 (Fase 4 e 5). Pendentes de confirmação na US1: derivados atualizando na hora, passos 18–22 |
+| 2026-09-25 | 7, 9, 10, 12, 16 (US2) | ✅ | Rolagens de perícias e características funcionando no Foundry 13.351 (confirmado pelo usuário) |
+| 2026-09-25 | 8, 11, 13, 14 (US3) | ✅ | Diálogo de rolagem funcionando no Foundry 13.351 (confirmado pelo usuário) |
+| 2026-09-25 | 1–22 (roteiro completo) | ✅ | Validação completa confirmada pelo usuário no Foundry 13.351, incluindo passos 3, 15 e 18–22 |
 | 2026-09-25 | 3 (Traya da 7.7a) | ✅ | Após adotar a DtD 7.7a: str 4, dex 2, con 4, wil 4, wis 2, cmp 2, Size 5 → SD 12, HP 16, MD 15, Resolve 6, Speed 6, Resilience 4, Fatigue 4; valores atualizam na hora. Caixa Fatigue (atual/máxima) no cabeçalho e linha "Fatigue máxima" nos ajustes do Mestre (bônus/override) funcionando. Temas claro e escuro sem cortes. |
 | 2026-09-25 | 16 (rodapé) | ✅ | Rodapé mostra iniciativa de combate 1d10 + Dex + Cmp e social 1d10 + Fel + Cmp (7.7a p. 17). A rolagem no Combat Tracker não fez parte desta validação. |

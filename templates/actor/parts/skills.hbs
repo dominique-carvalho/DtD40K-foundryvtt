@@ -18,12 +18,24 @@
         {{#each column.entries as |entry|}}
         <li class="trait skill{{#if entry.advanced}} advanced{{/if}}" data-key="{{entry.key}}" data-skill-name="{{entry.name}}" data-value="{{entry.value}}">
           <div class="trait-row">
+            {{#if ../../isEdit}}
             <span class="trait-name">
               {{entry.name}}{{#if entry.advanced}}<span class="advanced-mark" data-tooltip="{{localize "DTD.Sheet.Advanced"}}">*</span>{{/if}}
               <span class="trait-char">{{localize entry.charAbbr}}</span>
             </span>
+            {{else if entry.blocked}}
+            <span class="trait-name blocked" data-tooltip="{{localize "DTD.Roll.AdvancedUntrained"}}">
+              <i class="fa-solid fa-lock" aria-hidden="true"></i> {{entry.name}}<span class="advanced-mark">*</span>
+              <span class="trait-char">{{localize entry.charAbbr}}</span>
+            </span>
+            {{else}}
+            <a class="trait-name roll-link" data-action="rollSkill" data-key="{{entry.key}}" data-tooltip="{{localize "DTD.Roll.RollTooltip"}}">
+              <i class="fa-solid fa-dice-d10" aria-hidden="true"></i> {{entry.name}}{{#if entry.advanced}}<span class="advanced-mark">*</span>{{/if}}
+              <span class="trait-char">{{localize entry.charAbbr}}</span>
+            </a>
+            {{/if}}
             {{> "systems/dtd40k/templates/actor/parts/dots.hbs" dots=entry.dots path=entry.valuePath capped=entry.capped editable=../../isEdit}}
-            <span class="pool"></span>
+            {{#unless ../../isEdit}}<span class="pool{{#if entry.untrained}} untrained{{/if}}"{{#if entry.untrained}} data-tooltip="{{localize "DTD.Roll.Untrained"}}"{{/if}}>{{entry.pool}}</span>{{/unless}}
           </div>
           {{> "systems/dtd40k/templates/actor/parts/specialties.hbs" entry=entry isEdit=../../isEdit}}
         </li>

@@ -1,0 +1,80 @@
+{
+  "_id": "dtdRaceDryad0000",
+  "name": "Dryad",
+  "type": "race",
+  "img": "icons/svg/regen.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>Dryads are one of the few thinking peoples of the Wheel that are plants rather than animals. Every Dryad is of a single sex, and each passes through three distinct stages over a very long life. Needing little of what other races crave, they often come across as distant.</p><p>Their bond with the natural world runs deep, not least because they depend on it: raising a new generation takes large stretches of safe, untouched land. As a result they plan far ahead and build their societies with the long term in mind.</p><h3>Appearance</h3><p>The Dryads that adventure are in their first stage, the Maiden, a time of curiosity and appetite for experience. They look humanoid, with skin ranging from green to deep earthy brown and subtle plant traits — most grow semi-prehensile vines instead of hair, and small leaves sprout here and there on their bodies.</p><p>Reproduction works unlike any other race. A Maiden seeks partners eagerly, almost always outside her own kind, and carries seeds within her that magically take on traits of the other parent — which is why they favour the variety other races offer; the partner's sex does not matter. When she is ready, she enters the Maelid stage: she chooses a place, usually near her birthplace, and over a few weeks roots herself and becomes an almost motionless tree while new Dryads ripen in large pods. A Maelid can only talk at a crawl, using the Spirit-tongue, and most people cannot tell her from an ordinary tree. Once her seeds have matured she wakes as a Matriarch, now huge and tree-like, and stays beside the Maelids as guardian of the young and of the delicate ecosystem around them.</p><h3>In Play</h3><p>A Dryad lives around a thousand years, a few centuries in each stage. Exalted Dryads can live far longer, although the upheaval of Exaltation may keep them from ever reaching their next stage.</p><p>Dryads cherish unspoiled wilderness, yet they are not enemies of technology — quite the opposite. They see machines as partners or servants of nature, and think races that pit the two against each other have missed the point entirely. Worlds under Dryad rule are carefully tended gardens, as technologically advanced as any other, only more cautious about their effect on the environment.</p><h3>Relations</h3><p>Dryads get along well with peoples who share their love of nature, such as the Elves.</p><p><em>Example heroes (p. 38): Kraneia, Morea, Ptelea.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 37
+    },
+    "characteristicBonus": {
+      "options": [
+        "fel",
+        "wil"
+      ],
+      "any": false
+    },
+    "skillBonus": {
+      "skills": [
+        "animalKen",
+        "scrutiny"
+      ],
+      "choose": 0
+    },
+    "size": 4,
+    "power": {
+      "name": "Pheromones",
+      "description": "<p>Gain one extra rank in the Enchantment school of magic, and cast Enchantment spells using Fellowship.</p>",
+      "automation": "none",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "1.5–1.8 m",
+      "weight": "100–140 kg",
+      "languages": [
+        "Trade",
+        "Elven",
+        "Spirit-tongue"
+      ],
+      "personality": [
+        "Aloof",
+        "Passive",
+        "Communal",
+        "Open",
+        "Confident"
+      ],
+      "physical": [
+        "Green skin or hair",
+        "Small leaves growing on the body",
+        "Living clothing or equipment",
+        "Scent of fresh flowers",
+        "Dense, wood-tough flesh"
+      ],
+      "names": [
+        "Ampelos",
+        "Erato",
+        "Heliades",
+        "Karya",
+        "Phoibe",
+        "Tithorea"
+      ]
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceDryad0000"
+}

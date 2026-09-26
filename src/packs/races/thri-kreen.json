@@ -1,0 +1,79 @@
+{
+  "_id": "dtdRaceThriKreen",
+  "name": "Thri-Kreen",
+  "type": "race",
+  "img": "icons/svg/pawprint.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>Thri-Kreen are an insectoid people and, in some respects, one of the most mysterious in the Wheel. Outsiders know almost nothing about them beyond their hive-like cities, where personal space counts for little and shared spaces are treated with great respect.</p><p>They live fast and die young: a Thri-Kreen naturally lives under half as long as most other peoples, and reaching fifty is almost unheard of. The cause is a hyperactive metabolism — they never sleep, and they squeeze everything they can out of each day.</p><h3>Appearance</h3><p>Thri-Kreen look like upright praying mantises. Their exoskeletons come in many colours, usually earthy tones with the odd grey or blue marking. They have six limbs — a pair of ordinary arms plus a smaller pair — plus mandibles, compound eyes, long antennae and joints where other races have none; everything about them looks alien.</p><p>They hatch from eggs and pass through several larval forms before reaching adulthood around the age of five. They show almost no signs of ageing, and even scars disappear when they molt each year. Most have a sweet tooth, favouring sugary foods such as candy and pastries to feed their racing metabolism. Telling a Thri-Kreen's sex at a glance is nearly impossible — unless you can smell their pheromones, which makes it easy.</p><h3>In Play</h3><p>Thri-Kreen adapt quickly to new situations. They see things plainly, go straight to the core of a problem and act rather than wait — but they are not reckless: gathering information and spying are routine to them, so however inscrutable they seem, they are usually very well informed.</p><p>They insist on cutting-edge technology and choose peak performance over dependability, even when someone's life is at stake; their computing and information technology ranks among the best in the Wheel. Their young are highly impressionable and imprint on the people around them, usually deferring to them afterwards; since females imprint the young, their society ends up dynastic and matriarchal.</p><p>Plenty of them borrow customs from the cultures they meet, not always the obvious ones — elaborate formal dresses have become fashionable among females, which conveniently helps other races tell them apart. With so little time, they often disregard safety, their own and others': a few tests, some simulations and an educated guess are usually enough.</p><p><em>Example heroes (p. 60): Lak-chak, Krak'toa, Cha'k'le.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 59
+    },
+    "characteristicBonus": {
+      "options": [
+        "dex",
+        "wis"
+      ],
+      "any": false
+    },
+    "skillBonus": {
+      "skills": [
+        "acrobatics",
+        "perception"
+      ],
+      "choose": 0
+    },
+    "size": 4,
+    "power": {
+      "name": "Multi-Armed",
+      "description": "<p>Thanks to your extra, smaller arms, one Ready action each round costs you no action at all, and every reload takes you only half its usual time.</p>",
+      "automation": "none",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "2.0–2.3 m",
+      "weight": "100–120 kg",
+      "languages": [
+        "Trade",
+        "Thri-Kreen"
+      ],
+      "personality": [
+        "Restless",
+        "Conformist",
+        "Inscrutable",
+        "Curious",
+        "Jumpy"
+      ],
+      "physical": [
+        "Sand-colored exoskeleton",
+        "Long antennae",
+        "Constantly in motion",
+        "Dark compound eyes",
+        "Short-lived"
+      ],
+      "names": [
+        "Chak-tha",
+        "Drikchkit",
+        "Kacht-ta",
+        "Kat'chka",
+        "Pak'cha",
+        "Ptekwe"
+      ]
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceThriKreen"
+}

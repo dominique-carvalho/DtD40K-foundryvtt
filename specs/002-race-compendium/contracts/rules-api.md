@@ -58,7 +58,7 @@ mesmos valores de `CONST.ACTIVE_EFFECT_MODES` (conferido no 13.351), para ele co
 `modifiers = { staticDefenseFormula = "standard", resilience = 0 }`:
 
 - `standard`: SD = 10 + 3×Dex + 3×Wis − 2×Size (inalterado).
-- `shifty`: SD = 10 + 6×Dex − 2×Size (livro p. 40).
+- `shifty`: SD = 10 + 6×Dex − 2×Size (7.7a p. 45).
 - Resilience base = ⌈(Size + Level)/2⌉ + 1 + `modifiers.resilience`, depois bônus/override do
   Mestre, mínimo 1.
 

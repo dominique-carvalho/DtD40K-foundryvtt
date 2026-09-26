@@ -3,7 +3,7 @@
 description: "Task list for 002-race-compendium"
 ---
 
-# Tasks: Compêndio de Raças (livro base 1.6)
+# Tasks: Compêndio de Raças (DtD 7.7a)
 
 **Input**: Design documents from `specs/002-race-compendium/`
 
@@ -23,7 +23,7 @@ personagem, US3 poderes raciais).
 - **[P]**: pode rodar em paralelo (arquivos diferentes, sem dependência pendente)
 - **[Story]**: história da spec (US1, US2, US3)
 - Caminhos relativos à raiz do repositório (a raiz é a pasta do sistema Foundry)
-- Fonte de regras: spec.md "Tabela de referência" (livro 1.6 pp. 28–50)
+- Fonte de regras: spec.md "Tabela de referência" (DtD 7.7a pp. 31–61; originalmente 1.6 pp. 28–50)
 
 ---
 
@@ -161,6 +161,12 @@ troca, remoção e reconfiguração; ficha com abas e valores base/final
 - [X] T056 [US1] Campo opcional `fullText` (HTMLField) em `module/data/race-data.mjs`, editável na ficha da raça com aviso `DTD.Race.FullTextHint` e exibido na janela do "i" quando preenchido; `""` em todos os `src/packs/races/*.json`, verificado em `tests/unit/packs.test.mjs`; `htmlFields` do manifesto inclui `fullText`
 - [X] T057 [US1] Descrições completas das 12 raças em `src/packs/races/*.json` (seções Origins, Appearance, In Play, Relations e heróis de exemplo com página), redação própria em inglês; verificação automática sem sequências de 6+ palavras iguais ao capítulo 4 do livro
 - [X] T058 [US1] Edição das raças do compêndio: aviso `DTD.Race.LockedPackHint` (só Mestre, com o nome da opção do core `COMPENDIUM.ToggleLocked.Option`) na ficha da raça; `scripts/extract-packs.mjs` + `npm run extract:packs` (inverso do build, preserva nomes de arquivo por `_id`, remove `_stats`); fonte reordenada no formato do extrator (ida e volta idêntica); README atualizado
+
+## Phase 8: Adoção da DtD 7.7a (constituição v1.2.0, 2026-09-25)
+
+- [X] T059 [US1] `src/packs/races/*.json`: fonte `DtD 7.7a` e páginas pp. 31–61; poderes de Dark Eldarin, Dragonborn, Elf, Gnome, Ork e Tau conforme a 7.7a (automação `none`; só Eldarin mantém `usesPerScene`); páginas dos heróis de exemplo atualizadas
+- [X] T060 [US1] Quatro raças novas (Dryad p. 37, Kenku p. 49, Kobold p. 51, Thri-Kreen p. 59) com dados da 7.7a, ambientação e descrição completa em redação própria; verificação automática sem sequências de 6+ palavras iguais à 1.6 ou à 7.7a
+- [X] T061 [US1] `tests/unit/packs.test.mjs` com a tabela da 7.7a (16 raças); `RaceData.source.book` padrão `DtD 7.7a`; spec, plan, research, data-model, contratos, quickstart e README atualizados
 
 ---
 

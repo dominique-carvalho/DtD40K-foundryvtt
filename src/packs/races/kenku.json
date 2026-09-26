@@ -1,0 +1,80 @@
+{
+  "_id": "dtdRaceKenku0000",
+  "name": "Kenku",
+  "type": "race",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>Kenku are an old avian people, known across the Wheel as teachers and as pioneers of spaceflight. Bold explorers with a strong gift for magic, nearly every Kenku dreams of a ship of their own — preferably something small and nimble rather than a lumbering giant.</p><p>They hold little lasting political power, because they have no taste for political games and value independence too much to be bound by them. If you are looking for a Kenku, look behind the controls of a spelljammer or at the stick of a fighter.</p><h3>Appearance</h3><p>Kenku are a little smaller than humans and unmistakably bird-like, with beaked heads and taloned feet. Their most striking feature is a large pair of wings: not strong enough for true flight, but plenty to break a fall or glide down from a height.</p><p>Hollow bones, wiry muscle and almost no body fat make them very light for their size — and prone to starvation, so they eat roughly twice as often as other races, in smaller meals. Their plumage is nearly always dark, from navy blue through deep red to true black, and the lighter patterns on their wings run in families and identify an individual much like a fingerprint. They have excellent spatial sense and memory but weak senses of taste and smell, a legacy of scavenger ancestors; spicy flavours simply do not register for them.</p><h3>In Play</h3><p>Others often call Kenku flighty. Their culture runs on a friendly contest of pranks and tricks, which settles social standing and teaches lessons; being fooled by the same trick twice costs a Kenku a lot of respect.</p><p>Many are at least mildly claustrophobic and cannot bear, for long, any space too tight to spread their wings, so crawling through a ship's maintenance ducts takes real determination. Warp journeys are an ordeal for them, because a glimpse of the Warp beyond the hull drives people mad; Kenku ships favour roomy interiors, high ceilings and viewscreens made to look like windows.</p><p>Their harsh, sparsely populated homeworld bred a culture of self-reliance and personal responsibility, and they care little for large, organised governments. Kenku are generous to travellers who are truly in need — still teasing them, of course — and a Kenku who breaks this code of the spaceways is shunned by the rest.</p><p><em>Example heroes (p. 50): Tsukasa, Sokichi, Inui.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 49
+    },
+    "characteristicBonus": {
+      "options": [
+        "int",
+        "wis"
+      ],
+      "any": false
+    },
+    "skillBonus": {
+      "skills": [
+        "performer",
+        "pilot"
+      ],
+      "choose": 0
+    },
+    "size": 3,
+    "power": {
+      "name": "Wing-Aided Movement",
+      "description": "<p>You count as a Flyer, moving through the air at your usual Speed, and add +2k0 to all your Acrobatics tests.</p>",
+      "automation": "none",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "1.5–1.8 m",
+      "weight": "30–40 kg",
+      "languages": [
+        "Trade",
+        "Kenku",
+        "Any one extra"
+      ],
+      "personality": [
+        "Tricksy",
+        "Friendly",
+        "Good-humored",
+        "Independent",
+        "Incorrigible"
+      ],
+      "physical": [
+        "Dark feathers",
+        "Sharp beak",
+        "Grasping talons",
+        "Beady eyes",
+        "Precise and beautiful voice"
+      ],
+      "names": [
+        "Akegarasu",
+        "Utsuho",
+        "Aya",
+        "Itsume",
+        "Kozue",
+        "Takayuki"
+      ]
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceKenku0000"
+}

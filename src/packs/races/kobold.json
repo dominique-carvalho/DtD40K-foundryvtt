@@ -1,0 +1,79 @@
+{
+  "_id": "dtdRaceKobold000",
+  "name": "Kobold",
+  "type": "race",
+  "img": "icons/svg/trap.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>Kobolds carry little weight in the politics of the Wheel. They are insular, distrustful of outsiders and very clever. Like the Dragonborn they once served the old Draconic Empire — but while the Dragonborn fought and were favoured, the Kobolds laboured unseen as miners and builders. Left to fend for themselves when the Empire fell, they have prospered far beyond what their modest natural gifts would suggest.</p><p>Skilled at industry and mining, quick to multiply and ruthless in business, they are a mercantile force to reckon with — and they are just as ruthless with a knife.</p><h3>Appearance</h3><p>Kobolds are tiny and physically unimpressive, but frailty has not made them timid: they are scrappy fighters and turn vicious when provoked. They look like miniature Dragonborn, scaly reptilian humanoids barely over a metre tall with small ivory horns. Most have orange or muddy red scales, a rare few bright blue or green, and all of them are scrawny.</p><p>Few people ever see that, though, because Kobolds nearly always wear full armour and often a void suit as well — partly for practical reasons and partly as a symbol, since no miner ever gets used to the threat of a collapsing tunnel. Their bodies are built for toxic air and high pressure; they can adapt to ordinary conditions after some time decompressing, or simply endure the pain and nausea if they must.</p><h3>In Play</h3><p>Kobolds are cunning, stubborn survivors who cling on where the odds say they should not. You can find them hollowing out asteroids, living below decks on spelljammers, burrowed far underground or even settled in respectable suburbs.</p><p>Other races tend to sort Kobolds into those who have joined Wheel society and those who behave like vermin, and Kobolds make the same split. The K'vend'l live among other peoples, are deeply involved in local markets and are frequently richer than anyone expects; they care about profit, not charity. The K'sten'mannav hold to tradition, would rather wall themselves off from everyone else and, when contact cannot be avoided, never leave their pressure suits and armour — ideally letting an interpreter do the talking.</p><p>Relentlessly practical, Kobolds skip most of the courtesies other cultures take for granted. They ambush foes whenever they can and prefer setting traps to risking themselves.</p><p><em>Example heroes (p. 52): Deck'r, Wesley, Zaheva.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 51
+    },
+    "characteristicBonus": {
+      "options": [
+        "cha",
+        "dex"
+      ],
+      "any": false
+    },
+    "skillBonus": {
+      "skills": [
+        "arcana",
+        "stealth"
+      ],
+      "choose": 0
+    },
+    "size": 2,
+    "power": {
+      "name": "Power in the Blood",
+      "description": "<p>As a free action, up to once each round, you can sacrifice 2 Hit Points for one resource point, which you must use right away. This extra point is ignored when checking your per-round spending cap for resource points.</p>",
+      "automation": "none",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "1.0–1.2 m",
+      "weight": "15–20 kg",
+      "languages": [
+        "Trade",
+        "Draconic"
+      ],
+      "personality": [
+        "Practical",
+        "Vengeful",
+        "Spite-filled",
+        "Impatient",
+        "Demanding"
+      ],
+      "physical": [
+        "Shorter than short",
+        "Ratlike tail",
+        "Clawed fingers",
+        "Glowing eyes",
+        "Yapping voice"
+      ],
+      "names": [
+        "Meepo",
+        "Ark'er",
+        "K'irk",
+        "A'thrin",
+        "S'sko",
+        "P'kard"
+      ]
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceKobold000"
+}

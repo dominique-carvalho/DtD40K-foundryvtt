@@ -1,4 +1,4 @@
-# Specification Quality Checklist: Compêndio de Raças (livro base 1.6)
+# Specification Quality Checklist: Compêndio de Raças (DtD 7.7a)
 
 **Purpose**: Validate specification completeness and quality before proceeding to planning
 **Created**: 2026-09-25
@@ -37,4 +37,4 @@
 - Decisões tomadas por padrão razoável (revisar no `/speckit-clarify` se desejado): remover a
   raça devolve o Size base (clarificação 1); bônus limitado a 6; Human +1 Hero Point também no atual; usos por
   cena restaurados manualmente.
-- Gnome e Halfling com o mesmo bônus (Int/Fel) mantidos como no livro (pp. 38 e 40).
+- Gnome e Halfling com o mesmo bônus (Int/Fel) mantidos como no livro (7.7a pp. 43 e 45).

@@ -1,7 +1,7 @@
 /**
  * Derived character values.
  * PURE module: must never reference Foundry globals (constitution, principle III).
- * Source: docs/analise-dtd.md §3; DtD 1.6 p. 14 and character sheet summary p. 17.
+ * Source: DtD 7.7a p. 17 (same formulas as the 1.6, pp. 14/17); docs/analise-dtd.md §3.
  */
 
 /**
@@ -45,7 +45,7 @@ export function computeDerived({ characteristics, size, level }, derivedMods = {
   const { staticDefenseFormula = "standard", resilience = 0 } = modifiers;
 
   const base = {
-    // Halfling "Shifty" (DtD 1.6 p. 40): 10 + 6×Dex − 2×Size instead of Dex + Wis.
+    // Halfling "Shifty" (DtD 7.7a p. 45): 10 + 6×Dex − 2×Size instead of Dex + Wis.
     staticDefense: staticDefenseFormula === "shifty"
       ? 10 + 6 * c("dex") - 2 * size
       : 10 + 3 * c("dex") + 3 * c("wis") - 2 * size,
@@ -54,7 +54,7 @@ export function computeDerived({ characteristics, size, level }, derivedMods = {
     mentalDefense: 5 + 5 * c("cmp"),
     resolveMax: c("wil") + c("cmp"),
     speed: c("str") + c("dex"),
-    // Squat Toughness (p. 46) adds to Resilience.
+    // Squat Toughness (7.7a p. 55) adds to Resilience.
     resilience: Math.ceil((size + level) / 2) + 1 + (Number(resilience) || 0)
   };
 

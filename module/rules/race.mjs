@@ -1,7 +1,7 @@
 /**
  * Racial rules: bonus choices and the Active Effect changes they produce.
  * PURE module: must never reference Foundry globals (constitution, principle III).
- * Source: DtD 1.6 pp. 27–51; specs/002-race-compendium/data-model.md.
+ * Source: DtD 7.7a pp. 30–63; specs/002-race-compendium/data-model.md.
  */
 import { CHARACTERISTICS, MAX_RATING, SKILLS } from "../config.mjs";
 
@@ -128,7 +128,7 @@ export function capValue(value, max = MAX_RATING) {
 
 /**
  * Uses per scene of a limited racial power: 1/2/3 at Level 1/3/5
- * (Dark Eldarin, Dragonborn, Eldarin, Elf — DtD 1.6 pp. 30–36).
+ * (in the 7.7a only the Eldarin's Warp Step, p. 39).
  * @param {number} level
  * @returns {1|2|3}
  */

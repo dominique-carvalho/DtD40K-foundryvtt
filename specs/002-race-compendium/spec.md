@@ -1,4 +1,4 @@
-# Feature Specification: Compêndio de Raças (livro base 1.6)
+# Feature Specification: Compêndio de Raças (DtD 7.7a)
 
 **Feature Branch**: `002-race-compendium`
 
@@ -8,8 +8,9 @@
 
 **Input**: User description: "Compêndio de Raças do livro base DtD 1.6 (Fase 1, feature 002): tipo de Item 'race' com os dados mecânicos da raça — bônus de característica (+1 em uma de duas características; Human: qualquer uma), bônus de perícia (+1 em duas perícias; Human: quaisquer duas), Poder racial (nome + descrição resumida, com usos por cena 1/2/3 nos níveis 1/3/5 quando aplicável), Size, altura/peso médios, idiomas, traços comuns e nomes de exemplo; ficha de item para ver/editar a raça; compêndio 'Races' com as 12 raças do livro base (pp. 27–51), fonte versionada em JSON; descrições resumidas com redação própria em inglês. Aplicar no ator: arrastar a raça para a ficha define o Size, pede a escolha da característica bonificada (e, para Human, das perícias) e aplica os bônus via Active Effects; o personagem só pode ter uma raça. Poderes com efeito mecânico simples e determinístico (Human, Halfling, Squat) devem ser automatizados; os demais ficam como texto/contador manual. Observação: Halfling e Gnome listam o mesmo bônus (Int/Fel) — tratar como está no livro."
 
-**Referência de regras**: `docs/analise-dtd.md` §5 (tabela do livro base); livro 1.6 pp. 27–51
-(Racial Traits p. 27; uma raça a cada duas páginas, de Aasimar p. 28 a Tiefling p. 50).
+**Referência de regras**: DtD **7.7a**, cap. 4, pp. 30–63 (Racial Traits p. 30; uma raça a cada duas
+páginas, de Aasimar p. 31 a Tiefling p. 61) — constituição v1.2.0. Versão original desta spec: livro 1.6
+pp. 27–51 (ver `docs/analise-dtd.md` §0 para as diferenças).
 
 **Depende de**: `001-system-foundation` (ator Personagem, características, perícias, derivados,
 Size, Level e Hero Points).
@@ -18,6 +19,10 @@ Size, Level e Hero Points).
 
 ### Session 2026-09-25
 
+- Q: Qual livro é a referência? (constituição v1.2.0) → A: DtD 7.7a. O compêndio passa a 16 raças
+  (entram Dryad, Kenku, Kobold e Thri-Kreen), as páginas seguem a 7.7a e seis poderes mudam: Dark
+  Eldarin e Dragonborn sem limite de usos, Elf 1×/rodada, Gnome com todas as proficiências, Ork com HP
+  temporário, Tau contra qualquer ataque. Só o Eldarin mantém o contador de usos por cena.
 - Q: Ao remover a raça, o que acontece com o Size? → A: o Size da raça é um modificador racial
   que substitui o Size base do personagem; removida a raça, volta o Size base (4 por padrão, ou o
   valor definido pelo Mestre).
@@ -37,7 +42,7 @@ Size, Level e Hero Points).
 
 ### User Story 1 - Consultar as raças do livro no compêndio (Priority: P1)
 
-O Mestre ou um jogador abre o compêndio **Races** do sistema e encontra as 12 raças do livro base.
+O Mestre ou um jogador abre o compêndio **Races** do sistema e encontra as 16 raças do livro.
 Ao abrir uma raça, vê uma ficha com: nome, imagem, resumo em inglês com redação própria, as
 opções de bônus de característica, as perícias bonificadas, o Size, o poder racial (nome,
 resumo e, quando houver, usos por cena por nível) e as informações de ambientação (altura e peso
@@ -46,14 +51,14 @@ médios, idiomas, traços de personalidade e físicos comuns, nomes de exemplo).
 **Why this priority**: é a entrega central pedida (o compêndio) e já tem valor sozinha: serve de
 referência rápida durante a criação de personagem, sem abrir o PDF.
 
-**Independent Test**: num mundo DtD, abrir o compêndio Races, conferir que as 12 raças estão lá e
+**Independent Test**: num mundo DtD, abrir o compêndio Races, conferir que as 16 raças estão lá e
 comparar os dados mecânicos de cada uma com a tabela de referência desta spec.
 
 **Acceptance Scenarios**:
 
 1. **Given** um mundo DtD recém-criado, **When** o usuário abre a aba de compêndios, **Then** existe
-   o compêndio "Races" com exatamente 12 entradas: Aasimar, Dark Eldarin, Dragonborn, Eldarin,
-   Elf, Gnome, Halfling, Human, Ork, Squat, Tau e Tiefling.
+   o compêndio "Races" com exatamente 16 entradas: Aasimar, Dark Eldarin, Dragonborn, Dryad,
+   Eldarin, Elf, Gnome, Halfling, Human, Kenku, Kobold, Ork, Squat, Tau, Thri-Kreen e Tiefling.
 2. **Given** o compêndio aberto, **When** o usuário abre "Eldarin", **Then** a ficha mostra
    bônus "+1 Wisdom ou Intelligence", perícias "+1 Academic Lore e Arcana", Size 3 e o poder
    "Warp Step" com usos por cena 1/2/3 nos níveis 1/3/5.
@@ -163,7 +168,7 @@ Points, Static Defense, Resilience e o contador de usos do Elf nos Levels 1, 3 e
   novo máximo.
 - **Level abaixo de 1 ou acima de 5** para usos por cena: Level 1–2 → 1 uso; 3–4 → 2; 5+ → 3.
 - **Gnome e Halfling com o mesmo bônus (Intelligence ou Fellowship)**: implementado exatamente
-  como no livro (p. 38 e p. 40); registrado como observação, não como erro a corrigir.
+  como no livro (7.7a pp. 43 e 45); registrado como observação, não como erro a corrigir.
 
 ## Requirements *(mandatory)*
 
@@ -178,10 +183,10 @@ Points, Static Defense, Resilience e o contador de usos do Elf nos Levels 1, 3 e
   poder racial (nome, descrição resumida, tipo de automação e, quando aplicável, usos por cena
   por faixa de Level), altura média, peso médio, idiomas, traços de personalidade comuns, traços
   físicos comuns e nomes de exemplo.
-- **FR-002**: Todo bônus racial de característica e de perícia MUST valer +1 (livro p. 27); o
+- **FR-002**: Todo bônus racial de característica e de perícia MUST valer +1 (7.7a p. 30); o
   personagem recebe o bônus em apenas uma das características listadas, salvo indicação da raça.
 - **FR-003**: Usos por cena, quando existirem, MUST seguir a progressão 1/2/3 nos Levels 1/3/5
-  (Dark Eldarin, Dragonborn, Eldarin, Elf — pp. 30, 32, 34, 36).
+  (na 7.7a, só o Warp Step do Eldarin — p. 39).
 
 **Ficha da raça**
 
@@ -193,8 +198,8 @@ Points, Static Defense, Resilience e o contador de usos do Elf nos Levels 1, 3 e
 
 **Compêndio**
 
-- **FR-006**: O sistema MUST distribuir o compêndio "Races" com as 12 raças do livro base e os
-  dados da Tabela de referência abaixo.
+- **FR-006**: O sistema MUST distribuir o compêndio "Races" com as 16 raças do cap. 4 da 7.7a e
+  os dados da Tabela de referência abaixo.
 - **FR-007**: A fonte do compêndio MUST ser mantida em arquivos de texto versionados e gerada
   para o formato do Foundry por ferramenta, nunca editada à mão no formato binário
   (constituição, V).
@@ -237,43 +242,53 @@ Points, Static Defense, Resilience e o contador de usos do Elf nos Levels 1, 3 e
 
 - **FR-016**: Poderes automatizados (com o comportamento do livro como padrão):
   - Human — Heroic Heritage: +1 no máximo de Hero Points; ao aplicar a raça, o atual também
-    sobe 1 (p. 42).
+    sobe 1 (7.7a p. 47).
   - Halfling — Shifty: Static Defense = 10 + 6×Dexterity − 2×Size, substituindo a fórmula
-    padrão (p. 40).
+    padrão (7.7a p. 45).
   - Squat — Squat Toughness: Resilience +1 (a Resilience só é usada para calcular HP perdido
-    por dano, então equivale ao texto do livro, p. 46).
+    por dano, então equivale ao texto do livro, 7.7a p. 55).
 - **FR-017**: Poderes com usos por cena MUST exibir um contador (usos restantes / máximo pelo
   Level), com ações para gastar um uso e para restaurar todos ("nova cena"); o contador não
   rola nada nem aplica efeitos.
-- **FR-018**: Os demais poderes (Aasimar, Gnome, Ork, Tau, Tiefling) MUST aparecer como texto de
-  referência na aba "Traits", sem automação nesta feature.
+- **FR-018**: Os demais poderes (Aasimar, Dark Eldarin, Dragonborn, Dryad, Elf, Gnome, Kenku, Kobold,
+  Ork, Tau, Thri-Kreen, Tiefling) MUST aparecer como texto de referência na aba "Traits", sem
+  automação nesta feature.
 - **FR-019**: Todo valor alterado por poder racial MUST continuar sujeito ao bônus/override
   manual do Mestre já existente nos derivados (constituição, IV).
 - **FR-020**: Todo texto de interface novo MUST existir em pt-BR e inglês.
 
-### Tabela de referência (livro 1.6, pp. 28–51)
+### Tabela de referência (DtD 7.7a, cap. 4, pp. 30–63)
 
 | Raça | Pág. | Característica +1 (uma) | Perícias +1 | Poder | Automação | Size |
 |---|---|---|---|---|---|---|
-| Aasimar | 28 | Wisdom ou Constitution | Command, Ballistics | And They Shall Know No Fear: começa com os feats Jaded e Fearless | texto | 5 |
-| Dark Eldarin | 30 | Charisma ou Dexterity | Deceive, Forbidden Lore | Warp Miasma: meia ação, esfera de escuridão de 4 m de raio que bloqueia linha de efeito e cega quem está dentro; dura 1 rodada por Level | usos 1/2/3 | 3 |
-| Dragonborn | 32 | Strength ou Charisma | Command, Intimidation | Dragon Breath: ataque de sopro com o perfil de um Flamer | usos 1/2/3 | 5 |
-| Eldarin | 34 | Wisdom ou Intelligence | Academic Lore, Arcana | Warp Step: meia ação, teleporte até 2×Speed para local visível | usos 1/2/3 | 3 |
-| Elf | 36 | Wisdom ou Dexterity | Perception, Charm | Elven Accuracy: rerrola um teste falho de Weaponry ou Ballistics | usos 1/2/3 | 3 |
-| Gnome | 38 | Intelligence ou Fellowship | Crafts, Academic Lore | Improvise: uma proficiência de arma e uma de armadura grátis, de qualquer tipo | texto | 3 |
-| Halfling | 40 | Intelligence ou Fellowship | Larceny, Deceive | Shifty: Static Defense = 10 + 6×Dex − 2×Size | automático | 2 |
-| Human | 42 | qualquer uma | quaisquer duas | Heroic Heritage: +1 Hero Point | automático | 4 |
-| Ork | 44 | Strength ou Willpower | Intimidation, Scrutiny | WAAAAAGH!: no início de cada combate, cura HP igual ao Level | texto | 5 |
-| Squat | 46 | Constitution ou Willpower | Crafts, Common Lore | Squat Toughness: Resilience +1 para dano | automático | 3 |
-| Tau | 48 | Intelligence ou Composure | Common Lore, Persuasion | Fall Back: após esquivar com sucesso de ataque corpo a corpo, recuo (Withdraw) livre com metade do deslocamento | texto | 4 |
-| Tiefling | 50 | Dexterity ou Constitution | Intimidation, Weaponry | Bloody Minded: rerrola dados de dano que caírem em 1 | texto | 5 |
+| Aasimar | 31 | Wisdom ou Constitution | Command, Ballistics | And They Shall Know No Fear: começa com os feats Jaded e Fearless | texto | 5 |
+| Dark Eldarin | 33 | Charisma ou Dexterity | Deceive, Forbidden Lore | Warp Miasma: meia ação, esfera de escuridão de 4 m de raio que bloqueia linha de visão e cega quem está dentro; dura 1 rodada por Level; sem limite de usos | texto | 3 |
+| Dragonborn | 35 | Strength ou Charisma | Command, Intimidation | Dragon Breath: ataque de sopro com o perfil de um Flamer; sem limite de usos | texto | 5 |
+| Dryad | 37 | Fellowship ou Willpower | Animal Ken, Scrutiny | Pheromones: +1 rank na escola Enchantment, lançada com Fellowship | texto | 4 |
+| Eldarin | 39 | Wisdom ou Intelligence | Academic Lore, Arcana | Warp Step: meia ação, teleporte até 2×Speed para local visível | usos 1/2/3 | 3 |
+| Elf | 41 | Wisdom ou Dexterity | Perception, Charm | Elven Accuracy: 1×/rodada, rerrola um teste falho de Weaponry ou Ballistics | texto | 3 |
+| Gnome | 43 | Intelligence ou Fellowship | Crafts, Academic Lore | Improvise: começa com todas as proficiências de arma e armadura | texto | 3 |
+| Halfling | 45 | Intelligence ou Fellowship | Larceny, Deceive | Shifty: Static Defense = 10 + 6×Dex − 2×Size | automático | 2 |
+| Human | 47 | qualquer uma | quaisquer duas | Heroic Heritage: +1 Hero Point | automático | 4 |
+| Kenku | 49 | Intelligence ou Wisdom | Performer, Pilot | Wing-Aided Movement: trait Flyer na Speed normal e +2k0 em Acrobatics | texto | 3 |
+| Kobold | 51 | Charisma ou Dexterity | Arcana, Stealth | Power in the Blood: 1×/rodada, ação livre, 2 HP → 1 ponto de recurso gasto na hora, fora do limite por rodada | texto | 2 |
+| Ork | 53 | Strength ou Willpower | Intimidation, Scrutiny | WAAAAAGH!: no início de cada combate, ganha HP temporário igual ao Level | texto | 5 |
+| Squat | 55 | Constitution ou Willpower | Crafts, Common Lore | Squat Toughness: Resilience +1 para dano | automático | 3 |
+| Tau | 57 | Intelligence ou Composure | Common Lore, Persuasion | Fall Back: após esquivar com sucesso de qualquer ataque, recuo (Withdraw) livre com metade do deslocamento | texto | 4 |
+| Thri-Kreen | 59 | Dexterity ou Wisdom | Acrobatics, Perception | Multi-Armed: 1 Ready como ação livre por rodada; recarrega na metade do tempo | texto | 4 |
+| Tiefling | 61 | Dexterity ou Constitution | Intimidation, Weaponry | Bloody Minded: rerrola dados de dano que caírem em 1 | texto | 5 |
 
-Idiomas (todas falam Trade + idioma próprio): Aasimar Celestial; Dark Eldarin Dark Eldarin;
-Dragonborn Draconic; Eldarin Eldarin; Elf Elven; Gnome Gnomish; Halfling Halfling; Human Human;
-Ork Orkish; Squat Squat; Tau Tau; Tiefling Abyssal.
+Mudanças em relação à 1.6 (referência histórica): Dark Eldarin, Dragonborn e Elf perderam o limite
+de 1/2/3 usos por cena (Elf passou a 1×/rodada); Gnome passou a todas as proficiências; Ork passou de
+cura para HP temporário; Tau vale contra qualquer ataque; Dryad, Kenku, Kobold e Thri-Kreen vieram do
+Book 2.
 
-Normalização de nomes do livro: "Ballistic" (Elf) = Ballistics; "Intimidate" (Tiefling) =
-Intimidation; "Common lore" (Squat) = Common Lore.
+Idiomas (Trade + idioma próprio): Aasimar Celestial; Dark Eldarin Dark Eldarin; Dragonborn Draconic;
+Dryad Elven e Spirit-tongue; Eldarin Eldarin; Elf Elven; Gnome Gnomish; Halfling Halfling; Human
+Human; Kenku Kenku + um idioma à escolha; Kobold Draconic; Ork Orkish; Squat Squat; Tau Tau;
+Thri-Kreen Thri-Kreen; Tiefling Abyssal.
+
+Normalização de nomes do livro: "Common lore" (Squat) = Common Lore.
 
 ### Key Entities *(include if feature involves data)*
 
@@ -290,23 +305,24 @@ Intimidation; "Common lore" (Squat) = Common Lore.
 
 ### Measurable Outcomes
 
-- **SC-001**: 100% das 12 raças do compêndio têm bônus de característica, perícias, Size e poder
+- **SC-001**: 100% das 16 raças do compêndio têm bônus de característica, perícias, Size e poder
   idênticos à Tabela de referência (conferência campo a campo).
 - **SC-002**: Um jogador aplica uma raça a um personagem novo em no máximo 3 interações
   (arrastar, escolher, confirmar) e em menos de 30 segundos.
-- **SC-003**: Em 100% das trocas de raça testadas (todas as 12 raças, em sequência, no mesmo
+- **SC-003**: Em 100% das trocas de raça testadas (todas as 16 raças, em sequência, no mesmo
   personagem) o personagem termina com exatamente uma raça e só os modificadores dela.
 - **SC-004**: Os exemplos numéricos das histórias (Eldarin, Halfling SD 24, Squat Resilience 4,
   Human Hero Points 3/3, usos 1/2/3 por Level) produzem 100% dos valores esperados.
-- **SC-005**: 0 trechos de descrição copiados literalmente do livro (revisão manual das 12
+- **SC-005**: 0 trechos de descrição copiados literalmente do livro (revisão manual das 16
   entradas: nenhuma frase igual ao texto original).
 - **SC-006**: 0 textos de interface desta feature sem tradução ao alternar pt-BR ↔ inglês.
 
 ## Assumptions
 
-- **Fora de escopo**: raças do Book 2 (Thri-Kreen, Kenku, Kobold, Dryad — Fase 2); feats e
-  proficiências (os poderes de Aasimar e Gnome ficam como texto até essas features existirem);
-  automação de combate (Ork WAAAAAGH!, Tau Fall Back, Tiefling Bloody Minded, Dragon Breath);
+- **Fora de escopo**: feats, proficiências e magia (os poderes de Aasimar, Gnome e Dryad ficam como
+  texto até essas features existirem); automação de combate e recursos (Ork WAAAAAGH!, Tau Fall Back,
+  Tiefling Bloody Minded, Dragon Breath, Elven Accuracy, Kenku Flyer, Kobold Power in the Blood,
+  Thri-Kreen Multi-Armed);
   validação das regras de criação de personagem (distribuição de pontos, compra de XP);
   tradução do conteúdo das raças para pt-BR.
 - A escolha de característica/perícias é feita pelo jogador no momento da aplicação; o sistema
@@ -316,6 +332,6 @@ Intimidation; "Common lore" (Squat) = Common Lore.
 - O contador de usos por cena é restaurado manualmente ("nova cena"); a detecção automática de
   início/fim de cena fica fora de escopo.
 - Imagens das raças usam ícones genéricos do Foundry; arte própria fica fora de escopo.
-- As páginas citadas seguem a paginação impressa do livro 1.6 (bookmarked final).
+- As páginas citadas seguem a paginação impressa da 7.7a ("Ready to Print").
 - O texto de ambientação (altura, peso, traços e nomes de exemplo) são dados factuais curtos e
   entram como listas, não como prosa copiada.

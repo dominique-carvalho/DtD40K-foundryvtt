@@ -10,28 +10,32 @@ const races = readdirSync(SOURCE)
   .map((file) => JSON.parse(readFileSync(join(SOURCE, file), "utf8")));
 
 /**
- * Reference table — spec 002 "Tabela de referência" (DtD 1.6 pp. 28–50).
+ * Reference table — spec 002 "Tabela de referência" (DtD 7.7a, cap. 4, pp. 30–63).
  * [characteristic options (null = any), fixed skills, choose, size, power, automation, page]
  */
 const EXPECTED = {
-  Aasimar: [["wis", "con"], ["command", "ballistics"], 0, 5, "And They Shall Know No Fear", "none", 28],
-  "Dark Eldarin": [["cha", "dex"], ["deceive", "forbiddenLore"], 0, 3, "Warp Miasma", "usesPerScene", 30],
-  Dragonborn: [["str", "cha"], ["command", "intimidation"], 0, 5, "Dragon Breath", "usesPerScene", 32],
-  Eldarin: [["wis", "int"], ["academicLore", "arcana"], 0, 3, "Warp Step", "usesPerScene", 34],
-  Elf: [["wis", "dex"], ["perception", "charm"], 0, 3, "Elven Accuracy", "usesPerScene", 36],
-  Gnome: [["int", "fel"], ["crafts", "academicLore"], 0, 3, "Improvise", "none", 38],
-  Halfling: [["int", "fel"], ["larceny", "deceive"], 0, 2, "Shifty", "shifty", 40],
-  Human: [null, [], 2, 4, "Heroic Heritage", "heroicHeritage", 42],
-  Ork: [["str", "wil"], ["intimidation", "scrutiny"], 0, 5, "WAAAAAGH!", "none", 44],
-  Squat: [["con", "wil"], ["crafts", "commonLore"], 0, 3, "Squat Toughness", "squatToughness", 46],
-  Tau: [["int", "cmp"], ["commonLore", "persuasion"], 0, 4, "Fall Back", "none", 48],
-  Tiefling: [["dex", "con"], ["intimidation", "weaponry"], 0, 5, "Bloody Minded", "none", 50]
+  Aasimar: [["wis", "con"], ["command", "ballistics"], 0, 5, "And They Shall Know No Fear", "none", 31],
+  "Dark Eldarin": [["cha", "dex"], ["deceive", "forbiddenLore"], 0, 3, "Warp Miasma", "none", 33],
+  Dragonborn: [["str", "cha"], ["command", "intimidation"], 0, 5, "Dragon Breath", "none", 35],
+  Dryad: [["fel", "wil"], ["animalKen", "scrutiny"], 0, 4, "Pheromones", "none", 37],
+  Eldarin: [["wis", "int"], ["academicLore", "arcana"], 0, 3, "Warp Step", "usesPerScene", 39],
+  Elf: [["wis", "dex"], ["perception", "charm"], 0, 3, "Elven Accuracy", "none", 41],
+  Gnome: [["int", "fel"], ["crafts", "academicLore"], 0, 3, "Improvise", "none", 43],
+  Halfling: [["int", "fel"], ["larceny", "deceive"], 0, 2, "Shifty", "shifty", 45],
+  Human: [null, [], 2, 4, "Heroic Heritage", "heroicHeritage", 47],
+  Kenku: [["int", "wis"], ["performer", "pilot"], 0, 3, "Wing-Aided Movement", "none", 49],
+  Kobold: [["cha", "dex"], ["arcana", "stealth"], 0, 2, "Power in the Blood", "none", 51],
+  Ork: [["str", "wil"], ["intimidation", "scrutiny"], 0, 5, "WAAAAAGH!", "none", 53],
+  Squat: [["con", "wil"], ["crafts", "commonLore"], 0, 3, "Squat Toughness", "squatToughness", 55],
+  Tau: [["int", "cmp"], ["commonLore", "persuasion"], 0, 4, "Fall Back", "none", 57],
+  "Thri-Kreen": [["dex", "wis"], ["acrobatics", "perception"], 0, 4, "Multi-Armed", "none", 59],
+  Tiefling: [["dex", "con"], ["intimidation", "weaponry"], 0, 5, "Bloody Minded", "none", 61]
 };
 
 const sorted = (list) => [...list].sort();
 
 describe("races compendium source (SC-001)", () => {
-  it("contains exactly the 12 core book races", () => {
+  it("contains exactly the 16 races of the 7.7a", () => {
     expect(sorted(races.map((race) => race.name))).toEqual(sorted(Object.keys(EXPECTED)));
   });
 
@@ -62,7 +66,7 @@ describe("races compendium source (SC-001)", () => {
       expect(system.size).toBe(size);
       expect(system.power.name).toBe(power);
       expect(system.power.automation).toBe(automation);
-      expect(system.source).toEqual({ book: "DtD 1.6", page });
+      expect(system.source).toEqual({ book: "DtD 7.7a", page });
     });
 
     it("uses only known keys and an empty choice", () => {
@@ -79,7 +83,7 @@ describe("races compendium source (SC-001)", () => {
       expect(system.description.trim()).not.toBe("");
       expect(system.power.description.trim()).not.toBe("");
       expect(system.lore.languages).toContain("Trade");
-      // Human has no height, weight, traits or example names in the book (p. 42).
+      // Human has no height, weight, traits or example names in the book (7.7a p. 47).
       if (name !== "Human") {
         for (const list of ["personality", "physical", "names"]) expect(system.lore[list].length).toBeGreaterThan(0);
       }

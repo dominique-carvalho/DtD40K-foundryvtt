@@ -2,7 +2,8 @@
 
 Data: 2026-09-25. Fontes: código-fonte do Foundry **13.351** instalado
 (`resources/app/client` e `resources/app/common`), pacote `@foundryvtt/foundryvtt-cli` 3.0.4
-(npm) e livro 1.6 pp. 27–51 (texto extraído com `pdftotext` e conferido com a §5 de
+(npm) e livro 1.6 pp. 27–51, depois revisado para a **DtD 7.7a** pp. 30–63 (constituição v1.2.0;
+texto extraído com `pdftotext` e conferido com a §5 de
 `docs/analise-dtd.md`).
 
 ## R1. Onde os bônus raciais vivem — Active Effects na raça embutida
@@ -63,15 +64,15 @@ Data: 2026-09-25. Fontes: código-fonte do Foundry **13.351** instalado
 ## R4. Poderes automatizados
 
 - **Decision** (efeitos gerados por `buildRaceEffects`, conforme `power.automation`):
-  - `heroicHeritage` (Human, p. 42): `ADD +1` em `system.heroPoints.max`. Na aplicação, o
+  - `heroicHeritage` (Human, 7.7a p. 47): `ADD +1` em `system.heroPoints.max`. Na aplicação, o
     serviço também soma 1 ao `system.heroPoints.value` (`_source`). Na remoção, o atual é
     limitado ao novo máximo.
-  - `shifty` (Halfling, p. 40): `OVERRIDE` em `system.modifiers.staticDefenseFormula =
+  - `shifty` (Halfling, 7.7a p. 45): `OVERRIDE` em `system.modifiers.staticDefenseFormula =
     "shifty"`; `computeDerived` passa a usar `10 + 6×Dex − 2×Size`.
-  - `squatToughness` (Squat, p. 46): `ADD +1` em `system.modifiers.resilience`;
+  - `squatToughness` (Squat, 7.7a p. 55): `ADD +1` em `system.modifiers.resilience`;
     `computeDerived` soma esse valor à Resilience base **antes** do bônus/override do Mestre,
     que continua vencendo (FR-019).
-  - `usesPerScene` (Dark Eldarin, Dragonborn, Eldarin, Elf): nenhum efeito; contador no item.
+  - `usesPerScene` (na 7.7a só o Eldarin): nenhum efeito; contador no item.
   - `none`: só texto.
 - **Rationale**: o bônus/override do Mestre em `derivedMods` segue intocado e sempre aplicado
   por último.
@@ -138,6 +139,6 @@ Data: 2026-09-25. Fontes: código-fonte do Foundry **13.351** instalado
 - **Validação automática**: `tests/unit/packs.test.mjs` lê os 12 JSON e compara com uma tabela
   esperada no teste (SC-001), verifica `_id`/`_key` únicos e chaves de característica/perícia
   válidas. A verificação de "sem cópia do livro" (SC-005) é manual (quickstart).
-- **Observação registrada**: Gnome (p. 38) e Halfling (p. 40) têm o mesmo bônus Int/Fel no
+- **Observação registrada**: Gnome (7.7a p. 43) e Halfling (7.7a p. 45) têm o mesmo bônus Int/Fel no
   livro; mantido.
 - **Imagens**: ícones do core (`icons/svg/*.svg`); arte própria fora de escopo.

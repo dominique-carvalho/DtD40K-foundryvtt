@@ -1,4 +1,4 @@
-# Implementation Plan: Compêndio de Raças (livro base 1.6)
+# Implementation Plan: Compêndio de Raças (DtD 7.7a)
 
 **Branch**: `002-race-compendium` | **Date**: 2026-09-25 | **Spec**: [spec.md](spec.md)
 
@@ -40,7 +40,7 @@ roteiro manual em [quickstart.md](quickstart.md)
 interface pt-BR e en; conteúdo das raças em inglês com redação própria; nenhum input da ficha
 pode gravar valor com efeito aplicado no `_source`
 
-**Scale/Scope**: 1 tipo de item, 12 entradas de compêndio, 1 ficha de item, 1 diálogo, 1 aba
+**Scale/Scope**: 1 tipo de item, 16 entradas de compêndio, 1 ficha de item, 1 diálogo, 1 aba
 nova, ~6 efeitos por raça; ~20 arquivos novos/alterados
 
 ## Constitution Check
@@ -49,7 +49,7 @@ nova, ~6 efeitos por raça; ~20 arquivos novos/alterados
 
 | Princípio | Verificação | Status |
 |---|---|---|
-| I. Fidelidade às Regras | Tabela de referência na spec com páginas (pp. 28–50); normalização de nomes registrada; Gnome/Halfling Int/Fel mantido como no livro e registrado | ✅ |
+| I. Fidelidade às Regras | Tabela de referência na spec com páginas da 7.7a (pp. 31–61); normalização de nomes registrada; Gnome/Halfling Int/Fel mantido como no livro e registrado | ✅ |
 | II. Arquitetura Nativa (v13) | TypeDataModel para `race`; derivados em `prepareDerivedData`; ItemSheetV2/DialogV2/`TABS`; bônus persistentes como Active Effects (R1); APIs conferidas no 13.351 | ✅ |
 | III. Lógica Pura e Testada | `module/rules/race.mjs` e alteração de `derived.mjs` puros, com casos obrigatórios em contracts/rules-api.md; dados do pack validados por teste | ✅ |
 | IV. Automação Pragmática | Só 3 poderes determinísticos automatizados; demais como texto/contador; cada efeito desativável; override do Mestre sempre vence (FR-019) | ✅ |

@@ -1,7 +1,7 @@
 /**
  * Static rule data for Dungeons the Dragoning.
  * PURE module: must never reference Foundry globals (constitution, principle III).
- * Source: docs/analise-dtd.md §3; DtD 1.6 pp. 19–25.
+ * Source: DtD 7.7a pp. 22–29 (characteristics and skills); docs/analise-dtd.md §3.
  */
 
 /** Characteristic and skill groups, in sheet order. */

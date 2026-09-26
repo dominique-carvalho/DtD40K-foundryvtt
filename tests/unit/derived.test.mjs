@@ -98,7 +98,7 @@ describe("computeDerived with racial modifiers (spec 002, FR-016/FR-019)", () =>
   const halfling = { characteristics: chars({ dex: 3, wis: 4 }), size: 2, level: 1 };
   const squat = { characteristics: chars(), size: 3, level: 1 };
 
-  it("uses the Halfling Shifty formula: 10 + 6×Dex − 2×Size (p. 40)", () => {
+  it("uses the Halfling Shifty formula: 10 + 6×Dex − 2×Size (7.7a p. 45)", () => {
     expect(computeDerived(halfling, {}, { staticDefenseFormula: "shifty" }).staticDefense).toBe(24);
     expect(computeDerived(halfling).staticDefense).toBe(27);
   });
@@ -110,7 +110,7 @@ describe("computeDerived with racial modifiers (spec 002, FR-016/FR-019)", () =>
       .staticDefense).toBe(18);
   });
 
-  it("adds Squat Toughness to Resilience (p. 46)", () => {
+  it("adds Squat Toughness to Resilience (7.7a p. 55)", () => {
     expect(computeDerived(squat, {}, { resilience: 1 }).resilience).toBe(4);
   });
 

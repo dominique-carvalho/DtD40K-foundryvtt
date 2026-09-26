@@ -157,3 +157,35 @@ describe("computeDerived — exaltation and asset modifiers (spec 004)", () => {
     expect(computeDerived(halfling, {}, { staticDefenseFormula: "shifty", staticDefenseSize: true }).staticDefense).toBe(24);
   });
 });
+
+describe("computeDerived — feat modifiers (spec 005)", () => {
+  const halfling = { characteristics: chars({ dex: 3, wis: 4 }), size: 2, level: 1 };
+  const squat = { characteristics: chars({ dex: 2, con: 4, wis: 2 }), size: 3, level: 1 };
+  const base = { characteristics: chars({ con: 3, wil: 3, cmp: 2 }), size: 4, level: 1 };
+
+  it("adds Halfling Agility to Static Defense (p. 202)", () => {
+    expect(computeDerived(halfling, {}, { staticDefenseFormula: "shifty", staticDefense: 4 }).staticDefense).toBe(28);
+  });
+
+  it("uses Constitution for Static Defense with No One Tougher (p. 204)", () => {
+    expect(computeDerived(squat, {}, { staticDefenseCharacteristic: "con" }).staticDefense).toBe(10 + 12 + 6 - 6);
+    expect(computeDerived(squat, {}, {}).staticDefense).toBe(10 + 6 + 6 - 6);
+  });
+
+  it("adds Resolve, Mental Defense and Fatigue modifiers (Discipline, Farsighted, Sand)", () => {
+    const result = computeDerived(base, {}, { resolveMax: 3, mentalDefense: 5, fatigueMax: 2 });
+    expect(result.resolveMax).toBe(8);
+    expect(result.mentalDefense).toBe(20);
+    expect(result.fatigueMax).toBe(5);
+  });
+
+  it("lets the GM override and bonus win over feat modifiers", () => {
+    expect(computeDerived(base, { resolveMax: { bonus: 0, override: 4 } }, { resolveMax: 3 }).resolveMax).toBe(4);
+    expect(computeDerived(halfling, { staticDefense: { bonus: 1, override: null } }, { staticDefenseFormula: "shifty", staticDefense: 4 }).staticDefense).toBe(29);
+  });
+
+  it("changes nothing without feat modifiers", () => {
+    expect(computeDerived(base, {}, { resolveMax: 0, mentalDefense: 0, staticDefense: 0, fatigueMax: 0, staticDefenseCharacteristic: "dex" }))
+      .toEqual(computeDerived(base));
+  });
+});

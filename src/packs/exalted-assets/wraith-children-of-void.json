@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsWraChVoid00",
+  "_key": "!items!dtdAsWraChVoid00",
+  "name": "Children of Void",
+  "type": "feat",
+  "img": "icons/svg/invisible.svg",
+  "folder": "dtdFldWraHaunt00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>As a half action, spend 1 Plasm to force a target opponent into a Willpower test against TN 10 + (3 x your Synergy). On a failure, you remove skill dots from them equal to your Synergy, +1 per check, until they next rest.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 223
+    },
+    "xpCost": 100,
+    "group": "wraithHaunting",
+    "prerequisites": {
+      "exaltation": "Wraith",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

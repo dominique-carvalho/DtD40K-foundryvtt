@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsDaeS0000000",
+  "_key": "!items!dtdAsDaeS0000000",
+  "name": "Sloth",
+  "type": "feat",
+  "img": "icons/svg/statue.svg",
+  "folder": "dtdFldDaeSin0000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Gain +2 hit points, though you find it very hard to motivate yourself. Trigger: talking someone out of an action they would otherwise take lets you turn all Resonance back into Essence.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 215
+    },
+    "xpCost": 100,
+    "group": "daemonhostSin",
+    "prerequisites": {
+      "exaltation": "Daemonhost",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "sloth"
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsParMP000000",
+  "_key": "!items!dtdAsParMP000000",
+  "name": "Martial Prodigy",
+  "type": "feat",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdFldParagon000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Choose a Sword School, Magic School, or Gun Kata and gain one rank in it. That style can be advanced whenever you like, not only during study.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 217
+    },
+    "xpCost": 100,
+    "group": "paragon",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

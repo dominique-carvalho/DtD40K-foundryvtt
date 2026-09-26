@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsAtlNC000000",
+  "_key": "!items!dtdAsAtlNC000000",
+  "name": "Night Caste",
+  "type": "feat",
+  "img": "icons/svg/invisible.svg",
+  "folder": "dtdFldAtlCaste00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Spend 1 Mote so that onlookers cannot identify who cast the character's next spell; it appears to have no source at all.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 211
+    },
+    "xpCost": 100,
+    "group": "atlanteanCaste",
+    "prerequisites": {
+      "exaltation": "Atlantean",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

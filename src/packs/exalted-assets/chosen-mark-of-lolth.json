@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoLolth000",
+  "_key": "!items!dtdAsChoLolth000",
+  "name": "Mark of Lolth",
+  "type": "feat",
+  "img": "icons/svg/poison.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Resisting the secondary effects of your attacks requires one extra raise. By paying 1 Favor, you give a weapon the Toxic quality for a single scene.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Lolth"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

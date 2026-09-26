@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFldChoMark000",
+  "_key": "!folders!dtdFldChoMark000",
+  "name": "Chosen Marks",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 200000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "assetGroup": "chosenMark"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsProN0000000",
+  "_key": "!items!dtdAsProN0000000",
+  "name": "Necrodermis",
+  "type": "feat",
+  "img": "icons/svg/terror.svg",
+  "folder": "dtdFldProMater00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Spend 1 Pyros to gain Fear rated at your Generation until the scene ends.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 220
+    },
+    "xpCost": 100,
+    "group": "prometheanMaterial",
+    "prerequisites": {
+      "exaltation": "Promethean",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsWerIronMast",
+  "_key": "!items!dtdAsWerIronMast",
+  "name": "Iron Masters",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFldWerTribe00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>When you Shift, you can keep objects from merging into your body. In Warform you may use a turn to reload or clear a jam, you can wield basic weapons one-handed with no penalty, and you always count as bracing heavy weapons.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 222
+    },
+    "xpCost": 100,
+    "group": "werewolfTribe",
+    "prerequisites": {
+      "exaltation": "Werewolf",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFldParRacial0",
+  "_key": "!folders!dtdFldParRacial0",
+  "name": "Paragon Racial Assets",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 600000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "assetGroup": "paragonRacial"
+    }
+  }
+}

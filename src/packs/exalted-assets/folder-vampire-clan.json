@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFldVamClan000",
+  "_key": "!folders!dtdFldVamClan000",
+  "name": "Vampire Clans",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 800000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "assetGroup": "vampireClan"
+    }
+  }
+}

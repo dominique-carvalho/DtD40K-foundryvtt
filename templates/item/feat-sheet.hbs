@@ -1,0 +1,58 @@
+<div class="feat-sheet-body">
+  {{#if lockedPackHint}}
+  <p class="notification info locked-pack-hint"><i class="fa-solid fa-lock" inert></i> {{lockedPackHint}}</p>
+  {{/if}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}" {{#if editable}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if editable}}
+      <input class="item-name" type="text" name="name" value="{{item.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="item-name">{{item.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <span>{{localize categoryLabel}}</span>
+        <label>{{localize "DTD.Race.Source"}}
+          {{#if editable}}<input type="text" name="system.source.book" value="{{system.source.book}}">{{else}}<b>{{system.source.book}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Race.Page"}}
+          {{#if editable}}<input type="number" name="system.source.page" value="{{system.source.page}}" min="1" step="1">{{else}}<b>{{system.source.page}}</b>{{/if}}
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <section class="feat-section feat-requirements">
+    {{#if editable}}
+    <div class="form-group"><label>{{localize "DTD.Asset.Category.label"}}</label>
+      <select name="system.category">{{selectOptions categoryOptions selected=system.category localize=true}}</select>
+    </div>
+    <div class="form-group"><label>{{localize "DTD.Asset.Group.label"}}</label>
+      <select name="system.group">{{selectOptions groupOptions selected=system.group localize=true}}</select>
+    </div>
+    <div class="form-group"><label>{{localize "DTD.Asset.Exaltation"}}</label><input type="text" name="system.prerequisites.exaltation" value="{{system.prerequisites.exaltation}}"></div>
+    <div class="form-group"><label>{{localize "DTD.Asset.Race"}}</label><input type="text" name="system.prerequisites.race" value="{{system.prerequisites.race}}"></div>
+    <div class="form-group"><label>{{localize "DTD.Asset.Deity"}}</label><input type="text" name="system.prerequisites.deity" value="{{system.prerequisites.deity}}"></div>
+    <div class="form-group"><label>{{localize "DTD.Asset.XpCost"}}</label><input type="number" name="system.xpCost" value="{{system.xpCost}}" min="0" step="1"></div>
+    <div class="form-group"><label>{{localize "DTD.Asset.Automation.label"}}</label>
+      <select name="system.automation">{{selectOptions automationOptions selected=system.automation localize=true}}</select>
+    </div>
+    {{else}}
+    <dl class="feat-stats">
+      {{#if groupLabel}}<dt>{{localize "DTD.Asset.Group.label"}}</dt><dd>{{localize groupLabel}}</dd>{{/if}}
+      {{#if system.prerequisites.exaltation}}<dt>{{localize "DTD.Asset.Exaltation"}}</dt><dd>{{system.prerequisites.exaltation}}</dd>{{/if}}
+      {{#if showRace}}<dt>{{localize "DTD.Asset.Race"}}</dt><dd>{{system.prerequisites.race}}</dd>{{/if}}
+      {{#if showDeity}}<dt>{{localize "DTD.Asset.Deity"}}</dt><dd>{{system.prerequisites.deity}}</dd>{{/if}}
+      <dt>{{localize "DTD.Asset.XpCost"}}</dt><dd>{{system.xpCost}} XP</dd>
+      <dt>{{localize "DTD.Asset.Automation.label"}}</dt><dd><span class="automation-tag">{{localize automationLabel}}</span></dd>
+    </dl>
+    {{/if}}
+  </section>
+
+  <section class="feat-section feat-description">
+    <h2 class="section-title">{{localize "DTD.Race.Description"}}</h2>
+    {{#if editable}}
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enrichedDescription}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enrichedDescription}}}</div>{{/if}}
+  </section>
+</div>

@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoCorellon",
+  "_key": "!items!dtdAsChoCorellon",
+  "name": "Mark of Corellon",
+  "type": "feat",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Reroll any 1s rolled on your tests; if you hold a specialty in the skill being tested, reroll 2s as well.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 212
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Corellon"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

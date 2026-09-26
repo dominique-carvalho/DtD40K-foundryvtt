@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoSlaanesh",
+  "_key": "!items!dtdAsChoSlaanesh",
+  "name": "Mark of Slaanesh",
+  "type": "feat",
+  "img": "icons/svg/heal.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Gain +2k0 on Charm tests. Choose six of your skills: each can now be increased as high as six dots.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Slaanesh"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

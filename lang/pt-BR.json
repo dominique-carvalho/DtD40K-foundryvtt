@@ -116,7 +116,9 @@
         "traits": "Traços"
       },
       "SocialInitiative": "Iniciativa social",
-      "Fatigue": "Fatigue"
+      "Fatigue": "Fatigue",
+      "Exaltation": "Ficha de Exaltação",
+      "Feat": "Ficha de Feat"
     },
     "Roll": {
       "Success": "Sucesso",
@@ -211,8 +213,7 @@
       "Modifiers": "Modificadores raciais",
       "ModifiersHint": "Só o Mestre pode ativar ou desativar os modificadores raciais.",
       "FullText": "Texto completo",
-      "FullTextHint": "Opcional: cole aqui o texto completo da raça a partir do seu exemplar do livro. Ele fica só neste mundo e não é distribuído com o sistema.",
-      "LockedPackHint": "Este compêndio está travado. Para editar a raça, clique com o botão direito no compêndio Races e escolha \"{option}\". Alterações no compêndio do sistema são substituídas quando o sistema é atualizado — exporte-as com npm run extract:packs ou importe a raça para o mundo e edite a cópia."
+      "FullTextHint": "Opcional: cole aqui o texto completo da raça a partir do seu exemplar do livro. Ele fica só neste mundo e não é distribuído com o sistema."
     },
     "Exaltation": {
       "Formula": {
@@ -248,11 +249,56 @@
         "statuesque": "Statuesque (+1 característica)",
         "perfection": "Perfection (asset racial de Paragon)",
         "bloodQuickening": "Blood Quickening (elemento)"
+      },
+      "Exaltation": "Exaltação",
+      "StatsTitle": "Power Stat e recurso",
+      "PowerStat": "Power Stat",
+      "CapLabel": "Máximo",
+      "Resource": "Recurso",
+      "FormulaLabel": "Máximo do recurso",
+      "FixedMax": "Máximo fixo",
+      "Debt": "Dívida",
+      "HealingLabel": "Cura com o recurso",
+      "PressureEnabled": "Tem Pressure Points (Paragon)",
+      "Pressure": "Pressure Points",
+      "PressureRule": "5 × Power Stat por cena (Be a Man)",
+      "Actions": "Botões de recuperação",
+      "AddAction": "Adicionar botão de recuperação",
+      "ActionType": {
+        "restoreAll": "Restaurar tudo",
+        "regain": "Recuperar N",
+        "lose": "Perder N",
+        "unravel": "Recuperar 1 (dívida)"
+      },
+      "Recovery": "Recuperação",
+      "StaticPowers": "Poderes estáticos",
+      "AddPower": "Adicionar poder estático",
+      "Powers": "Poderes por ponto",
+      "PowerGained": "Poder obtido",
+      "Elements": "Elementos da Blood Quickening",
+      "AddElement": "Adicionar elemento",
+      "Tell": "A Tell",
+      "TellPoints": "Pontos gastos na cena",
+      "LoreTitle": "Ambientação",
+      "Lore": {
+        "origin": "Origem",
+        "appearance": "Aparência",
+        "society": "Sociedade",
+        "examples": "Heróis de exemplo"
+      },
+      "FullTextHint": "Opcional: cole o texto completo da exaltação do seu exemplar do livro. Ele fica só neste mundo e não é distribuído com o sistema.",
+      "TellLevel": {
+        "0": "Nenhuma — nenhum ponto gasto na cena",
+        "1": "Fraca — observadores atentos percebem (Perception + Wisdom, TN 20)",
+        "2": "Óbvia — impossível não notar; a natureza do Exalt fica à mostra",
+        "3": "Aura — luz para ler, ou escuridão que apaga fogueiras",
+        "4": "Épica — visível a quilômetros; mortais se calam ou fogem"
       }
     },
     "Asset": {
       "Category": {
-        "exaltedAsset": "Exalted Asset"
+        "exaltedAsset": "Exalted Asset",
+        "label": "Categoria"
       },
       "Group": {
         "atlanteanCaste": "Atlantean Castes",
@@ -264,7 +310,8 @@
         "prometheanMaterial": "Promethean Materials",
         "vampireClan": "Vampire Clans",
         "werewolfTribe": "Werewolf Tribes",
-        "wraithHaunting": "Wraith Hauntings"
+        "wraithHaunting": "Wraith Hauntings",
+        "label": "Grupo"
       },
       "Automation": {
         "none": "Só texto",
@@ -275,8 +322,17 @@
         "longbeard": "Longbeard (+1 Resilience)",
         "markOfNurgle": "Mark of Nurgle (+1 Resilience)",
         "sloth": "Sloth (+2 HP)",
-        "elusive": "Elusive (Size não penaliza a Static Defense)"
-      }
+        "elusive": "Elusive (Size não penaliza a Static Defense)",
+        "label": "Automação"
+      },
+      "Assets": "Exalted Assets",
+      "Exaltation": "Exaltação exigida",
+      "Race": "Raça exigida",
+      "Deity": "Divindade patrona",
+      "XpCost": "Custo em XP"
+    },
+    "Item": {
+      "LockedPackHint": "Este compêndio está bloqueado. Para editar esta entrada, clique com o botão direito no compêndio {pack} e escolha \"{option}\". Alterações no compêndio do sistema são substituídas quando o sistema é atualizado — exporte-as com npm run extract:packs, ou importe a entrada para o mundo e edite a cópia."
     }
   }
 }

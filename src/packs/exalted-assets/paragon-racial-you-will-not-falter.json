@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacYWNF0000",
+  "_key": "!items!dtdAsRacYWNF0000",
+  "name": "You Will Not Falter",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Trained among the first Aasimar, you start the game with three feats: Armor Proficiency (Power), Armor Specialization (Power), and Armor of Contempt.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 218
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Aasimar",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

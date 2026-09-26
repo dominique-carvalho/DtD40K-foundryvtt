@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacEP000000",
+  "_key": "!items!dtdAsRacEP000000",
+  "name": "Elven Perfection",
+  "type": "feat",
+  "img": "icons/svg/eye.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Any time you reroll a test, the new result gains two raises.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 218
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Elf",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

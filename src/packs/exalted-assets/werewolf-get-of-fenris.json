@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsWerGetOfFen",
+  "_key": "!items!dtdAsWerGetOfFen",
+  "name": "Get of Fenris",
+  "type": "feat",
+  "img": "icons/svg/pawprint.svg",
+  "folder": "dtdFldWerTribe00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Spend 1 Rage for +1 to each of Strength, Acrobatics and Athletics until the scene ends.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 222
+    },
+    "xpCost": 100,
+    "group": "werewolfTribe",
+    "prerequisites": {
+      "exaltation": "Werewolf",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

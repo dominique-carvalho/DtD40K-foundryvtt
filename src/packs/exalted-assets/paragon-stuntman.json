@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsParS0000000",
+  "_key": "!items!dtdAsParS0000000",
+  "name": "Stuntman",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFldParagon000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>When you stunt, you keep one additional die (+0k1).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 217
+    },
+    "xpCost": 100,
+    "group": "paragon",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

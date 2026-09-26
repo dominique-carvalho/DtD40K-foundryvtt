@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacDM000000",
+  "_key": "!items!dtdAsRacDM000000",
+  "name": "Dark Mirth",
+  "type": "feat",
+  "img": "icons/svg/skull.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your attack rolls gain +2k1 while you hold Combat Advantage over the target.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 218
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Dark Eldarin",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFldDraBlood00",
+  "_key": "!folders!dtdFldDraBlood00",
+  "name": "Dragonblooded Bloodlines",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 400000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "assetGroup": "dragonbloodedBloodline"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacCW000000",
+  "_key": "!items!dtdAsRacCW000000",
+  "name": "Controlled Warp",
+  "type": "feat",
+  "img": "icons/svg/wing.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Warp Step gains two new uses: as a Full Action, teleport up to double your Run distance; or as a Reaction, teleport up to half your speed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 218
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Eldarin",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,106 @@
+{
+  "_id": "dtdExalVampire00",
+  "_key": "!items!dtdExalVampire00",
+  "name": "Vampire",
+  "type": "exaltation",
+  "img": "icons/svg/blood.svg",
+  "system": {
+    "description": "<p>Vampires are undead predators who survive on the blood of the living. Their condition is a curse descended from the few who once drank the blood of Khaine, the Elven war god, as he died. Mortals fear them and rarely understand them, and many count them the weakest of the Exalted, yet they are hard to destroy, refill their reserves fast wherever people are plentiful, and hold deeper pools of power than most of their peers.</p><p>No birthright or divine favour is needed to join their ranks: a mortal only has to become valuable enough to an existing vampire that it agrees to turn them. The newcomer then usually spends decades, even centuries, repaying that blood debt while the elder protects and tutors them.</p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 91
+    },
+    "powerStat": {
+      "name": "Blood Potency",
+      "cap": "level",
+      "value": 1
+    },
+    "resource": {
+      "name": "Vitae",
+      "formula": "vitae",
+      "fixedMax": 0,
+      "recovery": "<p>Vitae never returns on its own; a vampire must feed. A bite victim who has been wounded can be drained of 1 Vitae, and a willing donor yields 1 Vitae for each wound taken. An unconscious or comatose vampire can be given blood by someone else. Adjust the pool by hand when the character feeds.</p><p>Upkeep: 1 Vitae must be spent every day to stay active (Blood Dependency); skipping it sends the vampire into a coma.</p>",
+      "actions": [],
+      "debtName": "",
+      "healing": "outOfCombat",
+      "spent": 0
+    },
+    "round": {
+      "spent": 0,
+      "marker": "none"
+    },
+    "scene": {
+      "spent": 0
+    },
+    "pressure": {
+      "enabled": false,
+      "spent": 0
+    },
+    "staticPowers": [
+      {
+        "name": "Old Money",
+        "description": "<p>Long years spent weaving themselves into society pay off: a vampire starts play with 4 extra dots to distribute among Backgrounds.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Undead Resilience",
+        "description": "<p>The vampire has the Undead trait. Critical damage cannot kill it unless the source is E, X, silver or magical; Impact or Rending damage that would be lethal only knocks it unconscious. With no breath or pulse it may easily be mistaken for dead. It stays unconscious until it spends enough Vitae to heal its Critical Damage below the fatal threshold.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Sunlight Weakness",
+        "description": "<p>Each round in sunlight costs the vampire 1 Hit Point automatically; any Critical damage from it uses the E table and always strikes the body. A vampire slain by sunlight crumbles to dust and can never be brought back. Careful cover — a heavy cloak and broad hat, a parasol or similar — is enough protection, if an uncomfortable one.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Blood Dependency",
+        "description": "<p>The vampire must spend 1 Vitae each day to stay active, or it falls into a coma. Its fangs are a natural weapon — Bite (1k2 R; Melee; Brawling) — and it may drain 1 Vitae from a victim that bite has wounded. Feeding from a willing donor grants 1 Vitae per wound. Others may feed blood to an unconscious or comatose vampire.</p>",
+        "automation": "none"
+      }
+    ],
+    "powers": [
+      {
+        "rank": 1,
+        "name": "Auspex",
+        "description": "<p>The vampire gains Dark Sight and +1k1 on every Perception test.</p>"
+      },
+      {
+        "rank": 2,
+        "name": "Dread",
+        "description": "<p>For 1 Vitae, the vampire gains Fear of half its Blood Potency (round up) until the scene ends.</p>"
+      },
+      {
+        "rank": 3,
+        "name": "Celerity",
+        "description": "<p>Spend 1 Vitae to gain one additional half action.</p>"
+      },
+      {
+        "rank": 4,
+        "name": "Potence",
+        "description": "<p>For 1 Vitae, the vampire's Strength rises by 3 until the scene ends.</p>"
+      },
+      {
+        "rank": 5,
+        "name": "Dominate",
+        "description": "<p>The vampire can use the Dominate spell, rolling Blood Potency + Charisma. Against a mortal target of lower level it succeeds automatically.</p>"
+      }
+    ],
+    "elements": [],
+    "tell": "<p>Spending Vitae strips away the vampire's disguise of life: the skin grows paler, the fangs lengthen, the eyes turn black and a psychic sense of a hunting predator spreads around it. Nearly every sentient being, and most animals, reacts with instinctive fear. As with every Tell, 1 point spent in a scene is faint (Perception + Wisdom, TN 20 to notice), 2–3 points make it unmistakable, 4–5 points produce a powerful aura, and 6 or more become an epic display.</p>",
+    "lore": {
+      "origin": "<p>Anyone at all may become a vampire, which makes it among the cheapest roads to a kind of immortality; the one requirement is death. The sire empties the chosen one of blood and then gives the still-warm body some of its own Vitae. The newly risen childe nearly always wakes starved and frenzied, so sires typically supply an expendable first victim, since the childe cannot stop until the source runs dry. Rising is immediate, but it takes weeks or months before the childe masters its powers, after which it owes its sire a blood debt that may take a long time to repay. Motives range from wanting pawns or playthings to a wish to shield loved ones from time — yet at bottom the act is always selfish.</p><p><strong>The Embrace.</strong> Only sentient beings can be turned; animals cannot. Exalts, Paragons included, cannot contract the Curse of Khaine, so they can never become vampire Double Exalts. The Vitae has to pass straight from sire to childe — it cannot be bottled, sold or even poured into a cup. A pregnant woman always miscarries. Turning someone costs the sire 1 permanent point of Blood Potency, so a sire with only 1 Blood Potency cannot pass on the curse and merely leaves a corpse. The childe starts at Blood Potency 1 and normally becomes the sire's Ally, though an unwilling victim may turn into an enemy instead.</p>",
+      "appearance": "<p>Any examination reveals a vampire: there is no pulse, the body sits near room temperature and breathes only in order to talk. They look pallid and unwell, though they move about far more than the ordinary dead. Their fangs are usually modest outside of feeding — no more telling than those of some Dragonborn or Tieflings.</p><p>Rising Blood Potency pulls a vampire further from the mortal it used to be. At low potency it can pass for a pale living person; at high potency it grows increasingly cadaverous. Vampires who cling to their looks often struggle to reach their undead power, though for every withered corpse there is also a beautiful, seductive exception.</p>",
+      "society": "<p>Vampire society works much like a crime family. They keep somewhat apart from ordinary folk, wielding resources mortals lack, exploiting and feeding on them and bending the law when it suits. Family matters greatly, bound by the Blood Debt, friendship and honour. A sire answers for everything its childe does, so vampires turn only people they trust and care for, usually with their own sire's approval; anyone who betrays a superior may be left out to meet the dawn. The old, powerful families dwell in drifting stations in the dark between worlds of the Astral Sea, realms where people are livestock and pawns and blood by the pint is the currency, and younger vampires journey there to beg favours or learn old secrets.</p><p>With sires, grand-sires, centuries of contacts and considerable wealth, vampires are unusually well connected, and their communities tend to have a lively night life. The airless, sunless Astral Sea suits them perfectly, and they make fine ship crew who can step through a breach or airlock with no suit. A party with a vampire mostly works at night: daytime activity is possible with care, but one mistake in the sun can maim or kill. Driven by hunger and unable to stomach animal blood, which lacks the vitality of thinking beings, they live as predators among prey, held back only by self-control built over long unlife. For other settings, the book suggests reimagining them as an alien parasite animating a corpse or a succubus that drains life-energy rather than blood.</p>",
+      "examples": [
+        "Iniga Angband"
+      ]
+    },
+    "selection": {
+      "statuesque": "",
+      "element": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

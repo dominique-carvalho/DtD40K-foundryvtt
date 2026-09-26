@@ -1,0 +1,109 @@
+{
+  "_id": "dtdExalAtlantean",
+  "_key": "!items!dtdExalAtlantean",
+  "name": "Atlantean",
+  "type": "exaltation",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>An Atlantean carries the reincarnated soul of one of the Syrne, the ancient race that vanished so completely that not even their bodies remained. They grow up as ordinary members of their own race, if unusually gifted at magic, until some trigger — a glint of light on water, a bell, a near-fatal duel, even finding their own tomb — floods them with fragments of an earlier life.</p><p>What awakens with those memories is the old, universal sorcery of the Syrne. It is fuelled by Motes, and every Mote spent leaves behind Paradox, the remnant of the catastrophe that ended their first age.</p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 67
+    },
+    "powerStat": {
+      "name": "Gnosis",
+      "cap": "level",
+      "value": 1
+    },
+    "resource": {
+      "name": "Motes",
+      "formula": "motes",
+      "fixedMax": 0,
+      "recovery": "<p>Motes (maximum Charisma + Intelligence + 2×Gnosis) never come back by themselves. Each Mote spent leaves 1 Paradox, and unravelling one Paradox turns it back into one Mote. The safe method is an hour of meditation while the surplus warp taint drains away in a showy but harmless display (ghostly images, sparks, heatless flames). The fast method costs a free action and a Psychic Phenomena roll. While any Paradox remains, keeping a 9 on a die of a magic Test forces one immediate fast unravel; each such 9 counts separately, as long as there is Paradox left to unravel.</p>",
+      "actions": [
+        {
+          "type": "unravel",
+          "amount": "1"
+        }
+      ],
+      "debtName": "Paradox",
+      "healing": "outOfCombat",
+      "spent": 0
+    },
+    "round": {
+      "spent": 0,
+      "marker": "none"
+    },
+    "scene": {
+      "spent": 0
+    },
+    "pressure": {
+      "enabled": false,
+      "spent": 0
+    },
+    "staticPowers": [
+      {
+        "name": "Magical Aptitude",
+        "description": "<p>You begin with a free rank in a Magical School of your choice, and can buy further ranks in it as though it belonged to any class progression you have. When you roll for Psychic Phenomena, roll twice and apply either result or both.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Prestidigitation",
+        "description": "<p>You can perform small magical tricks: move 1 pound or less of material; produce a harmless sensory effect such as sparks, faint music or a smell; colour, clean or dirty small objects; instantly ignite small fires (a torch, a candle, a small campfire); or chill, warm or flavour 1 pound or less of nonliving matter.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Past Lives",
+        "description": "<p>Every skill counts as Basic for you. You also start play with Speak Language (Syrneth).</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Paradox",
+        "description": "<p>Each Mote you spend gives you 1 Paradox, and spent Motes can only be regained by unravelling it, one point at a time: safely with an hour of meditation, or quickly with a free action and a Psychic Phenomena roll. While you have Paradox, every 9 you keep on a magic Test forces an immediate fast unravel (several 9s stack if you have more than 1 Paradox).</p>",
+        "automation": "none"
+      }
+    ],
+    "powers": [
+      {
+        "rank": 1,
+        "name": "Ancient Style",
+        "description": "<p>Echoes of your former life — forgotten fighting styles, lost spells, even old fashions — shape who you are now. Pick three skills: you can raise each of them to six dots, and you gain a free Syrneth specialty in each.</p>"
+      },
+      {
+        "rank": 2,
+        "name": "Empower Spell",
+        "description": "<p>Spend 1 Mote: for the next spell you cast, your level and the ranks of your Magic Schools count as 3 higher.</p>"
+      },
+      {
+        "rank": 3,
+        "name": "Excellence",
+        "description": "<p>To reroll a skill in which you hold a specialization, you may pay 2 Motes in place of a Hero Point.</p>"
+      },
+      {
+        "rank": 4,
+        "name": "Maximize Spell",
+        "description": "<p>Before casting a spell, spend as many Motes as you wish; each of them makes one die of the spell's Magic test count as a 10. Those dice are simply counted as 10 and do not explode.</p>"
+      },
+      {
+        "rank": 5,
+        "name": "Quicken Spell",
+        "description": "<p>Spend 1 Mote and a spell can be cast as a free action.</p>"
+      }
+    ],
+    "elements": [],
+    "tell": "<p>The Atlantean begins to shine with a serene golden light, much like orichalcum but tinged with the sheen of raw warp energy, and it grows stronger the more Motes are spent in the scene. As it brightens it reveals a figure at their side — the reborn Syrne spirit, usually a simplified humanoid with mechanical traits — copying their movements and visibly doing the work behind their spells and tricks. One point spent in a scene makes it faint (Perception + Wisdom TN 20 to notice); 2–3 points make it unmistakable; 4–5 turn it into a radiant aura; 6 or more make it an epic spectacle.</p>",
+    "lore": {
+      "origin": "<p>Legend says the Syrne disappeared by turning a weapon on themselves that tore every soul of their race loose from its body. Since then, a few people are born carrying one of those souls. About one birth in fifty million produces an Atlantean, and no genetic, racial or social pattern has ever been found; it seems purely random. The age of awakening is random too, though it tends to come to the young and to those living through many new experiences.</p><p>Nobody chooses to become an Atlantean — it is settled before birth. The awakening can be brutal: frequently the first memory to return is the Syrne's own death. Some groups try to identify Atlanteans early and force the spirit out by putting them in mortal danger, since a threat to their life almost always rouses the ancient soul to protect them. What returns is incomplete: for most it is scattered impressions like a vivid dream, for others a few days recalled perfectly amid blankness, and a rare few lose their mortal memories altogether. The one certainty is that something terrible happened, and its curse survives as Paradox.</p>",
+      "appearance": "<p>Physically an Atlantean is hard to tell apart from others of their race, and growing power barely changes that. The differences are cultural: they groom and dress in ways far removed from current norms, and anyone who has learned to spot those quirks — historians above all — can pick them out easily.</p><p>Their sense of the ordinary is equally out of step. An Atlantean is a stranger everywhere, ordering meals no one else would touch and wearing clothes that strike others as bizarre.</p>",
+      "society": "<p>Atlanteans have no society of their own. They are survivors of a lost age, but each was raised by their own race and owes far more to that upbringing than to the Syrne; they may grow more reclusive and alienated as their Gnosis rises, and not all of them welcome the memories they regain. The Syrne spirit need not share its host's morals: an assassin may lose the stomach for killing, a healer may find there are people they cannot bring themselves to help. Most take a class with some magic, and Artifacts are a natural background for recovering the trappings of a former life.</p><p>Other races react very differently. Eldarin and Gnomes all but worship them and even Orks respect them, while races without an ancient magical heritage, such as Humans and the Tau, regard them at best as an oddity born of sorcery or journeys through the Warp, and at worst as a ghost or daemon wearing a loved one's body.</p><p>In play, an Atlantean's memories make a reliable map to lost artifacts and plot devices, and can also bring back old enemies or old friends; several Atlanteans in one group may have known — or loved — each other in their past lives. The template can be reskinned as the reincarnation of a great hero or ancestor, a benevolent daemon, or an idealized avatar of the character's own spirit.</p>",
+      "examples": []
+    },
+    "selection": {
+      "statuesque": "",
+      "element": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

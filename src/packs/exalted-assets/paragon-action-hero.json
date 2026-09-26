@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsParAH000000",
+  "_key": "!items!dtdAsParAH000000",
+  "name": "Action Hero",
+  "type": "feat",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "dtdFldParagon000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your maximum Hero Points increase by 1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 217
+    },
+    "xpCost": 100,
+    "group": "paragon",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "actionHero"
+  },
+  "effects": [],
+  "flags": {}
+}

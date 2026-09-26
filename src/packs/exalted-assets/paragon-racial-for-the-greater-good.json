@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacFTGG0000",
+  "_key": "!items!dtdAsRacFTGG0000",
+  "name": "For the Greater Good",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>By spending 1 Action Point, you may make a ranged Opportunity Attack against any provoking action within 10m.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 219
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Tau",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoTzeentch",
+  "_key": "!items!dtdAsChoTzeentch",
+  "name": "Mark of Tzeentch",
+  "type": "feat",
+  "img": "icons/svg/fire.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Perils of the Warp never affect you. The Perils still occur, but the consequences land on those around you instead.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 214
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Tzeentch"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

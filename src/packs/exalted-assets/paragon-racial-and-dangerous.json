@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacAD000000",
+  "_key": "!items!dtdAsRacAD000000",
+  "name": "...and Dangerous",
+  "type": "feat",
+  "img": "icons/svg/pawprint.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your secondary arms become fully functional arms. If a primary arm is severed, its paired secondary arm replaces it on the hit location table.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 219
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Thri-Kreen",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

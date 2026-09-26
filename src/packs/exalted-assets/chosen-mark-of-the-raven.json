@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoRavenQue",
+  "_key": "!items!dtdAsChoRavenQue",
+  "name": "Mark of the Raven",
+  "type": "feat",
+  "img": "icons/svg/wing.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>When you first inflict critical damage on a soul-bearing creature that has no hit points left, it dies permanently; no Hero Point burning, ritual or cloning can bring it back.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Raven Queen"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

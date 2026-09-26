@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsDaeD0000000",
+  "_key": "!items!dtdAsDaeD0000000",
+  "name": "Desire",
+  "type": "feat",
+  "img": "icons/svg/eye.svg",
+  "folder": "dtdFldDaeSin0000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Read a person's general emotions with an Arcanoi + Charisma test against their Mental Defense; on success you pick up more specific thoughts, and with raises equal to their Willpower you learn the answer to one question (only what the target believes, even if wrong). Trigger: tempting someone into a lustful act lets you turn all Resonance back into Essence.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 215
+    },
+    "xpCost": 100,
+    "group": "daemonhostSin",
+    "prerequisites": {
+      "exaltation": "Daemonhost",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

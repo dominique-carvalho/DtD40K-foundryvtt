@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoKhorne00",
+  "_key": "!items!dtdAsChoKhorne00",
+  "name": "Mark of Khorne",
+  "type": "feat",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Whenever you charge or make an all-out attack, you can pay 2 Favor for one additional basic attack. You may never learn magic. Pick one Sword School: you receive a rank in it and can always advance it as though it belonged to your class.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Khorne"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

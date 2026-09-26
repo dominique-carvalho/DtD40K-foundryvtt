@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoCuthbert",
+  "_key": "!items!dtdAsChoCuthbert",
+  "name": "Mark of Cuthbert",
+  "type": "feat",
+  "img": "icons/svg/terror.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Spend a Hero Point to give off Fear toward criminals at a rating of half your Faith, rounded up, while granting Fearless to the law-abiding.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 212
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Cuthbert"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

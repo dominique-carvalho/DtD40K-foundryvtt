@@ -964,3 +964,159 @@
 .dtd40k .roll-dialog .dice-mod input {
   width: 3.5rem;
 }
+
+/* ---------- Exaltation and feat item sheets (spec 004, FR-005) ---------- */
+
+.dtd40k.sheet.item.exaltation .window-content,
+.dtd40k.sheet.item.feat .window-content {
+  padding: 0 0.75rem 0.75rem;
+  overflow-y: auto;
+  color: var(--dtd-text);
+}
+
+.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .sheet-header {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .profile-img[data-action] {
+  cursor: pointer;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .item-name {
+  margin: 0;
+  font-size: 1.4rem;
+  height: auto;
+  border: none;
+  color: var(--dtd-text);
+}
+
+.dtd40k.item:is(.exaltation, .feat) input.item-name {
+  width: 100%;
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k.item:is(.exaltation, .feat) .identity-line input[type="text"] {
+  width: 6rem;
+}
+
+.dtd40k.item:is(.exaltation, .feat) :is(.exaltation-section, .feat-section) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .form-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .form-group > label:first-child {
+  flex: 0 0 11rem;
+  font-weight: bold;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .form-group.stacked {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.dtd40k.item:is(.exaltation, .feat) :is(dl.exaltation-stats-list, dl.feat-stats) {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 0.75rem;
+  margin: 0;
+}
+
+.dtd40k.item:is(.exaltation, .feat) dt {
+  font-weight: bold;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k.item:is(.exaltation, .feat) dd {
+  margin: 0;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .automation-tag {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: var(--dtd-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dtd40k.item:is(.exaltation, .feat) prose-mirror {
+  min-height: 5rem;
+}
+
+.dtd40k.item.exaltation .exaltation-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.dtd40k.item.exaltation .list-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dtd40k.item.exaltation .list-row input[type="text"] {
+  flex: 1;
+}
+
+.dtd40k.item.exaltation .list-row input[type="number"] {
+  width: 3.5rem;
+}
+
+.dtd40k.item.exaltation .list-control {
+  cursor: pointer;
+  margin-left: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k.item.exaltation .exaltation-power h3 {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+}
+
+.dtd40k.item.exaltation .tag {
+  display: inline-block;
+  margin: 0 0.3rem 0.2rem 0;
+  padding: 0 0.4rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 3px;
+}
+
+.dtd40k.item.exaltation :is(.exaltation-power-table, .tell-table) {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.dtd40k.item.exaltation :is(.exaltation-power-table, .tell-table) :is(th, td) {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--dtd-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.dtd40k.item.exaltation .exaltation-power-table td.rank {
+  width: 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dtd-accent);
+}
+
+.dtd40k.item.exaltation .exaltation-power-table .enriched p:first-child {
+  margin-top: 0.2rem;
+}

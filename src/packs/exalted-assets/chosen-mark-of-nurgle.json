@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoNurgle00",
+  "_key": "!items!dtdAsChoNurgle00",
+  "name": "Mark of Nurgle",
+  "type": "feat",
+  "img": "icons/svg/acid.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Disease has no negative effects on you, and you gain +1 Resilience.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Nurgle"
+    },
+    "automation": "markOfNurgle"
+  },
+  "effects": [],
+  "flags": {}
+}

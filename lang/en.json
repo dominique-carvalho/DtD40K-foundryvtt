@@ -116,7 +116,9 @@
         "traits": "Traits"
       },
       "SocialInitiative": "Social Initiative",
-      "Fatigue": "Fatigue"
+      "Fatigue": "Fatigue",
+      "Exaltation": "Exaltation Sheet",
+      "Feat": "Feat Sheet"
     },
     "Roll": {
       "Success": "Success",
@@ -211,8 +213,7 @@
       "Modifiers": "Racial modifiers",
       "ModifiersHint": "Only the GM can switch racial modifiers on or off.",
       "FullText": "Full text",
-      "FullTextHint": "Optional: paste the race's full text from your own copy of the book. It stays in this world only and is not shipped with the system.",
-      "LockedPackHint": "This compendium is locked. To edit this race, right-click the Races compendium and choose \"{option}\". Changes to the system compendium are replaced when the system updates — export them with npm run extract:packs, or import the race into the world and edit the copy."
+      "FullTextHint": "Optional: paste the race's full text from your own copy of the book. It stays in this world only and is not shipped with the system."
     },
     "Exaltation": {
       "Formula": {
@@ -248,11 +249,56 @@
         "statuesque": "Statuesque (+1 characteristic)",
         "perfection": "Perfection (racial Paragon asset)",
         "bloodQuickening": "Blood Quickening (element)"
+      },
+      "Exaltation": "Exaltation",
+      "StatsTitle": "Power Stat and Resource",
+      "PowerStat": "Power Stat",
+      "CapLabel": "Maximum",
+      "Resource": "Resource",
+      "FormulaLabel": "Maximum resource",
+      "FixedMax": "Fixed maximum",
+      "Debt": "Debt",
+      "HealingLabel": "Healing with the resource",
+      "PressureEnabled": "Has Pressure Points (Paragon)",
+      "Pressure": "Pressure Points",
+      "PressureRule": "5 × Power Stat per scene (Be a Man)",
+      "Actions": "Recovery buttons",
+      "AddAction": "Add a recovery button",
+      "ActionType": {
+        "restoreAll": "Restore all",
+        "regain": "Regain N",
+        "lose": "Lose N",
+        "unravel": "Recover 1 (debt)"
+      },
+      "Recovery": "Recovery",
+      "StaticPowers": "Static Powers",
+      "AddPower": "Add a static power",
+      "Powers": "Powers by Rank",
+      "PowerGained": "Power Gained",
+      "Elements": "Blood Quickening Elements",
+      "AddElement": "Add an element",
+      "Tell": "The Tell",
+      "TellPoints": "Points spent in the scene",
+      "LoreTitle": "Lore",
+      "Lore": {
+        "origin": "Origin",
+        "appearance": "Appearance",
+        "society": "Society",
+        "examples": "Example heroes"
+      },
+      "FullTextHint": "Optional: paste the exaltation's full text from your own copy of the book. It stays in this world only and is not shipped with the system.",
+      "TellLevel": {
+        "0": "None — no points spent this scene",
+        "1": "Faint — careful observers notice it (Perception + Wisdom, TN 20)",
+        "2": "Obvious — impossible to miss; the Exalt’s nature is on display",
+        "3": "Aura — bright enough to read by, or darkness that smothers campfires",
+        "4": "Epic — visible for kilometres; mortals fall silent or flee"
       }
     },
     "Asset": {
       "Category": {
-        "exaltedAsset": "Exalted Asset"
+        "exaltedAsset": "Exalted Asset",
+        "label": "Category"
       },
       "Group": {
         "atlanteanCaste": "Atlantean Castes",
@@ -264,7 +310,8 @@
         "prometheanMaterial": "Promethean Materials",
         "vampireClan": "Vampire Clans",
         "werewolfTribe": "Werewolf Tribes",
-        "wraithHaunting": "Wraith Hauntings"
+        "wraithHaunting": "Wraith Hauntings",
+        "label": "Group"
       },
       "Automation": {
         "none": "Text only",
@@ -275,8 +322,17 @@
         "longbeard": "Longbeard (+1 Resilience)",
         "markOfNurgle": "Mark of Nurgle (+1 Resilience)",
         "sloth": "Sloth (+2 HP)",
-        "elusive": "Elusive (no Size penalty to Static Defense)"
-      }
+        "elusive": "Elusive (no Size penalty to Static Defense)",
+        "label": "Automation"
+      },
+      "Assets": "Exalted Assets",
+      "Exaltation": "Required exaltation",
+      "Race": "Required race",
+      "Deity": "Patron deity",
+      "XpCost": "XP cost"
+    },
+    "Item": {
+      "LockedPackHint": "This compendium is locked. To edit this entry, right-click the {pack} compendium and choose \"{option}\". Changes to the system compendium are replaced when the system updates — export them with npm run extract:packs, or import the entry into the world and edit the copy."
     }
   }
 }

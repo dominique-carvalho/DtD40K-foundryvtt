@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFldWraHaunt00",
+  "_key": "!folders!dtdFldWraHaunt00",
+  "name": "Wraith Hauntings",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 1000000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "assetGroup": "wraithHaunting"
+    }
+  }
+}

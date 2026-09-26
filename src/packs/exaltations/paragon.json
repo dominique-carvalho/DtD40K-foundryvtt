@@ -1,0 +1,109 @@
+{
+  "_id": "dtdExalParagon00",
+  "_key": "!items!dtdExalParagon00",
+  "name": "Paragon",
+  "type": "exaltation",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "description": "<p>A Paragon is the finest specimen of their race: someone born with talent and raw ability so far beyond the norm that they are effectively a different kind of person. Perhaps one birth in a thousand produces one, and even fewer ever realise what they are.</p><p>Paragons are the subtlest Exalts, with no shapeshifting or overt supernatural tricks — only boundless potential that almost always carries them to the top of their society. Ordinary experts, however skilled, simply cannot compete with them on equal terms.</p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 83
+    },
+    "powerStat": {
+      "name": "Excellence",
+      "cap": "level",
+      "value": 1
+    },
+    "resource": {
+      "name": "Action Points",
+      "formula": "actionPoints",
+      "fixedMax": 0,
+      "recovery": "<p>Maximum Action Points equal Level + Excellence. All Action Points return at the start of each session. In addition, once per scene, after succeeding on a stunt of 2 or more dice, the Paragon regains 1d10 Action Points — roll it and adjust the pool by hand.</p>",
+      "actions": [
+        {
+          "type": "restoreAll",
+          "amount": "1"
+        }
+      ],
+      "debtName": "",
+      "healing": "outOfCombat",
+      "spent": 0
+    },
+    "round": {
+      "spent": 0,
+      "marker": "none"
+    },
+    "scene": {
+      "spent": 0
+    },
+    "pressure": {
+      "enabled": true,
+      "spent": 0
+    },
+    "staticPowers": [
+      {
+        "name": "Destiny",
+        "description": "<p>The Paragon starts play with 2 extra Hero Points.</p>",
+        "automation": "destiny"
+      },
+      {
+        "name": "Statuesque",
+        "description": "<p>Of the Characteristics your race offers a +1 choice for, pick one you did not already pick; it gains +1.</p>",
+        "automation": "statuesque"
+      },
+      {
+        "name": "Flash",
+        "description": "<p>The Paragon can never be surprised and always knows about every attack aimed at them.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Perfection",
+        "description": "<p>The Paragon receives the Paragon asset tied to their race, and may keep buying assets after character creation.</p>",
+        "automation": "perfection"
+      }
+    ],
+    "powers": [
+      {
+        "rank": 1,
+        "name": "Be a Man",
+        "description": "<p>At the start of every scene the Paragon gains Pressure Points equal to 5 × Excellence. Each point spent adds 1 to the final total of any skill roll; there is no per-round limit, so all of them can go into one roll. The Paragon regains 5 Pressure Points each time a foe uses a Resource Point or a Hero Point, or whenever the Paragon loses 1 or more Hit Points. Any points above 5 × Excellence are lost.</p>"
+      },
+      {
+        "rank": 2,
+        "name": "Swift as a Coursing River",
+        "description": "<p>The Paragon can raise skills and Characteristics as high as 6 dots.</p>"
+      },
+      {
+        "rank": 3,
+        "name": "All the Force of a Great Typhoon",
+        "description": "<p>Driving ever harder in combat, the Paragon recovers Pressure Points equal to Excellence at the start of each of their turns.</p>"
+      },
+      {
+        "rank": 4,
+        "name": "Strength of a Raging Fire",
+        "description": "<p>The Paragon's dice explode on 9s as well as 10s.</p>"
+      },
+      {
+        "rank": 5,
+        "name": "Mysterious as the Dark Side of the Moon",
+        "description": "<p>When the Paragon succeeds on a stunted test, any ally who stunts before the start of the Paragon’s following turn adds to their result the number of Pressure Points spent on the Paragon’s test.</p>"
+      }
+    ],
+    "elements": [],
+    "tell": "<p>The quietest Tell of all: no glow, no spectral avatar, just an irresistible pull on attention. It is as supernatural as any other Tell but does not look it — a compulsion that makes people watch. The more Action Points spent in a scene, the more heads turn (following the general scale: 1 point faintly noticeable with Perception + Wisdom vs. TN 20, 2–3 unmistakable, 4–5 commanding, 6+ epic).</p>",
+    "lore": {
+      "origin": "<p>Nobody becomes a Paragon; one is born that way and remains so for life. Such births often come with fulfilled prophecies, strange weather, celestial signs, howling wolves and similar portents — though a birth may also pass unnoticed, particularly where standing out is dangerous (a tyrant culling suspicious infants, for instance). Unusual skin tones and symbolic birthmarks are common.</p><p>Growing up, Paragons outshine their peers in whatever they try, usually settling on a pursuit they enjoy and quickly becoming famous for it — often a family tradition, and often something risky and rewarding such as swordplay, politics or baking. Some diviners claim Paragons can be spotted in the weave of fate, where they blaze brightly and pull other destinies into their wake like a river carving a new course.</p>",
+      "appearance": "<p>A Paragon shows no mutations or obvious changes; they are simply the ideal of their race — the most elven Elf, the most archetypal Squat, everything their people should be with a little extra on top. Larger than life is the best description.</p><p>Because nothing visibly marks them, some argue they are not Exalts at all, merely the best of the best. You would only notice one by comparison, when they stand among others of their kind. All of them carry a natural magnetism that works even on people who would not normally be attracted to them.</p>",
+      "society": "<p>A Paragon is only a person — not god or daemon — and needs no supernatural backing. Their potential is limitless but must be developed through their own effort, grit and a good measure of luck, which many take pride in; some envy their Exalted companions. They favour dramatic, improbable, action-hero feats, since their powers reward risk-taking through stunts, and they must keep pushing themselves to stay at their peak. Fate tends to deliver them exactly where and when they are needed, and the SM can justify having them stumble onto important leads. Describing scenes with props and locations they can stunt with is encouraged.</p><p>Unlike most Exalts, Paragons stay connected to their people. Envy of their gifts easily produces enemies, and admiration easily produces allies and contacts. Paragons recognise one another readily and are often assembled deliberately into task forces or elite units; together they take bold, decisive action, and they tend to see ordinary people as background faces — unworthy foes and fragile friends.</p><p>Adapting them is easy: they suit almost any low-magic archetype built on stunts and flat bonuses, such as a super soldier, a destined hero, a supernaturally lucky everyman, or someone swept along by the wheel of fate.</p>",
+      "examples": []
+    },
+    "selection": {
+      "statuesque": "",
+      "element": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

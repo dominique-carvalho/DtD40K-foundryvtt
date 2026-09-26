@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoMoradin0",
+  "_key": "!items!dtdAsChoMoradin0",
+  "name": "Mark of Moradin",
+  "type": "feat",
+  "img": "icons/svg/statue.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>You may Delay Full Actions, and you receive +1 Resilience while you are Delaying an action.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Moradin"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

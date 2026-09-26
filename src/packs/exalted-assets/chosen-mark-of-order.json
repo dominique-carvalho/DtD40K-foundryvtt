@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoOrder000",
+  "_key": "!items!dtdAsChoOrder000",
+  "name": "Mark of Order",
+  "type": "feat",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your damage dice have Proven 3.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Blessed Order"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

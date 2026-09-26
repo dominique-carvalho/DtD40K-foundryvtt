@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoGrayCoun",
+  "_key": "!items!dtdAsChoGrayCoun",
+  "name": "Mark of the Council",
+  "type": "feat",
+  "img": "icons/svg/aura.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Gain a floating +1 bonus to a Characteristic of your choice; spend 1 Favor to shift it to a different Characteristic.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Gray Council"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

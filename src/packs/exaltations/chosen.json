@@ -1,0 +1,109 @@
+{
+  "_id": "dtdExalChosen000",
+  "_key": "!items!dtdExalChosen000",
+  "name": "Chosen",
+  "type": "exaltation",
+  "img": "icons/svg/holy-shield.svg",
+  "system": {
+    "description": "<p>The Chosen are mortals picked by a god to carry a spark of its own divinity. They are its champions, counted among the most important of its servants and often found at the very top of its church, and the longer they serve the less human and the more godlike (or devilish) they become.</p><p>Their power flows from Faith, which is bounded by their Devotion as well as their level, and from Favor, restored by a daily ritual. Because the Blessed Pantheon and the Ruinous Powers are sworn foes, being Chosen also means inheriting the enemies of one's patron.</p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 71
+    },
+    "powerStat": {
+      "name": "Faith",
+      "cap": "levelAndDevotion",
+      "value": 1
+    },
+    "resource": {
+      "name": "Favor",
+      "formula": "favor",
+      "fixedMax": 0,
+      "recovery": "<p>Once per day the Chosen can perform a special ritual that restores all of their Favor. Maximum Favor equals Devotion + Faith. With Trial of Faith (rank 4) they can also regain 1 Favor on a risky test where they keep a 1.</p>",
+      "actions": [
+        {
+          "type": "restoreAll",
+          "amount": "1"
+        }
+      ],
+      "debtName": "",
+      "healing": "outOfCombat",
+      "spent": 0
+    },
+    "round": {
+      "spent": 0,
+      "marker": "none"
+    },
+    "scene": {
+      "spent": 0
+    },
+    "pressure": {
+      "enabled": false,
+      "spent": 0
+    },
+    "staticPowers": [
+      {
+        "name": "Conviction",
+        "description": "<p>Your Faith is capped at half your Devotion (rounded up), besides the usual cap of your level. If your Devotion falls enough to drop that cap below the Faith you have bought, you lose the powers of the ranks above the cap until your Devotion rises again. Each time you raise your Faith, your Devotion also rises by 1.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Redeemed",
+        "description": "<p>While your Devotion is 6 or higher, you cannot be at risk of death. Whenever staying alive would cost you a burned Hero Point, roll an Alignment Check: success lets you keep the Hero Point, and even on a failure you keep your Devotion.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Divine Power",
+        "description": "<p>Spend 1 Favor to replace any one rolled die with your Devotion; if your Devotion is 10, that die does not explode. This power cannot be used on Alignment Checks.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Leeway",
+        "description": "<p>Whenever you are working to further your god's plans or carrying out a mission it gave you directly, add your Faith as a bonus to Alignment Checks.</p>",
+        "automation": "none"
+      }
+    ],
+    "powers": [
+      {
+        "rank": 1,
+        "name": "Overbeing",
+        "description": "<p>You are shielded from hostile spells and magical effects, gaining Aura equal to twice your Faith.</p>"
+      },
+      {
+        "rank": 2,
+        "name": "Divine Protection",
+        "description": "<p>The first time each round you would take critical damage, roll 1d10; if the result is lower than your Devotion, that critical damage is prevented.</p>"
+      },
+      {
+        "rank": 3,
+        "name": "Prayer Strip",
+        "description": "<p>When you perform the ritual that restores your Favor, you may create a Prayer Strip — no more than one per day, and no more than your Faith in existence at once. A strip can be spent whenever you like, just like one of your Favor points, including every special modifier such as Demigod, and anyone holding it may use it as long as you consider them an ally.</p>"
+      },
+      {
+        "rank": 4,
+        "name": "Trial of Faith",
+        "description": "<p>When you keep a 1 on a test that carries real danger — most tests in combat, a climb where a fall would hurt, tense negotiations, or anything else the SM deems fitting — you recover 1 Favor. You can regain at most 1 Favor per test this way.</p>"
+      },
+      {
+        "rank": 5,
+        "name": "Demigod",
+        "description": "<p>You make your own luck. When you spend Favor on a roll, add 10 to its result instead of gaining +1k0.</p>"
+      }
+    ],
+    "elements": [],
+    "tell": "<p>When the Tell awakens, the symbol of the Chosen's patron appears on their body. As more Favor is spent in the scene, the symbol and the Chosen themselves glow ever brighter in one of the god's favoured colours — a plain, dazzling aura with no figure in it, unlike an Atlantean's. Chosen with high Faith also show their inhuman features more clearly while the Tell is active. One point spent in a scene makes it faint (Perception + Wisdom TN 20 to notice); 2–3 points make it unmistakable; 4–5 turn it into a radiant aura; 6 or more make it an epic spectacle.</p>",
+    "lore": {
+      "origin": "<p>A god's spark can set a soul ablaze the way a spark ignites a bonfire, but almost no one survives it; most souls are consumed within moments, and a thousand may be burned away before one is found that feeds on the power instead. For that reason the gods seldom try, and there are few Chosen, though they rank highest in power. Unlike daemons, which are creatures of the warp, they can carry out their patron's will steadily and for a long time.</p><p>Most are drawn from the loudest and most zealous of a congregation — but not all. Some come from the moderate, the doubtful, heretics or renegades. Believers read this as a second chance or a sign that the church must change course; the pragmatic suspect the gods simply seize any soul strong enough to hold the spark.</p>",
+      "appearance": "<p>At low Faith a Chosen looks like any member of their race, but they are clearly not mortal, and it shows more as they grow. The first changes are subtle refinements and exaggerations of their most striking traits — a Squat's beard grows longer, an Eldarin's ears lengthen — while their eyes turn to glowing orbs and they usually grow in height or in some other way seem larger than life.</p><p>In the last stages of their ascension they acquire features alien to their race: feathers or leaves instead of hair, skin of an unusual hue, and an ever closer likeness to the avatar or the servants of the deity whose spark fills them.</p>",
+      "society": "<p>Unlike Atlanteans, the Chosen tend to cooperate and fit neatly into a church hierarchy. Their problem is the opposite of alienation: others drag them into their politics because of what they are. Their welcome matches their church's: one who serves Chaos must hide on Mount Celestia, whereas one of the Blessed Pantheon is treated like royalty — and many people pester them for answered prayers or to settle grudges. The Grey Council's Chosen face fewer foes than the rest, though radicals of every side can make up for it.</p><p>Service to their patron shapes their lives, and alignment and Devotion matter to them more than to anyone else. Not every Chosen adores their god; some treat it like a tiresome boss. They can even change alignment and find a new patron (with more justification than usual) without losing their powers, because the power now burns within them rather than being channelled from outside. A class matching the patron's style is the natural choice, but playing against type can be rewarding too.</p><p>In play, the patron's church offers quests, aid and shelter, rival faiths supply ready enemies, and the god may guide the character through prophetic dreams or visions. Several Chosen in one group get along according to how close their patrons' alignments are. The template is hard to repurpose, but it can be played as a young god or a child of the patron.</p>",
+      "examples": []
+    },
+    "selection": {
+      "statuesque": "",
+      "element": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

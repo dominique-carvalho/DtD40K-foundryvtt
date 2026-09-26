@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacWM000000",
+  "_key": "!items!dtdAsRacWM000000",
+  "name": "Woodland Magic",
+  "type": "feat",
+  "img": "icons/svg/regen.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>You learn one rank of the Transmutation spell school. You may raise it at any time, and you cast its spells using Willpower.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 218
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Dryad",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

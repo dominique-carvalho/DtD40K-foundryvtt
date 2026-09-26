@@ -10,6 +10,8 @@ import { DtdActor } from "./module/documents/actor.mjs";
 import { DtdItem } from "./module/documents/item.mjs";
 import { CharacterSheet } from "./module/apps/character-sheet.mjs";
 import { RaceSheet } from "./module/apps/race-sheet.mjs";
+import { ExaltationSheet } from "./module/apps/exaltation-sheet.mjs";
+import { FeatSheet } from "./module/apps/feat-sheet.mjs";
 
 Hooks.once("init", () => {
   console.log("dtd40k | Initializing Dungeons the Dragoning system");
@@ -39,6 +41,18 @@ Hooks.once("init", () => {
     types: ["race"],
     makeDefault: true,
     label: "DTD.Sheet.Race"
+  });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", ExaltationSheet, {
+    types: ["exaltation"],
+    makeDefault: true,
+    label: "DTD.Sheet.Exaltation"
+  });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", FeatSheet, {
+    types: ["feat"],
+    makeDefault: true,
+    label: "DTD.Sheet.Feat"
   });
 
   foundry.applications.handlebars.loadTemplates(CharacterSheet.PARTIALS);

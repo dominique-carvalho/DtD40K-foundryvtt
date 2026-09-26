@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacM0000000",
+  "_key": "!items!dtdAsRacM0000000",
+  "name": "Multiclass",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>You can advance two classes at the same time, and you always count as being in Free Study.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 219
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Human",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

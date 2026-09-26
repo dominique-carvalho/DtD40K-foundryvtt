@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsVamVentrue0",
+  "_key": "!items!dtdAsVamVentrue0",
+  "name": "Ventrue",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFldVamClan000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>You start the game with the Peer (Ventrue) feat and receive a +10 bonus on every Wealth test.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 221
+    },
+    "xpCost": 100,
+    "group": "vampireClan",
+    "prerequisites": {
+      "exaltation": "Vampire",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

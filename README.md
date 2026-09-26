@@ -24,6 +24,11 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   Size e bônus como Active Effects (com escolha da característica), poderes simples automatizados
   e contador de usos por cena; aba *Traços* com o poder, os modificadores (o Mestre liga/desliga)
   e um ícone "i" com descrição e ambientação.
+- **Exaltações**: compêndio *Exaltations* com as 9 exaltações da 7.7a e *Exalted Assets* com os
+  75 assets (em pastas por grupo). Arrastar uma exaltação para a ficha cria o Power Stat (teto =
+  Level), a reserva do recurso com o máximo calculado, os poderes liberados por ponto, o limite de
+  gasto por rodada, a Tell da cena e as escolhas do Paragon e do Dragonblooded; assets validam
+  exaltação, raça e o limite de um (exceto Paragon), com efeitos simples automatizados.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos

@@ -1,0 +1,79 @@
+{
+  "_id": "dtdRaceDragonbor",
+  "name": "Dragonborn",
+  "type": "race",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>In a distant age dragons ruled the Astral Sea, and the Dragonborn served them as offspring and army; where they truly came from has faded into legend. After the fall of the Syrne they built a vast empire that sought to unite every crystal sphere. It collapsed from within when the warlord Tiamat waged war even on the gods to take Bahamut's place; the Tiamat Heresy ended only when the two fought to the death on Mount Celestia.</p><p>Dragons survive in each of the known crystal spheres, and Dragonborn live in nearly all of them — proud warriors holding on to lost glories. Many are masterless today and look for a cause or a worthy hero. Tradition has them challenge a capable warrior to a duel; if they lose, they spend a time as the winner's servant and student.</p><h3>Appearance</h3><p>Dragonborn look like dragons in humanoid form, covered in scales but without tails. They are tall and heavily built, usually more than two metres tall and upward of 150 kg, with three-fingered clawed hands and strong clawed feet. The head has a blunt snout, a heavy brow, frills and a crest of horn-like scales that resembles thick hair.</p><p>Their scales were once pure, vivid colours; generations of intermarriage have left most in muddy browns, ochres and rust tones, so bright scales are taken as a sign of destiny. Hatchlings walk within hours, reach puberty around five and adulthood around fifteen, and live about as long as humans.</p><h3>In Play</h3><p>Honour is the only currency a Dragonborn respects. Most follow a strict code of conduct: even bitter enemies deserve courtesy, caution is wisdom, but fear is a sickness and cowardice a moral failing. An oath must be kept, words are chosen carefully and a Dragonborn accepts the consequences of every action.</p><p>Those who break an oath or fail in their duty become reckless and dangerous, living only for the moment. Some seek a worthy death, others try to fill the empty place where their honour used to be with anything they can grab.</p><h3>Relations</h3><p>Others often find them arrogant and obsessed with past glories, yet Dragonborn are equally quick to praise the achievements of others. To them a respected rival and a close friend are nearly the same thing, and people drift from one role to the other as circumstances change.</p><p><em>Example heroes (p. 33): Jim, Mudrensh, Fuu.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 1.6",
+      "page": 32
+    },
+    "characteristicBonus": {
+      "options": [
+        "str",
+        "cha"
+      ],
+      "any": false
+    },
+    "skillBonus": {
+      "skills": [
+        "command",
+        "intimidation"
+      ],
+      "choose": 0
+    },
+    "size": 5,
+    "power": {
+      "name": "Dragon Breath",
+      "description": "<p>Breathe fire as an attack that uses the Flamer weapon profile.</p><p>Uses per scene: 1 at Level 1, 2 from Level 3, 3 from Level 5.</p>",
+      "automation": "usesPerScene",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "2.1–2.5 m",
+      "weight": "120–170 kg",
+      "languages": [
+        "Trade",
+        "Draconic"
+      ],
+      "personality": [
+        "Proud",
+        "Wise",
+        "Straightforward",
+        "Watchful",
+        "Grandstanding"
+      ],
+      "physical": [
+        "Hissing voice",
+        "Shimmering scales",
+        "Darting eyes",
+        "Massive form",
+        "Sharp teeth"
+      ],
+      "names": [
+        "Thuath",
+        "Shaan",
+        "Arark",
+        "Thaash",
+        "Shysik",
+        "Arima"
+      ]
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceDragonbor"
+}

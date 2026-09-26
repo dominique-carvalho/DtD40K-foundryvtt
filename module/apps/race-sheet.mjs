@@ -50,6 +50,10 @@ export class RaceSheet extends HandlebarsApplicationMixin(foundry.applications.s
       item,
       system,
       editable: this.isEditable,
+      // GMs can unlock the compendium to edit its races (core "Toggle Edit Lock").
+      lockedPackHint: item.pack && game.packs.get(item.pack)?.locked && game.user.isGM
+        ? game.i18n.format("DTD.Race.LockedPackHint", { option: localize("COMPENDIUM.ToggleLocked.Option") })
+        : "",
       characteristicOptions: Object.keys(CHARACTERISTICS).map((key) => ({
         key,
         label: characteristicName(key),

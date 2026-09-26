@@ -171,7 +171,8 @@
       "Modifiers": "Modificadores raciais",
       "ModifiersHint": "Só o Mestre pode ativar ou desativar os modificadores raciais.",
       "FullText": "Texto completo",
-      "FullTextHint": "Opcional: cole aqui o texto completo da raça a partir do seu exemplar do livro. Ele fica só neste mundo e não é distribuído com o sistema."
+      "FullTextHint": "Opcional: cole aqui o texto completo da raça a partir do seu exemplar do livro. Ele fica só neste mundo e não é distribuído com o sistema.",
+      "LockedPackHint": "Este compêndio está travado. Para editar a raça, clique com o botão direito no compêndio Races e escolha \"{option}\". Alterações no compêndio do sistema são substituídas quando o sistema é atualizado — exporte-as com npm run extract:packs ou importe a raça para o mundo e edite a cópia."
     }
   }
 }

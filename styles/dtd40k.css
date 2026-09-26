@@ -786,3 +786,21 @@
   margin: 0.75rem 0 0.25rem;
   font-size: 0.95rem;
 }
+
+.dtd40k.item.race .locked-pack-hint {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+}
+
+.dtd40k.item.race .enriched h3,
+.dtd40k.race-info .enriched h3 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k.race-info {
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}

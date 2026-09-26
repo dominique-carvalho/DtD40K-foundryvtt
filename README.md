@@ -12,4 +12,5 @@ npm run build:packs
 
 - Feche o Foundry antes de rodar o build: com o mundo aberto, o LevelDB do pack fica bloqueado.
 - Nunca edite `packs/` à mão; altere os JSON em `src/packs/` e rode o build de novo.
+- Para editar um compêndio pelo Foundry: clique com o botão direito no compêndio → "Alternar trava de edição", edite os itens, feche o Foundry e rode `npm run extract:packs` para gravar as mudanças de volta em `src/packs/` (depois revise o diff e faça o commit).
 - Compêndios atuais: `races` (12 raças do livro base 1.6).

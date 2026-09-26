@@ -1,0 +1,76 @@
+{
+  "_id": "dtdRaceGnome0000",
+  "name": "Gnome",
+  "type": "race",
+  "img": "icons/svg/clockwork.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>Gnomes hold technology — above all Syrneth artifacts — in near-religious reverence. The Syrne made them as engineers and caretakers with an inborn knack for repairing their creations. Gnomes keep ancient artifacts running even without spare parts, but they do not truly understand how anything works; their skill is closer to muscle memory, so their own experiments tend to end badly.</p><p>They settle in the unlikeliest places — outposts among ruins or on drifting rocks that caught their interest — and tolerate radiation leaks, poor living conditions and pollution to a startling degree.</p><h3>Appearance</h3><p>Gnomes are slightly taller and broader than halflings, and rank among the toughest beings of their size in the Wheel, able to endure thin atmospheres and high radiation for long periods. Their skin and hair vary widely. Their skin reacts to sunlight quickly, tanning within minutes and darkening deeply with long exposure, then fading again after days in the dark. Their hair is thick and resists heat and cold, and they are hairier than humans, if not as fuzzy as halflings.</p><p>Gnomish dress is purely practical: leathers and overalls covered in pockets and belts. Goggles are nearly universal, because their slitted, reflective, cat-like eyes are made for dim light and suffer under the bright lighting other cultures favour.</p><h3>In Play</h3><p>Gnomes value being unobtrusive. Living among machinery, a sudden movement can send someone into moving parts or ruin delicate components — and breaking a machine is, to them, something close to both murder and heresy.</p><p>Most make their homes in settlements raised over Syrneth ruins, where families spend generations restoring machines whose purpose is known only through half-remembered legends. They do not need to understand a device to fix it: the Syrne gave them a genetic memory full of plans and blueprints, and they work with machines so instinctively that they seem to converse with them — and many do talk to their devices like favourite pets. Gnomes act on their own initiative without asking permission; they never mean harm, least of all to machines, but companions should expect their gear to be 'improved' behind their backs, wanted or not.</p><p><em>Example heroes (p. 39): Klink, Trace, Monana Scooter.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 1.6",
+      "page": 38
+    },
+    "characteristicBonus": {
+      "options": [
+        "int",
+        "fel"
+      ],
+      "any": false
+    },
+    "skillBonus": {
+      "skills": [
+        "crafts",
+        "academicLore"
+      ],
+      "choose": 0
+    },
+    "size": 3,
+    "power": {
+      "name": "Improvise",
+      "description": "<p>Start play with one Weapon proficiency and one Armor proficiency for free; you pick the type of each.</p>",
+      "automation": "none",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "1.3–1.5 m",
+      "weight": "45–55 kg",
+      "languages": [
+        "Trade",
+        "Gnomish"
+      ],
+      "personality": [
+        "Curious",
+        "Creative",
+        "Impressionable",
+        "Pensive",
+        "Reckless"
+      ],
+      "physical": [
+        "Dirty skin and clothes",
+        "Scrawny build",
+        "Hyperactive motion",
+        "Surprisingly tough"
+      ],
+      "names": [
+        "Snorrig",
+        "Noblar",
+        "Grazbaag",
+        "Rord"
+      ]
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceGnome0000"
+}

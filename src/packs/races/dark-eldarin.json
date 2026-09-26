@@ -1,0 +1,79 @@
+{
+  "_id": "dtdRaceDarkEldar",
+  "name": "Dark Eldarin",
+  "type": "race",
+  "img": "icons/svg/cowled.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>When the Fall struck the Eldarin, one branch saved itself by making a pact with the spider-daemon Lolth. Their descendants, the Dark Eldarin, operate as raiders and pirates from a hidden city, travelling through Lolth's secret webway of tunnels in the Warp.</p><p>They are driven by a growing thirst for ever more intense emotions, in themselves and in others. Some believe this hunger is the price of the pact — either fuel for Lolth or a way of propping up souls that she slowly drains.</p><h3>Appearance</h3><p>Hard lives in a dangerous home make them lean, strong and graceful, never bulky. The popular image is of skin black as pitch and hair white as bone, yet just as many combine fair skin with dark hair and can pass for ordinary Eldarin to an untrained eye. Their fashion leans toward the provocative and needlessly dangerous.</p><p>As long as they keep delivering souls and slaves to Lolth they do not age at all; some of the mightiest warlords look barely older than teenagers.</p><h3>In Play</h3><p>Dark Eldarin are cruel and capricious, following their whims with no concern for who gets hurt — unless hurting someone is the point, in which case they put real effort into it. Their society is strongly matriarchal: Lolth accepts only women as her personal servants, and the women intend to keep power.</p><p>Their world works like a food chain in which political strength matters far more than physical might: favours, debts, knowing one's true allies and, above all, choosing the right moment for betrayal. They take their own superiority for granted and behave accordingly, wanting not some of the treasure but all of it. Their bonds of affection are really contests of dominance that last until one side submits completely.</p><h3>Relations</h3><p>The Dark Eldarin and the Eldarin despise one another and are always looking for an excuse to fight.</p><p><em>Example heroes (p. 31): Iniga Angband, Talorga, Mael Dannan.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 1.6",
+      "page": 30
+    },
+    "characteristicBonus": {
+      "options": [
+        "cha",
+        "dex"
+      ],
+      "any": false
+    },
+    "skillBonus": {
+      "skills": [
+        "deceive",
+        "forbiddenLore"
+      ],
+      "choose": 0
+    },
+    "size": 3,
+    "power": {
+      "name": "Warp Miasma",
+      "description": "<p>As a half action, call up a sphere of warp-born darkness with a 4 m radius. It blocks line of effect and blinds everyone inside, lasting one round per Level.</p><p>Uses per scene: 1 at Level 1, 2 from Level 3, 3 from Level 5.</p>",
+      "automation": "usesPerScene",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "1.6–1.9 m",
+      "weight": "50–65 kg",
+      "languages": [
+        "Trade",
+        "Dark Eldarin"
+      ],
+      "personality": [
+        "Sadistic",
+        "Seductive",
+        "Dangerous",
+        "Relentless",
+        "Insane"
+      ],
+      "physical": [
+        "Nimble",
+        "Intense gaze",
+        "Pitch-black skin",
+        "White hair",
+        "Spiky bits"
+      ],
+      "names": [
+        "Alaurirra",
+        "Belaern",
+        "Dhaunae",
+        "Gwylyss",
+        "Ilharess",
+        "Jaezred"
+      ]
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceDarkEldar"
+}

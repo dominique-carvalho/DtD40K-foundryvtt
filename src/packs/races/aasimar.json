@@ -1,0 +1,79 @@
+{
+  "_id": "dtdRaceAasimar00",
+  "name": "Aasimar",
+  "type": "race",
+  "img": "icons/svg/angel.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>Aasimar are the chosen servants of the Blessed Pantheon. None of them is born an Aasimar: promising individuals of other races are selected, put through years of indoctrination and training and finally transformed by divine blessing. Their own records hint that the first of them were humans who fled their crystal sphere and crossed the Astral Sea in a distant age.</p><p>Religion takes the place of culture for them. Most live as warrior-monks or priests, keep only a small circle of trusted comrades and are seen by others as grave, humourless and wholly devoted to their mission — a reputation they largely deserve.</p><h3>Appearance</h3><p>The transformation leaves them remarkably alike: very tall, handsome, pale-skinned and athletic, with hair in metallic shades and often glowing eyes. Only faint echoes of the former person remain — an unusual nose or jawline, ears with a hint of a point, a beard on some of the men — and the Aasimar neither remembers nor cares who that person was. Their muscular build, heavy robes and armour blur most differences between men and women.</p><p>Rebirth returns them to young adulthood and their lifespan stretches across centuries without frailty, though a life of war covers them in scars. Few die of age; most would rather fall in battle.</p><h3>In Play</h3><p>Aasimar are strong, calm and dependable, with deep respect for ritual and tradition. Having lost their old memories, many cling to the faith of the people around them after the change. Their upbringing puts service and deeds above material wants, and it teaches reverence for the forces of Order and trust in the gods.</p><p>Impious or heretical Aasimar exist but are shunned, exiled or executed, and it is very rare — though possible — for one to turn to the Ruinous Powers. The endless Blood War has shaken the faith of many on both sides. An Aasimar who distinguishes himself in battle gathers younger followers and is eventually charged with training them; command of an army as a General is the goal most of them dream of.</p><h3>Relations</h3><p>Aasimar and Tieflings share a similar origin yet rarely get along. Toward other peoples they are fairly neutral, judging individuals by their deeds rather than their race.</p><p><em>Example heroes (p. 29): Jacov, Brother Boromos, Rhea.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 1.6",
+      "page": 28
+    },
+    "characteristicBonus": {
+      "options": [
+        "wis",
+        "con"
+      ],
+      "any": false
+    },
+    "skillBonus": {
+      "skills": [
+        "command",
+        "ballistics"
+      ],
+      "choose": 0
+    },
+    "size": 5,
+    "power": {
+      "name": "And They Shall Know No Fear",
+      "description": "<p>An Aasimar starts play already owning the <strong>Jaded</strong> and <strong>Fearless</strong> feats.</p>",
+      "automation": "none",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "2.4–2.6 m",
+      "weight": "100–140 kg",
+      "languages": [
+        "Trade",
+        "Celestial"
+      ],
+      "personality": [
+        "Stoic",
+        "Focused",
+        "Quiet",
+        "Loyal",
+        "Obedient"
+      ],
+      "physical": [
+        "Great height",
+        "Long face",
+        "Metallic hair",
+        "Glowing eyes",
+        "Exceedingly tough"
+      ],
+      "names": [
+        "Antonius",
+        "Caecilia",
+        "Eligius",
+        "Junia",
+        "Leontius",
+        "Rhea"
+      ]
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceAasimar00"
+}

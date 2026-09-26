@@ -1,0 +1,79 @@
+{
+  "_id": "dtdRaceSquat0000",
+  "name": "Squat",
+  "type": "race",
+  "img": "icons/svg/mountain.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>The Squats are a proud people from a hostile world whose surface is barely habitable. They became expert miners and moved underground, a custom they keep on nearly every world they settle. Family, social standing, tradition and caste form the core of their lives, and they have hated the Orks, who swarm over their homeworld's surface and never stop threatening them, for as long as anyone remembers.</p><p>Nearly every Squat practises a craft and takes real pleasure in a job done properly. They love beautiful things, even if they express it in ways that look gruff or ungrateful, and they are quick to adopt new technology and to turn apparently useless things into practical tools.</p><h3>Appearance</h3><p>Squats are shorter than humans or Eldarin but nearly as broad as their height. They evolved under heavy gravity on a world overrun by Orks, and as burrowers they feel most at ease in enclosed spaces far from open ground. Their homeworld's high gravity and radioactive air are harsh even for them, but toughness and cunning more than make up for it, and they are as dangerous in war as anyone.</p><p>Every Squat, man or woman, is calloused and hardened by labour; they get bored without a purpose, and their dedication to work can be dangerous to their own health. Their clothing looks drab to others, but they can see some ultraviolet and infrared, and to Squat eyes those colours make their garments bright and patterned with clan and family markings. Beards and hairstyles also signal status and caste — a small change in a braid means as much as a wedding ring.</p><h3>In Play</h3><p>Honesty is paramount. Squat society relies on it: they abandoned currency centuries ago for barter, and a Squat caught lying about his goods, his skills or even about which ale he likes is quickly cast out. That does not mean they volunteer every truth — they may keep quiet about the impurities in a load of ore, but they will not claim it is pure if asked. Dealing with Squats is a matter of asking the right questions.</p><p>Their society is rigidly divided into castes: nobles and warriors at the top, merchants, smiths and miners in the middle, and beneath them the casteless — outcasts believed to descend from thieves and liars and considered unfit even to serve other Squats.</p><p><em>Example heroes (p. 47): Cheri, Roboutte, Setsuna.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 1.6",
+      "page": 46
+    },
+    "characteristicBonus": {
+      "options": [
+        "con",
+        "wil"
+      ],
+      "any": false
+    },
+    "skillBonus": {
+      "skills": [
+        "crafts",
+        "commonLore"
+      ],
+      "choose": 0
+    },
+    "size": 3,
+    "power": {
+      "name": "Squat Toughness",
+      "description": "<p>Treat your Resilience as one higher when working out how many Hit Points you lose to damage.</p>",
+      "automation": "squatToughness",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "1.2–1.4 m",
+      "weight": "75–100 kg",
+      "languages": [
+        "Trade",
+        "Squat"
+      ],
+      "personality": [
+        "Brave",
+        "Gruff",
+        "Persistent",
+        "Reliable",
+        "Stubborn"
+      ],
+      "physical": [
+        "Beard",
+        "Barrel chest",
+        "Sturdy build",
+        "Drunk",
+        "Incredible endurance"
+      ],
+      "names": [
+        "Hrothgar",
+        "Durik",
+        "Snorl",
+        "Durgen",
+        "Gorten",
+        "Gudrun"
+      ]
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceSquat0000"
+}

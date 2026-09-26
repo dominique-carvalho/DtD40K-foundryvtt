@@ -14,7 +14,8 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint .",
-    "build:packs": "node scripts/build-packs.mjs"
+    "build:packs": "node scripts/build-packs.mjs",
+    "extract:packs": "node scripts/extract-packs.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

@@ -13,7 +13,7 @@ pnpm-debug.log*
 
 # Foundry VTT — pacotes gerados e locks do LevelDB dos compêndios
 *.zip
-packs/
+/packs/
 packs/**/LOCK
 packs/**/LOG
 packs/**/LOG.old

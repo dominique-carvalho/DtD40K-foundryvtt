@@ -171,7 +171,8 @@
       "Modifiers": "Racial modifiers",
       "ModifiersHint": "Only the GM can switch racial modifiers on or off.",
       "FullText": "Full text",
-      "FullTextHint": "Optional: paste the race's full text from your own copy of the book. It stays in this world only and is not shipped with the system."
+      "FullTextHint": "Optional: paste the race's full text from your own copy of the book. It stays in this world only and is not shipped with the system.",
+      "LockedPackHint": "This compendium is locked. To edit this race, right-click the Races compendium and choose \"{option}\". Changes to the system compendium are replaced when the system updates — export them with npm run extract:packs, or import the race into the world and edit the copy."
     }
   }
 }

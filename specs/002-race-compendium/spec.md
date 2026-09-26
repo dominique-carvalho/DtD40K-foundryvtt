@@ -28,6 +28,7 @@ Size, Level e Hero Points).
   nunca fica abaixo do bônus racial.
 - Q: Como o Mestre desativa um modificador racial, e onde fica a ambientação completa? (validação manual, 2026-09-25) → A: a aba "Traits" lista os modificadores raciais com uma caixa de marcar cada (só o Mestre altera); um ícone "i" ao lado do nome da raça abre a descrição e a ambientação (altura, peso, idiomas, traços, nomes, página). O texto integral do livro continua fora do compêndio (constituição V).
 - Q: Como ter o texto de lore completo da raça sem copiar o livro no sistema? → A: campo opcional "Texto completo", vazio no compêndio, que cada mesa preenche no próprio mundo (na raça do personagem ou numa cópia no mundo); a janela do ícone "i" o exibe quando preenchido.
+- Q: Qual o nível de detalhe das descrições e como editá-las no Foundry? (validação manual, 2026-09-25) → A: descrição de cada raça com todas as seções do livro (Origem, Aparência, Em jogo, Relações) e a referência aos heróis de exemplo, em redação própria e sem nenhuma sequência de 6+ palavras igual ao livro; o Mestre edita as raças do compêndio destravando-o (opção do core), com aviso na ficha, e `npm run extract:packs` devolve as edições para `src/packs/`.
 - Q: Onde o poder racial e o contador de usos aparecem na ficha do personagem? → A: o nome da
   raça fica na linha de identidade do cabeçalho; poder e contador ficam numa nova aba "Traits"
   (que depois recebe feats e poderes de exaltação).

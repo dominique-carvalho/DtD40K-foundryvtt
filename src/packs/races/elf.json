@@ -1,0 +1,79 @@
+{
+  "_id": "dtdRaceElf000000",
+  "name": "Elf",
+  "type": "race",
+  "img": "icons/svg/oak.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>Elves are distant kin of the Eldarin who chose to settle on worlds instead of taking to the Astral Sea. The Eldarin feel sorry for them, claiming gravity has weighed their souls down. Elves live close to the land; outsiders call their way of life simple and unindustrious, while Elves call it respectful.</p><p>They feel responsible for keeping and passing on the old ways, which they consider essential to growing as a person and honouring nature even if others call them primitive. Kindred spirits who share that view are treated very well.</p><h3>Appearance</h3><p>Elves are slender and athletic, about as tall as humans, with skin tanned or browned by long days outdoors. Their hair covers the whole range of natural colours, from earthy browns to leaf greens and flower-bright shades, and their eyes are cool and vivid — blues, violets and greens. Their ears are long and pointed. They strongly resemble Eldarin, only sturdier and stockier.</p><p>They grow up at a human pace and then remain young adults through most of their lifespan, usually living a century or two — less than the Eldarin. Though tougher than their cousins, they are still somewhat fragile compared with most people of the Wheel.</p><h3>In Play</h3><p>Elves feel deeply and show it, moving easily to laughter, rage or tears — exactly the passions the Eldarin deny themselves. Others often find them flighty and impulsive, yet they keep their commitments and excel at farming and terraforming, work that takes decades.</p><p>Their reverence for nature shapes everything they do: no Elf fells a living tree, and they build permanent communities by reshaping the landscape rather than replacing it. They favour the raw power of nature over the Astral Sea or the Warp; they lost much of their ancestors' talent for sorcery but gained curiosity and a love of exploration. Loyal and cheerful friends, they enjoy dancing, song, contests and feasts, which they use to lighten long and tedious labours. They dislike war but will take up arms without hesitation to defend home and family.</p><h3>Relations</h3><p>Elves and Eldarin were once one people. The Elves set aside the technology they did not need or could not rebuild, relying instead on hard work, which they do not fear.</p><p><em>Example heroes (p. 37): Avourel, Jhean Lunos, Reeva.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 1.6",
+      "page": 36
+    },
+    "characteristicBonus": {
+      "options": [
+        "wis",
+        "dex"
+      ],
+      "any": false
+    },
+    "skillBonus": {
+      "skills": [
+        "perception",
+        "charm"
+      ],
+      "choose": 0
+    },
+    "size": 3,
+    "power": {
+      "name": "Elven Accuracy",
+      "description": "<p>Reroll a failed Weaponry or Ballistics skill test.</p><p>Uses per scene: 1 at Level 1, 2 from Level 3, 3 from Level 5.</p>",
+      "automation": "usesPerScene",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "1.6–1.9 m",
+      "weight": "70–80 kg",
+      "languages": [
+        "Trade",
+        "Elven"
+      ],
+      "personality": [
+        "Respectful",
+        "Patient",
+        "Modest",
+        "Peaceful",
+        "Observant"
+      ],
+      "physical": [
+        "Thin build",
+        "Tanned skin",
+        "Sharp eyes",
+        "Simple clothing",
+        "Quiet footfalls"
+      ],
+      "names": [
+        "Garryth",
+        "Kaelyssa",
+        "Ravyn",
+        "Ossyan",
+        "Rahn",
+        "Vyros"
+      ]
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceElf000000"
+}

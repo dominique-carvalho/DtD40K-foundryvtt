@@ -1,0 +1,79 @@
+{
+  "_id": "dtdRaceOrk000000",
+  "name": "Ork",
+  "type": "race",
+  "img": "icons/svg/combat.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>The Syrne created the Orks as warriors too, just as they did the Eldarin — but where the Eldarin were agile and magically gifted, the Orks were built as brutal troops that could endure nearly any punishment and still fight on. They reproduce quickly and are arguably the most widespread species of the galaxy, present in nearly every known crystal sphere; their endless infighting and love of battle are the main things keeping them in check.</p><p>Orks roam in warbands looking for a good time, and they are among the few peoples who genuinely enjoy life most of the time, especially when facing tough opponents. Despite their bloodthirsty reputation they mostly kill unworthy foes; those who fight well, or at least try, are often left alive for a rematch.</p><h3>Appearance</h3><p>Their bodies suit their violent nature. Orks are extraordinarily tough and can ignore injuries that would be fatal to others by working themselves into a rage and letting adrenaline carry them. They are perfectly adapted to the battlefield: famously, they can grow from spores in the ground. Less well known is their strong sexual dimorphism — males are far more common and uniformly brutish and ape-like, while the rare females come much closer to other races' ideals of beauty. Some scholars suspect females were engineered for stealth and special operations while males serve as line troops.</p><p>Their skin is usually green, sometimes darker, and their small eyes range from yellow and red to black. Almost every Ork bears scars, and most proudly collect a whole tapestry of them.</p><h3>In Play</h3><p>Orks do not avoid fights — they relish them, and they mature fastest by fighting, reaching adulthood remarkably quickly when given something to battle. Where other races fear pain and danger, Orks revel in them.</p><p>They care little for elegant design, favouring straightforward fixes and sturdy, simple equipment, which leads others to think them dull. The truth is the opposite: Orks accomplish remarkable things with little infrastructure or training, being brutally cunning — or cunningly brutal. Their culture holds that the biggest and strongest rule the small, and they apply this to other races too, often simply pushing aside anyone they judge weak. Once someone proves their strength, however, Orks are loyal and honourable; betrayal and trickery are not their way.</p><h3>Relations</h3><p>Most races first met the Orks as a screaming green horde, so their opinion of them is usually negative. Orks hold few grudges in return: they love fighting, dying is part of it, and they admire anyone who gives them a good battle.</p><p><em>Example heroes (p. 45): Wrecka, Roshenko, Shibba.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 1.6",
+      "page": 44
+    },
+    "characteristicBonus": {
+      "options": [
+        "str",
+        "wil"
+      ],
+      "any": false
+    },
+    "skillBonus": {
+      "skills": [
+        "intimidation",
+        "scrutiny"
+      ],
+      "choose": 0
+    },
+    "size": 5,
+    "power": {
+      "name": "WAAAAAGH!",
+      "description": "<p>Whenever a combat begins, you regain Hit Points: one per Level.</p>",
+      "automation": "none",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "2.3–2.7 m",
+      "weight": "160–200 kg",
+      "languages": [
+        "Trade",
+        "Orkish"
+      ],
+      "personality": [
+        "Argumentative",
+        "Foolhardy",
+        "Individualistic",
+        "Impatient",
+        "Fun-loving"
+      ],
+      "physical": [
+        "Many scars",
+        "Pointed tusks",
+        "Mottled green skin",
+        "Blood-curdling roar",
+        "Bulky physique"
+      ],
+      "names": [
+        "Waagrot",
+        "Duffthug",
+        "Ogork",
+        "Ugurty",
+        "Naznob",
+        "Skabbad"
+      ]
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceOrk000000"
+}

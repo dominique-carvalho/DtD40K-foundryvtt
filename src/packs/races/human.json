@@ -1,0 +1,54 @@
+{
+  "_id": "dtdRaceHuman0000",
+  "name": "Human",
+  "type": "race",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<h3>Origins</h3><p>Humans are a very young people and, for the most part, still finding their way. They explore relentlessly and fight among themselves over land, love and gods, but they adapt astonishingly fast and manage to survive in the worst places. In their short time on the scene they already fought a war against the Eldarin about reopening dormant Portal Relays — a practice the Eldarin consider dangerous — and the prevailing view of humanity is of a people racing toward disaster out of impatience and recklessness.</p><p>Being short-lived, most humans see the Great Wheel as one big adventure. They go where nobody else will and find ways to live in spheres hostile to all life. They seldom have patience for other people's troubles, although humans come in every sort, and some even manage not to be self-centred.</p><h3>Appearance</h3><p>Humans have changed little since arriving in the Great Wheel. Typically about two metres tall, they have gentler faces than the angular Eldarin and look far less brutish than the Orks, and they vary as much as any race — a kind of middle ground among the peoples of the Wheel. They readily borrow the fashions and grooming of the races they deal with.</p><p>Among humans, the only norm is that there is none: every colonised world develops its own distinct culture, and humans take pride in their individuality. Each one has something they believe they do better than anyone, from cooking a particular dish to the arts or sciences. If anything counts as common ground, it is the Imperium, a vast and crushingly brutal empire to which almost all humans belong, famous for decorating the stars with skulls and eagles.</p><h3>In Play</h3><p>Whatever the future brings, people remain people. The defining event of human history was the Imperium's ascent: once Terra was united, humanity spread across the stars with a recklessness no other race had shown in thousands of years, backed by an overbearing imperial government. That attitude defines how humans deal with the rest of the universe.</p><p>One of their first contacts with aliens became a war in which 'primitive' human ships overwhelmed the Eldarin through sheer brute force, ended only thanks to political manoeuvring in Sigil. That bad start left a deep distrust of aliens in human culture. Groups such as Terra First promote human interests above alien ones, and the most extreme are little more than xenophobic terrorists — a stance many humans find reasonable given how many threats they have faced. Other humans adapt remarkably well to foreign cultures and adopt the customs of the races they live and work with, and humans are notorious for trying to romance anything that looks even slightly interesting.</p><p>Human racial bonuses are chosen freely: +1 to any one characteristic and +1 to any two skills.</p><p><em>Example heroes (p. 43): Kuj'o J'Karra, Marina Pheonix, Armstrong.</em></p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 1.6",
+      "page": 42
+    },
+    "characteristicBonus": {
+      "options": [],
+      "any": true
+    },
+    "skillBonus": {
+      "skills": [],
+      "choose": 2
+    },
+    "size": 4,
+    "power": {
+      "name": "Heroic Heritage",
+      "description": "<p>Humans start the game with one extra Hero Point.</p>",
+      "automation": "heroicHeritage",
+      "uses": {
+        "spent": 0
+      }
+    },
+    "lore": {
+      "height": "",
+      "weight": "",
+      "languages": [
+        "Trade",
+        "Human"
+      ],
+      "personality": [],
+      "physical": [],
+      "names": []
+    },
+    "choice": {
+      "characteristic": "",
+      "skills": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!dtdRaceHuman0000"
+}

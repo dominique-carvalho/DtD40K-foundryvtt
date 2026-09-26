@@ -153,10 +153,10 @@ antes e confirmar que falham. UI: roteiro manual do quickstart.
 
 ## Phase 7: Polish & Cross-Cutting Concerns
 
-- [ ] T049 [P] Atualizar `docs/analise-dtd.md` (seção de feats/assets/hindrances para a 7.7a) e `README.md` (recursos)
-- [ ] T050 Rodar `npm run lint` e `npm test` sem erros
+- [X] T049 [P] Atualizar `docs/analise-dtd.md` (seção de feats/assets/hindrances para a 7.7a) e `README.md` (recursos)
+- [X] T050 Rodar `npm run lint` e `npm test` sem erros
 - [ ] T051 Rodar o quickstart completo (1–24), inclusive o passo 24 com um usuário jogador de teste (criar e remover ao final), e registrar
-- [ ] T052 Rodar `graphify update .`
+- [X] T052 Rodar `graphify update .`
 
 ---
 

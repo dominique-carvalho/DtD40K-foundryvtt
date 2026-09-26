@@ -887,7 +887,8 @@
       "NoSocket": "{item} has no free hearthstone setting.",
       "Addictions": "Addictions",
       "AddictionHint": "The worst addiction applies to every roll. Quitting: a week clean, then a Willpower Test lowers it one level.",
-      "DropHint": "Drag weapons, armor and gear from the Equipment compendium onto the sheet."
+      "DropHint": "Drag weapons, armor and gear from the Equipment compendium onto the sheet.",
+      "PieceRarity": "Single piece rarity"
     },
     "Attack": {
       "Unarmed": "Unarmed",

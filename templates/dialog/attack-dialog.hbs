@@ -25,7 +25,7 @@
     <label for="dtd-attack-mode">{{localize "DTD.Attack.Mode"}}</label>
     <div class="form-fields">
       <select id="dtd-attack-mode" name="mode">
-        <option value="single">{{localize "DTD.Attack.Single"}}</option>
+        {{#if shape.single}}<option value="single">{{localize "DTD.Attack.Single"}}</option>{{/if}}
         {{#if shape.auto}}<option value="auto">{{localize "DTD.Attack.FullAuto"}}</option>{{/if}}
       </select>
     </div>

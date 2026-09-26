@@ -446,6 +446,20 @@ Análogo à distância das Sword Schools. **Gunslinger Level** = maior rank em G
 
 ## 12. Equipamento
 
+**Na 7.7a** (cap. XIII pp. 314–345, cap. XIV pp. 346–356; implementado na feature `007-equipment`): compêndio
+*Equipment* com **170 itens** — 73 armas (28 armas de fogo, 17 outras à distância e granadas, 28 corpo a corpo),
+10 trajes de armadura, 18 gear, 16 cibernéticos, 16 drogas, 5 materiais mágicos, 16 Wonders e 16 Hearthstones —
+e 36 qualidades de arma. Raridade em 12 degraus (Worthless 0 … Glittergold 50) com tempo de busca; armaduras como
+trajes completos (peça avulsa um degrau mais barata; Max Dex limita Speed e esquiva, não a Static Defense; sem
+Armor Proficiency, a Static Defense perde o AP; com ela, Light/Medium nada e Heavy/Extreme/Power metade; Power
++1 Str, +1 Resilience e −2 a mais). Ataque = perícia k perícia + Level k0 se proficiente (p. 431); dano XkY +
+Str (corpo a corpo e arremesso). Automatizados na ficha: inventário e equipar, AP por localização, penalidade e
+Max Dex, ataque e dano com diálogo (alcance, mira, full auto, brace, uma mão), qualidades numéricas, emperramento,
+localização, aquisição (Wealth k Wealth, qualidade, tentativas, Liquid Wealth, Wealth Strain), vagas do
+equipamento inicial, drogas com doses e vício, cibernéticos, materiais (rating de artefato, bônus) e hearthstones
+com encaixe. Aplicar o dano no alvo fica para a feature de combate; criação de armas (pp. 516–519) fora de
+escopo. Wealth é um campo do personagem até existir a feature de backgrounds.
+
 ### Aquisição (1.6 pp. 199–201)
 - **Sem moeda**. Wealth Test: Wealth dados vs TN por raridade: Ubiquitous 2 · Very Common 5 · Common 10 · Uncommon 15 · Rare 20 · Very Rare 25 · Mythic Rare 30 (B2 adiciona Worthless 0 · Near Unique 35 · Fabulous Max 40). Retry +5 TN.
 - Qualidade: Poor −5 · Common 0 · Good +5 · Best +10 no TN.

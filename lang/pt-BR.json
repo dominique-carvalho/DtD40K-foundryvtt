@@ -887,7 +887,8 @@
       "NoSocket": "{item} não tem encaixe de hearthstone livre.",
       "Addictions": "Vícios",
       "AddictionHint": "O pior vício vale para todas as rolagens. Para largar: uma semana sem usar e um teste de Willpower baixa um nível.",
-      "DropHint": "Arraste armas, armaduras e equipamentos do compêndio Equipment para a ficha."
+      "DropHint": "Arraste armas, armaduras e equipamentos do compêndio Equipment para a ficha.",
+      "PieceRarity": "Raridade da peça avulsa"
     },
     "Attack": {
       "Unarmed": "Desarmado",

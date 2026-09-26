@@ -99,6 +99,8 @@ export async function rollAttack(actor, itemId, { fastForward = false } = {}) {
     melee: weapon.weaponType === "melee" && !weapon.thrown,
     canThrow: weapon.weaponType === "melee" && weapon.thrown,
     auto: (weapon.rof?.auto ?? 0) > 0,
+    // Full-auto-only weapons (SAW, Heavy Bolter: ROF -/10).
+    single: weapon.rof?.single !== false || weapon.weaponType === "melee",
     heavy: weapon.weaponType === "heavy",
     basic: weapon.weaponType === "basic"
   };
@@ -110,7 +112,8 @@ export async function rollAttack(actor, itemId, { fastForward = false } = {}) {
 
   let options = {
     tn: defaultTn ?? 15, modifiers: {}, specialty: false, rollMode: undefined,
-    weapon: { range: "normal", aim: 0, mode: "single", braced: false, oneHanded: false, thrown: false }, ammoId: ammo[0]?.id ?? ""
+    weapon: { range: "normal", aim: 0, mode: shape.single ? "single" : "auto", braced: false, oneHanded: false, thrown: false },
+    ammoId: ammo[0]?.id ?? ""
   };
   if (!fastForward) {
     const chosen = await promptAttackOptions({

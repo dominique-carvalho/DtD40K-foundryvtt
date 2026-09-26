@@ -3,6 +3,7 @@ import {
   WEAPON_QUALITIES, WEAPON_TYPES
 } from "../config.mjs";
 import { acquire } from "../documents/acquisition-service.mjs";
+import { rarityStep } from "../rules/acquisition.mjs";
 import { artifactRating } from "../rules/equipment.mjs";
 import { lockedPackHint } from "./item-sheet-helpers.mjs";
 
@@ -106,6 +107,8 @@ export class EquipmentSheet extends HandlebarsApplicationMixin(foundry.applicati
         : [],
       proficienciesText: isWeapon ? system.proficiencies.join(` ${game.i18n.localize("DTD.Class.Or")} `) : "",
       rating,
+      // A single armor piece is one rarity step cheaper (p. 332).
+      pieceRarity: isArmor && !system.suitOnly ? `DTD.Rarity.${rarityStep(system.rarity, -1)}` : "",
       canAcquire: Boolean(this.buyer?.isOwner),
       buyerName: this.buyer?.name ?? "",
       enriched: {

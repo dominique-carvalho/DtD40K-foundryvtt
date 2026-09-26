@@ -20,7 +20,7 @@ const TEMPLATE = "systems/dtd40k/templates/dialog/attack-dialog.hbs";
  * @param {Actor} args.actor
  * @param {string} args.title
  * @param {string} args.skillKey
- * @param {{melee: boolean, canThrow: boolean, auto: boolean, heavy: boolean, basic: boolean}} args.shape
+ * @param {{melee: boolean, canThrow: boolean, auto: boolean, single: boolean, heavy: boolean, basic: boolean}} args.shape
  * @param {{id: string, name: string}[]} [args.ammo]  launcher ammunition carried
  * @param {number|null} [args.tn]
  * @returns {Promise<AttackOptions|null>}

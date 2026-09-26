@@ -57,6 +57,7 @@
       <label>{{localize "DTD.Equipment.MaxDex"}}{{#if editable}}<input type="number" name="system.maxDex" value="{{system.maxDex}}" min="0" placeholder="—">{{else}}<b>{{#if (eq system.maxDex null)}}—{{else}}{{system.maxDex}}{{/if}}</b>{{/if}}</label>
       <label>{{localize "DTD.Equipment.Piece"}}{{#if editable}}<select name="system.piece">{{selectOptions pieceOptions selected=system.piece localize=true}}</select>{{else}}<b>{{#if system.piece}}{{localize (concat "DTD.Location." system.piece)}}{{else}}{{localize "DTD.Equipment.Suit"}}{{/if}}</b>{{/if}}</label>
     </div>
+    {{#if pieceRarity}}<p>{{localize "DTD.Equipment.PieceRarity"}}: <b>{{localize pieceRarity}}</b></p>{{/if}}
     <p class="hint">{{localize "DTD.Equipment.PieceHint"}}{{#if system.suitOnly}} {{localize "DTD.Equipment.SuitOnly"}}{{/if}}</p>
   </section>
   {{/if}}

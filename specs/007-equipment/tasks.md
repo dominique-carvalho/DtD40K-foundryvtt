@@ -63,7 +63,7 @@ cibernéticos e artefatos.
 - [X] T022 [US2] Criar `module/apps/equipment-context.mjs` e `templates/actor/parts/equipment.hbs` (aba `equipment`: armadura por localização com origem, grupos do inventário, equipar, quantidade)
 - [X] T023 [US2] Em `character-sheet.mjs`: aba `equipment`, drop de `weapon|armor|gear` → `addEquipment`, ações
 - [X] T024 [P] [US2] i18n e estilos da aba
-- [ ] T025 [US2] Validar quickstart 4–11 e registrar
+- [X] T025 [US2] Validar quickstart 4–11 e registrar
 
 ---
 
@@ -77,7 +77,7 @@ cibernéticos e artefatos.
 - [X] T031 [US3] Criar `module/documents/attack-service.mjs` (`rollAttack`, `rollDamage`), `templates/chat/{attack-card,damage-card}.hbs` e o hook `renderChatMessageHTML` do botão de dano
 - [X] T032 [US3] Na aba equipment: paradas de ataque e dano por arma equipada, botões, ataque desarmado padrão; modo Jogo mostra as armas equipadas
 - [X] T033 [P] [US3] i18n e estilos do diálogo e dos cartões
-- [ ] T034 [US3] Validar quickstart 12–22 e registrar
+- [X] T034 [US3] Validar quickstart 12–22 e registrar
 
 ---
 
@@ -88,7 +88,7 @@ cibernéticos e artefatos.
 - [X] T037 [US4] Criar `module/documents/acquisition-service.mjs` (`acquire`, `spendLiquid`, `endStrain`), `templates/dialog/acquire-dialog.hbs`, `templates/chat/acquire-card.hbs` e o botão de Liquid Wealth no hook
 - [X] T038 [US4] `addEquipment` com `creation.active`: pergunta "item inicial?", confere vagas (override do Mestre); ficha mostra Wealth, Liquid, Strain (encerrar do Mestre), vagas iniciais e botão Adquirir no inventário e na ficha do item
 - [X] T039 [P] [US4] i18n e estilos
-- [ ] T040 [US4] Validar quickstart 23–29 e registrar
+- [X] T040 [US4] Validar quickstart 23–29 e registrar
 
 ---
 
@@ -99,15 +99,15 @@ cibernéticos e artefatos.
 - [X] T043 [US5] Concessões de hearthstone encaixada (Gem of the Calm Heart → Common Sense) pelo sistema da 005
 - [X] T044 [US5] Ficha: drogas (doses, usar, em efeito, encerrar), vícios (Mestre edita), artefatos e hearthstones (encaixe), material na ficha do item
 - [X] T045 [P] [US5] i18n e estilos
-- [ ] T046 [US5] Validar quickstart 30–37 e registrar
+- [X] T046 [US5] Validar quickstart 30–37 e registrar
 
 ---
 
 ## Phase 8: Polish
 
-- [ ] T047 [P] Atualizar `docs/analise-dtd.md` §12 para a 7.7a e o `README.md` (recursos e compêndios)
+- [X] T047 [P] Atualizar `docs/analise-dtd.md` §12 para a 7.7a e o `README.md` (recursos e compêndios)
 - [X] T048 `npm run lint` e `npm test`
-- [ ] T049 `graphify update .`
+- [X] T049 `graphify update .`
 
 ## Dependencies
 

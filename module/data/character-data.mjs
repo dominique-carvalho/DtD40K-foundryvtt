@@ -1,4 +1,4 @@
-import { CHARACTERISTICS, DERIVED_KEYS, SKILLS } from "../config.mjs";
+import { CHARACTERISTICS, DERIVED_KEYS, SKILLS, STARTING_XP, XP_KINDS } from "../config.mjs";
 import { computeDerived } from "../rules/derived.mjs";
 import { computeExaltation } from "../rules/exaltation.mjs";
 import { capValue } from "../rules/race.mjs";
@@ -79,6 +79,24 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
         staticDefenseCharacteristic: new StringField({ required: true, choices: ["dex", "con"], initial: "dex" }),
         fatigueMax: integer(0),
         initiative: integer(0)
+      }),
+      // Experience: starting XP and the ledger of purchases and awards (spec 006, research R6).
+      xp: new SchemaField({
+        starting: integer(STARTING_XP, { min: 0 }),
+        log: new ArrayField(new SchemaField({
+          id: new StringField({ required: true, blank: false }),
+          type: new StringField({ required: true, choices: ["purchase", "award"], initial: "purchase" }),
+          kind: new StringField({ required: true, blank: true, initial: "", choices: ["", ...XP_KINDS] }),
+          key: new StringField({ required: true, blank: true }),
+          label: new StringField({ required: true, blank: true }),
+          from: integer(0),
+          to: integer(0),
+          cost: integer(0),
+          itemId: new StringField({ required: true, blank: true }),
+          reason: new StringField({ required: true, blank: true }),
+          user: new StringField({ required: true, blank: true }),
+          date: integer(0)
+        }))
       }),
       biography: new HTMLField({ required: true, blank: true })
     };

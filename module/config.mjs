@@ -160,6 +160,24 @@ export const HINDRANCE_LIMIT = 2;
 /** What a feat may depend on: another feat, or a racial power (e.g. Elven Accuracy, Warp Step). */
 export const FEAT_REQUIREMENT_TYPES = ["feat", "racePower"];
 
+/** Class completion bonuses that are automated (spec 006, research R4); the others are text. */
+export const CLASS_COMPLETION = ["none", "hpMax", "initiative", "resolveMax", "staticDefense", "specialty", "skillDot"];
+
+/** State of a class on a character: the one being worked on, or completed (p. 106). */
+export const CLASS_STATUS = ["current", "completed"];
+
+/** XP costs of the character creation table (DtD 7.7a pp. 15–16). */
+export const XP_COSTS = { characteristic: 200, newSkill: 100, skill: 50, feat: 100, asset: 100, powerStat: 300 };
+
+/** Starting XP of a Hero (p. 15). */
+export const STARTING_XP = 600;
+
+/** Free Study: characteristics and skills off the completed class lists cost double (p. 106). */
+export const FREE_STUDY_MULTIPLIER = 2;
+
+/** What an XP purchase can buy (schools, spells and backgrounds come with their own features). */
+export const XP_KINDS = ["characteristic", "skill", "feat", "asset", "powerStat"];
+
 /** Generic 1-point resource spends (DtD 7.7a p. 65). */
 export const GENERIC_SPENDS = ["heal", "skill", "reaction", "stunned", "dazed"];
 
@@ -183,5 +201,11 @@ export const DTD = {
   GENERIC_SPENDS,
   FEAT_AUTOMATION,
   HINDRANCE_LIMIT,
-  FEAT_REQUIREMENT_TYPES
+  FEAT_REQUIREMENT_TYPES,
+  CLASS_COMPLETION,
+  CLASS_STATUS,
+  XP_COSTS,
+  STARTING_XP,
+  FREE_STUDY_MULTIPLIER,
+  XP_KINDS
 };

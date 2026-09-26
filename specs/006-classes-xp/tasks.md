@@ -23,20 +23,20 @@ quickstart.md
 
 ## Phase 1: Setup
 
-- [ ] T001 Em `system.json`: `documentTypes.Item.class: { "htmlFields": ["description", "completion.text"] }` e o pack `{ "name": "classes", "label": "Classes", "path": "packs/classes", "type": "Item", "system": "dtd40k", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }`
-- [ ] T002 [P] Generalizar `scripts/assign-feat-ids.mjs` em `scripts/assign-pack-ids.mjs --pack <nome>` (feats e classes), mantendo os IDs já atribuídos do pack `feats` (rodar e confirmar `git diff` vazio em `src/packs/feats`)
+- [X] T001 Em `system.json`: `documentTypes.Item.class: { "htmlFields": ["description", "completion.text"] }` e o pack `{ "name": "classes", "label": "Classes", "path": "packs/classes", "type": "Item", "system": "dtd40k", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }`
+- [X] T002 [P] Generalizar `scripts/assign-feat-ids.mjs` em `scripts/assign-pack-ids.mjs --pack <nome>` (feats e classes), mantendo os IDs já atribuídos do pack `feats` (rodar e confirmar `git diff` vazio em `src/packs/feats`)
 
 ---
 
 ## Phase 2: Foundational
 
-- [ ] T003 [P] Em `tests/unit/config.test.mjs`: `CLASS_COMPLETION` = `["none", "hpMax", "initiative", "resolveMax", "staticDefense", "specialty", "skillDot"]`; `CLASS_STATUS` = `["current", "completed"]`; `XP_COSTS` = `{ characteristic: 200, newSkill: 100, skill: 50, feat: 100, asset: 100, powerStat: 300 }`; `STARTING_XP === 600`; `FREE_STUDY_MULTIPLIER === 2`; `XP_KINDS` = `["characteristic", "skill", "feat", "asset", "powerStat"]`; todos em `DTD`
-- [ ] T004 Em `module/config.mjs`: as constantes de T003 com fonte (pp. 15–16, p. 106); fazer T003 passar
-- [ ] T005 Criar `module/data/class-data.mjs` (`ClassData`) exatamente conforme data-model.md: `level` "inteiro 1–5"; `track` string; `source`; `description` HTML; `prerequisites.skills` "lista de `{ keys: [chave de perícia] (≥ 1), value: 1–6 }`", `prerequisites.feats` strings, `prerequisites.schools` `{ name, value }`, `prerequisites.text`; `characteristics` (choices = chaves) e `anyCharacteristic`; `skills` (choices = chaves); `feats` `{ name, subcategory, mandatory: bool, orGroup }`; `magicSchools`/`swordSchools`/`gunKata`; `completion { text HTML, automation choices CLASS_COMPLETION "padrão none", value inteiro, skillGroup choices ["any","social"], grants (grantField da 005), selection { skill, specialty } }`; `status` choices `CLASS_STATUS` "padrão current"; `startedAt` inteiro
-- [ ] T006 [P] Em `module/data/character-data.mjs`: `xp: { starting: integer(600), log: ArrayField de { id, type: purchase|award, kind: XP_KINDS ou "", key, label, from, to, cost, itemId, reason, user, date } }`
-- [ ] T007 Registrar em `dtd40k.mjs`: `CONFIG.Item.dataModels.class = ClassData`
+- [X] T003 [P] Em `tests/unit/config.test.mjs`: `CLASS_COMPLETION` = `["none", "hpMax", "initiative", "resolveMax", "staticDefense", "specialty", "skillDot"]`; `CLASS_STATUS` = `["current", "completed"]`; `XP_COSTS` = `{ characteristic: 200, newSkill: 100, skill: 50, feat: 100, asset: 100, powerStat: 300 }`; `STARTING_XP === 600`; `FREE_STUDY_MULTIPLIER === 2`; `XP_KINDS` = `["characteristic", "skill", "feat", "asset", "powerStat"]`; todos em `DTD`
+- [X] T004 Em `module/config.mjs`: as constantes de T003 com fonte (pp. 15–16, p. 106); fazer T003 passar
+- [X] T005 Criar `module/data/class-data.mjs` (`ClassData`) exatamente conforme data-model.md: `level` "inteiro 1–5"; `track` string; `source`; `description` HTML; `prerequisites.skills` "lista de `{ keys: [chave de perícia] (≥ 1), value: 1–6 }`", `prerequisites.feats` strings, `prerequisites.schools` `{ name, value }`, `prerequisites.text`; `characteristics` (choices = chaves) e `anyCharacteristic`; `skills` (choices = chaves); `feats` `{ name, subcategory, mandatory: bool, orGroup }`; `magicSchools`/`swordSchools`/`gunKata`; `completion { text HTML, automation choices CLASS_COMPLETION "padrão none", value inteiro, skillGroup choices ["any","social"], grants (grantField da 005), selection { skill, specialty } }`; `status` choices `CLASS_STATUS` "padrão current"; `startedAt` inteiro
+- [X] T006 [P] Em `module/data/character-data.mjs`: `xp: { starting: integer(600), log: ArrayField de { id, type: purchase|award, kind: XP_KINDS ou "", key, label, from, to, cost, itemId, reason, user, date } }`
+- [X] T007 Registrar em `dtd40k.mjs`: `CONFIG.Item.dataModels.class = ClassData`
 - [ ] T008 [P] i18n em `lang/*.json`: `TYPES.Item.class` ("Class"/"Classe"), `DTD.Class.Completion.*` (automações), `DTD.XP.Kind.*`
-- [ ] T009 Rodar `npm test` e `npx eslint .`
+- [X] T009 Rodar `npm test` e `npx eslint .`
 
 ---
 

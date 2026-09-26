@@ -1,32 +1,38 @@
 <!--
 Sync Impact Report
-- Version change: 1.0.1 → 1.1.0 (MINOR — muda materialmente a versão-alvo do princípio II)
+- Version change: 1.1.0 → 1.2.0 (MINOR — muda materialmente a fonte de regras e o escopo das fases)
 - Modified principles:
-  II. Arquitetura Nativa do Foundry (v13+): alvo deixa de ser "a versão estável mais recente"
-  (hoje v14) e passa a ser fixo em v13, versão usada pela mesa (13.351); migração futura exige
-  feature própria + emenda. Origem: decisão do usuário em 2026-09-25.
-- Histórico 1.0.0 → 1.0.1 (PATCH):
-  II. Arquitetura Nativa do Foundry (v13+): a regra de rolagem deixa de exigir a fórmula
-  `Xd10x10kY` (incorreta: o `x` do Foundry não compõe explosões) e passa a exigir `Roll` do
-  Foundry para chat/Dice So Nice com a semântica Roll & Keep no motor puro.
-  Origem: specs/001-system-foundation/research.md R2 e /speckit-analyze (achado C1).
+  I. Fidelidade às Regras: a fonte de verdade passa a ser o livro DtD 7.7a ("Ready to Print"),
+  sétima revisão que já une o livro base 1.6 e o Book 2; 1.6 e Book 2 viram referência histórica.
+  VI. Entrega Incremental por Fases: Fase 1 = núcleo da 7.7a, incluindo as 16 raças do cap. 4
+  (Dryad, Kenku, Kobold e Thri-Kreen, antes do Book 2, entram na Fase 1); Fase 2 = demais
+  conteúdos oriundos do Book 2; Fase 3 = veículos e naves.
+  Origem: decisão do usuário em 2026-09-25, após comparação 1.6 × 7.7a.
 - Added sections: nenhuma
 - Removed sections: nenhuma
+- Artefatos afetados (ajustar em seguida, fora desta emenda):
+  specs/001-system-foundation — na 7.7a, Athletics usa Strength (era Constitution) e Acrobatics
+  passa a Básica (era Avançada); HP = 2×(Con+Wil) e Arcana Básica confirmados.
+  specs/002-race-compendium — 6 poderes raciais mudaram (Dark Eldarin, Dragonborn, Elf, Gnome,
+  Ork, Tau), páginas passam para a 7.7a (pp. 30–63) e entram 4 raças (Dryad, Kenku, Kobold,
+  Thri-Kreen).
+  docs/analise-dtd.md — síntese ainda baseada na 1.6 + Book 2; revisar para a 7.7a.
 - Templates: .specify/templates/* não modificados (leem a constituição em runtime)
 - Deferred TODOs: nenhum
 -->
 
 # DtD40K-foundryvtt Constitution
 
-Sistema de jogo (game system) para Foundry VTT do RPG *Dungeons the Dragoning* — livro base 1.6
-e suplemento *Book 2: For a Few Subtitles More* (v2.2).
+Sistema de jogo (game system) para Foundry VTT do RPG *Dungeons the Dragoning* — revisão **7.7a**
+("Ready to Print"), que une o livro base 1.6 e o suplemento *Book 2: For a Few Subtitles More*.
 
 ## Core Principles
 
 ### I. Fidelidade às Regras
 
-- A fonte de verdade das regras é o livro (1.6 e Book 2), sintetizada em `docs/analise-dtd.md`.
-  Toda fórmula, tabela ou procedimento implementado MUST citar a seção/página de origem na spec.
+- A fonte de verdade das regras é o livro **DtD 7.7a**, sintetizado em `docs/analise-dtd.md`.
+  Toda fórmula, tabela ou procedimento implementado MUST citar a seção/página da 7.7a na spec.
+  O livro 1.6 e o Book 2 ficam apenas como referência histórica (ex.: para rastrear mudanças).
 - Contradições do livro (ver §21 da análise) MUST ser resolvidas por decisão explícita registrada
   na spec ou em `docs/decisoes/`, nunca silenciosamente no código.
 - Variantes e house rules MUST ser opções configuráveis (world settings), com o comportamento do
@@ -86,8 +92,10 @@ permite testar sem subir o Foundry.
 
 ### VI. Entrega Incremental por Fases
 
-- Ordem de entrega: Fase 1 núcleo 1.6 → Fase 2 Book 2 nos moldes existentes → Fase 3 veículos
-  e naves (§23 da análise). Uma fase só inicia com a anterior utilizável.
+- Ordem de entrega: Fase 1 núcleo da 7.7a (inclui as 16 raças do cap. 4, também Dryad, Kenku,
+  Kobold e Thri-Kreen, que vinham do Book 2) → Fase 2 demais conteúdos oriundos do Book 2
+  (exaltações, classes e escolas extras, Gun Kata etc.) nos moldes existentes → Fase 3 veículos e
+  naves (§23 da análise). Uma fase só inicia com a anterior utilizável.
 - Cada feature MUST ser entregável e utilizável de forma independente dentro do Foundry.
 - Estruturas reutilizáveis MUST ser preferidas a duplicação (ex.: um único `martialSchool`
   para Sword Schools e Gun Kata).
@@ -126,4 +134,4 @@ permite testar sem subir o Foundry.
   princípio ou seção; PATCH para clarificações de redação.
 - Revisão de conformidade: verificada no `/speckit-plan` (Constitution Check) e em cada PR.
 
-**Version**: 1.1.0 | **Ratified**: 2026-09-24 | **Last Amended**: 2026-09-25
+**Version**: 1.2.0 | **Ratified**: 2026-09-24 | **Last Amended**: 2026-09-25

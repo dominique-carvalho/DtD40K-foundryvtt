@@ -181,6 +181,82 @@ export const XP_KINDS = ["characteristic", "skill", "feat", "asset", "powerStat"
 /** Generic 1-point resource spends (DtD 7.7a p. 65). */
 export const GENERIC_SPENDS = ["heal", "skill", "reaction", "stunned", "dazed"];
 
+/* ---------- Equipment (spec 007, DtD 7.7a ch. XIII–XIV, pp. 314–356) ---------- */
+
+/** Rarity ladder, in steps: TN of the Wealth Test and search time (p. 315). */
+export const RARITIES = Object.fromEntries([
+  ["worthless", 0], ["ubiquitous", 2], ["veryCommon", 5], ["common", 10], ["uncommon", 15], ["rare", 20],
+  ["veryRare", 25], ["mythicRare", 30], ["nearUnique", 35], ["fabulousMax", 40], ["irrationallyExpensive", 45],
+  ["glittergold", 50]
+].map(([key, tn]) => [key, { tn, label: `DTD.Rarity.${key}`, time: `DTD.Rarity.Time.${key}` }]));
+
+/** Craftsmanship and its Wealth Test TN shift (p. 317). */
+export const CRAFTSMANSHIP = { poor: -5, common: 0, good: 5, best: 10 };
+
+/** Weapon types of the profile tables (p. 318). */
+export const WEAPON_TYPES = ["melee", "thrown", "pistol", "basic", "heavy"];
+
+/** Weapon Proficiency choices (p. 197); weapon groups accept one or two of them. */
+export const WEAPON_PROFICIENCIES = ["Basic", "Melee 1", "Melee 2", "Melee 3", "Ranged 1", "Ranged 2", "Throwing"];
+
+/** Damage types: Energy, Explosive, Rending, Impact (p. 318). */
+export const DAMAGE_TYPES = ["E", "X", "R", "I"];
+
+const quality = (key, { hasValue = false, automated = false } = {}) => [key, {
+  label: `DTD.Quality.${key}.label`, hint: `DTD.Quality.${key}.hint`, hasValue, automated
+}];
+
+/** The 36 weapon special properties (pp. 319–321); `automated` ones change the dice or the jam check. */
+export const WEAPON_QUALITIES = Object.fromEntries([
+  quality("balanced", { automated: true }), quality("accurate", { automated: true }), quality("armMounted"),
+  quality("armored"), quality("beam"), quality("blast", { hasValue: true }), quality("brawling", { automated: true }),
+  quality("combiweapon"), quality("compact", { automated: true }), quality("defensive", { automated: true }),
+  quality("flame"), quality("flexible"), quality("homing"), quality("inaccurate", { automated: true }),
+  quality("incendiary"), quality("orgoneArray"), quality("overheats"), quality("powerField"),
+  quality("proven", { hasValue: true, automated: true }), quality("razorSharp", { automated: true }), quality("reach"),
+  quality("recharge"), quality("reliable", { automated: true }), quality("scatter"), quality("shocking"),
+  quality("smoke"), quality("snare"), quality("storm", { automated: true }), quality("tearing"), quality("toxic"),
+  quality("twinLinked", { automated: true }), quality("twoHands"), quality("unbalanced", { automated: true }),
+  quality("unreliable", { automated: true }), quality("unwieldy", { automated: true }),
+  quality("volatile", { automated: true })
+]);
+
+/** Armor types, matching the Armor Proficiency choices (p. 180, p. 332). */
+export const ARMOR_TYPES = ["light", "medium", "heavy", "extreme", "power"];
+
+/** Pieces of an armor suit; the body piece also covers the Gizzards (p. 332). */
+export const ARMOR_PIECES = ["head", "body", "arms", "legs"];
+
+/** Hit locations by d10 (p. 431). */
+export const HIT_LOCATIONS = {
+  1: "leftLeg", 2: "rightLeg", 3: "body", 4: "body", 5: "body", 6: "body",
+  7: "gizzards", 8: "leftArm", 9: "rightArm", 10: "head"
+};
+
+/** Categories of the `gear` Item subtype (research R1). */
+export const GEAR_CATEGORIES = ["gear", "cybernetic", "drug", "material", "wonder", "hearthstone"];
+
+/** Magical materials of artifacts (pp. 349–351); numeric bonuses by item kind (research R11). */
+export const MATERIALS = {
+  orichalcum: { melee: { attack: [2, 0], damage: [2, 0] }, ranged: { attack: [1, 1], reliable: true }, armor: { ap: 2, maxDex: 1 } },
+  mithril: { melee: { attack: [1, 1] }, ranged: { ignoreHandling: true }, armor: { maxDex: 2 } },
+  darksteel: { melee: { pen: 8 }, ranged: {}, armor: {} },
+  wraithbone: { melee: {}, ranged: {}, armor: {} },
+  necrodermis: { melee: { damage: [1, 0] }, ranged: { damage: [1, 0] }, armor: {} }
+};
+
+/** Drug Addictivity and the Willpower TN to avoid addiction (p. 341). */
+export const ADDICTIVITY = { none: 0, low: 10, moderate: 15, high: 20, extreme: 25 };
+
+/** Addiction severity (p. 341): 0 none, 1 Minor, 2 Moderate, 3 Major. */
+export const ADDICTION_LEVELS = ["none", "minor", "moderate", "major"];
+
+/** Starting equipment picks at character creation (p. 16). */
+export const STARTING_SLOTS = { rare: 1, uncommon: 1, common: 2, veryCommon: 2 };
+
+/** Wealth Strain: minimum 1d10 result → Wealth penalty until the end of the next session (p. 316). */
+export const WEALTH_STRAIN = [{ min: 11, penalty: 5 }, { min: 10, penalty: 3 }, { min: 7, penalty: 1 }, { min: 1, penalty: 0 }];
+
 export const DTD = {
   GROUPS,
   CHARACTERISTICS,
@@ -207,5 +283,20 @@ export const DTD = {
   XP_COSTS,
   STARTING_XP,
   FREE_STUDY_MULTIPLIER,
-  XP_KINDS
+  XP_KINDS,
+  RARITIES,
+  CRAFTSMANSHIP,
+  WEAPON_TYPES,
+  WEAPON_PROFICIENCIES,
+  DAMAGE_TYPES,
+  WEAPON_QUALITIES,
+  ARMOR_TYPES,
+  ARMOR_PIECES,
+  HIT_LOCATIONS,
+  GEAR_CATEGORIES,
+  MATERIALS,
+  ADDICTIVITY,
+  ADDICTION_LEVELS,
+  STARTING_SLOTS,
+  WEALTH_STRAIN
 };

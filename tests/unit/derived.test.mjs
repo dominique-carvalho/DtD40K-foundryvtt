@@ -189,3 +189,23 @@ describe("computeDerived — feat modifiers (spec 005)", () => {
       .toEqual(computeDerived(base));
   });
 });
+
+describe("computeDerived — worn armor (spec 007, p. 332)", () => {
+  const armored = { characteristics: chars({ str: 2, dex: 5, wis: 2 }), size: 4, level: 1 };
+
+  it("caps the Dexterity of the Speed with Max Dex and leaves the Static Defense on the full Dexterity", () => {
+    const free = computeDerived(armored);
+    const capped = computeDerived(armored, {}, { maxDex: 4 });
+    expect(free.speed).toBe(7);
+    expect(capped.speed).toBe(6);
+    expect(capped.staticDefense).toBe(free.staticDefense);
+  });
+
+  it("subtracts the armor penalty from the Static Defense", () => {
+    expect(computeDerived(armored, {}, { armorPenalty: 7 }).staticDefense).toBe(computeDerived(armored).staticDefense - 7);
+  });
+
+  it("ignores a null Max Dex", () => {
+    expect(computeDerived(armored, {}, { maxDex: null }).speed).toBe(7);
+  });
+});

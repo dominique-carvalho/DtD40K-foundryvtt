@@ -20,17 +20,20 @@
  * @param {() => number} options.rng                   uniform random number in [0, 1)
  * @param {number} [options.explodeOn=10]              faces ≥ this value explode
  * @param {boolean} [options.rerollOnes=false]         specialty: reroll 1s once
+ * @param {number} [options.rerollBelow=0]            reroll once faces below this value (Proven, p. 320);
+ *                                                     the specialty is rerollBelow 2
  * @param {boolean} [options.zeroCharacteristic=false] 10s are worth 0 and never explode
  * @returns {{dice: DieResult[], keptSum: number, total: number}}
  */
-export function rollAndKeep(pool, { rng, explodeOn = 10, rerollOnes = false, zeroCharacteristic = false }) {
+export function rollAndKeep(pool, { rng, explodeOn = 10, rerollOnes = false, rerollBelow = 0, zeroCharacteristic = false }) {
   const face = () => Math.floor(rng() * 10) + 1;
+  const below = Math.max(rerollOnes ? 2 : 0, rerollBelow);
 
   const dice = Array.from({ length: pool.rolled }, () => {
     /** @type {DieResult} */
     const die = { chain: [], total: 0, kept: false };
     let value = face();
-    if (rerollOnes && value === 1) {
+    if (value < below) {
       die.rerolled = [value];
       value = face();
     }

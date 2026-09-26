@@ -156,3 +156,51 @@ describe("class and XP constants (006)", () => {
     expect(DTD.XP_KINDS).toEqual(["characteristic", "skill", "feat", "asset", "powerStat"]);
   });
 });
+
+describe("equipment constants (007)", () => {
+  it("orders the 12 rarity steps with their Wealth Test TNs (p. 315)", () => {
+    expect(Object.keys(DTD.RARITIES)).toEqual([
+      "worthless", "ubiquitous", "veryCommon", "common", "uncommon", "rare", "veryRare", "mythicRare", "nearUnique",
+      "fabulousMax", "irrationallyExpensive", "glittergold"
+    ]);
+    expect(Object.values(DTD.RARITIES).map((r) => r.tn)).toEqual([0, 2, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+    for (const [key, def] of Object.entries(DTD.RARITIES)) {
+      expect(def.label).toBe(`DTD.Rarity.${key}`);
+      expect(def.time).toBe(`DTD.Rarity.Time.${key}`);
+    }
+  });
+
+  it("lists craftsmanship, weapon types, proficiencies and damage types", () => {
+    expect(DTD.CRAFTSMANSHIP).toEqual({ poor: -5, common: 0, good: 5, best: 10 });
+    expect(DTD.WEAPON_TYPES).toEqual(["melee", "thrown", "pistol", "basic", "heavy"]);
+    expect(DTD.WEAPON_PROFICIENCIES).toEqual(["Basic", "Melee 1", "Melee 2", "Melee 3", "Ranged 1", "Ranged 2", "Throwing"]);
+    expect(DTD.DAMAGE_TYPES).toEqual(["E", "X", "R", "I"]);
+  });
+
+  it("defines the 36 weapon qualities with i18n keys", () => {
+    expect(Object.keys(DTD.WEAPON_QUALITIES)).toHaveLength(36);
+    for (const [key, def] of Object.entries(DTD.WEAPON_QUALITIES)) {
+      expect(def.label).toBe(`DTD.Quality.${key}.label`);
+      expect(def.hint).toBe(`DTD.Quality.${key}.hint`);
+    }
+    expect(DTD.WEAPON_QUALITIES.proven.hasValue).toBe(true);
+    expect(DTD.WEAPON_QUALITIES.blast.hasValue).toBe(true);
+  });
+
+  it("lists armor types and pieces, hit locations and gear categories", () => {
+    expect(DTD.ARMOR_TYPES).toEqual(["light", "medium", "heavy", "extreme", "power"]);
+    expect(DTD.ARMOR_PIECES).toEqual(["head", "body", "arms", "legs"]);
+    expect(Object.values(DTD.HIT_LOCATIONS)).toEqual([
+      "leftLeg", "rightLeg", "body", "body", "body", "body", "gizzards", "leftArm", "rightArm", "head"
+    ]);
+    expect(DTD.GEAR_CATEGORIES).toEqual(["gear", "cybernetic", "drug", "material", "wonder", "hearthstone"]);
+  });
+
+  it("lists materials, addictivity, addiction levels, starting slots and Wealth Strain", () => {
+    expect(Object.keys(DTD.MATERIALS)).toEqual(["orichalcum", "mithril", "darksteel", "wraithbone", "necrodermis"]);
+    expect(DTD.ADDICTIVITY).toEqual({ none: 0, low: 10, moderate: 15, high: 20, extreme: 25 });
+    expect(DTD.ADDICTION_LEVELS).toEqual(["none", "minor", "moderate", "major"]);
+    expect(DTD.STARTING_SLOTS).toEqual({ rare: 1, uncommon: 1, common: 2, veryCommon: 2 });
+    expect(DTD.WEALTH_STRAIN.map((s) => [s.min, s.penalty])).toEqual([[11, 5], [10, 3], [7, 1], [1, 0]]);
+  });
+});

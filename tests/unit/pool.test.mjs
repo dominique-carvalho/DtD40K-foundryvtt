@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { applyModifiers, buildCharacteristicPool, buildSkillPool, formatPool, normalizePool } from "../../module/rules/pool.mjs";
+import { applyModifiers, buildCharacteristicPool, buildSkillPool, formatPool, normalizePool, rollModifiers } from "../../module/rules/pool.mjs";
 
 describe("normalizePool — book conversion examples (p. 235)", () => {
   it.each([
@@ -99,5 +99,14 @@ describe("applyModifiers (US3)", () => {
 
   it("ignores non-numeric modifier values", () => {
     expect(applyModifiers(base, { rolled: "", kept: null, flat: undefined, freeRaises: "x" })).toEqual({ rolled: 5, kept: 3, flat: 0 });
+  });
+});
+
+describe("rollModifiers (spec 007, research R8)", () => {
+  it("adds the all-rolls penalty and the skill bonus", () => {
+    const rolls = { all: { rolled: -1, kept: 0 }, noExplode: true, skills: { medicae: { rolled: 1, kept: 1, freeRaises: 1 } } };
+    expect(rollModifiers(rolls, "medicae")).toEqual({ rolled: 0, kept: 1, freeRaises: 1, noExplode: true });
+    expect(rollModifiers(rolls, "athletics")).toEqual({ rolled: -1, kept: 0, freeRaises: 0, noExplode: true });
+    expect(rollModifiers(undefined)).toEqual({ rolled: 0, kept: 0, freeRaises: 0, noExplode: false });
   });
 });

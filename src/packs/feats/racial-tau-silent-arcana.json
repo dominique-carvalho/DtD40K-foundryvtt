@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFf9d203b80328",
+  "_key": "!items!dtdFf9d203b80328",
+  "name": "Silent Arcana",
+  "type": "feat",
+  "img": "icons/svg/invisible.svg",
+  "folder": "dtdFld56dd7a9821",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You can strip the showy trappings from your spellcasting. You may raise a Focus Power test's TN by 10 to strip it of the Material, Somatic and Verbal keywords and give it the Subtle keyword, if it lacks it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 204
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Tau",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

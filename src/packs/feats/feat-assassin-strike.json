@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFf1da4d2cedf9",
+  "_key": "!items!dtdFf1da4d2cedf9",
+  "name": "Assassin Strike",
+  "type": "feat",
+  "img": "icons/svg/cowled.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Each turn, one of your melee attacks can be paired with a free Half Move. Moving this way does not give your opponent a free disengage attack against you.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 180
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

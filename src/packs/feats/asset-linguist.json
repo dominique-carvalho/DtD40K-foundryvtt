@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF2272e7ef5a7a",
+  "_key": "!items!dtdF2272e7ef5a7a",
+  "name": "Linguist",
+  "type": "feat",
+  "img": "icons/svg/sound.svg",
+  "folder": "dtdFld9c04f67af9",
+  "system": {
+    "category": "asset",
+    "description": "<p>Languages come naturally to you. You start play fluent in additional languages, their number matching your starting Intelligence.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 207
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

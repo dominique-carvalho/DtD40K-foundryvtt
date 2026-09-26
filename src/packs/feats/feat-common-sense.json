@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF35e3e1d3f566",
+  "_key": "!items!dtdF35e3e1d3f566",
+  "name": "Common Sense",
+  "type": "feat",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When you are about to do something foolish without realizing it, the SM may have you roll Wisdom against TN 15 to notice the mistake.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 182
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

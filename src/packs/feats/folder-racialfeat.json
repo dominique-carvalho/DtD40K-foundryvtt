@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFld7561fea3d8",
+  "_key": "!folders!dtdFld7561fea3d8",
+  "name": "Racial Feats",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 200000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "featFolder": "racialFeat"
+    }
+  }
+}

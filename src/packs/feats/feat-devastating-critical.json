@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF20eb4a2143c2",
+  "_key": "!items!dtdF20eb4a2143c2",
+  "name": "Devastating Critical",
+  "type": "feat",
+  "img": "icons/svg/blood.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Each time you inflict critical damage on an opponent, you inflict 1 additional wound.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 183
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

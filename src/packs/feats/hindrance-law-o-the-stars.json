@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF20ec9cd90035",
+  "_key": "!items!dtdF20ec9cd90035",
+  "name": "Law o' the Stars",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>You follow a personal code of honor that others do not share, such as never shooting an unarmed man or someone in the back. Whatever form the code takes, it is inconvenient.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 209
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF703afe483dc5",
+  "_key": "!items!dtdF703afe483dc5",
+  "name": "Dark Cruelty",
+  "type": "feat",
+  "img": "icons/svg/cowled.svg",
+  "folder": "dtdFld76c5952b59",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Your menacing charm both repels and entrances those around you. You receive +1k1 on Charm and Intimidation tests.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 201
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Dark Eldarin",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

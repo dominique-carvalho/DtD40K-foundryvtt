@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF2adc076e0bdf",
+  "_key": "!items!dtdF2adc076e0bdf",
+  "name": "Feather Step",
+  "type": "feat",
+  "img": "icons/svg/wing.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You can walk across surfaces too weak to bear your weight, such as thin rope, cloth awnings, mud, quicksand or water.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 186
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFa2960142f31d",
+  "_key": "!items!dtdFa2960142f31d",
+  "name": "Pinball Wizard",
+  "type": "feat",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Within the short range of your gun, your shots can manipulate electronics, for example opening or closing electronic locks, shutting down machines, or anything else the SM finds dramatically fitting.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 193
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

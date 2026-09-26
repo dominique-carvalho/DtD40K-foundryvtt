@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFc67419cf8404",
+  "_key": "!items!dtdFc67419cf8404",
+  "name": "Iron Fist",
+  "type": "feat",
+  "img": "icons/svg/combat.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your bare fists can parry weapons, have +4 Pen and inflict Explosive damage.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 189
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

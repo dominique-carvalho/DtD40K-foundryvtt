@@ -1,0 +1,46 @@
+{
+  "_id": "dtdF4b91d5d232e8",
+  "_key": "!items!dtdF4b91d5d232e8",
+  "name": "Guess Destination",
+  "type": "feat",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "dtdFldf3bfb44ce2",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Experience lets you teleport by instinct. You can Warp Step to a destination you cannot see; if that space cannot be entered, you arrive at the closest safe location instead.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Eldarin",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "racePower",
+        "name": "Warp Step"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

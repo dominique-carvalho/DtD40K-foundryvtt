@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF68feaa69c52a",
+  "_key": "!items!dtdF68feaa69c52a",
+  "name": "Move And Shoot",
+  "type": "feat",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdFld56dd7a9821",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You practice the old Tau style of keeping your distance and firing on the run. In any turn in which you both move and attack with a ranged weapon, your Static Defense rises by 5.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 204
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Tau",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

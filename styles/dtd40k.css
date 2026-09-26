@@ -1076,13 +1076,13 @@
   padding-left: 1.25rem;
 }
 
-.dtd40k.item.exaltation .list-row {
+.dtd40k.item:is(.exaltation, .feat) .list-row {
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-.dtd40k.item.exaltation .list-row input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat) .list-row input[type="text"] {
   flex: 1;
 }
 
@@ -1090,7 +1090,7 @@
   width: 3.5rem;
 }
 
-.dtd40k.item.exaltation .list-control {
+.dtd40k.item:is(.exaltation, .feat) .list-control {
   cursor: pointer;
   margin-left: 0.3rem;
   font-size: 0.85rem;

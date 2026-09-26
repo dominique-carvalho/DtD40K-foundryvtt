@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFa29b55ee44e3",
+  "_key": "!items!dtdFa29b55ee44e3",
+  "name": "Armor of Contempt",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>A hardened shell of faith and hatred makes you difficult to sway. Even with no Resolve left, social influence can never force you to act against your Alignment.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 180
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

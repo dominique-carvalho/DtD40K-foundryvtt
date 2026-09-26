@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF86f46f1c1637",
+  "_key": "!items!dtdF86f46f1c1637",
+  "name": "True Grit",
+  "type": "feat",
+  "img": "icons/svg/blood.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When you take critical damage, you may cut the result in half (round up).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 196
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

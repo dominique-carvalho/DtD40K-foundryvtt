@@ -39,7 +39,7 @@ atualização dos JSON de `races`, `exaltations` e `exalted-assets` (campo `gran
 inglês com redação própria; nenhum input grava valor com efeito no `_source` (002 R3, estendido às
 especialidades — R5); reações de `_onCreate`/`_onDelete` só no cliente do autor
 
-**Scale/Scope**: 274 entradas + 21 pastas; 15 automações; 11 origens de concessão; 1 serviço, 1 módulo de
+**Scale/Scope**: 274 entradas + 20 pastas; 15 automações; 11 origens de concessão; 1 serviço, 1 módulo de
 regras, 1 diálogo, 1 partial nova; ~25 arquivos novos/alterados + JSON de conteúdo
 
 ## Constitution Check
@@ -77,7 +77,7 @@ specs/005-feats-assets-hindrances/
 ```text
 system.json                         # + pack feats; initiative com @modifiers.initiative
 dtd40k.mjs                          # CONFIG.Combat.initiative com @modifiers.initiative
-src/packs/feats/                    # 21 pastas + 274 JSON (plano)
+src/packs/feats/                    # 20 pastas + 274 JSON (plano)
 src/packs/races/aasimar.json, gnome.json                  # + grants
 src/packs/exaltations/atlantean.json, promethean.json     # + grants (rank 1)
 src/packs/exalted-assets/{paragon-racial-you-will-not-falter,paragon-racial-tuning,vampire-ventrue}.json  # + grants

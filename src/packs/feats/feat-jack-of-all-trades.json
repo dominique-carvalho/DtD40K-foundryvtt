@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF55e388cb9442",
+  "_key": "!items!dtdF55e388cb9442",
+  "name": "Jack of All Trades",
+  "type": "feat",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You suffer no penalty when rolling a Basic skill in which you have no dots, and you can attempt Advanced skills without dots at -1 to the Characteristic used.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 189
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

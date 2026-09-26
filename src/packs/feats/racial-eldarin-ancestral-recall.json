@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFb1159730e52a",
+  "_key": "!items!dtdFb1159730e52a",
+  "name": "Ancestral Recall",
+  "type": "feat",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdFldf3bfb44ce2",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Your bond with the mysteries of the warp runs deeper than that of most Eldarin. When you Push a Focus Power test, you may go one level beyond the usual limit.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Eldarin",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

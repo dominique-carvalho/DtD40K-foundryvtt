@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFdceccc46483f",
+  "_key": "!items!dtdFdceccc46483f",
+  "name": "Obtain Familiar",
+  "type": "feat",
+  "img": "icons/svg/wing.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You gain a little mechanical helper, for example a servo skull, a tau drone or a syrne scarab, that obeys simple commands, relays your voice and can work simple machines. Some cultures use an enchanted animal or a weak bound daemon instead.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 192
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

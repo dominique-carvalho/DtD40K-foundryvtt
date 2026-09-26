@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF160cc25dcafd",
+  "_key": "!items!dtdF160cc25dcafd",
+  "name": "Kid",
+  "type": "feat",
+  "img": "icons/svg/pawprint.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>You are not yet an adult by the standards of your culture (roughly 12-15 in human terms), so most people dismiss you and call you names. You do not age, which can become awkward over a century, and optionally your size is reduced by 1 depending on how young you are.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 209
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

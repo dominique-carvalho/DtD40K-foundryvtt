@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF1a8313641f9d",
+  "_key": "!items!dtdF1a8313641f9d",
+  "name": "Blind Fighting",
+  "type": "feat",
+  "img": "icons/svg/invisible.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You suffer none of the usual penalties for fighting while unable to see. Tasks that truly require sight, like reading, remain impossible.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 181
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

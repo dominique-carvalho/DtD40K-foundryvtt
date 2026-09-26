@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFc45a87bcb384",
+  "_key": "!items!dtdFc45a87bcb384",
+  "name": "Engineering Team Leader",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When you are a ship's Chief of Engineering, your Crafts and Tech-Use count as 1 higher, but only for Engineering Actions.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 185
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

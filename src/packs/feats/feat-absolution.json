@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF947fd055bcd2",
+  "_key": "!items!dtdF947fd055bcd2",
+  "name": "Absolution",
+  "type": "feat",
+  "img": "icons/svg/heal.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Spend 1 Hero Point and touch a target to strip away one ongoing effect, such as a disease or poison. If the effect originates from a being mightier than you (a higher-level Exalt, a god or similar), the SM may rule that it fails.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 179
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

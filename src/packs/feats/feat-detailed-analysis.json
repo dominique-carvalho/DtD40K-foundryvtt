@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF9e3871b4ef58",
+  "_key": "!items!dtdF9e3871b4ef58",
+  "name": "Detailed Analysis",
+  "type": "feat",
+  "img": "icons/svg/eye.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When you are a ship's Chief Arcana Officer, Active Augury tests give you double the information.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 183
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF28eeb0d0cde9",
+  "_key": "!items!dtdF28eeb0d0cde9",
+  "name": "Two Weapon Fighting",
+  "type": "feat",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You are trained to fight with a weapon in each hand; the complete rules for this are in Chapter XV.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 196
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

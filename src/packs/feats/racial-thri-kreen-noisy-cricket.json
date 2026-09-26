@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF689bedbd0908",
+  "_key": "!items!dtdF689bedbd0908",
+  "name": "Noisy Cricket",
+  "type": "feat",
+  "img": "icons/svg/falling.svg",
+  "folder": "dtdFldf1fafa6103",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Powerful legs let you leap enormous distances. You receive the Jumping specialty for Acrobatics. Every raise on a jumping Acrobatics test is worth three, and the larger of your jump height or distance is never less than twice your Strength plus your Acrobatics.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 205
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Thri-Kreen",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "noisyCricket",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

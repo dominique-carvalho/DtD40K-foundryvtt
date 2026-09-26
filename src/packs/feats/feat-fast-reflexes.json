@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF69eee2b0a381",
+  "_key": "!items!dtdF69eee2b0a381",
+  "name": "Fast Reflexes",
+  "type": "feat",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Initiative dice may be rolled again, but the second result stands even if it is worse.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 185
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

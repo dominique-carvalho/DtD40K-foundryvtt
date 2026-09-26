@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFf09f026aaa2d",
+  "_key": "!items!dtdFf09f026aaa2d",
+  "name": "Treestrider",
+  "type": "feat",
+  "img": "icons/svg/oak.svg",
+  "folder": "dtdFldbfd6d0fb48",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You can travel through living plants. As a full action, you step into a tree or similarly big plant and come out of another big living plant up to one kilometer away per level; a rough direction and distance is enough, no exact destination is needed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Dryad",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

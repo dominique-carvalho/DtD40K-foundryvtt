@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFcf050fc296f4",
+  "_key": "!items!dtdFcf050fc296f4",
+  "name": "Power Attack",
+  "type": "feat",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>On a melee attack you may take -Xk0 to the attack roll to add +Xk0 to damage; X may be any value no higher than your Level. With multiple attacks in a round, you must decide before the first one, and the choice applies to all of them that round.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 193
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

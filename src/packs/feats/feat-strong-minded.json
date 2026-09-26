@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFd1ec5491a307",
+  "_key": "!items!dtdFd1ec5491a307",
+  "name": "Strong Minded",
+  "type": "feat",
+  "img": "icons/svg/padlock.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Once in each scene, you may reroll a Willpower Test to resist magic that you failed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 195
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

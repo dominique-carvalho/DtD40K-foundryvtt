@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFe78759d5f8fa",
+  "_key": "!items!dtdFe78759d5f8fa",
+  "name": "Veteran o' the Wheel",
+  "type": "feat",
+  "img": "icons/svg/castle.svg",
+  "folder": "dtdFld9c04f67af9",
+  "system": {
+    "category": "asset",
+    "description": "<p>Years of experience mean you begin play with a bonus dot in one characteristic plus a bonus dot in one skill. The price is a haunting past: the SM assigns you a special hindrance harsher than any presented in the book, so provide a solid background for it to fit.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 207
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "veteran",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

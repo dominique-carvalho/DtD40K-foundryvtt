@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFe2f4a140f55c",
+  "_key": "!items!dtdFe2f4a140f55c",
+  "name": "Enemy",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>Someone you wronged is out for payback. This foe is both relentless and powerful enough to actually act against you.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 209
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

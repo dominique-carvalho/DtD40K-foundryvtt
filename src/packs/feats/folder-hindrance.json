@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFld93a5f8dd83",
+  "_key": "!folders!dtdFld93a5f8dd83",
+  "name": "Hindrances",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 400000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "featFolder": "hindrance"
+    }
+  }
+}

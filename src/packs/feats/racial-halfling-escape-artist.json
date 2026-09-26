@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF94dad2834011",
+  "_key": "!items!dtdF94dad2834011",
+  "name": "Escape Artist",
+  "type": "feat",
+  "img": "icons/svg/net.svg",
+  "folder": "dtdFld53ef1123e7",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>A halfling who cannot move is a halfling in trouble, so you make sure it never happens. You are immune to immobilization.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Halfling",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

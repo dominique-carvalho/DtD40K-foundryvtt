@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF313920cab924",
+  "_key": "!items!dtdF313920cab924",
+  "name": "Warp Fire",
+  "type": "feat",
+  "img": "icons/svg/fire.svg",
+  "folder": "dtdFld76c5952b59",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>As a half action, you can bathe one target in an eerie, shifting glow. Until the scene ends, all attacks made against that target gain +2k0 to hit.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 201
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Dark Eldarin",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

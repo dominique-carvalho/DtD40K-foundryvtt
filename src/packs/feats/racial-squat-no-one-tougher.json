@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF6cc9cf1b8125",
+  "_key": "!items!dtdF6cc9cf1b8125",
+  "name": "No One Tougher",
+  "type": "feat",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdFld6a6ced1218",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Taking you down takes a lot. You may calculate your Static Defense with Constitution in place of Dexterity.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 204
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Squat",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "noOneTougher",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

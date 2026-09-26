@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF7cf00348336e",
+  "_key": "!items!dtdF7cf00348336e",
+  "name": "Outsider",
+  "type": "feat",
+  "img": "icons/svg/heal.svg",
+  "folder": "dtdFldf938dd001f",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Redundant organs and fast-clotting blood make you tougher than you look. The first time in a scene you would suffer critical damage, you take just 1 point of critical damage instead (no benefit if it was only 1 point anyway).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 205
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Tiefling",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

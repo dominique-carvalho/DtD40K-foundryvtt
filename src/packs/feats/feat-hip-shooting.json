@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF999f50d1c96e",
+  "_key": "!items!dtdF999f50d1c96e",
+  "name": "Hip Shooting",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Spending a Full Action, you can both make a Full Move and fire one ranged attack. That attack must be a single shot; automatic fire is not allowed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 187
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

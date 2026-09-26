@@ -1,0 +1,47 @@
+{
+  "_id": "dtdF4eed00ffe076",
+  "_key": "!items!dtdF4eed00ffe076",
+  "name": "Armor Proficiency",
+  "type": "feat",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Choose an armor class. When proficient, Light and Medium armor impose no penalties, while Heavy, Extreme and Power armor cut their Static Defense penalty in half. Without this feat, the armor's full AP is applied as a Static Defense penalty.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 180
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Light",
+        "Medium",
+        "Heavy",
+        "Extreme",
+        "Power"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

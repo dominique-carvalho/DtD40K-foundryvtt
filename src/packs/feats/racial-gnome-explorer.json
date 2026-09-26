@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFfff1219e5d0a",
+  "_key": "!items!dtdFfff1219e5d0a",
+  "name": "Explorer",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFldf29ff77a60",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Maps and strange discoveries fascinate you. When traveling aboard a Spelljammer, you can move the trip one step shorter on the table of Voyage Time and Difficulty.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Gnome",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

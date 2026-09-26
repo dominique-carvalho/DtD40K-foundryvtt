@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFe5f1ae3f2d4f",
+  "_key": "!items!dtdFe5f1ae3f2d4f",
+  "name": "Improved Feint",
+  "type": "feat",
+  "img": "icons/svg/daze.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>A Feint that fails still imposes -2k0 on the target's reactions. A successful Feint also lets you use the benefits of any of Back Stab, Sneak Attack and their Improved versions that you possess against that target.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 188
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

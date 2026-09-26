@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFaf5c1a602141",
+  "_key": "!items!dtdFaf5c1a602141",
+  "name": "Photosynthetic",
+  "type": "feat",
+  "img": "icons/svg/sun.svg",
+  "folder": "dtdFldbfd6d0fb48",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Sunlight alone can sustain you. If you bask in direct sunlight for at least two hours you need no food, and you recover 1 hit point for every hour spent in direct sun. A vampire Dryad gets neither benefit, but instead is freed from the vampire's Sunlight Weakness.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 201
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Dryad",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFb1850913fc77",
+  "_key": "!items!dtdFb1850913fc77",
+  "name": "Master of Bombardment",
+  "type": "feat",
+  "img": "icons/svg/fire.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>As a ship's Tactical Officer you gain a raise on Ballistics tests, and your Surface Bombardment cannot miss a planetary object.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 191
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

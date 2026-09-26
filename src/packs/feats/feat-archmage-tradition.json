@@ -1,0 +1,44 @@
+{
+  "_id": "dtdF600ae070bceb",
+  "_key": "!items!dtdF600ae070bceb",
+  "name": "Archmage Tradition",
+  "type": "feat",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Pick one option. Arcane Mastery: after casting a spell, spend 1 Hero Point to cast that same spell on your next turn with no Focus Power test, reusing this turn's result. Spellbloom: the first time you cast a spell each round, allies within 3m casting spells lower their Focus Power test TN by 5.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 180
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Arcane Mastery",
+        "Spellbloom"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

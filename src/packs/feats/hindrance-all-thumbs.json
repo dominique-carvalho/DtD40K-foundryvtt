@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFa0c1db065766",
+  "_key": "!items!dtdFa0c1db065766",
+  "name": "All Thumbs",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>Machines and you do not get along. Regardless of your training, trying to operate heavy machinery or complex computers typically ends in disaster.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 208
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

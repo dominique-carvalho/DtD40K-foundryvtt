@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFd29880fba1fa",
+  "_key": "!items!dtdFd29880fba1fa",
+  "name": "Halfling Agility",
+  "type": "feat",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdFld53ef1123e7",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Your tiny frame makes you hard to pin down. You add +4 to your Static Defense.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Halfling",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "halflingAgility",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

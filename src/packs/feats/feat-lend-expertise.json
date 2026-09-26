@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF1c8b16d66c7d",
+  "_key": "!items!dtdF1c8b16d66c7d",
+  "name": "Lend Expertise",
+  "type": "feat",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your Picard Speech action grants more: with 3 or more ranks in the matching skill, a department keeps two extra dice rather than one on its action (Pilot for Manoeuver, Tech-Use for Engineering, Arcana for Arcana, Ballistics for Tactical actions).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 190
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

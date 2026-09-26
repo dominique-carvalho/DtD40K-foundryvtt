@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF0aac33eaec79",
+  "_key": "!items!dtdF0aac33eaec79",
+  "name": "Wimpy",
+  "type": "feat",
+  "img": "icons/svg/falling.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>You look pale, frail, and nothing like a hero, whatever your true strength and skill. People judge you by that appearance.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 210
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

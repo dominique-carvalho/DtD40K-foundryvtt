@@ -1,0 +1,46 @@
+{
+  "_id": "dtdF2f99056ab843",
+  "_key": "!items!dtdF2f99056ab843",
+  "name": "Precise Technique",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld1291e1f3e7",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>A little elven cheating goes a long way. Once per session, you may apply an Elven Accuracy reroll to any skill test.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Elf",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "racePower",
+        "name": "Elven Accuracy"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

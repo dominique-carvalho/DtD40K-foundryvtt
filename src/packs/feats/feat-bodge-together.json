@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF5e49c73fec94",
+  "_key": "!items!dtdF5e49c73fec94",
+  "name": "Bodge Together",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When you are a ship's Chief of Engineering, the ship can make one extra Field Repairs test between each resupply stop at port.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 181
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,47 @@
+{
+  "_id": "dtdFd273137f1444",
+  "_key": "!items!dtdFd273137f1444",
+  "name": "Upgraded",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Each time you take this feat you receive one cybernetic implant. The feat always lists the highest rarity allowed for that implant; when none is given, the limit is Uncommon.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 196
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Uncommon (default)",
+        "Rare",
+        "Very Rare",
+        "Mythic Rare",
+        "Artifact"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

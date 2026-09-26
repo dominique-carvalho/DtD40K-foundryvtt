@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF8596f4671508",
+  "_key": "!items!dtdF8596f4671508",
+  "name": "Human Perseverance",
+  "type": "feat",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "dtdFld3cb8412fdc",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>When challenged, you dig deep and push harder. Every opposed roll you make adds one raise to its final result.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 203
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Human",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

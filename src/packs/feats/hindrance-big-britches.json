@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF505a9827ee5a",
+  "_key": "!items!dtdF505a9827ee5a",
+  "name": "Big Britches",
+  "type": "feat",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>Your confidence has crossed into recklessness. You are convinced you can do anything and never refuse a challenge.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 208
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

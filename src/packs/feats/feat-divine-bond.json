@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF2ec3cf95fa32",
+  "_key": "!items!dtdF2ec3cf95fa32",
+  "name": "Divine Bond",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You can summon a holy steed, usually a warhorse but possibly any fitting mount or small ground vehicle, built with 100 VP under the Vehicle Creation rules. Summoning it is a full action and it stays for up to a day. If it is lost or destroyed, the steed needs three days to reform, during which this feat is unusable.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 183
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

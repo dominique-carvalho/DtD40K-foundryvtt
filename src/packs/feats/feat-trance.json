@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF0c5836e0963c",
+  "_key": "!items!dtdF0c5836e0963c",
+  "name": "Trance",
+  "type": "feat",
+  "img": "icons/svg/regen.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You can sink into a deep, fully aware trance, needing no movement, food, drink or even blinking for as many days as your Constitution score, and you may leave it at once. Afterwards you must eat and get a proper night's sleep before entering the trance again.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 196
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

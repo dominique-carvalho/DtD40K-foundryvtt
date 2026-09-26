@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFad181aa08ac3",
+  "_key": "!items!dtdFad181aa08ac3",
+  "name": "Fleet of Foot",
+  "type": "feat",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>A Full Move action lets you move extra meters equal to your Dex. When running, your movement can be doubled for a round. Doing so on back-to-back turns inflicts one level of fatigue.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 186
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

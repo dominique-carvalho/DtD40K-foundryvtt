@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF8bc5eca90418",
+  "_key": "!items!dtdF8bc5eca90418",
+  "name": "Catfall",
+  "type": "feat",
+  "img": "icons/svg/falling.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Falls you suffer are reduced by one level of severity, and you always come down on your feet.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 181
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

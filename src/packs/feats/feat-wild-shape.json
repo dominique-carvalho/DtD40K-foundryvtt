@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFff68009cd2d0",
+  "_key": "!items!dtdFff68009cd2d0",
+  "name": "Wild Shape",
+  "type": "feat",
+  "img": "icons/svg/pawprint.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>As a Full Action you take (or leave) the form of an ordinary animal, staying in it as long as you like; you may move 1 point between two physical stats (no stat below 1) and optionally gain Quadruped, Crawler or Amphibious. In animal form you cannot cast spells and handle objects poorly, and your gear merges into your body, granting none of its effects.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 197
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

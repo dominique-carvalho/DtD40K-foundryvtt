@@ -118,7 +118,8 @@
       "SocialInitiative": "Social Initiative",
       "Fatigue": "Fatigue",
       "Exaltation": "Exaltation Sheet",
-      "Feat": "Feat Sheet"
+      "Feat": "Feat Sheet",
+      "FromFeat": "From {feat} — removed with the feat"
     },
     "Roll": {
       "Success": "Success",
@@ -423,6 +424,57 @@
       "RequireType": {
         "feat": "Feat",
         "racePower": "Racial power"
+      },
+      "Feats": "Feats",
+      "Assets": "Assets",
+      "Hindrances": "Hindrances",
+      "XpGranted": "XP granted",
+      "Repeatable": "Can be taken more than once",
+      "Group": "Feat group (pick a sub-category)",
+      "Options": "Sub-categories",
+      "Subcategory": "Sub-category",
+      "SubcategoryHint": "Pick one from the list or type your own (with the GM's approval).",
+      "Requires": "Depends on",
+      "Grants": "Grants",
+      "Choose": "player's choice",
+      "Selection": "Choice",
+      "Race": "Race",
+      "DropHint": "Drag feats, assets and hindrances from the Feats compendium onto this sheet.",
+      "HindranceCount": "{count} / {max}",
+      "WrongRace": "Race does not match: {race} feat",
+      "GrantedBy": "Granted by {origin}",
+      "Purchased": "Purchased",
+      "Remove": "Remove",
+      "RemoveConfirm": "Remove {feat} and its bonuses from this character?",
+      "RemoveGranted": "{feat} was granted by {origin}; it leaves with it. Only the GM can remove it separately.",
+      "AlreadyGranted": "{feat} was already granted; it is now also marked as purchased.",
+      "GMOverrideTitle": "Add it anyway?",
+      "GMOverride": "As the GM you can add it anyway.",
+      "MissingDependencyTitle": "Missing dependency",
+      "MissingDependency": "{feat} builds on {names}, which the character does not have. Add it anyway?",
+      "GrantMissing": "{feat} (granted by {origin}) was not found in the Feats compendium.",
+      "Effect": "{feat}: {effect}",
+      "ChooseTitle": "Choices — {feat}",
+      "ChooseIntro": "Pick the choices of {feat}.",
+      "ChooseCharacteristic": "Characteristic",
+      "ChooseCharacteristic2": "Characteristic that loses 1",
+      "ChooseSkill": "Skill",
+      "Specialty": "Specialty",
+      "Notice": {
+        "creationOnly": "Assets and hindrances are normally chosen during character creation.",
+        "extraHindrances": "The book asks for {count} extra hindrance(s) that give no XP with this asset."
+      },
+      "Error": {
+        "notRepeatable": "The character already has {feat}, and it can only be taken once.",
+        "duplicate": "The character already has {feat}.",
+        "wrongRace": "{feat} is a {race} racial feat.",
+        "noRace": "{feat} is a racial feat: apply a race first.",
+        "hindranceLimit": "A character can have at most two hindrances.",
+        "noSubcategory": "Pick or type a sub-category.",
+        "characteristic": "Pick one of the listed characteristics.",
+        "characteristic2": "Pick a different characteristic to lose 1.",
+        "skill": "Pick a skill.",
+        "specialty": "Type the specialty."
       }
     }
   }

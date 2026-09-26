@@ -1,0 +1,46 @@
+{
+  "_id": "dtdFd6fc45c3d1a8",
+  "_key": "!items!dtdFd6fc45c3d1a8",
+  "name": "Nekomimi Mode",
+  "type": "feat",
+  "img": "icons/svg/pawprint.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You may shift only partly when using Wild Shape, keeping a humanoid look and access to your equipment, which does not merge into your form. The partial shift lasts at most five rounds, after which you revert and are barred from Wild Shape for an hour.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 192
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "feat",
+        "name": "Wild Shape"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

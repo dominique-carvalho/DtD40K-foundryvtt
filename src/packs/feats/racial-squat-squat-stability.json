@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF0cf22720d1b7",
+  "_key": "!items!dtdF0cf22720d1b7",
+  "name": "Squat Stability",
+  "type": "feat",
+  "img": "icons/svg/statue.svg",
+  "folder": "dtdFld6a6ced1218",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Your low, sturdy build keeps you upright. Whenever an enemy effect would shove you or leave you prone can be ignored.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 204
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Squat",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF4d8cd25895d3",
+  "_key": "!items!dtdF4d8cd25895d3",
+  "name": "Binary Chatter",
+  "type": "feat",
+  "img": "icons/svg/sound.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You can interface with computers simply by speaking to them in modem noises, and you gain +2k0 on every Tech-Use test that involves computers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 181
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

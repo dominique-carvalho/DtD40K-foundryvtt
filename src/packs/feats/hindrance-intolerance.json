@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF444d7e1ad3c6",
+  "_key": "!items!dtdF444d7e1ad3c6",
+  "name": "Intolerance",
+  "type": "feat",
+  "img": "icons/svg/terror.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>You cannot abide a particular kind of people (Orks, sorcerers, politicians, etc.) and avoid them whenever you can. When made to work alongside them, you insult and provoke them at every opportunity.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 209
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

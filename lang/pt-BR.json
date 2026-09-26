@@ -118,7 +118,8 @@
       "SocialInitiative": "Iniciativa social",
       "Fatigue": "Fatigue",
       "Exaltation": "Ficha de Exaltação",
-      "Feat": "Ficha de Feat"
+      "Feat": "Ficha de Feat",
+      "FromFeat": "De {feat} — sai junto com o feat"
     },
     "Roll": {
       "Success": "Sucesso",
@@ -423,6 +424,57 @@
       "RequireType": {
         "feat": "Feat",
         "racePower": "Poder racial"
+      },
+      "Feats": "Feats",
+      "Assets": "Assets",
+      "Hindrances": "Hindrances",
+      "XpGranted": "XP concedido",
+      "Repeatable": "Pode ser escolhido mais de uma vez",
+      "Group": "Feat de grupo (escolha uma subcategoria)",
+      "Options": "Subcategorias",
+      "Subcategory": "Subcategoria",
+      "SubcategoryHint": "Escolha uma da lista ou digite outra (com aprovação do Mestre).",
+      "Requires": "Depende de",
+      "Grants": "Concede",
+      "Choose": "à escolha",
+      "Selection": "Escolha",
+      "Race": "Raça",
+      "DropHint": "Arraste feats, assets e hindrances do compêndio Feats para esta ficha.",
+      "HindranceCount": "{count} / {max}",
+      "WrongRace": "Raça incompatível: feat de {race}",
+      "GrantedBy": "Concedido por {origin}",
+      "Purchased": "Comprado",
+      "Remove": "Remover",
+      "RemoveConfirm": "Remover {feat} e seus bônus deste personagem?",
+      "RemoveGranted": "{feat} foi concedido por {origin} e sai junto com ele. Só o Mestre pode removê-lo à parte.",
+      "AlreadyGranted": "{feat} já tinha sido concedido; agora também está marcado como comprado.",
+      "GMOverrideTitle": "Adicionar mesmo assim?",
+      "GMOverride": "Como Mestre, você pode adicioná-lo mesmo assim.",
+      "MissingDependencyTitle": "Dependência ausente",
+      "MissingDependency": "{feat} depende de {names}, que o personagem não tem. Adicionar mesmo assim?",
+      "GrantMissing": "{feat} (concedido por {origin}) não foi encontrado no compêndio Feats.",
+      "Effect": "{feat}: {effect}",
+      "ChooseTitle": "Escolhas — {feat}",
+      "ChooseIntro": "Faça as escolhas de {feat}.",
+      "ChooseCharacteristic": "Característica",
+      "ChooseCharacteristic2": "Característica que perde 1",
+      "ChooseSkill": "Perícia",
+      "Specialty": "Especialidade",
+      "Notice": {
+        "creationOnly": "Assets e hindrances normalmente são escolhidos na criação de personagem.",
+        "extraHindrances": "O livro pede {count} hindrance(s) extra(s), sem XP, junto com este asset."
+      },
+      "Error": {
+        "notRepeatable": "O personagem já tem {feat}, que só pode ser escolhido uma vez.",
+        "duplicate": "O personagem já tem {feat}.",
+        "wrongRace": "{feat} é um feat racial de {race}.",
+        "noRace": "{feat} é um feat racial: aplique uma raça antes.",
+        "hindranceLimit": "Um personagem pode ter no máximo dois hindrances.",
+        "noSubcategory": "Escolha ou digite uma subcategoria.",
+        "characteristic": "Escolha uma das características listadas.",
+        "characteristic2": "Escolha outra característica para perder 1.",
+        "skill": "Escolha uma perícia.",
+        "specialty": "Digite a especialidade."
       }
     }
   }

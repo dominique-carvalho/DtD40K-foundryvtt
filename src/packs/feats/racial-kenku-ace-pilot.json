@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFcc900b1997e5",
+  "_key": "!items!dtdFcc900b1997e5",
+  "name": "Ace Pilot",
+  "type": "feat",
+  "img": "icons/svg/wing.svg",
+  "folder": "dtdFld26c6a99191",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You can push any machine beyond its limits. While you act as Helmsman, the ship gains +5 Maneuverability, and any vehicle you control gets +5 to its maneuver.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 203
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Kenku",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF8943a4b48654",
+  "_key": "!items!dtdF8943a4b48654",
+  "name": "Decadence",
+  "type": "feat",
+  "img": "icons/svg/tankard.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your tolerance makes drugs and alcohol mostly harmless to you; at worst you sober up quickly enough to handle what is needed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 183
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF9a443b6563db",
+  "_key": "!items!dtdF9a443b6563db",
+  "name": "Bear Hug",
+  "type": "feat",
+  "img": "icons/svg/statue.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>While grappling, treat your Strength as 1 point higher for Break Free attempts made by you or your opponent, while the TN for them to Slip Free goes up by 5.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 181
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF0a96e94db6a0",
+  "_key": "!items!dtdF0a96e94db6a0",
+  "name": "Hard Target",
+  "type": "feat",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>After you charge or run, ranged Ballistic tests against you face a Static Defense raised by 10, lasting until your following turn is over.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 187
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

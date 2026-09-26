@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF55f168446e26",
+  "_key": "!items!dtdF55f168446e26",
+  "name": "Nature Sense",
+  "type": "feat",
+  "img": "icons/svg/oak.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>A sixth sense for the natural world works like Common Sense, but it warns you of natural perils such as a stalking predator, a bewildering forest or a lethal plant.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 192
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

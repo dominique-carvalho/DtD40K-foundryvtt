@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFbb82344d5589",
+  "_key": "!items!dtdFbb82344d5589",
+  "name": "Evasion",
+  "type": "feat",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When you make a dodge test, you may also move up to your Dexterity in meters. The attacker you dodged gets no opportunity attack for this movement, but other enemies still may.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 185
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

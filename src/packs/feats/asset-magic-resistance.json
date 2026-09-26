@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF09855d990fab",
+  "_key": "!items!dtdF09855d990fab",
+  "name": "Magic Resistance",
+  "type": "feat",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdFld9c04f67af9",
+  "system": {
+    "category": "asset",
+    "description": "<p>Spells have a hard time affecting you. Every spell aimed at you, whether beneficial or harmful, has its TN raised by 5.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 207
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

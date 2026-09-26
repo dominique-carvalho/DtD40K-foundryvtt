@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF13b37642e6e8",
+  "_key": "!items!dtdF13b37642e6e8",
+  "name": "Light Step",
+  "type": "feat",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdFld1291e1f3e7",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You move so softly you barely seem to touch the ground. You receive +2k0 on every Acrobatics and Stealth roll.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Elf",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

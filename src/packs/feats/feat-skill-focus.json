@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF971c0c3d7ecf",
+  "_key": "!items!dtdF971c0c3d7ecf",
+  "name": "Skill Focus",
+  "type": "feat",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You pick up one extra specialty in a skill of your choice, even without the 4 ranks normally required for it. Reaching 4 ranks in that skill still grants its usual specialty on top of this one.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 194
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": []
+    },
+    "requires": [],
+    "automation": "skillFocus",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

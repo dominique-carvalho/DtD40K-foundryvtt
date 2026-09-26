@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFd7b672bc3f1d",
+  "_key": "!items!dtdFd7b672bc3f1d",
+  "name": "Teacher",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFld26c6a99191",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>A few words of your advice can grant real insight. Anyone you can talk to, even over a commlink or radio, may borrow one of your specialties for their next skill test.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 203
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Kenku",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

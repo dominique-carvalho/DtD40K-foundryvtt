@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF4fdd43910f69",
+  "_key": "!items!dtdF4fdd43910f69",
+  "name": "Spirit Mentor",
+  "type": "feat",
+  "img": "icons/svg/cowled.svg",
+  "folder": "dtdFld9c04f67af9",
+  "system": {
+    "category": "asset",
+    "description": "<p>A ghostly guide accompanies you. The SM determines who the spirit is and what it can do, but you can turn to it for aid and advice when things get tough.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 207
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

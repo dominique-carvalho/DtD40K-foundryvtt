@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF9f6a5bbe2f14",
+  "_key": "!items!dtdF9f6a5bbe2f14",
+  "name": "Perfect Self",
+  "type": "feat",
+  "img": "icons/svg/sun.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>As long as you meditate for an hour each day, food, drink and sleep become unnecessary for you. You also gain an Aura equal to your Wisdom score.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 192
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

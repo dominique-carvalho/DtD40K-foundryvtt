@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFea6afcae368b",
+  "_key": "!items!dtdFea6afcae368b",
+  "name": "Mechanicus Implants",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>As an initiate of the Omnissiah's priesthood you receive these implants: an Electro-Graft (interface with machine ports and some data nets), Electoo Inductors (emit or draw power), a Respirator Unit (+1k1 against gas weapons and toxins carried in the air, plus a vox-synthesizer), a Cyber-Mantle (anchor for later implants) and a Potentia Coil (stores energy and projects fields).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 191
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF327ab0248bcd",
+  "_key": "!items!dtdF327ab0248bcd",
+  "name": "Channel Energy",
+  "type": "feat",
+  "img": "icons/svg/regen.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Touching a target, whether with a Brawl strike or as a Half Action, lets you spend resource points; each point spent either heals it 1 Hit Point or deals it 1 wound.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 181
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

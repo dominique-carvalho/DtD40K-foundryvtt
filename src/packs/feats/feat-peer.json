@@ -1,0 +1,53 @@
+{
+  "_id": "dtdF6d2500973536",
+  "_key": "!items!dtdF6d2500973536",
+  "name": "Peer",
+  "type": "feat",
+  "img": "icons/svg/castle.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You know how to deal with one chosen social group or organization. Its members treat their Disposition toward you as one level higher unless they have solid cause not to.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 192
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Academics",
+        "Sigil's Factions",
+        "Churches",
+        "Specific Races",
+        "Government",
+        "The Military",
+        "Middle Classes",
+        "Nobility",
+        "the Insane",
+        "Underworld",
+        "Workers"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

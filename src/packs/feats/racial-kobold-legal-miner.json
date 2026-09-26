@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFbdfc694258c3",
+  "_key": "!items!dtdFbdfc694258c3",
+  "name": "Legal Miner",
+  "type": "feat",
+  "img": "icons/svg/anchor.svg",
+  "folder": "dtdFld6d2610db52",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Raised deep underground in the mines, you instinctively spot anything odd about worked stone. You lower by 10 the TN for spotting traps, secret doors and similar features.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 203
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Kobold",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

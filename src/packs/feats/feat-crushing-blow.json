@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF73820ca8fb49",
+  "_key": "!items!dtdF73820ca8fb49",
+  "name": "Crushing Blow",
+  "type": "feat",
+  "img": "icons/svg/daze.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your melee attacks deal +5 damage.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 182
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

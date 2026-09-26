@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFdf4d9ae004a2",
+  "_key": "!items!dtdFdf4d9ae004a2",
+  "name": "Gain Access",
+  "type": "feat",
+  "img": "icons/svg/padlock.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your crypto-keys and intrusion tools earn you +1k1 on every Tech-Use test to hack systems or break into electronic databases. When you act as a ship's Chief Arcana Officer, the same +1k1 applies to your Spell Jamming tests.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 186
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

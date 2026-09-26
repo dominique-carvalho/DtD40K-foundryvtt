@@ -1,0 +1,47 @@
+{
+  "_id": "dtdF5c891175b6ff",
+  "_key": "!items!dtdF5c891175b6ff",
+  "name": "Lightning Bug",
+  "type": "feat",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdFldf1fafa6103",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Rare bioluminescence lets you glow like a lantern at will, shifting the color and brightness across red, green and yellow hues, and you can channel your inner energy into a bio-electric bolt. This grants you the Luminen Blast feat, and Shocking cannot harm you.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 204
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Thri-Kreen",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [
+      {
+        "name": "Luminen Blast",
+        "subcategory": "",
+        "choose": false
+      }
+    ],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

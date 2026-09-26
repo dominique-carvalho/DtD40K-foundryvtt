@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF78028e057180",
+  "_key": "!items!dtdF78028e057180",
+  "name": "Nine Lives",
+  "type": "feat",
+  "img": "icons/svg/heal.svg",
+  "folder": "dtdFld9c04f67af9",
+  "system": {
+    "category": "asset",
+    "description": "<p>You receive one additional Hero Point that can only be burned, never spent. Once burned, it comes back just as other burned Hero Points do.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 207
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "nineLives",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

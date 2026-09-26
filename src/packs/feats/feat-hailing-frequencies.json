@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF6f54f8ff0e44",
+  "_key": "!items!dtdF6f54f8ff0e44",
+  "name": "Hailing Frequencies",
+  "type": "feat",
+  "img": "icons/svg/sound.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Aboard a ship, even when you are not the Captain, a Hail action you use compels the target to answer. Used during combat, it ends ship combat at once and starts social combat instead, which at least lets you learn why most NPC ships are firing and possibly talk them down.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 187
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

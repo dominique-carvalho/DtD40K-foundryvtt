@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFa2e1dc4dd1d0",
+  "_key": "!items!dtdFa2e1dc4dd1d0",
+  "name": "Squat Armor Proficiency",
+  "type": "feat",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdFld6a6ced1218",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Squats carry heavy loads with ease and sit low to the ground. Armor you are proficient with imposes no Static Defense penalty, and armor you are not proficient with imposes only half its penalty.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 204
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Squat",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

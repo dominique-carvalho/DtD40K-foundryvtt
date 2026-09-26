@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF70168768f4b5",
+  "_key": "!items!dtdF70168768f4b5",
+  "name": "Mana Generator",
+  "type": "feat",
+  "img": "icons/svg/aura.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Using Aid Another, you can grant a caster one free raise for their next Focus Power test. That raise vanishes if the caster has not rolled a Focus Power test by the start of your next turn.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 191
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

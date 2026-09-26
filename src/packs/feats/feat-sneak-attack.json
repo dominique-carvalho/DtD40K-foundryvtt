@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF027f866e7f90",
+  "_key": "!items!dtdF027f866e7f90",
+  "name": "Sneak Attack",
+  "type": "feat",
+  "img": "icons/svg/cowled.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Against a target that is not aware of your attack, its armor counts as half its value (round up). Such targets also still suffer their normal static defense penalty where that applies.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 194
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

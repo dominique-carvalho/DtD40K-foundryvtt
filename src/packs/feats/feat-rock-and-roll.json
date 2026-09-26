@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF0c168e2c7de3",
+  "_key": "!items!dtdF0c168e2c7de3",
+  "name": "Rock and Roll",
+  "type": "feat",
+  "img": "icons/svg/fire.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Each consecutive round in which you use Full Auto Burst adds one free raise on its attack roll: none in the first round, one in the second, two in the third, and so on. Stopping (for example to reload) resets the count.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 193
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

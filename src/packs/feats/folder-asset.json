@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFld9c04f67af9",
+  "_key": "!folders!dtdFld9c04f67af9",
+  "name": "Assets",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "featFolder": "asset"
+    }
+  }
+}

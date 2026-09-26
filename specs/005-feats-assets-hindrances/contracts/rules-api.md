@@ -43,7 +43,7 @@ Sem globais do Foundry (constituição III). Testes: `tests/unit/feat.test.mjs`,
 
 ## `packs.test.mjs` (acréscimo)
 
-- `feats`: 274 feats + 21 pastas (Feats, Racial Feats, 16 raças, Assets, Hindrances); por categoria 181/49/22/22; 3 feats raciais por raça (Kobold 4), `prerequisites.race` = nome do pack Races e pasta da raça; nomes iguais às listas da spec (assets, hindrances, raciais); grupos e opções dos 22 repetíveis; XP (100 / hindrance `xpCost` 0, `xpGranted` 100); `automation` nos 15 automatizados; `grants` de Academy, Kenjutsu, K'sten'mannav, Lightning Bug; `requires` da tabela de dependências; `_id`/`_key` únicos.
+- `feats`: 274 feats + 20 pastas (Feats, Racial Feats, 16 raças, Assets, Hindrances); por categoria 181/49/22/22; 3 feats raciais por raça (Kobold 4), `prerequisites.race` = nome do pack Races e pasta da raça; nomes iguais às listas da spec (assets, hindrances, raciais); grupos e opções dos 22 repetíveis; XP (100 / hindrance `xpCost` 0, `xpGranted` 100); `automation` nos 15 automatizados; `grants` de Academy, Kenjutsu, K'sten'mannav, Lightning Bug; `requires` da tabela de dependências; `_id`/`_key` únicos.
 - `races`: Aasimar e Gnome com os `grants` da spec; demais `[]`.
 - `exaltations`: Atlantean e Promethean com `grants` (rank 1); demais `[]`.
 - `exalted-assets`: You Will Not Falter, Tuning, Ventrue com `grants`; todo nome concedido existe no pack `feats`.

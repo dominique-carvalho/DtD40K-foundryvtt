@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFe10663a68fa0",
+  "_key": "!items!dtdFe10663a68fa0",
+  "name": "Ferric Summons",
+  "type": "feat",
+  "img": "icons/svg/net.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>As a Half Action, draw an unsecured metal object you can see, weighing up to twice your Willpower in kilograms and within 40 meters, flying into your hand.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 186
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

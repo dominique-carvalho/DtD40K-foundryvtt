@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFda50f9314640",
+  "_key": "!items!dtdFda50f9314640",
+  "name": "Night Terrors",
+  "type": "feat",
+  "img": "icons/svg/terror.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>The dangers you have faced return in your dreams. Sleeping well is hard for you even in good times, and far worse under stress.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 210
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

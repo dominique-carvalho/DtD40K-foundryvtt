@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFad0e21b15339",
+  "_key": "!items!dtdFad0e21b15339",
+  "name": "Crushing Bear",
+  "type": "feat",
+  "img": "icons/svg/statue.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>While you are grappling someone, you automatically inflict your unarmed strike damage on them every turn, on top of any other grapple actions.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 182
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

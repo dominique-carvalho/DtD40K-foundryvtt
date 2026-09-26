@@ -1,0 +1,47 @@
+{
+  "_id": "dtdF062bc0a90ed2",
+  "_key": "!items!dtdF062bc0a90ed2",
+  "name": "Kenjutsu",
+  "type": "feat",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdFld26c6a99191",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You study the revered martial and mystic traditions of the Kenku. This feat grants you the Extracurricular Study feat.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 203
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Kenku",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [
+      {
+        "name": "Extracurricular Study",
+        "subcategory": "",
+        "choose": false
+      }
+    ],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFfc31da32b1bf",
+  "_key": "!items!dtdFfc31da32b1bf",
+  "name": "Double Tap",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Using the Multiple Attacks action, one weapon can fire twice in single-shot mode, at one target or two. The weapon must be able to fire consecutive single shots.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 184
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

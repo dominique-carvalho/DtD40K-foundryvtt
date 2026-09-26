@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF8c6a56b50ba0",
+  "_key": "!items!dtdF8c6a56b50ba0",
+  "name": "Education",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFld9c04f67af9",
+  "system": {
+    "category": "asset",
+    "description": "<p>You studied at a well-regarded school. You gain free Lore specialties, as many as your starting Intelligence.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 206
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

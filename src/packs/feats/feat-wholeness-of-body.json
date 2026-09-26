@@ -1,0 +1,44 @@
+{
+  "_id": "dtdF9b429456cbee",
+  "_key": "!items!dtdF9b429456cbee",
+  "name": "Wholeness of Body",
+  "type": "feat",
+  "img": "icons/svg/statue.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You gain Armor whose rating matches the Characteristic listed with the feat (Wisdom or Constitution). It works like any other normal armor source and, as usual, does not stack with other armor.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 197
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Wisdom",
+        "Constitution"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

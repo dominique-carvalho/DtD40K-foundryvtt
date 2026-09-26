@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF2025b9598ff0",
+  "_key": "!items!dtdF2025b9598ff0",
+  "name": "Able Learner",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFld3cb8412fdc",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Humans pick up new skills with ease. While in Free Study, you always purchase skills at their normal cost.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 203
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Human",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

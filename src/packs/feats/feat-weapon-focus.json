@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFfc50e516b01c",
+  "_key": "!items!dtdFfc50e516b01c",
+  "name": "Weapon Focus",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Pick one specific weapon type (for example Shotgun rather than a whole category like Ordinary Weapons) and gain +2k0 to attacks with it. The bonus covers every weapon of that type whatever its make or quality, but not other types sharing its proficiency.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 197
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

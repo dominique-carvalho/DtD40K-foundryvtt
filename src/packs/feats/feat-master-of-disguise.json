@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF53e0fd6a5832",
+  "_key": "!items!dtdF53e0fd6a5832",
+  "name": "Master of Disguise",
+  "type": "feat",
+  "img": "icons/svg/cowled.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When nobody you intend to fool is watching, you can put on a disguise as a single Full Action with no loss in quality. You also always count as having at least adequate disguise materials.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 191
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

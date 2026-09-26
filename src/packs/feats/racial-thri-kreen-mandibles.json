@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF26572ed7943d",
+  "_key": "!items!dtdF26572ed7943d",
+  "name": "Mandibles",
+  "type": "feat",
+  "img": "icons/svg/pawprint.svg",
+  "folder": "dtdFldf1fafa6103",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Your bite carries a far stronger venom than that of most Thri-Kreen. Your bite is a natural weapon: 1k2 R, Pen 4, with the Toxic, Brawling and Melee keywords.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 204
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Thri-Kreen",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -106,3 +106,27 @@ describe("race constants (002)", () => {
     expect(DTD.MAX_RATING).toBe(MAX_RATING);
   });
 });
+
+describe("exaltation and feat constants (004)", () => {
+  const expected = {
+    EXALTATION_FORMULAS: ["motes", "favor", "essence", "breath", "actionPoints", "pyros", "vitae", "rage", "plasm", "fixed"],
+    EXALTATION_POWER_AUTOMATION: ["none", "destiny", "statuesque", "perfection", "bloodQuickening"],
+    RESOURCE_ACTIONS: ["restoreAll", "regain", "lose", "unravel"],
+    RESOURCE_HEALING: ["outOfCombat", "anytime", "never"],
+    POWER_STAT_CAPS: ["level", "levelAndDevotion"],
+    FEAT_CATEGORIES: ["exaltedAsset"],
+    ASSET_GROUPS: [
+      "atlanteanCaste", "chosenMark", "daemonhostSin", "dragonbloodedBloodline", "paragon", "paragonRacial",
+      "prometheanMaterial", "vampireClan", "werewolfTribe", "wraithHaunting"
+    ],
+    ASSET_AUTOMATION: ["none", "actionHero", "extraAction", "bloodOfIo", "warboss", "longbeard", "markOfNurgle", "sloth", "elusive"],
+    LIMIT_EXEMPT_GROUPS: ["paragon", "paragonRacial"],
+    GENERIC_SPENDS: ["heal", "skill", "reaction", "stunned", "dazed"]
+  };
+
+  for (const [name, value] of Object.entries(expected)) {
+    it(`${name} matches the spec and is exposed in DTD`, () => {
+      expect(DTD[name]).toEqual(value);
+    });
+  }
+});

@@ -4,7 +4,9 @@
       "character": "Character"
     },
     "Item": {
-      "race": "Race"
+      "race": "Race",
+      "exaltation": "Exaltation",
+      "feat": "Feat"
     }
   },
   "DTD": {
@@ -211,6 +213,70 @@
       "FullText": "Full text",
       "FullTextHint": "Optional: paste the race's full text from your own copy of the book. It stays in this world only and is not shipped with the system.",
       "LockedPackHint": "This compendium is locked. To edit this race, right-click the Races compendium and choose \"{option}\". Changes to the system compendium are replaced when the system updates — export them with npm run extract:packs, or import the race into the world and edit the copy."
+    },
+    "Exaltation": {
+      "Formula": {
+        "motes": "Charisma + Intelligence + 2×Power Stat",
+        "favor": "Devotion + Power Stat",
+        "essence": "Willpower + Charisma + 2×Power Stat",
+        "breath": "2×Level",
+        "actionPoints": "Level + Power Stat",
+        "pyros": "3×Power Stat",
+        "vitae": "5×Power Stat",
+        "rage": "Composure + Willpower + Level",
+        "plasm": "Power Stat + Resolve",
+        "fixed": "Fixed value"
+      },
+      "Cap": {
+        "level": "Level",
+        "levelAndDevotion": "Level and half the Devotion (rounded up)"
+      },
+      "Action": {
+        "restoreAll": "Restore all",
+        "regain": "Regain {amount}",
+        "lose": "Lose {amount}",
+        "unravel": "Recover 1 ({debt})"
+      },
+      "Healing": {
+        "outOfCombat": "Heal 1 HP (out of combat, while resting)",
+        "anytime": "Heal 1 HP (also in combat)",
+        "never": "Cannot heal with the resource"
+      },
+      "Automation": {
+        "none": "Text only",
+        "destiny": "Destiny (+2 Hero Points)",
+        "statuesque": "Statuesque (+1 characteristic)",
+        "perfection": "Perfection (racial Paragon asset)",
+        "bloodQuickening": "Blood Quickening (element)"
+      }
+    },
+    "Asset": {
+      "Category": {
+        "exaltedAsset": "Exalted Asset"
+      },
+      "Group": {
+        "atlanteanCaste": "Atlantean Castes",
+        "chosenMark": "Chosen Marks",
+        "daemonhostSin": "Daemonhost Sins",
+        "dragonbloodedBloodline": "Dragonblooded Bloodlines",
+        "paragon": "Paragon Assets",
+        "paragonRacial": "Paragon Racial Assets",
+        "prometheanMaterial": "Promethean Materials",
+        "vampireClan": "Vampire Clans",
+        "werewolfTribe": "Werewolf Tribes",
+        "wraithHaunting": "Wraith Hauntings"
+      },
+      "Automation": {
+        "none": "Text only",
+        "actionHero": "Action Hero (+1 Hero Point)",
+        "extraAction": "Extra Action (+2 Action Points)",
+        "bloodOfIo": "Blood of Io (+Aspect Breath)",
+        "warboss": "Warboss (+1 Size)",
+        "longbeard": "Longbeard (+1 Resilience)",
+        "markOfNurgle": "Mark of Nurgle (+1 Resilience)",
+        "sloth": "Sloth (+2 HP)",
+        "elusive": "Elusive (no Size penalty to Static Defense)"
+      }
     }
   }
 }

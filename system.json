@@ -1,7 +1,7 @@
 {
   "id": "dtd40k",
   "title": "Dungeons the Dragoning",
-  "description": "Unofficial game system for Dungeons the Dragoning 1.6 (LawfulNice): Roll & Keep d10, characters, skills and derived values.",
+  "description": "Unofficial game system for Dungeons the Dragoning 7.7a (LawfulNice): Roll & Keep d10, characters, races and exaltations.",
   "version": "0.1.0",
   "compatibility": {
     "minimum": "13",
@@ -46,6 +46,22 @@
           "fullText",
           "power.description"
         ]
+      },
+      "exaltation": {
+        "htmlFields": [
+          "description",
+          "fullText",
+          "resource.recovery",
+          "tell",
+          "lore.origin",
+          "lore.appearance",
+          "lore.society"
+        ]
+      },
+      "feat": {
+        "htmlFields": [
+          "description"
+        ]
       }
     }
   },
@@ -54,6 +70,28 @@
       "name": "races",
       "label": "Races",
       "path": "packs/races",
+      "type": "Item",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "exaltations",
+      "label": "Exaltations",
+      "path": "packs/exaltations",
+      "type": "Item",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "exalted-assets",
+      "label": "Exalted Assets",
+      "path": "packs/exalted-assets",
       "type": "Item",
       "system": "dtd40k",
       "ownership": {

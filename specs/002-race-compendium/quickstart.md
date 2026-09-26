@@ -65,4 +65,13 @@ Esperado: `packs/races/` gerado sem erros; abrir o Foundry depois.
 
 | Data | Passos | Resultado | Observações |
 |---|---|---|---|
-| | | | |
+| 2026-09-25 | 1–5 (US1) | ✅ Aprovado | Validação feita pela pessoa que mantém o projeto no Foundry 13.351, mundo "teste dtd", após recompilar o pack com a DtD 7.7a: 16 raças no compêndio; Eldarin com fonte 7.7a p. 39; rótulos pt-BR/en. |
+| 2026-09-25 | 6–14, 20–24 (US2) | ✅ Aprovado | Inclui os passos 20b (ícone "i"), 20c (Texto completo) e 20d (edição com o compêndio destravado), acrescentados durante a validação. |
+| 2026-09-25 | 15–19 (US3) | ✅ Aprovado | Passo 18 feito com o Eldarin (único com usos por cena na 7.7a); Elf, Dark Eldarin e Dragonborn só com texto. |
+| 2026-09-25 | 25 e roteiro completo | ✅ Aprovado | Temas claro e escuro. |
+
+Ajustes feitos durante a validação (já incorporados à spec e às tarefas): lista de modificadores
+raciais com toggle do Mestre e ícone "i" (T054–T055); campo "Texto completo" (T056); descrições
+completas e edição pelo compêndio com `npm run extract:packs` (T057–T058); adoção da DtD 7.7a
+(T059–T061). Fora do escopo desta validação: rolar Acrobatics sem pontos (depende das rolagens da
+feature 001, US2).

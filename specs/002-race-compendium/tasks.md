@@ -78,7 +78,7 @@ Tabela de referência (quickstart passos 1–5)
 - [X] T019 [US1] Registrar em `dtd40k.mjs`: `foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", RaceSheet, { types: ["race"], makeDefault: true, label: "DTD.Sheet.Race" })`
 - [X] T020 [P] [US1] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `DTD.Sheet.Race` e `DTD.Race.{Race, Size, Power, Description, Lore, Height, Weight, Languages, Personality, Physical, Names, Source, Page, AnyCharacteristic, ChooseN, CharacteristicBonus, SkillBonus, Or, And, CommaSeparated}` (nomes de regras do livro ficam em inglês nos dois idiomas)
 - [X] T021 [P] [US1] Estilos da ficha da raça em `styles/dtd40k.css` (`.dtd40k.item.race`): grade de checkboxes em 3 colunas, seções com título, legível nos temas claro e escuro do v13 usando as variáveis de cor do tema
-- [ ] T022 [US1] Validar manualmente quickstart.md passos 1–5 e registrar em "Registro de validação" de `specs/002-race-compendium/quickstart.md` (incluir a revisão SC-005: nenhuma frase igual ao livro nas 12 descrições)
+- [X] T022 [US1] Validar manualmente quickstart.md passos 1–5 e registrar em "Registro de validação" de `specs/002-race-compendium/quickstart.md` (incluir a revisão SC-005: nenhuma frase igual ao livro nas 12 descrições)
 
 **Checkpoint**: compêndio Races utilizável como referência (MVP)
 
@@ -112,7 +112,7 @@ troca, remoção e reconfiguração; ficha com abas e valores base/final
 - [X] T035 [US2] Em `templates/actor/parts/header.hbs`: linha de identidade com "Race: <nome>" (`data-action="openRace"`) ou "—"; inputs `system.size` e `system.heroPoints.max` no modo edição com `value` do valor **base** (`baseSize`, `baseHeroPointsMax`) e o valor final ao lado quando diferente (research R3); em `templates/actor/parts/dots.hbs`, classe `racial` nos pontos raciais e ícone/tooltip `DTD.Race.Capped` quando `capped`
 - [X] T036 [P] [US2] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `DTD.Sheet.Tab.{main,traits}` e `DTD.Race.{None, DropHint, Choose, ChooseCharacteristic, ChooseSkills, Reconfigure, Remove, RemoveConfirm, Capped, RacialBonus, NotCharacter, OnlyOne, InvalidChoice, Base, Final, Effect.size, Effect.characteristic, Effect.skill, Effect.power}` (nomes de efeito com placeholders, ex. `"{race}: +1 {name}"`)
 - [X] T037 [P] [US2] Estilos em `styles/dtd40k.css`: navegação de abas abaixo do cabeçalho fixo, `.dot.racial` (cor distinta, legível nos dois temas), ícone de valor limitado, aba Traits, janela de escolha (grade de perícias em 3 colunas)
-- [ ] T038 [US2] Validar manualmente quickstart.md passos 6–14 e 20–24 e registrar em `specs/002-race-compendium/quickstart.md`
+- [X] T038 [US2] Validar manualmente quickstart.md passos 6–14 e 20–24 e registrar em `specs/002-race-compendium/quickstart.md`
 
 **Checkpoint**: raça aplicável, trocável e removível; sempre uma raça por personagem
 
@@ -138,7 +138,7 @@ troca, remoção e reconfiguração; ficha com abas e valores base/final
 - [X] T045 [US3] Em `module/documents/race-service.mjs`: Human (`heroicHeritage`) → após criar a raça, `heroPoints.value += 1` no `_source`; em `applyRace` (troca) e `removeRace`, após apagar a raça, se `system.heroPoints.value > system.heroPoints.max`, atualizar `heroPoints.value = max`
 - [X] T046 [US3] Na aba Traits (`templates/actor/parts/traits.hbs` + `module/apps/character-sheet.mjs`): para `usesPerScene`, mostrar "restantes / máximo" (`DTD.Race.Uses`) e botões `spendRaceUse` (incrementa `power.uses.spent` só se `remaining > 0`) e `resetRaceUses` (`spent = 0`, rótulo `DTD.Race.NewScene`), ambos só para donos; para `heroicHeritage`/`shifty`/`squatToughness`, selo "automático" (`DTD.Race.Automated`); para `none`, só o texto
 - [X] T047 [P] [US3] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `DTD.Race.{Uses, SpendUse, NewScene, Automated}`
-- [ ] T048 [US3] Validar manualmente quickstart.md passos 15–19 e registrar em `specs/002-race-compendium/quickstart.md`
+- [X] T048 [US3] Validar manualmente quickstart.md passos 15–19 e registrar em `specs/002-race-compendium/quickstart.md`
 
 **Checkpoint**: todas as histórias funcionando de forma independente
 
@@ -147,9 +147,9 @@ troca, remoção e reconfiguração; ficha com abas e valores base/final
 ## Phase 6: Polish & Cross-Cutting Concerns
 
 - [X] T049 [P] Rodar `npm run lint` e corrigir avisos em `dtd40k.mjs`, `module/**` e `scripts/**`
-- [ ] T050 [P] Revisar i18n: nenhuma string literal nova em `templates/**` ou `module/**` fora de `lang/*.json`; alternar pt-BR ↔ en (quickstart passo 5, SC-006)
+- [X] T050 [P] Revisar i18n: nenhuma string literal nova em `templates/**` ou `module/**` fora de `lang/*.json`; alternar pt-BR ↔ en (quickstart passo 5, SC-006)
 - [X] T051 [P] Documentar em `README.md` (criar a seção se o arquivo não existir) o comando `npm run build:packs`, a necessidade de fechar o Foundry durante o build e que `packs/` não é versionado
-- [ ] T052 Executar o roteiro completo de `specs/002-race-compendium/quickstart.md` (passos 1–25) nos temas claro e escuro e `npm test` com cobertura de `module/rules/**`
+- [X] T052 Executar o roteiro completo de `specs/002-race-compendium/quickstart.md` (passos 1–25) nos temas claro e escuro e `npm test` com cobertura de `module/rules/**`
 - [X] T053 Rodar `graphify update .` na raiz do repositório para atualizar o grafo de conhecimento
 
 ---

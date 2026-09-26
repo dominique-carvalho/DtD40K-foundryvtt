@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdce7266d261",
+  "_key": "!folders!dtdEFdce7266d261",
+  "name": "Gear",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Gear"
+    }
+  }
+}

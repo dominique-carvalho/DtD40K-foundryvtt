@@ -1,0 +1,49 @@
+{
+  "name": "Club",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>Any heavy object that can be swung to bash someone, from purpose-made cudgels to chair legs. Most improvised weapons use this profile.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "ubiquitous",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Ordinary",
+    "proficiencies": [
+      "Basic",
+      "Melee 1"
+    ],
+    "damage": {
+      "rolled": 1,
+      "kept": 2,
+      "type": "I"
+    },
+    "pen": 0,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE6abaf8045fe8",
+  "_key": "!items!dtdE6abaf8045fe8",
+  "folder": "dtdEFd7daa6a7e91"
+}

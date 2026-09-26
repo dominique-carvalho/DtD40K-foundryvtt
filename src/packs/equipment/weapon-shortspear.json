@@ -1,0 +1,48 @@
+{
+  "name": "Shortspear",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A short-hafted stabbing spear, often with a long head that can slash and chop when needed. It can be thrown out to 10m, using the Throwing proficiency when thrown.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "weaponType": "melee",
+    "thrown": true,
+    "group": "Cavalry",
+    "proficiencies": [
+      "Melee 1"
+    ],
+    "damage": {
+      "rolled": 2,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 3,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE852004c9e717",
+  "_key": "!items!dtdE852004c9e717",
+  "folder": "dtdEFdde2bee496e"
+}

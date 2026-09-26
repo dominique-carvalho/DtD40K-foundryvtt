@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdf7b4404729",
+  "_key": "!folders!dtdEFdf7b4404729",
+  "name": "Parrying",
+  "type": "Item",
+  "folder": "dtdEFdb4458b5ac3",
+  "description": "",
+  "sorting": "a",
+  "sort": 2000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Melee/Parrying"
+    }
+  }
+}

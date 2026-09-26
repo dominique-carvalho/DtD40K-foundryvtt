@@ -1,0 +1,67 @@
+{
+  "name": "Drive",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>An inhaled cognitive stimulant popular wherever people compete with their intellect, such as universities and law firms; users become so absorbed in a task that they ignore even obvious danger.</p><p>Through to the scene's end, the user has +1 to every mental characteristic, yet every Perception test they attempt fails automatically.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "drug",
+    "effectText": "+1 to all mental characteristics but auto-fail Perception, until end of scene.",
+    "addictivity": "moderate",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [
+    {
+      "name": "Drive",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.characteristics.int.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.wis.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.wil.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEf3021f61b165",
+      "_key": "!items.effects!dtdEb46889c1be2d.dtdEf3021f61b165"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdEb46889c1be2d",
+  "_key": "!items!dtdEb46889c1be2d",
+  "folder": "dtdEFdfa8d856bb2"
+}

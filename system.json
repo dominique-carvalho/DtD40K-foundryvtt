@@ -68,6 +68,21 @@
           "description",
           "completion.text"
         ]
+      },
+      "weapon": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "armor": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "gear": {
+        "htmlFields": [
+          "description"
+        ]
       }
     }
   },
@@ -120,6 +135,17 @@
       "name": "classes",
       "label": "Classes",
       "path": "packs/classes",
+      "type": "Item",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "equipment",
+      "label": "Equipment",
+      "path": "packs/equipment",
       "type": "Item",
       "system": "dtd40k",
       "ownership": {

@@ -1,0 +1,33 @@
+{
+  "name": "Essence Union Dart",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>A rune-covered tracking dart paired with a ring; within a kilometre or two the ring pulses toward the dart. If the dart hits a target in combat and stays lodged (removing it takes a half action), the ring's wearer ignores penalties for being unable to see that target, such as darkness or smoke.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 353
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Tracking dart with paired ring; if lodged, ring wearer ignores sight penalties against that target.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEd36f93396453",
+  "_key": "!items!dtdEd36f93396453",
+  "folder": "dtdEFdff25179125"
+}

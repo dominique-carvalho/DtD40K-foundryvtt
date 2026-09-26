@@ -1,0 +1,24 @@
+<div class="dtd40k roll-dialog acquire-dialog">
+  <p class="roll-dialog-summary">{{item.name}} · {{localize (concat "DTD.Rarity." item.system.rarity)}} · {{localize "DTD.Acquire.WealthPool" wealth=wealth}}</p>
+  <div class="form-group">
+    <label for="dtd-acquire-craft">{{localize "DTD.Equipment.Craftsmanship"}}</label>
+    <div class="form-fields">
+      <select id="dtd-acquire-craft" name="craftsmanship">
+        {{#each craftsmanship as |c|}}<option value="{{c.key}}"{{#if c.selected}} selected{{/if}}>{{localize (concat "DTD.Craftsmanship." c.key)}}</option>{{/each}}
+      </select>
+    </div>
+    <p class="hint">{{localize "DTD.Acquire.CraftHint"}}</p>
+  </div>
+  {{#if isArmor}}
+  <div class="form-group">
+    <label for="dtd-acquire-piece">{{localize "DTD.Equipment.Piece"}}</label>
+    <div class="form-fields">
+      <select id="dtd-acquire-piece" name="piece">
+        <option value="">{{localize "DTD.Equipment.Suit"}}</option>
+        {{#each pieces as |p|}}<option value="{{p}}">{{localize (concat "DTD.Location." p)}}</option>{{/each}}
+      </select>
+    </div>
+    <p class="hint">{{localize "DTD.Equipment.PieceHint"}}</p>
+  </div>
+  {{/if}}
+</div>

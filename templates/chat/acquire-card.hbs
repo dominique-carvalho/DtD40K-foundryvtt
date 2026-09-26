@@ -1,0 +1,9 @@
+<div class="dtd40k acquire-card-extra">
+  <p class="roll-card-note">{{rarity}} · {{craftsmanship}}{{#if piece}} · {{piece}}{{/if}} · {{localize "DTD.Acquire.Time"}}: {{time}}</p>
+  {{#if success}}
+  <p class="notification info">{{localize "DTD.Acquire.Gained" item=item}}</p>
+  {{#if strain.strained}}<p class="notification warning">{{localize "DTD.Acquire.Strain" roll=strain.roll penalty=strain.penalty}}</p>{{/if}}
+  {{else if canSpendLiquid}}
+  <button type="button" data-dtd-action="spendLiquid"><i class="fa-solid fa-sack-dollar" inert></i> {{localize "DTD.Acquire.SpendLiquid" liquid=liquid}}</button>
+  {{/if}}
+</div>

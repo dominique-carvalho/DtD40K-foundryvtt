@@ -1,0 +1,33 @@
+{
+  "name": "Backpack",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A bag with carrying straps, or some similar personal carrying device. It holds roughly 50 kg of gear.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryCommon",
+    "category": "gear",
+    "effectText": "Carrying bag holding roughly 50 kg.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE047226b90fe7",
+  "_key": "!items!dtdE047226b90fe7",
+  "folder": "dtdEFdce7266d261"
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd116e22f1c7",
+  "_key": "!folders!dtdEFd116e22f1c7",
+  "name": "Flamer",
+  "type": "Item",
+  "folder": "dtdEFda0831b4fb4",
+  "description": "",
+  "sorting": "a",
+  "sort": 8000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Guns/Flamer"
+    }
+  }
+}

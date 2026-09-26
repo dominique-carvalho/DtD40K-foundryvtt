@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd565f8a3bf5",
+  "_key": "!folders!dtdEFd565f8a3bf5",
+  "name": "Ordinary",
+  "type": "Item",
+  "folder": "dtdEFda0831b4fb4",
+  "description": "",
+  "sorting": "a",
+  "sort": 1000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Guns/Ordinary"
+    }
+  }
+}

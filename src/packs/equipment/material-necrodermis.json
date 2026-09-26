@@ -1,0 +1,33 @@
+{
+  "name": "Necrodermis",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>A dull grey, soul-trapping metal that is alive: always cold, seeming to pulse like something wormlike, and unsettling to anyone nearby. It follows the general magical-material rules (counts as Best, one hearthstone slot, magical damage).</p><p>Melee and ranged weapons deal +1k0 damage and impose -2k1 on attempts to parry or dodge them; special ammunition gains the Toxic quality; armour imposes -2k0 on attacks against the wearer. A bionic arm sheds all its critical damage at the start of each round and gives your unarmed or natural attacks the Toxic quality; bionic legs heal their critical damage each round the same way and let you rise from prone for free when your turn begins, without provoking Opportunity Attacks; with a bionic heart, whenever a Hero Point is about to be burned to stay alive, roll 1d10: on 5 or less it is kept.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 351
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "material",
+    "effectText": "Weapons impose -2k1 to parry/dodge and +1k0 damage; ammo Toxic; armour -2k0 to be hit; bionics self-heal crits.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEd3d38f1d7af0",
+  "_key": "!items!dtdEd3d38f1d7af0",
+  "folder": "dtdEFd57b6e1b8b7"
+}

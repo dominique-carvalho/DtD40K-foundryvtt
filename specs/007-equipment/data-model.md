@@ -71,7 +71,7 @@
 | `active` | booleano (droga em efeito) |
 | `mechadendrite` | booleano |
 | `location` | `""` ou localização (membro biônico: +2 AP ali) |
-| `socket` | booleano (Wonders que aceitam hearthstone) |
+| `sockets` | inteiro (encaixes de hearthstone de uma Wonder: Amulet 1, Bracers 2, Dragon Tear Tiara 3; item com material tem 1) |
 | `socketedIn` | id de item do mesmo ator (hearthstone) |
 | `grants` | `grantField` da 005 (Gem of the Calm Heart) |
 

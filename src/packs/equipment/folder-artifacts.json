@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFde226d8689b",
+  "_key": "!folders!dtdEFde226d8689b",
+  "name": "Artifacts",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 600000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Artifacts"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Gem of Immortality",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A deep black stone with a faint rainbow sheen. While carrying it the bearer does not age, is spared the ailments of old age, and cannot die of age or illness, though violence can still kill them. If the stone is lost, ageing simply resumes from where it stopped.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 354
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Bearer stops ageing and cannot be killed by age or sickness.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEa49c48982199",
+  "_key": "!items!dtdEa49c48982199",
+  "folder": "dtdEFd381b66ffa2"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Tranq",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>A catch-all name for sedatives, used medically and as non-lethal Needle weapon rounds for hunting or self-defence; very tough targets may shrug it off.</p><p>A dosed target suffers one fatigue level, then must pass a Constitution test at TN 15 or suffer 1d10 further levels of fatigue. This fatigue recovers normally.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "drug",
+    "effectText": "1 fatigue and Con TN 15; failure adds 1d10 more fatigue.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEa26db706d865",
+  "_key": "!items!dtdEa26db706d865",
+  "folder": "dtdEFdfa8d856bb2"
+}

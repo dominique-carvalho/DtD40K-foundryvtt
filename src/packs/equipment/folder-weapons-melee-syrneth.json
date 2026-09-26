@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd0bdcb36722",
+  "_key": "!folders!dtdEFd0bdcb36722",
+  "name": "Syrneth",
+  "type": "Item",
+  "folder": "dtdEFdb4458b5ac3",
+  "description": "",
+  "sorting": "a",
+  "sort": 7000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Melee/Syrneth"
+    }
+  }
+}

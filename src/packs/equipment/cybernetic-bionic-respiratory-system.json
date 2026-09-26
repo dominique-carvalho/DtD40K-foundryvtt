@@ -1,0 +1,33 @@
+{
+  "name": "Bionic Respiratory System",
+  "type": "gear",
+  "img": "icons/svg/circuit.svg",
+  "system": {
+    "description": "<p>Artificial lungs that keep the body oxygenated. Common: +2k0 on Tests against gas weapons and toxins carried in the air.</p><p>Poor: same bonus, but the noisy system imposes -2k0 on Stealth tests involving sound and every Test of strenuous physical effort needs an extra raise to succeed. Good: acts as full life support if the natural respiratory system fails, and can be built to go unnoticed. Best adds no further benefit beyond Good.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 336
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "cybernetic",
+    "effectText": "+2k0 vs airborne toxins/gas. Poor: -2k0 sound Stealth, strenuous tests need extra raise. Good: full life support.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE68c4b157df64",
+  "_key": "!items!dtdE68c4b157df64",
+  "folder": "dtdEFd0b575a3435"
+}

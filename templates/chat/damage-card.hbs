@@ -1,0 +1,25 @@
+<div class="dtd40k roll-card damage-card">
+  <header class="roll-card-header">
+    <h3 class="roll-card-title">{{label}}</h3>
+    <span class="roll-card-formula">{{formula}}</span>
+  </header>
+  {{#if notes.length}}<p class="roll-card-note">{{#each notes as |note|}}{{note}}{{#unless @last}} · {{/unless}}{{/each}}</p>{{/if}}
+  {{#if proven}}<p class="roll-card-note">{{localize "DTD.Attack.ProvenApplied" value=proven}}</p>{{/if}}
+  {{#if volatile}}<p class="roll-card-note">{{localize "DTD.Attack.VolatileApplied"}}</p>{{/if}}
+  <ol class="roll-card-dice">
+    {{#each dice as |die|}}
+    <li class="roll-die{{#if die.kept}} kept{{else}} dropped{{/if}}{{#if die.exploded}} exploded{{/if}}">
+      {{#if die.rerolled}}<s class="rerolled" data-tooltip="{{localize "DTD.Roll.Rerolled"}}">{{die.rerolled}}</s>{{/if}}
+      {{#if die.exploded}}<span class="chain">{{die.chainText}} =</span>{{/if}}
+      <span class="die-total">{{die.total}}</span>
+    </li>
+    {{/each}}
+  </ol>
+  <div class="roll-card-total">
+    <span>{{localize "DTD.Attack.Damage"}}</span>
+    <strong>{{total}}</strong>
+    {{#if type}}<span>{{type}}</span>{{/if}}
+    <span class="roll-card-tn">Pen {{pen}}</span>
+  </div>
+  <p class="attack-location">{{localize "DTD.Attack.Location"}}: <b>{{location}}</b>{{#if hits}} · {{localize "DTD.Attack.Hits" hits=hits}}{{/if}}</p>
+</div>

@@ -74,7 +74,7 @@ module/documents/equipment-service.mjs, attack-service.mjs, acquisition-service.
 module/documents/actor.mjs                  # rolagens somam modifiers.rolls
 module/apps/equipment-sheet.mjs, equipment-context.mjs, attack-dialog.mjs            # NOVOS
 module/apps/character-sheet.mjs             # aba equipment, drop, ações
-templates/item/{weapon,armor,gear}-sheet.hbs, templates/actor/parts/equipment.hbs
+templates/item/equipment-sheet.hbs (um template para os três tipos), templates/actor/parts/equipment.hbs
 templates/dialog/{attack-dialog,acquire-dialog}.hbs, templates/chat/{attack-card,damage-card,acquire-card}.hbs
 styles/dtd40k.css · lang/*.json
 tests/unit/equipment.test.mjs, weapon.test.mjs, acquisition.test.mjs, dice.test.mjs, derived.test.mjs,

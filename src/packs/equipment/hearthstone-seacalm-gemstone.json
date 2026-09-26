@@ -1,0 +1,33 @@
+{
+  "name": "Seacalm Gemstone",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A fist-sized drop of azure seawater frozen in place. The bearer breathes water like air and cannot drown, and unless they go to truly abyssal depths neither the pressure nor the cold of the sea can harm them.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 355
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Breathe water, resist pressure and cold of the sea.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE67e52e29dba5",
+  "_key": "!items!dtdE67e52e29dba5",
+  "folder": "dtdEFd381b66ffa2"
+}

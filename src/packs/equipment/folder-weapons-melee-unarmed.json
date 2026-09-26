@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd1c2f6421d0",
+  "_key": "!folders!dtdEFd1c2f6421d0",
+  "name": "Unarmed",
+  "type": "Item",
+  "folder": "dtdEFdb4458b5ac3",
+  "description": "",
+  "sorting": "a",
+  "sort": 10000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Melee/Unarmed"
+    }
+  }
+}

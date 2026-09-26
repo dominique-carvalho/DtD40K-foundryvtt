@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd381b66ffa2",
+  "_key": "!folders!dtdEFd381b66ffa2",
+  "name": "Hearthstones",
+  "type": "Item",
+  "folder": "dtdEFde226d8689b",
+  "description": "",
+  "sorting": "a",
+  "sort": 30000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Artifacts/Hearthstones"
+    }
+  }
+}

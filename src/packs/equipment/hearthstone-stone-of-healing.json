@@ -1,0 +1,61 @@
+{
+  "name": "Stone of Healing",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A mottled brown-and-green river stone that sharpens its bearer's medical skill, turning a novice into a capable surgeon and a physician into a brilliant healer. The bearer gains +1k1 on all Medicae rolls.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 355
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "+1k1 to all Medicae rolls.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [
+    {
+      "name": "Stone of Healing",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.modifiers.rolls.skills.medicae.rolled",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.modifiers.rolls.skills.medicae.kept",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEf5450361f101",
+      "_key": "!items.effects!dtdE042d7af3616c.dtdEf5450361f101"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdE042d7af3616c",
+  "_key": "!items!dtdE042d7af3616c",
+  "folder": "dtdEFd381b66ffa2"
+}

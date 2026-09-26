@@ -1,0 +1,53 @@
+{
+  "name": "Scythe",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A Syrneth weapon shaped like a short, crescent-bladed sickle. The visible blade is not what cuts: an invisible line of force stretching from its tip back to the handle forms an edge that slices through steel.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Syrneth",
+    "proficiencies": [
+      "Melee 3"
+    ],
+    "damage": {
+      "rolled": 4,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 8,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "powerField",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE7c45d467fb42",
+  "_key": "!items!dtdE7c45d467fb42",
+  "folder": "dtdEFd0bdcb36722"
+}

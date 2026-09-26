@@ -1,0 +1,33 @@
+{
+  "name": "Utility Mechadendrite",
+  "type": "gear",
+  "img": "icons/svg/circuit.svg",
+  "system": {
+    "description": "<p>A two-meter limb packed with tools. It works as a combi-tool, can hold almost any ordinary tool, and handles fine objects with great precision.</p><p>Only tech-priests can use mechadendrites, up to a number equal to their Constitution.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 336
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "cybernetic",
+    "effectText": "Acts as a combi-tool and can hold normal tools; capable of fine manipulation.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": true,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE3f3a2a62eb33",
+  "_key": "!items!dtdE3f3a2a62eb33",
+  "folder": "dtdEFd0b575a3435"
+}

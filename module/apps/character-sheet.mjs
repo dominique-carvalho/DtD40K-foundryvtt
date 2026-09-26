@@ -11,6 +11,13 @@ import { prepareFeatsContext } from "./feats-context.mjs";
 import { advanceInfo, prepareClassContext } from "./class-context.mjs";
 import { getCurrentClass, removeClass, startClass, uncompleteClass } from "../documents/class-service.mjs";
 import { advance, awardXp, undoXp } from "../documents/xp-service.mjs";
+import { prepareEquipmentContext } from "./equipment-context.mjs";
+import {
+  addEquipment, endDose, removeEquipment, setAddiction, setQuantity, socketHearthstone, toggleEquipped, unsocket, useDose
+} from "../documents/equipment-service.mjs";
+import { rollAttack } from "../documents/attack-service.mjs";
+import { acquire, endStrain } from "../documents/acquisition-service.mjs";
+import { ADDICTION_LEVELS } from "../config.mjs";
 import { needsChoice } from "../rules/race.mjs";
 import { buildDots, filterSkills, nextBaseValue, sanitizeDerivedMods } from "../rules/sheet.mjs";
 import { buildCharacteristicPool, buildSkillPool, formatPool, normalizePool } from "../rules/pool.mjs";
@@ -20,7 +27,7 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 const TEMPLATE_ROOT = "systems/dtd40k/templates/actor/parts";
 // Advance mode spends XP (spec 006, research R7); edit mode stays free.
 const MODES = { EDIT: "edit", PLAY: "play", ADVANCE: "advance" };
-const TAB_IDS = ["main", "traits", "class"];
+const TAB_IDS = ["main", "traits", "equipment", "class"];
 
 /**
  * Split a specialties list into the stored ones (editable) and those added by feat effects.
@@ -87,7 +94,18 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       undoXp: CharacterSheet.#onUndoXp,
       advanceCharacteristic: CharacterSheet.#onAdvance,
       advanceSkill: CharacterSheet.#onAdvance,
-      advancePowerStat: CharacterSheet.#onAdvance
+      advancePowerStat: CharacterSheet.#onAdvance,
+      openEquipment: CharacterSheet.#onOpenAsset,
+      toggleEquipped: CharacterSheet.#onToggleEquipped,
+      removeEquipment: CharacterSheet.#onRemoveEquipment,
+      rollAttack: CharacterSheet.#onRollAttack,
+      acquireItem: CharacterSheet.#onAcquireItem,
+      useDose: CharacterSheet.#onUseDose,
+      endDose: CharacterSheet.#onEndDose,
+      unsocket: CharacterSheet.#onUnsocket,
+      endStrain: CharacterSheet.#onEndStrain,
+      clearAttempts: CharacterSheet.#onClearAttempts,
+      endCreation: CharacterSheet.#onEndCreation
     }
   };
 
@@ -106,6 +124,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     tabs: { template: "templates/generic/tab-navigation.hbs" },
     main: { template: `${TEMPLATE_ROOT}/main.hbs` },
     traits: { template: `${TEMPLATE_ROOT}/traits.hbs` },
+    equipment: { template: `${TEMPLATE_ROOT}/equipment.hbs` },
     class: { template: `${TEMPLATE_ROOT}/class.hbs` },
     footer: { template: `${TEMPLATE_ROOT}/footer.hbs` }
   };
@@ -202,6 +221,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       isAdvance,
       isGM: game.user.isGM,
       classContext: await prepareClassContext(actor),
+      equipment: prepareEquipmentContext(actor),
+      addictionOptions: ADDICTION_LEVELS.map((key, value) => ({ value, label: game.i18n.localize(`DTD.Addiction.${key}`) })),
       currentClass: getCurrentClass(actor)?.name ?? "",
       hasClasses: system.classState.hasClasses,
       canEditRace: actor.isOwner,
@@ -332,6 +353,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       else if (item.type === "feat" && item.system.category !== "exaltedAsset") apply = () => addFeat(this.actor, item);
       else if (item.type === "exaltation") apply = () => applyExaltation(this.actor, item);
       else if (item.type === "feat" && item.system.category === "exaltedAsset") apply = () => addExaltedAsset(this.actor, item);
+      else if (["weapon", "armor", "gear"].includes(item.type)) apply = () => addEquipment(this.actor, item);
       if (apply) return this.actor.isOwner ? apply() : null;
     }
     return super._onDropItem(event, item);
@@ -356,6 +378,22 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     this.element.classList.toggle("mode-advance", context.isAdvance);
     this.#bindSpecialtyInputs();
     this.#bindSkillFilters();
+    this.#bindEquipmentInputs();
+  }
+
+  /** Quantity, hearthstone setting and addiction controls of the Equipment tab (spec 007). */
+  #bindEquipmentInputs() {
+    const bind = (selector, handler) => {
+      for (const control of this.element.querySelectorAll(selector)) {
+        control.addEventListener("change", (event) => {
+          event.stopPropagation();
+          handler(control);
+        });
+      }
+    };
+    bind(".quantity-input", (input) => setQuantity(this.document, input.dataset.itemId, input.value));
+    bind(".socket-select", (select) => select.value && socketHearthstone(this.document, select.dataset.itemId, select.value));
+    bind(".addiction-select", (select) => setAddiction(this.document, select.dataset.name, Number(select.value)));
   }
 
   /** Pressing Enter in a specialty field adds it instead of submitting the form. */
@@ -640,6 +678,101 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
    */
   static #onOpenAsset(event, target) {
     this.document.items.get(target.dataset.itemId)?.sheet.render(true);
+  }
+
+  /**
+   * Equip, wear or install an item (spec 007, FR-007).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onToggleEquipped(event, target) {
+    await toggleEquipped(this.document, target.dataset.itemId);
+  }
+
+  /**
+   * Remove an inventory item (spec 007, FR-007).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRemoveEquipment(event, target) {
+    await removeEquipment(this.document, target.dataset.itemId);
+  }
+
+  /**
+   * Roll an attack; Shift skips the dialog (spec 007, FR-014).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRollAttack(event, target) {
+    if (this.document.isOwner) await rollAttack(this.document, target.dataset.itemId, { fastForward: event.shiftKey });
+  }
+
+  /**
+   * Acquire another copy of an inventory item (spec 007, FR-021).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onAcquireItem(event, target) {
+    const item = this.document.items.get(target.dataset.itemId);
+    if (item && this.document.isOwner) await acquire(this.document, item);
+  }
+
+  /**
+   * Take a dose of a drug (spec 007, FR-025).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onUseDose(event, target) {
+    await useDose(this.document, target.dataset.itemId);
+  }
+
+  /**
+   * End the effect of a drug.
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onEndDose(event, target) {
+    await endDose(this.document, target.dataset.itemId);
+  }
+
+  /**
+   * Take a hearthstone out of its setting (spec 007, FR-029).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onUnsocket(event, target) {
+    await unsocket(this.document, target.dataset.itemId);
+  }
+
+  /**
+   * End the Wealth Strain penalty — GM only (spec 007, FR-023).
+   * @this {CharacterSheet}
+   */
+  static async #onEndStrain() {
+    await endStrain(this.document);
+  }
+
+  /**
+   * Forget the failed acquisition tries — GM only (new market or session).
+   * @this {CharacterSheet}
+   */
+  static async #onClearAttempts() {
+    if (game.user.isGM) await this.document.update({ "system.wealth.attempts": [] });
+  }
+
+  /**
+   * End character creation: starting picks are no longer asked — GM only (spec 007, FR-024).
+   * @this {CharacterSheet}
+   */
+  static async #onEndCreation() {
+    if (game.user.isGM) await this.document.update({ "system.creation.active": false });
   }
 
   /**

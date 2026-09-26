@@ -1,0 +1,48 @@
+{
+  "name": "Grenade Launcher",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A gas-powered launcher that fires grenades, either in high arcs as suppressive fire at unseen targets or indirectly at foes. Its damage, penetration and special qualities come from the grenade loaded; grenades used as its ammunition need no additional proficiency.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 324
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Launchers",
+    "proficiencies": [
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": ""
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 60,
+      "strMultiplier": 0
+    },
+    "clip": 6,
+    "reload": "2Full",
+    "qualities": [],
+    "ammoGroup": "grenade"
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE56e68cb5c411",
+  "_key": "!items!dtdE56e68cb5c411",
+  "folder": "dtdEFdabf42ae876"
+}

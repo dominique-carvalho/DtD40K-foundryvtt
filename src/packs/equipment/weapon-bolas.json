@@ -1,0 +1,58 @@
+{
+  "name": "Bolas",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A set of weighted balls (some designs carry up to eight) joined by heavy cords or wire, thrown to tangle a target's limbs. It deals no damage and is usually non-lethal, so bounty hunters and local law enforcement favour it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 324
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "weaponType": "thrown",
+    "thrown": false,
+    "group": "Primitive",
+    "proficiencies": [
+      "Basic",
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": ""
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 20,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "snare",
+        "value": null
+      },
+      {
+        "key": "inaccurate",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE0cbe77481fe4",
+  "_key": "!items!dtdE0cbe77481fe4",
+  "folder": "dtdEFd5d9fbb8ed3"
+}

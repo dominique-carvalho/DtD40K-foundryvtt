@@ -1,0 +1,58 @@
+{
+  "name": "Long Las",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A sniper's variant of the lasgun with a barrel up to twice as long, tuned for extra reach and precision. That length makes it awkward to handle at close quarters.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Las",
+    "proficiencies": [
+      "Basic",
+      "Ranged 2"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "E"
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 150,
+      "strMultiplier": 0
+    },
+    "clip": 20,
+    "reload": "Full",
+    "qualities": [
+      {
+        "key": "reliable",
+        "value": null
+      },
+      {
+        "key": "accurate",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEb8733e232ef8",
+  "_key": "!items!dtdEb8733e232ef8",
+  "folder": "dtdEFdadc2f25ef1"
+}

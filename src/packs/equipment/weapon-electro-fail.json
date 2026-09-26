@@ -1,0 +1,59 @@
+{
+  "name": "Electro-Fail",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>An electro-flail: a bundle of tendril-like lashes fixed to a short staff or grip. It has little reach, but its swarm of strikes is extremely good at incapacitating a foe.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [
+      "Electro-Flail"
+    ],
+    "rarity": "rare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Flail",
+    "proficiencies": [
+      "Melee 1"
+    ],
+    "damage": {
+      "rolled": 2,
+      "kept": 2,
+      "type": "I"
+    },
+    "pen": 0,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "flexible",
+        "value": null
+      },
+      {
+        "key": "shocking",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE49201e857173",
+  "_key": "!items!dtdE49201e857173",
+  "folder": "dtdEFdab67a2d814"
+}

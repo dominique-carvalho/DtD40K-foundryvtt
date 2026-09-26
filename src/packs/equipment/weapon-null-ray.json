@@ -1,0 +1,57 @@
+{
+  "name": "Null Ray",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>An ancient Syrneth rifle of glossy black material whose enchantments and arcane science cannot be reproduced. It projects a crackling violet beam that rips solid matter apart, is nearly impossible to defend against, and sells for fortunes on the rare occasions one appears.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Syrneth",
+    "proficiencies": [
+      "Ranged 2"
+    ],
+    "damage": {
+      "rolled": 6,
+      "kept": 3,
+      "type": "E"
+    },
+    "pen": 20,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 10,
+      "strMultiplier": 0
+    },
+    "clip": 4,
+    "reload": "2Full",
+    "qualities": [
+      {
+        "key": "recharge",
+        "value": null
+      },
+      {
+        "key": "volatile",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE9567d564f236",
+  "_key": "!items!dtdE9567d564f236",
+  "folder": "dtdEFdf29259f992"
+}

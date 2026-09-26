@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd0b575a3435",
+  "_key": "!folders!dtdEFd0b575a3435",
+  "name": "Cybernetics",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 400000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Cybernetics"
+    }
+  }
+}

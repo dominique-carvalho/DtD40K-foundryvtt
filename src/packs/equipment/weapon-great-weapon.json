@@ -1,0 +1,57 @@
+{
+  "name": "Great Weapon",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A generic profile for large two-handed weapons such as greataxes, big swords, glaives or huge iron clubs, which all hit about equally hard. Choose whether it deals Rending (R) or Impact (I) damage when it is purchased.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Two Handed",
+    "proficiencies": [
+      "Melee 3"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 3,
+      "type": ""
+    },
+    "pen": 4,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "twoHands",
+        "value": null
+      },
+      {
+        "key": "unbalanced",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEfbf49abefc4c",
+  "_key": "!items!dtdEfbf49abefc4c",
+  "folder": "dtdEFd7c35e0914e"
+}

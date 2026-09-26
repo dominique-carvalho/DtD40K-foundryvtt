@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdf29259f992",
+  "_key": "!folders!dtdEFdf29259f992",
+  "name": "Syrneth",
+  "type": "Item",
+  "folder": "dtdEFda0831b4fb4",
+  "description": "",
+  "sorting": "a",
+  "sort": 6000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Guns/Syrneth"
+    }
+  }
+}

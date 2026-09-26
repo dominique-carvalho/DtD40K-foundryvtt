@@ -175,6 +175,18 @@ export async function removeFeat(actor, itemId) {
 }
 
 /**
+ * Is a gear item in use: installed cybernetic, socketed hearthstone with an equipped host, equipped gear.
+ * @param {Item} item
+ */
+export function gearInUse(item) {
+  if (item.system.category === "hearthstone") {
+    const host = item.system.socketedIn ? item.actor?.items.get(item.system.socketedIn) : null;
+    return Boolean(host?.system.equipped);
+  }
+  return Boolean(item.system.equipped);
+}
+
+/**
  * Add the feats an item grants (race, exaltation from its Power Stat rank, feat or asset — FR-013).
  * Called by DtdItem#_onCreate on the author's client, and when the Power Stat changes.
  * @param {Actor} actor
@@ -185,6 +197,8 @@ export async function grantFeats(actor, origin) {
   if (origin.type === "exaltation") grants = activeGrants(origin.system, actor.system.exaltation?.powerStat.value ?? 1);
   // Class completion bonuses grant feats only once the class is completed (spec 006, research R4).
   if (origin.type === "class") grants = origin.system.status === "completed" ? origin.system.completion.grants : [];
+  // Equipment grants only while in use: a bionic installed, a hearthstone set in an equipped item (spec 007).
+  if (origin.type === "gear" && !gearInUse(origin)) grants = [];
   if (!grants.length) return;
 
   // Feats whose only origins already left the actor are being released: treat them as absent.

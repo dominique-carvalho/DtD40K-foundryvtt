@@ -34,8 +34,8 @@ Módulos sem globais do Foundry (constituição III). Casos de teste obrigatóri
 - Retorna `{ rolled, kept, requiredRaises, notes[] }`.
 - Casos: Ballistics 3, Level 2, proficiente → 5k3; não → 3k3; point blank +2k1; curto +1k0; longo `requiredRaises` 1,
   extremo 3; mira meia +1k0, completa +2k1; Accurate +1k0 extra na mira; Inaccurate sem bônus de mira; full auto +2k1;
-  Heavy sem brace −3k1 e sem full auto; Basic com uma mão −2k0 (Compact 0); Defensive −2k0 (e −2k0 extra sem
-  proficiência); Twin Linked +1k0 em tiro único; Weapon Focus +2k0; Orichalcum melee +2k0, ranged +1k1; Mithril melee
+  Heavy sem brace −3k1 e sem full auto; Basic com uma mão −2k0 (Compact 0); Defensive −2k0 (sem proficiência, o
+  livro estende os −2k0 aos outros ataques: texto); Twin Linked +1k0 em tiro único; Weapon Focus +2k0; Orichalcum melee +2k0, ranged +1k1; Mithril melee
   +1k1, ranged ignora brace e uma mão.
 
 ### `damagePool({ weapon, str, options, extraHits, specialization, raises })`
@@ -67,7 +67,8 @@ Módulos sem globais do Foundry (constituição III). Casos de teste obrigatóri
   Casos: rng fixo mostra o reroll do 2 com Proven (3) e não do 3.
 
 ## `rules/pool.mjs` (estendido)
-- `applyRollModifiers(base, rolls, skillKey)` → base + `rolls.all` + `rolls.skills[skillKey]`, `freeRaises`, `noExplode`.
+- `rollModifiers(rolls, skillKey)` → `{ rolled, kept, freeRaises, noExplode }` de `rolls.all` + `rolls.skills[skillKey]`;
+  `DtdActor#withRollModifiers` soma aos modificadores do diálogo.
 
 ## `rules/derived.mjs` (estendido)
 - `computeDerived(..., modifiers)`: `modifiers.armorPenalty` subtrai da Static Defense; `modifiers.maxDex` limita a Dex

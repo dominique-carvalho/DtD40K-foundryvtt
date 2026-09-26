@@ -1,0 +1,55 @@
+{
+  "name": "Collar of Dawn's Cleansing Light",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>While worn, this collar keeps its wearer spotless: dirt, mud and even stubborn stains slide off almost immediately, and many versions add a pleasant fragrance. The wearer gains +1k0 on Charm tests.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 352
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Keeps the wearer clean; +1k0 to Charm tests.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [
+    {
+      "name": "Collar of Dawn's Cleansing Light",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.modifiers.rolls.skills.charm.rolled",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEf01f980f042d",
+      "_key": "!items.effects!dtdEe56f40953f4e.dtdEf01f980f042d"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdEe56f40953f4e",
+  "_key": "!items!dtdEe56f40953f4e",
+  "folder": "dtdEFdff25179125"
+}

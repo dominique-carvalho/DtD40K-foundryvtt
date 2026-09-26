@@ -1,0 +1,58 @@
+{
+  "name": "Caestus",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A more elaborate fist weapon than brass knuckles, studded with spikes or blades that tear flesh. It is meant to frighten as well as to wound, and it does both well.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Unarmed",
+    "proficiencies": [
+      "Basic",
+      "Melee 2"
+    ],
+    "damage": {
+      "rolled": 1,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 2,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "brawling",
+        "value": null
+      },
+      {
+        "key": "armMounted",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE179a01636631",
+  "_key": "!items!dtdE179a01636631",
+  "folder": "dtdEFd1c2f6421d0"
+}

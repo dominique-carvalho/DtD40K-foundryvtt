@@ -1,0 +1,33 @@
+{
+  "name": "Mithril",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>A silvery magical metal found in wild, low-gravity places, flowing through the rock in sculpted veins; its items are remarkably light and built for mobility. It follows the general magical-material rules (counts as Best, one hearthstone slot, magical damage).</p><p>Melee weapons get +1k1 on attack and parry tests; ranged weapons suffer no penalty for firing heavy weapons unbraced or using a basic weapon one-handed; special ammunition doubles its range and loading it takes only a free action; armour has its Max Dex raised by 2. A bionic arm turns one Ready action each round into a free action and adds +1k1 to Dexterity tests and parries, while bionic legs give +4 Speed and +1k1 on Acrobatics, and a bionic heart gives an extra reaction each round.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 349
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "material",
+    "effectText": "Melee +1k1 attack/parry; ranged ignores bracing/one-hand penalties; ammo free-action load, double range; armour MaxDex +2; bionic bonuses.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEb13b8eaa5239",
+  "_key": "!items!dtdEb13b8eaa5239",
+  "folder": "dtdEFd57b6e1b8b7"
+}

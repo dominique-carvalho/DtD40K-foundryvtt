@@ -1,0 +1,55 @@
+{
+  "name": "Optical Mechadendrite",
+  "type": "gear",
+  "img": "icons/svg/circuit.svg",
+  "system": {
+    "description": "<p>A sensor limb up to three meters long that can thin to the width of a pencil, fitted with pict-capture devices. It gives +2k0 on all Perception tests, can examine surfaces microscopically and works as a telescopic sight.</p><p>Its infrared torch and sensors remove all darkness penalties, and it carries a light that can be tinted many colors. Only tech-priests can use mechadendrites, up to a number equal to their Constitution.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 336
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "cybernetic",
+    "effectText": "+2k0 Perception tests, microscope/telescopic sight, no darkness penalties, coloured light.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": true,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [
+    {
+      "name": "Optical Mechadendrite",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.modifiers.rolls.skills.perception.rolled",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEf5b159cac29b",
+      "_key": "!items.effects!dtdE86f82c54515e.dtdEf5b159cac29b"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdE86f82c54515e",
+  "_key": "!items!dtdE86f82c54515e",
+  "folder": "dtdEFd0b575a3435"
+}

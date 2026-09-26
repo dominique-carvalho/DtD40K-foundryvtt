@@ -1,0 +1,33 @@
+{
+  "name": "Chrono",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A simple, reliable timepiece, carried in the hand or strapped to the wrist.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "category": "gear",
+    "effectText": "Reliable timepiece, hand-held or worn on the wrist.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEeea5fada32cb",
+  "_key": "!items!dtdEeea5fada32cb",
+  "folder": "dtdEFdce7266d261"
+}

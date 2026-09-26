@@ -1,0 +1,33 @@
+{
+  "name": "Truth",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>An interrogation drug developed for police and state agents; it also brings on drowsiness and hallucinations, which questioners consider a bonus.</p><p>For one scene the subject must pass a Willpower test at TN 15 each time they try to deliberately tell a lie.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "drug",
+    "effectText": "Willpower TN 15 needed to knowingly lie, for one scene.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEefac058f37b1",
+  "_key": "!items!dtdEefac058f37b1",
+  "folder": "dtdEFdfa8d856bb2"
+}

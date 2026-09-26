@@ -1,0 +1,33 @@
+{
+  "name": "Silvery Box",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>A small jewellery-sized box that only its owner can open. An unowned box bonds to the first person to pick it up; an owner loses the bond by dying or by giving it up willingly. Every attempt by anyone else to open or destroy it automatically fails.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 352
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Small box only its owner can open; cannot be forced or destroyed.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE2c21feff7dbc",
+  "_key": "!items!dtdE2c21feff7dbc",
+  "folder": "dtdEFdff25179125"
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Hunting Rifle",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A precision rifle favoured by professional hunters and rich sportsmen. In trained hands it can bring down man or beast even at very long distances.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Ordinary",
+    "proficiencies": [
+      "Basic",
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 2,
+      "kept": 2,
+      "type": "I"
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 150,
+      "strMultiplier": 0
+    },
+    "clip": 5,
+    "reload": "Full",
+    "qualities": [
+      {
+        "key": "accurate",
+        "value": null
+      },
+      {
+        "key": "proven",
+        "value": 3
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE4c7969d4e88d",
+  "_key": "!items!dtdE4c7969d4e88d",
+  "folder": "dtdEFd565f8a3bf5"
+}

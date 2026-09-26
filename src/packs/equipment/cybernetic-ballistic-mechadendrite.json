@@ -1,0 +1,33 @@
+{
+  "name": "Ballistic Mechadendrite",
+  "type": "gear",
+  "img": "icons/svg/circuit.svg",
+  "system": {
+    "description": "<p>A two-meter shoulder-mounted limb carrying a miniature laspistol powered by the tech-priest's potentia coil; it counts as a laspistol.</p><p>It can fire as a Reaction or as a normal weapon during an attack action, but only once per round either way. Only tech-priests can use mechadendrites, up to a number equal to their Constitution.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 336
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "cybernetic",
+    "effectText": "Counts as a laspistol; fire as reaction or normal attack, but only once per round.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": true,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEebab6f585dc2",
+  "_key": "!items!dtdEebab6f585dc2",
+  "folder": "dtdEFd0b575a3435"
+}

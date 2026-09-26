@@ -1,0 +1,53 @@
+{
+  "name": "Flamer",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A fearsome projector of burning fuel that floods an area indiscriminately, ideal against foes behind cover or in tight spaces. Some models even work underwater or in vacuum.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Flamer",
+    "proficiencies": [
+      "Ranged 2"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "E"
+    },
+    "pen": 6,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 20,
+      "strMultiplier": 0
+    },
+    "clip": 3,
+    "reload": "2Full",
+    "qualities": [
+      {
+        "key": "flame",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE5c9480dd7e58",
+  "_key": "!items!dtdE5c9480dd7e58",
+  "folder": "dtdEFd116e22f1c7"
+}

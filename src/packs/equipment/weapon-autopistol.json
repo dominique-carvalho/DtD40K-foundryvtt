@@ -1,0 +1,49 @@
+{
+  "name": "Autopistol",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A small, fast-cycling automatic sidearm that fits in a coat pocket, which is why street gangs and outlaws carry it so often.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "weaponType": "pistol",
+    "thrown": false,
+    "group": "Ordinary",
+    "proficiencies": [
+      "Basic",
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 2,
+      "kept": 2,
+      "type": "I"
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 6
+    },
+    "range": {
+      "value": 30,
+      "strMultiplier": 0
+    },
+    "clip": 12,
+    "reload": "Full",
+    "qualities": [],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE1fffd18a8f8b",
+  "_key": "!items!dtdE1fffd18a8f8b",
+  "folder": "dtdEFd565f8a3bf5"
+}

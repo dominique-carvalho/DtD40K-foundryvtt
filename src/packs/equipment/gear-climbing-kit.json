@@ -1,0 +1,33 @@
+{
+  "name": "Climbing Kit",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A compact spool of safety line ending in a magnetic or hooked clasp. While using it to descend a vertical surface, a character cannot fall.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "category": "gear",
+    "effectText": "Spooled safety line with clasp; user cannot fall while descending a vertical surface.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE7fadc0d825b6",
+  "_key": "!items!dtdE7fadc0d825b6",
+  "folder": "dtdEFdce7266d261"
+}

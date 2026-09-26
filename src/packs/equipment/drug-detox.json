@@ -1,0 +1,33 @@
+{
+  "name": "Detox",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>A common anti-drug and anti-addiction treatment, most often worn as a skin patch, which leaves patients with headaches, red eyes and a foul temper.</p><p>It immediately cancels every drug currently affecting the user, and if they are in withdrawal its severity drops by one level.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "category": "drug",
+    "effectText": "Ends all active drug effects; lowers withdrawal severity by one level.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEb633cedcf671",
+  "_key": "!items!dtdEb633cedcf671",
+  "folder": "dtdEFdfa8d856bb2"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "SAW",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>The Squad Automatic Weapon, a belt-hungry support gun common on low-tech worlds and among hive gangs. It fires only on full auto and is meant for mowing down crowds or harassing lightly armoured vehicles.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Ordinary",
+    "proficiencies": [
+      "Basic",
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "I"
+    },
+    "pen": 5,
+    "rof": {
+      "single": false,
+      "auto": 10
+    },
+    "range": {
+      "value": 120,
+      "strMultiplier": 0
+    },
+    "clip": 100,
+    "reload": "Full",
+    "qualities": [],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE763e86ba6402",
+  "_key": "!items!dtdE763e86ba6402",
+  "folder": "dtdEFd565f8a3bf5"
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd4e864a2156",
+  "_key": "!folders!dtdEFd4e864a2156",
+  "name": "Other Ranged",
+  "type": "Item",
+  "folder": "dtdEFd4f550d3bee",
+  "description": "",
+  "sorting": "a",
+  "sort": 20000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Other Ranged"
+    }
+  }
+}

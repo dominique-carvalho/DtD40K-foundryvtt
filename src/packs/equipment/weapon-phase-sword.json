@@ -1,0 +1,57 @@
+{
+  "name": "Phase Sword",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>One of the deadliest weapons anyone can wield, forged with magical materials and closely guarded dark arts. Its edge is said to only half-exist, letting it pass through armour and cut the body beneath while leaving the armour unmarked.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Fencing",
+    "proficiencies": [
+      "Melee 2"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 7,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "balanced",
+        "value": null
+      },
+      {
+        "key": "powerField",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE92aa3ccc4786",
+  "_key": "!items!dtdE92aa3ccc4786",
+  "folder": "dtdEFdfba5700511"
+}

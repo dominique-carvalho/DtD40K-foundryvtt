@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdf705ea6722",
+  "_key": "!folders!dtdEFdf705ea6722",
+  "name": "Armor",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 200000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Armor"
+    }
+  }
+}

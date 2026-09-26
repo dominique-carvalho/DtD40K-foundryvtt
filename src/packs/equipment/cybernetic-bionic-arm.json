@@ -1,0 +1,33 @@
+{
+  "name": "Bionic Arm",
+  "type": "gear",
+  "img": "icons/svg/circuit.svg",
+  "system": {
+    "description": "<p>A replacement arm and hand; like all bionic limbs it gives +2 AP against hits to that location. Common arms match the original in strength, dexterity and touch.</p><p>Poor: Dexterity is halved for fine work, and Weaponry and Ballistics Tests with the arm take -2k0. Good: +1k0 on Dexterity Tests that need delicate handling, Sleight of Hand for example, plus +1k0 on Strength Tests with that arm. Best adds no further benefit beyond Good.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 336
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "cybernetic",
+    "effectText": "Poor: halves Dex for fine work, -2k0 Weaponry/Ballistics with it. Good: +1k0 delicate Dex tests and +1k0 Strength with that arm.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "arms",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEa1ca2e5a4d82",
+  "_key": "!items!dtdEa1ca2e5a4d82",
+  "folder": "dtdEFd0b575a3435"
+}

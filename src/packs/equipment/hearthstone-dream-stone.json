@@ -1,0 +1,33 @@
+{
+  "name": "Dream-Stone",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A smooth black stone with abstract white markings that makes its bearer's remembered dreams prophetic. Once per session, on waking, the bearer may roll Wisdom + Scrutiny at TN 15; any success recalls a dream hinting at future events, and more raises make the vision clearer.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 355
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Once per session Wis+Scrutiny TN 15 on waking for a prophetic dream.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEf3f80e8b1cd3",
+  "_key": "!items!dtdEf3f80e8b1cd3",
+  "folder": "dtdEFd381b66ffa2"
+}

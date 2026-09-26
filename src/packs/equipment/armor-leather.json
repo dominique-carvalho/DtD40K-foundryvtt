@@ -1,0 +1,30 @@
+{
+  "name": "Leather",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Primitive light armor of hardened leather; in a pinch most heavy or thick clothing counts as leathers.</p><p>Like all primitive armor, its rarity counts one step lower when it is chosen as an Artifact.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 333
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryCommon",
+    "armorType": "light",
+    "ap": 2,
+    "maxDex": null,
+    "piece": "",
+    "suitOnly": false,
+    "primitive": true
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE33b94c0e884e",
+  "_key": "!items!dtdE33b94c0e884e",
+  "folder": "dtdEFdf705ea6722"
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Shotgun",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A simple double-barrelled scattergun that the crudest workshops can turn out. Its devastating power at short range makes it a favourite for fighting in city streets and ship corridors.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Ordinary",
+    "proficiencies": [
+      "Basic",
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "I"
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 2
+    },
+    "range": {
+      "value": 10,
+      "strMultiplier": 0
+    },
+    "clip": 2,
+    "reload": "2Full",
+    "qualities": [
+      {
+        "key": "scatter",
+        "value": null
+      },
+      {
+        "key": "reliable",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE8ce37fb5c3d8",
+  "_key": "!items!dtdE8ce37fb5c3d8",
+  "folder": "dtdEFd565f8a3bf5"
+}

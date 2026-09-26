@@ -1,0 +1,33 @@
+{
+  "name": "Mind Impulse Unit",
+  "type": "gear",
+  "img": "icons/svg/circuit.svg",
+  "system": {
+    "description": "<p>A senselink port, usually in the spine or wrist, that lets the owner interface directly with machines. Common: +1k0 on Drive, Pilot or Tech-Use Tests with MIU-capable devices.</p><p>Poor: works like Common, but using it requires an Intelligence Test (TN 15). Good: +2k0 on those Tests instead, and often links wirelessly. Best adds no further benefit beyond Good.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 336
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "cybernetic",
+    "effectText": "Common: +1k0 Tech-Use/Pilot/Drive with MIU devices. Poor: needs Int Test TN 15. Good: +2k0, often wireless.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEf34880789f07",
+  "_key": "!items!dtdEf34880789f07",
+  "folder": "dtdEFd0b575a3435"
+}

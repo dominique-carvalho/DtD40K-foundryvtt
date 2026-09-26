@@ -1,0 +1,33 @@
+{
+  "name": "Windhands Gemstone",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A hearthstone so clear it vanishes in clean water, sharpening the bearer's reflexes. When targeted by a ranged attack, the bearer may parry it instead of dodging.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 354
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Bearer may parry ranged attacks instead of dodging.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEc65a8261ea08",
+  "_key": "!items!dtdEc65a8261ea08",
+  "folder": "dtdEFd381b66ffa2"
+}

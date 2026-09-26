@@ -1,0 +1,33 @@
+{
+  "name": "Hearthstone Amulet",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>An amulet of any style, from an elaborate pendant to a bare wire frame, whose only purpose is to hold one hearthstone so that the wearer can benefit from its power.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 352
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Setting that holds a hearthstone so the wearer gains its power.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 1,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE96368411b73b",
+  "_key": "!items!dtdE96368411b73b",
+  "folder": "dtdEFdff25179125"
+}

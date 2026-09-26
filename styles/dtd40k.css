@@ -983,29 +983,30 @@
 
 .dtd40k.sheet.item.exaltation .window-content,
 .dtd40k.sheet.item.feat .window-content,
-.dtd40k.sheet.item.class .window-content {
+.dtd40k.sheet.item.class .window-content,
+.dtd40k.sheet.item.equipment .window-content {
   padding: 0 0.75rem 0.75rem;
   overflow-y: auto;
   color: var(--dtd-text);
 }
 
-.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body, .class-sheet-body) {
+.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body, .class-sheet-body, .equipment-sheet-body) {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) .sheet-header {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .sheet-header {
   flex-direction: row;
   align-items: center;
   gap: 0.75rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) .profile-img[data-action] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .profile-img[data-action] {
   cursor: pointer;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) .item-name {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .item-name {
   margin: 0;
   font-size: 1.4rem;
   height: auto;
@@ -1013,54 +1014,54 @@
   color: var(--dtd-text);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) input.item-name {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) input.item-name {
   width: 100%;
   border-bottom: 1px solid var(--dtd-border);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) .identity-line input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .identity-line input[type="text"] {
   width: 6rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) :is(.exaltation-section, .feat-section, .class-section) {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) :is(.exaltation-section, .feat-section, .class-section, .equipment-section) {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) .form-group {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .form-group {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) .form-group > label:first-child {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .form-group > label:first-child {
   flex: 0 0 11rem;
   font-weight: bold;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) .form-group.stacked {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .form-group.stacked {
   flex-direction: column;
   align-items: stretch;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) :is(dl.exaltation-stats-list, dl.feat-stats, dl.class-stats) {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) :is(dl.exaltation-stats-list, dl.feat-stats, dl.class-stats) {
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: 0.25rem 0.75rem;
   margin: 0;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) dt {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) dt {
   font-weight: bold;
   color: var(--dtd-text-muted);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) dd {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) dd {
   margin: 0;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) .automation-tag {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .automation-tag {
   font-size: 0.8rem;
   font-weight: normal;
   color: var(--dtd-text-subtle);
@@ -1068,7 +1069,7 @@
   letter-spacing: 0.04em;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) prose-mirror {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) prose-mirror {
   min-height: 5rem;
 }
 
@@ -1077,13 +1078,13 @@
   padding-left: 1.25rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) .list-row {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .list-row {
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) .list-row input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .list-row input[type="text"] {
   flex: 1;
 }
 
@@ -1091,7 +1092,7 @@
   width: 3.5rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class) .list-control {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .list-control {
   cursor: pointer;
   margin-left: 0.3rem;
   font-size: 0.85rem;
@@ -1103,7 +1104,9 @@
   font-size: 1rem;
 }
 
-.dtd40k.item:is(.exaltation, .class) .tag {
+.dtd40k.item:is(.exaltation, .class, .equipment) .tag,
+.dtd40k .equipment-tab .tag,
+.dtd40k .attack-card-extra .tag {
   display: inline-block;
   margin: 0 0.3rem 0.2rem 0;
   padding: 0 0.4rem;
@@ -1526,4 +1529,169 @@
 .dtd40k .advance-button.refused {
   border-color: var(--dtd-border);
   color: var(--dtd-text-subtle);
+}
+
+/* ---------- Equipment tab, item sheet, attack and acquisition (spec 007) ---------- */
+
+.dtd40k .equipment-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dtd40k .armor-locations {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k .armor-locations li {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.25rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 4px;
+}
+
+.dtd40k .armor-locations .loc-label {
+  font-size: 0.72rem;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .armor-locations b {
+  font-size: 1.2rem;
+}
+
+.dtd40k .equipment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k .equipment-row {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0.2rem 0;
+  border-bottom: 1px dotted var(--dtd-border);
+}
+
+.dtd40k .equipment-row.inactive .equipment-name {
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .equipment-row.equipped .equip-toggle i {
+  color: var(--dtd-resolve);
+}
+
+.dtd40k .equipment-name {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: baseline;
+}
+
+.dtd40k .equipment-name .hint {
+  font-size: 0.75rem;
+}
+
+.dtd40k .equip-icon {
+  width: 1rem;
+  text-align: center;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .pool-button {
+  padding: 0 0.35rem;
+  border: 1px solid var(--dtd-accent);
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.dtd40k .equipment-row .pool {
+  white-space: nowrap;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .quantity-input {
+  width: 3rem;
+  text-align: center;
+}
+
+.dtd40k .socket-select,
+.dtd40k .addiction-select {
+  max-width: 12rem;
+}
+
+.dtd40k .wealth-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.dtd40k .wealth-fields input[type="number"] {
+  width: 3.5rem;
+}
+
+.dtd40k .slot-list {
+  display: flex;
+  gap: 1rem;
+  margin: 0 0 0.4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k .slot-list li.full {
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k.item.equipment .profile-grid,
+.dtd40k .equipment-section .profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.3rem 0.75rem;
+}
+
+.dtd40k .profile-grid label {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dtd40k .profile-grid input[type="number"] {
+  width: 3.5rem;
+}
+
+.dtd40k .pool-inputs {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.dtd40k .quality-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.dtd40k .attack-card-extra,
+.dtd40k .acquire-card-extra {
+  margin-top: 0.3rem;
+}
+
+.dtd40k .attack-location {
+  margin: 0.2rem 0;
+}
+
+.dtd40k .attack-damage-button,
+.dtd40k .acquire-card-extra button {
+  width: 100%;
+  margin-top: 0.3rem;
 }

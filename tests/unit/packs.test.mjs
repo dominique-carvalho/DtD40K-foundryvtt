@@ -2,7 +2,8 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
-  ASSET_AUTOMATION, ASSET_GROUPS, CHARACTERISTICS, EXALTATION_FORMULAS, RACE_POWER_AUTOMATION, RESOURCE_ACTIONS, SKILLS
+  ASSET_AUTOMATION, ASSET_GROUPS, CHARACTERISTICS, EXALTATION_FORMULAS, RACE_POWER_AUTOMATION, RESOURCE_ACTIONS, SKILLS,
+  RARITIES, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
 } from "../../module/config.mjs";
 
 /** Every JSON document of a compendium source folder. */
@@ -650,6 +651,113 @@ describe("classes compendium source (spec 006, SC-001)", () => {
       expect(doc.system.startedAt).toBe(0);
       expect(doc.system.completion.selection).toEqual({ skill: "", specialty: "" });
       expect(doc.effects).toEqual([]);
+    }
+  });
+});
+
+// ---------- Equipment (spec 007, SC-001; Tabela de referência) ----------
+
+const equipmentPack = readPack("src/packs/equipment");
+const equipmentFolders = equipmentPack.filter((doc) => doc._key.startsWith("!folders!"));
+const equipment = equipmentPack.filter((doc) => !doc._key.startsWith("!folders!"));
+const itemNamed = (name) => equipment.find((doc) => doc.name === name);
+const ofType = (type, category) => equipment.filter((doc) => doc.type === type && (!category || doc.system.category === category));
+
+describe("equipment compendium source (spec 007, SC-001)", () => {
+  const config = { RARITIES, WEAPON_PROFICIENCIES, WEAPON_QUALITIES };
+
+  it("has the 170 items of chapters XIII–XIV", () => {
+    expect(equipment).toHaveLength(170);
+    expect(ofType("weapon")).toHaveLength(73);
+    expect(ofType("armor")).toHaveLength(10);
+    expect(ofType("gear", "gear")).toHaveLength(18);
+    expect(ofType("gear", "cybernetic")).toHaveLength(16);
+    expect(ofType("gear", "cybernetic").filter((doc) => doc.system.mechadendrite)).toHaveLength(5);
+    expect(ofType("gear", "drug")).toHaveLength(16);
+    expect(ofType("gear", "material")).toHaveLength(5);
+    expect(ofType("gear", "wonder")).toHaveLength(16);
+    expect(ofType("gear", "hearthstone")).toHaveLength(16);
+  });
+
+  it("counts the weapons by group (28 guns, 17 other ranged, 28 melee)", () => {
+    const count = (filter) => ofType("weapon").filter(filter).length;
+    const other = ["Primitive", "Launchers", "Grenades and Missiles"];
+    expect(count((doc) => doc.system.weaponType === "melee")).toBe(28);
+    expect(count((doc) => doc.system.weaponType !== "melee" && other.includes(doc.system.group))).toBe(17);
+    expect(count((doc) => doc.system.weaponType !== "melee" && !other.includes(doc.system.group))).toBe(28);
+    const groups = {};
+    for (const doc of ofType("weapon")) {
+      const key = `${doc.system.weaponType === "melee" ? "melee" : "ranged"}:${doc.system.group}`;
+      groups[key] = (groups[key] ?? 0) + 1;
+    }
+    expect(groups).toEqual({
+      "ranged:Ordinary": 8, "ranged:Las": 5, "ranged:Plasma": 2, "ranged:Melta": 2, "ranged:Bolter": 3, "ranged:Syrneth": 2,
+      "ranged:Exotic": 4, "ranged:Flamer": 2, "ranged:Primitive": 6, "ranged:Launchers": 2, "ranged:Grenades and Missiles": 9,
+      "melee:Ordinary": 4, "melee:Parrying": 3, "melee:Cavalry": 3, "melee:Flail": 3, "melee:Fencing": 3, "melee:Two Handed": 3,
+      "melee:Syrneth": 3, "melee:Chain": 2, "melee:Shields": 1, "melee:Unarmed": 3
+    });
+  });
+
+  it("matches the reference items", () => {
+    expect(itemNamed("Autopistol").system).toMatchObject({
+      weaponType: "pistol", group: "Ordinary", proficiencies: ["Basic", "Ranged 1"], damage: { rolled: 2, kept: 2, type: "I" },
+      pen: 0, rof: { single: true, auto: 6 }, range: { value: 30, strMultiplier: 0 }, clip: 12, reload: "Full", rarity: "common",
+      source: { page: 323 }
+    });
+    expect(itemNamed("Hand Cannon").system).toMatchObject({ rarity: "uncommon", qualities: [] });
+    expect(itemNamed("Club").system).toMatchObject({ weaponType: "melee", damage: { rolled: 1, kept: 2, type: "I" }, rarity: "ubiquitous" });
+    expect(itemNamed("Brass Knuckles").system.qualities.map((q) => q.key)).toEqual(["brawling", "armMounted"]);
+    expect(itemNamed("Knife").system).toMatchObject({ weaponType: "melee", thrown: true });
+    expect(itemNamed("Frag Grenade").system).toMatchObject({ weaponType: "thrown", range: { strMultiplier: 3 }, qualities: [{ key: "blast", value: 4 }] });
+    expect(itemNamed("Grenade Launcher").system).toMatchObject({ ammoGroup: "grenade", damage: { kept: 0 } });
+    expect(itemNamed("Carapace").system).toMatchObject({ armorType: "heavy", ap: 7, maxDex: 4, rarity: "uncommon", piece: "", suitOnly: false });
+    expect(itemNamed("Mesh").system.maxDex).toBeNull();
+    expect(itemNamed("Power Armor").system).toMatchObject({ armorType: "power", ap: 12, maxDex: 2, rarity: "veryRare", suitOnly: true });
+    expect(itemNamed("Plate").system.primitive).toBe(true);
+    expect(itemNamed("Medkit").system).toMatchObject({ category: "gear", rarity: "uncommon" });
+    expect(itemNamed("Slaught").system).toMatchObject({ category: "drug", rarity: "rare", addictivity: "moderate", quantity: 10 });
+    expect(itemNamed("Dragon Tear Tiara").system.sockets).toBe(3);
+    expect(itemNamed("Bionic Arm").system.location).toBe("arms");
+  });
+
+  it("gives the simple items their effects and grants", () => {
+    const changes = (name) => itemNamed(name).effects.flatMap((effect) => effect.changes.map((c) => `${c.key}=${c.value}`));
+    expect(changes("Power Armor")).toEqual(["system.characteristics.str.value=1", "system.modifiers.resilience=1"]);
+    expect(changes("Machinator Array")).toEqual([
+      "system.characteristics.str.value=1", "system.characteristics.dex.value=-1", "system.modifiers.resilience=1"
+    ]);
+    expect(changes("Medkit")).toEqual(["system.modifiers.rolls.skills.medicae.freeRaises=1"]);
+    expect(changes("Stone of Healing")).toEqual(["system.modifiers.rolls.skills.medicae.rolled=1", "system.modifiers.rolls.skills.medicae.kept=1"]);
+    expect(changes("Bionic Heart")).toEqual(["system.modifiers.armor.gizzards=2"]);
+    expect(itemNamed("Bionic Heart").system.grants.map((g) => g.name)).toEqual(["Hardy"]);
+    expect(itemNamed("Gem of the Calm Heart").system.grants.map((g) => g.name)).toEqual(["Common Sense"]);
+    for (const doc of equipment) {
+      for (const effect of doc.effects) {
+        expect(effect.transfer).toBe(true);
+        expect(effect._key).toBe(`!items.effects!${doc._id}.${effect._id}`);
+      }
+    }
+  });
+
+  it("uses valid keys and non-empty descriptions", () => {
+    for (const doc of equipment) {
+      expect(Object.keys(config.RARITIES)).toContain(doc.system.rarity);
+      expect(doc.system.description, doc.name).toMatch(/^<p>.+<\/p>$/s);
+      if (doc.type === "weapon") {
+        for (const q of doc.system.qualities) expect(Object.keys(config.WEAPON_QUALITIES), doc.name).toContain(q.key);
+        for (const p of doc.system.proficiencies) expect(config.WEAPON_PROFICIENCIES).toContain(p);
+      }
+    }
+  });
+
+  it("has unique ids, matching keys and valid folders", () => {
+    const ids = equipmentPack.map((doc) => doc._id);
+    expect(new Set(ids).size).toBe(ids.length);
+    const folderIds = new Set(equipmentFolders.map((doc) => doc._id));
+    expect(equipmentFolders).toHaveLength(33);
+    for (const doc of equipment) {
+      expect(doc._key).toBe(`!items!${doc._id}`);
+      expect(folderIds.has(doc.folder), doc.name).toBe(true);
     }
   });
 });

@@ -1,0 +1,33 @@
+{
+  "name": "Bionic Locomotion",
+  "type": "gear",
+  "img": "icons/svg/circuit.svg",
+  "system": {
+    "description": "<p>Replacement legs wired into the spine and nerves; like all bionic limbs they give +2 AP against hits to that location. Common models work just like natural legs.</p><p>Poor: Speed is halved (round up), and running requires a Dexterity Test (TN 10), with a failure meaning the character falls once the move ends. Good: grants Fleet of Foot and +2k0 on Athletics and Acrobatics tests to jump or leap. Best adds no further benefit beyond Good.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 336
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "cybernetic",
+    "effectText": "Poor: Speed halved, Dex TN 10 when running or fall. Good: Fleet of Foot and +2k0 jump/leap tests.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "legs",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE105c85af5794",
+  "_key": "!items!dtdE105c85af5794",
+  "folder": "dtdEFd0b575a3435"
+}

@@ -7,7 +7,10 @@
       "race": "Race",
       "exaltation": "Exaltation",
       "feat": "Feat",
-      "class": "Class"
+      "class": "Class",
+      "weapon": "Weapon",
+      "armor": "Armor",
+      "gear": "Gear"
     }
   },
   "DTD": {
@@ -115,7 +118,8 @@
       "Tab": {
         "main": "Characteristics & Skills",
         "traits": "Traits",
-        "class": "Class & XP"
+        "class": "Class & XP",
+        "equipment": "Equipment"
       },
       "SocialInitiative": "Social Initiative",
       "Fatigue": "Fatigue",
@@ -124,7 +128,8 @@
       "FromFeat": "From {feat} — removed with the feat",
       "FromFeatShort": "Granted by a feat — removed with it",
       "Class": "DtD Class Sheet",
-      "ModeAdvance": "Advance"
+      "ModeAdvance": "Advance",
+      "Equipment": "DtD Equipment Sheet"
     },
     "Roll": {
       "Success": "Success",
@@ -579,6 +584,393 @@
         "onlyLast": "Only the GM can undo entries other than the last one."
       },
       "UndoAwardConfirm": "Remove the award {label} ({cost} XP)?"
+    },
+    "Rarity": {
+      "worthless": "Worthless",
+      "ubiquitous": "Ubiquitous",
+      "veryCommon": "Very Common",
+      "common": "Common",
+      "uncommon": "Uncommon",
+      "rare": "Rare",
+      "veryRare": "Very Rare",
+      "mythicRare": "Mythic Rare",
+      "nearUnique": "Near Unique",
+      "fabulousMax": "Fabulous Max",
+      "irrationallyExpensive": "Irrationally Expensive",
+      "glittergold": "Glittergold",
+      "Time": {
+        "worthless": "Near instant",
+        "ubiquitous": "1d5 minutes",
+        "veryCommon": "1d10 minutes",
+        "common": "One hour",
+        "uncommon": "1d10 hours",
+        "rare": "One day",
+        "veryRare": "1d5 days",
+        "mythicRare": "1d10 days",
+        "nearUnique": "1d5 weeks",
+        "fabulousMax": "1d10 weeks",
+        "irrationallyExpensive": "One month",
+        "glittergold": "1d5 months"
+      }
+    },
+    "Craftsmanship": {
+      "poor": "Poor",
+      "common": "Common",
+      "good": "Good",
+      "best": "Best"
+    },
+    "WeaponType": {
+      "melee": "Melee",
+      "thrown": "Thrown",
+      "pistol": "Pistol",
+      "basic": "Basic",
+      "heavy": "Heavy"
+    },
+    "DamageType": {
+      "E": "Energy",
+      "X": "Explosive",
+      "R": "Rending",
+      "I": "Impact"
+    },
+    "Quality": {
+      "balanced": {
+        "label": "Balanced",
+        "hint": "Parry and Feint rolls with it get +2k0."
+      },
+      "accurate": {
+        "label": "Accurate",
+        "hint": "Extra +1k0 to hit when Aiming; aimed single-shot single-target attacks add +1k1 damage per two raises."
+      },
+      "armMounted": {
+        "label": "Arm Mounted",
+        "hint": "Wielder keeps that hand free; weapon counts as permanently readied."
+      },
+      "armored": {
+        "label": "Armored",
+        "hint": "+2 AP to the wielding arm and the body; bonuses from several shields do not stack."
+      },
+      "beam": {
+        "label": "Beam",
+        "hint": "Continuous beam: may reuse the previous attack roll against the same target; switching targets breaks it."
+      },
+      "blast": {
+        "label": "Blast",
+        "hint": "Hits everything within X metres of the impact point; attack, hit location and damage are rolled once."
+      },
+      "brawling": {
+        "label": "Brawling",
+        "hint": "Uses Brawl instead of Weaponry; counts as unarmed, replaces normal unarmed damage, wounds inflict fatigue."
+      },
+      "combiweapon": {
+        "label": "Combiweapon",
+        "hint": "Module attachable to a weapon of the same class or larger; fire it in place of the host weapon."
+      },
+      "compact": {
+        "label": "Compact",
+        "hint": "Easy to hide (+10 TN to find); a Compact Basic weapon fired one-handed ignores the one-hand penalty."
+      },
+      "defensive": {
+        "label": "Defensive",
+        "hint": "+1k1 on parries, -2k0 on attacks; if not proficient the -2k0 applies to all your attacks."
+      },
+      "flame": {
+        "label": "Flame",
+        "hint": "No attack roll: 30-degree cone to weapon range; victims make Dex Test (TN 5x firer Ballistics, craftsmanship adjusted) or take damage."
+      },
+      "flexible": {
+        "label": "Flexible",
+        "hint": "Cannot be parried."
+      },
+      "homing": {
+        "label": "Homing",
+        "hint": "Cannot be dodged."
+      },
+      "inaccurate": {
+        "label": "Inaccurate",
+        "hint": "Gains nothing from the Aim action."
+      },
+      "incendiary": {
+        "label": "Incendiary",
+        "hint": "Targets it damages catch fire."
+      },
+      "orgoneArray": {
+        "label": "Orgone Array",
+        "hint": "When its damage dice explode, a Psychic Phenomena roll occurs centred on the target."
+      },
+      "overheats": {
+        "label": "Overheats",
+        "hint": "On a jam, wielder takes E damage equal to weapon damage to an arm unless he drops it (free action); must reload."
+      },
+      "powerField": {
+        "label": "Power Field",
+        "hint": "Parrying against or being parried by a non-Power Field weapon: d10, 4+ destroys it (natural/artifact weapons immune)."
+      },
+      "proven": {
+        "label": "Proven",
+        "hint": "Reroll damage dice showing less than the Proven value."
+      },
+      "razorSharp": {
+        "label": "Razor Sharp",
+        "hint": "With two or more raises on the hit, its Pen (AP) is doubled."
+      },
+      "reach": {
+        "label": "Reach",
+        "hint": "Can engage and attack from one extra metre; no engagement penalty unless foe has similar reach or is adjacent."
+      },
+      "recharge": {
+        "label": "Recharge",
+        "hint": "After a shot it cannot shoot again this round or next round, unless you spend a Half Action priming it."
+      },
+      "reliable": {
+        "label": "Reliable",
+        "hint": "Never jams."
+      },
+      "scatter": {
+        "label": "Scatter",
+        "hint": "Point blank: +1k0 damage per two raises; at long or extreme range armour counts double."
+      },
+      "shocking": {
+        "label": "Shocking",
+        "hint": "A wounded target must pass a Con Test (TN 20) or be stunned one round."
+      },
+      "smoke": {
+        "label": "Smoke",
+        "hint": "On a hit creates a smokescreen 3d10 m across lasting 2d10 rounds (less in bad weather)."
+      },
+      "snare": {
+        "label": "Snare",
+        "hint": "Target makes Dex Test vs the hitting roll or is immobilised; escape by Str/Dex Test (TN 10/15/20 by quality) as half action."
+      },
+      "storm": {
+        "label": "Storm",
+        "hint": "On full auto each raise gives +2k0 instead of +1k0 (still capped by RoF)."
+      },
+      "tearing": {
+        "label": "Tearing",
+        "hint": "Round up instead of down when dividing damage by Resilience."
+      },
+      "toxic": {
+        "label": "Toxic",
+        "hint": "After damage, target makes Con Test (TN 20) or suffers 1 wound to the body."
+      },
+      "twinLinked": {
+        "label": "Twin Linked",
+        "hint": "Single shot: +1k0 to hit; two or more raises add +2k0 damage."
+      },
+      "twoHands": {
+        "label": "Two Hands",
+        "hint": "Needs both hands."
+      },
+      "unbalanced": {
+        "label": "Unbalanced",
+        "hint": "-1k0 to Tests to parry with it."
+      },
+      "unreliable": {
+        "label": "Unreliable",
+        "hint": "Jams on kept 1s and 2s (both count toward the jam check)."
+      },
+      "unwieldy": {
+        "label": "Unwieldy",
+        "hint": "Cannot parry."
+      },
+      "volatile": {
+        "label": "Volatile",
+        "hint": "Its damage dice explode on a 9 as well as a 10."
+      }
+    },
+    "ArmorType": {
+      "light": "Light",
+      "medium": "Medium",
+      "heavy": "Heavy",
+      "extreme": "Extreme",
+      "power": "Power"
+    },
+    "Location": {
+      "head": "Head",
+      "body": "Body",
+      "gizzards": "Gizzards",
+      "arms": "Arms",
+      "legs": "Legs",
+      "leftLeg": "Left Leg",
+      "rightLeg": "Right Leg",
+      "leftArm": "Left Arm",
+      "rightArm": "Right Arm"
+    },
+    "GearCategory": {
+      "gear": "Gear",
+      "cybernetic": "Cybernetics",
+      "drug": "Drugs",
+      "material": "Magical Materials",
+      "wonder": "Wonders",
+      "hearthstone": "Hearthstones"
+    },
+    "Material": {
+      "none": "None",
+      "orichalcum": "Orichalcum",
+      "mithril": "Mithril",
+      "darksteel": "Darksteel",
+      "wraithbone": "Wraithbone",
+      "necrodermis": "Necrodermis"
+    },
+    "Addictivity": {
+      "none": "None",
+      "low": "Low (TN 10)",
+      "moderate": "Moderate (TN 15)",
+      "high": "High (TN 20)",
+      "extreme": "Extreme (TN 25)"
+    },
+    "Addiction": {
+      "none": "None",
+      "minor": "Minor (−1k0)",
+      "moderate": "Moderate (−1k0, no exploding dice)",
+      "major": "Major (−2k2, no exploding dice)"
+    },
+    "Equipment": {
+      "Rarity": "Rarity",
+      "AlsoCalled": "Also called",
+      "Profile": "Profile",
+      "Type": "Type",
+      "Group": "Group",
+      "Damage": "Damage",
+      "Pen": "Pen",
+      "Rof": "ROF",
+      "Range": "Range",
+      "Clip": "Clip",
+      "Reload": "Reload",
+      "StrRange": "Strength × {multiplier} m",
+      "Proficiencies": "Proficiency",
+      "Qualities": "Qualities",
+      "MaxDex": "Max Dex",
+      "Piece": "Piece",
+      "Suit": "Full suit",
+      "PieceHint": "A single piece has the suit's AP and Max Dex, covers one location and is one rarity step cheaper.",
+      "SuitOnly": "Power armor works only as a full suit.",
+      "Category": "Category",
+      "Addictivity": "Addictivity",
+      "Sockets": "Hearthstone settings",
+      "Effect": "Effect",
+      "Quantity": "Quantity",
+      "Craftsmanship": "Craftsmanship",
+      "Material": "Material",
+      "ArtifactRating": "Artifact {rating}",
+      "RatingCapped": "the book rates artifacts only up to Very Rare",
+      "UnknownQuality": "Unknown quality: {name}.",
+      "Protection": "Protection",
+      "SDPenalty": "Static Defense −{penalty} ({source})",
+      "NoPenalty": "No armor penalty",
+      "MaxDexFrom": "Max Dex {value} ({source}) for Speed and dodging",
+      "Weapons": "Weapons",
+      "Armor": "Armor",
+      "Equip": "Equip / put away",
+      "Wear": "Wear / take off",
+      "Install": "Install",
+      "Remove": "Remove item",
+      "RemoveConfirm": "Remove {item} from the inventory?",
+      "StartingBadge": "Starting",
+      "Starting": "Starting equipment",
+      "StartingTitle": "Starting equipment",
+      "StartingAsk": "Is {item} one of the starting picks (1 Rare, 1 Uncommon, 2 Common, 2 Very Common)?",
+      "NoSlot": "No {slot} starting pick left.",
+      "NotStartingRarity": "This item fits none of the starting picks.",
+      "GMOverride": "As GM, allow it anyway?",
+      "EndCreation": "End character creation",
+      "TooManyMechadendrites": "Only {max} mechadendrites can be installed (Constitution).",
+      "NoDoses": "No doses of {item} left.",
+      "AddictionTest": "Addiction: {item}",
+      "Addicted": "Addiction to {item}: {level}.",
+      "InEffect": "In effect",
+      "UseDose": "Take a dose",
+      "EndDose": "End the effect",
+      "SetIn": "In {item}",
+      "SocketIn": "Set in…",
+      "Unsocket": "Take it out",
+      "NoSocket": "{item} has no free hearthstone setting.",
+      "Addictions": "Addictions",
+      "AddictionHint": "The worst addiction applies to every roll. Quitting: a week clean, then a Willpower Test lowers it one level.",
+      "DropHint": "Drag weapons, armor and gear from the Equipment compendium onto the sheet."
+    },
+    "Attack": {
+      "Unarmed": "Unarmed",
+      "Title": "Attack: {weapon}",
+      "TNHint": "The targeted token's Static Defense, when there is one.",
+      "Thrown": "Throw it",
+      "Range": "Range",
+      "RangeBand": {
+        "pointBlank": "Point blank (≤ 2 m): +2k1",
+        "short": "Short: +1k0",
+        "normal": "Normal",
+        "long": "Long: +1 raise",
+        "extreme": "Extreme: +3 raises"
+      },
+      "Mode": "Fire mode",
+      "Single": "Single shot",
+      "FullAuto": "Full auto: +2k1",
+      "Braced": "Braced",
+      "OneHanded": "One-handed",
+      "Ammo": "Ammunition",
+      "Aim": "Aim",
+      "AimNone": "No aim",
+      "AimHalf": "Half action: +1k0",
+      "AimFull": "Full action: +2k1",
+      "NoAmmo": "No grenades or missiles for this launcher.",
+      "Proficient": "Proficient",
+      "NotProficient": "Not proficient",
+      "RequiredRaises": "Needs {raises} raise(s) to hit",
+      "Location": "Hit location",
+      "Hits": "{hits} hits",
+      "Jammed": "The weapon jams! Clearing it: full action, Tech-Use or Ballistics TN 15; the magazine is lost.",
+      "Overheats": "It overheats: the wielder takes its damage to an arm unless it is dropped.",
+      "RollDamage": "Roll damage",
+      "RollAttack": "Roll attack",
+      "Damage": "Damage",
+      "DamageOf": "Damage: {weapon}",
+      "ProvenApplied": "Proven: dice below {value} rerolled",
+      "VolatileApplied": "Volatile: dice explode on 9 and 10",
+      "Note": {
+        "proficient": "+Level k0",
+        "focus": "Weapon Focus +2k0",
+        "pointBlank": "point blank",
+        "short": "short range",
+        "unbraced": "unbraced −3k1",
+        "oneHanded": "one hand −2k0",
+        "fullAuto": "full auto",
+        "twinLinked": "Twin Linked",
+        "material": "material",
+        "aimFull": "full aim",
+        "aimHalf": "half aim",
+        "accurate": "Accurate",
+        "defensive": "Defensive −2k0",
+        "strength": "+Strength",
+        "poor": "Poor −1k0",
+        "craftsmanship": "craftsmanship +1k0",
+        "specialization": "Weapon Specialization +2k0",
+        "scatter": "Scatter",
+        "razorSharp": "Razor Sharp: Pen doubled"
+      }
+    },
+    "Acquire": {
+      "Button": "Acquire",
+      "Title": "Acquisition",
+      "TitleItem": "Acquire: {item}",
+      "Roll": "Roll Wealth",
+      "Label": "Acquisition: {item}",
+      "WealthPool": "Wealth {wealth}",
+      "CraftHint": "Poor −5, Good +5, Best +10 to the TN; each earlier try +5.",
+      "Time": "Search time",
+      "Gained": "{item} joins the inventory.",
+      "Strain": "Wealth Strain: {roll} → Wealth −{penalty} until the end of the next session.",
+      "SpendLiquid": "Spend Liquid Wealth ({liquid})",
+      "Liquid": "Liquid Wealth",
+      "LiquidPrompt": "The test missed by {needed}. Points to spend ({available} available):",
+      "Spend": "Spend",
+      "LiquidSuccess": "{points} Liquid Wealth spent: {total} vs TN {tn}, {item} acquired.",
+      "LiquidFailure": "{points} Liquid Wealth spent: {total} vs TN {tn}, still short.",
+      "NoWealth": "With Wealth 0 only the bare necessities can be had.",
+      "GMGive": "As GM, give the item anyway?",
+      "Wealth": "Wealth",
+      "StrainActive": "Strain −{penalty} (Wealth {effective})",
+      "EndStrain": "End the Wealth Strain",
+      "ClearAttempts": "Forget the failed tries"
     }
   }
 }

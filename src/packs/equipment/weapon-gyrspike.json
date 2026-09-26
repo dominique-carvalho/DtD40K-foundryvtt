@@ -1,0 +1,53 @@
+{
+  "name": "Gyrspike",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A strange Syrneth hybrid of sword and flail, extraordinarily lethal, not least to an untrained wielder. Once mastered it is excellent at getting past defences, since few opponents will have ever faced one.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Syrneth",
+    "proficiencies": [
+      "Melee 3"
+    ],
+    "damage": {
+      "rolled": 5,
+      "kept": 1,
+      "type": "R"
+    },
+    "pen": 6,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "flexible",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE70f535fb2889",
+  "_key": "!items!dtdE70f535fb2889",
+  "folder": "dtdEFd0bdcb36722"
+}

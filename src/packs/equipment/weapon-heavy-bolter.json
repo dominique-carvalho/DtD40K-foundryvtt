@@ -1,0 +1,53 @@
+{
+  "name": "Heavy Bolter",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A crew-served support version of the boltgun, rarely seen outside military forces. It fires only on full auto and its high rate of fire makes jams common; with a two-person team, the loader also clears stoppages.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Bolter",
+    "proficiencies": [
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 4,
+      "kept": 2,
+      "type": "X"
+    },
+    "pen": 8,
+    "rof": {
+      "single": false,
+      "auto": 10
+    },
+    "range": {
+      "value": 120,
+      "strMultiplier": 0
+    },
+    "clip": 60,
+    "reload": "2Full",
+    "qualities": [
+      {
+        "key": "tearing",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEf482024ab69e",
+  "_key": "!items!dtdEf482024ab69e",
+  "folder": "dtdEFd28765062f9"
+}

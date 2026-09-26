@@ -1,0 +1,33 @@
+{
+  "name": "The Freedom Stone",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A murky blue-black stone of shifting colours. Its bearer can never be physically restrained: bonds and knots come loose, and every grapple attempted against them automatically fails. It does nothing against confinement such as locked doors or barred gates.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 354
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Cannot be physically restrained; grapples against bearer automatically fail.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE93363f5ddf42",
+  "_key": "!items!dtdE93363f5ddf42",
+  "folder": "dtdEFd381b66ffa2"
+}

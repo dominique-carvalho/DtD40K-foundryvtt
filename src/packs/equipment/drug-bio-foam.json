@@ -1,0 +1,33 @@
+{
+  "name": "Bio-Foam",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>A battlefield compound injected straight into a wound, combining coagulant, antiseptic and anaesthetic; it burns on application before the numbness sets in.</p><p>Each dose immediately halts blood loss and restores 1 Hit Point. The healing is instant and permanent, though it does not replace proper medical treatment.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "drug",
+    "effectText": "Instantly stops blood loss and heals one hit point per dose, permanently.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE41d24561befd",
+  "_key": "!items!dtdE41d24561befd",
+  "folder": "dtdEFdfa8d856bb2"
+}

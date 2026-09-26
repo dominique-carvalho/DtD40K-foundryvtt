@@ -1,0 +1,33 @@
+{
+  "name": "Bag of Holding",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>A bag, sack, backpack or pouch that is bigger inside than outside: a typical one seems to fit roughly 0.25 cubic metres but really holds two, and nothing inside adds to its weight.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 353
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Bag holding about two cubic metres; contents add no weight.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE77999b87719c",
+  "_key": "!items!dtdE77999b87719c",
+  "folder": "dtdEFdff25179125"
+}

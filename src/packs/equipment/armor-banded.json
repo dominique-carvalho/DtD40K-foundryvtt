@@ -1,0 +1,30 @@
+{
+  "name": "Banded",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Primitive heavy armor of horizontal steel strips: it leaves plenty of freedom to move but protects less than full plate.</p><p>Like all primitive armor, its rarity counts one step lower when it is chosen as an Artifact.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 333
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "armorType": "heavy",
+    "ap": 6,
+    "maxDex": 3,
+    "piece": "",
+    "suitOnly": false,
+    "primitive": true
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEb0e68a935943",
+  "_key": "!items!dtdEb0e68a935943",
+  "folder": "dtdEFdf705ea6722"
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdfba5700511",
+  "_key": "!folders!dtdEFdfba5700511",
+  "name": "Fencing",
+  "type": "Item",
+  "folder": "dtdEFdb4458b5ac3",
+  "description": "",
+  "sorting": "a",
+  "sort": 5000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Melee/Fencing"
+    }
+  }
+}

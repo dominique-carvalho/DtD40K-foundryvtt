@@ -1,0 +1,53 @@
+{
+  "name": "Boltgun",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>The classic bolter rifle, firing rocket-propelled explosive shells with a distinctive roar followed by the blast on impact. Bolter weapons are mostly sized for Aasimar and Tieflings and need skilled maintenance and costly ammunition.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Bolter",
+    "proficiencies": [
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 4,
+      "kept": 2,
+      "type": "X"
+    },
+    "pen": 6,
+    "rof": {
+      "single": true,
+      "auto": 3
+    },
+    "range": {
+      "value": 90,
+      "strMultiplier": 0
+    },
+    "clip": 24,
+    "reload": "Full",
+    "qualities": [
+      {
+        "key": "tearing",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE7a8d990ffbe3",
+  "_key": "!items!dtdE7a8d990ffbe3",
+  "folder": "dtdEFd28765062f9"
+}

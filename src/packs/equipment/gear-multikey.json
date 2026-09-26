@@ -1,0 +1,33 @@
+{
+  "name": "Multikey",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A device able to open most ordinary locks. Honest citizens rarely carry one, which is exactly why criminals and other shady types prize it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "gear",
+    "effectText": "Opens most standard locks.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE4894b5fa88cc",
+  "_key": "!items!dtdE4894b5fa88cc",
+  "folder": "dtdEFdce7266d261"
+}

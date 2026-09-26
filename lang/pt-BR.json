@@ -7,7 +7,10 @@
       "race": "Raça",
       "exaltation": "Exaltação",
       "feat": "Feat",
-      "class": "Classe"
+      "class": "Classe",
+      "weapon": "Arma",
+      "armor": "Armadura",
+      "gear": "Equipamento"
     }
   },
   "DTD": {
@@ -115,7 +118,8 @@
       "Tab": {
         "main": "Características e Perícias",
         "traits": "Traços",
-        "class": "Classe e XP"
+        "class": "Classe e XP",
+        "equipment": "Equipamento"
       },
       "SocialInitiative": "Iniciativa social",
       "Fatigue": "Fatigue",
@@ -124,7 +128,8 @@
       "FromFeat": "De {feat} — sai junto com o feat",
       "FromFeatShort": "Concedida por um feat — sai junto com ele",
       "Class": "Ficha de Classe DtD",
-      "ModeAdvance": "Evolução"
+      "ModeAdvance": "Evolução",
+      "Equipment": "Ficha de Equipamento DtD"
     },
     "Roll": {
       "Success": "Sucesso",
@@ -579,6 +584,393 @@
         "onlyLast": "Só o Mestre pode desfazer lançamentos que não sejam o último."
       },
       "UndoAwardConfirm": "Remover o prêmio {label} ({cost} XP)?"
+    },
+    "Rarity": {
+      "worthless": "Sem valor",
+      "ubiquitous": "Ubíquo",
+      "veryCommon": "Muito comum",
+      "common": "Comum",
+      "uncommon": "Incomum",
+      "rare": "Raro",
+      "veryRare": "Muito raro",
+      "mythicRare": "Raro mítico",
+      "nearUnique": "Quase único",
+      "fabulousMax": "Fabuloso",
+      "irrationallyExpensive": "Absurdamente caro",
+      "glittergold": "Glittergold",
+      "Time": {
+        "worthless": "Quase instantâneo",
+        "ubiquitous": "1d5 minutos",
+        "veryCommon": "1d10 minutos",
+        "common": "Uma hora",
+        "uncommon": "1d10 horas",
+        "rare": "Um dia",
+        "veryRare": "1d5 dias",
+        "mythicRare": "1d10 dias",
+        "nearUnique": "1d5 semanas",
+        "fabulousMax": "1d10 semanas",
+        "irrationallyExpensive": "Um mês",
+        "glittergold": "1d5 meses"
+      }
+    },
+    "Craftsmanship": {
+      "poor": "Ruim",
+      "common": "Comum",
+      "good": "Boa",
+      "best": "Excelente"
+    },
+    "WeaponType": {
+      "melee": "Corpo a corpo",
+      "thrown": "Arremesso",
+      "pistol": "Pistola",
+      "basic": "Básica",
+      "heavy": "Pesada"
+    },
+    "DamageType": {
+      "E": "Energia",
+      "X": "Explosivo",
+      "R": "Cortante",
+      "I": "Impacto"
+    },
+    "Quality": {
+      "balanced": {
+        "label": "Balanceada",
+        "hint": "+2k0 em Parry e Feint com ela."
+      },
+      "accurate": {
+        "label": "Precisa",
+        "hint": "+1k0 a mais no acerto ao mirar; tiro único mirado soma +1k1 de dano a cada dois raises."
+      },
+      "armMounted": {
+        "label": "Montada no braço",
+        "hint": "A mão continua livre; a arma conta como sempre em punho."
+      },
+      "armored": {
+        "label": "Blindada",
+        "hint": "+2 AP no braço que a empunha e no corpo; vários escudos não somam."
+      },
+      "beam": {
+        "label": "Feixe",
+        "hint": "Feixe contínuo: pode reusar o teste de ataque anterior contra o mesmo alvo; trocar de alvo quebra o feixe."
+      },
+      "blast": {
+        "label": "Explosão",
+        "hint": "Atinge tudo a X metros do ponto de impacto; ataque, localização e dano são rolados uma vez."
+      },
+      "brawling": {
+        "label": "Briga",
+        "hint": "Usa Brawl no lugar de Weaponry; conta como desarmado, substitui o dano desarmado e ferir causa fadiga."
+      },
+      "combiweapon": {
+        "label": "Combiarma",
+        "hint": "Módulo que se prende a uma arma da mesma classe ou maior; dispara no lugar da arma principal."
+      },
+      "compact": {
+        "label": "Compacta",
+        "hint": "Fácil de esconder (+10 no TN para achar); arma Basic compacta com uma mão não sofre penalidade."
+      },
+      "defensive": {
+        "label": "Defensiva",
+        "hint": "+1k1 em parry e −2k0 em ataques; sem proficiência, os −2k0 valem para todos os seus ataques."
+      },
+      "flame": {
+        "label": "Chama",
+        "hint": "Sem teste de ataque: cone de 30° até o alcance; as vítimas fazem teste de Dex (TN 5 × Ballistics do atirador) ou sofrem dano."
+      },
+      "flexible": {
+        "label": "Flexível",
+        "hint": "Não pode ser aparada."
+      },
+      "homing": {
+        "label": "Teleguiada",
+        "hint": "Não pode ser esquivada."
+      },
+      "inaccurate": {
+        "label": "Imprecisa",
+        "hint": "Não ganha nada com a ação Aim."
+      },
+      "incendiary": {
+        "label": "Incendiária",
+        "hint": "Alvos que ela fere pegam fogo."
+      },
+      "orgoneArray": {
+        "label": "Matriz de Orgone",
+        "hint": "Quando os dados de dano explodem, ocorre uma rolagem de Psychic Phenomena centrada no alvo."
+      },
+      "overheats": {
+        "label": "Superaquece",
+        "hint": "Ao emperrar, o portador sofre dano E igual ao da arma num braço, a menos que a solte (ação livre); precisa recarregar."
+      },
+      "powerField": {
+        "label": "Campo de Força",
+        "hint": "Aparar ou ser aparada por arma sem campo de força: d10, com 4+ a outra é destruída (armas naturais e artefatos são imunes)."
+      },
+      "proven": {
+        "label": "Comprovada",
+        "hint": "Rerrola os dados de dano menores que o valor de Proven."
+      },
+      "razorSharp": {
+        "label": "Afiadíssima",
+        "hint": "Com dois ou mais raises no acerto, a Pen dobra."
+      },
+      "reach": {
+        "label": "Alcance",
+        "hint": "Engaja e ataca a um metro a mais; sem penalidade de engajamento, a menos que o oponente tenha alcance parecido ou esteja adjacente."
+      },
+      "recharge": {
+        "label": "Recarga",
+        "hint": "Depois de um tiro não dispara nesta rodada nem na próxima, a menos que gaste meia ação para prepará-la."
+      },
+      "reliable": {
+        "label": "Confiável",
+        "hint": "Nunca emperra."
+      },
+      "scatter": {
+        "label": "Dispersão",
+        "hint": "À queima-roupa: +1k0 de dano a cada dois raises; a longa ou extrema distância a armadura conta em dobro."
+      },
+      "shocking": {
+        "label": "Choque",
+        "hint": "Alvo ferido faz teste de Con (TN 20) ou fica atordoado por uma rodada."
+      },
+      "smoke": {
+        "label": "Fumaça",
+        "hint": "Ao acertar, cria uma cortina de fumaça de 3d10 m que dura 2d10 rodadas (menos com mau tempo)."
+      },
+      "snare": {
+        "label": "Laço",
+        "hint": "O alvo faz teste de Dex contra o resultado do acerto ou fica imobilizado; escapa com teste de Str/Dex (TN 10/15/20 pela qualidade) como meia ação."
+      },
+      "storm": {
+        "label": "Tempestade",
+        "hint": "Em full auto, cada raise dá +2k0 em vez de +1k0 (ainda limitado pelo ROF)."
+      },
+      "tearing": {
+        "label": "Dilacerante",
+        "hint": "Arredonda para cima, e não para baixo, ao dividir o dano pela Resilience."
+      },
+      "toxic": {
+        "label": "Tóxica",
+        "hint": "Depois do dano, o alvo faz teste de Con (TN 20) ou sofre 1 ferimento no corpo."
+      },
+      "twinLinked": {
+        "label": "Acoplada",
+        "hint": "Tiro único: +1k0 no acerto; dois ou mais raises somam +2k0 de dano."
+      },
+      "twoHands": {
+        "label": "Duas mãos",
+        "hint": "Precisa das duas mãos."
+      },
+      "unbalanced": {
+        "label": "Desbalanceada",
+        "hint": "−1k0 em testes de parry com ela."
+      },
+      "unreliable": {
+        "label": "Não confiável",
+        "hint": "Emperra com 1s e 2s mantidos (os dois contam no teste de emperramento)."
+      },
+      "unwieldy": {
+        "label": "Pesada",
+        "hint": "Não pode aparar."
+      },
+      "volatile": {
+        "label": "Volátil",
+        "hint": "Os dados de dano explodem também em 9."
+      }
+    },
+    "ArmorType": {
+      "light": "Leve",
+      "medium": "Média",
+      "heavy": "Pesada",
+      "extreme": "Extrema",
+      "power": "Energizada"
+    },
+    "Location": {
+      "head": "Cabeça",
+      "body": "Corpo",
+      "gizzards": "Entranhas",
+      "arms": "Braços",
+      "legs": "Pernas",
+      "leftLeg": "Perna esquerda",
+      "rightLeg": "Perna direita",
+      "leftArm": "Braço esquerdo",
+      "rightArm": "Braço direito"
+    },
+    "GearCategory": {
+      "gear": "Equipamentos",
+      "cybernetic": "Cibernéticos",
+      "drug": "Drogas",
+      "material": "Materiais mágicos",
+      "wonder": "Maravilhas",
+      "hearthstone": "Hearthstones"
+    },
+    "Material": {
+      "none": "Nenhum",
+      "orichalcum": "Orichalcum",
+      "mithril": "Mithril",
+      "darksteel": "Darksteel",
+      "wraithbone": "Wraithbone",
+      "necrodermis": "Necrodermis"
+    },
+    "Addictivity": {
+      "none": "Nenhuma",
+      "low": "Baixa (TN 10)",
+      "moderate": "Moderada (TN 15)",
+      "high": "Alta (TN 20)",
+      "extreme": "Extrema (TN 25)"
+    },
+    "Addiction": {
+      "none": "Nenhum",
+      "minor": "Leve (−1k0)",
+      "moderate": "Moderado (−1k0, dados não explodem)",
+      "major": "Grave (−2k2, dados não explodem)"
+    },
+    "Equipment": {
+      "Rarity": "Raridade",
+      "AlsoCalled": "Também chamado",
+      "Profile": "Perfil",
+      "Type": "Tipo",
+      "Group": "Grupo",
+      "Damage": "Dano",
+      "Pen": "Pen",
+      "Rof": "ROF",
+      "Range": "Alcance",
+      "Clip": "Pente",
+      "Reload": "Recarga",
+      "StrRange": "Strength × {multiplier} m",
+      "Proficiencies": "Proficiência",
+      "Qualities": "Qualidades",
+      "MaxDex": "Max Dex",
+      "Piece": "Peça",
+      "Suit": "Traje completo",
+      "PieceHint": "Uma peça avulsa tem o AP e o Max Dex do traje, cobre uma localização e custa um degrau de raridade a menos.",
+      "SuitOnly": "Armadura energizada só funciona como traje completo.",
+      "Category": "Categoria",
+      "Addictivity": "Vício",
+      "Sockets": "Encaixes de hearthstone",
+      "Effect": "Efeito",
+      "Quantity": "Quantidade",
+      "Craftsmanship": "Qualidade",
+      "Material": "Material",
+      "ArtifactRating": "Artefato {rating}",
+      "RatingCapped": "o livro só avalia artefatos até Muito raro",
+      "UnknownQuality": "Qualidade desconhecida: {name}.",
+      "Protection": "Proteção",
+      "SDPenalty": "Static Defense −{penalty} ({source})",
+      "NoPenalty": "Sem penalidade de armadura",
+      "MaxDexFrom": "Max Dex {value} ({source}) na Speed e na esquiva",
+      "Weapons": "Armas",
+      "Armor": "Armaduras",
+      "Equip": "Equipar / guardar",
+      "Wear": "Vestir / tirar",
+      "Install": "Instalar",
+      "Remove": "Remover item",
+      "RemoveConfirm": "Remover {item} do inventário?",
+      "StartingBadge": "Inicial",
+      "Starting": "Equipamento inicial",
+      "StartingTitle": "Equipamento inicial",
+      "StartingAsk": "{item} é uma das escolhas iniciais (1 Raro, 1 Incomum, 2 Comuns, 2 Muito comuns)?",
+      "NoSlot": "Não sobra escolha inicial {slot}.",
+      "NotStartingRarity": "Este item não cabe em nenhuma escolha inicial.",
+      "GMOverride": "Como Mestre, permitir mesmo assim?",
+      "EndCreation": "Encerrar a criação do personagem",
+      "TooManyMechadendrites": "Só {max} mechadendrites podem ser instaladas (Constitution).",
+      "NoDoses": "Não há mais doses de {item}.",
+      "AddictionTest": "Vício: {item}",
+      "Addicted": "Vício em {item}: {level}.",
+      "InEffect": "Em efeito",
+      "UseDose": "Tomar uma dose",
+      "EndDose": "Encerrar o efeito",
+      "SetIn": "Em {item}",
+      "SocketIn": "Encaixar em…",
+      "Unsocket": "Retirar",
+      "NoSocket": "{item} não tem encaixe de hearthstone livre.",
+      "Addictions": "Vícios",
+      "AddictionHint": "O pior vício vale para todas as rolagens. Para largar: uma semana sem usar e um teste de Willpower baixa um nível.",
+      "DropHint": "Arraste armas, armaduras e equipamentos do compêndio Equipment para a ficha."
+    },
+    "Attack": {
+      "Unarmed": "Desarmado",
+      "Title": "Ataque: {weapon}",
+      "TNHint": "A Static Defense do token marcado como alvo, se houver.",
+      "Thrown": "Arremessar",
+      "Range": "Distância",
+      "RangeBand": {
+        "pointBlank": "Queima-roupa (≤ 2 m): +2k1",
+        "short": "Curta: +1k0",
+        "normal": "Normal",
+        "long": "Longa: +1 raise",
+        "extreme": "Extrema: +3 raises"
+      },
+      "Mode": "Modo de tiro",
+      "Single": "Tiro único",
+      "FullAuto": "Full auto: +2k1",
+      "Braced": "Apoiada",
+      "OneHanded": "Com uma mão",
+      "Ammo": "Munição",
+      "Aim": "Mira",
+      "AimNone": "Sem mira",
+      "AimHalf": "Meia ação: +1k0",
+      "AimFull": "Ação completa: +2k1",
+      "NoAmmo": "Não há granadas ou mísseis para este lançador.",
+      "Proficient": "Proficiente",
+      "NotProficient": "Sem proficiência",
+      "RequiredRaises": "Precisa de {raises} raise(s) para acertar",
+      "Location": "Localização",
+      "Hits": "{hits} acertos",
+      "Jammed": "A arma emperrou! Para destravar: ação completa, Tech-Use ou Ballistics TN 15; o pente se perde.",
+      "Overheats": "Superaqueceu: o portador sofre o dano dela num braço, a menos que a solte.",
+      "RollDamage": "Rolar dano",
+      "RollAttack": "Rolar ataque",
+      "Damage": "Dano",
+      "DamageOf": "Dano: {weapon}",
+      "ProvenApplied": "Proven: dados abaixo de {value} rerrolados",
+      "VolatileApplied": "Volatile: dados explodem em 9 e 10",
+      "Note": {
+        "proficient": "+Level k0",
+        "focus": "Weapon Focus +2k0",
+        "pointBlank": "queima-roupa",
+        "short": "curta distância",
+        "unbraced": "sem apoio −3k1",
+        "oneHanded": "uma mão −2k0",
+        "fullAuto": "full auto",
+        "twinLinked": "Twin Linked",
+        "material": "material",
+        "aimFull": "mira completa",
+        "aimHalf": "meia mira",
+        "accurate": "Accurate",
+        "defensive": "Defensive −2k0",
+        "strength": "+Strength",
+        "poor": "Ruim −1k0",
+        "craftsmanship": "qualidade +1k0",
+        "specialization": "Weapon Specialization +2k0",
+        "scatter": "Scatter",
+        "razorSharp": "Razor Sharp: Pen dobrada"
+      }
+    },
+    "Acquire": {
+      "Button": "Adquirir",
+      "Title": "Aquisição",
+      "TitleItem": "Adquirir: {item}",
+      "Roll": "Rolar Wealth",
+      "Label": "Aquisição: {item}",
+      "WealthPool": "Wealth {wealth}",
+      "CraftHint": "Ruim −5, Boa +5, Excelente +10 no TN; cada tentativa anterior +5.",
+      "Time": "Tempo de busca",
+      "Gained": "{item} entra no inventário.",
+      "Strain": "Wealth Strain: {roll} → Wealth −{penalty} até o fim da próxima sessão.",
+      "SpendLiquid": "Gastar Liquid Wealth ({liquid})",
+      "Liquid": "Liquid Wealth",
+      "LiquidPrompt": "O teste errou por {needed}. Pontos a gastar ({available} disponíveis):",
+      "Spend": "Gastar",
+      "LiquidSuccess": "{points} de Liquid Wealth gastos: {total} contra TN {tn}, {item} adquirido.",
+      "LiquidFailure": "{points} de Liquid Wealth gastos: {total} contra TN {tn}, ainda falta.",
+      "NoWealth": "Com Wealth 0 só se consegue o básico para sobreviver.",
+      "GMGive": "Como Mestre, dar o item mesmo assim?",
+      "Wealth": "Wealth",
+      "StrainActive": "Strain −{penalty} (Wealth {effective})",
+      "EndStrain": "Encerrar o Wealth Strain",
+      "ClearAttempts": "Esquecer as tentativas falhas"
     }
   }
 }

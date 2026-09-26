@@ -1,0 +1,33 @@
+{
+  "name": "Null",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>An extremely rare and costly injectable, rumoured to be refined from the spinal fluid of spellcasters, that suppresses magical ability; long-term use makes subjects docile and eventually schizophrenic.</p><p>For one day the target takes -1k1 on all spellcasting rolls and their caster level is lowered by 1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "mythicRare",
+    "category": "drug",
+    "effectText": "-1k1 spellcasting and caster level -1 for one day.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEb11a2beea5de",
+  "_key": "!items!dtdEb11a2beea5de",
+  "folder": "dtdEFdfa8d856bb2"
+}

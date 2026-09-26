@@ -1,0 +1,39 @@
+{
+  "name": "Gem of the Calm Heart",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A blood-red, teardrop-shaped stone that cools the bearer's temper so they act from reason instead of anger. The bearer gains the Common Sense feat.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 354
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Grants the Common Sense feat.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": [
+      {
+        "name": "Common Sense",
+        "subcategory": "",
+        "choose": false
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE7d5d0478c1a1",
+  "_key": "!items!dtdE7d5d0478c1a1",
+  "folder": "dtdEFd381b66ffa2"
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdff25179125",
+  "_key": "!folders!dtdEFdff25179125",
+  "name": "Wonders",
+  "type": "Item",
+  "folder": "dtdEFde226d8689b",
+  "description": "",
+  "sorting": "a",
+  "sort": 20000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Artifacts/Wonders"
+    }
+  }
+}

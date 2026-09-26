@@ -1,0 +1,33 @@
+{
+  "name": "Charm",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A good-luck token, keepsake or holy relic meant to earn the favor of the gods, from saintly bones to blessed bolter casings. True relics are nearly impossible to tell from fakes.</p><p>A charm grants no mechanical bonus, but when the story calls for misfortune to strike a random character, the SM may spare one who carries a charm; if everyone has one, the SM decides whose is strongest.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "category": "gear",
+    "effectText": "Luck token; no mechanical bonus, but SM may spare the bearer from random misfortune.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEd044fd6241b6",
+  "_key": "!items!dtdEd044fd6241b6",
+  "folder": "dtdEFdce7266d261"
+}

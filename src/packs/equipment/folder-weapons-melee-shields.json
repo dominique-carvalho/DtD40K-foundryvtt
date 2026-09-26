@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd2a4fa2f7be",
+  "_key": "!folders!dtdEFd2a4fa2f7be",
+  "name": "Shields",
+  "type": "Item",
+  "folder": "dtdEFdb4458b5ac3",
+  "description": "",
+  "sorting": "a",
+  "sort": 9000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Melee/Shields"
+    }
+  }
+}

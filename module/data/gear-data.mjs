@@ -1,5 +1,5 @@
 import { ADDICTIVITY, ARMOR_PIECES, GEAR_CATEGORIES } from "../config.mjs";
-import { equipmentFields } from "./equipment-fields.mjs";
+import { count, equipmentFields } from "./equipment-fields.mjs";
 import { grantField } from "./fields.mjs";
 
 const { ArrayField, BooleanField, StringField } = foundry.data.fields;
@@ -21,8 +21,8 @@ export class GearData extends foundry.abstract.TypeDataModel {
       mechadendrite: new BooleanField({ initial: false }),
       // Bionic limb: +2 AP at that location (p. 336).
       location: new StringField({ required: true, blank: true, initial: "", choices: ["", ...ARMOR_PIECES] }),
-      // Wonders that hold a hearthstone.
-      socket: new BooleanField({ initial: false }),
+      // Hearthstone settings of a Wonder (Hearthstone Amulet 1, Bracers 2, Dragon Tear Tiara 3; p. 352).
+      sockets: count(0),
       // Hearthstone: id of the item of the same actor it is set in.
       socketedIn: new StringField({ required: true, blank: true }),
       grants: new ArrayField(grantField())

@@ -1,0 +1,55 @@
+{
+  "name": "Medkit",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A kit of patches, antiseptics and synth-skin, essential for any medic. A character who has a medkit at hand gains a free raise on Medicae Tests.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "gear",
+    "effectText": "Grants a free raise on Medicae Tests when at hand.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [
+    {
+      "name": "Medkit",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.modifiers.rolls.skills.medicae.freeRaises",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEf2a773414f73",
+      "_key": "!items.effects!dtdE2c5170370884.dtdEf2a773414f73"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdE2c5170370884",
+  "_key": "!items!dtdE2c5170370884",
+  "folder": "dtdEFdce7266d261"
+}

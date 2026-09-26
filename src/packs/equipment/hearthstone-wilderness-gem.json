@@ -1,0 +1,33 @@
+{
+  "name": "Wilderness Gem",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A rough, pale purple stone that lets its bearer survive in the wild in any environment. It grants instinctive knowledge of where to find safe shelter and campsites, what local plants and creatures can be eaten safely, and how to recognise the warning signs of dangerous weather.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 356
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Instinctive wilderness survival knowledge.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE1450cd842b3a",
+  "_key": "!items!dtdE1450cd842b3a",
+  "folder": "dtdEFd381b66ffa2"
+}

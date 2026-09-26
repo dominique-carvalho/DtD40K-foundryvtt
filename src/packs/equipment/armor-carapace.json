@@ -1,0 +1,30 @@
+{
+  "name": "Carapace",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Heavy armor made of dense stacked plates (armaplas, ceramite or other very tough materials). It is cumbersome and leaves joints and other flexible spots harder to cover, but protects far better than lighter armor types.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 332
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "armorType": "heavy",
+    "ap": 7,
+    "maxDex": 4,
+    "piece": "",
+    "suitOnly": false,
+    "primitive": false
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE894a20c1b865",
+  "_key": "!items!dtdE894a20c1b865",
+  "folder": "dtdEFdf705ea6722"
+}

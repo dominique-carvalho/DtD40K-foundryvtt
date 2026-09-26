@@ -1,0 +1,53 @@
+{
+  "name": "Frag Missile",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A fragmentation warhead for the missile launcher, filled with shrapnel that shreds infantry across a wide area.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 324
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Grenades and Missiles",
+    "proficiencies": [
+      "Throwing"
+    ],
+    "damage": {
+      "rolled": 4,
+      "kept": 2,
+      "type": "X"
+    },
+    "pen": 5,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "blast",
+        "value": 6
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE1e1e2cbc48a7",
+  "_key": "!items!dtdE1e1e2cbc48a7",
+  "folder": "dtdEFd42e33e6b27"
+}

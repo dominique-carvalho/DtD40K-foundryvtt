@@ -1,6 +1,8 @@
-import { CHARACTERISTICS, DERIVED_KEYS, SKILLS, STARTING_XP, XP_KINDS } from "../config.mjs";
+import { ADDICTION_LEVELS, CHARACTERISTICS, DERIVED_KEYS, SKILLS, STARTING_XP, XP_KINDS } from "../config.mjs";
+import { effectiveWealth } from "../rules/acquisition.mjs";
 import { characterLevel } from "../rules/class.mjs";
 import { computeDerived } from "../rules/derived.mjs";
+import { armorProfile } from "../rules/equipment.mjs";
 import { computeExaltation } from "../rules/exaltation.mjs";
 import { capValue } from "../rules/race.mjs";
 import { xpTotals } from "../rules/xp.mjs";
@@ -80,8 +82,33 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
         staticDefense: integer(0),
         staticDefenseCharacteristic: new StringField({ required: true, choices: ["dex", "con"], initial: "dex" }),
         fatigueMax: integer(0),
-        initiative: integer(0)
+        initiative: integer(0),
+        // Targets of equipment effects only (spec 007, research R3/R8).
+        armor: new SchemaField({ apAll: integer(0), gizzards: integer(0) }),
+        rolls: new SchemaField({
+          all: new SchemaField({ rolled: integer(0), kept: integer(0) }),
+          noExplode: new BooleanField({ initial: false }),
+          skills: new SchemaField(Object.fromEntries(Object.keys(SKILLS).map((key) => [key, new SchemaField({
+            rolled: integer(0), kept: integer(0), freeRaises: integer(0)
+          })])))
+        })
       }),
+      // Acquisition (spec 007, research R9): Wealth, windfalls and the active Wealth Strain penalty.
+      wealth: new SchemaField({
+        value: integer(0, { min: 0, max: 5 }),
+        liquid: integer(0, { min: 0 }),
+        strain: integer(0, { min: 0 }),
+        attempts: new ArrayField(new SchemaField({
+          key: new StringField({ required: true, blank: false }),
+          count: integer(0, { min: 0 })
+        }))
+      }),
+      // Starting equipment picks are counted while the character is being created (p. 16).
+      creation: new SchemaField({ active: new BooleanField({ initial: true }) }),
+      addictions: new ArrayField(new SchemaField({
+        name: new StringField({ required: true, blank: false, trim: true }),
+        level: integer(0, { min: 0, max: ADDICTION_LEVELS.length - 1 })
+      })),
       // Experience: starting XP and the ledger of purchases and awards (spec 006, research R6).
       xp: new SchemaField({
         starting: integer(STARTING_XP, { min: 0 }),
@@ -112,7 +139,10 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     super.prepareDerivedData();
     this.#prepareClasses();
     this.#capRatings();
-    const derived = computeDerived(this, this.derivedMods, this.modifiers);
+    this.#prepareEquipment();
+    const derived = computeDerived(this, this.derivedMods, {
+      ...this.modifiers, armorPenalty: this.armor.sdPenalty, maxDex: this.armor.maxDex
+    });
     this.derived = {
       staticDefense: derived.staticDefense,
       mentalDefense: derived.mentalDefense,
@@ -144,6 +174,40 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       .filter((item) => item.type === "feat" && item.system.category === "hindrance")
       .reduce((sum, item) => sum + (item.system.xpGranted ?? 0), 0);
     this.xp.totals = xpTotals({ starting: this.xp.starting, log: this.xp.log, hindranceXp });
+  }
+
+  /**
+   * Worn armor, addictions and Wealth (spec 007, research R3/R9/R10). Never persisted.
+   * Armor Proficiency feats give the armor types (their sub-category); bionic limbs count as armor at
+   * their location; the worst addiction adds its penalty to every roll.
+   */
+  #prepareEquipment() {
+    const items = this.parent?.items ?? [];
+    const equipped = (type) => items.filter((item) => item.type === type && item.system.equipped);
+    const feats = items.filter((item) => item.type === "feat");
+    const locations = {};
+    for (const item of equipped("gear")) {
+      if (item.system.category === "cybernetic" && item.system.location) locations[item.system.location] = 2;
+    }
+    this.armor = armorProfile({
+      armors: equipped("armor").map((item) => ({ name: item.name, ...item.system })),
+      proficiencies: feats.filter((item) => item.name.startsWith("Armor Proficiency"))
+        .map((item) => item.system.selection?.subcategory?.toLowerCase()).filter(Boolean),
+      squat: feats.some((item) => item.name === "Squat Armor Proficiency"),
+      bonuses: { ...this.modifiers.armor, locations }
+    });
+
+    const worst = Math.max(0, ...this.addictions.map((entry) => entry.level));
+    const rolls = this.modifiers.rolls;
+    // Minor −1k0; Moderate also stops dice exploding; Major −2k2 in total (p. 341).
+    if (worst === 1 || worst === 2) rolls.all.rolled -= 1;
+    if (worst >= 2) rolls.noExplode = true;
+    if (worst === 3) {
+      rolls.all.rolled -= 2;
+      rolls.all.kept -= 2;
+    }
+    this.addictionLevel = worst;
+    this.wealth.effective = effectiveWealth(this.wealth);
   }
 
   /**

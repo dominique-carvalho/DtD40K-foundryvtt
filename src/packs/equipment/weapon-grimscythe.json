@@ -1,0 +1,61 @@
+{
+  "name": "Grimscythe",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A larger, two-handed version of the Syrneth scythe. It is even more lethal than the smaller weapon but somewhat slower to defend with.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "mythicRare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Syrneth",
+    "proficiencies": [
+      "Melee 3"
+    ],
+    "damage": {
+      "rolled": 6,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 8,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "powerField",
+        "value": null
+      },
+      {
+        "key": "unbalanced",
+        "value": null
+      },
+      {
+        "key": "twoHands",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEfcdb6eb7270d",
+  "_key": "!items!dtdEfcdb6eb7270d",
+  "folder": "dtdEFd0bdcb36722"
+}

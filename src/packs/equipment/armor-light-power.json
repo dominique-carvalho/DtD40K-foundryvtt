@@ -1,0 +1,58 @@
+{
+  "name": "Light Power",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>A lighter form of powered armor with its own power source. As power armor it grants +1 Strength and +1 Resilience while worn, but its Static Defense penalty is increased by a further 2.</p><p>Like all power armor it only functions as a complete suit and cannot be bought or worn as individual pieces.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 332
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "armorType": "power",
+    "ap": 10,
+    "maxDex": 3,
+    "piece": "",
+    "suitOnly": true,
+    "primitive": false
+  },
+  "effects": [
+    {
+      "name": "Light Power: Strength and Resilience",
+      "img": "icons/svg/shield.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.characteristics.str.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.modifiers.resilience",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEfdfbeca7f540",
+      "_key": "!items.effects!dtdE7a23dc1f17cc.dtdEfdfbeca7f540"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdE7a23dc1f17cc",
+  "_key": "!items!dtdE7a23dc1f17cc",
+  "folder": "dtdEFdf705ea6722"
+}

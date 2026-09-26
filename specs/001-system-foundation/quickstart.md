@@ -61,3 +61,5 @@ Reiniciar o Foundry → o sistema "Dungeons the Dragoning" aparece em *Game Syst
 |---|---|---|---|
 | 2026-09-25 | 1–2 | ✅ | Personagem criado com valores iniciais corretos (verificado no banco do mundo `teste-dtd`) |
 | 2026-09-25 | 3 | ❌ | Derivados não atualizavam na ficha aberta; layout inutilizável no v13 → reformulação da US1 (layout híbrido A+C) |
+| 2026-09-25 | 3 (Traya da 7.7a) | ✅ | Após adotar a DtD 7.7a: str 4, dex 2, con 4, wil 4, wis 2, cmp 2, Size 5 → SD 12, HP 16, MD 15, Resolve 6, Speed 6, Resilience 4, Fatigue 4; valores atualizam na hora. Caixa Fatigue (atual/máxima) no cabeçalho e linha "Fatigue máxima" nos ajustes do Mestre (bônus/override) funcionando. Temas claro e escuro sem cortes. |
+| 2026-09-25 | 16 (rodapé) | ✅ | Rodapé mostra iniciativa de combate 1d10 + Dex + Cmp e social 1d10 + Fel + Cmp (7.7a p. 17). A rolagem no Combat Tracker não fez parte desta validação. |

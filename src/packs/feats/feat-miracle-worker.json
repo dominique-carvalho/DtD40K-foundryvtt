@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFc6973d228a67",
+  "_key": "!items!dtdFc6973d228a67",
+  "name": "Miracle Worker",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>As a ship's Chief of Engineering, when you use Emergency Repair to fix damaged systems you may try to restore two of them, rolling a separate test for each, instead of one.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 192
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

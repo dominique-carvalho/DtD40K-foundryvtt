@@ -19,7 +19,8 @@
       "race": "",
       "deity": "Lolth"
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

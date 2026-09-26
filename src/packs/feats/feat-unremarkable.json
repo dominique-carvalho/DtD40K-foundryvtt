@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFf7e84fe5b416",
+  "_key": "!items!dtdFf7e84fe5b416",
+  "name": "Unremarkable",
+  "type": "feat",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your face is easily forgotten: anyone trying to single you out in a crowd or describe you takes a -2k0 penalty. The effect is partly supernatural, so it still applies against eidetic memory.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 196
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

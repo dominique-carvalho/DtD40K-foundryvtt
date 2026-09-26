@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF7f45f9383422",
+  "_key": "!items!dtdF7f45f9383422",
+  "name": "Discipline",
+  "type": "feat",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your training steels you for social conflict, granting +1 Resolve.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 183
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "discipline",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

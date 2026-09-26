@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF0ec6541929b7",
+  "_key": "!items!dtdF0ec6541929b7",
+  "name": "Fan The Hammer",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>With the Multiple Attacks action, a ranged weapon can fire extra single shots, as many as its clip holds. Every attack suffers -1k0 per attack in the sequence (three shots means -3k0 each, four means -4k0 each, etc.).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 185
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

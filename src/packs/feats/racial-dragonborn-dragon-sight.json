@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF88ccf1b94afe",
+  "_key": "!items!dtdF88ccf1b94afe",
+  "name": "Dragon Sight",
+  "type": "feat",
+  "img": "icons/svg/eye.svg",
+  "folder": "dtdFld18a473cdba",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Like the dragons of legend, you can sense your prey in darkness. You gain Dark Sight, and you may reroll a failed Perception test once.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 201
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Dragonborn",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFb04b8c7d5abf",
+  "_key": "!items!dtdFb04b8c7d5abf",
+  "name": "Eagle Eyes",
+  "type": "feat",
+  "img": "icons/svg/eye.svg",
+  "folder": "dtdFld9c04f67af9",
+  "system": {
+    "category": "asset",
+    "description": "<p>Your sight is exceptionally keen: any concealment that is less than total is ignored.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 206
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

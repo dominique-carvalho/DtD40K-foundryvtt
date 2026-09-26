@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF2fb1b1fd98d9",
+  "_key": "!items!dtdF2fb1b1fd98d9",
+  "name": "Mutation",
+  "type": "feat",
+  "img": "icons/svg/pawprint.svg",
+  "folder": "dtdFldf938dd001f",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Your hooves, claws or horns are real weapons. They count as a natural weapon: 2k3 I or R, with the Brawling and Melee keywords.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 205
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Tiefling",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

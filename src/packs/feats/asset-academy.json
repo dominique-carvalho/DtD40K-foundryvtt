@@ -1,0 +1,52 @@
+{
+  "_id": "dtdF93adc39ebe5c",
+  "_key": "!items!dtdF93adc39ebe5c",
+  "name": "Academy",
+  "type": "feat",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdFld9c04f67af9",
+  "system": {
+    "category": "asset",
+    "description": "<p>Formal schooling in the martial arts means you start the game with two Weapon Proficiency feats of your choice.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 206
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "",
+        "choose": true
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "",
+        "choose": true
+      }
+    ],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

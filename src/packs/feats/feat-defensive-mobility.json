@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF8127808639d4",
+  "_key": "!items!dtdF8127808639d4",
+  "name": "Defensive Mobility",
+  "type": "feat",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Opportunity attacks against you face +5 Static Defense.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 183
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

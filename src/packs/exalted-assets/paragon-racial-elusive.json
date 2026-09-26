@@ -19,7 +19,8 @@
       "race": "Halfling",
       "deity": ""
     },
-    "automation": "elusive"
+    "automation": "elusive",
+    "grants": []
   },
   "effects": [],
   "flags": {}

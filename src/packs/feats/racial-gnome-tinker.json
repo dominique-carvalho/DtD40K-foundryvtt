@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF394383f8633f",
+  "_key": "!items!dtdF394383f8633f",
+  "name": "Tinker",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFldf29ff77a60",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Given raw material, you can build almost anything. Over one hour, you may destroy an item whose quality is average or higher to produce a different item of equal or lower rarity whose quality is one level lower.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Gnome",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

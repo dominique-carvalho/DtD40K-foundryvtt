@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF9cdc87ac3e14",
+  "_key": "!items!dtdF9cdc87ac3e14",
+  "name": "Stunning Fist",
+  "type": "feat",
+  "img": "icons/svg/daze.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your unarmed strikes gain Shocking for one round whenever you pay 1 Hero Point.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 195
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

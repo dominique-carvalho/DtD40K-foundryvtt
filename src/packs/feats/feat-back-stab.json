@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF2ca60111eaeb",
+  "_key": "!items!dtdF2ca60111eaeb",
+  "name": "Back Stab",
+  "type": "feat",
+  "img": "icons/svg/blood.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When you are ganging up on a foe, your damage rolls against it gain +2k0.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 180
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

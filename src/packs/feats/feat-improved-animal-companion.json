@@ -1,0 +1,46 @@
+{
+  "_id": "dtdF44f6c997e70a",
+  "_key": "!items!dtdF44f6c997e70a",
+  "name": "Improved Animal Companion",
+  "type": "feat",
+  "img": "icons/svg/pawprint.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your Animal Companion gains +1 to both its Threat Rating and its Damage Rating. Should it die, its replacement keeps these improvements.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 188
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "feat",
+        "name": "Animal Companion"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

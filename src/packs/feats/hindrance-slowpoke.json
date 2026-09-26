@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFea9621ae9ef6",
+  "_key": "!items!dtdFea9621ae9ef6",
+  "name": "Slowpoke",
+  "type": "feat",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>You always act last in every initiative count and cannot improve your position. The only way to act before someone is if they are an even bigger slowpoke.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 210
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

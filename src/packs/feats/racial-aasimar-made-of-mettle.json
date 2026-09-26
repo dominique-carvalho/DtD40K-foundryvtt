@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF2387b52fc73d",
+  "_key": "!items!dtdF2387b52fc73d",
+  "name": "Made of Mettle",
+  "type": "feat",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "dtdFld8663a210a8",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Aasimar work relentlessly to shore up whatever they see as their worst flaw. Your lowest characteristic increases by 1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 201
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Aasimar",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "madeOfMettle",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

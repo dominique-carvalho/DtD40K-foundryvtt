@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF26ed10eca2df",
+  "_key": "!items!dtdF26ed10eca2df",
+  "name": "Acceptable Losses",
+  "type": "feat",
+  "img": "icons/svg/anchor.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Serving as a ship's Captain, you may grant once each turn +1k1 to any ship action. At the end of that turn, the ship loses 1 Crew.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 179
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF2ddc7f7203cc",
+  "_key": "!items!dtdF2ddc7f7203cc",
+  "name": "Furious Assault",
+  "type": "feat",
+  "img": "icons/svg/combat.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When an All Out Attack of yours hits and inflicts 1 or more wounds, you get another attack carrying identical bonuses and penalties.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 186
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

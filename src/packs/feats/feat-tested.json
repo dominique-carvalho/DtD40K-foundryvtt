@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF75377ec0096a",
+  "_key": "!items!dtdF75377ec0096a",
+  "name": "Tested",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>An official organization has Tested and Sanctioned you as stable, so you roll magic Tests as a Sanctioned Sorcerer. Characters lacking this feat are treated as Unsanctioned Sorcerers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 196
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

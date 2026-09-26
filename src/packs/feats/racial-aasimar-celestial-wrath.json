@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF9063b50bacee",
+  "_key": "!items!dtdF9063b50bacee",
+  "name": "Celestial Wrath",
+  "type": "feat",
+  "img": "icons/svg/sun.svg",
+  "folder": "dtdFld8663a210a8",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Righteous fury lends weight to your blows. Once each scene, you may add dice equal to your Charisma as rolled dice to one damage roll.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 201
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Aasimar",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

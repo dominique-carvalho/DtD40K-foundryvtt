@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF008565b7872e",
+  "_key": "!items!dtdF008565b7872e",
+  "name": "Second Chance",
+  "type": "feat",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "dtdFld53ef1123e7",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Your slipperiness borders on pure luck. Once per combat, you can make an opponent reroll one attack roll aimed at you.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 203
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Halfling",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

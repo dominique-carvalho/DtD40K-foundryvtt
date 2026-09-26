@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF302bb7444a20",
+  "_key": "!items!dtdF302bb7444a20",
+  "name": "Spell Might",
+  "type": "feat",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When making a Focus Power test you may accept a check on it; in exchange, the final result gains two raises.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 194
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

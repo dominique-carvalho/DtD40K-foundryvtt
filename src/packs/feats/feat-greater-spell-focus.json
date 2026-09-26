@@ -1,0 +1,46 @@
+{
+  "_id": "dtdF9bad84a18fb9",
+  "_key": "!items!dtdF9bad84a18fb9",
+  "name": "Greater Spell Focus",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Pick a school of magic. When a spell of that school succeeds on its magic Test, you count one more raise when working out the spell's effect. Stacks with Spell Focus.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 186
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "feat",
+        "name": "Spell Focus"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

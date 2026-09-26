@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFe7e35e880392",
+  "_key": "!items!dtdFe7e35e880392",
+  "name": "Brave",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFld9c04f67af9",
+  "system": {
+    "category": "asset",
+    "description": "<p>Whenever you fail a Fear test, reduce your result on the shock table by 2, never going below 1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 206
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

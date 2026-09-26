@@ -19,7 +19,14 @@
       "race": "",
       "deity": ""
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": [
+      {
+        "name": "Peer",
+        "subcategory": "Ventrue",
+        "choose": false
+      }
+    ]
   },
   "effects": [],
   "flags": {}

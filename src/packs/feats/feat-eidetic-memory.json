@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFd2a9e798f743",
+  "_key": "!items!dtdFd2a9e798f743",
+  "name": "Eidetic Memory",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your recall is perfect: anything you have heard or read, you can reproduce in detail without real effort.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 184
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "dtdFc1b5f5fef2d4",
+  "_key": "!items!dtdFc1b5f5fef2d4",
+  "name": "Good Reputation",
+  "type": "feat",
+  "img": "icons/svg/coins.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Word of your deeds has spread within one chosen group or faction. Its members treat their Disposition toward you as one level higher unless they have solid cause not to. Stacks with Peer.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 186
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Academics",
+        "Sigil's Factions",
+        "Churches",
+        "Specific Races",
+        "Government",
+        "The Military",
+        "Middle Classes",
+        "Nobility",
+        "the Insane",
+        "Underworld",
+        "Workers"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

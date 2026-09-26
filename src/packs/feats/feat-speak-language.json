@@ -1,0 +1,55 @@
+{
+  "_id": "dtdFe8c11543404d",
+  "_key": "!items!dtdFe8c11543404d",
+  "name": "Speak Language",
+  "type": "feat",
+  "img": "icons/svg/sound.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You become fluent in one more language of your choice, such as a secret tongue, a regional dialect or the speech of locals who will not use Trade.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 194
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Human",
+        "Elven",
+        "Squat",
+        "Trade",
+        "Syrneth",
+        "Gnomish",
+        "Celestial",
+        "Infernal",
+        "Eldarin",
+        "Dark Eldarin",
+        "Clawspeak",
+        "Draconic",
+        "Orkish"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

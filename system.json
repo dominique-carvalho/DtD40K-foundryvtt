@@ -98,6 +98,17 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "feats",
+      "label": "Feats",
+      "path": "packs/feats",
+      "type": "Item",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "grid": {
@@ -106,7 +117,7 @@
   },
   "primaryTokenAttribute": "hp",
   "secondaryTokenAttribute": "resolve",
-  "initiative": "1d10 + @characteristics.dex.value + @characteristics.cmp.value",
+  "initiative": "1d10 + @characteristics.dex.value + @characteristics.cmp.value + @modifiers.initiative",
   "url": "https://github.com/dominique-carvalho/DtD40K-foundryvtt",
   "manifest": "https://github.com/dominique-carvalho/DtD40K-foundryvtt/releases/latest/download/system.json",
   "download": "https://github.com/dominique-carvalho/DtD40K-foundryvtt/releases/download/v0.1.0/dtd40k.zip"

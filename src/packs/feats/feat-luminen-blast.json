@@ -1,0 +1,46 @@
+{
+  "_id": "dtdF76fd78878205",
+  "_key": "!items!dtdF76fd78878205",
+  "name": "Luminen Blast",
+  "type": "feat",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>By reciting a litany you channel Potentia Coil energy through your arms as a ranged attack: 0k2 E damage plus 1k0 per point of Willpower, 10m range, with the Shocking property. Each use requires a Constitution test (TN 15); failing it costs one level of fatigue.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 190
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "feat",
+        "name": "Mechanicus Implants"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

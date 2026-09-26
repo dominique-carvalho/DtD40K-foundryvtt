@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF42baada90e8c",
+  "_key": "!items!dtdF42baada90e8c",
+  "name": "Foresight",
+  "type": "feat",
+  "img": "icons/svg/eye.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Spend 10 minutes studying a problem to gain a free raise on your next Int test.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 186
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

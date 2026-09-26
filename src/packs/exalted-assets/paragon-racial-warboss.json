@@ -19,7 +19,8 @@
       "race": "Ork",
       "deity": ""
     },
-    "automation": "warboss"
+    "automation": "warboss",
+    "grants": []
   },
   "effects": [],
   "flags": {}

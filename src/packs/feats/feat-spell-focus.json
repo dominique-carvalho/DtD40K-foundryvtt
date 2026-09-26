@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFee203c3b9e3f",
+  "_key": "!items!dtdFee203c3b9e3f",
+  "name": "Spell Focus",
+  "type": "feat",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Choose a school of magic. When a magic Test for a spell of that school succeeds, count one extra raise when working out the spell's effect. This bonus stacks with Greater Spell Focus.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 194
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFb7d3230a42c0",
+  "_key": "!items!dtdFb7d3230a42c0",
+  "name": "Lead Fingers",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Up to the Short Range of your weapon, gunshots let you push objects, flip switches, press buttons and do anything else a single finger could. The SM rules on what works.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 190
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

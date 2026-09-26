@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF4e872d7970bc",
+  "_key": "!items!dtdF4e872d7970bc",
+  "name": "Far Shot",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Firing at Long Range imposes no penalties on you, though Extreme Range penalties still apply.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 185
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

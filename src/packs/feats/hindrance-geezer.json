@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF2d3ee6f7be46",
+  "_key": "!items!dtdF2d3ee6f7be46",
+  "name": "Geezer",
+  "type": "feat",
+  "img": "icons/svg/tankard.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>You are old in spirit if not in years. You are out of step with current culture, have medication to keep track of, prefer outdated technology, and must tolerate the youngsters around you.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 209
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

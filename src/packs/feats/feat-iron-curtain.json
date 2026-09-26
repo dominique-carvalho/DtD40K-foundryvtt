@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF70467925ce63",
+  "_key": "!items!dtdF70467925ce63",
+  "name": "Iron Curtain",
+  "type": "feat",
+  "img": "icons/svg/aura.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You can wrap yourself in a mysterious energy shield that always comes with some visible effect. For one Hero Point you take no damage at all from that moment until your next round.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 189
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

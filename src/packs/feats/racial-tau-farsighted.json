@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF68eef701a574",
+  "_key": "!items!dtdF68eef701a574",
+  "name": "Farsighted",
+  "type": "feat",
+  "img": "icons/svg/eye.svg",
+  "folder": "dtdFld56dd7a9821",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Your broad perspective and discipline make you hard to manipulate. Your Resolve rises by 3 and your Mental Defense by 5.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 204
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Tau",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "farsighted",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,48 @@
+{
+  "_id": "dtdF43164f50a8d8",
+  "_key": "!items!dtdF43164f50a8d8",
+  "name": "Hatred",
+  "type": "feat",
+  "img": "icons/svg/skull.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Choose a group, organization or race that once wronged you. You get +1k1 on attack rolls against its members, but only when you know the foe belongs to it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 187
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Criminals",
+        "Rival Group (specific)",
+        "Pirates",
+        "Race (specific)",
+        "Magic Users",
+        "Heretics"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

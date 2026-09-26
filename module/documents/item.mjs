@@ -1,3 +1,5 @@
+import { grantFeats, releaseGrants } from "./feat-service.mjs";
+
 /**
  * Item document class for Dungeons the Dragoning.
  */
@@ -24,5 +26,27 @@ export class DtdItem extends Item {
       ui.notifications.warn(game.i18n.localize(warning));
       return false;
     }
+  }
+
+  /**
+   * Grant the feats this item gives (race, exaltation, asset, racial feat — spec 005, research R7).
+   * Runs once, on the client that created the item.
+   * @override
+   */
+  _onCreate(data, options, userId) {
+    super._onCreate(data, options, userId);
+    if (userId !== game.user.id || this.parent?.type !== "character" || !this.system.grants?.length) return;
+    grantFeats(this.parent, this).catch((error) => console.error("dtd40k | Could not grant feats", error));
+  }
+
+  /**
+   * Release the feats this item granted: those left without origin and not purchased leave with it.
+   * Runs once, on the client that deleted the item.
+   * @override
+   */
+  _onDelete(options, userId) {
+    super._onDelete(options, userId);
+    if (userId !== game.user.id || this.parent?.type !== "character") return;
+    releaseGrants(this.parent, this.id).catch((error) => console.error("dtd40k | Could not release granted feats", error));
   }
 }

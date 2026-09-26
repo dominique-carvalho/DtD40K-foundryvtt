@@ -27,15 +27,44 @@
     <div class="form-group"><label>{{localize "DTD.Asset.Category.label"}}</label>
       <select name="system.category">{{selectOptions categoryOptions selected=system.category localize=true}}</select>
     </div>
+    {{#if isExaltedAsset}}
     <div class="form-group"><label>{{localize "DTD.Asset.Group.label"}}</label>
       <select name="system.group">{{selectOptions groupOptions selected=system.group localize=true}}</select>
     </div>
     <div class="form-group"><label>{{localize "DTD.Asset.Exaltation"}}</label><input type="text" name="system.prerequisites.exaltation" value="{{system.prerequisites.exaltation}}"></div>
-    <div class="form-group"><label>{{localize "DTD.Asset.Race"}}</label><input type="text" name="system.prerequisites.race" value="{{system.prerequisites.race}}"></div>
     <div class="form-group"><label>{{localize "DTD.Asset.Deity"}}</label><input type="text" name="system.prerequisites.deity" value="{{system.prerequisites.deity}}"></div>
+    {{/if}}
+    <div class="form-group"><label>{{localize "DTD.Asset.Race"}}</label><input type="text" name="system.prerequisites.race" value="{{system.prerequisites.race}}"></div>
     <div class="form-group"><label>{{localize "DTD.Asset.XpCost"}}</label><input type="number" name="system.xpCost" value="{{system.xpCost}}" min="0" step="1"></div>
+    <div class="form-group"><label>{{localize "DTD.Feat.XpGranted"}}</label><input type="number" name="system.xpGranted" value="{{system.xpGranted}}" min="0" step="1"></div>
+    <div class="form-group"><label class="checkbox"><input type="checkbox" name="system.repeatable" {{checked system.repeatable}}> {{localize "DTD.Feat.Repeatable"}}</label></div>
+    <div class="form-group"><label class="checkbox"><input type="checkbox" name="system.featGroup.enabled" {{checked system.featGroup.enabled}}> {{localize "DTD.Feat.Group"}}</label></div>
+    {{#if system.featGroup.enabled}}
+    <div class="form-group stacked"><label>{{localize "DTD.Feat.Options"}}</label><string-tags name="system.featGroup.options" value="{{groupOptionsValue}}"></string-tags></div>
+    {{/if}}
     <div class="form-group"><label>{{localize "DTD.Asset.Automation.label"}}</label>
       <select name="system.automation">{{selectOptions automationOptions selected=system.automation localize=true}}</select>
+    </div>
+    <div class="form-group stacked">
+      <label>{{localize "DTD.Feat.Requires"}} <a class="list-control" data-action="addEntry" data-list="requires"><i class="fa-solid fa-plus" inert></i></a></label>
+      {{#each requires as |req|}}
+      <div class="list-row">
+        <select name="system.requires.{{req.index}}.type">{{selectOptions @root.requireTypeOptions selected=req.type localize=true}}</select>
+        <input type="text" name="system.requires.{{req.index}}.name" value="{{req.name}}">
+        <a class="list-control" data-action="removeEntry" data-list="requires" data-index="{{req.index}}"><i class="fa-solid fa-trash" inert></i></a>
+      </div>
+      {{/each}}
+    </div>
+    <div class="form-group stacked">
+      <label>{{localize "DTD.Feat.Grants"}} <a class="list-control" data-action="addEntry" data-list="grants"><i class="fa-solid fa-plus" inert></i></a></label>
+      {{#each grants as |grant|}}
+      <div class="list-row">
+        <input type="text" name="system.grants.{{grant.index}}.name" value="{{grant.name}}" placeholder="{{localize "Name"}}">
+        <input type="text" name="system.grants.{{grant.index}}.subcategory" value="{{grant.subcategory}}" placeholder="{{localize "DTD.Feat.Subcategory"}}">
+        <label class="checkbox"><input type="checkbox" name="system.grants.{{grant.index}}.choose" {{checked grant.choose}}> {{localize "DTD.Feat.Choose"}}</label>
+        <a class="list-control" data-action="removeEntry" data-list="grants" data-index="{{grant.index}}"><i class="fa-solid fa-trash" inert></i></a>
+      </div>
+      {{/each}}
     </div>
     {{else}}
     <dl class="feat-stats">
@@ -43,7 +72,14 @@
       {{#if system.prerequisites.exaltation}}<dt>{{localize "DTD.Asset.Exaltation"}}</dt><dd>{{system.prerequisites.exaltation}}</dd>{{/if}}
       {{#if showRace}}<dt>{{localize "DTD.Asset.Race"}}</dt><dd>{{system.prerequisites.race}}</dd>{{/if}}
       {{#if showDeity}}<dt>{{localize "DTD.Asset.Deity"}}</dt><dd>{{system.prerequisites.deity}}</dd>{{/if}}
-      <dt>{{localize "DTD.Asset.XpCost"}}</dt><dd>{{system.xpCost}} XP</dd>
+      {{#if system.xpGranted}}<dt>{{localize "DTD.Feat.XpGranted"}}</dt><dd>+{{system.xpGranted}} XP</dd>
+      {{else}}<dt>{{localize "DTD.Asset.XpCost"}}</dt><dd>{{system.xpCost}} XP</dd>{{/if}}
+      {{#if isHindrance}}<dt>{{localize "DTD.Feat.Limit"}}</dt><dd>{{hindranceLimitText}}</dd>{{/if}}
+      {{#if system.featGroup.enabled}}<dt>{{localize "DTD.Feat.Group"}}</dt><dd>{{#if groupOptionsText}}{{groupOptionsText}}{{else}}—{{/if}}</dd>{{/if}}
+      {{#if system.repeatable}}<dt>{{localize "DTD.Feat.Repeatable"}}</dt><dd>✓</dd>{{/if}}
+      {{#if requiresText}}<dt>{{localize "DTD.Feat.Requires"}}</dt><dd>{{requiresText}}</dd>{{/if}}
+      {{#if grantsText}}<dt>{{localize "DTD.Feat.Grants"}}</dt><dd>{{grantsText}}</dd>{{/if}}
+      {{#if selectionText}}<dt>{{localize "DTD.Feat.Selection"}}</dt><dd>{{selectionText}}</dd>{{/if}}
       <dt>{{localize "DTD.Asset.Automation.label"}}</dt><dd><span class="automation-tag">{{localize automationLabel}}</span></dd>
     </dl>
     {{/if}}

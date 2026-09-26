@@ -1,0 +1,46 @@
+{
+  "_id": "dtdF99cd6914dc05",
+  "_key": "!items!dtdF99cd6914dc05",
+  "name": "Elven Precision",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld1291e1f3e7",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You make impossible shots look effortless. Any Elven Accuracy reroll you make after failing a Ballistics or Weaponry test gains +2k0.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Elf",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "racePower",
+        "name": "Elven Accuracy"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

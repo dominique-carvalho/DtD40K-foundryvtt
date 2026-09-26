@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF9806382d7466",
+  "_key": "!items!dtdF9806382d7466",
+  "name": "Improvisational Savant",
+  "type": "feat",
+  "img": "icons/svg/combat.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Any improvised weapon you use gains a special property fitting the object, such as Defensive for a trash can lid, Flexible for a chain or reach for a ladder. The SM decides which properties apply.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 189
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -301,9 +301,22 @@ Fonte: 1.6 pp. 85–115; Book 2 pp. 21–53.
 
 ## 8. Feats, Assets, Hindrances
 
-Fonte: 1.6 pp. 117–145; Book 2 pp. 55–71.
+Fonte: **7.7a cap. 7, pp. 174–210** (grupos p. 174; listas-resumo pp. 175–178; regras de feats raciais,
+Assets e Hindrances pp. 178–179; descrições pp. 180–198; feats raciais pp. 199–205; Assets pp. 205–207;
+Hindrances pp. 208–210) e Exalted Assets pp. 211–223. Histórico: 1.6 pp. 117–145; Book 2 pp. 55–71.
+Implementado na feature `005-feats-assets-hindrances` (Exalted Assets na `004`).
 
-**Contagem**: 1.6 ≈ 96 feats gerais + 24 raciais; B2 85 gerais + 25 raciais + 10 assets de exaltação. 1.6: 22 assets gerais + assets de exaltação (5 Atlantean, 15 Chosen Marks, 5 Daemonhost, 4 Paragon, 5 Promethean, 5 Vampire, 5 Werewolf; limite 1 por personagem, exceto Paragon); 22 Hindrances.
+**Contagem (7.7a)**: **181 feats** · **49 feats raciais** (3 por raça, Kobold 4) · **22 Assets** · **22
+Hindrances** · 75 Exalted Assets (§6). Feat 100 XP; asset 100 XP (só na criação, sem limite de número);
+hindrance +100 XP (máx. 2, só na criação). "A maioria dos feats só uma vez" (cap. 6, p. 106); 22 feats de
+grupo são repetíveis com subcategoria diferente (Archmage Tradition é grupo mas não repete).
+
+**Concessões (7.7a)**: Aasimar → Jaded, Fearless · Gnome → todas as Weapon/Armor Proficiency · Atlantean
+(Past Lives) → Speak Language (Syrneth) · Promethean (Integrated Armor) → Armor Proficiency × 5 · You Will
+Not Falter → Armor of Contempt, Armor Proficiency (Power), Armor Specialization (Power) · Tuning → Weapon
+Specialization, Weapon Focus e Armor Specialization à escolha · Ventrue → Peer (Ventrue) · Academy → 2 Weapon
+Proficiency · Kenjutsu → Extracurricular Study · K'sten'mannav → Armor of Contempt · Lightning Bug → Luminen
+Blast.
 
 **Estrutura de feat**: `name, summary, description, repeatable (*), group (escolhido na compra), tags`. Feats **não têm pré-requisitos formais** (o controle é pela lista da classe), mas várias dependem de outras. Feats raciais: compráveis a qualquer momento como se estivessem na lista da classe.
 

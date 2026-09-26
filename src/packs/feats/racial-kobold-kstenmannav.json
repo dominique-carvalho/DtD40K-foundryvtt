@@ -1,0 +1,47 @@
+{
+  "_id": "dtdFb1d7b62e4ee5",
+  "_key": "!items!dtdFb1d7b62e4ee5",
+  "name": "K'sten'mannav",
+  "type": "feat",
+  "img": "icons/svg/castle.svg",
+  "folder": "dtdFld6d2610db52",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You are a traditionalist kobold who upholds the old ideals of your race. Out of respect, other kobolds will not willingly attack you unless you strike them first, though this protection does not cover your companions. Your insular convictions also grant you the Armor of Contempt feat.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 203
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Kobold",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [
+      {
+        "name": "Armor of Contempt",
+        "subcategory": "",
+        "choose": false
+      }
+    ],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF1a105cdd27cd",
+  "_key": "!items!dtdF1a105cdd27cd",
+  "name": "Step Aside",
+  "type": "feat",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Each round you get one extra reaction, which can only be used for the Dodge action.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 195
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

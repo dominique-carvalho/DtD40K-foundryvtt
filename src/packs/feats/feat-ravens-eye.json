@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF72ddc3c27789",
+  "_key": "!items!dtdF72ddc3c27789",
+  "name": "Raven's Eye",
+  "type": "feat",
+  "img": "icons/svg/eye.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You automatically pick out a person you are searching for within a crowd, unless they are disguised, in which case you must first see through the disguise.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 193
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

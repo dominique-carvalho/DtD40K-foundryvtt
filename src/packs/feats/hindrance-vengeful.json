@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFc61889a794a8",
+  "_key": "!items!dtdFc61889a794a8",
+  "name": "Vengeful",
+  "type": "feat",
+  "img": "icons/svg/fire.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>Whenever someone wrongs you, you must try to set it right. Whether that revenge turns violent depends on your character's nature.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 210
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

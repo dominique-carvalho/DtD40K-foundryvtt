@@ -1,0 +1,46 @@
+{
+  "_id": "dtdF057db44b9a79",
+  "_key": "!items!dtdF057db44b9a79",
+  "name": "Improved Weapon Specialization",
+  "type": "feat",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Damage you deal with one specific weapon type gains an extra +0k1. The choice must be an exact weapon (for example Lasgun, not Las Weapons); it covers every make and quality of that weapon but no other weapon sharing its proficiency.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 188
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "feat",
+        "name": "Weapon Specialization"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

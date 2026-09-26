@@ -66,7 +66,19 @@
     "choice": {
       "characteristic": "",
       "skills": []
-    }
+    },
+    "grants": [
+      {
+        "name": "Jaded",
+        "subcategory": "",
+        "choose": false
+      },
+      {
+        "name": "Fearless",
+        "subcategory": "",
+        "choose": false
+      }
+    ]
   },
   "effects": [],
   "folder": null,

@@ -19,7 +19,24 @@
       "race": "Gnome",
       "deity": ""
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": [
+      {
+        "name": "Weapon Specialization",
+        "subcategory": "",
+        "choose": true
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "",
+        "choose": true
+      },
+      {
+        "name": "Armor Specialization",
+        "subcategory": "",
+        "choose": true
+      }
+    ]
   },
   "effects": [],
   "flags": {}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFdd8b153ee4eb",
+  "_key": "!items!dtdFdd8b153ee4eb",
+  "name": "Air of Authority",
+  "type": "feat",
+  "img": "icons/svg/aura.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>During social combat, your influence extends to every person who can hear you and is paying attention, not just a single target.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 179
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

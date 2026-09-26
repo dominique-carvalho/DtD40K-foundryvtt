@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFa320f60c5f9c",
+  "_key": "!items!dtdFa320f60c5f9c",
+  "name": "Powerful Charge",
+  "type": "feat",
+  "img": "icons/svg/combat.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your melee damage rolls gain +0k1 when you charge.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 193
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -19,7 +19,8 @@
       "race": "",
       "deity": ""
     },
-    "automation": "extraAction"
+    "automation": "extraAction",
+    "grants": []
   },
   "effects": [],
   "flags": {}

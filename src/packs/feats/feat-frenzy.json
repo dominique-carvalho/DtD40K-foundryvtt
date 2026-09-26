@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFbb27948e79cc",
+  "_key": "!items!dtdFbb27948e79cc",
+  "name": "Frenzy",
+  "type": "feat",
+  "img": "icons/svg/fire.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>As a half action you fly into a rage lasting until combat ends: +1 Strength and Constitution, -2 Intelligence and Wisdom. On every turn you have to attack in melee or advance toward a foe, and Parry actions are denied to you.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 186
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

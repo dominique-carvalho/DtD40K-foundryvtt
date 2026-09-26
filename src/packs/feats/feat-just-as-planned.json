@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF218167884ae6",
+  "_key": "!items!dtdF218167884ae6",
+  "name": "Just as Planned",
+  "type": "feat",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Spend a Hero Point to declare that, within the last ten minutes, you prepared or performed some small action that only now matters, like sending a discreet comm hail or switching on a recorder. It cannot alter other events that already happened, though they may be dealt with normally from now on.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 190
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

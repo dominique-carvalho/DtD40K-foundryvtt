@@ -1,0 +1,49 @@
+{
+  "_id": "dtdF48dfbc1f7acf",
+  "_key": "!items!dtdF48dfbc1f7acf",
+  "name": "Wizard Tradition",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Each time you take this feat, pick one tradition you do not already have. Hidden Flame: Illusion spells Daze every enemy within 5m of the affected area for one round; Iron Sigil: Abjuration spells may grant you Aura (which reduces only damage from magical sources) of 5 plus your Abjuration rank until your next turn begins; Golden Wyvern: after a Divination spell, your next initiative roll gains your Divination ranks. Emerald Frost: choose one foe struck by an Evocation attack; its Aura counts as twice your Evocation rank lower for that damage; Serpent Eye: an Enchantment spell gives its target a check on their next save against your spells, affected or not. Stormwalker: Evocation spells deal extra damage equal to your level to all targets hit; Death's Shadow: Necromancy spells strip 1 Resilience for one round from every enemy below half HP within 10m.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 198
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Hidden Flame",
+        "Iron Sigil",
+        "Golden Wyvern",
+        "Emerald Frost",
+        "Serpent Eye",
+        "Stormwalker",
+        "Death's Shadow"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

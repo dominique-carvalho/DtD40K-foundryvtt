@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFf52f8f62e931",
+  "_key": "!items!dtdFf52f8f62e931",
+  "name": "Luck",
+  "type": "feat",
+  "img": "icons/svg/sun.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Once per day you may reroll one die of any kind, Alignment Checks included.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 190
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

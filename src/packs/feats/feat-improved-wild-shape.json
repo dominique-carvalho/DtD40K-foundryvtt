@@ -1,0 +1,46 @@
+{
+  "_id": "dtdFa42a48f925c0",
+  "_key": "!items!dtdFa42a48f925c0",
+  "name": "Improved Wild Shape",
+  "type": "feat",
+  "img": "icons/svg/pawprint.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When you use Wild Shape, you may shift one more point between physical stats and may pick one extra trait among these: Dark Sight, Flyer, Armor Plating (2) or Aura (2).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 189
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "feat",
+        "name": "Wild Shape"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

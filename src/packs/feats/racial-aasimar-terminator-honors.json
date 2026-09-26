@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFa5d677101e56",
+  "_key": "!items!dtdFa5d677101e56",
+  "name": "Terminator Honors",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFld8663a210a8",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You have trained with the elite Terminator units. You may spend 1 Hero Point to ignore a number of wounds from a single attack equal to your Size.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 201
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Aasimar",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

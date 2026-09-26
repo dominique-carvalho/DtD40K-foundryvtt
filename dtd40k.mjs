@@ -27,7 +27,7 @@ Hooks.once("init", () => {
 
   // Initiative: 1d10 + Dexterity + Composure, no explosion (DtD 1.6 p. 241).
   CONFIG.Combat.initiative = {
-    formula: "1d10 + @characteristics.dex.value + @characteristics.cmp.value",
+    formula: "1d10 + @characteristics.dex.value + @characteristics.cmp.value + @modifiers.initiative",
     decimals: 0
   };
 

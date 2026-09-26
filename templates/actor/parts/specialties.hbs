@@ -6,13 +6,16 @@
     <a class="specialty-remove" data-action="removeSpecialty" data-path="{{../entry.specialtiesPath}}" data-index="{{index}}" data-tooltip="{{localize "DTD.Sheet.RemoveSpecialty"}}" aria-label="{{localize "DTD.Sheet.RemoveSpecialty"}}"><i class="fa-solid fa-xmark"></i></a>
   </span>
   {{/each}}
+  {{#each entry.featSpecialties as |specialty|}}
+  <span class="specialty-chip from-feat" data-tooltip="{{localize "DTD.Sheet.FromFeatShort"}}">{{specialty}} <i class="fa-solid fa-star" inert></i></span>
+  {{/each}}
   <span class="specialty-add">
     <input class="specialty-input" type="text" placeholder="{{localize "DTD.Sheet.NewSpecialty"}}" aria-label="{{localize "DTD.Sheet.NewSpecialty"}}">
     <a data-action="addSpecialty" data-path="{{entry.specialtiesPath}}" data-tooltip="{{localize "DTD.Sheet.AddSpecialty"}}" aria-label="{{localize "DTD.Sheet.AddSpecialty"}}"><i class="fa-solid fa-plus"></i></a>
   </span>
 </div>
-{{else if entry.specialties.length}}
+{{else if entry.allSpecialties.length}}
 <div class="specialties readonly">
-  {{#each entry.specialties as |specialty|}}<span class="specialty-chip">{{specialty}}</span>{{/each}}
+  {{#each entry.allSpecialties as |specialty|}}<span class="specialty-chip">{{specialty}}</span>{{/each}}
 </div>
 {{/if}}

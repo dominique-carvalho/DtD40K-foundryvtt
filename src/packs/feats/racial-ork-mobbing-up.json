@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF562a81c88b62",
+  "_key": "!items!dtdF562a81c88b62",
+  "name": "Mobbing Up",
+  "type": "feat",
+  "img": "icons/svg/terror.svg",
+  "folder": "dtdFld773b241942",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>A scared ork runs to find his mates. On a failed Pinning or Fear test, you are allowed to fall back toward any ally rather than take the normal result, halting as soon as you reach a space next to them.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 204
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Ork",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

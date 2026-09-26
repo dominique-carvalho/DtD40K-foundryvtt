@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF9daa03124831",
+  "_key": "!items!dtdF9daa03124831",
+  "name": "Match Frequency",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>As a ship's Tactical Officer, once each session you can bypass the shields of a target that your ship has hit with Active Augury since its last turn.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 191
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

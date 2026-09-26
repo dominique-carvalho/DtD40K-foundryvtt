@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFc8770b1afd9d",
+  "_key": "!items!dtdFc8770b1afd9d",
+  "name": "Mechadendrite Use",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You have the training to have cybernetic Mechadendrites installed and to operate them.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 191
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

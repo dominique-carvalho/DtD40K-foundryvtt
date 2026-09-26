@@ -71,7 +71,14 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
         exaltation: new SchemaField({
           resourceBonus: integer(0),
           resourcePerPowerStat: integer(0)
-        })
+        }),
+        // Targets of feat effects only — never sheet inputs (spec 005, research R4).
+        resolveMax: integer(0),
+        mentalDefense: integer(0),
+        staticDefense: integer(0),
+        staticDefenseCharacteristic: new StringField({ required: true, choices: ["dex", "con"], initial: "dex" }),
+        fatigueMax: integer(0),
+        initiative: integer(0)
       }),
       biography: new HTMLField({ required: true, blank: true })
     };

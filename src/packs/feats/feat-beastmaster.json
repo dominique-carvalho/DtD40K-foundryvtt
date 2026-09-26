@@ -1,0 +1,46 @@
+{
+  "_id": "dtdFf293a6b72738",
+  "_key": "!items!dtdFf293a6b72738",
+  "name": "Beastmaster",
+  "type": "feat",
+  "img": "icons/svg/pawprint.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your Animal Companion minion squad grows by 1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 181
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "feat",
+        "name": "Animal Companion"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

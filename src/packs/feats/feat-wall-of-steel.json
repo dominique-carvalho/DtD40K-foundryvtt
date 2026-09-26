@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFc9e3f262be09",
+  "_key": "!items!dtdFc9e3f262be09",
+  "name": "Wall of Steel",
+  "type": "feat",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Each round you get one extra reaction, reserved solely for Parry.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 196
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

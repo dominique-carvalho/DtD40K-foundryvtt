@@ -118,7 +118,9 @@
       "SocialInitiative": "Social Initiative",
       "Fatigue": "Fatigue",
       "Exaltation": "Exaltation Sheet",
-      "Feat": "Feat Sheet"
+      "Feat": "Feat Sheet",
+      "FromFeat": "From {feat} — removed with the feat",
+      "FromFeatShort": "Granted by a feat — removed with it"
     },
     "Roll": {
       "Success": "Success",
@@ -389,10 +391,97 @@
         "wrongRace": "{asset} requires a Paragon of the {race} race.",
         "duplicate": "The character already has {asset}.",
         "limit": "A character can have only one Exalted Asset (Paragon assets excepted)."
-      }
+      },
+      "GrantsFeats": "grants {count} feat(s)"
     },
     "Item": {
       "LockedPackHint": "This compendium is locked. To edit this entry, right-click the {pack} compendium and choose \"{option}\". Changes to the system compendium are replaced when the system updates — export them with npm run extract:packs, or import the entry into the world and edit the copy."
+    },
+    "Feat": {
+      "Category": {
+        "feat": "Feat",
+        "racialFeat": "Racial Feat",
+        "asset": "Asset",
+        "hindrance": "Hindrance",
+        "exaltedAsset": "Exalted Asset"
+      },
+      "Automation": {
+        "none": "Text only",
+        "soundConstitution": "Sound Constitution (+1 HP)",
+        "discipline": "Discipline (+1 Resolve)",
+        "paranoia": "Paranoia (+2 initiative)",
+        "farsighted": "Farsighted (+3 Resolve, +5 Mental Defense)",
+        "halflingAgility": "Halfling Agility (+4 Static Defense)",
+        "noOneTougher": "No One Tougher (Static Defense uses Constitution)",
+        "madeOfMettle": "Made of Mettle (+1 lowest characteristic)",
+        "beneficialMutation": "Beneficial Mutation (+2 lowest, −1 another)",
+        "matron": "Matron (Str +1, Dex −1, Fel −1, Size +2)",
+        "sturdy": "Sturdy (+1 Resilience)",
+        "sand": "Sand (+2 Fatigue)",
+        "nineLives": "Nine Lives (+1 Hero Point)",
+        "veteran": "Veteran o’ the Wheel (+1 characteristic, +1 skill)",
+        "skillFocus": "Skill Focus (specialty)",
+        "noisyCricket": "Noisy Cricket (Acrobatics: Jumping)"
+      },
+      "RequireType": {
+        "feat": "Feat",
+        "racePower": "Racial power"
+      },
+      "Feats": "Feats",
+      "Assets": "Assets",
+      "Hindrances": "Hindrances",
+      "XpGranted": "XP granted",
+      "Repeatable": "Can be taken more than once",
+      "Group": "Feat group (pick a sub-category)",
+      "Options": "Sub-categories",
+      "Subcategory": "Sub-category",
+      "SubcategoryHint": "Pick one from the list or type your own (with the GM's approval).",
+      "Requires": "Depends on",
+      "Grants": "Grants",
+      "Choose": "player's choice",
+      "Selection": "Choice",
+      "Race": "Race",
+      "DropHint": "Drag feats, assets and hindrances from the Feats compendium onto this sheet.",
+      "HindranceCount": "{count} / {max}",
+      "WrongRace": "Race does not match: {race} feat",
+      "GrantedBy": "Granted by {origin}",
+      "Purchased": "Purchased",
+      "Remove": "Remove",
+      "RemoveConfirm": "Remove {feat} and its bonuses from this character?",
+      "RemoveGranted": "{feat} was granted by {origin}; it leaves with it. Only the GM can remove it separately.",
+      "AlreadyGranted": "{feat} was already granted; it is now also marked as purchased.",
+      "GMOverrideTitle": "Add it anyway?",
+      "GMOverride": "As the GM you can add it anyway.",
+      "MissingDependencyTitle": "Missing dependency",
+      "MissingDependency": "{feat} builds on {names}, which the character does not have. Add it anyway?",
+      "GrantMissing": "{feat} (granted by {origin}) was not found in the Feats compendium.",
+      "Effect": "{feat}: {effect}",
+      "ChooseTitle": "Choices — {feat}",
+      "ChooseIntro": "Pick the choices of {feat}.",
+      "ChooseCharacteristic": "Characteristic",
+      "ChooseCharacteristic2": "Characteristic that loses 1",
+      "ChooseSkill": "Skill",
+      "Specialty": "Specialty",
+      "Notice": {
+        "creationOnly": "Assets and hindrances are normally chosen during character creation.",
+        "extraHindrances": "The book asks for {count} extra hindrance(s) that give no XP with this asset."
+      },
+      "Error": {
+        "notRepeatable": "The character already has {feat}, and it can only be taken once.",
+        "duplicate": "The character already has {feat}.",
+        "wrongRace": "{feat} is a racial feat of the {race} race.",
+        "noRace": "{feat} is a racial feat: apply a race first.",
+        "hindranceLimit": "A character can have at most two hindrances.",
+        "noSubcategory": "Pick or type a sub-category.",
+        "characteristic": "Pick one of the listed characteristics.",
+        "characteristic2": "Pick a different characteristic to lose 1.",
+        "skill": "Pick a skill.",
+        "specialty": "Type the specialty."
+      },
+      "GrantedByShort": "from",
+      "WrongRaceHint": "This racial feat belongs to another race. The GM decides whether to remove it.",
+      "Limit": "Limit",
+      "HindranceLimit": "At most {max} per character, chosen at character creation (p. 179)"
     }
   }
 }

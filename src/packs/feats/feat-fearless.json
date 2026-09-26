@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFa6cb4ff58090",
+  "_key": "!items!dtdFa6cb4ff58090",
+  "name": "Fearless",
+  "type": "feat",
+  "img": "icons/svg/terror.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You are immune to pinning and to every fear effect. However, backing down from a fight or disengaging from combat requires you to pass a Willpower test (TN 15).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 185
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

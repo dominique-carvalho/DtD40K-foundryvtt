@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFa741fcb06d7d",
+  "_key": "!items!dtdFa741fcb06d7d",
+  "name": "Clueless",
+  "type": "feat",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>You come from some backwater Sphere and it shows. You talk big, boast about things others consider ordinary, and fail to grasp the bigger picture.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 209
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

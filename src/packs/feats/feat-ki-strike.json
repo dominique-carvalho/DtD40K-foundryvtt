@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF6f345647875d",
+  "_key": "!items!dtdF6f345647875d",
+  "name": "Ki Strike",
+  "type": "feat",
+  "img": "icons/svg/combat.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your blows without a weapon are treated as magical weapons.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 190
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

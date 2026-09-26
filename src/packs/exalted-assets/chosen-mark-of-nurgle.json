@@ -19,7 +19,8 @@
       "race": "",
       "deity": "Nurgle"
     },
-    "automation": "markOfNurgle"
+    "automation": "markOfNurgle",
+    "grants": []
   },
   "effects": [],
   "flags": {}

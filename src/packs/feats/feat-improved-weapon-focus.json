@@ -1,0 +1,46 @@
+{
+  "_id": "dtdFbce19409ca64",
+  "_key": "!items!dtdFbce19409ca64",
+  "name": "Improved Weapon Focus",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Your attacks with one specific weapon type gain an extra +0k1. The choice must be an exact weapon (for example Heavy Bolter, not Bolt Weapons); it covers every make and quality of that weapon but no other weapon sharing its proficiency.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 188
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "feat",
+        "name": "Weapon Focus"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

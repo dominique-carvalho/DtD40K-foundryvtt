@@ -2,6 +2,8 @@ import {
   CHARACTERISTICS, EXALTATION_FORMULAS, EXALTATION_POWER_AUTOMATION, POWER_STAT_CAPS, RESOURCE_ACTIONS, RESOURCE_HEALING
 } from "../config.mjs";
 
+import { grantField } from "./fields.mjs";
+
 const { ArrayField, BooleanField, HTMLField, NumberField, SchemaField, StringField } = foundry.data.fields;
 
 /**
@@ -98,6 +100,8 @@ export class ExaltationData extends foundry.abstract.TypeDataModel {
           description: html()
         })
       ),
+      // Feats granted from a Power Stat rank (e.g. Promethean Integrated Armor — spec 005, research R6).
+      grants: new ArrayField(grantField({ rank: true })),
       tell: html(),
       lore: new SchemaField({
         origin: html(),

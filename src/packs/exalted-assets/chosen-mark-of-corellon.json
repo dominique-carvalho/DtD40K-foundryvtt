@@ -19,7 +19,8 @@
       "race": "",
       "deity": "Corellon"
     },
-    "automation": "none"
+    "automation": "none",
+    "grants": []
   },
   "effects": [],
   "flags": {}

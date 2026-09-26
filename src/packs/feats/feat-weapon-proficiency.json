@@ -1,0 +1,49 @@
+{
+  "_id": "dtdF5ba0b293ec1a",
+  "_key": "!items!dtdF5ba0b293ec1a",
+  "name": "Weapon Proficiency",
+  "type": "feat",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Choose a weapon category. On attack rolls with a weapon from any category you are proficient in, add a number of rolled dice matching your level.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 197
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Basic",
+        "Melee 1",
+        "Melee 2",
+        "Melee 3",
+        "Ranged 1",
+        "Ranged 2",
+        "Throwing"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

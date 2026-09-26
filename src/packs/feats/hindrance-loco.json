@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF542e868b2c48",
+  "_key": "!items!dtdF542e868b2c48",
+  "name": "Loco",
+  "type": "feat",
+  "img": "icons/svg/daze.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>The horrors of the Wheel have already taken their toll. You start play with 20 Insanity, meaning you already have one derangement.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 210
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF6e4c7cbf8d14",
+  "_key": "!items!dtdF6e4c7cbf8d14",
+  "name": "Druid's Oath",
+  "type": "feat",
+  "img": "icons/svg/oak.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You forswear metal armor and must make an effort to honor nature. While you keep this oath, once per round a Warp Phenomenon roll may be rerolled while you cast Healing, Transmutation or Divination spells.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 184
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

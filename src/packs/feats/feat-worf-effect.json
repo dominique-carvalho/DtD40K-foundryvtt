@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF746681086146",
+  "_key": "!items!dtdF746681086146",
+  "name": "Worf Effect",
+  "type": "feat",
+  "img": "icons/svg/terror.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>An enemy able to attack you must choose you as its target unless it succeeds on a TN 15 Intelligence Test; after that success it may pick other targets freely until the encounter ends.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 198
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

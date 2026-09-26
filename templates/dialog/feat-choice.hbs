@@ -1,0 +1,52 @@
+<div class="dtd40k race-choice feat-choice">
+  <p class="race-choice-intro">{{intro}}</p>
+  {{#if needs.subcategory}}
+  <fieldset>
+    <legend>{{localize "DTD.Feat.Subcategory"}}</legend>
+    <input type="text" name="subcategory" value="{{selection.subcategory}}" list="feat-subcategories" autofocus>
+    <datalist id="feat-subcategories">
+      {{#each subcategories as |option|}}<option value="{{option}}"></option>{{/each}}
+    </datalist>
+    <p class="hint">{{localize "DTD.Feat.SubcategoryHint"}}</p>
+  </fieldset>
+  {{/if}}
+  {{#if needs.characteristic}}
+  <fieldset>
+    <legend>{{localize "DTD.Feat.ChooseCharacteristic"}}</legend>
+    <div class="choice-grid">
+      {{#each characteristics as |option|}}
+      <label class="checkbox"><input type="radio" name="characteristic" value="{{option.key}}" {{checked option.selected}}> {{option.label}} ({{option.value}})</label>
+      {{/each}}
+    </div>
+  </fieldset>
+  {{/if}}
+  {{#if needs.characteristic2}}
+  <fieldset>
+    <legend>{{localize "DTD.Feat.ChooseCharacteristic2"}}</legend>
+    <div class="choice-grid">
+      {{#each characteristics2 as |option|}}
+      <label class="checkbox"><input type="radio" name="characteristic2" value="{{option.key}}" {{checked option.selected}}> {{option.label}}</label>
+      {{/each}}
+    </div>
+  </fieldset>
+  {{/if}}
+  {{#if needs.skill}}
+  <fieldset>
+    <legend>{{localize "DTD.Feat.ChooseSkill"}}</legend>
+    <select name="skill">
+      <option value=""></option>
+      {{#each skillGroups as |group|}}
+      <optgroup label="{{group.label}}">
+        {{#each group.options as |option|}}<option value="{{option.key}}" {{#if option.selected}}selected{{/if}}>{{option.label}}</option>{{/each}}
+      </optgroup>
+      {{/each}}
+    </select>
+  </fieldset>
+  {{/if}}
+  {{#if needs.specialty}}
+  <fieldset>
+    <legend>{{localize "DTD.Feat.Specialty"}}</legend>
+    <input type="text" name="specialty" value="{{selection.specialty}}">
+  </fieldset>
+  {{/if}}
+</div>

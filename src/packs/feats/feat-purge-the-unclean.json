@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF126f7b5fe94f",
+  "_key": "!items!dtdF126f7b5fe94f",
+  "name": "Purge the Unclean",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Spend a Hero Point and choose an enemy of your deity (the SM confirms which targets qualify; Chosen, Daemonhosts and Warp Entities nearly always do), then make an opposed Willpower test against it. On a success it is driven back a number of meters equal to twice your Willpower and cannot come nearer than that for 1d10 rounds.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 193
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

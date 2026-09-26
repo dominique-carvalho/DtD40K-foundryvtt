@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF190b353e50df",
+  "_key": "!items!dtdF190b353e50df",
+  "name": "Worf Barrage",
+  "type": "feat",
+  "img": "icons/svg/combat.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>As a ship's Tactical Officer, you may, once per scene for a single volley, reroll the critical damage dealt by the ship's weapons, and you must keep the reroll even if it is lower.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 198
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

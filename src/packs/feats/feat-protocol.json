@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF7e3ace8f4a10",
+  "_key": "!items!dtdF7e3ace8f4a10",
+  "name": "Protocol",
+  "type": "feat",
+  "img": "icons/svg/tankard.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You know enough local custom to avoid etiquette blunders. This works much like Common Sense, but you roll Common Lore + Intelligence (TN 15) instead of the plain Wisdom test.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 193
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

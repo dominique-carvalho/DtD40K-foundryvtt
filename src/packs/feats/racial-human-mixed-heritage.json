@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFf123b2fd8750",
+  "_key": "!items!dtdFf123b2fd8750",
+  "name": "Mixed Heritage",
+  "type": "feat",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "dtdFld3cb8412fdc",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Your family tree includes other peoples. Pick one race; its racial feats become available to you, excluding any that reference or enhance a racial ability you lack (Elven Accuracy, for example).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 203
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Human",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

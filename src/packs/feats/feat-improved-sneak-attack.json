@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF7e7e865cd33a",
+  "_key": "!items!dtdF7e7e865cd33a",
+  "name": "Improved Sneak Attack",
+  "type": "feat",
+  "img": "icons/svg/cowled.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Targets that are unaware of your attack get no damage reduction from their armor. They still suffer the usual Static Defense penalty unless they have feats preventing it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 188
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFb50faa52829e",
+  "_key": "!items!dtdFb50faa52829e",
+  "name": "Matron",
+  "type": "feat",
+  "img": "icons/svg/oak.svg",
+  "folder": "dtdFldbfd6d0fb48",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You have reached a Dryad's third life stage, a towering, bark-skinned form with limbs like heavy boughs. You lose 1 Fellowship, 1 Dexterity and the Pheromones racial power, while gaining 1 Strength, +2 Size and the Armor Plating (2) trait; your club-like fists also add +2k0 to brawl damage.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 201
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Dryad",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "matron",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

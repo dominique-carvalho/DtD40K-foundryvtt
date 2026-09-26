@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF6457f22ff263",
+  "_key": "!items!dtdF6457f22ff263",
+  "name": "Redshirt Shield",
+  "type": "feat",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>As a ship's Captain, your crew guards you fiercely and, while the ship is in port, stays close by. The first time in each session you would take damage, a random crewman appears seemingly from nowhere, takes the hit in your place and dies horribly.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 193
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

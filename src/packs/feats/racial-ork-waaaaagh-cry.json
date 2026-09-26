@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFfab80e93360f",
+  "_key": "!items!dtdFfab80e93360f",
+  "name": "WAAAAAGH CRY!",
+  "type": "feat",
+  "img": "icons/svg/sound.svg",
+  "folder": "dtdFld773b241942",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You rouse orks, and sometimes even non-orks, to hit harder. Whenever you gang up on a foe, you and your allies each gain an extra +1k0 to hit and to damage.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 204
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Ork",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

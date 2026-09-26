@@ -1076,13 +1076,13 @@
   padding-left: 1.25rem;
 }
 
-.dtd40k.item.exaltation .list-row {
+.dtd40k.item:is(.exaltation, .feat) .list-row {
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-.dtd40k.item.exaltation .list-row input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat) .list-row input[type="text"] {
   flex: 1;
 }
 
@@ -1090,7 +1090,7 @@
   width: 3.5rem;
 }
 
-.dtd40k.item.exaltation .list-control {
+.dtd40k.item:is(.exaltation, .feat) .list-control {
   cursor: pointer;
   margin-left: 0.3rem;
   font-size: 0.85rem;
@@ -1315,8 +1315,82 @@
 }
 
 /* The core radio collapses to 0 px inside this dialog; give it the core checkbox size. */
-.dtd40k.exaltation-choice input[type="radio"] {
+.dtd40k:is(.exaltation-choice, .feat-choice) input[type="radio"] {
   width: var(--checkbox-size);
   height: var(--checkbox-size);
   flex: 0 0 auto;
+}
+
+/* ---------- Feats, Assets and Hindrances in the Traits tab (spec 005) ---------- */
+
+.dtd40k .feat-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--dtd-border);
+}
+
+.dtd40k .feat-section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.dtd40k .feat-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k .feat-row header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dtd40k .feat-row a[data-action="openFeat"] {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline dotted;
+}
+
+.dtd40k .feat-row details summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .feat-row.incompatible a[data-action="openFeat"] {
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .feat-badge {
+  padding: 0 0.35rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 3px;
+  font-size: 0.72rem;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .feat-badge.granted {
+  border-color: var(--dtd-resolve);
+  color: var(--dtd-resolve);
+}
+
+.dtd40k .feat-badge.warning {
+  border-color: var(--dtd-hp);
+  color: var(--dtd-hp);
+}
+
+.dtd40k .specialty-chip.from-feat {
+  border-style: dashed;
+}
+
+.dtd40k.feat-choice input[type="text"],
+.dtd40k.feat-choice select {
+  width: 100%;
 }

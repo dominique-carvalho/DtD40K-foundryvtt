@@ -1,0 +1,45 @@
+{
+  "_id": "dtdFbf88dcb08c41",
+  "_key": "!items!dtdFbf88dcb08c41",
+  "name": "Elemental Shot II",
+  "type": "feat",
+  "img": "icons/svg/wing.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Once per session, as a half action, bind a minor elemental spirit of your chosen type to your weapon; your next attack with it gains the effect. Aero: I damage and anyone struck is pushed up to 10 meters. Aqua: R damage and Proven (3). Geo: I damage and anyone struck is knocked prone (flying foes are immune to the knockdown). Repeatable, with a new element each time.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 184
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Aero",
+        "Aqua",
+        "Geo"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

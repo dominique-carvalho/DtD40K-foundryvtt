@@ -63,7 +63,69 @@
     "choice": {
       "characteristic": "",
       "skills": []
-    }
+    },
+    "grants": [
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Basic",
+        "choose": false
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Melee 1",
+        "choose": false
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Melee 2",
+        "choose": false
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Melee 3",
+        "choose": false
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Ranged 1",
+        "choose": false
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Ranged 2",
+        "choose": false
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Throwing",
+        "choose": false
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Light",
+        "choose": false
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Medium",
+        "choose": false
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Heavy",
+        "choose": false
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Extreme",
+        "choose": false
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Power",
+        "choose": false
+      }
+    ]
   },
   "effects": [],
   "folder": null,

@@ -118,7 +118,9 @@
       "SocialInitiative": "Iniciativa social",
       "Fatigue": "Fatigue",
       "Exaltation": "Ficha de Exaltação",
-      "Feat": "Ficha de Feat"
+      "Feat": "Ficha de Feat",
+      "FromFeat": "De {feat} — sai junto com o feat",
+      "FromFeatShort": "Concedida por um feat — sai junto com ele"
     },
     "Roll": {
       "Success": "Sucesso",
@@ -389,10 +391,97 @@
         "wrongRace": "{asset} exige um Paragon da raça {race}.",
         "duplicate": "O personagem já tem {asset}.",
         "limit": "Um personagem só pode ter um Exalted Asset (exceto os de Paragon)."
-      }
+      },
+      "GrantsFeats": "concede {count} feat(s)"
     },
     "Item": {
       "LockedPackHint": "Este compêndio está bloqueado. Para editar esta entrada, clique com o botão direito no compêndio {pack} e escolha \"{option}\". Alterações no compêndio do sistema são substituídas quando o sistema é atualizado — exporte-as com npm run extract:packs, ou importe a entrada para o mundo e edite a cópia."
+    },
+    "Feat": {
+      "Category": {
+        "feat": "Feat",
+        "racialFeat": "Feat racial",
+        "asset": "Asset",
+        "hindrance": "Hindrance",
+        "exaltedAsset": "Exalted Asset"
+      },
+      "Automation": {
+        "none": "Só texto",
+        "soundConstitution": "Sound Constitution (+1 HP)",
+        "discipline": "Discipline (+1 Resolve)",
+        "paranoia": "Paranoia (+2 iniciativa)",
+        "farsighted": "Farsighted (+3 Resolve, +5 Mental Defense)",
+        "halflingAgility": "Halfling Agility (+4 Static Defense)",
+        "noOneTougher": "No One Tougher (Static Defense usa Constitution)",
+        "madeOfMettle": "Made of Mettle (+1 na menor característica)",
+        "beneficialMutation": "Beneficial Mutation (+2 na menor, −1 noutra)",
+        "matron": "Matron (Str +1, Dex −1, Fel −1, Size +2)",
+        "sturdy": "Sturdy (+1 Resilience)",
+        "sand": "Sand (+2 Fatigue)",
+        "nineLives": "Nine Lives (+1 Hero Point)",
+        "veteran": "Veteran o’ the Wheel (+1 característica, +1 perícia)",
+        "skillFocus": "Skill Focus (especialidade)",
+        "noisyCricket": "Noisy Cricket (Acrobatics: Jumping)"
+      },
+      "RequireType": {
+        "feat": "Feat",
+        "racePower": "Poder racial"
+      },
+      "Feats": "Feats",
+      "Assets": "Assets",
+      "Hindrances": "Hindrances",
+      "XpGranted": "XP concedido",
+      "Repeatable": "Pode ser escolhido mais de uma vez",
+      "Group": "Feat de grupo (escolha uma subcategoria)",
+      "Options": "Subcategorias",
+      "Subcategory": "Subcategoria",
+      "SubcategoryHint": "Escolha uma da lista ou digite outra (com aprovação do Mestre).",
+      "Requires": "Depende de",
+      "Grants": "Concede",
+      "Choose": "à escolha",
+      "Selection": "Escolha",
+      "Race": "Raça",
+      "DropHint": "Arraste feats, assets e hindrances do compêndio Feats para esta ficha.",
+      "HindranceCount": "{count} / {max}",
+      "WrongRace": "Raça incompatível: feat de {race}",
+      "GrantedBy": "Concedido por {origin}",
+      "Purchased": "Comprado",
+      "Remove": "Remover",
+      "RemoveConfirm": "Remover {feat} e seus bônus deste personagem?",
+      "RemoveGranted": "{feat} foi concedido por {origin} e sai junto com ele. Só o Mestre pode removê-lo à parte.",
+      "AlreadyGranted": "{feat} já tinha sido concedido; agora também está marcado como comprado.",
+      "GMOverrideTitle": "Adicionar mesmo assim?",
+      "GMOverride": "Como Mestre, você pode adicioná-lo mesmo assim.",
+      "MissingDependencyTitle": "Dependência ausente",
+      "MissingDependency": "{feat} depende de {names}, que o personagem não tem. Adicionar mesmo assim?",
+      "GrantMissing": "{feat} (concedido por {origin}) não foi encontrado no compêndio Feats.",
+      "Effect": "{feat}: {effect}",
+      "ChooseTitle": "Escolhas — {feat}",
+      "ChooseIntro": "Faça as escolhas de {feat}.",
+      "ChooseCharacteristic": "Característica",
+      "ChooseCharacteristic2": "Característica que perde 1",
+      "ChooseSkill": "Perícia",
+      "Specialty": "Especialidade",
+      "Notice": {
+        "creationOnly": "Assets e hindrances normalmente são escolhidos na criação de personagem.",
+        "extraHindrances": "O livro pede {count} hindrance(s) extra(s), sem XP, junto com este asset."
+      },
+      "Error": {
+        "notRepeatable": "O personagem já tem {feat}, que só pode ser escolhido uma vez.",
+        "duplicate": "O personagem já tem {feat}.",
+        "wrongRace": "{feat} é um feat racial da raça {race}.",
+        "noRace": "{feat} é um feat racial: aplique uma raça antes.",
+        "hindranceLimit": "Um personagem pode ter no máximo dois hindrances.",
+        "noSubcategory": "Escolha ou digite uma subcategoria.",
+        "characteristic": "Escolha uma das características listadas.",
+        "characteristic2": "Escolha outra característica para perder 1.",
+        "skill": "Escolha uma perícia.",
+        "specialty": "Digite a especialidade."
+      },
+      "GrantedByShort": "de",
+      "WrongRaceHint": "Este feat racial é de outra raça. O Mestre decide se remove.",
+      "Limit": "Limite",
+      "HindranceLimit": "No máximo {max} por personagem, escolhidos na criação (p. 179)"
     }
   }
 }

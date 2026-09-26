@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF87909c11409c",
+  "_key": "!items!dtdF87909c11409c",
+  "name": "Spell Book",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Choose a school of magic. Normally only one spell per rank can be learned from a school; with this feat you learn one more spell from the chosen school at any rank you have already reached there.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 194
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

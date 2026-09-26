@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF3fd334777d15",
+  "_key": "!items!dtdF3fd334777d15",
+  "name": "Light Sleeper",
+  "type": "feat",
+  "img": "icons/svg/eye.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You always count as awake, even while sleeping, and are never helpless when resting. You stay aware of your surroundings, although stealth against you works as usual.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 190
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

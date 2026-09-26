@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF465712d4e88f",
+  "_key": "!items!dtdF465712d4e88f",
+  "name": "Spell Bullet",
+  "type": "feat",
+  "img": "icons/svg/fire.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You can load a single spell into a round of ammunition (for instance a bullet, a plasma canister or an energy pack). Firing it casts the spell, including any Focus Power test; the effect happens where the shot lands, while any Psychic Phenomena manifest around you. Only one Spell Bullet can be prepared at any given time.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 194
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

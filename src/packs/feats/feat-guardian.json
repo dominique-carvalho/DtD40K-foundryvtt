@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF4184c806cd92",
+  "_key": "!items!dtdF4184c806cd92",
+  "name": "Guardian",
+  "type": "feat",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You can take Parry actions against attacks aimed at, or launched by, anyone inside your melee range, shielding your allies. If such a parry fails, the attack strikes you rather than its original target.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 187
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

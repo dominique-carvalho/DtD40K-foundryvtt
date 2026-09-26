@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF9d6260223a39",
+  "_key": "!items!dtdF9d6260223a39",
+  "name": "Naturalize",
+  "type": "feat",
+  "img": "icons/svg/oak.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Spend a Hero Point to create a burst 3 meters in radius, centered up to 10 meters away, that disrupts technology. Inside it, every technology-based action (non-Primitive ranged fire, Tech-Use tests, physical actions in power armor or using cybernetics) takes -2k2, and melee weapons with technological parts count as mere Hand Weapons or another weapon the SM chooses.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 192
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

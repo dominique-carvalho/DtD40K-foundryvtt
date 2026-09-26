@@ -102,7 +102,15 @@
     "selection": {
       "statuesque": "",
       "element": ""
-    }
+    },
+    "grants": [
+      {
+        "name": "Speak Language",
+        "subcategory": "Syrneth",
+        "choose": false,
+        "rank": 1
+      }
+    ]
   },
   "effects": [],
   "flags": {}

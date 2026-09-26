@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFa2095d79743d",
+  "_key": "!items!dtdFa2095d79743d",
+  "name": "Wild Empathy",
+  "type": "feat",
+  "img": "icons/svg/pawprint.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Through gesture and instinctive understanding rather than true speech, you can use social skills on animals as you would on people. The reverse also holds: animals can use any social skills they have on you.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 197
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

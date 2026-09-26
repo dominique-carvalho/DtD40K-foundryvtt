@@ -1,0 +1,46 @@
+{
+  "_id": "dtdFd36353d0ae3a",
+  "_key": "!items!dtdFd36353d0ae3a",
+  "name": "Extra Warp",
+  "type": "feat",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdFldf3bfb44ce2",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Slipping through the Warp comes easily to you. You can use Warp Step one extra time each scene.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Eldarin",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "racePower",
+        "name": "Warp Step"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

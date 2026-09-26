@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF55a0d721e8c8",
+  "_key": "!items!dtdF55a0d721e8c8",
+  "name": "Divine Grace",
+  "type": "feat",
+  "img": "icons/svg/sun.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>When trying to resist an effect, you may use your Charisma instead of your Willpower.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 183
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -112,6 +112,7 @@ export async function prepareAssetsContext(actor) {
     group: asset.system.group ? `DTD.Asset.Group.${asset.system.group}` : "",
     granted: asset.getFlag("dtd40k", "grantedBy") === "perfection",
     automated: asset.system.automation !== "none",
+    grantsCount: asset.system.grants?.length ?? 0,
     description: await enrich(asset.system.description, asset),
     effects: effectRows(asset, "asset")
   })));

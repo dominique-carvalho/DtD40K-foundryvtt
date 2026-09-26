@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF1ee2540b5f89",
+  "_key": "!items!dtdF1ee2540b5f89",
+  "name": "I'm Da Boss!",
+  "type": "feat",
+  "img": "icons/svg/skull.svg",
+  "folder": "dtdFld773b241942",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Among orks, the biggest one gives the orders. Your Size is added as a bonus on Command and Intimidation tests.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 204
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Ork",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

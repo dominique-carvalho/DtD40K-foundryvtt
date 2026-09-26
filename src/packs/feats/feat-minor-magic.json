@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF14c063b2a637",
+  "_key": "!items!dtdF14c063b2a637",
+  "name": "Minor Magic",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You gain one rank in a magic school in which you currently have no ranks.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 192
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

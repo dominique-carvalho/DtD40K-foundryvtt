@@ -4,8 +4,10 @@ import {
   applyResourceAction, buildExaltationEffects, defaultSelection, needsSelection, spendCheck, statuesqueOptions,
   validateExaltationSelection
 } from "../rules/exaltation.mjs";
+import { activeGrants } from "../rules/feat.mjs";
 import { nextDotValue } from "../rules/sheet.mjs";
 import { addExaltedAsset, getExaltedAssets } from "./asset-service.mjs";
+import { grantFeats, releaseGrants } from "./feat-service.mjs";
 import { getRace } from "./race-service.mjs";
 
 /**
@@ -219,7 +221,14 @@ export async function setPowerStat(actor, clicked) {
   const state = actor.system.exaltation;
   if (!exaltation || !state) return;
   const value = Math.clamp(nextDotValue(state.powerStat.value, clicked), 1, state.powerStat.max);
-  if (value !== exaltation.system.powerStat.value) await exaltation.update({ "system.powerStat.value": value });
+  if (value === exaltation.system.powerStat.value) return;
+  const before = activeGrants(exaltation.system, state.powerStat.value).length;
+  await exaltation.update({ "system.powerStat.value": value });
+  // Feats granted from a Power Stat rank follow it (spec 005, research R6).
+  if (activeGrants(exaltation.system, actor.system.exaltation.powerStat.value).length !== before) {
+    await releaseGrants(actor, exaltation.id);
+    await grantFeats(actor, exaltation);
+  }
 }
 
 /**

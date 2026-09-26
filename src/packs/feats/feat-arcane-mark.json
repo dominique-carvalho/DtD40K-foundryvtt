@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF336095590501",
+  "_key": "!items!dtdF336095590501",
+  "name": "Arcane Mark",
+  "type": "feat",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>After hitting a foe with a weapon, you may roll Arcana + Intelligence against its Static Defense; on a success you brand it. While you share the same crystal sphere (or both stand in the Astral Sea), its general location is known to you to track it, and in combat the marked foe gains no Ganging Up benefit against you and you treat its Static Defense as 5 lower. Only one creature can bear your mark; branding another frees the previous one.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 180
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

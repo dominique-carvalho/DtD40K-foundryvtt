@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFbb02612ef58e",
+  "_key": "!items!dtdFbb02612ef58e",
+  "name": "Recluse",
+  "type": "feat",
+  "img": "icons/svg/poison.svg",
+  "folder": "dtdFld76c5952b59",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Years of deliberate exposure or chronic drug use have hardened you against toxins. Poisons and Toxic weapons cannot affect you, and whenever you deal damage with the Toxic property you roll it twice and keep the higher result.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 201
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Dark Eldarin",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFec474b3aae57",
+  "_key": "!items!dtdFec474b3aae57",
+  "name": "Bad Luck",
+  "type": "feat",
+  "img": "icons/svg/hazard.svg",
+  "folder": "dtdFld93a5f8dd83",
+  "system": {
+    "category": "hindrance",
+    "description": "<p>Fortune works against you. Once per session, following one of your successful tests, the SM can introduce a complication stemming from your misfortune.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 208
+    },
+    "xpCost": 0,
+    "xpGranted": 100,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

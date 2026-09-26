@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF775dba51375d",
+  "_key": "!items!dtdF775dba51375d",
+  "name": "Eureka!",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFldf29ff77a60",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>You always carry some gadget or trinket that just might solve the problem, though it rarely survives the attempt. Once each scene, any test you must make may be replaced by a Crafts test.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 202
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Gnome",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

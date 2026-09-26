@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF305ac864410d",
+  "_key": "!items!dtdF305ac864410d",
+  "name": "Tough as Nails",
+  "type": "feat",
+  "img": "icons/svg/blood.svg",
+  "folder": "dtdFld9c04f67af9",
+  "system": {
+    "category": "asset",
+    "description": "<p>You shrug off wounds that would drop others. The first time in each session that you would suffer critical damage, you take only 1 instead.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 207
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

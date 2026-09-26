@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFldf1fafa6103",
+  "_key": "!folders!dtdFldf1fafa6103",
+  "name": "Thri-Kreen",
+  "type": "Item",
+  "folder": "dtdFld7561fea3d8",
+  "description": "",
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "featFolder": "race:Thri-Kreen"
+    }
+  }
+}

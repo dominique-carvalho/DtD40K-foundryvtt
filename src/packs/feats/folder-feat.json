@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFld1fc032693b",
+  "_key": "!folders!dtdFld1fc032693b",
+  "name": "Feats",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "featFolder": "feat"
+    }
+  }
+}

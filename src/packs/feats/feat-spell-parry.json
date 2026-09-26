@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF8e2fa09ac575",
+  "_key": "!items!dtdF8e2fa09ac575",
+  "name": "Spell Parry",
+  "type": "feat",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>By spending 1 Hero Point you can try to Parry a spell whose only target is you. The Parry TN equals the Focus Power test result the caster rolled for it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 194
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

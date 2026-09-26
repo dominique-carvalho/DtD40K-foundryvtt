@@ -1,0 +1,47 @@
+{
+  "_id": "dtdFca2a9580784a",
+  "_key": "!items!dtdFca2a9580784a",
+  "name": "Armor Specialization",
+  "type": "feat",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Armor of your chosen category grants you +2 armor points.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 180
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": [
+        "Light",
+        "Medium",
+        "Heavy",
+        "Extreme",
+        "Power"
+      ]
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

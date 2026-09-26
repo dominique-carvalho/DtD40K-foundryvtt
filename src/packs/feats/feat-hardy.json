@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF09fe135ecff9",
+  "_key": "!items!dtdF09fe135ecff9",
+  "name": "Hardy",
+  "type": "feat",
+  "img": "icons/svg/heal.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>You bounce back fast from harm: while recovering from injuries you always count as Lightly Wounded.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 187
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

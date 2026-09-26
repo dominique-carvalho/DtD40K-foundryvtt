@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFdab0f871c9fb",
+  "_key": "!items!dtdFdab0f871c9fb",
+  "name": "Level Headed",
+  "type": "feat",
+  "img": "icons/svg/daze.svg",
+  "folder": "dtdFld9c04f67af9",
+  "system": {
+    "category": "asset",
+    "description": "<p>Keeping calm under fire pays off. After initiative has been rolled for everyone in a fight, you can trade places in the order with whoever is directly ahead of you.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 206
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

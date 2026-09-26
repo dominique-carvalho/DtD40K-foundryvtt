@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF2dab8495e9ab",
+  "_key": "!items!dtdF2dab8495e9ab",
+  "name": "Improvisational Magic",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>For the cost of one Hero Point you may cast one spell from any school, provided its rank is below your highest Magic rank (with Evocations 4, for instance, you could cast a rank 3 Conjuration or Divination spell). The spell uses its normal magic test.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 189
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

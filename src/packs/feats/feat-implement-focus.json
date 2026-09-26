@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF84e0e9e62f19",
+  "_key": "!items!dtdF84e0e9e62f19",
+  "name": "Implement Focus",
+  "type": "feat",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>While casting through an implement (wand, rod, staff or orb), one die of each Magic Test can be rerolled.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 187
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

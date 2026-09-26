@@ -29,6 +29,11 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   Level), a reserva do recurso com o máximo calculado, os poderes liberados por ponto, o limite de
   gasto por rodada, a Tell da cena e as escolhas do Paragon e do Dragonblooded; assets validam
   exaltação, raça e o limite de um (exceto Paragon), com efeitos simples automatizados.
+- **Feats, Assets e Hindrances**: compêndio *Feats* com as 274 entradas do cap. 7 da 7.7a (181 feats, 49
+  feats raciais por raça, 22 assets e 22 hindrances). Arrastar para a ficha pede a subcategoria dos feats de
+  grupo, confere repetição, raça, dependências e o limite de 2 hindrances (o Mestre pode incluir mesmo
+  assim), aplica 15 efeitos simples como modificadores desligáveis e concede automaticamente os feats que
+  raças, exaltações e assets dão — removidos junto com a origem.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos

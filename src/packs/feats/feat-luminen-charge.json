@@ -1,0 +1,46 @@
+{
+  "_id": "dtdF6adba44cbcb1",
+  "_key": "!items!dtdF6adba44cbcb1",
+  "name": "Luminen Charge",
+  "type": "feat",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>After roughly a minute of prayer and meditation, you can recharge devices by taking fatigue: one level for small items such as weapon power packs, two for jumpstarting vehicles, and three or more (SM's call) for larger tasks like powering ship actions.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 190
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [
+      {
+        "type": "feat",
+        "name": "Mechanicus Implants"
+      }
+    ],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

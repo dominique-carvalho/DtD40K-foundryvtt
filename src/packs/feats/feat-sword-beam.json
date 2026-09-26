@@ -1,0 +1,41 @@
+{
+  "_id": "dtdFc8339accf5ef",
+  "_key": "!items!dtdFc8339accf5ef",
+  "name": "Sword Beam",
+  "type": "feat",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>An All Out Attack may also be declared a Sword Beam, giving your melee strike Reach and letting it hit foes as far as 10m away. The usual All Out Attack penalties still apply.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 196
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

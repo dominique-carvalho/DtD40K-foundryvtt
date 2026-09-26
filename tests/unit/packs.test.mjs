@@ -304,3 +304,205 @@ describe("exalted-assets compendium source (spec 004, SC-002)", () => {
     expect(Object.values(PARAGON_RACES)).not.toContain("Tiefling");
   });
 });
+
+/**
+ * Reference tables — spec 005 "Tabela de referência" (DtD 7.7a, cap. 7, pp. 174–210).
+ */
+const RACIAL_FEATS = {
+  Aasimar: ["Celestial Wrath", "Made of Mettle", "Terminator Honors"],
+  "Dark Eldarin": ["Dark Cruelty", "Recluse", "Warp Fire"],
+  Dragonborn: ["Dragonborn Frenzy", "Dragon Sight", "Elder Wyrm's Fire"],
+  Dryad: ["Matron", "Photosynthetic", "Treestrider"],
+  Eldarin: ["Ancestral Recall", "Extra Warp", "Guess Destination"],
+  Elf: ["Elven Precision", "Light Step", "Precise Technique"],
+  Gnome: ["Eureka!", "Explorer", "Tinker"],
+  Halfling: ["Escape Artist", "Halfling Agility", "Second Chance"],
+  Human: ["Able Learner", "Human Perseverance", "Mixed Heritage"],
+  Kenku: ["Ace Pilot", "Kenjutsu", "Teacher"],
+  Kobold: ["K'sten'mannav", "K'vend'l", "Legal Miner", "Trapmaster"],
+  Ork: ["I'm Da Boss!", "Mobbing Up", "WAAAAAGH CRY!"],
+  Squat: ["No One Tougher", "Squat Armor Proficiency", "Squat Stability"],
+  Tau: ["Farsighted", "Move And Shoot", "Silent Arcana"],
+  "Thri-Kreen": ["Lightning Bug", "Mandibles", "Noisy Cricket"],
+  Tiefling: ["Beneficial Mutation", "Mutation", "Outsider"]
+};
+const ASSETS_005 = [
+  "Academy", "Ambidextrous", "Androgynous", "Appearance", "Brave", "Dangerous Beauty", "Driven", "Education", "Eagle Eyes",
+  "Fast", "Gifted", "Left Handed", "Level Headed", "Linguist", "Magic Resistance", "Nerves o' Steel", "Nine Lives", "Sand",
+  "Spirit Mentor", "Sturdy", "Tough as Nails", "Veteran o' the Wheel"
+];
+const HINDRANCES = [
+  "Ailin'", "All Thumbs", "Bad Luck", "Big Britches", "Clueless", "Deathwish", "Enemy", "Geezer", "Grim Servant o' Death",
+  "High-Falutin'", "Illiterate", "Impulsive", "Intolerance", "Kid", "Law o' the Stars", "Loco", "Night Terrors", "Slowpoke",
+  "Ugly as Sin", "Vengeful", "Wanted", "Wimpy"
+];
+const FEAT_AUTOMATED = {
+  "Sound Constitution": "soundConstitution", Discipline: "discipline", Paranoia: "paranoia", Farsighted: "farsighted",
+  "Halfling Agility": "halflingAgility", "No One Tougher": "noOneTougher", "Made of Mettle": "madeOfMettle",
+  "Beneficial Mutation": "beneficialMutation", Matron: "matron", Sturdy: "sturdy", Sand: "sand", "Nine Lives": "nineLives",
+  "Veteran o' the Wheel": "veteran", "Skill Focus": "skillFocus", "Noisy Cricket": "noisyCricket"
+};
+const REQUIRES = {
+  "Battle Rage": [["feat", "Frenzy"]], Beastmaster: [["feat", "Animal Companion"]],
+  "Improved Animal Companion": [["feat", "Animal Companion"]], "Diamond Body": [["feat", "Wholeness of Body"]],
+  "Improved Wild Shape": [["feat", "Wild Shape"]], "Nekomimi Mode": [["feat", "Wild Shape"]],
+  "Luminen Blast": [["feat", "Mechanicus Implants"]], "Luminen Charge": [["feat", "Mechanicus Implants"]],
+  "Improved Weapon Focus": [["feat", "Weapon Focus"]], "Improved Weapon Specialization": [["feat", "Weapon Specialization"]],
+  "Greater Spell Focus": [["feat", "Spell Focus"]], "Elven Precision": [["racePower", "Elven Accuracy"]],
+  "Precise Technique": [["racePower", "Elven Accuracy"]], "Extra Warp": [["racePower", "Warp Step"]],
+  "Guess Destination": [["racePower", "Warp Step"]]
+};
+const FEAT_GRANTS = {
+  Academy: [["Weapon Proficiency", "", true], ["Weapon Proficiency", "", true]],
+  Kenjutsu: [["Extracurricular Study", "", false]],
+  "K'sten'mannav": [["Armor of Contempt", "", false]],
+  "Lightning Bug": [["Luminen Blast", "", false]]
+};
+const GROUP_OPTIONS = {
+  "Armor Proficiency": ["Light", "Medium", "Heavy", "Extreme", "Power"],
+  "Weapon Proficiency": ["Basic", "Melee 1", "Melee 2", "Melee 3", "Ranged 1", "Ranged 2", "Throwing"],
+  "Wholeness of Body": ["Wisdom", "Constitution"]
+};
+const REPEATABLE = [
+  "Armor Proficiency", "Armor Specialization", "Elemental Shot I", "Elemental Shot II", "Elemental Shot III", "Good Reputation",
+  "Greater Spell Focus", "Hatred", "Heightened Senses", "Improved Weapon Focus", "Improved Weapon Specialization", "Peer",
+  "Skill Focus", "Speak Language", "Spell Book", "Spell Focus", "Spell Specialization", "Upgraded", "Weapon Focus",
+  "Weapon Proficiency", "Weapon Specialization", "Wizard Tradition"
+];
+
+const featPack = readPack("src/packs/feats");
+const featFolders = featPack.filter((doc) => doc._key?.startsWith("!folders!"));
+const feats = featPack.filter((doc) => doc._key?.startsWith("!items!"));
+const byName = (name) => feats.find((doc) => doc.name === name);
+const ofCategory = (category) => feats.filter((doc) => doc.system.category === category);
+
+describe("feats compendium source (spec 005, SC-001)", () => {
+  it("has 274 entries in 20 folders", () => {
+    expect(feats).toHaveLength(274);
+    expect(featFolders).toHaveLength(20);
+    expect(featPack).toHaveLength(294);
+  });
+
+  it("counts 181 feats, 49 racial feats, 22 assets and 22 hindrances", () => {
+    expect(ofCategory("feat")).toHaveLength(181);
+    expect(ofCategory("racialFeat")).toHaveLength(49);
+    expect(ofCategory("asset")).toHaveLength(22);
+    expect(ofCategory("hindrance")).toHaveLength(22);
+  });
+
+  it("has unique ids, matching keys and valid folders", () => {
+    const ids = featPack.map((doc) => doc._id);
+    expect(new Set(ids).size).toBe(ids.length);
+    for (const doc of featPack) {
+      expect(doc._id).toMatch(ID);
+      expect(doc._key).toBe(`${doc.type === "feat" ? "!items!" : "!folders!"}${doc._id}`);
+    }
+    const folderIds = new Set(featFolders.map((doc) => doc._id));
+    for (const doc of feats) expect(folderIds.has(doc.folder)).toBe(true);
+  });
+
+  it("lists the assets and hindrances of the book", () => {
+    expect(sorted(ofCategory("asset").map((doc) => doc.name))).toEqual(sorted(ASSETS_005));
+    expect(sorted(ofCategory("hindrance").map((doc) => doc.name))).toEqual(sorted(HINDRANCES));
+  });
+
+  it.each(Object.entries(RACIAL_FEATS))("has the racial feats of the %s in the race folder", (race, names) => {
+    const racial = ofCategory("racialFeat").filter((doc) => doc.system.prerequisites.race === race);
+    expect(sorted(racial.map((doc) => doc.name))).toEqual(sorted(names));
+    const raceFolder = featFolders.find((doc) => doc.flags.dtd40k.featFolder === `race:${race}`);
+    for (const doc of racial) expect(doc.folder).toBe(raceFolder._id);
+    expect(races.map((doc) => doc.name)).toContain(race);
+  });
+
+  it("uses the XP of the book (feat and asset 100, hindrance +100)", () => {
+    for (const doc of feats) {
+      const hindrance = doc.system.category === "hindrance";
+      expect(doc.system.xpCost).toBe(hindrance ? 0 : 100);
+      expect(doc.system.xpGranted).toBe(hindrance ? 100 : 0);
+    }
+  });
+
+  it("marks the repeatable feats and the feat group options", () => {
+    expect(sorted(feats.filter((doc) => doc.system.repeatable).map((doc) => doc.name))).toEqual(sorted(REPEATABLE));
+    for (const [name, options] of Object.entries(GROUP_OPTIONS)) {
+      expect(byName(name).system.featGroup).toEqual({ enabled: true, options });
+    }
+    expect(byName("Peer").system.featGroup.enabled).toBe(true);
+    expect(byName("Speak Language").system.featGroup.options).toContain("Syrneth");
+  });
+
+  it("automates exactly the 15 feats of research R4", () => {
+    const automated = Object.fromEntries(feats.filter((doc) => doc.system.automation !== "none").map((doc) => [doc.name, doc.system.automation]));
+    expect(automated).toEqual(FEAT_AUTOMATED);
+  });
+
+  it("records the dependencies and the grants of the spec", () => {
+    const requires = Object.fromEntries(feats.filter((doc) => doc.system.requires.length)
+      .map((doc) => [doc.name, doc.system.requires.map(({ type, name }) => [type, name])]));
+    expect(requires).toEqual(REQUIRES);
+    const grants = Object.fromEntries(feats.filter((doc) => doc.system.grants.length)
+      .map((doc) => [doc.name, doc.system.grants.map(({ name, subcategory, choose }) => [name, subcategory, choose])]));
+    expect(grants).toEqual(FEAT_GRANTS);
+    for (const [, list] of Object.entries(FEAT_GRANTS)) for (const [name] of list) expect(byName(name)).toBeDefined();
+  });
+
+  it("ships summaries and an empty selection", () => {
+    for (const doc of feats) {
+      expect(doc.type).toBe("feat");
+      expect(doc.system.description.trim()).not.toBe("");
+      expect(doc.system.source.book).toBe("DtD 7.7a");
+      expect(doc.system.source.page).toBeGreaterThanOrEqual(179);
+      expect(doc.system.source.page).toBeLessThanOrEqual(210);
+      expect(doc.system.selection).toEqual({ subcategory: "", characteristic: "", characteristic2: "", skill: "", specialty: "" });
+      expect(doc.effects).toEqual([]);
+    }
+    expect(byName("Peer").system.source.page).toBe(192);
+    expect(byName("Halfling Agility").system.source.page).toBe(202);
+  });
+});
+
+/** Grants of races, exaltations and Exalted Assets — spec 005 "Tabela de concessões". */
+const WP_OPTIONS = ["Basic", "Melee 1", "Melee 2", "Melee 3", "Ranged 1", "Ranged 2", "Throwing"];
+const AP_OPTIONS = ["Light", "Medium", "Heavy", "Extreme", "Power"];
+const ORIGIN_GRANTS = {
+  races: {
+    Aasimar: [["Jaded", "", false], ["Fearless", "", false]],
+    Gnome: [...WP_OPTIONS.map((o) => ["Weapon Proficiency", o, false]), ...AP_OPTIONS.map((o) => ["Armor Proficiency", o, false])]
+  },
+  exaltations: {
+    Atlantean: [["Speak Language", "Syrneth", false, 1]],
+    Promethean: AP_OPTIONS.map((o) => ["Armor Proficiency", o, false, 1])
+  },
+  "exalted-assets": {
+    "You Will Not Falter": [["Armor of Contempt", "", false], ["Armor Proficiency", "Power", false], ["Armor Specialization", "Power", false]],
+    Tuning: [["Weapon Specialization", "", true], ["Weapon Focus", "", true], ["Armor Specialization", "", true]],
+    Ventrue: [["Peer", "Ventrue", false]]
+  }
+};
+
+describe("feats granted by races, exaltations and Exalted Assets (spec 005, US4)", () => {
+  describe.each(Object.entries(ORIGIN_GRANTS))("%s", (pack, expected) => {
+    const docs = readPack(`src/packs/${pack}`).filter((doc) => doc.system);
+
+    it("grants exactly the feats of the spec", () => {
+      const granting = Object.fromEntries(docs.filter((doc) => doc.system.grants.length).map((doc) => [
+        doc.name,
+        doc.system.grants.map((g) => (g.rank === undefined ? [g.name, g.subcategory, g.choose] : [g.name, g.subcategory, g.choose, g.rank]))
+      ]));
+      expect(granting).toEqual(expected);
+      for (const doc of docs) expect(Array.isArray(doc.system.grants)).toBe(true);
+    });
+
+    it("only grants feats that exist in the Feats compendium, with valid sub-categories", () => {
+      for (const doc of docs) {
+        for (const grant of doc.system.grants) {
+          const target = byName(grant.name);
+          expect(target, grant.name).toBeDefined();
+          if (grant.subcategory && target.system.featGroup.options.length && grant.name !== "Peer") {
+            expect(target.system.featGroup.options).toContain(grant.subcategory);
+          }
+        }
+      }
+    });
+  });
+});

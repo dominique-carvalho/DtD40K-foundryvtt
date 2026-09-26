@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF64600487244f",
+  "_key": "!items!dtdF64600487244f",
+  "name": "Beneficial Mutation",
+  "type": "feat",
+  "img": "icons/svg/regen.svg",
+  "folder": "dtdFldf938dd001f",
+  "system": {
+    "category": "racialFeat",
+    "description": "<p>Your body keeps changing over time, sometimes in response to injury or failure. Your lowest characteristic gains +2, and a different characteristic suffers -1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 205
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "Tiefling",
+      "deity": ""
+    },
+    "repeatable": false,
+    "featGroup": {
+      "enabled": false,
+      "options": []
+    },
+    "requires": [],
+    "automation": "beneficialMutation",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

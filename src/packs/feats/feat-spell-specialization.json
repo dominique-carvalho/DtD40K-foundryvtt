@@ -1,0 +1,41 @@
+{
+  "_id": "dtdF62d7ce8a7be9",
+  "_key": "!items!dtdF62d7ce8a7be9",
+  "name": "Spell Specialization",
+  "type": "feat",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdFld1fc032693b",
+  "system": {
+    "category": "feat",
+    "description": "<p>Choose a school of magic. One time each scene, you may reroll a magic test from that school that failed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 195
+    },
+    "xpCost": 100,
+    "xpGranted": 0,
+    "group": "",
+    "prerequisites": {
+      "exaltation": "",
+      "race": "",
+      "deity": ""
+    },
+    "repeatable": true,
+    "featGroup": {
+      "enabled": true,
+      "options": []
+    },
+    "requires": [],
+    "automation": "none",
+    "grants": [],
+    "selection": {
+      "subcategory": "",
+      "characteristic": "",
+      "characteristic2": "",
+      "skill": "",
+      "specialty": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

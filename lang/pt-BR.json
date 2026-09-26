@@ -479,7 +479,9 @@
         "specialty": "Digite a especialidade."
       },
       "GrantedByShort": "de",
-      "WrongRaceHint": "Este feat racial é de outra raça. O Mestre decide se remove."
+      "WrongRaceHint": "Este feat racial é de outra raça. O Mestre decide se remove.",
+      "Limit": "Limite",
+      "HindranceLimit": "No máximo {max} por personagem, escolhidos na criação (p. 179)"
     }
   }
 }

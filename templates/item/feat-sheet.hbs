@@ -74,6 +74,7 @@
       {{#if showDeity}}<dt>{{localize "DTD.Asset.Deity"}}</dt><dd>{{system.prerequisites.deity}}</dd>{{/if}}
       {{#if system.xpGranted}}<dt>{{localize "DTD.Feat.XpGranted"}}</dt><dd>+{{system.xpGranted}} XP</dd>
       {{else}}<dt>{{localize "DTD.Asset.XpCost"}}</dt><dd>{{system.xpCost}} XP</dd>{{/if}}
+      {{#if isHindrance}}<dt>{{localize "DTD.Feat.Limit"}}</dt><dd>{{hindranceLimitText}}</dd>{{/if}}
       {{#if system.featGroup.enabled}}<dt>{{localize "DTD.Feat.Group"}}</dt><dd>{{#if groupOptionsText}}{{groupOptionsText}}{{else}}—{{/if}}</dd>{{/if}}
       {{#if system.repeatable}}<dt>{{localize "DTD.Feat.Repeatable"}}</dt><dd>✓</dd>{{/if}}
       {{#if requiresText}}<dt>{{localize "DTD.Feat.Requires"}}</dt><dd>{{requiresText}}</dd>{{/if}}

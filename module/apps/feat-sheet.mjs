@@ -1,4 +1,6 @@
-import { ASSET_GROUPS, CHARACTERISTICS, FEAT_AUTOMATION, FEAT_CATEGORIES, FEAT_REQUIREMENT_TYPES, SKILLS } from "../config.mjs";
+import {
+  ASSET_GROUPS, CHARACTERISTICS, FEAT_AUTOMATION, FEAT_CATEGORIES, FEAT_REQUIREMENT_TYPES, HINDRANCE_LIMIT, SKILLS
+} from "../config.mjs";
 import { lockedPackHint } from "./item-sheet-helpers.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
@@ -61,6 +63,9 @@ export class FeatSheet extends HandlebarsApplicationMixin(foundry.applications.s
       system,
       editable: this.isEditable,
       isExaltedAsset: system.category === "exaltedAsset",
+      // At most two hindrances, chosen at character creation (p. 179, spec 005 US1-5).
+      isHindrance: system.category === "hindrance",
+      hindranceLimitText: game.i18n.format("DTD.Feat.HindranceLimit", { max: HINDRANCE_LIMIT }),
       lockedPackHint: lockedPackHint(item),
       categoryOptions: options(FEAT_CATEGORIES, "DTD.Feat.Category"),
       groupOptions: { "": "—", ...options(ASSET_GROUPS, "DTD.Asset.Group") },

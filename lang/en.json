@@ -479,7 +479,9 @@
         "specialty": "Type the specialty."
       },
       "GrantedByShort": "from",
-      "WrongRaceHint": "This racial feat belongs to another race. The GM decides whether to remove it."
+      "WrongRaceHint": "This racial feat belongs to another race. The GM decides whether to remove it.",
+      "Limit": "Limit",
+      "HindranceLimit": "At most {max} per character, chosen at character creation (p. 179)"
     }
   }
 }

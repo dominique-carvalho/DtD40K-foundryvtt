@@ -1,0 +1,57 @@
+{
+  "name": "Katar",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A punch dagger with a hilt set crosswise to the blade, gripped in the fist so the blade juts forward and turns punches into stabs. It is used with the Brawl skill as an unarmed attack.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Parrying",
+    "proficiencies": [
+      "Melee 2"
+    ],
+    "damage": {
+      "rolled": 0,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 3,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "brawling",
+        "value": null
+      },
+      {
+        "key": "unbalanced",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEfaea5df50a04",
+  "_key": "!items!dtdEfaea5df50a04",
+  "folder": "dtdEFdf7b4404729"
+}

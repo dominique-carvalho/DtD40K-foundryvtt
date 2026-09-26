@@ -1,0 +1,30 @@
+{
+  "name": "Flak",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Medium armor built from stacked ablative and shock-absorbing layers, made to stop shrapnel, small-arms fire and nearby explosions.</p><p>Against weapons with the Blast quality its AP is doubled, unless the wearer was the direct target of the hit rather than caught in the area.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 332
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "armorType": "medium",
+    "ap": 5,
+    "maxDex": 5,
+    "piece": "",
+    "suitOnly": false,
+    "primitive": false
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE9331ae6c9e7d",
+  "_key": "!items!dtdE9331ae6c9e7d",
+  "folder": "dtdEFdf705ea6722"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Plate",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Primitive extreme armor of heavy metal plates, jointed so the wearer can still move; the most protective of the primitive suits.</p><p>Like all primitive armor, its rarity counts one step lower when it is chosen as an Artifact.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 333
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "armorType": "extreme",
+    "ap": 8,
+    "maxDex": 2,
+    "piece": "",
+    "suitOnly": false,
+    "primitive": true
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE701872ba2893",
+  "_key": "!items!dtdE701872ba2893",
+  "folder": "dtdEFdf705ea6722"
+}

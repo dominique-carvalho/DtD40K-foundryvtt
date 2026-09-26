@@ -1,0 +1,33 @@
+{
+  "name": "Voidskin",
+  "type": "gear",
+  "img": "icons/svg/circuit.svg",
+  "system": {
+    "description": "<p>An emergency implant under the skin that protects against vacuum damage and carries about a minute of air, popular with anyone who spends long periods in space.</p><p>Poor: air for only three rounds. Good: also gives 2 AP to all locations, not stacking with worn armor. Best: as Good, detectable only by a medical scan, with air for five minutes.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 336
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "cybernetic",
+    "effectText": "Vacuum protection, about one minute of air. Poor: three rounds. Good: 2 AP all locations (no stacking). Best: undetectable, five minutes.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE731cd00f1962",
+  "_key": "!items!dtdE731cd00f1962",
+  "folder": "dtdEFd0b575a3435"
+}

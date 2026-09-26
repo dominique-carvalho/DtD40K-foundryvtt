@@ -1,0 +1,61 @@
+{
+  "name": "Lance",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A stout-hafted spear designed for mounted combat, used mainly to ride down other cavalry rather than infantry. Wielded from horseback it deals +0k1 damage.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Cavalry",
+    "proficiencies": [
+      "Melee 1"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 4,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "twoHands",
+        "value": null
+      },
+      {
+        "key": "unbalanced",
+        "value": null
+      },
+      {
+        "key": "reach",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE92aa8d8fd66e",
+  "_key": "!items!dtdE92aa8d8fd66e",
+  "folder": "dtdEFdde2bee496e"
+}

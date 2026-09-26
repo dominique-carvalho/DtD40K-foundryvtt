@@ -1,0 +1,33 @@
+{
+  "name": "Auspex",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A handheld scanner that picks up energy emissions, movement and biological life signs. With it the user makes Tech-Use Tests to notice things human senses miss, such as invisible gases, bio-signs nearby or background radiation.</p><p>Its normal range is 50 m; walls thicker than half a meter and some shielding materials block the scan.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "gear",
+    "effectText": "Scanner for energy, motion and life signs via Tech-Use; 50 m range, blocked by thick walls or shielding.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE9b15d7c6232e",
+  "_key": "!items!dtdE9b15d7c6232e",
+  "folder": "dtdEFdce7266d261"
+}

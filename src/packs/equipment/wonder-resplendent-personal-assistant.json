@@ -1,0 +1,33 @@
+{
+  "name": "Resplendent Personal Assistant",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>A bracelet that merges a microframe computer, sensor pack and small fabricator. It performs the functions of a Chrono, Data Slate, Combi-Tool, Torch, Multikey and Pict Recorder, never runs out of power, keeps its own time, and has a magical compass and altimeter that work in any environment.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 352
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Bracelet combining chrono, combi-tool, data slate, multikey, pict recorder, torch, plus compass and altimeter.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE1ce463193ba4",
+  "_key": "!items!dtdE1ce463193ba4",
+  "folder": "dtdEFdff25179125"
+}

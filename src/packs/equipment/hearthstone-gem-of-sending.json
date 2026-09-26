@@ -1,0 +1,33 @@
+{
+  "name": "Gem of Sending",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A cloudy white half-sphere always found with its bonded twin (the rating covers the pair). The two can relay messages across any distance, but only to each other, only when both are mounted in settings, and only a sentence or two at a time.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 355
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Paired gems exchange short messages over any distance when both are set.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEe477784a8a9d",
+  "_key": "!items!dtdEe477784a8a9d",
+  "folder": "dtdEFd381b66ffa2"
+}

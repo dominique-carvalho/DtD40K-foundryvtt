@@ -1,0 +1,55 @@
+{
+  "name": "Slaught",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>An expensive reflex accelerator popular with fighter pilots and the Dark Eldarin; it causes twitching, paranoia and brightly coloured sweat that makes users easy to spot.</p><p>For one scene the user has +1 Dexterity and the TN of their Perception tests is lowered by 10. When it wears off they suffer two levels of fatigue.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "drug",
+    "effectText": "+1 Dex, Perception TN -10 for a scene; two fatigue levels afterwards.",
+    "addictivity": "moderate",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [
+    {
+      "name": "Slaught",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.characteristics.dex.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEf1d9859f4db4",
+      "_key": "!items.effects!dtdEda2cb751d03b.dtdEf1d9859f4db4"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdEda2cb751d03b",
+  "_key": "!items!dtdEda2cb751d03b",
+  "folder": "dtdEFdfa8d856bb2"
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd42e33e6b27",
+  "_key": "!folders!dtdEFd42e33e6b27",
+  "name": "Grenades and Missiles",
+  "type": "Item",
+  "folder": "dtdEFd4e864a2156",
+  "description": "",
+  "sorting": "a",
+  "sort": 3000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Other Ranged/Grenades and Missiles"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Power Sword",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A modern, far deadlier take on the hand weapon, whose power field generator wraps the blade in lethal arcs of energy. Many are centuries old and passed down through families.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Ordinary",
+    "proficiencies": [
+      "Basic",
+      "Melee 1"
+    ],
+    "damage": {
+      "rolled": 4,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 4,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "powerField",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE298fd4be9c20",
+  "_key": "!items!dtdE298fd4be9c20",
+  "folder": "dtdEFd7daa6a7e91"
+}

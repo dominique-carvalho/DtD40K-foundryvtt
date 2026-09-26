@@ -1,0 +1,13 @@
+<div class="dtd40k attack-card-extra">
+  <p class="roll-card-note">{{#if proficient}}{{localize "DTD.Attack.Proficient"}}{{else}}{{localize "DTD.Attack.NotProficient"}}{{/if}}{{#each notes as |note|}} · {{note}}{{/each}}</p>
+  {{#if requiredRaises}}<p class="roll-card-note">{{localize "DTD.Attack.RequiredRaises" raises=requiredRaises}}</p>{{/if}}
+  <p class="attack-location"><i class="fa-solid fa-location-crosshairs" inert></i> {{localize "DTD.Attack.Location"}}: <b>{{location}}</b> <span class="hint">(d10 {{d10}})</span></p>
+  {{#if hits}}<p class="attack-hits">{{localize "DTD.Attack.Hits" hits=hits}}</p>{{/if}}
+  {{#if jammed}}<p class="notification warning">{{localize "DTD.Attack.Jammed"}}{{#if overheats}} {{localize "DTD.Attack.Overheats"}}{{/if}}</p>{{/if}}
+  {{#if textQualities.length}}
+  <p class="quality-tags">{{#each textQualities as |q|}}<span class="tag" data-tooltip="{{q.hint}}">{{q.label}}</span>{{/each}}</p>
+  {{/if}}
+  {{#if canDamage}}
+  <button type="button" class="attack-damage-button" data-dtd-action="rollDamage"><i class="fa-solid fa-burst" inert></i> {{localize "DTD.Attack.RollDamage"}}</button>
+  {{/if}}
+</div>

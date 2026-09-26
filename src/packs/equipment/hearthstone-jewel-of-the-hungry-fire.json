@@ -1,0 +1,33 @@
+{
+  "name": "Jewel of the Hungry Fire",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>An orange-red gem glowing like banked coals that absorbs heat and flame. The bearer is comfortable in extreme heat, such as deserts, and is immune to fire.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 354
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Immunity to fire and extreme heat.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEc85212225c67",
+  "_key": "!items!dtdEc85212225c67",
+  "folder": "dtdEFd381b66ffa2"
+}

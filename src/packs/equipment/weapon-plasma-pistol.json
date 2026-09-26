@@ -1,0 +1,57 @@
+{
+  "name": "Plasma Pistol",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A sidearm that hurls bolts of superheated plasma, among the deadliest pistols in existence. Those willing to risk its instability can kill almost anything at close range with it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "pistol",
+    "thrown": false,
+    "group": "Plasma",
+    "proficiencies": [
+      "Ranged 2"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 3,
+      "type": "E"
+    },
+    "pen": 8,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 30,
+      "strMultiplier": 0
+    },
+    "clip": 10,
+    "reload": "4Full",
+    "qualities": [
+      {
+        "key": "recharge",
+        "value": null
+      },
+      {
+        "key": "overheats",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE03a5cc1061be",
+  "_key": "!items!dtdE03a5cc1061be",
+  "folder": "dtdEFd90c5db20bd"
+}

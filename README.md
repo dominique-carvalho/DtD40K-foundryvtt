@@ -42,6 +42,13 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   modificadores desligáveis, feats concedidos) e deriva o Level da classe mais alta. O modo **Evolução**
   compra características, perícias, feats e Power Stat com os custos da 7.7a, restritos às listas da classe
   (Free Study em dobro), com histórico de XP, prêmios do Mestre e desfazer.
+- **Equipamento**: compêndio *Equipment* com os 170 itens dos caps. XIII e XIV da 7.7a (armas, armaduras, gear,
+  cibernéticos, drogas, materiais mágicos, Wonders e Hearthstones). Aba *Equipamento* com inventário e itens
+  equipados: armadura dá AP por localização e aplica a penalidade de proficiência e o Max Dex; armas rolam ataque
+  (perícia + Level se proficiente) e dano com diálogo de alcance, mira e modo de tiro, qualidades, emperramento e
+  localização; efeitos de itens só valem equipados (desligáveis pelo Mestre). Aquisição pelo teste de Wealth com
+  qualidade, tentativas, Liquid Wealth e Wealth Strain; vagas do equipamento inicial; drogas com doses e vício;
+  materiais mágicos e encaixe de hearthstones.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos
@@ -120,7 +127,7 @@ npm run build:packs
 - Depois do build, abra o Foundry e confira o compêndio (ex.: 16 raças).
 - Nunca edite `packs/` à mão; altere os JSON em `src/packs/` e rode o build de novo.
 - Para editar um compêndio pelo Foundry: clique com o botão direito no compêndio → "Alternar trava de edição", edite os itens, feche o Foundry e rode `npm run extract:packs` para gravar as mudanças de volta em `src/packs/` (depois revise o diff e faça o commit).
-- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7) e `classes` (103 classes do cap. 6).
+- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) e `equipment` (170 itens dos caps. XIII–XIV).
 
 ## Licença
 

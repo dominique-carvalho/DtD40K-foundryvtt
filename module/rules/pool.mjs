@@ -127,3 +127,21 @@ export function buildCharacteristicPool({ characteristic }) {
   const char = effectiveCharacteristic(characteristic);
   return { rolled: char.dice, kept: char.dice, zeroCharacteristic: char.zeroCharacteristic };
 }
+
+/**
+ * Roll bonuses and penalties from effects (spec 007, research R8): addiction on every roll, Medkit and
+ * hearthstones on one skill.
+ * @param {{all?: {rolled?: number, kept?: number}, noExplode?: boolean,
+ *   skills?: Record<string, {rolled?: number, kept?: number, freeRaises?: number}>}} [rolls]
+ * @param {string} [skillKey]
+ * @returns {{rolled: number, kept: number, freeRaises: number, noExplode: boolean}}
+ */
+export function rollModifiers(rolls = {}, skillKey) {
+  const skill = (skillKey && rolls.skills?.[skillKey]) || {};
+  return {
+    rolled: toInt(rolls.all?.rolled ?? 0) + toInt(skill.rolled ?? 0),
+    kept: toInt(rolls.all?.kept ?? 0) + toInt(skill.kept ?? 0),
+    freeRaises: toInt(skill.freeRaises ?? 0),
+    noExplode: Boolean(rolls.noExplode)
+  };
+}

@@ -1,0 +1,101 @@
+<div class="dtd40k roll-dialog attack-dialog">
+  <div class="form-group">
+    <label for="dtd-attack-tn">{{localize "DTD.Roll.Dialog.TN"}}</label>
+    <div class="form-fields"><input id="dtd-attack-tn" type="number" name="tn" value="{{tn}}" min="0" step="1" placeholder="—"></div>
+    <p class="hint">{{localize "DTD.Attack.TNHint"}}</p>
+  </div>
+
+  {{#if shape.canThrow}}
+  <div class="form-group">
+    <label for="dtd-attack-thrown">{{localize "DTD.Attack.Thrown"}}</label>
+    <div class="form-fields"><input id="dtd-attack-thrown" type="checkbox" name="thrown"></div>
+  </div>
+  {{/if}}
+
+  {{#unless shape.melee}}
+  <div class="form-group">
+    <label for="dtd-attack-range">{{localize "DTD.Attack.Range"}}</label>
+    <div class="form-fields">
+      <select id="dtd-attack-range" name="range">
+        {{#each ranges as |range|}}<option value="{{range.key}}"{{#if range.selected}} selected{{/if}}>{{localize (concat "DTD.Attack.RangeBand." range.key)}}</option>{{/each}}
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="dtd-attack-mode">{{localize "DTD.Attack.Mode"}}</label>
+    <div class="form-fields">
+      <select id="dtd-attack-mode" name="mode">
+        {{#if shape.single}}<option value="single">{{localize "DTD.Attack.Single"}}</option>{{/if}}
+        {{#if shape.auto}}<option value="auto">{{localize "DTD.Attack.FullAuto"}}</option>{{/if}}
+      </select>
+    </div>
+  </div>
+  {{#if shape.heavy}}
+  <div class="form-group">
+    <label for="dtd-attack-braced">{{localize "DTD.Attack.Braced"}}</label>
+    <div class="form-fields"><input id="dtd-attack-braced" type="checkbox" name="braced"></div>
+  </div>
+  {{/if}}
+  {{#if shape.basic}}
+  <div class="form-group">
+    <label for="dtd-attack-onehand">{{localize "DTD.Attack.OneHanded"}}</label>
+    <div class="form-fields"><input id="dtd-attack-onehand" type="checkbox" name="oneHanded"></div>
+  </div>
+  {{/if}}
+  {{#if ammo.length}}
+  <div class="form-group">
+    <label for="dtd-attack-ammo">{{localize "DTD.Attack.Ammo"}}</label>
+    <div class="form-fields">
+      <select id="dtd-attack-ammo" name="ammoId">{{#each ammo as |a|}}<option value="{{a.id}}">{{a.name}} ({{a.quantity}})</option>{{/each}}</select>
+    </div>
+  </div>
+  {{/if}}
+  {{/unless}}
+
+  <div class="form-group">
+    <label for="dtd-attack-aim">{{localize "DTD.Attack.Aim"}}</label>
+    <div class="form-fields">
+      <select id="dtd-attack-aim" name="aim">
+        <option value="0">{{localize "DTD.Attack.AimNone"}}</option>
+        <option value="1">{{localize "DTD.Attack.AimHalf"}}</option>
+        <option value="2">{{localize "DTD.Attack.AimFull"}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DTD.Roll.Dialog.DiceMod"}}</label>
+    <div class="form-fields dice-mod">
+      <input type="number" name="rolledMod" value="0" step="1" aria-label="{{localize "DTD.Roll.Dialog.RolledMod"}}">
+      <span>k</span>
+      <input type="number" name="keptMod" value="0" step="1" aria-label="{{localize "DTD.Roll.Dialog.KeptMod"}}">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="dtd-attack-flat">{{localize "DTD.Roll.Dialog.FlatMod"}}</label>
+    <div class="form-fields"><input id="dtd-attack-flat" type="number" name="flatMod" value="0" step="1"></div>
+  </div>
+  <div class="form-group">
+    <label for="dtd-attack-raises">{{localize "DTD.Roll.Dialog.FreeRaises"}}</label>
+    <div class="form-fields"><input id="dtd-attack-raises" type="number" name="freeRaises" value="0" min="0" step="1"></div>
+  </div>
+  <div class="form-group">
+    <label for="dtd-attack-stunt">{{localize "DTD.Roll.Dialog.StuntDice"}}</label>
+    <div class="form-fields"><input id="dtd-attack-stunt" type="number" name="stuntDice" value="0" min="0" max="3" step="1"></div>
+  </div>
+  {{#if specialtyList}}
+  <div class="form-group">
+    <label for="dtd-attack-specialty">{{localize "DTD.Roll.Dialog.Specialty"}}</label>
+    <div class="form-fields"><input id="dtd-attack-specialty" type="checkbox" name="specialty"></div>
+    <p class="hint">{{specialtyList}} — {{localize "DTD.Roll.Dialog.SpecialtyHint"}}</p>
+  </div>
+  {{/if}}
+  <div class="form-group">
+    <label for="dtd-attack-mode-roll">{{localize "DTD.Roll.Dialog.RollMode"}}</label>
+    <div class="form-fields">
+      <select id="dtd-attack-mode-roll" name="rollMode">
+        {{#each rollModes as |mode|}}<option value="{{mode.key}}"{{#if mode.selected}} selected{{/if}}>{{localize mode.label}}</option>{{/each}}
+      </select>
+    </div>
+  </div>
+</div>

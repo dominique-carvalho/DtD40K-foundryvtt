@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdb4458b5ac3",
+  "_key": "!folders!dtdEFdb4458b5ac3",
+  "name": "Melee",
+  "type": "Item",
+  "folder": "dtdEFd4f550d3bee",
+  "description": "",
+  "sorting": "a",
+  "sort": 30000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Melee"
+    }
+  }
+}

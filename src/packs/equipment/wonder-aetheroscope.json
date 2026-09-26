@@ -1,0 +1,33 @@
+{
+  "name": "Aetheroscope",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>Usually an orichalcum spyglass, though some versions are goggles or glasses with thin gemstone lenses. Looking through it shows the Umbra and the Warp, exposing hidden beings, psychic impressions and traces of magic.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 351
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Spyglass or lenses that show the Umbra and the Warp, exposing concealed entities and magical traces.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE8e67fb96686f",
+  "_key": "!items!dtdE8e67fb96686f",
+  "folder": "dtdEFdff25179125"
+}

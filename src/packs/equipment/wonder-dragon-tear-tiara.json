@@ -1,0 +1,55 @@
+{
+  "name": "Dragon Tear Tiara",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>A tiara of magical materials with three hearthstone settings resting on the wearer's forehead. Besides the benefits of any socketed hearthstones, the wearer gains +1k0 on all Perception tests, rising to +3k0 on Arcana tests to detect spells or identify magical effects.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 352
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Three hearthstone settings; +1k0 Perception, +3k0 Arcana to detect spells or magical effects.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 3,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [
+    {
+      "name": "Dragon Tear Tiara",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.modifiers.rolls.skills.perception.rolled",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEfd55f49bc8eb",
+      "_key": "!items.effects!dtdEa44e67308120.dtdEfd55f49bc8eb"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdEa44e67308120",
+  "_key": "!items!dtdEa44e67308120",
+  "folder": "dtdEFdff25179125"
+}

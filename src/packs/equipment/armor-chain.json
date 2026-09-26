@@ -1,0 +1,30 @@
+{
+  "name": "Chain",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Primitive medium armor of interlocked metal rings that cushion and turn aside blows, among the most widespread armor on feral worlds.</p><p>Like all primitive armor, its rarity counts one step lower when it is chosen as an Artifact.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 333
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "armorType": "medium",
+    "ap": 4,
+    "maxDex": 5,
+    "piece": "",
+    "suitOnly": false,
+    "primitive": true
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE5dbeb8322c63",
+  "_key": "!items!dtdE5dbeb8322c63",
+  "folder": "dtdEFdf705ea6722"
+}

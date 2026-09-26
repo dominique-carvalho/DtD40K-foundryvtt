@@ -1,0 +1,55 @@
+{
+  "name": "Medicae Mechadendrite",
+  "type": "gear",
+  "img": "icons/svg/circuit.svg",
+  "system": {
+    "description": "<p>A flexible two-meter limb for field surgery: +2k0 on Medicae Tests, a bonus that also applies to rolls made to interrogate. Its six injector pistons each hold one drug dose (bought separately), and it can stop blood loss as a half action.</p><p>Its small chainscalpel serves as an improvised weapon dealing 1k1 damage with the user's Strength as normal. Only tech-priests can use mechadendrites, up to a number equal to their Constitution.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 336
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "cybernetic",
+    "effectText": "+2k0 Medicae (also interrogation), six drug pistons, stops blood loss as half action; chainscalpel 1k1 improvised weapon.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": true,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [
+    {
+      "name": "Medicae Mechadendrite",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.modifiers.rolls.skills.medicae.rolled",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEff43d8e9724d",
+      "_key": "!items.effects!dtdE850c259226a7.dtdEff43d8e9724d"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdE850c259226a7",
+  "_key": "!items!dtdE850c259226a7",
+  "folder": "dtdEFd0b575a3435"
+}

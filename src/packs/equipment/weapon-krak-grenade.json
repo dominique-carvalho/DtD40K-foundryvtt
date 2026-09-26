@@ -1,0 +1,48 @@
+{
+  "name": "Krak Grenade",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A shaped-charge grenade whose concentrated explosive punches through vehicles, bunkers and other armoured targets. It has almost no blast, so it is a poor choice against infantry or moving targets.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 324
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "thrown",
+    "thrown": false,
+    "group": "Grenades and Missiles",
+    "proficiencies": [
+      "Throwing"
+    ],
+    "damage": {
+      "rolled": 4,
+      "kept": 2,
+      "type": "X"
+    },
+    "pen": 10,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 3
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEdf11ad1c4476",
+  "_key": "!items!dtdEdf11ad1c4476",
+  "folder": "dtdEFd42e33e6b27"
+}

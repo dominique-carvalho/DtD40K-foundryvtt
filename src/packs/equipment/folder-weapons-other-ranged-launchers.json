@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdabf42ae876",
+  "_key": "!folders!dtdEFdabf42ae876",
+  "name": "Launchers",
+  "type": "Item",
+  "folder": "dtdEFd4e864a2156",
+  "description": "",
+  "sorting": "a",
+  "sort": 2000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Other Ranged/Launchers"
+    }
+  }
+}

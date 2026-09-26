@@ -1,0 +1,57 @@
+{
+  "name": "Heavy Webber",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>The most widely used web weapon, deployed to subdue lawbreakers without killing them; each shot can blanket a small group, and several can pin down whole crowds. It deals no damage, and the webbing dissolves by itself after 1d5 hours.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Exotic",
+    "proficiencies": [
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": ""
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 50,
+      "strMultiplier": 0
+    },
+    "clip": 1,
+    "reload": "Full",
+    "qualities": [
+      {
+        "key": "blast",
+        "value": 5
+      },
+      {
+        "key": "snare",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE380ab81cf4a3",
+  "_key": "!items!dtdE380ab81cf4a3",
+  "folder": "dtdEFda32ae4c726"
+}

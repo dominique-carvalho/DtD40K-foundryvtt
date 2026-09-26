@@ -1,0 +1,53 @@
+{
+  "name": "Hand Flamer",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A pistol-sized flamer for personal fighting at close quarters, where its tiny range and poor accuracy matter little. Its ignited fuel is hard to put out.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "pistol",
+    "thrown": false,
+    "group": "Flamer",
+    "proficiencies": [
+      "Ranged 2"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "E"
+    },
+    "pen": 4,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 10,
+      "strMultiplier": 0
+    },
+    "clip": 3,
+    "reload": "2Full",
+    "qualities": [
+      {
+        "key": "flame",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE95d5443f5c12",
+  "_key": "!items!dtdE95d5443f5c12",
+  "folder": "dtdEFd116e22f1c7"
+}

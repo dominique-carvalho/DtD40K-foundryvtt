@@ -1,0 +1,33 @@
+{
+  "name": "Obscura",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>A banned narcotic and a favourite of smugglers, used by everyone from hive scum to nobles; users wander as if sleepwalking or lie in a trance.</p><p>Once dosed, the user suffers mild, usually pleasant hallucinations, often dreamlike replays of happy memories, lasting 1d10 hours.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "drug",
+    "effectText": "Pleasant hallucinations for 1d10 hours.",
+    "addictivity": "moderate",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE5ad4d06711a9",
+  "_key": "!items!dtdE5ad4d06711a9",
+  "folder": "dtdEFdfa8d856bb2"
+}

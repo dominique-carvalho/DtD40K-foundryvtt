@@ -1,0 +1,33 @@
+{
+  "name": "Perfected Boots",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>Self-fitting boots that stay warm and dry in any conditions and spare the wearer blisters and fatigue. The wearer can travel overland at an average of about 20 km per hour and has +2 Speed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 352
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Comfortable boots; overland travel about 20 km/h and +2 Speed.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEf56b5bf06964",
+  "_key": "!items!dtdEf56b5bf06964",
+  "folder": "dtdEFdff25179125"
+}

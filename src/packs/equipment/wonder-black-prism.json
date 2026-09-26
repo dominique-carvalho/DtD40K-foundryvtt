@@ -1,0 +1,33 @@
+{
+  "name": "Black Prism",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>A tall prism of nearly unbreakable black stone riddled with twisting holes that give off a low growl only animals can hear. While it stands upright it repels and drives off ordinary animals and mindless undead; its odd weight makes it hard to topple by accident.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 351
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Standing stone prism whose sound drives off ordinary animals and mindless undead.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE10173f893b85",
+  "_key": "!items!dtdE10173f893b85",
+  "folder": "dtdEFdff25179125"
+}

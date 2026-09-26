@@ -1,0 +1,33 @@
+{
+  "name": "The Monkey Stone",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A red-brown, bark-textured stone that grants the nimbleness of a tree-dwelling primate. When balancing, leaping or climbing, the bearer lowers the difficulty of Athletics and Acrobatics rolls by 5, to a minimum of 5.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 355
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Balance, jumping and climbing Athletics/Acrobatics difficulty reduced by 5 (min 5).",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE67ecf66585ca",
+  "_key": "!items!dtdE67ecf66585ca",
+  "folder": "dtdEFd381b66ffa2"
+}

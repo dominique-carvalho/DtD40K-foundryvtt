@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFde59c6dce1b",
+  "_key": "!folders!dtdEFde59c6dce1b",
+  "name": "Chain",
+  "type": "Item",
+  "folder": "dtdEFdb4458b5ac3",
+  "description": "",
+  "sorting": "a",
+  "sort": 8000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Melee/Chain"
+    }
+  }
+}

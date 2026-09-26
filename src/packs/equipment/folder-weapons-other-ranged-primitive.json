@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd5d9fbb8ed3",
+  "_key": "!folders!dtdEFd5d9fbb8ed3",
+  "name": "Primitive",
+  "type": "Item",
+  "folder": "dtdEFd4e864a2156",
+  "description": "",
+  "sorting": "a",
+  "sort": 1000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Other Ranged/Primitive"
+    }
+  }
+}

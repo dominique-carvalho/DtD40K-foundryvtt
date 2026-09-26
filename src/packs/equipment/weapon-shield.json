@@ -1,0 +1,57 @@
+{
+  "name": "Shield",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A basic shield, anything from an improvised plank or plastic sheet to armourplas plates, and from small bucklers to full-body pavises. Strapped to the arm, it adds +2 armour to that arm and the body; bonuses from more than one shield do not stack.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Shields",
+    "proficiencies": [
+      "Melee 1"
+    ],
+    "damage": {
+      "rolled": 0,
+      "kept": 1,
+      "type": "I"
+    },
+    "pen": 0,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "armored",
+        "value": null
+      },
+      {
+        "key": "defensive",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE3a5af1aa7103",
+  "_key": "!items!dtdE3a5af1aa7103",
+  "folder": "dtdEFd2a4fa2f7be"
+}

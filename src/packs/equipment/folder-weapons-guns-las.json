@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdadc2f25ef1",
+  "_key": "!folders!dtdEFdadc2f25ef1",
+  "name": "Las",
+  "type": "Item",
+  "folder": "dtdEFda0831b4fb4",
+  "description": "",
+  "sorting": "a",
+  "sort": 2000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Guns/Las"
+    }
+  }
+}

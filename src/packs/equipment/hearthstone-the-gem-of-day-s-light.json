@@ -1,0 +1,33 @@
+{
+  "name": "The Gem of Day's Light",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A yellow gem with a seemingly endless inner radiance. By concentrating, the bearer makes it shine with natural sunlight that lights everything within a kilometre, for as long as desired, and can end the glow instantly.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 356
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Glows with sunlight lighting everything within a kilometre, at will.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE764ebfc8232b",
+  "_key": "!items!dtdE764ebfc8232b",
+  "folder": "dtdEFd381b66ffa2"
+}

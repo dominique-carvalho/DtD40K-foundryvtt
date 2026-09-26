@@ -1,0 +1,33 @@
+{
+  "name": "Alpha",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>A snorted white powder favoured by executives and thugs alike, Alpha floods the body with threat pheromones and a sense of dominance, leaving users brash and forgetful of anything learned while high.</p><p>The user can go several days without any sleep. For one scene they also roll +1k1 on offensive social combat rolls and +1k1 on rolls to resist fear.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "drug",
+    "effectText": "No sleep needed for days; +1k1 offensive social combat and +1k1 vs fear for one scene.",
+    "addictivity": "low",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE4e5ab77ca081",
+  "_key": "!items!dtdE4e5ab77ca081",
+  "folder": "dtdEFdfa8d856bb2"
+}

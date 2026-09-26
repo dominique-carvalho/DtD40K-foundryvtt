@@ -1,0 +1,49 @@
+{
+  "name": "Hand Bow",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A crossbow-like weapon in a pistol grip, used one-handed at shorter range. It is silent and easy to break down and hide, so assassins love it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 324
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "pistol",
+    "thrown": false,
+    "group": "Primitive",
+    "proficiencies": [
+      "Basic",
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 2,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 15,
+      "strMultiplier": 0
+    },
+    "clip": 1,
+    "reload": "Full",
+    "qualities": [],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE74a4dbd0c4a2",
+  "_key": "!items!dtdE74a4dbd0c4a2",
+  "folder": "dtdEFd5d9fbb8ed3"
+}

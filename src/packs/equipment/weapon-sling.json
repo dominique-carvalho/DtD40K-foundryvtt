@@ -1,0 +1,49 @@
+{
+  "name": "Sling",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A hard-to-master strap for hurling stones, metal shot or even grenades. When it throws a grenade, use the grenade's effects in place of the sling's damage but keep the sling's range.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 324
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryCommon",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Primitive",
+    "proficiencies": [
+      "Basic",
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 1,
+      "kept": 1,
+      "type": "I"
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 15,
+      "strMultiplier": 0
+    },
+    "clip": 1,
+    "reload": "Full",
+    "qualities": [],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE76bfd589e84f",
+  "_key": "!items!dtdE76bfd589e84f",
+  "folder": "dtdEFd5d9fbb8ed3"
+}

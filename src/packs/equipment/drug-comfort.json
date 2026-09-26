@@ -1,0 +1,33 @@
+{
+  "name": "Comfort",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>A cheap, widely sold mood stabiliser, usually mixed into soothing foods or sweet drinks; heavy users become docile and constantly itchy.</p><p>While it is active the user may disregard the effects of any minor derangement, and whenever they would gain Insanity Points they gain 1 IP less.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryCommon",
+    "category": "drug",
+    "effectText": "Ignore minor derangements; gain one fewer Insanity Point while active.",
+    "addictivity": "low",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEe6ccd22f37a6",
+  "_key": "!items!dtdEe6ccd22f37a6",
+  "folder": "dtdEFdfa8d856bb2"
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Brass Knuckles",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>Metal knuckles, usually steel despite the name, that add weight and rigidity to the fist. They use the Brawl skill and replace normal unarmed damage; finer Good or Best pairs are frequently made to pass for gloves or fancy rings.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Unarmed",
+    "proficiencies": [
+      "Basic",
+      "Melee 2"
+    ],
+    "damage": {
+      "rolled": 0,
+      "kept": 2,
+      "type": "I"
+    },
+    "pen": 0,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "brawling",
+        "value": null
+      },
+      {
+        "key": "armMounted",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE3ae0b4c82a28",
+  "_key": "!items!dtdE3ae0b4c82a28",
+  "folder": "dtdEFd1c2f6421d0"
+}

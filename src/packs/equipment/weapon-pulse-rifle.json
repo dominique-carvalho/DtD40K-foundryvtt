@@ -1,0 +1,58 @@
+{
+  "name": "Pulse Rifle",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A lightened, cut-down las carbine that trades bulk for more range and a higher rate of fire than a lasgun. It comes with a folding stock and handles easily in one hand.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Las",
+    "proficiencies": [
+      "Basic",
+      "Ranged 2"
+    ],
+    "damage": {
+      "rolled": 2,
+      "kept": 2,
+      "type": "E"
+    },
+    "pen": 2,
+    "rof": {
+      "single": true,
+      "auto": 4
+    },
+    "range": {
+      "value": 100,
+      "strMultiplier": 0
+    },
+    "clip": 40,
+    "reload": "Full",
+    "qualities": [
+      {
+        "key": "reliable",
+        "value": null
+      },
+      {
+        "key": "compact",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE1de017ecc76d",
+  "_key": "!items!dtdE1de017ecc76d",
+  "folder": "dtdEFdadc2f25ef1"
+}

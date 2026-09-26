@@ -1,0 +1,48 @@
+{
+  "name": "Inferno Pistol",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A compact melta pistol built on ancient technology that is almost impossible to copy. Owning one marks great status, and it is normally found only in the hands of the powerful and well-connected.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "pistol",
+    "thrown": false,
+    "group": "Melta",
+    "proficiencies": [
+      "Ranged 2"
+    ],
+    "damage": {
+      "rolled": 4,
+      "kept": 3,
+      "type": "E"
+    },
+    "pen": 12,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 10,
+      "strMultiplier": 0
+    },
+    "clip": 3,
+    "reload": "Full",
+    "qualities": [],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEe10c90a24533",
+  "_key": "!items!dtdEe10c90a24533",
+  "folder": "dtdEFd92f5cd6d14"
+}

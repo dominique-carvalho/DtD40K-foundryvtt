@@ -1,0 +1,69 @@
+{
+  "name": "Frenzor",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>A widespread combat and sports enhancer (spelled Frenzon in the rules text) that makes the user strong, nearly numb to pain and prone to lashing out at the slightest irritation; users flush red and show swollen veins.</p><p>For one scene the user gains the Frenzy feat and takes -1 to Fellowship, Wisdom and Intelligence.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [
+      "Frenzon"
+    ],
+    "rarity": "uncommon",
+    "category": "drug",
+    "effectText": "Frenzy feat for a scene, -1 Fellowship, Wisdom and Intelligence. Text calls it Frenzon.",
+    "addictivity": "moderate",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [
+    {
+      "name": "Frenzor",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.characteristics.fel.value",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.wis.value",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.int.value",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEfc3e5bfd4ffa",
+      "_key": "!items.effects!dtdE6d1cc5b9a7d6.dtdEfc3e5bfd4ffa"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdE6d1cc5b9a7d6",
+  "_key": "!items!dtdE6d1cc5b9a7d6",
+  "folder": "dtdEFdfa8d856bb2"
+}

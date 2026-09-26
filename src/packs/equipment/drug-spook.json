@@ -1,0 +1,33 @@
+{
+  "name": "Spook",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>The dangerous opposite of Null: an illegal, highly addictive drug that forces the mind open to the Warp.</p><p>For one scene the user gains +1k1 on every spellcasting roll and +1 caster level. Taking a dose, and every spell cast while it lasts, automatically produces a warp phenomenon.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "category": "drug",
+    "effectText": "+1k1 spellcasting and +1 caster level for a scene; dosing and each spell trigger warp phenomena.",
+    "addictivity": "high",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE8d1b12447ccf",
+  "_key": "!items!dtdE8d1b12447ccf",
+  "folder": "dtdEFdfa8d856bb2"
+}

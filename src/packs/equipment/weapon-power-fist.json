@@ -1,0 +1,62 @@
+{
+  "name": "Power Fist",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A power-field gauntlet that lets its wearer punch hard enough for a tank to notice. A blow from one lands with the force of a speeding locomotive.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Unarmed",
+    "proficiencies": [
+      "Basic",
+      "Melee 2"
+    ],
+    "damage": {
+      "rolled": 2,
+      "kept": 3,
+      "type": "I"
+    },
+    "pen": 4,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "brawling",
+        "value": null
+      },
+      {
+        "key": "powerField",
+        "value": null
+      },
+      {
+        "key": "armMounted",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEbd48ed798859",
+  "_key": "!items!dtdEbd48ed798859",
+  "folder": "dtdEFd1c2f6421d0"
+}

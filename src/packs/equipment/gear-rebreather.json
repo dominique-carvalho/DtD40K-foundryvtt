@@ -1,0 +1,33 @@
+{
+  "name": "Rebreather",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A mask or helmet with its own air supply. The wearer is immune to gases and can even breathe underwater.</p><p>Its air canisters usually last about an hour before they must be swapped.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "gear",
+    "effectText": "Mask with own air: immune to gases, can breathe underwater; canisters last about one hour.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE26e784741a3d",
+  "_key": "!items!dtdE26e784741a3d",
+  "folder": "dtdEFdce7266d261"
+}

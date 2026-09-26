@@ -5,6 +5,7 @@
  *
  *   node scripts/assign-pack-ids.mjs --pack feats
  *   node scripts/assign-pack-ids.mjs --pack classes
+ *   node scripts/assign-pack-ids.mjs --pack equipment
  */
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -20,6 +21,24 @@ const TRACKS = [
   "Assassin", "Arcane Knight", "Barbarian", "Bard", "Cleric", "Courtier", "Druid", "Fighter", "Guardsman", "Heavy",
   "Magic User", "Magitek Gunman", "Monk", "Operator", "Paladin", "Sheriff", "Techpriest", "Thief"
 ];
+
+/** Weapon tables and their groups (7.7a pp. 323–327), in book order (spec 007). */
+const WEAPON_TABLES = {
+  Guns: ["Ordinary", "Las", "Plasma", "Melta", "Bolter", "Syrneth", "Exotic", "Flamer"],
+  "Other Ranged": ["Primitive", "Launchers", "Grenades and Missiles"],
+  Melee: ["Ordinary", "Parrying", "Cavalry", "Flail", "Fencing", "Two Handed", "Syrneth", "Chain", "Shields", "Unarmed"]
+};
+
+/** Top folders of the equipment pack and the gear category of each (artifacts get subfolders). */
+const EQUIPMENT_FOLDERS = ["Weapons", "Armor", "Gear", "Cybernetics", "Drugs", "Artifacts"];
+const GEAR_FOLDER = { gear: "Gear", cybernetic: "Cybernetics", drug: "Drugs" };
+const ARTIFACT_FOLDERS = { material: "Materials", wonder: "Wonders", hearthstone: "Hearthstones" };
+
+/** Weapon table of a weapon entry. */
+const weaponTable = ({ weaponType, group }) => {
+  if (weaponType === "melee") return "Melee";
+  return WEAPON_TABLES["Other Ranged"].includes(group) ? "Other Ranged" : "Guns";
+};
 
 const slug = (text) => text.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const idFor = (seed, prefix) => prefix + createHash("sha1").update(seed).digest("hex").slice(0, 16 - prefix.length);
@@ -71,6 +90,29 @@ const LAYOUTS = {
       seed: (file) => `class:${file}`,
       prefix: "dtdC"
     };
+  },
+  equipment: () => {
+    const folders = {};
+    const add = (key, name, parent = null, sort = 0) => {
+      folders[key] = folder(`equipment-folder:${key}`, "dtdEFd", key, name, parent ? folders[parent]._id : null, sort, "equipmentFolder");
+    };
+    EQUIPMENT_FOLDERS.forEach((name, index) => add(name, name, null, (index + 1) * 100000));
+    Object.entries(WEAPON_TABLES).forEach(([table, groups], index) => {
+      add(`Weapons/${table}`, table, "Weapons", (index + 1) * 10000);
+      groups.forEach((group, g) => add(`Weapons/${table}/${group}`, group, `Weapons/${table}`, (g + 1) * 1000));
+    });
+    Object.values(ARTIFACT_FOLDERS).forEach((name, index) => add(`Artifacts/${name}`, name, "Artifacts", (index + 1) * 10000));
+    return {
+      folders,
+      fileOf: (key) => `folder-${slug(key)}.json`,
+      folderOf: ({ type, system }) => {
+        if (type === "weapon") return folders[`Weapons/${weaponTable(system)}/${system.group}`];
+        if (type === "armor") return folders.Armor;
+        return folders[GEAR_FOLDER[system.category]] ?? folders[`Artifacts/${ARTIFACT_FOLDERS[system.category]}`];
+      },
+      seed: (file) => `equipment:${file}`,
+      prefix: "dtdE"
+    };
   }
 };
 
@@ -96,6 +138,11 @@ for (const file of readdirSync(DIR).filter((name) => name.endsWith(".json") && !
   doc._id ||= idFor(layout.seed(file), layout.prefix);
   doc._key = `!items!${doc._id}`;
   doc.folder = target._id;
+  // Embedded Active Effects are packed as their own LevelDB entries (spec 007: equipment effects).
+  (doc.effects ?? []).forEach((effect, index) => {
+    effect._id ||= idFor(`${layout.seed(file)}:effect:${index}`, "dtdEf");
+    effect._key = `!items.effects!${doc._id}.${effect._id}`;
+  });
   write(file, doc);
   count++;
 }

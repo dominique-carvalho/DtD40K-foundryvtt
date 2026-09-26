@@ -1,0 +1,54 @@
+{
+  "name": "MP Lascannon",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A man-portable lascannon, a battlefield weapon whose enormous power packs let it punch through the heaviest armour at great range. Because the packs are carried separately, it is usually worked by a crew of two or more.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Las",
+    "proficiencies": [
+      "Basic",
+      "Ranged 2"
+    ],
+    "damage": {
+      "rolled": 5,
+      "kept": 5,
+      "type": "E"
+    },
+    "pen": 10,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 300,
+      "strMultiplier": 0
+    },
+    "clip": 5,
+    "reload": "2Full",
+    "qualities": [
+      {
+        "key": "recharge",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE5a9761125876",
+  "_key": "!items!dtdE5a9761125876",
+  "folder": "dtdEFdadc2f25ef1"
+}

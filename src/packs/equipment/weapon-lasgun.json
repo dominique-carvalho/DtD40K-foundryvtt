@@ -1,0 +1,54 @@
+{
+  "name": "Lasgun",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>The standard las rifle, built in countless patterns throughout nearly every Crystal Sphere. Its sturdiness and dependability make it the weapon of choice for armies and adventurers alike.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Las",
+    "proficiencies": [
+      "Basic",
+      "Ranged 2"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "E"
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 3
+    },
+    "range": {
+      "value": 60,
+      "strMultiplier": 0
+    },
+    "clip": 60,
+    "reload": "Full",
+    "qualities": [
+      {
+        "key": "reliable",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE0181796318d5",
+  "_key": "!items!dtdE0181796318d5",
+  "folder": "dtdEFdadc2f25ef1"
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd90c5db20bd",
+  "_key": "!folders!dtdEFd90c5db20bd",
+  "name": "Plasma",
+  "type": "Item",
+  "folder": "dtdEFda0831b4fb4",
+  "description": "",
+  "sorting": "a",
+  "sort": 3000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Guns/Plasma"
+    }
+  }
+}

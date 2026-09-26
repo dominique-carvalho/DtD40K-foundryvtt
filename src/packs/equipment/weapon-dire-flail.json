@@ -1,0 +1,61 @@
+{
+  "name": "Dire Flail",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A huge flail whose head can be as large as its wielder, swinging wildly on a long chain. It is a hazard to enemies and bystanders alike.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Flail",
+    "proficiencies": [
+      "Melee 1"
+    ],
+    "damage": {
+      "rolled": 2,
+      "kept": 3,
+      "type": "I"
+    },
+    "pen": 3,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "twoHands",
+        "value": null
+      },
+      {
+        "key": "flexible",
+        "value": null
+      },
+      {
+        "key": "unwieldy",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEf7ccaa928141",
+  "_key": "!items!dtdEf7ccaa928141",
+  "folder": "dtdEFdab67a2d814"
+}

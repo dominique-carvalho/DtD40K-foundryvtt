@@ -1,0 +1,164 @@
+<section class="tab equipment-tab {{tabs.equipment.cssClass}}" data-group="primary" data-tab="equipment">
+  {{#with equipment as |eq|}}
+  <section class="armor-summary">
+    <h2 class="section-title">{{localize "DTD.Equipment.Protection"}}</h2>
+    <ul class="armor-locations">
+      {{#each eq.armor.locations as |loc|}}
+      <li><span class="loc-label">{{loc.label}}</span><b>{{loc.ap}}</b></li>
+      {{/each}}
+    </ul>
+    <p class="hint">
+      {{#if eq.armor.sdPenalty}}{{localize "DTD.Equipment.SDPenalty" penalty=eq.armor.sdPenalty source=eq.armor.penaltySource}}{{else}}{{localize "DTD.Equipment.NoPenalty"}}{{/if}}
+      {{#if eq.armor.maxDex}} · {{localize "DTD.Equipment.MaxDexFrom" value=eq.armor.maxDex source=eq.armor.maxDexSource}}{{/if}}
+    </p>
+  </section>
+
+  <section class="equipment-weapons">
+    <h2 class="section-title">{{localize "DTD.Equipment.Weapons"}}</h2>
+    <ul class="equipment-list">
+      {{#each eq.weapons as |w|}}
+      <li class="equipment-row{{#if w.equipped}} equipped{{/if}}">
+        {{#if w.unarmed}}<i class="fa-solid fa-hand-fist equip-icon" inert></i>{{else}}
+        <a class="equip-toggle" data-action="toggleEquipped" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Equipment.Equip"}}"><i class="fa-solid {{#if w.equipped}}fa-hand-holding{{else}}fa-box{{/if}}" inert></i></a>
+        {{/if}}
+        <span class="equipment-name">
+          {{#if w.unarmed}}{{w.name}}{{else}}<a data-action="openEquipment" data-item-id="{{w.id}}">{{w.name}}</a>{{/if}}
+          {{#if w.craftsmanship}}<span class="feat-badge">{{w.craftsmanship}}</span>{{/if}}
+          {{#if w.material}}<span class="feat-badge granted">{{w.material}} · {{localize "DTD.Equipment.ArtifactRating" rating=w.rating}}</span>{{/if}}
+          {{#if w.starting}}<span class="feat-badge">{{localize "DTD.Equipment.StartingBadge"}}</span>{{/if}}
+          <span class="hint">{{w.profile}}</span>
+          {{#each w.qualities as |q|}}<span class="tag" data-tooltip="{{q.hint}}">{{q.label}}</span>{{/each}}
+        </span>
+        {{#if (and w.equipped (or w.unarmed w.canAttack))}}
+        <a class="pool-button" data-action="rollAttack" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Attack.RollAttack"}}"><i class="fa-solid fa-crosshairs" inert></i> {{w.attack}}</a>
+        {{#if w.damage}}<span class="pool" data-tooltip="{{localize "DTD.Attack.Damage"}}"><i class="fa-solid fa-burst" inert></i> {{w.damage}}</span>{{/if}}
+        {{/if}}
+        {{#unless w.unarmed}}
+        <input class="quantity-input" type="number" value="{{w.quantity}}" min="0" data-item-id="{{w.id}}" aria-label="{{localize "DTD.Equipment.Quantity"}}" {{disabled (not @root.canEditRace)}}>
+        {{#if @root.canEditRace}}
+        <a data-action="acquireItem" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Acquire.Button"}}"><i class="fa-solid fa-coins" inert></i></a>
+        <a class="asset-remove" data-action="removeEquipment" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Equipment.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
+        {{/if}}
+        {{/unless}}
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  {{#if eq.armors.length}}
+  <section class="equipment-armor">
+    <h2 class="section-title">{{localize "DTD.Equipment.Armor"}}</h2>
+    <ul class="equipment-list">
+      {{#each eq.armors as |a|}}
+      <li class="equipment-row{{#if a.equipped}} equipped{{/if}}{{#if a.inactive}} inactive{{/if}}">
+        <a class="equip-toggle" data-action="toggleEquipped" data-item-id="{{a.id}}" data-tooltip="{{localize "DTD.Equipment.Wear"}}"><i class="fa-solid {{#if a.equipped}}fa-shield-halved{{else}}fa-box{{/if}}" inert></i></a>
+        <span class="equipment-name">
+          <a data-action="openEquipment" data-item-id="{{a.id}}">{{a.name}}</a>
+          {{#if a.craftsmanship}}<span class="feat-badge">{{a.craftsmanship}}</span>{{/if}}
+          {{#if a.material}}<span class="feat-badge granted">{{a.material}} · {{localize "DTD.Equipment.ArtifactRating" rating=a.rating}}</span>{{/if}}
+          {{#if a.starting}}<span class="feat-badge">{{localize "DTD.Equipment.StartingBadge"}}</span>{{/if}}
+          <span class="hint">{{a.type}} · {{a.piece}} · AP {{a.ap}} · {{localize "DTD.Equipment.MaxDex"}} {{a.maxDex}}</span>
+          {{#if a.inactive}}<span class="feat-badge warning">{{localize "DTD.Equipment.SuitOnly"}}</span>{{/if}}
+        </span>
+        {{#if @root.canEditRace}}
+        <a data-action="acquireItem" data-item-id="{{a.id}}" data-tooltip="{{localize "DTD.Acquire.Button"}}"><i class="fa-solid fa-coins" inert></i></a>
+        <a class="asset-remove" data-action="removeEquipment" data-item-id="{{a.id}}" data-tooltip="{{localize "DTD.Equipment.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
+
+  {{#each eq.gear as |group|}}
+  <section class="equipment-gear">
+    <h2 class="section-title">{{group.label}}</h2>
+    <ul class="equipment-list">
+      {{#each group.items as |g|}}
+      <li class="equipment-row{{#if g.equipped}} equipped{{/if}}{{#if g.active}} equipped{{/if}}">
+        {{#if g.installable}}
+        <a class="equip-toggle" data-action="toggleEquipped" data-item-id="{{g.id}}" data-tooltip="{{localize "DTD.Equipment.Equip"}}"><i class="fa-solid {{#if g.equipped}}fa-circle-check{{else}}fa-circle{{/if}}" inert></i></a>
+        {{else}}<i class="fa-solid fa-gem equip-icon" inert></i>{{/if}}
+        <span class="equipment-name">
+          <a data-action="openEquipment" data-item-id="{{g.id}}">{{g.name}}</a>
+          {{#if g.craftsmanship}}<span class="feat-badge">{{g.craftsmanship}}</span>{{/if}}
+          {{#if g.material}}<span class="feat-badge granted">{{g.material}} · {{localize "DTD.Equipment.ArtifactRating" rating=g.rating}}</span>{{/if}}
+          {{#if g.starting}}<span class="feat-badge">{{localize "DTD.Equipment.StartingBadge"}}</span>{{/if}}
+          {{#if g.isDrug}}<span class="hint">{{localize "DTD.Equipment.Addictivity"}}: {{g.addictivity}}</span>{{/if}}
+          {{#if g.sockets}}<span class="hint">{{localize "DTD.Equipment.Sockets"}}: {{g.sockets}}</span>{{/if}}
+          <span class="hint">{{g.effect}}</span>
+        </span>
+        {{#if g.isDrug}}
+        {{#if g.active}}
+        <span class="feat-badge granted">{{localize "DTD.Equipment.InEffect"}}</span>
+        {{#if @root.canEditRace}}<a data-action="endDose" data-item-id="{{g.id}}" data-tooltip="{{localize "DTD.Equipment.EndDose"}}"><i class="fa-solid fa-stop" inert></i></a>{{/if}}
+        {{else if @root.canEditRace}}
+        <a data-action="useDose" data-item-id="{{g.id}}" data-tooltip="{{localize "DTD.Equipment.UseDose"}}"><i class="fa-solid fa-syringe" inert></i></a>
+        {{/if}}
+        {{/if}}
+        {{#if g.isStone}}
+        {{#if g.socketedIn}}
+        <span class="feat-badge granted">{{localize "DTD.Equipment.SetIn" item=g.socketedIn}}</span>
+        {{#if @root.canEditRace}}<a data-action="unsocket" data-item-id="{{g.id}}" data-tooltip="{{localize "DTD.Equipment.Unsocket"}}"><i class="fa-solid fa-eject" inert></i></a>{{/if}}
+        {{else if (and @root.canEditRace g.hostOptions.length)}}
+        <select class="socket-select" data-item-id="{{g.id}}" aria-label="{{localize "DTD.Equipment.SocketIn"}}">
+          <option value="">{{localize "DTD.Equipment.SocketIn"}}</option>
+          {{#each g.hostOptions as |host|}}<option value="{{host.id}}">{{host.name}}</option>{{/each}}
+        </select>
+        {{/if}}
+        {{/if}}
+        <input class="quantity-input" type="number" value="{{g.quantity}}" min="0" data-item-id="{{g.id}}" aria-label="{{localize "DTD.Equipment.Quantity"}}" {{disabled (not @root.canEditRace)}}>
+        {{#if @root.canEditRace}}
+        <a data-action="acquireItem" data-item-id="{{g.id}}" data-tooltip="{{localize "DTD.Acquire.Button"}}"><i class="fa-solid fa-coins" inert></i></a>
+        <a class="asset-remove" data-action="removeEquipment" data-item-id="{{g.id}}" data-tooltip="{{localize "DTD.Equipment.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/each}}
+
+  {{#if eq.empty}}<p class="race-drop-hint"><i class="fa-solid fa-hand-pointer" inert></i> {{localize "DTD.Equipment.DropHint"}}</p>{{/if}}
+
+  <section class="wealth-block">
+    <h2 class="section-title">{{localize "DTD.Acquire.Wealth"}}</h2>
+    <div class="wealth-fields">
+      <label>{{localize "DTD.Acquire.Wealth"}} <input type="number" name="system.wealth.value" value="{{eq.wealth.value}}" min="0" max="5" {{disabled (not @root.canEditRace)}}></label>
+      <label>{{localize "DTD.Acquire.Liquid"}} <input type="number" name="system.wealth.liquid" value="{{eq.wealth.liquid}}" min="0" {{disabled (not @root.isGM)}}></label>
+      {{#if eq.wealth.strain}}
+      <span class="feat-badge warning">{{localize "DTD.Acquire.StrainActive" penalty=eq.wealth.strain effective=eq.wealth.effective}}</span>
+      {{#if @root.isGM}}<a data-action="endStrain" data-tooltip="{{localize "DTD.Acquire.EndStrain"}}"><i class="fa-solid fa-rotate-left" inert></i></a>{{/if}}
+      {{/if}}
+      {{#if (and @root.isGM eq.wealth.attemptsCount)}}<a data-action="clearAttempts" data-tooltip="{{localize "DTD.Acquire.ClearAttempts"}}"><i class="fa-solid fa-broom" inert></i> {{eq.wealth.attemptsCount}}</a>{{/if}}
+    </div>
+  </section>
+
+  {{#if eq.creation}}
+  <section class="starting-slots">
+    <h2 class="section-title">{{localize "DTD.Equipment.Starting"}}</h2>
+    <ul class="slot-list">
+      {{#each eq.slots as |slot|}}<li class="{{#if (gte slot.used slot.max)}}full{{/if}}">{{slot.label}} <b>{{slot.used}} / {{slot.max}}</b></li>{{/each}}
+    </ul>
+    {{#if @root.isGM}}<button type="button" data-action="endCreation"><i class="fa-solid fa-flag-checkered" inert></i> {{localize "DTD.Equipment.EndCreation"}}</button>{{/if}}
+  </section>
+  {{/if}}
+
+  {{#if eq.addictions.length}}
+  <section class="addictions">
+    <h2 class="section-title">{{localize "DTD.Equipment.Addictions"}}{{#if eq.addictionLevel}} <span class="feat-badge warning">{{eq.addictionLevel}}</span>{{/if}}</h2>
+    <ul class="equipment-list">
+      {{#each eq.addictions as |a|}}
+      <li class="equipment-row"><span class="equipment-name">{{a.name}}</span>
+        {{#if @root.isGM}}
+        <select class="addiction-select" data-name="{{a.name}}">
+          {{#each @root.addictionOptions as |opt|}}<option value="{{opt.value}}"{{#if (eq opt.value a.level)}} selected{{/if}}>{{opt.label}}</option>{{/each}}
+        </select>
+        {{else}}<span class="feat-badge warning">{{a.label}}</span>{{/if}}
+      </li>
+      {{/each}}
+    </ul>
+    <p class="hint">{{localize "DTD.Equipment.AddictionHint"}}</p>
+  </section>
+  {{/if}}
+  {{/with}}
+</section>

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdab67a2d814",
+  "_key": "!folders!dtdEFdab67a2d814",
+  "name": "Flail",
+  "type": "Item",
+  "folder": "dtdEFdb4458b5ac3",
+  "description": "",
+  "sorting": "a",
+  "sort": 4000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Melee/Flail"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Implanted Equipment",
+  "type": "gear",
+  "img": "icons/svg/circuit.svg",
+  "system": {
+    "description": "<p>Almost any item of gear can be built into the body, working exactly like the implanted item at whatever quality was chosen. Weapons and armor cannot be implanted this way.</p><p>Its availability sits one step above that of the normal item.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 336
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "category": "cybernetic",
+    "effectText": "Any non-weapon, non-armour gear built into the body, same effect; availability one step above the base item.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE5d9ea93af4a6",
+  "_key": "!items!dtdE5d9ea93af4a6",
+  "folder": "dtdEFd0b575a3435"
+}

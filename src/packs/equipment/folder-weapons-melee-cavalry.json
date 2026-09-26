@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdde2bee496e",
+  "_key": "!folders!dtdEFdde2bee496e",
+  "name": "Cavalry",
+  "type": "Item",
+  "folder": "dtdEFdb4458b5ac3",
+  "description": "",
+  "sorting": "a",
+  "sort": 3000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Melee/Cavalry"
+    }
+  }
+}

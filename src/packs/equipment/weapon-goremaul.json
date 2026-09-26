@@ -1,0 +1,57 @@
+{
+  "name": "Goremaul",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A massive two-handed hammer that demands great strength, delivering crushing blows capable of horrific damage with every swing.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Two Handed",
+    "proficiencies": [
+      "Melee 3"
+    ],
+    "damage": {
+      "rolled": 4,
+      "kept": 3,
+      "type": "I"
+    },
+    "pen": 2,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "twoHands",
+        "value": null
+      },
+      {
+        "key": "unwieldy",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE5aebcf75abb9",
+  "_key": "!items!dtdE5aebcf75abb9",
+  "folder": "dtdEFd7c35e0914e"
+}

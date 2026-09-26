@@ -1,0 +1,55 @@
+{
+  "name": "Chain Axe",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A heavy chain-toothed axe that inflicts terrible wounds with each blow. It can have one or two edges, each with its own chain loop, so a double-sided one keeps working if one side jams.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [
+      "Chainaxe"
+    ],
+    "rarity": "rare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Chain",
+    "proficiencies": [
+      "Melee 3"
+    ],
+    "damage": {
+      "rolled": 2,
+      "kept": 3,
+      "type": "R"
+    },
+    "pen": 4,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "tearing",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE28c63de0b9d6",
+  "_key": "!items!dtdE28c63de0b9d6",
+  "folder": "dtdEFde59c6dce1b"
+}

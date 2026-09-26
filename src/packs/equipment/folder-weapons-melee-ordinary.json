@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd7daa6a7e91",
+  "_key": "!folders!dtdEFd7daa6a7e91",
+  "name": "Ordinary",
+  "type": "Item",
+  "folder": "dtdEFdb4458b5ac3",
+  "description": "",
+  "sorting": "a",
+  "sort": 1000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Melee/Ordinary"
+    }
+  }
+}

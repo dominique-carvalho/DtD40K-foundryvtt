@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFdfa8d856bb2",
+  "_key": "!folders!dtdEFdfa8d856bb2",
+  "name": "Drugs",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 500000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Drugs"
+    }
+  }
+}

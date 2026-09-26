@@ -1,0 +1,55 @@
+{
+  "name": "Web Pistol",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A hand webber that sprays filaments which expand into a sticky, nearly unbreakable net, tightening further as the victim struggles. It deals no damage; the webbing decays and falls away on its own after 1d10 rounds.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [
+      "Hand Webber"
+    ],
+    "rarity": "rare",
+    "weaponType": "pistol",
+    "thrown": false,
+    "group": "Exotic",
+    "proficiencies": [
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": ""
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 30,
+      "strMultiplier": 0
+    },
+    "clip": 1,
+    "reload": "Full",
+    "qualities": [
+      {
+        "key": "snare",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE3550061cc86b",
+  "_key": "!items!dtdE3550061cc86b",
+  "folder": "dtdEFda32ae4c726"
+}

@@ -24,13 +24,15 @@ import { evaluateOutcome } from "./results.mjs";
  * @param {{rolled?: number, kept?: number, flat?: number, freeRaises?: number, stuntDice?: number}} [input.modifiers]
  * @param {number|string|null} [input.tn]
  * @param {boolean} [input.specialty=false]  reroll 1s once
+ * @param {number} [input.explodeOn=10]      9 for Volatile weapons (p. 321); 11 when dice do not explode (addiction)
+ * @param {number} [input.rerollBelow=0]     Proven damage dice (p. 320)
  * @param {() => number} input.rng
  * @returns {TestResult}
  */
-export function runTest({ base, modifiers = {}, tn = null, specialty = false, rng }) {
+export function runTest({ base, modifiers = {}, tn = null, specialty = false, explodeOn = 10, rerollBelow = 0, rng }) {
   const pool = normalizePool(applyModifiers(base, modifiers));
   const zeroCharacteristic = Boolean(base.zeroCharacteristic);
-  const { dice, keptSum, total } = rollAndKeep(pool, { rng, rerollOnes: specialty, zeroCharacteristic });
+  const { dice, keptSum, total } = rollAndKeep(pool, { rng, explodeOn, rerollOnes: specialty, rerollBelow, zeroCharacteristic });
   const target = tn === "" || tn === null || tn === undefined ? null : Number(tn);
   return {
     pool,

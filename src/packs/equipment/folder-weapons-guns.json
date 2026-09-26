@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFda0831b4fb4",
+  "_key": "!folders!dtdEFda0831b4fb4",
+  "name": "Guns",
+  "type": "Item",
+  "folder": "dtdEFd4f550d3bee",
+  "description": "",
+  "sorting": "a",
+  "sort": 10000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Guns"
+    }
+  }
+}

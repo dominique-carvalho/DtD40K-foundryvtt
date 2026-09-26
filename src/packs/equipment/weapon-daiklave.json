@@ -1,0 +1,49 @@
+{
+  "name": "Daiklave",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A lavishly decorated double-edged blade, the signature weapon of Heroes. Forged from steel alloyed with magical materials, it is poorly balanced for ordinary mortals.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Ordinary",
+    "proficiencies": [
+      "Basic",
+      "Melee 1"
+    ],
+    "damage": {
+      "rolled": 4,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 4,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE25b4502befa2",
+  "_key": "!items!dtdE25b4502befa2",
+  "folder": "dtdEFd7daa6a7e91"
+}

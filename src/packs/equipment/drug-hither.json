@@ -1,0 +1,61 @@
+{
+  "name": "Hither",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>A club drug that boosts attraction pheromones and lowers inhibitions, giving the user a hard-to-define glow; it is seldom addictive.</p><p>The user gains +2k1 on Charm tests, but the TN of any Willpower or Wisdom test they make to resist temptation rises by 10.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "category": "drug",
+    "effectText": "+2k1 Charm; resisting temptation (Willpower/Wisdom) TN +10.",
+    "addictivity": "low",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [
+    {
+      "name": "Hither",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.modifiers.rolls.skills.charm.rolled",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        },
+        {
+          "key": "system.modifiers.rolls.skills.charm.kept",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEf4de7c07a3a5",
+      "_key": "!items.effects!dtdEdf3ac073476b.dtdEf4de7c07a3a5"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdEdf3ac073476b",
+  "_key": "!items!dtdEdf3ac073476b",
+  "folder": "dtdEFdfa8d856bb2"
+}

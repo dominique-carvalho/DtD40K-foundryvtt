@@ -1,0 +1,33 @@
+{
+  "name": "Pict Recorder",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A device that records and plays back live media, some models in holographic form. Certain versions are mounted on robotic frames to film dangerous events such as weapons tests or interrogations.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "gear",
+    "effectText": "Records and plays back live media, sometimes holographic.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEdb2cfa5d94bd",
+  "_key": "!items!dtdEdb2cfa5d94bd",
+  "folder": "dtdEFdce7266d261"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Data Slate",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A cheap, common device for storing and reading text, audio and video. Simple models hold and play back a single file; better ones can record new data and exchange it with other devices.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "category": "gear",
+    "effectText": "Cheap reader/storage device for text, audio and video.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE1152a6cc83bb",
+  "_key": "!items!dtdE1152a6cc83bb",
+  "folder": "dtdEFdce7266d261"
+}

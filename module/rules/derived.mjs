@@ -39,9 +39,10 @@ function applyMod(base, mod) {
  * @param {Record<string, DerivedMod>} [derivedMods]
  * @param {{staticDefenseFormula?: "standard"|"shifty", resilience?: number, hpMax?: number, staticDefenseSize?: boolean,
  *   staticDefense?: number, staticDefenseCharacteristic?: "dex"|"con", resolveMax?: number, mentalDefense?: number,
- *   fatigueMax?: number}} [modifiers]
+ *   fatigueMax?: number, armorPenalty?: number, maxDex?: number|null}} [modifiers]
  *   racial power, exaltation, asset and feat modifiers (spec 002 FR-016, spec 004 FR-025, spec 005 FR-011),
- *   applied before the GM bonus/override
+ *   applied before the GM bonus/override; worn armor (spec 007) lowers the Static Defense and caps the Dexterity
+ *   of the Speed
  * @returns {DerivedValues}
  */
 export function computeDerived({ characteristics, size, level }, derivedMods = {}, modifiers = {}) {
@@ -52,20 +53,23 @@ export function computeDerived({ characteristics, size, level }, derivedMods = {
   const agility = c(modifiers.staticDefenseCharacteristic === "con" ? "con" : "dex");
   // Elusive (7.7a p. 218): Size no longer lowers Static Defense.
   const sizePenalty = staticDefenseSize ? 2 * size : 0;
+  // Armor Max Dex caps Speed (and dodge), not the Static Defense (7.7a p. 332).
+  const maxDex = modifiers.maxDex;
+  const speedDex = maxDex === null || maxDex === undefined ? c("dex") : Math.min(c("dex"), maxDex);
 
   const base = {
     // Halfling "Shifty" (DtD 7.7a p. 45): 10 + 6×Dex − 2×Size instead of Dex + Wis.
     // Halfling Agility (p. 202) adds to it.
     staticDefense: (staticDefenseFormula === "shifty"
       ? 10 + 6 * agility - sizePenalty
-      : 10 + 3 * agility + 3 * c("wis") - sizePenalty) + bonus("staticDefense"),
+      : 10 + 3 * agility + 3 * c("wis") - sizePenalty) + bonus("staticDefense") - bonus("armorPenalty"),
     // Decision (spec clarification): 2×(Con + Wil), book pp. 14/17.
     // Sloth and the Earth Blood Quickening add to maximum HP (spec 004).
     hpMax: 2 * (c("con") + c("wil")) + (Number(hpMax) || 0),
     // Farsighted (p. 204) adds to Mental Defense; Discipline and Farsighted to Resolve.
     mentalDefense: 5 + 5 * c("cmp") + bonus("mentalDefense"),
     resolveMax: c("wil") + c("cmp") + bonus("resolveMax"),
-    speed: c("str") + c("dex"),
+    speed: c("str") + speedDex,
     // Squat Toughness (7.7a p. 55) adds to Resilience.
     resilience: Math.ceil((size + level) / 2) + 1 + (Number(resilience) || 0),
     // Max Fatigue = Constitution (DtD 7.7a p. 17).

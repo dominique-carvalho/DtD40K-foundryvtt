@@ -1,0 +1,57 @@
+{
+  "name": "Plasma Gun",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A plasma rifle that feeds hydrogen fuel into a tiny fusion core and ejects it as a bolt of star-hot matter. Rare even in military service, it is as dangerous to its user as to the enemy, sometimes venting scalding heat back on whoever holds it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Plasma",
+    "proficiencies": [
+      "Ranged 2"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 3,
+      "type": "E"
+    },
+    "pen": 8,
+    "rof": {
+      "single": true,
+      "auto": 2
+    },
+    "range": {
+      "value": 90,
+      "strMultiplier": 0
+    },
+    "clip": 20,
+    "reload": "8Full",
+    "qualities": [
+      {
+        "key": "recharge",
+        "value": null
+      },
+      {
+        "key": "overheats",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEebd6ac327753",
+  "_key": "!items!dtdEebd6ac327753",
+  "folder": "dtdEFd90c5db20bd"
+}

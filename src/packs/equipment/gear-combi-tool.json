@@ -1,0 +1,33 @@
+{
+  "name": "Combi-Tool",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A versatile, somewhat odd-looking multi-purpose tool favored by seasoned engineers. Its user counts as having the proper tools for nearly any Tech-Use Test.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "gear",
+    "effectText": "Counts as proper tools for nearly any Tech-Use Test.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE00cc07f3e160",
+  "_key": "!items!dtdE00cc07f3e160",
+  "folder": "dtdEFdce7266d261"
+}

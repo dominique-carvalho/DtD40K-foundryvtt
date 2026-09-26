@@ -1,0 +1,49 @@
+{
+  "name": "Hand Weapon",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A catch-all profile for the many one-handed weapons such as broadswords, axes, maces and hammers. Choose whether it deals Rending (R) or Impact (I) damage when it is purchased.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "common",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Ordinary",
+    "proficiencies": [
+      "Basic",
+      "Melee 1"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": ""
+    },
+    "pen": 0,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEb396bcef320a",
+  "_key": "!items!dtdEb396bcef320a",
+  "folder": "dtdEFd7daa6a7e91"
+}

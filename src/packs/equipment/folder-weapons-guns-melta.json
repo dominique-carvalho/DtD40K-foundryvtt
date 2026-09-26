@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd92f5cd6d14",
+  "_key": "!folders!dtdEFd92f5cd6d14",
+  "name": "Melta",
+  "type": "Item",
+  "folder": "dtdEFda0831b4fb4",
+  "description": "",
+  "sorting": "a",
+  "sort": 4000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Guns/Melta"
+    }
+  }
+}

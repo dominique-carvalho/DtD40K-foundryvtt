@@ -1,0 +1,33 @@
+{
+  "name": "The Speech Gemstone",
+  "type": "gear",
+  "img": "icons/svg/ice-aura.svg",
+  "system": {
+    "description": "<p>A cobalt-blue, egg-shaped stone that seems to whisper in foreign tongues. The bearer can speak any language, even dead ones, but gains no ability to understand it; Syrneth alone remains beyond its reach.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 355
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "hearthstone",
+    "effectText": "Speak any language (without understanding it).",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE7dffab9fca91",
+  "_key": "!items!dtdE7dffab9fca91",
+  "folder": "dtdEFd381b66ffa2"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Implement",
+  "type": "gear",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>A focus such as a wand, rod, staff, orb or holy symbol, that clerics and sorcerers use to channel and strengthen their magic.</p><p>An implement is not required to cast, though for some casters it is part of their training, taste or personal style.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 334
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "category": "gear",
+    "effectText": "Wand, rod, orb, holy symbol etc. used by casters as a focus; not required to cast.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE423d0f8b9888",
+  "_key": "!items!dtdE423d0f8b9888",
+  "folder": "dtdEFdce7266d261"
+}

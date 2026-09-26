@@ -1,0 +1,53 @@
+{
+  "name": "Flail",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A single spiked ball on a chain attached to a handle. Hard to learn, but once mastered it is excellent at slipping around an opponent's guard.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Flail",
+    "proficiencies": [
+      "Melee 1"
+    ],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "I"
+    },
+    "pen": 0,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "flexible",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEf8b4e3024184",
+  "_key": "!items!dtdEf8b4e3024184",
+  "folder": "dtdEFdab67a2d814"
+}

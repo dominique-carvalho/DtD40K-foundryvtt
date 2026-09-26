@@ -1,0 +1,55 @@
+{
+  "name": "Hearthstone Bracers",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>A pair of bracers, each with one hearthstone slot (two in total). They also give +2 AP, which adds to any other armour worn.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 352
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Two hearthstone slots and +2 AP that stacks with other armour.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 2,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [
+    {
+      "name": "Hearthstone Bracers",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "changes": [
+        {
+          "key": "system.modifiers.armor.apAll",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "flags": {
+        "dtd40k": {
+          "equipment": true
+        }
+      },
+      "_id": "dtdEf99663c41481",
+      "_key": "!items.effects!dtdE0486726a4d6c.dtdEf99663c41481"
+    }
+  ],
+  "flags": {},
+  "_id": "dtdE0486726a4d6c",
+  "_key": "!items!dtdE0486726a4d6c",
+  "folder": "dtdEFdff25179125"
+}

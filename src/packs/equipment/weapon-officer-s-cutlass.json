@@ -1,0 +1,57 @@
+{
+  "name": "Officer's Cutlass",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A fencing sword with a built-in shock generator whose power cells upset its balance, but the ability to disable a foe without killing may be worth the cost.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Fencing",
+    "proficiencies": [
+      "Melee 2"
+    ],
+    "damage": {
+      "rolled": 2,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 0,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "balanced",
+        "value": null
+      },
+      {
+        "key": "shocking",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE09c1a2def88f",
+  "_key": "!items!dtdE09c1a2def88f",
+  "folder": "dtdEFdfba5700511"
+}

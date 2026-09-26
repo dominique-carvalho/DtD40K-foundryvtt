@@ -47,3 +47,23 @@ describe("rollAndKeep", () => {
     expect(result.total).toBe(1);
   });
 });
+
+describe("rollAndKeep — Proven and Volatile (spec 007, pp. 320–321)", () => {
+  it("rerollBelow rerolls once the faces below the Proven value", () => {
+    const result = rollAndKeep(pool(3, 3), { rng: facesRng([2, 8, 3, 1, 5]), rerollBelow: 3 });
+    expect(result.dice[0]).toMatchObject({ rerolled: [2], chain: [8] });
+    expect(result.dice[1]).toMatchObject({ chain: [3] });
+    expect(result.dice[1].rerolled).toBeUndefined();
+    expect(result.dice[2]).toMatchObject({ rerolled: [1], chain: [5] });
+  });
+
+  it("combines the specialty with Proven using the higher threshold", () => {
+    const result = rollAndKeep(pool(1, 1), { rng: facesRng([2, 6]), rerollOnes: true, rerollBelow: 3 });
+    expect(result.dice[0]).toMatchObject({ rerolled: [2], chain: [6] });
+  });
+
+  it("explodes on 9 with explodeOn 9 and never with explodeOn 11", () => {
+    expect(rollAndKeep(pool(1, 1), { rng: facesRng([9, 4]), explodeOn: 9 }).dice[0].chain).toEqual([9, 4]);
+    expect(rollAndKeep(pool(1, 1), { rng: facesRng([10, 4]), explodeOn: 11 }).dice[0].chain).toEqual([10]);
+  });
+});

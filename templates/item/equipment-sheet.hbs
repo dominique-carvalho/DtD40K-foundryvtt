@@ -1,0 +1,99 @@
+<div class="equipment-sheet-body">
+  {{#if lockedPackHint}}
+  <p class="notification info locked-pack-hint"><i class="fa-solid fa-lock" inert></i> {{lockedPackHint}}</p>
+  {{/if}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}" {{#if editable}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if editable}}
+      <input class="item-name" type="text" name="name" value="{{item.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="item-name">{{item.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <span>{{localize typeLabel}}{{#if isGear}} · {{localize (concat "DTD.GearCategory." system.category)}}{{/if}}</span>
+        <label>{{localize "DTD.Equipment.Rarity"}}
+          {{#if editable}}<select name="system.rarity">{{selectOptions rarityOptions selected=system.rarity localize=true}}</select>
+          {{else}}<b>{{localize (concat "DTD.Rarity." system.rarity)}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Race.Page"}} <b>{{system.source.page}}</b></label>
+      </div>
+      {{#if system.names.length}}<p class="hint">{{localize "DTD.Equipment.AlsoCalled"}}: {{#each system.names as |name|}}{{name}}{{#unless @last}}, {{/unless}}{{/each}}</p>{{/if}}
+    </div>
+  </header>
+
+  {{#if isWeapon}}
+  <section class="equipment-section">
+    <h2 class="section-title">{{localize "DTD.Equipment.Profile"}}</h2>
+    <div class="profile-grid">
+      <label>{{localize "DTD.Equipment.Type"}}{{#if editable}}<select name="system.weaponType">{{selectOptions weaponTypeOptions selected=system.weaponType localize=true}}</select>{{else}}<b>{{localize (concat "DTD.WeaponType." system.weaponType)}}{{#if system.thrown}}, {{localize "DTD.WeaponType.thrown"}}{{/if}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Equipment.Group"}}{{#if editable}}<input type="text" name="system.group" value="{{system.group}}">{{else}}<b>{{system.group}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Equipment.Damage"}}
+        {{#if editable}}<span class="pool-inputs"><input type="number" name="system.damage.rolled" value="{{system.damage.rolled}}" min="0">k<input type="number" name="system.damage.kept" value="{{system.damage.kept}}" min="0"><select name="system.damage.type">{{selectOptions damageTypeOptions selected=system.damage.type localize=true}}</select></span>
+        {{else}}<b>{{#if system.damage.kept}}{{system.damage.rolled}}k{{system.damage.kept}} {{system.damage.type}}{{else}}—{{/if}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Equipment.Pen"}}{{#if editable}}<input type="number" name="system.pen" value="{{system.pen}}" min="0">{{else}}<b>{{system.pen}}</b>{{/if}}</label>
+      {{#unless (eq system.weaponType "melee")}}
+      <label>{{localize "DTD.Equipment.Rof"}}{{#if editable}}<span class="pool-inputs"><input type="checkbox" name="system.rof.single" {{checked system.rof.single}}>S/<input type="number" name="system.rof.auto" value="{{system.rof.auto}}" min="0"></span>{{else}}<b>{{#if system.rof.single}}S{{else}}-{{/if}}/{{#if system.rof.auto}}{{system.rof.auto}}{{else}}-{{/if}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Equipment.Range"}}{{#if editable}}<input type="number" name="system.range.value" value="{{system.range.value}}" min="0">{{else}}<b>{{#if system.range.strMultiplier}}{{localize "DTD.Equipment.StrRange" multiplier=system.range.strMultiplier}}{{else}}{{system.range.value}} m{{/if}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Equipment.Clip"}}{{#if editable}}<input type="number" name="system.clip" value="{{system.clip}}" min="0">{{else}}<b>{{system.clip}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Equipment.Reload"}}{{#if editable}}<input type="text" name="system.reload" value="{{system.reload}}">{{else}}<b>{{system.reload}}</b>{{/if}}</label>
+      {{/unless}}
+    </div>
+    <p class="hint">{{localize "DTD.Equipment.Proficiencies"}}: <b>{{proficienciesText}}</b></p>
+    {{#if editable}}
+    <div class="form-group stacked"><label>{{localize "DTD.Equipment.Qualities"}}</label><input type="text" name="qualitiesText" value="{{qualitiesText}}"></div>
+    {{else if qualities.length}}
+    <p class="quality-tags">{{#each qualities as |q|}}<span class="tag" data-tooltip="{{q.hint}}">{{q.label}}</span>{{/each}}</p>
+    {{/if}}
+  </section>
+  {{/if}}
+
+  {{#if isArmor}}
+  <section class="equipment-section">
+    <h2 class="section-title">{{localize "DTD.Equipment.Profile"}}</h2>
+    <div class="profile-grid">
+      <label>{{localize "DTD.Equipment.Type"}}{{#if editable}}<select name="system.armorType">{{selectOptions armorTypeOptions selected=system.armorType localize=true}}</select>{{else}}<b>{{localize (concat "DTD.ArmorType." system.armorType)}}</b>{{/if}}</label>
+      <label>AP{{#if editable}}<input type="number" name="system.ap" value="{{system.ap}}" min="0">{{else}}<b>{{system.ap}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Equipment.MaxDex"}}{{#if editable}}<input type="number" name="system.maxDex" value="{{system.maxDex}}" min="0" placeholder="—">{{else}}<b>{{#if (eq system.maxDex null)}}—{{else}}{{system.maxDex}}{{/if}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Equipment.Piece"}}{{#if editable}}<select name="system.piece">{{selectOptions pieceOptions selected=system.piece localize=true}}</select>{{else}}<b>{{#if system.piece}}{{localize (concat "DTD.Location." system.piece)}}{{else}}{{localize "DTD.Equipment.Suit"}}{{/if}}</b>{{/if}}</label>
+    </div>
+    {{#if pieceRarity}}<p>{{localize "DTD.Equipment.PieceRarity"}}: <b>{{localize pieceRarity}}</b></p>{{/if}}
+    <p class="hint">{{localize "DTD.Equipment.PieceHint"}}{{#if system.suitOnly}} {{localize "DTD.Equipment.SuitOnly"}}{{/if}}</p>
+  </section>
+  {{/if}}
+
+  {{#if isGear}}
+  <section class="equipment-section">
+    {{#if editable}}
+    <div class="form-group"><label>{{localize "DTD.Equipment.Category"}}</label><select name="system.category">{{selectOptions categoryOptions selected=system.category localize=true}}</select></div>
+    {{#if isDrug}}<div class="form-group"><label>{{localize "DTD.Equipment.Addictivity"}}</label><select name="system.addictivity">{{selectOptions addictivityOptions selected=system.addictivity localize=true}}</select></div>{{/if}}
+    <div class="form-group"><label>{{localize "DTD.Equipment.Sockets"}}</label><input type="number" name="system.sockets" value="{{system.sockets}}" min="0"></div>
+    <div class="form-group stacked"><label>{{localize "DTD.Equipment.Effect"}}</label><input type="text" name="system.effectText" value="{{system.effectText}}"></div>
+    {{else}}
+    {{#if isDrug}}<p>{{localize "DTD.Equipment.Addictivity"}}: <b>{{localize (concat "DTD.Addictivity." system.addictivity)}}</b></p>{{/if}}
+    {{#if system.sockets}}<p>{{localize "DTD.Equipment.Sockets"}}: <b>{{system.sockets}}</b></p>{{/if}}
+    <p class="hint">{{system.effectText}}</p>
+    {{/if}}
+  </section>
+  {{/if}}
+
+  <section class="equipment-section">
+    <div class="profile-grid">
+      <label>{{localize "DTD.Equipment.Quantity"}}{{#if editable}}<input type="number" name="system.quantity" value="{{system.quantity}}" min="0">{{else}}<b>{{system.quantity}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Equipment.Craftsmanship"}}{{#if editable}}<select name="system.craftsmanship">{{selectOptions craftsmanshipOptions selected=system.craftsmanship localize=true}}</select>{{else}}<b>{{localize (concat "DTD.Craftsmanship." system.craftsmanship)}}</b>{{/if}}</label>
+      {{#if canHaveMaterial}}
+      <label>{{localize "DTD.Equipment.Material"}}{{#if editable}}<select name="system.material">{{selectOptions materialOptions selected=system.material localize=true}}</select>{{else}}<b>{{#if system.material}}{{localize (concat "DTD.Material." system.material)}}{{else}}—{{/if}}</b>{{/if}}</label>
+      {{/if}}
+    </div>
+    {{#if rating}}<p class="automation-tag">{{localize "DTD.Equipment.ArtifactRating" rating=rating.rating}}{{#if rating.capped}} · {{localize "DTD.Equipment.RatingCapped"}}{{/if}}</p>{{/if}}
+    {{#if canAcquire}}
+    <button type="button" data-action="acquire"><i class="fa-solid fa-coins" inert></i> {{localize "DTD.Acquire.Button"}} ({{buyerName}})</button>
+    {{/if}}
+  </section>
+
+  <section class="equipment-section">
+    {{#if editable}}
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.description}}}</div>{{/if}}
+  </section>
+</div>

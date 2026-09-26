@@ -1,0 +1,33 @@
+{
+  "name": "Stimm",
+  "type": "gear",
+  "img": "icons/svg/pill.svg",
+  "system": {
+    "description": "<p>A family of military painkillers and stimulants, usually injected or applied as slap-patches, that let wounded soldiers keep fighting; abusers are pale and thin-blooded.</p><p>For one scene critical damage effects (except fatal ones) can be disregarded, as well as any effect that works through pain. When the scene ends, every effect ignored this way strikes them in full.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 342
+    },
+    "quantity": 10,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryCommon",
+    "category": "drug",
+    "effectText": "Ignore non-lethal critical effects and pain effects for a scene, then suffer them all.",
+    "addictivity": "moderate",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEd82ee08a2071",
+  "_key": "!items!dtdEd82ee08a2071",
+  "folder": "dtdEFdfa8d856bb2"
+}

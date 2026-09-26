@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd7c35e0914e",
+  "_key": "!folders!dtdEFd7c35e0914e",
+  "name": "Two Handed",
+  "type": "Item",
+  "folder": "dtdEFdb4458b5ac3",
+  "description": "",
+  "sorting": "a",
+  "sort": 6000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Melee/Two Handed"
+    }
+  }
+}

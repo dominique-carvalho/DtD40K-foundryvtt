@@ -1,0 +1,33 @@
+{
+  "name": "Jump Pack",
+  "type": "gear",
+  "img": "icons/svg/mystery-man-black.svg",
+  "system": {
+    "description": "<p>An arcane device for moving fast over broken ground. Once per scene the wearer may Run using only a half action; during that move they fly, covering the distance in any of the three dimensions.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 353
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "category": "wonder",
+    "effectText": "Once per scene a Run as half action with flight in three dimensions.",
+    "addictivity": "none",
+    "active": false,
+    "mechadendrite": false,
+    "location": "",
+    "sockets": 0,
+    "socketedIn": "",
+    "grants": []
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE2b740b30cc3c",
+  "_key": "!items!dtdE2b740b30cc3c",
+  "folder": "dtdEFdff25179125"
+}

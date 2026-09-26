@@ -1,0 +1,49 @@
+{
+  "name": "Autogun",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A cheap, rugged automatic rifle that even backward worlds can manufacture, fed by ammunition found almost anywhere. It ranks among the most widespread long arms across the Great Wheel, especially in its seedier corners.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Ordinary",
+    "proficiencies": [
+      "Basic",
+      "Ranged 1"
+    ],
+    "damage": {
+      "rolled": 2,
+      "kept": 2,
+      "type": "I"
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 10
+    },
+    "range": {
+      "value": 90,
+      "strMultiplier": 0
+    },
+    "clip": 30,
+    "reload": "Full",
+    "qualities": [],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE636f92b128f1",
+  "_key": "!items!dtdE636f92b128f1",
+  "folder": "dtdEFd565f8a3bf5"
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Chainsword",
+  "type": "weapon",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A sword-shaped housing around a loop of fast-moving serrated teeth, usually exposed only along the curved front, which is thrust into the foe so the teeth chew through flesh and bone. Loud and plainly lethal, chain weapons can unnerve even fanatics.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 327
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "rare",
+    "weaponType": "melee",
+    "thrown": false,
+    "group": "Chain",
+    "proficiencies": [
+      "Melee 3"
+    ],
+    "damage": {
+      "rolled": 4,
+      "kept": 2,
+      "type": "R"
+    },
+    "pen": 4,
+    "rof": {
+      "single": false,
+      "auto": 0
+    },
+    "range": {
+      "value": 0,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "tearing",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE4d2f2742268e",
+  "_key": "!items!dtdE4d2f2742268e",
+  "folder": "dtdEFde59c6dce1b"
+}

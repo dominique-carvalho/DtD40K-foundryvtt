@@ -71,18 +71,20 @@ function cardContext(label, test) {
  * @param {string} args.label                 localized test name, e.g. "Weaponry + Dexterity"
  * @param {import("../rules/test.mjs").TestResult} args.testResult
  * @param {string} [args.rollMode]            one of CONFIG.Dice.rollModes (v13); defaults to core setting
+ * @param {string} [args.extraContent]        HTML appended to the card (attack and acquisition details, spec 007)
+ * @param {object} [args.flags]               more `flags.dtd40k` data (spec 007)
  * @returns {Promise<ChatMessage>}
  */
-export async function postTest({ actor, label, testResult, rollMode }) {
+export async function postTest({ actor, label, testResult, rollMode, extraContent = "", flags = {} }) {
   const roll = buildDisplayRoll(testResult);
-  const content = await foundry.applications.handlebars.renderTemplate(CARD_TEMPLATE, cardContext(label, testResult));
+  const content = await foundry.applications.handlebars.renderTemplate(CARD_TEMPLATE, cardContext(label, testResult)) + extraContent;
   const mode = rollMode ?? game.settings.get("core", "rollMode");
   const chatData = {
     speaker: ChatMessage.getSpeaker({ actor }),
     rolls: [roll],
     content,
     sound: CONFIG.sounds.dice,
-    flags: { dtd40k: { test: { ...testResult, label, actorUuid: actor.uuid } } }
+    flags: { dtd40k: { test: { ...testResult, label, actorUuid: actor.uuid }, ...flags } }
   };
   ChatMessage.applyRollMode(chatData, mode);
   return ChatMessage.create(chatData, { rollMode: mode });

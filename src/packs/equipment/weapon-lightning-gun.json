@@ -1,0 +1,57 @@
+{
+  "name": "Lightning Gun",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Among the least complex and most frequently found Syrneth relics, it sprays a broad cone of crackling electricity much like a shotgun blast. Like all Syrneth arms it seems to repair itself over time and stays as good as new.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 323
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "veryRare",
+    "weaponType": "basic",
+    "thrown": false,
+    "group": "Syrneth",
+    "proficiencies": [
+      "Ranged 2"
+    ],
+    "damage": {
+      "rolled": 4,
+      "kept": 2,
+      "type": "E"
+    },
+    "pen": 4,
+    "rof": {
+      "single": true,
+      "auto": 2
+    },
+    "range": {
+      "value": 30,
+      "strMultiplier": 0
+    },
+    "clip": 6,
+    "reload": "2Full",
+    "qualities": [
+      {
+        "key": "scatter",
+        "value": null
+      },
+      {
+        "key": "shocking",
+        "value": null
+      }
+    ],
+    "ammoGroup": ""
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdE52fba2b32c1d",
+  "_key": "!items!dtdE52fba2b32c1d",
+  "folder": "dtdEFdf29259f992"
+}

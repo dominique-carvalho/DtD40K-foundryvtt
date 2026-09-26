@@ -1,0 +1,30 @@
+{
+  "name": "Mesh",
+  "type": "armor",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>A light suit woven from countless linked thermoplas cells into a flexible, cloth-like fabric. On impact or contact with heat the weave briefly locks rigid, spreading the force of the blow across the suit.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 332
+    },
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "rarity": "uncommon",
+    "armorType": "light",
+    "ap": 4,
+    "maxDex": null,
+    "piece": "",
+    "suitOnly": false,
+    "primitive": false
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdEc03dd5a77ae3",
+  "_key": "!items!dtdEc03dd5a77ae3",
+  "folder": "dtdEFdf705ea6722"
+}

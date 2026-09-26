@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFd28765062f9",
+  "_key": "!folders!dtdEFd28765062f9",
+  "name": "Bolter",
+  "type": "Item",
+  "folder": "dtdEFda0831b4fb4",
+  "description": "",
+  "sorting": "a",
+  "sort": 5000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Guns/Bolter"
+    }
+  }
+}

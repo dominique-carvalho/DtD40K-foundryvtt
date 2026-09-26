@@ -1,0 +1,16 @@
+{
+  "_id": "dtdEFda32ae4c726",
+  "_key": "!folders!dtdEFda32ae4c726",
+  "name": "Exotic",
+  "type": "Item",
+  "folder": "dtdEFda0831b4fb4",
+  "description": "",
+  "sorting": "a",
+  "sort": 7000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "equipmentFolder": "Weapons/Guns/Exotic"
+    }
+  }
+}

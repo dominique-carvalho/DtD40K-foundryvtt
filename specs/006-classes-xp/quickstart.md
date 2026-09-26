@@ -46,3 +46,46 @@ Antes de registrar dados: no mundo, `game.packs.get("dtd40k.classes").index.size
 | 23 | Modo edição: clicar pontos | Sem cobrança | US3-10 |
 | 24 | Trilha Druid concluída em 2 classes | Improved Animal Companion e Beastmaster uma vez, 2 origens | Edge |
 | 25 | Observador | Classes e XP só leitura | FR-020 |
+
+## Registro de validação
+
+### 2026-09-26 — Foundry 13.351, mundo "teste dtd", usuário Gamemaster
+
+Sistema carregado do worktree `DtD40K-foundryvtt-006` (junction `Data/systems/dtd40k`), packs gerados com
+`npm run build:packs`. **Pack compilado conferido no Foundry antes dos passos**: `index.size` = 103, 19 pastas,
+23/21/22/19/18 por Level. Os passos 4–24 foram executados pelos serviços que a ficha chama (`startClass`,
+`addFeat`, `advance`, `undoXp`, `awardXp`, `uncompleteClass`, `removeClass`), com os diálogos de confirmação
+respondidos por script; os botões da ficha (modo Evolução, `+custo`, Comprar, Dar XP, Desfazer, pontos no modo
+Edição, aba Classe e XP) foram clicados no DOM da ficha aberta. Atores de teste criados e apagados no fim.
+
+| # | Resultado |
+|---|---|
+| 1 | ✅ 103 classes, 19 pastas, 23/21/22/19/18 por Level |
+| 2 | ✅ Swordsman: Level 1, Fighter, p. 135, Weaponry 2 e Athletics 1, 4 obrigatórios e 2 opcionais; Nighthawk: "Far Shot or Furious Assault" em "Escolha um" |
+| 3 | ⚠️ Só conferido no arquivo `pt-BR.json` (rótulos presentes); a interface foi vista em inglês |
+| 4 | ✅ Swordsman atual; Level 1; cabeçalho "Class: Swordsman" |
+| 5 | ✅ Weaponry 1: "Missing skills: Weaponry 2."; Mestre inicia ao confirmar |
+| 6 | ✅ Diplomat (Level 3) num Level 1: recusa por Level ("up to Level 2") |
+| 7 | ✅ Quick Draw e Hardy: "2 / 4", faltam Fast Reflexes e Power Attack; 100 XP cada |
+| 8 | ✅ Myrmidon com Swordsman aberta: "Complete Swordsman first." |
+| 9 | ✅ Swordsman concluída com aviso; bônus em texto; Free Study |
+| 10 | ✅ Mercenary: HP máximo 5 → 7 (efeito "Mercenary: Max Hit Points"); desligado 5, religado 7 |
+| 11 | ✅ Myrmidon: Level 2; Swordsman nas concluídas |
+| 12 | ✅ Nighthawk: Far Shot cumpre o grupo, Furious Assault bloqueado e recusado na compra |
+| 13 | ✅ Sem classe: campo Level editável; com classe, só leitura |
+| 14 | ✅ Desfazer Oak-Knower: Improved Animal Companion e Beastmaster ficam só com a origem Ovate; desfazer Ovate: saem |
+| 15 | ✅ 600 / 0 / 600; com o hindrance Wimpy, 700 |
+| 16 | ✅ Strength 1→2: 200; Weaponry 2→3: 50; Perception 0→1 (lista da Myrmidon): 100; histórico com as entradas |
+| 17 | ✅ Academic Lore na Myrmidon: recusado ("Not on the current class list."); Stealth em Free Study: 200 (dobro) |
+| 18 | ✅ Blind Fighting (lista): 100; Fearless (fora da lista): recusado, Mestre inclui sem cobrar. ⚠️ Feat racial não exercitado no Foundry (coberto por teste unitário) |
+| 19 | ✅ Gnosis (Atlantean) 1→2: 300; no máximo do Level 2: "already at the maximum"; desfazer volta a 1 |
+| 20 | ✅ Saldo 0: "Not enough XP: costs 200, 0 available." |
+| 21 | ✅ Desfazer Blind Fighting: item removido e 100 devolvidos; desfazer Perception: volta a 0 |
+| 22 | ✅ Mestre concede 2000 "Sessão 3" e 150 "Sessão 4" (pelo botão da aba): total +150 |
+| 23 | ✅ Modo Edição: Brawl 0→1 sem cobrança nem lançamento; sem botões `+custo` |
+| 24 | ✅ Ovate e Oak-Knower concluídas: Improved Animal Companion e Beastmaster uma vez, com 2 origens |
+| 25 | ⚠️ Não exercitado (o mundo só tem o usuário Gamemaster) |
+
+Correções feitas durante a validação: desfazer a conclusão de uma classe enquanto outra está em andamento
+deixava duas classes "atuais" — agora o Mestre é avisado para remover a classe em andamento antes; desfazer
+um prêmio de XP pedia "devolver" o XP — agora pergunta "Remover o prêmio".

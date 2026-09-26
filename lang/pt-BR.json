@@ -539,7 +539,8 @@
         "alreadyTaken": "O personagem já tem esta classe.",
         "missingSkills": "Perícias faltando: {list}.",
         "missingFeats": "Feats faltando: {list}.",
-        "bonusChoice": "Escolha uma perícia (e escreva a especialidade, se pedida)."
+        "bonusChoice": "Escolha uma perícia (e escreva a especialidade, se pedida).",
+        "otherCurrent": "Remova {name}, a classe em andamento, antes de desfazer esta conclusão."
       },
       "Warning": {
         "schools": "A classe também exige escolas que o sistema não confere: {list}. Confirme que o personagem as tem.",
@@ -576,7 +577,8 @@
         "atMax": "{label} já está no máximo.",
         "notEnough": "XP insuficiente: custa {cost}, há {available} disponível.",
         "onlyLast": "Só o Mestre pode desfazer lançamentos que não sejam o último."
-      }
+      },
+      "UndoAwardConfirm": "Remover o prêmio {label} ({cost} XP)?"
     }
   }
 }

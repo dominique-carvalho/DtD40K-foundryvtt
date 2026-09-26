@@ -161,7 +161,7 @@ export async function undoXp(actor, entryId) {
     return;
   }
   const entry = log[index];
-  if (!(await confirm(localize("DTD.XP.Undo"), `<p>${game.i18n.format("DTD.XP.UndoConfirm", { label: entry.label || entry.reason, cost: entry.cost })}</p>`))) return;
+  if (!(await confirm(localize("DTD.XP.Undo"), `<p>${game.i18n.format(entry.type === "award" ? "DTD.XP.UndoAwardConfirm" : "DTD.XP.UndoConfirm", { label: entry.label || entry.reason, cost: entry.cost })}</p>`))) return;
 
   if (entry.type === "purchase") {
     const exaltation = getExaltation(actor);

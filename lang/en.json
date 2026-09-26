@@ -539,7 +539,8 @@
         "alreadyTaken": "The character already has this class.",
         "missingSkills": "Missing skills: {list}.",
         "missingFeats": "Missing feats: {list}.",
-        "bonusChoice": "Choose a skill (and write the specialty, if asked)."
+        "bonusChoice": "Choose a skill (and write the specialty, if asked).",
+        "otherCurrent": "Remove {name}, the class in progress, before undoing this completion."
       },
       "Warning": {
         "schools": "The class also requires schools the system does not check: {list}. Confirm the character has them.",
@@ -576,7 +577,8 @@
         "atMax": "{label} is already at the maximum.",
         "notEnough": "Not enough XP: costs {cost}, {available} available.",
         "onlyLast": "Only the GM can undo entries other than the last one."
-      }
+      },
+      "UndoAwardConfirm": "Remove the award {label} ({cost} XP)?"
     }
   }
 }

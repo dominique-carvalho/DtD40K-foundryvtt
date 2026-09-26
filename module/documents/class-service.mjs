@@ -154,6 +154,12 @@ export async function completeClass(actor, classItem) {
  */
 export async function uncompleteClass(actor, classItem) {
   if (!game.user.isGM) return;
+  // Only one class can be current: the one in progress must be removed first.
+  const open = getCurrentClass(actor);
+  if (open && open.id !== classItem.id) {
+    ui.notifications.warn(game.i18n.format("DTD.Class.Error.otherCurrent", { name: open.name }));
+    return;
+  }
   const ids = classItem.effects.filter((effect) => effect.getFlag("dtd40k", "classBonus")).map((effect) => effect.id);
   if (ids.length) await classItem.deleteEmbeddedDocuments("ActiveEffect", ids);
   await releaseGrants(actor, classItem.id);

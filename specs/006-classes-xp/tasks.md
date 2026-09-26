@@ -58,7 +58,7 @@ quickstart.md
 - [X] T016 [US1] Criar `templates/item/class-sheet.hbs` e `module/apps/class-sheet.mjs` (`ClassSheet`, padrão da `FeatSheet`): cabeçalho, pré-requisitos, listas, feats agrupados (obrigatórios, opcionais, "A ou B"), escolas, bônus; edição com listas indexadas; aviso de compêndio bloqueado; registrar em `dtd40k.mjs`
 - [X] T017 [P] [US1] i18n: `DTD.Sheet.Class`, `DTD.Class.{Level, Track, Prerequisites, Characteristics, AnyCharacteristic, Skills, Feats, Mandatory, Optional, Choice, MagicSchools, SwordSchools, GunKata, CompletionBonus, Automation, Value, SkillGroup.*}`
 - [X] T018 [P] [US1] Estilos da ficha de classe em `styles/dtd40k.css`
-- [ ] T019 [US1] Validar quickstart 1–3 (conferir antes `index.size === 103` no Foundry) e registrar
+- [X] T019 [US1] Validar quickstart 1–3 (conferir antes `index.size === 103` no Foundry) e registrar
 
 ---
 
@@ -80,7 +80,7 @@ quickstart.md
 - [X] T026 [US2] Em `module/apps/character-sheet.mjs`: aba `class` em `TABS`/`PARTS`, drop de `class` → `startClass`, ações da aba, "Class: <atual>" no cabeçalho e Level só editável sem classes (`header.hbs`)
 - [X] T027 [P] [US2] i18n: `DTD.Sheet.Tab.class`, `DTD.Class.{Current, Completed, FreeStudy, Progress, Owned, Missing, Blocked, Start, Remove, RemoveConfirm, Uncomplete, BuyFeat, BonusTitle, ChooseSkill, ChooseSpecialty, Error.*, Warning.*, NotCharacter, None, DropHint}`
 - [X] T028 [P] [US2] Estilos da aba de classe
-- [ ] T029 [US2] Validar quickstart 4–14 e registrar
+- [X] T029 [US2] Validar quickstart 4–14 e registrar
 
 ---
 
@@ -102,7 +102,7 @@ quickstart.md
 - [X] T036 [US3] Seção XP na aba `class` (`class.hbs` + contexto): totais, XP inicial (Mestre), histórico com `undoXp`, `awardXp` (Mestre, com motivo)
 - [X] T037 [P] [US3] i18n: `DTD.Sheet.ModeAdvance`, `DTD.XP.{XP, Total, Spent, Available, Starting, Log, Award, AwardReason, Undo, UndoConfirm, Cost, Confirm, FreeStudy, Error.*}`
 - [X] T038 [P] [US3] Estilos do modo avanço e do XP
-- [ ] T039 [US3] Validar quickstart 15–25 e registrar
+- [X] T039 [US3] Validar quickstart 15–25 e registrar
 
 ---
 

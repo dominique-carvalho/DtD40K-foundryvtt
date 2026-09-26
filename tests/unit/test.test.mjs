@@ -65,10 +65,10 @@ describe("runTest with modifiers (US3)", () => {
     expect(boosted.outcome).toEqual({ success: true, raises: 0, checks: 0 });
   });
 
-  it("stunt dice enlarge the pool before normalization", () => {
+  it("stunts (+1k1 per level) enlarge the pool before normalization", () => {
     const result = runTest({ base: { rolled: 9, kept: 5 }, modifiers: { stuntDice: 3 }, tn: null, rng: facesRng(Array(10).fill(2)) });
-    expect(result.pool).toMatchObject({ rolled: 10, kept: 6 });
-    expect(result.pool.conversion).toEqual({ from: "12k5", to: "10k6", bonus: 0 });
+    expect(result.pool).toMatchObject({ rolled: 10, kept: 9 });
+    expect(result.pool.conversion).toEqual({ from: "12k8", to: "10k9", bonus: 0 });
   });
 
   it("choosing another characteristic changes the pool (Persuasion 2 + Fellowship 4 → 6k4)", async () => {

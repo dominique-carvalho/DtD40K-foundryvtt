@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { CHARACTERISTIC_GRID, CHARACTERISTICS, DERIVED_KEYS, GROUPS, SKILLS } from "../../module/config.mjs";
+import {
+  CHARACTERISTIC_GRID, CHARACTERISTICS, DERIVED_KEYS, DTD, GROUPS, MAX_RATING, RACE_POWER_AUTOMATION, SKILLS
+} from "../../module/config.mjs";
 
 describe("CHARACTERISTIC_GRID (classic sheet layout, FR-023)", () => {
   it("has the Power/Finesse/Resistance rows and Mental/Physical/Social columns", () => {
@@ -50,12 +52,17 @@ describe("SKILLS", () => {
     expect(Object.keys(SKILLS)).toHaveLength(27);
   });
 
-  it("marks exactly the 8 advanced skills", () => {
+  it("marks exactly the 7 advanced skills (DtD 7.7a p. 25)", () => {
     const advanced = Object.keys(SKILLS).filter((k) => SKILLS[k].advanced).sort();
     expect(advanced).toEqual([
-      "academicLore", "acrobatics", "commonLore", "forbiddenLore",
+      "academicLore", "commonLore", "forbiddenLore",
       "medicae", "pilot", "politics", "techUse"
     ]);
+  });
+
+  it("follows DtD 7.7a for Acrobatics (basic) and Athletics (Strength)", () => {
+    expect(SKILLS.acrobatics.advanced).toBe(false);
+    expect(SKILLS.athletics.characteristic).toBe("str");
   });
 
   it("treats Arcana as a basic skill (spec clarification)", () => {
@@ -78,9 +85,24 @@ describe("SKILLS", () => {
 });
 
 describe("DERIVED_KEYS", () => {
-  it("lists the 6 derived values", () => {
+  it("lists the 7 derived values (Max Fatigue added in DtD 7.7a)", () => {
     expect(DERIVED_KEYS).toEqual([
-      "staticDefense", "hpMax", "mentalDefense", "resolveMax", "speed", "resilience"
+      "staticDefense", "hpMax", "mentalDefense", "resolveMax", "speed", "resilience", "fatigueMax"
     ]);
+  });
+});
+
+describe("race constants (002)", () => {
+  it("lists the racial power automation modes", () => {
+    expect(RACE_POWER_AUTOMATION).toEqual(["none", "usesPerScene", "heroicHeritage", "shifty", "squatToughness"]);
+  });
+
+  it("caps ratings at 6", () => {
+    expect(MAX_RATING).toBe(6);
+  });
+
+  it("exposes both in DTD", () => {
+    expect(DTD.RACE_POWER_AUTOMATION).toBe(RACE_POWER_AUTOMATION);
+    expect(DTD.MAX_RATING).toBe(MAX_RATING);
   });
 });

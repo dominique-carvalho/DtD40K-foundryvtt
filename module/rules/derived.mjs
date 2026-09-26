@@ -1,7 +1,7 @@
 /**
  * Derived character values.
  * PURE module: must never reference Foundry globals (constitution, principle III).
- * Source: docs/analise-dtd.md §3; DtD 1.6 p. 14 and character sheet summary p. 17.
+ * Source: DtD 7.7a p. 17 (same formulas as the 1.6, pp. 14/17); docs/analise-dtd.md §3.
  */
 
 /**
@@ -18,6 +18,7 @@
  * @property {number} resolveMax
  * @property {number} speed
  * @property {number} resilience
+ * @property {number} fatigueMax
  */
 
 /**
@@ -36,19 +37,28 @@ function applyMod(base, mod) {
  * Compute all derived values of a character.
  * @param {{characteristics: Record<string, {value: number}>, size: number, level: number}} source
  * @param {Record<string, DerivedMod>} [derivedMods]
+ * @param {{staticDefenseFormula?: "standard"|"shifty", resilience?: number}} [modifiers]
+ *   racial power modifiers (spec 002, FR-016), applied before the GM bonus/override
  * @returns {DerivedValues}
  */
-export function computeDerived({ characteristics, size, level }, derivedMods = {}) {
+export function computeDerived({ characteristics, size, level }, derivedMods = {}, modifiers = {}) {
   const c = (key) => characteristics[key]?.value ?? 0;
+  const { staticDefenseFormula = "standard", resilience = 0 } = modifiers;
 
   const base = {
-    staticDefense: 10 + 3 * c("dex") + 3 * c("wis") - 2 * size,
+    // Halfling "Shifty" (DtD 7.7a p. 45): 10 + 6×Dex − 2×Size instead of Dex + Wis.
+    staticDefense: staticDefenseFormula === "shifty"
+      ? 10 + 6 * c("dex") - 2 * size
+      : 10 + 3 * c("dex") + 3 * c("wis") - 2 * size,
     // Decision (spec clarification): 2×(Con + Wil), book pp. 14/17.
     hpMax: 2 * (c("con") + c("wil")),
     mentalDefense: 5 + 5 * c("cmp"),
     resolveMax: c("wil") + c("cmp"),
     speed: c("str") + c("dex"),
-    resilience: Math.ceil((size + level) / 2) + 1
+    // Squat Toughness (7.7a p. 55) adds to Resilience.
+    resilience: Math.ceil((size + level) / 2) + 1 + (Number(resilience) || 0),
+    // Max Fatigue = Constitution (DtD 7.7a p. 17).
+    fatigueMax: c("con")
   };
 
   const result = Object.fromEntries(

@@ -1,0 +1,61 @@
+<section class="tab traits-tab {{tabs.traits.cssClass}}" data-group="primary" data-tab="traits">
+  {{#if race}}
+  <article class="race-card">
+    <header class="race-card-header">
+      <img class="race-img" src="{{race.img}}" alt="{{race.name}}">
+      <div class="race-card-title">
+        <h2 class="section-title">
+          <a data-action="openRace">{{race.name}}</a>
+          <a class="race-info-button" data-action="showRaceInfo" data-tooltip="{{localize "DTD.Race.Info"}}" aria-label="{{localize "DTD.Race.Info"}}"><i class="fa-solid fa-circle-info" inert></i></a>
+        </h2>
+        <ul class="race-bonuses">
+          <li>{{localize "DTD.Race.Size"}} {{race.size}}</li>
+          {{#each race.bonuses as |bonus|}}<li>+1 {{bonus}}</li>{{/each}}
+        </ul>
+      </div>
+      {{#if canEditRace}}
+      <div class="race-actions">
+        {{#if race.needsChoice}}
+        <button type="button" data-action="reconfigureRace"><i class="fa-solid fa-sliders" inert></i> {{localize "DTD.Race.Reconfigure"}}</button>
+        {{/if}}
+        <button type="button" data-action="removeRace"><i class="fa-solid fa-trash" inert></i> {{localize "DTD.Race.Remove"}}</button>
+      </div>
+      {{/if}}
+    </header>
+
+    <section class="race-power">
+      <h3>{{localize "DTD.Race.Power"}}: {{race.power.name}}
+        {{#if race.power.automated}}<span class="automation-tag">{{localize "DTD.Race.Automated"}}</span>{{/if}}
+      </h3>
+      {{#if race.power.uses}}
+      <div class="race-uses">
+        <span class="uses-label">{{localize "DTD.Race.Uses"}}</span>
+        <span class="uses-value">{{race.power.uses.remaining}} / {{race.power.uses.max}}</span>
+        {{#if canEditRace}}
+        <button type="button" data-action="spendRaceUse" {{disabled race.power.uses.empty}}>{{localize "DTD.Race.SpendUse"}}</button>
+        <button type="button" data-action="resetRaceUses">{{localize "DTD.Race.NewScene"}}</button>
+        {{/if}}
+      </div>
+      {{/if}}
+      <div class="enriched">{{{race.power.description}}}</div>
+    </section>
+
+    <section class="race-effects">
+      <h3>{{localize "DTD.Race.Modifiers"}}</h3>
+      {{#unless canToggleEffects}}<p class="hint">{{localize "DTD.Race.ModifiersHint"}}</p>{{/unless}}
+      <ul class="race-effect-list">
+        {{#each race.effects as |effect|}}
+        <li class="race-effect{{#unless effect.active}} inactive{{/unless}}">
+          <label>
+            <input type="checkbox" data-action="toggleRaceEffect" data-effect-id="{{effect.id}}" {{checked effect.active}} {{disabled (not @root.canToggleEffects)}}>
+            {{effect.name}}
+          </label>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+  </article>
+  {{else}}
+  <p class="race-drop-hint"><i class="fa-solid fa-hand-pointer" inert></i> {{localize "DTD.Race.DropHint"}}</p>
+  {{/if}}
+</section>

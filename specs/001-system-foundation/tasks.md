@@ -127,7 +127,7 @@ e confirmar que falham. UI/integração: roteiro manual do quickstart.md.
 
 ## Phase 5: User Story 3 - Ajustar a rolagem antes de lançar (Priority: P3)
 
-**Goal**: diálogo com TN, troca de característica, modificadores, free raises, stunt dice, especialidade e modo de rolagem; Shift+clique pula o diálogo
+**Goal**: diálogo com TN, troca de característica, modificadores, free raises, stunt (+XkX), especialidade e modo de rolagem; Shift+clique pula o diálogo
 
 **Independent Test**: quickstart.md passos 8, 11, 13 e 14
 
@@ -156,6 +156,15 @@ e confirmar que falham. UI/integração: roteiro manual do quickstart.md.
 - [X] T054 Executar o roteiro completo de `specs/001-system-foundation/quickstart.md` (passos 1–22) e `npm test` com cobertura de `module/rules/**`
 - [X] T055 Rodar `graphify update .` na raiz do repositório para atualizar o grafo de conhecimento
 
+
+## Phase 7: Adoção da DtD 7.7a (constituição v1.2.0, 2026-09-25)
+
+- [X] T056 [US1] Perícias conforme a 7.7a (pp. 25–29): Acrobatics Básica, Athletics com Strength, em `module/config.mjs` e `tests/unit/config.test.mjs`
+- [X] T057 [US1] Fatigue: `fatigue.value` no modelo, derivado `fatigueMax = Con` com bônus/override (`DERIVED_KEYS`), caixa Fatigue atual/máxima no cabeçalho — 7.7a p. 17
+- [X] T058 [US1] Rodapé com iniciativa social `1d10 + Fel + Cmp` além da de combate — 7.7a p. 17
+- [X] T059 [US1] Exemplo da Traya da 7.7a (pp. 17–18) em `tests/unit/derived.test.mjs`, data-model e quickstart
+- [X] T060 Spec e contratos ajustados para stunts +XkX (7.7a p. 418) e para a escala de TN da 7.7a
+- [X] T061 [US3] Após integrar a `main`: `applyModifiers` soma o nível de stunt em rolados **e** mantidos (+1k1 por nível, 7.7a p. 418); testes em `tests/unit/pool.test.mjs` e `tests/unit/test.test.mjs`; texto do campo Stunt na janela de rolagem; citações de página do código de rolagem passam para a 7.7a
 ---
 
 ## Dependencies & Execution Order

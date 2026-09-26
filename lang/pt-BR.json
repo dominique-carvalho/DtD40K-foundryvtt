@@ -2,6 +2,9 @@
   "TYPES": {
     "Actor": {
       "character": "Personagem"
+    },
+    "Item": {
+      "race": "Raça"
     }
   },
   "DTD": {
@@ -67,7 +70,8 @@
       "mentalDefense": "Mental Defense",
       "resolveMax": "Resolve máximo",
       "speed": "Speed",
-      "resilience": "Resilience"
+      "resilience": "Resilience",
+      "fatigueMax": "Fatigue máxima"
     },
     "Sheet": {
       "Character": "Ficha de Personagem DtD",
@@ -92,7 +96,7 @@
       "SearchSkills": "Buscar perícia",
       "OnlyTrained": "Só treinadas",
       "GmAdjustments": "Ajustes do Mestre",
-      "Initiative": "Iniciativa",
+      "Initiative": "Iniciativa de combate",
       "SpeedMeters": "m",
       "Row": {
         "power": "Power",
@@ -103,7 +107,14 @@
         "mental": "Mental",
         "physical": "Físico",
         "social": "Social"
-      }
+      },
+      "Race": "Ficha de Raça DtD",
+      "Tab": {
+        "main": "Características e Perícias",
+        "traits": "Traços"
+      },
+      "SocialInitiative": "Iniciativa social",
+      "Fatigue": "Fatigue"
     },
     "Roll": {
       "Success": "Sucesso",
@@ -131,14 +142,75 @@
         "KeptMod": "Modificador de dados mantidos",
         "FlatMod": "Modificador fixo",
         "FreeRaises": "Free raises (+5 cada)",
-        "StuntDice": "Stunt dice",
-        "StuntHint": "0 a 3 dados rolados extras concedidos pelo Mestre.",
+        "StuntDice": "Stunt",
+        "StuntHint": "Nível de stunt 0–3 concedido pelo Mestre: +1k1, +2k2 ou +3k3.",
         "Specialty": "Especialidade se aplica",
         "SpecialtyHint": "rerrola os 1s uma vez",
         "RollMode": "Modo de rolagem",
         "Roll": "Rolar",
         "Cancel": "Cancelar"
       }
+    },
+    "Race": {
+      "Automation": {
+        "none": "Só texto",
+        "usesPerScene": "Usos por cena",
+        "heroicHeritage": "Heroic Heritage",
+        "shifty": "Shifty",
+        "squatToughness": "Squat Toughness"
+      },
+      "Race": "Raça",
+      "Statistics": "Estatísticas Raciais",
+      "Size": "Size",
+      "Power": "Poder Racial",
+      "AutomationLabel": "Automação",
+      "Description": "Descrição",
+      "Lore": "Características Físicas",
+      "Height": "Altura média",
+      "Weight": "Peso médio",
+      "Languages": "Idiomas",
+      "Personality": "Traços de personalidade comuns",
+      "Physical": "Traços físicos comuns",
+      "Names": "Nomes de exemplo",
+      "Source": "Fonte",
+      "Page": "Página",
+      "CharacteristicBonus": "Bônus de característica",
+      "SkillBonus": "Bônus de perícia",
+      "AnyCharacteristic": "+1 em qualquer característica",
+      "ChooseN": "+1 em {n} perícias à escolha",
+      "ChooseLabel": "Perícias à escolha",
+      "None": "Sem raça",
+      "DropHint": "Arraste uma raça do compêndio Races para esta ficha.",
+      "ChooseTitle": "Bônus raciais — {race}",
+      "ChooseIntro": "Escolha onde ficam os bônus raciais de {race}.",
+      "ChooseCharacteristic": "Característica (+1)",
+      "ChooseSkills": "Perícias (+1) — escolha {n}",
+      "Confirm": "Aplicar",
+      "Reconfigure": "Refazer escolha",
+      "Remove": "Remover raça",
+      "RemoveConfirm": "Remover {race} e todos os seus bônus deste personagem?",
+      "Capped": "Limitado a 6: parte do bônus racial foi perdida.",
+      "RacialBonus": "Bônus racial",
+      "FinalValue": "Valor com efeitos raciais",
+      "NotCharacter": "Raças só podem ser aplicadas a personagens.",
+      "OnlyOne": "Um personagem só pode ter uma raça.",
+      "InvalidChoice": "Escolha racial inválida. Confira a característica e o número de perícias.",
+      "Effect": {
+        "size": "{race}: Size {name}",
+        "characteristic": "{race}: +1 {name}",
+        "skill": "{race}: +1 {name}",
+        "power": "{race}: {name}"
+      },
+      "Uses": "Usos nesta cena",
+      "SpendUse": "Usar",
+      "NewScene": "Nova cena",
+      "Automated": "Automático",
+      "Info": "Informações da raça",
+      "Modifiers": "Modificadores raciais",
+      "ModifiersHint": "Só o Mestre pode ativar ou desativar os modificadores raciais.",
+      "FullText": "Texto completo",
+      "FullTextHint": "Opcional: cole aqui o texto completo da raça a partir do seu exemplar do livro. Ele fica só neste mundo e não é distribuído com o sistema.",
+      "LockedPackHint": "Este compêndio está travado. Para editar a raça, clique com o botão direito no compêndio Races e escolha \"{option}\". Alterações no compêndio do sistema são substituídas quando o sistema é atualizado — exporte-as com npm run extract:packs ou importe a raça para o mundo e edite a cópia."
     }
   }
 }

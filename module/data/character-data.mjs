@@ -1,5 +1,6 @@
 import { CHARACTERISTICS, DERIVED_KEYS, SKILLS } from "../config.mjs";
 import { computeDerived } from "../rules/derived.mjs";
+import { capValue } from "../rules/race.mjs";
 
 const { ArrayField, HTMLField, NumberField, SchemaField, StringField } = foundry.data.fields;
 
@@ -52,12 +53,18 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       level: integer(1, { min: 1, max: 10 }),
       hp: new SchemaField({ value: integer(0, { min: 0 }) }),
       resolve: new SchemaField({ value: integer(0, { min: 0 }) }),
+      fatigue: new SchemaField({ value: integer(0, { min: 0 }) }),
       heroPoints: new SchemaField({
         value: integer(2, { min: 0 }),
         max: integer(2, { min: 0 })
       }),
       devotion: new SchemaField({ value: integer(6, { min: 0, max: 10 }) }),
       derivedMods: new SchemaField(derivedMods),
+      // Targets of racial power effects only — never rendered as sheet inputs (spec 002, research R3/R4).
+      modifiers: new SchemaField({
+        staticDefenseFormula: new StringField({ required: true, choices: ["standard", "shifty"], initial: "standard" }),
+        resilience: integer(0)
+      }),
       biography: new HTMLField({ required: true, blank: true })
     };
   }
@@ -68,7 +75,8 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
-    const derived = computeDerived(this, this.derivedMods);
+    this.#capRatings();
+    const derived = computeDerived(this, this.derivedMods, this.modifiers);
     this.derived = {
       staticDefense: derived.staticDefense,
       mentalDefense: derived.mentalDefense,
@@ -77,5 +85,22 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     };
     this.hp.max = derived.hpMax;
     this.resolve.max = derived.resolveMax;
+    this.fatigue.max = derived.fatigueMax;
+  }
+
+  /**
+   * Racial Active Effects are added without schema bounds (research R2), so cap
+   * every characteristic and skill at 6 before deriving anything (spec 002, FR-015).
+   * `capped` records which ratings lost part of a bonus, for the sheet.
+   */
+  #capRatings() {
+    this.capped = {};
+    for (const group of ["characteristics", "skills"]) {
+      for (const [key, data] of Object.entries(this[group])) {
+        const { value, capped } = capValue(data.value);
+        data.value = value;
+        if (capped) this.capped[`${group}.${key}`] = true;
+      }
+    }
   }
 }

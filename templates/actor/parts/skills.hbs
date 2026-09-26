@@ -34,7 +34,7 @@
               <span class="trait-char">{{localize entry.charAbbr}}</span>
             </a>
             {{/if}}
-            {{> "systems/dtd40k/templates/actor/parts/dots.hbs" dots=entry.dots path=entry.valuePath editable=../../isEdit}}
+            {{> "systems/dtd40k/templates/actor/parts/dots.hbs" dots=entry.dots path=entry.valuePath capped=entry.capped editable=../../isEdit}}
             {{#unless ../../isEdit}}<span class="pool{{#if entry.untrained}} untrained{{/if}}"{{#if entry.untrained}} data-tooltip="{{localize "DTD.Roll.Untrained"}}"{{/if}}>{{entry.pool}}</span>{{/unless}}
           </div>
           {{> "systems/dtd40k/templates/actor/parts/specialties.hbs" entry=entry isEdit=../../isEdit}}

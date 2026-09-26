@@ -34,7 +34,7 @@ Reiniciar o Foundry → o sistema "Dungeons the Dragoning" aparece em *Game Syst
 |---|---|---|---|
 | 1 | Criar mundo com o sistema e abrir | Sem erros no console (F12) | FR-001, SC-001 |
 | 2 | Criar ator "Personagem" | Características 1, perícias 0, Size 4, Level 1, HP 4/4, Resolve 2/2, Hero Points 2/2, Devotion 6 | US1-2 |
-| 3 | No modo edição, preencher Traya clicando nos pontos (str 4, dex 3, con 4, wil 2, wis 2, cmp 2) e Size 5 | SD 15, HP máx. 12, MD 15, Resolve 4, Speed 7, Resilience 4 — cada valor muda **na hora**, sem reabrir a ficha | SC-002, SC-007, US1-6 |
+| 3 | No modo edição, preencher Traya (7.7a) clicando nos pontos (str 4, dex 2, con 4, wil 4, wis 2, cmp 2) e Size 5 | SD 12, HP máx. 16, MD 15, Resolve 6, Speed 6, Resilience 4, Fatigue máx. 4 — cada valor muda **na hora**, sem reabrir a ficha | SC-002, SC-007, US1-6 |
 | 4 | Subir Cmp para 3 | MD 20, Resolve máx. 5 imediatamente | US1-4 |
 | 5 | Override de SD = 20; mudar Dex | SD continua 20 até remover o override | Edge |
 | 6 | Adicionar especialidade "Rifles" em Ballistics | Aparece e persiste após reabrir a ficha | US1-5 |
@@ -42,12 +42,12 @@ Reiniciar o Foundry → o sistema "Dungeons the Dragoning" aparece em *Game Syst
 | 8 | Shift+clique numa perícia | Rola sem abrir o diálogo | FR-019 |
 | 9 | Rolar perícia básica com 0 pontos (Cha 3) | Parada 2k2, marcada "sem treino" | US2-2 |
 | 10 | Rolar perícia avançada com 0 pontos | Aviso, nenhuma mensagem | US2-3 |
-| 11 | Diálogo: +2 stunt dice, 1 free raise, especialidade | Parada e total refletem cada opção; 1s rerrolados aparecem | US3 |
+| 11 | Diálogo: stunt de nível 2 (+2k2), 1 free raise, especialidade | Parada e total refletem cada opção; 1s rerrolados aparecem | US3 |
 | 12 | Modificadores que levem a 12k6 | Mensagem indica conversão 10k7 | US2-6 |
 | 13 | Modo "privado do Mestre" | Jogador sem permissão não vê o resultado | FR-021 |
 | 14 | Com Dice So Nice ativo | Dados 3D animam antes da mensagem | FR-021 |
 | 15 | Trocar idioma pt-BR ↔ en | Nenhum texto sem tradução | SC-006 |
-| 16 | Adicionar ao Combat Tracker e rolar iniciativa | 1d10 + Dex + Cmp | FR-003 |
+| 16 | Adicionar ao Combat Tracker e rolar iniciativa; conferir o rodapé | 1d10 + Dex + Cmp no tracker; rodapé mostra também a iniciativa social 1d10 + Fel + Cmp | FR-003, FR-029 |
 | 17 | Clicar no ponto igual ao valor atual de uma característica | Valor reduz 1; derivados atualizam na hora | FR-025, US1-6 |
 | 18 | Alternar para o modo jogo; fechar e reabrir a ficha | Pontos não editáveis; cabeçalho fixo visível; reabre no modo jogo | FR-022, US1-7 |
 | 19 | No modo jogo, buscar "lore" e depois marcar "só treinadas" | Só perícias correspondentes ficam visíveis, sem recarregar | FR-027, US1-8 |
@@ -65,3 +65,5 @@ Reiniciar o Foundry → o sistema "Dungeons the Dragoning" aparece em *Game Syst
 | 2026-09-25 | 7, 9, 10, 12, 16 (US2) | ✅ | Rolagens de perícias e características funcionando no Foundry 13.351 (confirmado pelo usuário) |
 | 2026-09-25 | 8, 11, 13, 14 (US3) | ✅ | Diálogo de rolagem funcionando no Foundry 13.351 (confirmado pelo usuário) |
 | 2026-09-25 | 1–22 (roteiro completo) | ✅ | Validação completa confirmada pelo usuário no Foundry 13.351, incluindo passos 3, 15 e 18–22 |
+| 2026-09-25 | 3 (Traya da 7.7a) | ✅ | Após adotar a DtD 7.7a: str 4, dex 2, con 4, wil 4, wis 2, cmp 2, Size 5 → SD 12, HP 16, MD 15, Resolve 6, Speed 6, Resilience 4, Fatigue 4; valores atualizam na hora. Caixa Fatigue (atual/máxima) no cabeçalho e linha "Fatigue máxima" nos ajustes do Mestre (bônus/override) funcionando. Temas claro e escuro sem cortes. |
+| 2026-09-25 | 16 (rodapé) | ✅ | Rodapé mostra iniciativa de combate 1d10 + Dex + Cmp e social 1d10 + Fel + Cmp (7.7a p. 17). A rolagem no Combat Tracker não fez parte desta validação. |

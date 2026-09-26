@@ -12,8 +12,11 @@
           {{#if isEdit}}<input type="number" name="system.level" value="{{system.level}}" min="1" max="10" step="1">{{else}}<b>{{system.level}}</b>{{/if}}
         </label>
         <label>{{localize "DTD.Sheet.Size"}}
-          {{#if isEdit}}<input type="number" name="system.size" value="{{system.size}}" min="1" max="10" step="1">{{else}}<b>{{system.size}}</b>{{/if}}
+          {{#if isEdit}}<input type="number" name="system.size" value="{{base.size}}" min="1" max="10" step="1">{{#if base.sizeChanged}}<span class="final-value" data-tooltip="{{localize "DTD.Race.FinalValue"}}">→ {{system.size}}</span>{{/if}}{{else}}<b>{{system.size}}</b>{{/if}}
         </label>
+        <span class="identity-race">{{localize "DTD.Race.Race"}}:
+          {{#if race}}<a data-action="openRace">{{race.name}}</a>{{else}}<b>—</b>{{/if}}
+        </span>
       </div>
     </div>
     {{#if canToggle}}
@@ -55,11 +58,18 @@
     <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.mentalDefense"}}</span><span class="stat-value">{{system.derived.mentalDefense}}</span></div>
     <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.resilience"}}</span><span class="stat-value">{{system.derived.resilience}}</span></div>
     <div class="stat-box">
+      <span class="stat-label">{{localize "DTD.Sheet.Fatigue"}}</span>
+      <span class="stat-value pair">
+        <input type="number" name="system.fatigue.value" value="{{system.fatigue.value}}" min="0" step="1">
+        <span>/ {{system.fatigue.max}}</span>
+      </span>
+    </div>
+    <div class="stat-box">
       <span class="stat-label">{{localize "DTD.Sheet.HeroPoints"}}</span>
       <span class="stat-value pair">
         <input type="number" name="system.heroPoints.value" value="{{system.heroPoints.value}}" min="0" step="1">
         <span>/</span>
-        {{#if isEdit}}<input type="number" name="system.heroPoints.max" value="{{system.heroPoints.max}}" min="0" step="1">{{else}}<span>{{system.heroPoints.max}}</span>{{/if}}
+        {{#if isEdit}}<input type="number" name="system.heroPoints.max" value="{{base.heroPointsMax}}" min="0" step="1">{{#if base.heroPointsMaxChanged}}<span class="final-value" data-tooltip="{{localize "DTD.Race.FinalValue"}}">→ {{system.heroPoints.max}}</span>{{/if}}{{else}}<span>{{system.heroPoints.max}}</span>{{/if}}
       </span>
     </div>
     <div class="stat-box">

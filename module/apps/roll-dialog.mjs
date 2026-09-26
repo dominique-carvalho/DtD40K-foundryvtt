@@ -1,5 +1,5 @@
 /**
- * Roll dialog (US3): TN, characteristic choice, modifiers, free raises, stunt dice,
+ * Roll dialog (US3): TN, characteristic choice, modifiers, free raises, stunt level (+1k1 each),
  * specialty and roll mode. Foundry v13 DialogV2.
  */
 const TEMPLATE = "systems/dtd40k/templates/dialog/roll-dialog.hbs";

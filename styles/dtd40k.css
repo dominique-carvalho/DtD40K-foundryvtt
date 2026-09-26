@@ -441,6 +441,384 @@
   color: var(--dtd-accent);
 }
 
+/* ---------- Race item sheet (spec 002, FR-004) ---------- */
+
+.dtd40k.sheet.item.race .window-content {
+  padding: 0 0.75rem 0.75rem;
+  overflow-y: auto;
+  color: var(--dtd-text);
+}
+
+.dtd40k.item.race .race-sheet-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* Sections keep their natural height; the sheet body scrolls instead of squeezing them. */
+.dtd40k.item.race .race-sheet-body > * {
+  flex-shrink: 0;
+}
+
+.dtd40k.item.race .sheet-header {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dtd40k.item.race .profile-img[data-action] {
+  cursor: pointer;
+}
+
+.dtd40k.item.race .item-name {
+  margin: 0;
+  font-size: 1.4rem;
+  height: auto;
+  border: none;
+  color: var(--dtd-text);
+}
+
+.dtd40k.item.race input.item-name {
+  width: 100%;
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k.item.race .identity-line input[type="text"] {
+  width: 6rem;
+}
+
+.dtd40k.item.race .race-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dtd40k.item.race .form-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dtd40k.item.race .form-group > label:first-child {
+  flex: 0 0 11rem;
+  font-weight: bold;
+}
+
+.dtd40k.item.race .form-group.stacked {
+  align-items: flex-start;
+}
+
+.dtd40k.item.race .form-group.stacked string-tags {
+  flex: 1;
+}
+
+.dtd40k.item.race .key-grid,
+.dtd40k.item.race .key-grid fieldset {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.15rem 0.75rem;
+}
+
+.dtd40k.item.race .key-grid fieldset {
+  grid-column: span 1;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 4px;
+}
+
+.dtd40k.item.race .key-grid fieldset legend {
+  padding: 0 0.25rem;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k.item.race .race-stats,
+.dtd40k.item.race .race-lore-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 0.75rem;
+  margin: 0;
+}
+
+.dtd40k.item.race dt {
+  font-weight: bold;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k.item.race dd {
+  margin: 0;
+}
+
+.dtd40k.item.race .automation-tag {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--dtd-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Show the whole text: the core editor would otherwise shrink to its minimum and scroll inside. */
+.dtd40k.item.race prose-mirror {
+  flex: none;
+  min-height: 6rem;
+  height: auto;
+}
+
+.dtd40k.item.race prose-mirror.inactive {
+  overflow: visible;
+}
+
+/* ---------- Tabs (spec 002, FR-015a) ---------- */
+
+.dtd40k.sheet.character .sheet-tabs {
+  flex: 0 0 auto;
+  margin: 0;
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k.sheet.character .tab {
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dtd40k.sheet.character .tab.active {
+  display: flex;
+}
+
+/* ---------- Racial bonuses on the sheet (spec 002, FR-014/FR-015) ---------- */
+
+.dtd40k .dot.racial.filled {
+  background: var(--dtd-accent);
+  border-color: var(--dtd-accent);
+}
+
+.dtd40k .capped-mark {
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--dtd-hp);
+}
+
+.dtd40k .final-value {
+  margin-left: 0.2rem;
+  font-weight: bold;
+  color: var(--dtd-text);
+}
+
+.dtd40k .identity-race a,
+.dtd40k .race-card a[data-action] {
+  cursor: pointer;
+  text-decoration: underline dotted;
+}
+
+/* ---------- Traits tab (spec 002, US2/US3) ---------- */
+
+.dtd40k .race-drop-hint {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--dtd-text-muted);
+  border: 1px dashed var(--dtd-border);
+  border-radius: 4px;
+}
+
+.dtd40k .race-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dtd40k .race-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.dtd40k .race-img {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--dtd-border);
+  border-radius: 4px;
+}
+
+.dtd40k .race-card-title {
+  flex: 1;
+}
+
+.dtd40k .race-bonuses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .race-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dtd40k .race-actions button,
+.dtd40k .race-uses button {
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  white-space: nowrap;
+}
+
+.dtd40k .race-power h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+}
+
+.dtd40k .automation-tag {
+  font-size: 0.7rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .race-uses {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.dtd40k .uses-value {
+  min-width: 3rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ---------- Racial choice dialog (spec 002, FR-009) ---------- */
+
+.dtd40k.race-choice fieldset {
+  margin: 0 0 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.dtd40k.race-choice .choice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.15rem 0.75rem;
+}
+
+.dtd40k.race-choice .choice-group h4 {
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.dtd40k.race-choice .choice-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.dtd40k.race-choice label.fixed {
+  opacity: 0.6;
+}
+
+/* ---------- Racial modifiers and race info (spec 002, FR-010) ---------- */
+
+.dtd40k .race-info-button {
+  margin-left: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--dtd-text-muted);
+  cursor: pointer;
+}
+
+.dtd40k .race-info-button:hover {
+  color: var(--dtd-text);
+}
+
+.dtd40k .race-effects h3 {
+  margin: 0 0 0.3rem;
+  font-size: 0.95rem;
+}
+
+.dtd40k .race-effects .hint {
+  margin: 0 0 0.3rem;
+  font-size: 0.8rem;
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .race-effect-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.15rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k .race-effect label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dtd40k .race-effect.inactive {
+  color: var(--dtd-text-subtle);
+  text-decoration: line-through;
+}
+
+.dtd40k.race-info .race-lore-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 0.75rem;
+  margin: 0.5rem 0 0;
+}
+
+.dtd40k.race-info dt {
+  font-weight: bold;
+  color: var(--color-text-secondary);
+}
+
+.dtd40k.race-info dd {
+  margin: 0;
+}
+
+.dtd40k.item.race .hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k.race-info h3 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.95rem;
+}
+
+.dtd40k.item.race .locked-pack-hint {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+}
+
+.dtd40k.item.race .enriched h3,
+.dtd40k.race-info .enriched h3 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k.race-info {
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
 /* ---------- Play mode rolling (US2) ---------- */
 
 .dtd40k .roll-link {

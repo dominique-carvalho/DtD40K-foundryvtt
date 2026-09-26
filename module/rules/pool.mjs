@@ -1,7 +1,7 @@
 /**
  * Dice pool construction for Roll & Keep tests.
  * PURE module: must never reference Foundry globals (constitution, principle III).
- * Source: docs/analise-dtd.md §2; DtD 1.6 pp. 8, 21, 235–236.
+ * Source: DtD 7.7a pp. 10–11 and 416–418 (same rules as the 1.6); docs/analise-dtd.md §2.
  */
 
 /** @typedef {{ rolled: number, kept: number, flat?: number }} Pool */
@@ -27,7 +27,7 @@ export function formatPool({ rolled, kept, flat = 0 }) {
   return `${rolled}k${kept}${bonus}`;
 }
 
-/** Stunt dice awarded by the Story Master: 0 to 3 extra rolled dice (p. 237). */
+/** Stunt level awarded by the Story Master: 0 to 3, each worth +1k1 (DtD 7.7a p. 418). */
 const MAX_STUNT_DICE = 3;
 
 /**
@@ -50,7 +50,7 @@ export function applyModifiers(base, { rolled = 0, kept = 0, flat = 0, freeRaise
   const stunts = Math.min(Math.max(toInt(stuntDice), 0), MAX_STUNT_DICE);
   return {
     rolled: base.rolled + toInt(rolled) + stunts,
-    kept: base.kept + toInt(kept),
+    kept: base.kept + toInt(kept) + stunts,
     flat: (base.flat ?? 0) + toInt(flat) + 5 * toInt(freeRaises)
   };
 }
@@ -59,7 +59,7 @@ export function applyModifiers(base, { rolled = 0, kept = 0, flat = 0, freeRaise
  * Normalize a pool: at least 1k1, kept ≤ rolled, then the "more than ten dice" rule —
  * every 2 rolled dice above 10 become +1 kept (an odd leftover is dropped); once 10k10
  * is reached, each extra rolled or kept die becomes +5.
- * Examples (p. 235): 12k6 → 10k7; 15k10 → 10k10+25; 11k11 → 10k10+10.
+ * Examples (7.7a p. 416): 12k6 → 10k7; 15k10 → 10k10+25; 11k11 → 10k10+10.
  * @param {Pool} pool
  * @returns {NormalizedPool}
  */

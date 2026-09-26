@@ -10,6 +10,8 @@ const foundryGlobals = {
   Hooks: "readonly",
   ui: "readonly",
   Actor: "readonly",
+  Item: "readonly",
+  ActiveEffect: "readonly",
   ChatMessage: "readonly",
   Roll: "readonly"
 };
@@ -35,7 +37,7 @@ export default [
     }
   },
   {
-    files: ["tests/**/*.mjs", "*.config.mjs"],
+    files: ["tests/**/*.mjs", "scripts/**/*.mjs", "*.config.mjs"],
     languageOptions: {
       globals: { ...globals.node }
     }

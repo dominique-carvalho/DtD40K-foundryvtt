@@ -15,7 +15,7 @@ export class DtdActor extends Actor {
 
     if (this.type === "character") {
       // Start fully healed and composed.
-      const derived = computeDerived(this.system, this.system.derivedMods);
+      const derived = computeDerived(this.system, this.system.derivedMods, this.system.modifiers);
       this.updateSource({
         "system.hp.value": derived.hpMax,
         "system.resolve.value": derived.resolveMax
@@ -24,7 +24,7 @@ export class DtdActor extends Actor {
   }
 
   /**
-   * Roll a skill test: (skill + characteristic) k characteristic (DtD 1.6 p. 19).
+   * Roll a skill test: (skill + characteristic) k characteristic (DtD 7.7a p. 416).
    * Opens the roll dialog unless fastForward is set (Shift+click).
    * @param {string} key                        skill key from CONFIG.DTD.SKILLS
    * @param {object} [options]
@@ -60,7 +60,7 @@ export class DtdActor extends Actor {
   }
 
   /**
-   * Roll a characteristic test: characteristic k characteristic (DtD 1.6 p. 236).
+   * Roll a characteristic test: characteristic k characteristic (DtD 7.7a p. 417).
    * Opens the roll dialog unless fastForward is set (Shift+click).
    * @param {string} key                        characteristic key
    * @param {object} [options]

@@ -16,7 +16,7 @@
 | `header` (fixo/sticky) | nome, imagem, Level, Size, barras HP/Resolve, SD, MD, Resilience, Hero Points, Devotion, alternador de modo | tudo editável (exceto calculados) | HP/Resolve/Hero Points atuais editáveis |
 | `characteristics` | grade 3×3: linhas Power/Finesse/Resistance × colunas Mental/Físico/Social (`CHARACTERISTIC_GRID`) | pontos clicáveis + especialidades editáveis | pontos só leitura; (US2) clique rola |
 | `skills` | 3 colunas Mental/Físico/Social, marca de Avançada, característica padrão | pontos clicáveis + especialidades | busca + filtro "só treinadas"; (US2) parada XkY e clique rola |
-| `footer` | Speed (m), iniciativa `1d10 + Dex + Cmp` | + ajustes do Mestre (bônus/override dos derivados) | só leitura |
+| `footer` | Speed (m), iniciativa de combate `1d10 + Dex + Cmp` e social `1d10 + Fel + Cmp` | + ajustes do Mestre (bônus/override dos derivados) | só leitura |
 
 - **Pontos**: 6 por item; o 6º destacado. `data-action="setDots"` com `data-path` e
   `data-value`; clicar no valor atual reduz 1.
@@ -47,7 +47,7 @@ await actor.rollCharacteristic("wil", { fastForward?: false, tn?: 20 });
 | Modificador de dados rolados / mantidos | 0 / 0 |
 | Modificador fixo | 0 |
 | Free raises | 0 |
-| Stunt dice | 0 (0–3) |
+| Stunt (nível) | 0 (0–3; +1k1 por nível) |
 | Especialidade se aplica | desmarcado (oculto se não houver especialidade) |
 | Modo de rolagem | `core.rollMode` atual (`CONFIG.Dice.rollModes`: publicroll, gmroll, blindroll, selfroll) |
 

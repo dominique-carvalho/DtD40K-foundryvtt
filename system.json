@@ -13,8 +13,12 @@
       "url": "https://github.com/dominique-carvalho"
     }
   ],
-  "esmodules": ["dtd40k.mjs"],
-  "styles": ["styles/dtd40k.css"],
+  "esmodules": [
+    "dtd40k.mjs"
+  ],
+  "styles": [
+    "styles/dtd40k.css"
+  ],
   "languages": [
     {
       "lang": "en",
@@ -30,10 +34,34 @@
   "documentTypes": {
     "Actor": {
       "character": {
-        "htmlFields": ["biography"]
+        "htmlFields": [
+          "biography"
+        ]
+      }
+    },
+    "Item": {
+      "race": {
+        "htmlFields": [
+          "description",
+          "fullText",
+          "power.description"
+        ]
       }
     }
   },
+  "packs": [
+    {
+      "name": "races",
+      "label": "Races",
+      "path": "packs/races",
+      "type": "Item",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
   "grid": {
     "distance": 1,
     "units": "m"

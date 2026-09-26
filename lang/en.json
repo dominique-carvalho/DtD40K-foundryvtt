@@ -2,6 +2,9 @@
   "TYPES": {
     "Actor": {
       "character": "Character"
+    },
+    "Item": {
+      "race": "Race"
     }
   },
   "DTD": {
@@ -67,7 +70,8 @@
       "mentalDefense": "Mental Defense",
       "resolveMax": "Maximum Resolve",
       "speed": "Speed",
-      "resilience": "Resilience"
+      "resilience": "Resilience",
+      "fatigueMax": "Maximum Fatigue"
     },
     "Sheet": {
       "Character": "DtD Character Sheet",
@@ -92,7 +96,7 @@
       "SearchSkills": "Search skills",
       "OnlyTrained": "Only trained",
       "GmAdjustments": "GM adjustments",
-      "Initiative": "Initiative",
+      "Initiative": "Combat Initiative",
       "SpeedMeters": "m",
       "Row": {
         "power": "Power",
@@ -103,7 +107,14 @@
         "mental": "Mental",
         "physical": "Physical",
         "social": "Social"
-      }
+      },
+      "Race": "DtD Race Sheet",
+      "Tab": {
+        "main": "Characteristics & Skills",
+        "traits": "Traits"
+      },
+      "SocialInitiative": "Social Initiative",
+      "Fatigue": "Fatigue"
     },
     "Roll": {
       "Success": "Success",
@@ -131,14 +142,75 @@
         "KeptMod": "Kept dice modifier",
         "FlatMod": "Flat modifier",
         "FreeRaises": "Free raises (+5 each)",
-        "StuntDice": "Stunt dice",
-        "StuntHint": "0 to 3 extra rolled dice awarded by the Story Master.",
+        "StuntDice": "Stunt",
+        "StuntHint": "Stunt level 0–3 awarded by the Story Master: +1k1, +2k2 or +3k3.",
         "Specialty": "Specialty applies",
         "SpecialtyHint": "reroll 1s once",
         "RollMode": "Roll mode",
         "Roll": "Roll",
         "Cancel": "Cancel"
       }
+    },
+    "Race": {
+      "Automation": {
+        "none": "Text only",
+        "usesPerScene": "Uses per scene",
+        "heroicHeritage": "Heroic Heritage",
+        "shifty": "Shifty",
+        "squatToughness": "Squat Toughness"
+      },
+      "Race": "Race",
+      "Statistics": "Racial Statistics",
+      "Size": "Size",
+      "Power": "Racial Power",
+      "AutomationLabel": "Automation",
+      "Description": "Description",
+      "Lore": "Physical Characteristics",
+      "Height": "Average Height",
+      "Weight": "Average Weight",
+      "Languages": "Languages",
+      "Personality": "Common Personality Traits",
+      "Physical": "Common Physical Traits",
+      "Names": "Example Names",
+      "Source": "Source",
+      "Page": "Page",
+      "CharacteristicBonus": "Characteristic Bonus",
+      "SkillBonus": "Skill Bonus",
+      "AnyCharacteristic": "+1 to any one characteristic",
+      "ChooseN": "+1 to any {n} skills of your choice",
+      "ChooseLabel": "Skills of choice",
+      "None": "No race",
+      "DropHint": "Drag a race from the Races compendium onto this sheet.",
+      "ChooseTitle": "Racial bonuses — {race}",
+      "ChooseIntro": "Pick where the racial bonuses of {race} go.",
+      "ChooseCharacteristic": "Characteristic (+1)",
+      "ChooseSkills": "Skills (+1) — choose {n}",
+      "Confirm": "Apply",
+      "Reconfigure": "Change choice",
+      "Remove": "Remove race",
+      "RemoveConfirm": "Remove {race} and all of its bonuses from this character?",
+      "Capped": "Capped at 6: part of the racial bonus is lost.",
+      "RacialBonus": "Racial bonus",
+      "FinalValue": "Value with racial effects",
+      "NotCharacter": "Races can only be applied to characters.",
+      "OnlyOne": "A character can only have one race.",
+      "InvalidChoice": "Invalid racial choice. Check the characteristic and the number of skills.",
+      "Effect": {
+        "size": "{race}: Size {name}",
+        "characteristic": "{race}: +1 {name}",
+        "skill": "{race}: +1 {name}",
+        "power": "{race}: {name}"
+      },
+      "Uses": "Uses this scene",
+      "SpendUse": "Use",
+      "NewScene": "New scene",
+      "Automated": "Automated",
+      "Info": "Race information",
+      "Modifiers": "Racial modifiers",
+      "ModifiersHint": "Only the GM can switch racial modifiers on or off.",
+      "FullText": "Full text",
+      "FullTextHint": "Optional: paste the race's full text from your own copy of the book. It stays in this world only and is not shipped with the system.",
+      "LockedPackHint": "This compendium is locked. To edit this race, right-click the Races compendium and choose \"{option}\". Changes to the system compendium are replaced when the system updates — export them with npm run extract:packs, or import the race into the world and edit the copy."
     }
   }
 }

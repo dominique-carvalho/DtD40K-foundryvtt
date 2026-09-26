@@ -108,7 +108,7 @@ quickstart.md
 
 ## Phase 6: Polish
 
-- [ ] T040 [P] Atualizar `docs/analise-dtd.md` §4 (XP) e §7 (Classes) para a 7.7a e o `README.md`
+- [X] T040 [P] Atualizar `docs/analise-dtd.md` §4 (XP) e §7 (Classes) para a 7.7a e o `README.md`
 - [X] T041 `npm run lint` e `npm test`
 - [X] T042 `graphify update .`
 

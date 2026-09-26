@@ -57,3 +57,42 @@ Esperado: `packs/exaltations/` e `packs/exalted-assets/` gerados sem erros, junt
 | 26 | Como Mestre, desmarcar o modificador Destiny | Hero Points máximo volta; remarcar restaura | FR-027 |
 | 27 | Paragon Human: trocar a raça para Ork | Multiclass sai, Warboss entra; Statuesque refeito se ficar inválido | Edge |
 | 28 | Abrir a ficha como observador | Exaltação, poderes e contadores só leitura | FR-015 |
+
+## Registro de validação
+
+### 2026-09-25 — Foundry 13.351, mundo "teste dtd", usuário Gamemaster
+
+Sistema carregado do worktree `DtD40K-foundryvtt-004` (junction `Data/systems/dtd40k`), packs
+gerados com `npm run build:packs`. Atores de teste criados e apagados ao final.
+
+| Passos | Resultado |
+|---|---|
+| 1 | ✅ Exaltations 9, Exalted Assets 75 em 10 pastas (5/21/5/5/4/15/5/5/5/5); console sem erros do sistema |
+| 2 | ✅ Werewolf: Feral Heart, Rage = Cmp + Wil + Level, 4 poderes estáticos, poderes 1–5 na ordem, p. 95, somente leitura com aviso de compêndio bloqueado |
+| 3 | ⚠️ Dados conferidos por `packs.test.mjs` e pelos agentes de conteúdo (verificação de n-gramas ≥ 6 palavras contra o PDF); leitura humana das 84 entradas ao lado do PDF ainda recomendada |
+| 4 | ✅ Warboss: Paragon Racial Assets, Paragon, Ork, 100 XP, automação Warboss |
+| 5 | ✅ pt-BR: cabeçalho "Raça / Exaltação", botões e rótulos traduzidos; conteúdo em inglês |
+| 6–7 | ✅ Traya (Tiefling): Feral Heart 1, Rage 7/7, só Fast Healing; 2º ponto não clicável no Level 1; Level 3 + 3º ponto → Rage 9, poderes 1–3 |
+| 8–9 | ✅ Atlantean Motes 11; Chosen Faith limitado a 3, Favor 8; Devotion 3 → Faith efetivo 2 (comprado 3), poderes 3–5 bloqueados |
+| 10 | ✅ Troca Werewolf → Vampire com confirmação; Blood Potency 1, Vitae 5/5 |
+| 11 | ✅ Paragon Human: Statuesque sem Charisma (8 opções), Hero Points 3/3 → 5/5, Multiclass adicionado por Perfection sem aviso "só na criação" |
+| 12 | ✅ Dragonblooded Earth: Con +1, HP máx. 12 (+2), Breath 4/4 |
+| 13 | ✅ Remover exaltação: confirmação; exaltação, efeitos e Blood of Io removidos |
+| 14 | ✅ Gastos 1–3 com Feral Heart 3: rodada 3/3; o 4º pede confirmação ("limite = Feral Heart") |
+| 15 | ✅ Combate de teste: após `nextRound` a rodada volta a 0/3 sem gravação no item |
+| 16 | ✅ Tell fraca → óbvia → aura → épica (6 pontos); "nova cena" zera |
+| 17 | ✅ Recurso 0: botão desabilitado e aviso "No Rage left." |
+| 18 | ✅ "+Feral Heart" 3/9 → 6/9 |
+| 19 | ✅ Atlantean: gastar 2 → 9/11, Paradox 2; Unravel → 10/11, Paradox 1 |
+| 20 | ✅ Pressure 5/5 → gastar 3 → 2/5 (rodada e Tell inalteradas) → nova cena 5/5 |
+| 21 | ✅ Blood of Io: Breath 4 → 5; Double Dragon recusado (limite), Mestre recebe "incluir mesmo assim" |
+| 22 | ✅ Extra Action e Action Hero: AP 3 → 5, Hero Points 5 → 6 |
+| 23–24 | ✅ Mark of Khorne em Vampire e Elven Perfection em Paragon Ork recusados; como Mestre, Khorne incluído ao confirmar |
+| 25 | ✅ Aviso informativo ao adicionar asset |
+| 26 | ✅ Mestre desmarca Destiny: Hero Points máx. 6 → 4; remarca → 6 |
+| 27 | ✅ Paragon Human → Ork: Multiclass sai, Warboss entra (Size 5 + 1 = 6), Statuesque refeito para Willpower (única opção) — corrigido nesta validação |
+| 28 | ⏳ Não validado: o mundo só tem o usuário Gamemaster |
+
+Correções feitas durante a validação: Statuesque inválido com uma única opção restante não era
+refeito (`reconfigureExaltation`); rádios do diálogo de escolha com 0 px; marcadores da lista de
+gastos genéricos; texto do erro `wrongRace`.

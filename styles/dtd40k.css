@@ -1232,8 +1232,14 @@
   flex-wrap: wrap;
   gap: 0.2rem 1rem;
   margin: 0;
-  padding-left: 1.1rem;
+  padding: 0;
+  list-style: none;
   font-size: 0.85rem;
+}
+
+.dtd40k .generic-spends li::before {
+  content: "• ";
+  color: var(--dtd-text-muted);
 }
 
 .dtd40k details.exaltation-power {
@@ -1290,6 +1296,13 @@
 }
 
 .dtd40k.exaltation-choice .element-option {
-  display: block;
+  display: flex;
   margin: 0.2rem 0;
+}
+
+/* The core radio collapses to 0 px inside this dialog; give it the core checkbox size. */
+.dtd40k.exaltation-choice input[type="radio"] {
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  flex: 0 0 auto;
 }

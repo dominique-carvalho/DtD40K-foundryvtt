@@ -386,7 +386,7 @@
       "Error": {
         "noExaltation": "{asset} exige uma exaltação: aplique uma antes.",
         "wrongExaltation": "{asset} é um asset da exaltação {exaltation}.",
-        "wrongRace": "{asset} exige um Paragon {race}.",
+        "wrongRace": "{asset} exige um Paragon da raça {race}.",
         "duplicate": "O personagem já tem {asset}.",
         "limit": "Um personagem só pode ter um Exalted Asset (exceto os de Paragon)."
       }

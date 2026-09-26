@@ -173,9 +173,17 @@ export async function applyExaltation(actor, exaltationItem) {
 export async function reconfigureExaltation(actor) {
   const exaltation = getExaltation(actor);
   const race = raceSystem(actor);
-  if (!exaltation || !needsSelection(exaltation.system, race)) return exaltation;
-  const selection = await promptExaltationSelection(exaltation, race, exaltation.system.selection);
-  if (!selection) return null;
+  if (!exaltation) return null;
+  const current = exaltation.system.selection;
+  let selection;
+  if (needsSelection(exaltation.system, race)) {
+    selection = await promptExaltationSelection(exaltation, race, current);
+    if (!selection) return null;
+  } else {
+    // A single valid option left (e.g. Statuesque after a race change): apply it without asking.
+    selection = defaultSelection(exaltation.system, race);
+    if (selection.statuesque === current.statuesque && selection.element === current.element) return exaltation;
+  }
 
   const ids = exaltation.effects.filter((effect) => effect.getFlag("dtd40k", "exalted")).map((effect) => effect.id);
   await exaltation.deleteEmbeddedDocuments("ActiveEffect", ids);

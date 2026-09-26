@@ -78,7 +78,7 @@ assets, US3 aplicar a exaltação, US4 recurso e Tell, US5 assets no personagem)
 - [X] T018 [US1] Registrar em `dtd40k.mjs`: `registerSheet(Item, "dtd40k", ExaltationSheet, { types: ["exaltation"], makeDefault: true, label: "DTD.Sheet.Exaltation" })`
 - [X] T019 [P] [US1] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `DTD.Sheet.Exaltation`, `DTD.Item.LockedPackHint` e `DTD.Exaltation.{Exaltation, PowerStat, Resource, FixedMax, Recovery, Debt, Pressure, StaticPowers, Powers, Rank, Elements, Element, Tell, Tell.level1–4, Lore.origin, Lore.appearance, Lore.society, Lore.examples, Source, Page, Healing}` (ficha)
 - [X] T020 [P] [US1] Estilos da ficha da exaltação em `styles/dtd40k.css` (`.dtd40k.item.exaltation`): tabela de 5 poderes, listas editáveis, tabela da Tell; legível nos temas claro e escuro do v13 com as variáveis do tema
-- [ ] T021 [US1] Validar manualmente quickstart.md passos 1–3 e 5 (parte exaltação) e registrar em "Registro de validação" de `specs/004-exaltation-compendium/quickstart.md` (incluir a revisão SC-006 das 9 exaltações)
+- [X] T021 [US1] Validar manualmente quickstart.md passos 1–3 e 5 (parte exaltação) e registrar em "Registro de validação" de `specs/004-exaltation-compendium/quickstart.md` (incluir a revisão SC-006 das 9 exaltações)
 
 **Checkpoint**: compêndio Exaltations utilizável como referência (MVP)
 
@@ -106,7 +106,7 @@ assets, US3 aplicar a exaltação, US4 recurso e Tell, US5 assets no personagem)
 - [X] T030 [US2] Implementar `module/apps/feat-sheet.mjs` (`FeatSheet`, padrão de `race-sheet.mjs`, `classes: ["dtd40k", "sheet", "item", "feat"]`, `position.width: 560`) e registrar em `dtd40k.mjs` com `types: ["feat"]`, `label: "DTD.Sheet.Feat"`
 - [X] T031 [P] [US2] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `DTD.Sheet.Feat`, `DTD.Asset.{Assets, Exaltation, Race, Deity, XpCost, Group, Category, Automation}`
 - [X] T032 [P] [US2] Estilos da ficha do feat em `styles/dtd40k.css` (`.dtd40k.item.feat`)
-- [ ] T033 [US2] Validar manualmente quickstart.md passos 1 (assets), 4 e 5 (parte asset) e registrar em `specs/004-exaltation-compendium/quickstart.md` (revisão SC-006 dos 75 assets)
+- [X] T033 [US2] Validar manualmente quickstart.md passos 1 (assets), 4 e 5 (parte asset) e registrar em `specs/004-exaltation-compendium/quickstart.md` (revisão SC-006 dos 75 assets)
 
 **Checkpoint**: os dois compêndios de consulta prontos
 
@@ -139,7 +139,7 @@ asset racial) entra na US5 (depende do compêndio de assets e dos efeitos de ass
 - [X] T045 [US3] Em `templates/actor/parts/header.hbs`: "Exaltation: <nome>" (`data-action="openExaltation"`) ou "—" na linha de identidade
 - [X] T046 [P] [US3] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `DTD.Exaltation.{None, DropHint, ChooseTitle, ChooseStatuesque, ChooseElement, Confirm, Reconfigure, Remove, RemoveConfirm, ReplaceConfirm, NotCharacter, OnlyOne, InvalidChoice, Locked, Unlocked, Info, Modifiers, ModifiersHint, Effect.destiny, Effect.statuesque, Effect.element, Effect.elementHp}`
 - [X] T047 [P] [US3] Estilos em `styles/dtd40k.css`: cartão da exaltação na aba Traits, pontos do Power Stat (teto destacado, acima do teto esmaecido), poderes bloqueados esmaecidos, janela de escolha
-- [ ] T048 [US3] Validar manualmente quickstart.md passos 6–10, 12, 13 (sem asset) e 26 e registrar em `specs/004-exaltation-compendium/quickstart.md`
+- [X] T048 [US3] Validar manualmente quickstart.md passos 6–10, 12, 13 (sem asset) e 26 e registrar em `specs/004-exaltation-compendium/quickstart.md`
 
 **Checkpoint**: exaltação aplicável, trocável e removível; sempre uma por personagem
 
@@ -162,7 +162,7 @@ Pressure do Paragon
 - [X] T054 [US4] Registrar em `module/apps/character-sheet.mjs` as ações `spendResource`, `recoverResource`, `adjustResource`, `resetRound`, `newScene`, `spendPressure`, `regainPressure` (todas exigem `actor.isOwner`; `adjustResource` e `spendPressure` leem o input vizinho, sem passar pelo formulário do ator)
 - [X] T055 [P] [US4] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `DTD.Exaltation.{Spend, Adjust, Round, ResetRound, RoundLimit, NewScene, Empty, Tell.level0, SpendPressure, RegainPressure, GenericSpends, Spend.heal, Spend.skill, Spend.reaction, Spend.stunned, Spend.dazed}` (Tell nível 1 com "Perception + Wisdom TN 20")
 - [X] T056 [P] [US4] Estilos em `styles/dtd40k.css`: barra do recurso, dívida, indicador da Tell por nível (cores distintas nos dois temas), Pressure, lista de gastos genéricos
-- [ ] T057 [US4] Validar manualmente quickstart.md passos 14–20 e registrar em `specs/004-exaltation-compendium/quickstart.md`
+- [X] T057 [US4] Validar manualmente quickstart.md passos 14–20 e registrar em `specs/004-exaltation-compendium/quickstart.md`
 
 **Checkpoint**: exaltação usável na mesa
 
@@ -191,7 +191,7 @@ Perfection do Paragon
 - [X] T066 [P] [US5] Criar `templates/actor/parts/assets.hbs` (partial incluída em `traits.hbs` após o cartão da exaltação e em `CharacterSheet.PARTIALS`): lista de Exalted Assets (nome → ficha, grupo, resumo, modificadores, remover só donos) e dica de arrastar do compêndio
 - [X] T067 [P] [US5] Acrescentar em `lang/en.json` e `lang/pt-BR.json`: `DTD.Asset.{Remove, RemoveConfirm, DropHint, CreationOnly, GMOverride, Error.noExaltation, Error.wrongExaltation, Error.wrongRace, Error.duplicate, Error.limit, Effect.<8 automações>}` e `DTD.Exaltation.{NoRace, NoPerfectionAsset}`
 - [X] T068 [P] [US5] Estilos em `styles/dtd40k.css`: lista de assets na aba Traits
-- [ ] T069 [US5] Validar manualmente quickstart.md passos 11, 13 (com asset), 21–25 e 27 e registrar em `specs/004-exaltation-compendium/quickstart.md`
+- [X] T069 [US5] Validar manualmente quickstart.md passos 11, 13 (com asset), 21–25 e 27 e registrar em `specs/004-exaltation-compendium/quickstart.md`
 
 **Checkpoint**: criação de personagem completa com exaltação e assets
 

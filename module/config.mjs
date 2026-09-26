@@ -63,7 +63,8 @@ const skill = (key, group, char, advanced = false) => ({
 });
 
 /**
- * The 27 skills. Arcana is basic (spec clarification, book p. 22).
+ * The 27 skills, as in DtD 7.7a pp. 25–29: Arcana and Acrobatics are basic, Athletics uses
+ * Strength (the 1.6 book had Acrobatics advanced and Athletics on Constitution).
  * Ballistics, Brawl and Weaponry are "Special" in the book; Dexterity is the
  * default for generic tests (research R8).
  * @type {Record<string, SkillDef>}
@@ -80,8 +81,8 @@ export const SKILLS = {
   politics: skill("politics", "mental", "wis", true),
   techUse: skill("techUse", "mental", "int", true),
   // Physical
-  acrobatics: skill("acrobatics", "physical", "dex", true),
-  athletics: skill("athletics", "physical", "con"),
+  acrobatics: skill("acrobatics", "physical", "dex"),
+  athletics: skill("athletics", "physical", "str"),
   ballistics: skill("ballistics", "physical", "dex"),
   brawl: skill("brawl", "physical", "dex"),
   drive: skill("drive", "physical", "dex"),

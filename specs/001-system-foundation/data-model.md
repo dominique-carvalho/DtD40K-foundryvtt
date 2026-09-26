@@ -63,8 +63,8 @@ Linhas × colunas da ficha oficial (FR-023):
 | mental | `perception` | wis | |
 | mental | `politics` | wis | ✔ |
 | mental | `techUse` | int | ✔ |
-| physical | `acrobatics` | dex | ✔ |
-| physical | `athletics` | con | |
+| physical | `acrobatics` | dex | |
+| physical | `athletics` | str | |
 | physical | `ballistics` | dex¹ | |
 | physical | `brawl` | dex¹ | |
 | physical | `drive` | dex | |

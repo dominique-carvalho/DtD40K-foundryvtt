@@ -1,5 +1,9 @@
 # Análise — Dungeons the Dragoning (DtD) para sistema Foundry VTT
 
+> ⚠️ **Referência atual: DtD 7.7a** (`DtD7.7a - Ready to Print.pdf`, constituição v1.2.0). Esta
+> síntese foi feita sobre a 1.6 + Book 2 e ainda não foi revisada por inteiro; as diferenças já
+> verificadas estão em **§0. Mudanças da 7.7a** logo abaixo. Na dúvida, vale a 7.7a.
+>
 > Fontes analisadas:
 > - **Livro base 1.6z** — `Dungeons the Dragoning 1.6 - Bookmarked Final.pdf` (394 pp.)
 > - **Book 2 v2.2 "For a Few Subtitles More"** — `Dungeons_the_Dragoning_Book_2.2_-_Bookmarked.pdf` (178 pp., suplemento, beta incompleto)
@@ -9,6 +13,20 @@
 > Números de página = **páginas do livro** (PDF 1.6 = livro + 1; PDF Book 2 = livro + 3). Texto extraído via `pdftotext`; várias tabelas saíram embaralhadas e **devem ser transcritas manualmente** do PDF antes de virar compêndio.
 
 ---
+
+## 0. Mudanças da 7.7a já verificadas (2026-09-25)
+
+- **Perícias** (7.7a pp. 25–29): Acrobatics passa a Básica; Athletics usa Strength. Arcana é Básica
+  (resolve a contradição #13). Demais perícias iguais.
+- **Derivados** (7.7a p. 17): HP = 2×(Con + Wil) (resolve a contradição #1); SD, MD, Resolve, Speed
+  e Resilience iguais à 1.6.
+- **Raças** (7.7a cap. 4, pp. 30–63): 16 raças no livro base (entram Dryad, Kenku, Kobold,
+  Thri-Kreen). Poderes alterados: Dark Eldarin (Warp Miasma sem limite por cena; bloqueia linha de
+  visão), Dragonborn (Dragon Breath sem limite), Elf (Elven Accuracy 1×/rodada), Gnome (todas as
+  proficiências de arma e armadura), Ork (HP temporário = Level no início do combate), Tau (Fall Back
+  após esquivar qualquer ataque). Detalhes em `specs/002-race-compendium/spec.md`.
+- **Outros** (não verificados em detalhe): custos de XP fixos, compra de itens simplificada,
+  armaduras como traje completo, veículos simplificados.
 
 ## Sumário
 
@@ -81,8 +99,8 @@ A ficha também agrupa em linhas **Power** (Int/Str/Cha), **Finesse** (Wis/Dex/F
 ### Perícias (27) — `*` = Avançada
 | Mental | Físico | Social |
 |---|---|---|
-| Academic Lore* (Int) | Acrobatics* (Dex) | Animal Ken (Cmp) |
-| Arcana (Int)¹ | Athletics (Con) | Charm (Fel) |
+| Academic Lore* (Int) | Acrobatics (Dex)² | Animal Ken (Cmp) |
+| Arcana (Int)¹ | Athletics (Str)² | Charm (Fel) |
 | Common Lore* (Int) | Ballistics (especial) | Command (Cha) |
 | Crafts (Wis) | Brawl (especial) | Deceive (Cha) |
 | Forbidden Lore* (Int) | Drive (Dex) | Disguise (Fel) |
@@ -91,7 +109,8 @@ A ficha também agrupa em linhas **Power** (Int/Str/Cha), **Finesse** (Wis/Dex/F
 | Politics* (Wis) | Stealth (Dex) | Persuasion (Cha) |
 | Tech-Use* (Int) | Weaponry (especial) | Scrutiny (Cmp) |
 
-¹ Arcana é "Basic" no texto do cap. 3 mas marcada como avançada na ficha — conferir.
+¹ Arcana é "Basic" no texto do cap. 3 mas marcada como avançada na ficha — conferir. **Resolvido na 7.7a: Básica.**
+² Valores da 7.7a (na 1.6: Acrobatics avançada, Athletics com Con).
 
 ### Derivados (1.6 p. 14, ficha p. 17/392)
 | Valor | Fórmula |

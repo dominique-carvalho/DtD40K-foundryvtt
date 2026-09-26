@@ -19,6 +19,12 @@
 - Q: Qual versão do Foundry é o alvo? → A: v13 (a mesa usa 13.351 e não pretende atualizar
   para o v14 por enquanto); substitui a escolha anterior de v14.
 
+### Session 2026-09-25 (adoção da 7.7a — constituição v1.2.0)
+
+- Q: Qual livro é a referência? → A: DtD 7.7a. Consequências para esta feature: Acrobatics passa a
+  Básica e Athletics passa a usar Strength; HP = 2×(Con + Wil) e Arcana Básica são confirmados pela
+  7.7a (p. 17 e p. 25), eliminando as contradições da 1.6.
+
 ### Session 2026-09-25 (validação manual da US1)
 
 - Problemas encontrados no passo 3 do quickstart: (a) derivados não atualizavam na ficha aberta;
@@ -167,9 +173,10 @@ efeito na parada e no resultado.
   Intelligence, Wisdom, Willpower) agrupadas em Físico/Social/Mental.
 - **FR-005**: O personagem MUST ter as 27 perícias do livro agrupadas em Mental/Físico/Social, cada
   uma com: pontos (0–6), característica padrão, tipo (Básica/Avançada) e lista de especialidades.
-- **FR-006**: As perícias Avançadas MUST ser: Academic Lore, Acrobatics, Common Lore, Forbidden
-  Lore, Medicae, Pilot, Politics, Tech-Use. Arcana MUST ser Básica (decisão: segue o texto da
-  perícia, p. 22, em vez do asterisco da ficha, p. 391).
+- **FR-006**: As perícias Avançadas MUST ser: Academic Lore, Common Lore, Forbidden Lore, Medicae,
+  Pilot, Politics, Tech-Use (DtD 7.7a p. 25). Arcana e Acrobatics MUST ser Básicas e Athletics MUST
+  usar Strength (7.7a pp. 25–29; na 1.6, Acrobatics era Avançada, Athletics usava Constitution e
+  a Arcana tinha contradição, agora resolvida pela 7.7a).
 - **FR-007**: Características MUST aceitar valores de 0 a 6, e cada característica MUST aceitar
   especialidades, como as perícias.
 - **FR-008**: O personagem MUST ter Size (padrão 4), Level (padrão 1), Hero Points atuais/máximo

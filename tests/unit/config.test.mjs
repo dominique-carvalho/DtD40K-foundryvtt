@@ -52,12 +52,17 @@ describe("SKILLS", () => {
     expect(Object.keys(SKILLS)).toHaveLength(27);
   });
 
-  it("marks exactly the 8 advanced skills", () => {
+  it("marks exactly the 7 advanced skills (DtD 7.7a p. 25)", () => {
     const advanced = Object.keys(SKILLS).filter((k) => SKILLS[k].advanced).sort();
     expect(advanced).toEqual([
-      "academicLore", "acrobatics", "commonLore", "forbiddenLore",
+      "academicLore", "commonLore", "forbiddenLore",
       "medicae", "pilot", "politics", "techUse"
     ]);
+  });
+
+  it("follows DtD 7.7a for Acrobatics (basic) and Athletics (Strength)", () => {
+    expect(SKILLS.acrobatics.advanced).toBe(false);
+    expect(SKILLS.athletics.characteristic).toBe("str");
   });
 
   it("treats Arcana as a basic skill (spec clarification)", () => {

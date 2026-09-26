@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsDaeH0000000",
+  "_key": "!items!dtdAsDaeH0000000",
+  "name": "Hunger",
+  "type": "feat",
+  "img": "icons/svg/blood.svg",
+  "folder": "dtdFldDaeSin0000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Besides the living, you can feed on fresh, uncooked corpses dead for no more than an hour, gaining 1 Essence per corpse eaten. Trigger: persuading someone to do something out of character purely for material gain lets you turn all Resonance back into Essence.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 215
+    },
+    "xpCost": 100,
+    "group": "daemonhostSin",
+    "prerequisites": {
+      "exaltation": "Daemonhost",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

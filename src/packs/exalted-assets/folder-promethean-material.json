@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFldProMater00",
+  "_key": "!folders!dtdFldProMater00",
+  "name": "Promethean Materials",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 700000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "assetGroup": "prometheanMaterial"
+    }
+  }
+}

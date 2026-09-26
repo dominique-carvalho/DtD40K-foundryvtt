@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoSigmar00",
+  "_key": "!items!dtdAsChoSigmar00",
+  "name": "Mark of Sigmar",
+  "type": "feat",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>While you are engaged in melee, any enemy attack aimed at one of your allies provokes an opportunity attack from you.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Sigmar"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

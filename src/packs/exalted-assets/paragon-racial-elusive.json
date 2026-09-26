@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacE0000000",
+  "_key": "!items!dtdAsRacE0000000",
+  "name": "Elusive",
+  "type": "feat",
+  "img": "icons/svg/invisible.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your Size is no longer applied as a penalty to your Static Defense.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 218
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Halfling",
+      "deity": ""
+    },
+    "automation": "elusive"
+  },
+  "effects": [],
+  "flags": {}
+}

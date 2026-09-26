@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacT0000000",
+  "_key": "!items!dtdAsRacT0000000",
+  "name": "Tuning",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your extra engineering know-how grants three starting feats: Armor Specialization (Any), Weapon Focus (Any), and Weapon Specialization (Any).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 218
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Gnome",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

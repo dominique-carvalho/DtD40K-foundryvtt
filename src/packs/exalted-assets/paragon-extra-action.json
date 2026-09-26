@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsParEA000000",
+  "_key": "!items!dtdAsParEA000000",
+  "name": "Extra Action",
+  "type": "feat",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdFldParagon000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your maximum Action Points increase by 2.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 217
+    },
+    "xpCost": 100,
+    "group": "paragon",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "extraAction"
+  },
+  "effects": [],
+  "flags": {}
+}

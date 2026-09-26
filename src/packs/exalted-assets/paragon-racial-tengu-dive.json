@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacTD000000",
+  "_key": "!items!dtdAsRacTD000000",
+  "name": "Tengu Dive",
+  "type": "feat",
+  "img": "icons/svg/wing.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your Flyer trait now equals double your speed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 219
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Kenku",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

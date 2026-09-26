@@ -1,0 +1,24 @@
+<div class="dtd40k race-choice exaltation-choice">
+  <p class="race-choice-intro">{{intro}}</p>
+  {{#if statuesque}}
+  <fieldset>
+    <legend>{{localize "DTD.Exaltation.ChooseStatuesque"}}</legend>
+    <div class="choice-grid">
+      {{#each statuesque as |option|}}
+      <label class="checkbox"><input type="radio" name="statuesque" value="{{option.key}}" {{checked option.selected}}> {{option.label}}</label>
+      {{/each}}
+    </div>
+  </fieldset>
+  {{/if}}
+  {{#if elements}}
+  <fieldset>
+    <legend>{{localize "DTD.Exaltation.ChooseElement"}}</legend>
+    {{#each elements as |element|}}
+    <label class="checkbox element-option">
+      <input type="radio" name="element" value="{{element.key}}" {{checked element.selected}}>
+      <strong>{{element.name}}</strong> — +1 {{element.characteristicLabel}}{{#if element.hpMax}}, +{{element.hpMax}} HP{{/if}}
+    </label>
+    {{/each}}
+  </fieldset>
+  {{/if}}
+</div>

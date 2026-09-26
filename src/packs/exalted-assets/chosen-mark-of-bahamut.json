@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoBahamut0",
+  "_key": "!items!dtdAsChoBahamut0",
+  "name": "Mark of Bahamut",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>You are able to parry ranged attacks. While your hit points are full, your melee attacks count as magical and can strike targets up to 10m away.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 212
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Bahamut"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

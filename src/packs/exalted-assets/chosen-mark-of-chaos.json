@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoChaosUnd",
+  "_key": "!items!dtdAsChoChaosUnd",
+  "name": "Mark of Chaos",
+  "type": "feat",
+  "img": "icons/svg/daze.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your damage dice explode on results of 9 as well as 10.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 212
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Chaos Undivided"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

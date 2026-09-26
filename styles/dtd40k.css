@@ -978,3 +978,345 @@
 .dtd40k .roll-dialog .dice-mod input {
   width: 3.5rem;
 }
+
+/* ---------- Exaltation and feat item sheets (spec 004, FR-005) ---------- */
+
+.dtd40k.sheet.item.exaltation .window-content,
+.dtd40k.sheet.item.feat .window-content {
+  padding: 0 0.75rem 0.75rem;
+  overflow-y: auto;
+  color: var(--dtd-text);
+}
+
+.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .sheet-header {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .profile-img[data-action] {
+  cursor: pointer;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .item-name {
+  margin: 0;
+  font-size: 1.4rem;
+  height: auto;
+  border: none;
+  color: var(--dtd-text);
+}
+
+.dtd40k.item:is(.exaltation, .feat) input.item-name {
+  width: 100%;
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k.item:is(.exaltation, .feat) .identity-line input[type="text"] {
+  width: 6rem;
+}
+
+.dtd40k.item:is(.exaltation, .feat) :is(.exaltation-section, .feat-section) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .form-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .form-group > label:first-child {
+  flex: 0 0 11rem;
+  font-weight: bold;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .form-group.stacked {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.dtd40k.item:is(.exaltation, .feat) :is(dl.exaltation-stats-list, dl.feat-stats) {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 0.75rem;
+  margin: 0;
+}
+
+.dtd40k.item:is(.exaltation, .feat) dt {
+  font-weight: bold;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k.item:is(.exaltation, .feat) dd {
+  margin: 0;
+}
+
+.dtd40k.item:is(.exaltation, .feat) .automation-tag {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: var(--dtd-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dtd40k.item:is(.exaltation, .feat) prose-mirror {
+  min-height: 5rem;
+}
+
+.dtd40k.item.exaltation .exaltation-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.dtd40k.item.exaltation .list-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dtd40k.item.exaltation .list-row input[type="text"] {
+  flex: 1;
+}
+
+.dtd40k.item.exaltation .list-row input[type="number"] {
+  width: 3.5rem;
+}
+
+.dtd40k.item.exaltation .list-control {
+  cursor: pointer;
+  margin-left: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k.item.exaltation .exaltation-power h3 {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+}
+
+.dtd40k.item.exaltation .tag {
+  display: inline-block;
+  margin: 0 0.3rem 0.2rem 0;
+  padding: 0 0.4rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 3px;
+}
+
+.dtd40k.item.exaltation :is(.exaltation-power-table, .tell-table) {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.dtd40k.item.exaltation :is(.exaltation-power-table, .tell-table) :is(th, td) {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--dtd-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.dtd40k.item.exaltation .exaltation-power-table td.rank {
+  width: 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dtd-accent);
+}
+
+.dtd40k.item.exaltation .exaltation-power-table .enriched p:first-child {
+  margin-top: 0.2rem;
+}
+
+/* ---------- Exaltation card and Exalted Assets in the Traits tab (spec 004, US3–US5) ---------- */
+
+.dtd40k .exaltation-card,
+.dtd40k .exalted-assets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--dtd-border);
+}
+
+.dtd40k .exaltation-trackers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dtd40k .exaltation-tracker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dtd40k .exaltation-tracker .tracker-label {
+  flex: 0 0 8rem;
+  font-weight: bold;
+}
+
+.dtd40k .exaltation-tracker .resource-value {
+  min-width: 3.5rem;
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dtd40k .exaltation-tracker.round.full .resource-value {
+  color: var(--dtd-hp);
+}
+
+.dtd40k .resource-bar {
+  flex: 1 1 8rem;
+  height: 0.5rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dtd40k .resource-fill {
+  display: block;
+  height: 100%;
+  background: var(--dtd-resolve);
+}
+
+.dtd40k .resource-debt {
+  padding: 0 0.4rem;
+  border: 1px solid var(--dtd-hp);
+  border-radius: 3px;
+  font-size: 0.8rem;
+  color: var(--dtd-hp);
+}
+
+.dtd40k .exaltation-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding-left: 8.5rem;
+}
+
+.dtd40k :is(.exaltation-buttons, .exaltation-tracker) button {
+  flex: 0 0 auto;
+  width: auto;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.dtd40k .adjust-resource {
+  display: inline-flex;
+  gap: 0.2rem;
+}
+
+.dtd40k :is(.adjust-input, .pressure-input) {
+  width: 3.5rem;
+}
+
+.dtd40k .dot.locked {
+  opacity: 0.35;
+  border-style: dotted;
+}
+
+.dtd40k .exaltation-tell h3,
+.dtd40k .exaltation-generic h3 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+}
+
+.dtd40k .exaltation-tell .tell-label {
+  font-weight: normal;
+}
+
+.dtd40k .exaltation-tell.tell-level-1 .tell-label { color: var(--dtd-text-muted); }
+.dtd40k .exaltation-tell.tell-level-2 .tell-label { color: var(--dtd-resolve); }
+.dtd40k .exaltation-tell.tell-level-3 .tell-label { color: #b9770e; font-weight: bold; }
+.dtd40k .exaltation-tell.tell-level-4 .tell-label { color: var(--dtd-hp); font-weight: bold; }
+
+.dtd40k .generic-spends {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.85rem;
+}
+
+.dtd40k .generic-spends li::before {
+  content: "• ";
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k details.exaltation-power {
+  padding: 0.2rem 0;
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k details.exaltation-power summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dtd40k details.exaltation-power.locked summary {
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k details.exaltation-power .rank {
+  display: inline-block;
+  width: 1.4rem;
+  text-align: center;
+  color: var(--dtd-accent);
+}
+
+.dtd40k .asset-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--dtd-border);
+}
+
+.dtd40k .asset-row header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dtd40k .asset-row a[data-action="openAsset"] {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline dotted;
+}
+
+.dtd40k .asset-img {
+  width: 24px;
+  height: 24px;
+  border: none;
+}
+
+.dtd40k .asset-remove {
+  margin-left: auto;
+  cursor: pointer;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k.exaltation-choice .element-option {
+  display: flex;
+  margin: 0.2rem 0;
+}
+
+/* The core radio collapses to 0 px inside this dialog; give it the core checkbox size. */
+.dtd40k.exaltation-choice input[type="radio"] {
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  flex: 0 0 auto;
+}

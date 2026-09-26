@@ -1,0 +1,145 @@
+{
+  "_id": "dtdExalDragonbld",
+  "_key": "!items!dtdExalDragonbld",
+  "name": "Dragonblooded",
+  "type": "exaltation",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Dragons, made long ago by the Syrneth, are immortal beings whose might keeps growing with age, and many powerful families descend from them. That ancestry never truly thins out: now and then an ordinary couple has a child born with scales, claws and a sliver of true draconic power — enough to make that child an Exalt.</p><p>Dragonblooded are born, not made. Cultists of Bahamut and Tiamat try to engineer such births through arranged unions and rituals, but the births are so rare that nobody can tell whether their efforts matter. Tough and versatile, the Dragonblooded excel in melee and spellcasting alike, and over their long lives most blend steel and sorcery into a personal style.</p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 79
+    },
+    "powerStat": {
+      "name": "Aspect",
+      "cap": "level",
+      "value": 1
+    },
+    "resource": {
+      "name": "Breath",
+      "formula": "breath",
+      "fixedMax": 0,
+      "recovery": "<p>Maximum Breath is twice the character's Level. Resting for 5 minutes or longer refills the whole Breath pool.</p>",
+      "actions": [
+        {
+          "type": "restoreAll",
+          "amount": "1"
+        }
+      ],
+      "debtName": "",
+      "healing": "outOfCombat",
+      "spent": 0
+    },
+    "round": {
+      "spent": 0,
+      "marker": "none"
+    },
+    "scene": {
+      "spent": 0
+    },
+    "pressure": {
+      "enabled": false,
+      "spent": 0
+    },
+    "staticPowers": [
+      {
+        "name": "Draconic Aura",
+        "description": "<p>The Tell is raw elemental energy that harms those nearby. With 2–3 points spent in the scene it inflicts 2k1 E damage once per minute on everyone else inside a Blast radius equal to Aspect; at 4–5 points that damage lands at the start of every round instead; at 6+ points it rises to 3k2. The Dragonblooded's own gear is unaffected, but homes and mounts suffer.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Hot-Blooded",
+        "description": "<p>Their hide shrugs off harmful energy. When E-type damage would cost them hit points, they may spend Breath: each point cuts the hit points lost by 1 (minimum 0), or by 2 per point once Aspect reaches 3.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Claws",
+        "description": "<p>The Dragonblooded has a natural claw attack (2k3 R; Melee; Brawling). Some show heavy talons; many have retractable claws that pass for painted nails when sheathed.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Blood Quickening",
+        "description": "<p>Each Dragonblooded is bound to one of five elements, chosen at character creation: Air, Earth, Fire, Water or Wood. The element alters the claws, grants +1 to a Characteristic (on top of purchased dots) and, for all but Wood, offers a 1-Breath ability. See the element list for details.</p>",
+        "automation": "bloodQuickening"
+      }
+    ],
+    "powers": [
+      {
+        "rank": 1,
+        "name": "Dragon Mind",
+        "description": "<p>Gains Dark Sight, and every Focus Power test the Dragonblooded makes is at +1k0.</p>"
+      },
+      {
+        "rank": 2,
+        "name": "Dragon Wings",
+        "description": "<p>Sprouts wings sized to the body and gains the Flyer trait, flying matching their ground speed; once Aspect reaches 4, flight speed is doubled.</p>"
+      },
+      {
+        "rank": 3,
+        "name": "Dragon Heart",
+        "description": "<p>Gains a breath weapon using the Flamer template. Spending 1 Breath adds +1k1 to its damage.</p>"
+      },
+      {
+        "rank": 4,
+        "name": "Dragon Skin",
+        "description": "<p>Gains Armor and Aura, each equal to Aspect.</p>"
+      },
+      {
+        "rank": 5,
+        "name": "Maximum Dragoning",
+        "description": "<p>Once per session, can take Dragon Form (the spell) without spending an action; its Focus Power test succeeds automatically.</p>"
+      }
+    ],
+    "elements": [
+      {
+        "key": "air",
+        "name": "Air",
+        "characteristic": "int",
+        "hpMax": 0,
+        "description": "<p><strong>Claws:</strong> can be used to parry weapons. <strong>Bonus:</strong> +1 Int. <strong>1 Breath:</strong> wreathed in wind, the Dragonblooded adds Aspect to Static Defense until the scene ends.</p>"
+      },
+      {
+        "key": "earth",
+        "name": "Earth",
+        "characteristic": "con",
+        "hpMax": 2,
+        "description": "<p><strong>Claws:</strong> gain Pen equal to Aspect. <strong>Bonus:</strong> +1 Con and +2 hit points. <strong>1 Breath:</strong> +1 Resilience until the scene ends, as long as both feet stay on bare soil or rock (sand, asphalt, wooden floors or a ship's deck do not count).</p>"
+      },
+      {
+        "key": "fire",
+        "name": "Fire",
+        "characteristic": "cha",
+        "hpMax": 0,
+        "description": "<p><strong>Claws:</strong> deal +1k0 damage. <strong>Bonus:</strong> +1 Cha. <strong>1 Breath:</strong> until the scene ends, the Dragonblooded's attacks deal +1k0 damage and their damage type becomes E.</p>"
+      },
+      {
+        "key": "water",
+        "name": "Water",
+        "characteristic": "str",
+        "hpMax": 0,
+        "description": "<p><strong>Claws:</strong> gain the Tearing property. <strong>Bonus:</strong> +1 Str. <strong>1 Breath:</strong> for one scene, ignore ordinary environmental hazards — for example breathing underwater or enduring any heat or cold between water’s freezing and boiling temperatures.</p>"
+      },
+      {
+        "key": "wood",
+        "name": "Wood",
+        "characteristic": "wis",
+        "hpMax": 0,
+        "description": "<p><strong>Claws:</strong> gain the Toxic property. <strong>Bonus:</strong> +1 Wis. <strong>Other:</strong> ignores rough terrain created by plants (thickets, brambles and similar), and once each round may perform the Healing Surge action for free. No Breath ability.</p>"
+      }
+    ],
+    "tell": "<p>A whirling storm of elemental energy that tears up the ground around the Dragonblooded — the most destructive and obvious Tell of any Exalt, because young dragon-blood cannot yet master power that true dragons take millennia to control. It follows the general scale for points spent in a scene: 1 point is faint (Perception + Wisdom vs. TN 20 to spot), 2–3 points are unmistakable, 4–5 points radiate an aura of power, and 6+ points are an epic display. From 2 points up the aura also burns bystanders (see Draconic Aura).</p>",
+    "lore": {
+      "origin": "<p>When the Draconic Empire collapsed thousands of years ago, many dragons ended up living among the lesser races, and some of their unions with mortals founded new draconic houses. Dragon blood proved unreliable, though: only some children inherited scales, talons and power. Those were raised as favorites and trained by the family's matriarch or patriarch; the rest were treated little better than serfs.</p><p>That hierarchy was shaken once the secrets of Breath came to light — rhythmic breathing techniques that channel the energy latent in dragon blood. The technique works best for true Dragonblooded, but even scaleless relatives could learn it, and many dragons resented how their immortal offspring came to value Breath over bloodline.</p><p>Today the blood is thin and scarce, yet the Dragonblooded remain as strong as ever. The trait is recessive, accumulating over generations until it surfaces fully in one child, and legend speaks of a transfer of Breath: a dying Dragonblooded can hand their remaining Breath to someone else, usually a relative, though on rare occasions a great friend's blood awakens this way.</p>",
+      "appearance": "<p>Few Exalts are as physically distinctive. Gloves and long robes can hide scales and talons for a while, but as the Dragonblooded matures, the wings — and the occasional vestigial tail — become impossible to conceal. With some cleverness one can pass as a Dragonborn.</p><p>Features vary widely with the dragon who founded the bloodline. Red scales dominate; red dragons are passionate and the likeliest to fall for a mortal long enough to build a relationship. Caitiff with crimson scales, claws, tails and perhaps horns or frills can easily be mistaken for daemons.</p>",
+      "society": "<p>Dragonblooded tend to be proud and expect a red-carpet welcome with their house colors on display, for dragons once ruled the Wheel and their cultural weight endures. They share their ancestors' hunger for wealth and usually travel with a retinue of servants, stylists, accountants, trainers, squires and agents — but rarely bodyguards, since their armored hide, the fire in their throat and the certainty that their house will avenge any harm keep them safe.</p><p>The noble draconic houses are among the most powerful and pompous families in the Great Wheel, obsessed with pedigree over merit. They seldom rule a Crystal Sphere outright but are usually its richest and most prominent family, and their eldest members, some dating back to the Empire's fall, manipulate events for their house's glory. Because the blood spreads into the general population through infidelity or the decline of a house, any child can manifest it; such rogue Dragonblooded are called Caitiff, are rarely taught anything about their nature, and may be feared and persecuted where draconic houses are unknown.</p><p>In play they are direct, aggressive fighters whose natural weapons are always on hand and whose Breath refills with any short rest, which keeps the pace brisk. Needing little gear, they can spend their resources on ships, vehicles, followers or eccentric purchases, though power armor and cyberware still amplify them. To adapt them, the blood could be daemonic, or the power could stem from an accident or a gift from a higher power rather than lineage.</p>",
+      "examples": []
+    },
+    "selection": {
+      "statuesque": "",
+      "element": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

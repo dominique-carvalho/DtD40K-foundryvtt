@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsWerBlackSpi",
+  "_key": "!items!dtdAsWerBlackSpi",
+  "name": "Black Spiral Dancers",
+  "type": "feat",
+  "img": "icons/svg/blood.svg",
+  "folder": "dtdFldWerTribe00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>While in Warform your claw and bite attacks deal +1k1 damage. At the start of every round you must pass a Willpower test (TN 20) or be unable to tell allies from enemies.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 222
+    },
+    "xpCost": 100,
+    "group": "werewolfTribe",
+    "prerequisites": {
+      "exaltation": "Werewolf",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

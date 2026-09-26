@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacW0000000",
+  "_key": "!items!dtdAsRacW0000000",
+  "name": "Warboss",
+  "type": "feat",
+  "img": "icons/svg/terror.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your Size increases by 1. When each combat begins, you recover Fatigue equal to your Level.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 219
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Ork",
+      "deity": ""
+    },
+    "automation": "warboss"
+  },
+  "effects": [],
+  "flags": {}
+}

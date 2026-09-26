@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsProD0000000",
+  "_key": "!items!dtdAsProD0000000",
+  "name": "Darksteel",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFldProMater00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your Integrated Armor gains +2 and cuts the Penetration of incoming attacks in half.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 220
+    },
+    "xpCost": 100,
+    "group": "prometheanMaterial",
+    "prerequisites": {
+      "exaltation": "Promethean",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

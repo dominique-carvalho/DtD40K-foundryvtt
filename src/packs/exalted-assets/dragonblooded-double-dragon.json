@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsDraDD000000",
+  "_key": "!items!dtdAsDraDD000000",
+  "name": "Double Dragon",
+  "type": "feat",
+  "img": "icons/svg/wing.svg",
+  "folder": "dtdFldDraBlood00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Pick a second Blood Quickening (one of Air, Earth, Fire, Water and Wood) and gain its benefits, except for its characteristic bonus. Dragonborn may end up with three this way.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 216
+    },
+    "xpCost": 100,
+    "group": "dragonbloodedBloodline",
+    "prerequisites": {
+      "exaltation": "Dragonblooded",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

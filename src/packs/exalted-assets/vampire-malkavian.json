@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsVamMalkavia",
+  "_key": "!items!dtdAsVamMalkavia",
+  "name": "Malkavian",
+  "type": "feat",
+  "img": "icons/svg/terror.svg",
+  "folder": "dtdFldVamClan000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>You start the game with one Minor Derangement. Reaching 100 or more IP does not remove you from play, although a new derangement is still gained every 20 IP. Spend one Vitae to pass your derangement to another person for a single scene.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 221
+    },
+    "xpCost": 100,
+    "group": "vampireClan",
+    "prerequisites": {
+      "exaltation": "Vampire",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

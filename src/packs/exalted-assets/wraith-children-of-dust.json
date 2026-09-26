@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsWraChDust00",
+  "_key": "!items!dtdAsWraChDust00",
+  "name": "Children of Dust",
+  "type": "feat",
+  "img": "icons/svg/skull.svg",
+  "folder": "dtdFldWraHaunt00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Spend 1 Plasm and lay a hand on any unattended object or local feature lacking real sentimental value to crumble it into dust.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 223
+    },
+    "xpCost": 100,
+    "group": "wraithHaunting",
+    "prerequisites": {
+      "exaltation": "Wraith",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

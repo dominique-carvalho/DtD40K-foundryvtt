@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsProO0000000",
+  "_key": "!items!dtdAsProO0000000",
+  "name": "Orichalcum",
+  "type": "feat",
+  "img": "icons/svg/sun.svg",
+  "folder": "dtdFldProMater00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Every two rolled dice that spent Pyros adds to a roll also bring one extra kept die. When gaining Transhuman Potential, each characteristic it boosts gets an extra +1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 220
+    },
+    "xpCost": 100,
+    "group": "prometheanMaterial",
+    "prerequisites": {
+      "exaltation": "Promethean",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

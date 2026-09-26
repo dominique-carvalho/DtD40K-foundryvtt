@@ -1,0 +1,111 @@
+{
+  "_id": "dtdExalWerewolf0",
+  "_key": "!items!dtdExalWerewolf0",
+  "name": "Werewolf",
+  "type": "exaltation",
+  "img": "icons/svg/pawprint.svg",
+  "system": {
+    "description": "<p>Werewolves are shapeshifters touched by Luna. Some treat the change as a gift and others as a curse — perhaps it is a curse to those who resent it and a blessing to those who embrace it. The more rigid, advanced and centralized a culture is, the more it tends to see them as a menace; many are outsiders and rebels who fight oppression so that ordinary people can govern themselves, not so that werewolves can rule.</p><p>One is either born with the gift to a werewolf parent or granted it directly by Luna in a moment of desperate survival. Beyond their shifting, they are deeply bound to the spirit world and can travel the Umbra, a comparatively calm stratum of the Warp, as no one else safely can.</p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 95
+    },
+    "powerStat": {
+      "name": "Feral Heart",
+      "cap": "level",
+      "value": 1
+    },
+    "resource": {
+      "name": "Rage",
+      "formula": "rage",
+      "fixedMax": 0,
+      "recovery": "<p>The werewolf regains Rage equal to its Feral Heart when each combat begins, and again once per night as the moon (or moons, or whatever the local equivalent is) rises. Maximum Rage is Composure + Willpower + Level.</p><p>Thanks to Lycan Resilience, Rage may be spent to heal Hit Points even during combat, as a free action.</p>",
+      "actions": [
+        {
+          "type": "regain",
+          "amount": "powerStat"
+        }
+      ],
+      "debtName": "",
+      "healing": "anytime",
+      "spent": 0
+    },
+    "round": {
+      "spent": 0,
+      "marker": "none"
+    },
+    "scene": {
+      "spent": 0
+    },
+    "pressure": {
+      "enabled": false,
+      "spent": 0
+    },
+    "staticPowers": [
+      {
+        "name": "Shifting",
+        "description": "<p>As a full action the werewolf can change between its normal shape, a wolf and a half-wolf Warform, absorbing all carried items into its body.</p><p><strong>Wolf form:</strong> the character cannot talk or handle anything beyond the simplest objects, but gains +1k1 on Perception tests involving scent, +2 Dexterity, −1 Size, Quadruped, and a natural weapon: Bite (2k2 R; Melee; Brawling).</p><p><strong>Warform:</strong> entering costs 1 Rage, and the form lasts at most Constitution + Feral Heart rounds. While in it the werewolf may only attack or move toward an opponent. It gains Stuff Of Nightmares, +2 Strength, +2 Size, +2 Constitution and natural weapons — Bite and Claw (2k3 R; Melee; Brawling) — treated as magical.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Lycan Resilience",
+        "description": "<p>In Wolf form and Warform the werewolf has Armor Points equal to its Feral Heart, which do not stack with worn armor. It may spend Rage to heal Hit Points during combat as a free action. In these forms, critical damage dealt by I or R weapons cannot kill it unless the weapon is silver or magical — it falls unconscious instead.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Spirit Sight",
+        "description": "<p>By passing a test of Feral Heart + Wisdom (TN 20 in places where the barrier between life and death is ordinary) the werewolf can look into the local Umbra, spotting residual magical auras, echoes of traumatic events and roaming spirits it can speak with.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Silver Bane",
+        "description": "<p>Against damage from silver weapons, the werewolf's Resilience is halved when working out how many Hit Points it loses.</p>",
+        "automation": "none"
+      }
+    ],
+    "powers": [
+      {
+        "rank": 1,
+        "name": "Fast Healing",
+        "description": "<p>In Wolf form or Warform, the werewolf has Regeneration (1). Critical damage heals more slowly: 1 point per hour of rest, in any form.</p>"
+      },
+      {
+        "rank": 2,
+        "name": "Spirit Walk",
+        "description": "<p>While peering into the Umbra, the werewolf can find ways into it through reflective surfaces, and anyone holding its hand may follow. The Umbra roughly mirrors the real world but teems with spirits and daemons, making it perilous.</p>"
+      },
+      {
+        "rank": 3,
+        "name": "Quick Shift",
+        "description": "<p>Changing shape takes a half action rather than a full action.</p>"
+      },
+      {
+        "rank": 4,
+        "name": "Stoking Fury",
+        "description": "<p>The werewolf gains 1 Rage whenever it suffers wounds.</p>"
+      },
+      {
+        "rank": 5,
+        "name": "Luna's Blessing",
+        "description": "<p>While the moon is out, shifting costs no Rage, takes only a free action and lasts indefinitely, and the werewolf has +2 Resilience throughout those nights.</p>"
+      }
+    ],
+    "elements": [],
+    "tell": "<p>Spending Rage draws the werewolf toward its animal spirit: fur sprouts in patches, wolfish ears and a tail may appear, the eyes shine silver and, above all, the silver tattoos fill with moonlight. They shine ever brighter with more Rage spent, until they are dazzling and a cool, gentle radiance surrounds the werewolf — a light that neither burns nor stabs. As with every Tell, 1 point spent in a scene is faint (Perception + Wisdom, TN 20 to notice), 2–3 points make it unmistakable, 4–5 points produce a powerful aura, and 6 or more become an epic display.</p>",
+    "lore": {
+      "origin": "<p>There are two roads to the gift. The first is birth: a child of a werewolf and a mortal has roughly a one-in-four chance of inheriting the ability, which usually awakens around puberty. When both parents are werewolves the child is almost sure to shift, but such children are often dangerously unstable — shifting from birth, prone to psychotic violence, their fury untamed — and too often the parents must destroy what they made. The second road is Luna herself: on rare occasions, when someone shows extraordinary will and refuses to die, she appears in one of her guises and grants them the werewolf's strength, usually enough to escape whatever deadly situation they were in.</p><p>After the first change, new werewolves typically run wild for a while, intoxicated by animal instinct and power beyond any mortal's — settling old scores, starting fights, indulging every appetite or roaming the world's dark corners. Family or friends who understand can guide them; those without such help often end up in trouble with the law or with the people they offend. Tribes make it a priority to find fresh werewolves soon after the first change and bring them in.</p>",
+      "appearance": "<p>In their normal shape, werewolves look much like anyone else apart from their tattoos: mystical patterns of mithril and quicksilver tracing across the body, present in every form and unique to each individual, like a signature. The name is loose — they can be any land predator; wolves are the most frequent, but big cats, foxes, dinosaurs and the like are equally valid and mechanically identical.</p><p>In wolf form they resemble fine, powerful specimens of their animal. Warform is unmistakably supernatural: huge, unnaturally strong and fast, painless, rapidly healing and filled with rage — a shape made solely for slaughter. Higher Feral Heart makes them more cunning and instinctive, and tribemates add tattoos (or the werewolf inks its own) recording its great deeds.</p>",
+      "society": "<p>Werewolves have no grand overarching society, only small packs and tribes. A planet usually has one tribe per moon, each tied to a different facet of Luna with its own tattoo designs and teachings. By tradition, werewolves are tattooed in enchanted silver — among the only inks their bodies will not heal away or reject — to mark their deeds.</p><p>In play they are instinctive, adaptable and independent, quick to try something when a new problem arises and quick to try something else if it fails; they rarely rely on a single solution. Their culture holds that strength comes from many tributaries — knowledge, might, politics, magic — so werewolf characters tend to be dabblers. Artificial places such as Sigil or a ship's interior make them uneasy, and in cities they gravitate to the wild, dangerous districts. Never separated from their weapons, they excel where the party must go unarmed, and their Umbra senses can reveal clues, spirit allies, or at higher levels a way into sealed places or out of a prison. Other shapechangers are an easy adaptation: Dragonborn often become draconic beasts, dinosaurs or alligators, Eldarin are often cats, halflings rats or lapdogs, and Warform could even be a superhero's bio-armour or battle mode.</p>",
+      "examples": [
+        "Traya Psine Kaos"
+      ]
+    },
+    "selection": {
+      "statuesque": "",
+      "element": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

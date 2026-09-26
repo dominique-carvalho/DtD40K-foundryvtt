@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsWraChSalt00",
+  "_key": "!items!dtdAsWraChSalt00",
+  "name": "Children of Salt",
+  "type": "feat",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdFldWraHaunt00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Enemies within melee range have to announce their actions as every round starts and may not alter them. If a declared action becomes impossible or suicidal (for example, its target dies or moves out of reach, or the action would carry them somewhere they can no longer go), they may take no action at all instead.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 223
+    },
+    "xpCost": 100,
+    "group": "wraithHaunting",
+    "prerequisites": {
+      "exaltation": "Wraith",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

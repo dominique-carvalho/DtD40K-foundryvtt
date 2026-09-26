@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFldDaeSin0000",
+  "_key": "!folders!dtdFldDaeSin0000",
+  "name": "Daemonhost Sins",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "assetGroup": "daemonhostSin"
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { CHARACTERISTICS, GROUPS, SKILLS } from "../config.mjs";
 import { buildRaceEffects, characteristicOptions, defaultChoice, needsChoice, validateRaceChoice } from "../rules/race.mjs";
+import { syncPerfection } from "./exaltation-service.mjs";
 
 /**
  * Applying, reconfiguring and removing a character's race (spec 002, US2).
@@ -90,6 +91,8 @@ export async function applyRace(actor, raceItem) {
   if (created?.system.power.automation === "heroicHeritage") {
     await actor.update({ "system.heroPoints.value": actor._source.system.heroPoints.value + 1 });
   }
+  // A Paragon swaps the racial asset granted by Perfection (spec 004).
+  if (created) await syncPerfection(actor);
   return created ?? null;
 }
 
@@ -124,7 +127,9 @@ export async function removeRace(actor) {
     content: `<p>${game.i18n.format("DTD.Race.RemoveConfirm", { race: race.name })}</p>`,
     rejectClose: false
   });
-  if (confirmed) await deleteCurrentRace(actor);
+  if (!confirmed) return;
+  await deleteCurrentRace(actor);
+  await syncPerfection(actor);
 }
 
 /* -------------------------------------------- */

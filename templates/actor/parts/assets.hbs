@@ -1,0 +1,27 @@
+{{#if exaltation}}
+<section class="exalted-assets">
+  <h2 class="section-title">{{localize "DTD.Asset.Assets"}}</h2>
+  {{#each assets as |asset|}}
+  <article class="asset-row">
+    <header>
+      <img class="asset-img" src="{{asset.img}}" alt="{{asset.name}}">
+      <a data-action="openAsset" data-item-id="{{asset.id}}">{{asset.name}}</a>
+      {{#if asset.group}}<span class="automation-tag">{{localize asset.group}}</span>{{/if}}
+      {{#if asset.granted}}<span class="automation-tag">Perfection</span>{{/if}}
+      {{#if @root.canEditRace}}
+      <a class="asset-remove" data-action="removeAsset" data-item-id="{{asset.id}}" data-tooltip="{{localize "DTD.Asset.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
+      {{/if}}
+    </header>
+    <div class="enriched">{{{asset.description}}}</div>
+    {{#each asset.effects as |effect|}}
+    <label class="race-effect{{#unless effect.active}} inactive{{/unless}}">
+      <input type="checkbox" data-action="toggleItemEffect" data-item-id="{{effect.itemId}}" data-effect-id="{{effect.id}}" {{checked effect.active}} {{disabled (not @root.canToggleEffects)}}>
+      {{effect.name}}
+    </label>
+    {{/each}}
+  </article>
+  {{else}}
+  <p class="hint">{{localize "DTD.Asset.DropHint"}}</p>
+  {{/each}}
+</section>
+{{/if}}

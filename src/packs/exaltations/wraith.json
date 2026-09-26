@@ -1,0 +1,113 @@
+{
+  "_id": "dtdExalWraith000",
+  "_key": "!items!dtdExalWraith000",
+  "name": "Wraith",
+  "type": "exaltation",
+  "img": "icons/svg/invisible.svg",
+  "system": {
+    "description": "<p>A Wraith is a ghost with the rare ability to act on the world of the living. It shapes an ectoplasmic body that passes for alive and wears it like a suit, resembling who it was in life as far as its patchy memory allows. Its spiritual energy is limited and can be restored only in the Umbra, the shadowy land of the dead between reality and the howling Warp, so every Wraith must go back there now and then — or is driven there when its shell is destroyed.</p><p>Nobody knows exactly what makes a Wraith; unfinished business alone cannot be the answer, since countless people die with tasks undone and stay dead. Once risen, though, they are effectively immortal until someone manages to destroy them, which is hard for anyone unable to reach the Umbra. Slipping where others cannot and fearing no death, they make superb thieves and assassins.</p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 99
+    },
+    "powerStat": {
+      "name": "Synergy",
+      "cap": "level",
+      "value": 1
+    },
+    "resource": {
+      "name": "Plasm",
+      "formula": "plasm",
+      "fixedMax": 0,
+      "recovery": "<p>Maximum Plasm is Synergy + Resolve. In the Umbra a Wraith regains 2 Plasm per hour. Among the living it regains none; instead it bleeds 1 Plasm per day unless it surrounds itself with the rituals and symbols of death.</p><p>While its shell is destroyed and re-forming (Second Death), it recovers no Plasm.</p>",
+      "actions": [
+        {
+          "type": "regain",
+          "amount": "2"
+        },
+        {
+          "type": "lose",
+          "amount": "1"
+        }
+      ],
+      "debtName": "",
+      "healing": "outOfCombat",
+      "spent": 0
+    },
+    "round": {
+      "spent": 0,
+      "marker": "none"
+    },
+    "scene": {
+      "spent": 0
+    },
+    "pressure": {
+      "enabled": false,
+      "spent": 0
+    },
+    "staticPowers": [
+      {
+        "name": "Dematerialize",
+        "description": "<p>Spending 1 Plasm and a half action, the Wraith becomes incorporeal (as the Phasing trait) for up to its Resolve in rounds. Instead, it may step into the Umbra; coming back to physical form then costs 1 Plasm and a half action, so it cannot return with only 1 Plasm left. It cannot turn incorporeal while in the Umbra. Its personal equipment turns incorporeal or enters the Umbra along with it.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Second Death",
+        "description": "<p>The Wraith has the Undead trait and its body is merely a constructed shell: it ignores the effects of critical damage and loses that much Plasm instead. If Plasm drops to 0 by any means, the shell collapses (leaving its gear behind, usually soaked in ectoplasm) and the Wraith is pushed back into the Umbra for one day while it builds a new shell. During that time it regains no Plasm, and any damage it takes destroys it for good.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Deathsight",
+        "description": "<p>The Wraith constantly perceives the Umbra as a pale veil over the living world, letting it notice residual magical auras and sense the general mood of a place. By touching a corpse and spending 1 Plasm, it relives the dead person's final moments through their eyes.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Ghost Dice",
+        "description": "<p>Dice gained by spending Plasm are rolled apart from the rest (different colours work well). Any 1 on a Ghost Die brings some misfortune and any 10 some good fortune, whether the test succeeds or fails.</p>",
+        "automation": "none"
+      }
+    ],
+    "powers": [
+      {
+        "rank": 1,
+        "name": "Whispers",
+        "description": "<p>The Wraith always hears the faint voices of the restless dead and may use Augury (a Divination spell) whenever it likes, with a Synergy + Wisdom roll replacing the usual Focus Power test.</p>"
+      },
+      {
+        "rank": 2,
+        "name": "Poltergeist",
+        "description": "<p>Spend 1 Plasm to move objects remotely for one scene, with a reach of 3 metres per dot of Synergy and an effective Strength equal to Willpower. Control is too coarse for attacks — until Synergy 4, when the Wraith can make melee attacks at that range, though never opportunity attacks with this power.</p>"
+      },
+      {
+        "rank": 3,
+        "name": "Curse",
+        "description": "<p>As a half action, pick someone within Poltergeist range; that target must roll on the Psychic Phenomena table right away. A Perils of the Warp result is rerolled unless 3 Plasm are paid by the Wraith. It is unaffected by anything the Curse produces (for example, it is not knocked down by The Earth Protests or Spectral Gale).</p>"
+      },
+      {
+        "rank": 4,
+        "name": "Shroud",
+        "description": "<p>Gain Armor equal to Resolve, not cumulative with worn armor. While incorporeal, this becomes Aura instead of Armor.</p>"
+      },
+      {
+        "rank": 5,
+        "name": "Ectoplasmic Form",
+        "description": "<p>Once per session the Wraith can let its body dissolve back into liquid ectoplasm, gaining Amorphous and temporary Hit Points equal to its current Plasm, which are lost first. When the scene ends, Amorphous and any temporary Hit Points left are lost.</p>"
+      }
+    ],
+    "elements": [],
+    "tell": "<p>Spending Plasm loosens the limits the Wraith unconsciously places on its body: a hand may slide through someone else's during a handshake, or the face may fade into a blank, identity-less mask. The barrier between the materium and the Umbra also thins around it, exposing long-dead ghosts and strange creatures. As with every Tell, 1 point spent in a scene is faint (Perception + Wisdom, TN 20 to notice), 2–3 points make it unmistakable, 4–5 points produce a powerful aura, and 6 or more become an epic display.</p>",
+    "lore": {
+      "origin": "<p>Everyone leaves something unfinished, and every Wraith certainly has. A few souls, mortal or Exalted, get snagged in the Umbra before being swept wholly into the Warp. Grudges and lost chances play a part in who lingers, but they are not the whole story: massacres, collapse and famine make the Umbra flourish, and in such times Wraiths rise in great numbers, one lost soul after another waking in an ectoplasmic shell among others just as frightened and bewildered.</p><p>The Umbra is where a Wraith first wakes and the only place it can replenish its plasm. It is also home to far older spirits — of elements, mountains, plains, light and darkness — locked in endless rivalry that mirrors the physical world, including the huge spider-like spirits that infest every industrial city and entomb anyone who meddles in their webs. Like those spirits, Wraiths feel safest in familiar ground: places of death.</p>",
+      "appearance": "<p>Plasm is neither matter nor dream but something in between — matter made less real, dreams made more solid — and it answers to will. A Wraith's memories, beliefs and unconscious sense of how reality works shape it, which is why a returning Wraith takes the form of its old body and why it cannot, without real focus, pass through walls or shrug off a bullet. Surprise, such as a fall or a stabbing, lets its expectations take over. So a Wraith may look younger than when it died, carry the wounds that killed it forever, or trail a fog of deathly pallor.</p><p>Synergy measures how far the Wraith has accepted its death and ceased imitating life. As it rises, more Umbral power is available, but the memory-built body slowly erodes, drifting toward how the Wraith believes it looks, how it ought to look, or even how others see it.</p>",
+      "society": "<p>Stygia is a Wraith city within the Abyss, where Warp energy pours into the materium so strongly that there is no Umbra; ghosts there are fully real and what they build endures, unlike anything made in the Umbra, which decays and is forgotten. Its most important product is Soulsteel, an alloy of ectoplasm and other materials. Reapers sail Soulsteel Spelljammers between the Umbras of different Crystal Spheres — moving only between Umbra and Warp — gathering naive new Wraiths to sell in the Abyss, where they labour mining warpstone and doing menial work until they break and are melted in the soulforges into weapons, tools or coin. Wraiths outside Stygia are typically solitary and fixated on their past lives; once everything they cared for is gone, they fade, rage at the world, or finally move on.</p><p>In play, Wraiths see the death behind every scene and are drawn to places of death as the living are to places of life. Many go mad chasing old loved ones or turning to neglected faiths; the only real way forward is acceptance, after which a Wraith may rediscover what living feels like. Since death barely threatens them, stakes should come from endangered allies, urgent deadlines and failure-prone tasks. Any adaptation must keep the ability to turn intangible and to reach the Umbra — perhaps an Umbral native spirit or a being dreaming itself into the materium.</p>",
+      "examples": []
+    },
+    "selection": {
+      "statuesque": "",
+      "element": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

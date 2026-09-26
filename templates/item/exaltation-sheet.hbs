@@ -1,0 +1,186 @@
+<div class="exaltation-sheet-body">
+  {{#if lockedPackHint}}
+  <p class="notification info locked-pack-hint"><i class="fa-solid fa-lock" inert></i> {{lockedPackHint}}</p>
+  {{/if}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}" {{#if editable}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if editable}}
+      <input class="item-name" type="text" name="name" value="{{item.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="item-name">{{item.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <span>{{localize "TYPES.Item.exaltation"}}</span>
+        <label>{{localize "DTD.Race.Source"}}
+          {{#if editable}}<input type="text" name="system.source.book" value="{{system.source.book}}">{{else}}<b>{{system.source.book}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Race.Page"}}
+          {{#if editable}}<input type="number" name="system.source.page" value="{{system.source.page}}" min="1" step="1">{{else}}<b>{{system.source.page}}</b>{{/if}}
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <section class="exaltation-section exaltation-description">
+    <h2 class="section-title">{{localize "DTD.Race.Description"}}</h2>
+    {{#if editable}}
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.description}}}</div>{{/if}}
+  </section>
+
+  <section class="exaltation-section exaltation-stats">
+    <h2 class="section-title">{{localize "DTD.Exaltation.StatsTitle"}}</h2>
+    {{#if editable}}
+    <div class="form-group"><label>{{localize "DTD.Exaltation.PowerStat"}}</label><input type="text" name="system.powerStat.name" value="{{system.powerStat.name}}"></div>
+    <div class="form-group"><label>{{localize "DTD.Exaltation.CapLabel"}}</label>
+      <select name="system.powerStat.cap">{{selectOptions capOptions selected=system.powerStat.cap localize=true}}</select>
+    </div>
+    <div class="form-group"><label>{{localize "DTD.Exaltation.Resource"}}</label><input type="text" name="system.resource.name" value="{{system.resource.name}}"></div>
+    <div class="form-group"><label>{{localize "DTD.Exaltation.FormulaLabel"}}</label>
+      <select name="system.resource.formula">{{selectOptions formulaOptions selected=system.resource.formula localize=true}}</select>
+    </div>
+    {{#if isFixed}}
+    <div class="form-group"><label>{{localize "DTD.Exaltation.FixedMax"}}</label><input type="number" name="system.resource.fixedMax" value="{{system.resource.fixedMax}}" min="0" step="1"></div>
+    {{/if}}
+    <div class="form-group"><label>{{localize "DTD.Exaltation.Debt"}}</label><input type="text" name="system.resource.debtName" value="{{system.resource.debtName}}" placeholder="Paradox, Resonance…"></div>
+    <div class="form-group"><label>{{localize "DTD.Exaltation.HealingLabel"}}</label>
+      <select name="system.resource.healing">{{selectOptions healingOptions selected=system.resource.healing localize=true}}</select>
+    </div>
+    <div class="form-group"><label class="checkbox"><input type="checkbox" name="system.pressure.enabled" {{checked system.pressure.enabled}}> {{localize "DTD.Exaltation.PressureEnabled"}}</label></div>
+    <div class="form-group stacked">
+      <label>{{localize "DTD.Exaltation.Actions"}}
+        <a class="list-control" data-action="addEntry" data-list="resource.actions" data-tooltip="{{localize "DTD.Exaltation.AddAction"}}"><i class="fa-solid fa-plus" inert></i></a>
+      </label>
+      <ol class="exaltation-list">
+        {{#each actions as |action|}}
+        <li class="list-row">
+          <select name="system.resource.actions.{{action.index}}.type">{{selectOptions @root.actionTypeOptions selected=action.type localize=true}}</select>
+          <input type="text" name="system.resource.actions.{{action.index}}.amount" value="{{action.amount}}" placeholder="1 / powerStat">
+          <a class="list-control" data-action="removeEntry" data-list="resource.actions" data-index="{{action.index}}"><i class="fa-solid fa-trash" inert></i></a>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+    <div class="form-group stacked"><label>{{localize "DTD.Exaltation.Recovery"}}</label>
+      <prose-mirror name="system.resource.recovery" value="{{system.resource.recovery}}" toggled>{{{enriched.recovery}}}</prose-mirror>
+    </div>
+    {{else}}
+    <dl class="exaltation-stats-list">
+      <dt>{{localize "DTD.Exaltation.PowerStat"}}</dt><dd>{{system.powerStat.name}} <span class="hint">({{localize "DTD.Exaltation.CapLabel"}}: {{localize (concat "DTD.Exaltation.Cap." system.powerStat.cap)}})</span></dd>
+      <dt>{{localize "DTD.Exaltation.Resource"}}</dt><dd>{{system.resource.name}} = {{#if isFixed}}{{system.resource.fixedMax}}{{else}}{{formulaLabel}}{{/if}}</dd>
+      {{#if system.resource.debtName}}<dt>{{localize "DTD.Exaltation.Debt"}}</dt><dd>{{system.resource.debtName}}</dd>{{/if}}
+      <dt>{{localize "DTD.Exaltation.HealingLabel"}}</dt><dd>{{localize (concat "DTD.Exaltation.Healing." system.resource.healing)}}</dd>
+      {{#if actions.length}}<dt>{{localize "DTD.Exaltation.Actions"}}</dt><dd>{{#each actions as |action|}}<span class="tag">{{action.label}}</span>{{/each}}</dd>{{/if}}
+      {{#if system.pressure.enabled}}<dt>{{localize "DTD.Exaltation.Pressure"}}</dt><dd>{{localize "DTD.Exaltation.PressureRule"}}</dd>{{/if}}
+    </dl>
+    <div class="enriched">{{{enriched.recovery}}}</div>
+    {{/if}}
+  </section>
+
+  <section class="exaltation-section exaltation-static-powers">
+    <h2 class="section-title">{{localize "DTD.Exaltation.StaticPowers"}}
+      {{#if editable}}<a class="list-control" data-action="addEntry" data-list="staticPowers" data-tooltip="{{localize "DTD.Exaltation.AddPower"}}"><i class="fa-solid fa-plus" inert></i></a>{{/if}}
+    </h2>
+    {{#each staticPowers as |power|}}
+    <article class="exaltation-power">
+      {{#if @root.editable}}
+      <div class="list-row">
+        <input type="text" name="system.staticPowers.{{power.index}}.name" value="{{power.name}}" placeholder="{{localize "Name"}}">
+        <select name="system.staticPowers.{{power.index}}.automation">{{selectOptions @root.automationOptions selected=power.automation localize=true}}</select>
+        <a class="list-control" data-action="removeEntry" data-list="staticPowers" data-index="{{power.index}}"><i class="fa-solid fa-trash" inert></i></a>
+      </div>
+      <prose-mirror name="system.staticPowers.{{power.index}}.description" value="{{power.description}}" toggled>{{{power.enriched}}}</prose-mirror>
+      {{else}}
+      <h3>{{power.name}}{{#if power.automated}} <span class="automation-tag">{{localize power.automationLabel}}</span>{{/if}}</h3>
+      <div class="enriched">{{{power.enriched}}}</div>
+      {{/if}}
+    </article>
+    {{/each}}
+  </section>
+
+  <section class="exaltation-section exaltation-powers">
+    <h2 class="section-title">{{localize "DTD.Exaltation.Powers"}}</h2>
+    <table class="exaltation-power-table">
+      <thead><tr><th>{{system.powerStat.name}}</th><th>{{localize "DTD.Exaltation.PowerGained"}}</th></tr></thead>
+      <tbody>
+        {{#each powers as |power|}}
+        <tr>
+          <td class="rank">{{power.rank}}</td>
+          <td>
+            {{#if @root.editable}}
+            <input type="hidden" name="system.powers.{{power.index}}.rank" value="{{power.rank}}">
+            <input type="text" name="system.powers.{{power.index}}.name" value="{{power.name}}" placeholder="{{localize "Name"}}">
+            <prose-mirror name="system.powers.{{power.index}}.description" value="{{power.description}}" toggled>{{{power.enriched}}}</prose-mirror>
+            {{else}}
+            <strong>{{power.name}}</strong>
+            <div class="enriched">{{{power.enriched}}}</div>
+            {{/if}}
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </section>
+
+  {{#if (or editable elements.length)}}
+  <section class="exaltation-section exaltation-elements">
+    <h2 class="section-title">{{localize "DTD.Exaltation.Elements"}}
+      {{#if editable}}<a class="list-control" data-action="addEntry" data-list="elements" data-tooltip="{{localize "DTD.Exaltation.AddElement"}}"><i class="fa-solid fa-plus" inert></i></a>{{/if}}
+    </h2>
+    {{#each elements as |element|}}
+    <article class="exaltation-power">
+      {{#if @root.editable}}
+      <div class="list-row">
+        <input type="hidden" name="system.elements.{{element.index}}.key" value="{{element.key}}">
+        <input type="text" name="system.elements.{{element.index}}.name" value="{{element.name}}" placeholder="{{localize "Name"}}">
+        <select name="system.elements.{{element.index}}.characteristic">{{selectOptions @root.characteristicOptions selected=element.characteristic localize=true}}</select>
+        <label>HP <input type="number" name="system.elements.{{element.index}}.hpMax" value="{{element.hpMax}}" min="0" step="1"></label>
+        <a class="list-control" data-action="removeEntry" data-list="elements" data-index="{{element.index}}"><i class="fa-solid fa-trash" inert></i></a>
+      </div>
+      <prose-mirror name="system.elements.{{element.index}}.description" value="{{element.description}}" toggled>{{{element.enriched}}}</prose-mirror>
+      {{else}}
+      <h3>{{element.name}} <span class="automation-tag">+1 {{localize element.characteristicLabel}}{{#if element.hpMax}}, +{{element.hpMax}} HP{{/if}}</span></h3>
+      <div class="enriched">{{{element.enriched}}}</div>
+      {{/if}}
+    </article>
+    {{/each}}
+  </section>
+  {{/if}}
+
+  <section class="exaltation-section exaltation-tell">
+    <h2 class="section-title">{{localize "DTD.Exaltation.Tell"}}</h2>
+    {{#if editable}}
+    <prose-mirror name="system.tell" value="{{system.tell}}" toggled>{{{enriched.tell}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.tell}}}</div>{{/if}}
+    <table class="tell-table">
+      <thead><tr><th>{{localize "DTD.Exaltation.TellPoints"}}</th><th>{{localize "DTD.Exaltation.Tell"}}</th></tr></thead>
+      <tbody>{{#each tellLevels as |level|}}<tr><td>{{level.points}}</td><td>{{localize level.label}}</td></tr>{{/each}}</tbody>
+    </table>
+  </section>
+
+  {{#if (or editable system.fullText)}}
+  <section class="exaltation-section exaltation-full-text">
+    <h2 class="section-title">{{localize "DTD.Race.FullText"}}</h2>
+    {{#if editable}}
+    <p class="hint">{{localize "DTD.Exaltation.FullTextHint"}}</p>
+    <prose-mirror name="system.fullText" value="{{system.fullText}}" toggled>{{{enriched.fullText}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.fullText}}}</div>{{/if}}
+  </section>
+  {{/if}}
+
+  <section class="exaltation-section exaltation-lore">
+    <h2 class="section-title">{{localize "DTD.Exaltation.LoreTitle"}}</h2>
+    {{#if editable}}
+    <div class="form-group stacked"><label>{{localize "DTD.Exaltation.Lore.origin"}}</label><prose-mirror name="system.lore.origin" value="{{system.lore.origin}}" toggled>{{{enriched.origin}}}</prose-mirror></div>
+    <div class="form-group stacked"><label>{{localize "DTD.Exaltation.Lore.appearance"}}</label><prose-mirror name="system.lore.appearance" value="{{system.lore.appearance}}" toggled>{{{enriched.appearance}}}</prose-mirror></div>
+    <div class="form-group stacked"><label>{{localize "DTD.Exaltation.Lore.society"}}</label><prose-mirror name="system.lore.society" value="{{system.lore.society}}" toggled>{{{enriched.society}}}</prose-mirror></div>
+    <div class="form-group stacked"><label>{{localize "DTD.Exaltation.Lore.examples"}}</label><string-tags name="system.lore.examples" value="{{examples}}"></string-tags></div>
+    {{else}}
+    {{#if system.lore.origin}}<h3>{{localize "DTD.Exaltation.Lore.origin"}}</h3><div class="enriched">{{{enriched.origin}}}</div>{{/if}}
+    {{#if system.lore.appearance}}<h3>{{localize "DTD.Exaltation.Lore.appearance"}}</h3><div class="enriched">{{{enriched.appearance}}}</div>{{/if}}
+    {{#if system.lore.society}}<h3>{{localize "DTD.Exaltation.Lore.society"}}</h3><div class="enriched">{{{enriched.society}}}</div>{{/if}}
+    {{#if examplesText}}<p><em>{{localize "DTD.Exaltation.Lore.examples"}}: {{examplesText}}</em></p>{{/if}}
+    {{/if}}
+  </section>
+</div>

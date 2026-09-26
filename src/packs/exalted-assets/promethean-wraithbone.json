@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsProW0000000",
+  "_key": "!items!dtdAsProW0000000",
+  "name": "Wraithbone",
+  "type": "feat",
+  "img": "icons/svg/heal.svg",
+  "folder": "dtdFldProMater00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>As a free action, spend 1 Pyros to heal 1 Hit Point.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 220
+    },
+    "xpCost": 100,
+    "group": "prometheanMaterial",
+    "prerequisites": {
+      "exaltation": "Promethean",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

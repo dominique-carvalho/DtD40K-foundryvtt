@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsDraBoB00000",
+  "_key": "!items!dtdAsDraBoB00000",
+  "name": "Blood of Bahamut",
+  "type": "feat",
+  "img": "icons/svg/fire.svg",
+  "folder": "dtdFldDraBlood00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your Claws and the breath weapon granted by Dragon Heart at Aspect 3 deal +1k1 damage, and their damage type becomes X.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 216
+    },
+    "xpCost": 100,
+    "group": "dragonbloodedBloodline",
+    "prerequisites": {
+      "exaltation": "Dragonblooded",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

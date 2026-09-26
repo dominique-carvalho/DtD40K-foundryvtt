@@ -114,6 +114,42 @@ export const MAX_RATING = 6;
  */
 export const RACE_POWER_AUTOMATION = ["none", "usesPerScene", "heroicHeritage", "shifty", "squatToughness"];
 
+/**
+ * Resource maximum formulas of the exaltations (spec 004, research R3; DtD 7.7a pp. 68–100).
+ * fixed: a set value, for exaltations created by the GM.
+ */
+export const EXALTATION_FORMULAS = ["motes", "favor", "essence", "breath", "actionPoints", "pyros", "vitae", "rage", "plasm", "fixed"];
+
+/** Automated static powers (spec 004, FR-025); the others are text only. */
+export const EXALTATION_POWER_AUTOMATION = ["none", "destiny", "statuesque", "perfection", "bloodQuickening"];
+
+/** Recovery buttons offered on the sheet (research R4). */
+export const RESOURCE_ACTIONS = ["restoreAll", "regain", "lose", "unravel"];
+
+/** When the generic "heal 1 HP" spend is allowed (p. 65; Werewolf anytime, Promethean never). */
+export const RESOURCE_HEALING = ["outOfCombat", "anytime", "never"];
+
+/** Power Stat caps: Level (p. 65), or Level and half the Devotion for the Chosen (p. 71). */
+export const POWER_STAT_CAPS = ["level", "levelAndDevotion"];
+
+/** Feat categories; the feats feature adds feat, racialFeat, asset and hindrance (research R1). */
+export const FEAT_CATEGORIES = ["exaltedAsset"];
+
+/** Exalted Asset groups (DtD 7.7a pp. 211–223). */
+export const ASSET_GROUPS = [
+  "atlanteanCaste", "chosenMark", "daemonhostSin", "dragonbloodedBloodline", "paragon", "paragonRacial",
+  "prometheanMaterial", "vampireClan", "werewolfTribe", "wraithHaunting"
+];
+
+/** Automated Exalted Assets (research R6); the others are text only. */
+export const ASSET_AUTOMATION = ["none", "actionHero", "extraAction", "bloodOfIo", "warboss", "longbeard", "markOfNurgle", "sloth", "elusive"];
+
+/** Groups that do not count toward the one-Exalted-Asset limit (p. 179). */
+export const LIMIT_EXEMPT_GROUPS = ["paragon", "paragonRacial"];
+
+/** Generic 1-point resource spends (DtD 7.7a p. 65). */
+export const GENERIC_SPENDS = ["heal", "skill", "reaction", "stunned", "dazed"];
+
 export const DTD = {
   GROUPS,
   CHARACTERISTICS,
@@ -121,5 +157,15 @@ export const DTD = {
   SKILLS,
   DERIVED_KEYS,
   MAX_RATING,
-  RACE_POWER_AUTOMATION
+  RACE_POWER_AUTOMATION,
+  EXALTATION_FORMULAS,
+  EXALTATION_POWER_AUTOMATION,
+  RESOURCE_ACTIONS,
+  RESOURCE_HEALING,
+  POWER_STAT_CAPS,
+  FEAT_CATEGORIES,
+  ASSET_GROUPS,
+  ASSET_AUTOMATION,
+  LIMIT_EXEMPT_GROUPS,
+  GENERIC_SPENDS
 };

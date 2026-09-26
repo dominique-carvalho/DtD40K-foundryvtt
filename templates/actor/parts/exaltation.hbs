@@ -1,0 +1,134 @@
+{{#if exaltation}}
+<article class="exaltation-card">
+  <header class="race-card-header">
+    <img class="race-img" src="{{exaltation.img}}" alt="{{exaltation.name}}">
+    <div class="race-card-title">
+      <h2 class="section-title">
+        <a data-action="openExaltation">{{exaltation.name}}</a>
+        <a class="race-info-button" data-action="showExaltationInfo" data-tooltip="{{localize "DTD.Exaltation.Info"}}" aria-label="{{localize "DTD.Exaltation.Info"}}"><i class="fa-solid fa-circle-info" inert></i></a>
+      </h2>
+      {{#if exaltation.selection.length}}
+      <ul class="race-bonuses">{{#each exaltation.selection as |entry|}}<li>{{entry}}</li>{{/each}}</ul>
+      {{/if}}
+    </div>
+    {{#if canEditRace}}
+    <div class="race-actions">
+      {{#if exaltation.needsSelection}}
+      <button type="button" data-action="reconfigureExaltation"><i class="fa-solid fa-sliders" inert></i> {{localize "DTD.Exaltation.Reconfigure"}}</button>
+      {{/if}}
+      <button type="button" data-action="removeExaltation"><i class="fa-solid fa-trash" inert></i> {{localize "DTD.Exaltation.Remove"}}</button>
+    </div>
+    {{/if}}
+  </header>
+
+  <section class="exaltation-trackers">
+    <div class="exaltation-tracker power-stat">
+      <span class="tracker-label">{{exaltation.powerStat.name}}</span>
+      <span class="dots{{#if canEditRace}} editable{{/if}}">
+        {{#each exaltation.powerStat.dots as |dot|}}
+        {{#if (and @root.canEditRace (not dot.disabled))}}
+        <a class="dot{{#if dot.filled}} filled{{/if}}" data-action="setPowerStat" data-value="{{dot.index}}" aria-label="{{dot.index}}"></a>
+        {{else}}
+        <span class="dot{{#if dot.filled}} filled{{/if}}{{#if dot.disabled}} locked{{/if}}"{{#if dot.disabled}} data-tooltip="{{localize "DTD.Exaltation.AboveCap"}}"{{/if}}></span>
+        {{/if}}
+        {{/each}}
+      </span>
+      <span class="hint">{{localize "DTD.Exaltation.CapLabel"}} {{exaltation.powerStat.max}}{{#if exaltation.powerStat.capped}} · {{localize "DTD.Exaltation.Purchased"}} {{exaltation.powerStat.purchased}}{{/if}}</span>
+    </div>
+
+    <div class="exaltation-tracker resource">
+      <span class="tracker-label">{{exaltation.resource.name}}</span>
+      <span class="resource-value">{{exaltation.resource.value}} / {{exaltation.resource.max}}</span>
+      <span class="resource-bar"><span class="resource-fill" style="width: {{exaltation.resource.pct}}%"></span></span>
+      {{#if exaltation.resource.debtName}}
+      <span class="resource-debt" data-tooltip="{{localize "DTD.Exaltation.DebtHint"}}">{{exaltation.resource.debtName}} {{exaltation.resource.debt}}</span>
+      {{/if}}
+    </div>
+    {{#if canEditRace}}
+    <div class="exaltation-buttons">
+      <button type="button" data-action="spendResource" {{disabled exaltation.resource.empty}}><i class="fa-solid fa-bolt" inert></i> {{localize "DTD.Exaltation.Spend"}}</button>
+      {{#each exaltation.resource.actions as |action|}}
+      <button type="button" data-action="recoverResource" data-index="{{action.index}}">{{action.label}}</button>
+      {{/each}}
+      <span class="adjust-resource">
+        <input type="number" class="adjust-input" value="{{exaltation.resource.value}}" min="0" max="{{exaltation.resource.max}}" step="1" aria-label="{{localize "DTD.Exaltation.Adjust"}}">
+        <button type="button" data-action="adjustResource">{{localize "DTD.Exaltation.Adjust"}}</button>
+      </span>
+    </div>
+    {{/if}}
+
+    <div class="exaltation-tracker round{{#if exaltation.resource.roundFull}} full{{/if}}">
+      <span class="tracker-label">{{localize "DTD.Exaltation.Round"}}</span>
+      <span class="resource-value">{{exaltation.resource.roundSpent}} / {{exaltation.resource.roundLimit}}</span>
+      {{#if canEditRace}}
+      <button type="button" data-action="resetRound">{{localize "DTD.Exaltation.ResetRound"}}</button>
+      <button type="button" data-action="newScene"><i class="fa-solid fa-clapperboard" inert></i> {{localize "DTD.Exaltation.NewScene"}}</button>
+      {{/if}}
+    </div>
+
+    {{#if exaltation.pressure}}
+    <div class="exaltation-tracker pressure">
+      <span class="tracker-label">{{localize "DTD.Exaltation.Pressure"}}</span>
+      <span class="resource-value">{{exaltation.pressure.value}} / {{exaltation.pressure.max}}</span>
+      {{#if canEditRace}}
+      <input type="number" class="pressure-input" value="1" min="1" max="{{exaltation.pressure.max}}" step="1" aria-label="{{localize "DTD.Exaltation.SpendPressure"}}">
+      <button type="button" data-action="spendPressure">{{localize "DTD.Exaltation.SpendPressure"}}</button>
+      <button type="button" data-action="regainPressure" data-amount="5">+5</button>
+      <button type="button" data-action="regainPressure" data-amount="powerStat">+{{exaltation.powerStat.value}}</button>
+      {{/if}}
+    </div>
+    {{/if}}
+  </section>
+
+  <section class="exaltation-tell tell-level-{{exaltation.tell.level}}">
+    <h3>{{localize "DTD.Exaltation.Tell"}}: <span class="tell-label">{{localize exaltation.tell.label}}</span>
+      <span class="hint">({{localize "DTD.Exaltation.TellSpent"}} {{exaltation.tell.spent}})</span></h3>
+    {{#if exaltation.tell.level}}<div class="enriched">{{{exaltation.tell.description}}}</div>{{/if}}
+  </section>
+
+  <section class="exaltation-generic">
+    <h3>{{localize "DTD.Exaltation.GenericSpends"}}</h3>
+    <ul class="generic-spends">{{#each exaltation.genericSpends as |spend|}}<li>{{localize spend.label}}</li>{{/each}}</ul>
+  </section>
+
+  <section class="race-power">
+    <h3>{{localize "DTD.Exaltation.StaticPowers"}}</h3>
+    {{#each exaltation.staticPowers as |power|}}
+    <details class="exaltation-power">
+      <summary>{{power.name}}{{#if power.automated}} <span class="automation-tag">{{localize "DTD.Race.Automated"}}</span>{{/if}}</summary>
+      <div class="enriched">{{{power.description}}}</div>
+    </details>
+    {{/each}}
+  </section>
+
+  <section class="race-power">
+    <h3>{{localize "DTD.Exaltation.Powers"}}</h3>
+    {{#each exaltation.powers as |power|}}
+    <details class="exaltation-power{{#unless power.unlocked}} locked{{/unless}}">
+      <summary><span class="rank">{{power.rank}}</span> {{power.name}}
+        {{#unless power.unlocked}}<span class="automation-tag"><i class="fa-solid fa-lock" inert></i> {{localize "DTD.Exaltation.Locked"}}</span>{{/unless}}</summary>
+      <div class="enriched">{{{power.description}}}</div>
+    </details>
+    {{/each}}
+  </section>
+
+  {{#if exaltation.effects.length}}
+  <section class="race-effects">
+    <h3>{{localize "DTD.Exaltation.Modifiers"}}</h3>
+    {{#unless canToggleEffects}}<p class="hint">{{localize "DTD.Exaltation.ModifiersHint"}}</p>{{/unless}}
+    <ul class="race-effect-list">
+      {{#each exaltation.effects as |effect|}}
+      <li class="race-effect{{#unless effect.active}} inactive{{/unless}}">
+        <label>
+          <input type="checkbox" data-action="toggleItemEffect" data-item-id="{{effect.itemId}}" data-effect-id="{{effect.id}}" {{checked effect.active}} {{disabled (not @root.canToggleEffects)}}>
+          {{effect.name}}
+        </label>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
+</article>
+{{else}}
+<p class="race-drop-hint"><i class="fa-solid fa-hand-pointer" inert></i> {{localize "DTD.Exaltation.DropHint"}}</p>
+{{/if}}

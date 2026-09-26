@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsWraChSilenc",
+  "_key": "!items!dtdAsWraChSilenc",
+  "name": "Children of Silence",
+  "type": "feat",
+  "img": "icons/svg/regen.svg",
+  "folder": "dtdFldWraHaunt00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>After an hour-long ritual over a body, spend 1 Plasm to raise it as a Walkin' Dead. You may replace its Characteristics, Brawl and level with your Synergy wherever your Synergy is higher.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 223
+    },
+    "xpCost": 100,
+    "group": "wraithHaunting",
+    "prerequisites": {
+      "exaltation": "Wraith",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

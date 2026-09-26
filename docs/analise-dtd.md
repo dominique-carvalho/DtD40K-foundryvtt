@@ -215,40 +215,43 @@ Estrutura: +1 em uma de duas características · +1 em duas perícias · 1 Poder
 
 ## 6. Exaltações
 
-Fonte: 1.6 pp. 53–81; Book 2 pp. 16–19.
+Fonte: **7.7a cap. 5, pp. 64–100** (regras gerais p. 65; uma exaltação a cada 4 páginas, de Atlantean
+p. 67 a Wraith p. 99) e Exalted Assets pp. 211–223 (regra de limite p. 179). Histórico: 1.6 pp. 53–81 e
+Book 2 pp. 16–19 (Wraith e Dragonblooded). Implementado na feature `004-exaltation-compendium`.
 
-**Estrutura**: poderes estáticos + **Power Stat** (1–5, teto = Level, cada ponto libera um poder fixo) + **Resource Stat** (reserva com máximo por fórmula). Mortal Hero = sem exaltação (só Hero Points).
+**Estrutura**: poderes estáticos + **Power Stat** (começa em 1, teto = Level; Chosen também ≤ ⌈Devotion/2⌉;
+cada ponto libera um poder fixo, 5 no total) + **Resource Stat** (reserva com máximo por fórmula).
 
-**Gastos genéricos de recurso** (1 ponto cada): curar 1 HP (fora de combate) · +1k0 em perícia · ganhar reação · sair de Stunned · sair de Dazed. **Limite por rodada = Power Stat.**
+**Gastos genéricos de recurso** (1 ponto cada): curar 1 HP (fora de combate) · +1k0 em perícia · ganhar reação · sair de Stunned · sair de Dazed. **Limite por rodada = Power Stat.** Exceções: Werewolf cura também em combate (Lycan Resilience); Promethean não cura com Pyros (Refitting).
 
 **The Tell** (pontos gastos na cena): 0 nada · 1 fraco (Perception+Wis TN 20) · 2–3 óbvio · 4–5 aura · 6+ épico.
 
-| Exaltação | Power Stat | Recurso | Máximo | Recuperação / mecânica-chave |
-|---|---|---|---|---|
-| Atlantean | Gnosis | Motes | Cha + Int + 2·Gnosis | Cada Mote gasto vira Paradox; recupera "desfazendo" Paradox (1h/ponto ou Psychic Phenomena). 9 mantido em teste mágico força desfazer |
-| Chosen | Faith | Favor | Devotion + Faith | Ritual diário; Faith ≤ ⌈Devotion/2⌉; Divine Power troca 1 dado por Devotion |
-| Daemonhost | Arcanoi | Essence | Wil + Cha + 2·Arcanoi | Essence gasto vira Resonance; Eruptions (Wil vs 10 + 2·Resonance); 9 em magia força Eruption; mordida converte |
-| Paragon | Excellence | Action Points | Level + Excellence | Renova por sessão; 2ª reserva **Pressure** = 3·Excellence por cena (+1 no total por ponto) |
-| Promethean | Generation | Pyros | 3·Generation | +1/hora; não cura naturalmente (reparo Craft+Int); críticos por localização |
-| Vampire | Blood Potency | Vitae | 5·BP | Sunlight; 1 Vitae/dia; Undead; Embrace |
-| Werewolf | Feral Heart | Rage | Cmp + Wil + Level | +FH no início do combate e ao nascer da lua; formas Wolf/Warform |
-| Wraith *(B2)* | Synergy | Plasm | Synergy + Resolve | −1/dia no mundo dos vivos; +2/h na Umbra; **Ghost Dice** (1 = ruim, 10 = bom) |
-| Dragon Blooded *(B2)* | Aspect | Breath | 2·Level | Recupera tudo após 5 min; aura de dano ligada à Tell; 5 elementos (Air/Earth/Fire/Water/Wood) |
+| Exaltação | Pág. | Power Stat | Recurso | Máximo | Recuperação / mecânica-chave |
+|---|---|---|---|---|---|
+| Atlantean | 67 | Gnosis | Motes | Cha + Int + 2·Gnosis | Cada Mote gasto vira Paradox; recupera só desfazendo Paradox (1 h de meditação, ou ação livre + Psychic Phenomena). 9 mantido em teste mágico força desfazer |
+| Chosen | 71 | Faith | Favor | Devotion + Faith | Ritual diário restaura tudo; Faith ≤ ⌈Devotion/2⌉; Divine Power troca 1 dado pela Devotion |
+| Daemonhost | 75 | Arcanoi | Essence | Wil + Cha + 2·Arcanoi | Essence gasto vira Resonance; Eruption (Wil vs 10 + 2·Resonance); 9 em magia força Eruption; mordida converte |
+| Dragonblooded | 79 | Aspect | Breath | 2·Level | Recupera tudo após 5 min; aura de dano ligada à Tell; Blood Quickening: Air +Int, Earth +Con e +2 HP, Fire +Cha, Water +Str, Wood +Wis |
+| Paragon | 83 | Excellence | Action Points | Level + Excellence | Renova por sessão; 1d10 após stunt de 2+ dados (1×/cena); Destiny +2 Hero Points; Statuesque +1 característica; Perfection dá o Paragon Racial Asset |
+| Promethean | 87 | Generation | Pyros | 3·Generation | +1/hora; não cura naturalmente (reparo Craft+Int TN 15/20/25); críticos por localização (5 destroem o membro) |
+| Vampire | 91 | Blood Potency | Vitae | 5·BP | Só alimentando-se; 1 Vitae/dia; Sunlight; Undead; Embrace custa 1 BP ao sire |
+| Werewolf | 95 | Feral Heart | Rage | Cmp + Wil + Level | +FH no início do combate e ao nascer da lua; Wolf form e Warform (1 Rage, Con + FH rodadas) |
+| Wraith | 99 | Synergy | Plasm | Synergy + Resolve | +2/h na Umbra; −1/dia no mundo dos vivos; crítico vira perda de Plasm; **Ghost Dice** (1 = ruim, 10 = bom) |
 
-**Poderes por ponto (resumo)**
-- **Atlantean**: 1 Ancient Style (3 perícias até 6) · 2 Empower Spell · 3 Excellence (2 Motes = Hero Point p/ rerrolar) · 4 Maximize Spell (dado conta 10) · 5 Quicken Spell.
-- **Chosen**: 1 Aura = 2·Faith · 2 Divine Protection · 3 Prayer Strip · 4 Trial of Faith · 5 Demigod (+10 em vez de +1k0).
-- **Daemonhost**: 1 RD = Con + Arcanoi · 2 características até 6 · 3 Hover · 4 ignora críticos não fatais · 5 Black Miracle.
-- **Paragon**: 1 Pressure Points · 2 stunt ≥2 dados recupera AP · 3 regenera Pressure por turno · 4 dados explodem em 9–10 em stunts · 5 aliados ganham bônus.
-- **Promethean**: 1 Armadura integrada = Gen + 3 · 2 armas integradas · 3 Pyros → +1 característica · 4 dano E recupera Pyros · 5 Warstrider.
-- **Vampire**: 1 Auspex · 2 Dread (Fear 1) · 3 Celerity · 4 Potence (+3 Str) · 5 Dominate.
-- **Werewolf**: 1 Fast Healing · 2 Spirit Sight · 3 Quick Shift · 4 Sacred Hunt · 5 Spirit Walk.
-- **Wraith**: 1 Whispers · 2 Poltergeist · 3 Curse · 4 Shroud (Armor = Resolve) · 5 Ectoplasmic Form.
-- **Dragon Blooded**: 1 Dragon Mind · 2 Dragon Wings · 3 Dragon Heart (sopro Flamer) · 4 Dragon Skin (Armor/Aura = Aspect) · 5 Maximum Dragoning.
+**Poderes por ponto (ordem 1→5 da 7.7a)**
+- **Atlantean**: Ancient Style · Empower Spell · Excellence · Maximize Spell · Quicken Spell.
+- **Chosen**: Overbeing (Aura = 2·Faith) · Divine Protection · Prayer Strip · Trial of Faith · Demigod (+10 em vez de +1k0).
+- **Daemonhost**: Daemonic (RD = Con + Arcanoi) · Unnatural Characteristics (até 6) · Scorn Earth · Not Of This World · Black Miracle.
+- **Dragonblooded**: Dragon Mind · Dragon Wings · Dragon Heart (sopro Flamer) · Dragon Skin (Armor/Aura = Aspect) · Maximum Dragoning.
+- **Paragon**: Be a Man (Pressure = 5·Excellence por cena) · Swift as a Coursing River · All the Force of a Great Typhoon · Strength of a Raging Fire · Mysterious as the Dark Side of the Moon.
+- **Promethean**: Integrated Armor (AP = Gen + 3) · Integrated Weapons · Transhuman Potential · Recharge · Warstrider.
+- **Vampire**: Auspex · Dread · Celerity · Potence (+3 Str) · Dominate.
+- **Werewolf**: Fast Healing · Spirit Walk · Quick Shift · Stoking Fury · Luna's Blessing (Spirit Sight passou a poder estático).
+- **Wraith**: Whispers · Poltergeist · Curse · Shroud (Armor = Resolve) · Ectoplasmic Form.
 
-**Formas alternativas** (Active Effects): Wolf, Warform, Warstrider, Potence, Wild Shape.
+**Exalted Assets** (100 XP cada, só na criação; 1 por personagem, exceto Paragon): Atlantean Castes 5 · Chosen Marks 21 · Daemonhost Sins 5 · Dragonblooded Bloodlines 5 · Paragon 4 · Paragon Racial 15 (nenhum para Tiefling) · Promethean Materials 5 · Vampire Clans 5 · Werewolf Tribes 5 · Wraith Hauntings 5 = **75**.
 
----
+**Formas alternativas** (futuras, como Active Effects): Wolf, Warform, Warstrider, Potence, Wild Shape.
 
 ## 7. Classes
 

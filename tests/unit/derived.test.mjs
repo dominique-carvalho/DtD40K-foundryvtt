@@ -136,3 +136,24 @@ describe("computeDerived with racial modifiers (spec 002, FR-016/FR-019)", () =>
     expect(computeDerived(traya, {}, { staticDefenseFormula: "standard", resilience: 0 })).toEqual(computeDerived(traya));
   });
 });
+
+describe("computeDerived — exaltation and asset modifiers (spec 004)", () => {
+  const tough = { characteristics: chars({ con: 3, wil: 3 }), size: 4, level: 1 };
+  const halfling = { characteristics: chars({ dex: 3, wis: 4 }), size: 2, level: 1 };
+
+  it("adds modifiers.hpMax to the HP formula (Sloth, Blood Quickening Earth)", () => {
+    expect(computeDerived(tough, {}, { hpMax: 2 }).hpMax).toBe(14);
+    expect(computeDerived(tough, {}, {}).hpMax).toBe(12);
+  });
+
+  it("lets the GM override and bonus win over modifiers.hpMax", () => {
+    expect(computeDerived(tough, { hpMax: { bonus: 0, override: 10 } }, { hpMax: 2 }).hpMax).toBe(10);
+    expect(computeDerived(tough, { hpMax: { bonus: 1, override: null } }, { hpMax: 2 }).hpMax).toBe(15);
+  });
+
+  it("drops the Size penalty from Static Defense with Elusive (p. 218)", () => {
+    expect(computeDerived(halfling, {}, { staticDefenseFormula: "shifty", staticDefenseSize: false }).staticDefense).toBe(28);
+    expect(computeDerived(halfling, {}, { staticDefenseSize: false }).staticDefense).toBe(10 + 9 + 12);
+    expect(computeDerived(halfling, {}, { staticDefenseFormula: "shifty", staticDefenseSize: true }).staticDefense).toBe(24);
+  });
+});

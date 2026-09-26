@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacBIP00000",
+  "_key": "!items!dtdAsRacBIP00000",
+  "name": "Blood is Power",
+  "type": "feat",
+  "img": "icons/svg/blood.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your racial Kobold power costs just 1 Hit Point to generate a resource point.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 219
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Kobold",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

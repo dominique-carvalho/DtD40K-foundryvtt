@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsDaeP0000000",
+  "_key": "!items!dtdAsDaeP0000000",
+  "name": "Pride",
+  "type": "feat",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "dtdFldDaeSin0000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Gain a free raise on every opposed Test, and a free raise to hit opponents who gang up on you. Trigger: beating someone at a thing they consider themselves skilled at (cheating counts) lets you turn all Resonance back into Essence.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 215
+    },
+    "xpCost": 100,
+    "group": "daemonhostSin",
+    "prerequisites": {
+      "exaltation": "Daemonhost",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

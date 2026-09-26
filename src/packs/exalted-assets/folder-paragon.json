@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFldParagon000",
+  "_key": "!folders!dtdFldParagon000",
+  "name": "Paragon Assets",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 500000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "assetGroup": "paragon"
+    }
+  }
+}

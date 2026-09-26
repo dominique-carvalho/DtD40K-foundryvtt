@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoPelor000",
+  "_key": "!items!dtdAsChoPelor000",
+  "name": "Mark of Pelor",
+  "type": "feat",
+  "img": "icons/svg/sun.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>You can emit sunlight whenever you wish. You may also use it as a magical Plasma Gun with unlimited use that never overheats and requires no charging.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Pelor"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

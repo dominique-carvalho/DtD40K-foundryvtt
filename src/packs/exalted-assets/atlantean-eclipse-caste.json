@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsAtlEC000000",
+  "_key": "!items!dtdAsAtlEC000000",
+  "name": "Eclipse Caste",
+  "type": "feat",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdFldAtlCaste00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Spend 1 or more Motes to bind someone to an oath. Should the sworn person break it, misfortune makes them automatically fail at a critical moment, once per Mote spent plus once more per Gnosis dot.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 211
+    },
+    "xpCost": 100,
+    "group": "atlanteanCaste",
+    "prerequisites": {
+      "exaltation": "Atlantean",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

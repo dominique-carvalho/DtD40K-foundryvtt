@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsVamToreador",
+  "_key": "!items!dtdAsVamToreador",
+  "name": "Toreador",
+  "type": "feat",
+  "img": "icons/svg/statue.svg",
+  "folder": "dtdFldVamClan000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>On Crafts and Performer tests, add kept dice matching your Blood Potency.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 221
+    },
+    "xpCost": 100,
+    "group": "vampireClan",
+    "prerequisites": {
+      "exaltation": "Vampire",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

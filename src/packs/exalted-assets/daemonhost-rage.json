@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsDaeR0000000",
+  "_key": "!items!dtdAsDaeR0000000",
+  "name": "Rage",
+  "type": "feat",
+  "img": "icons/svg/fire.svg",
+  "folder": "dtdFldDaeSin0000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your constant fury lets you choose to make your attacks deal E-type damage. Trigger: provoking someone into violence they would not otherwise commit lets you turn all Resonance back into Essence.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 215
+    },
+    "xpCost": 100,
+    "group": "daemonhostSin",
+    "prerequisites": {
+      "exaltation": "Daemonhost",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

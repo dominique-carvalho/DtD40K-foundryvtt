@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFldAtlCaste00",
+  "_key": "!folders!dtdFldAtlCaste00",
+  "name": "Atlantean Castes",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "assetGroup": "atlanteanCaste"
+    }
+  }
+}

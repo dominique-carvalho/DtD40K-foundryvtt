@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsDraBoT00000",
+  "_key": "!items!dtdAsDraBoT00000",
+  "name": "Blood of Tiamat",
+  "type": "feat",
+  "img": "icons/svg/aura.svg",
+  "folder": "dtdFldDraBlood00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Through a ritual performed while regaining Breath, you may swap your Blood Quickening for a different one.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 216
+    },
+    "xpCost": 100,
+    "group": "dragonbloodedBloodline",
+    "prerequisites": {
+      "exaltation": "Dragonblooded",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

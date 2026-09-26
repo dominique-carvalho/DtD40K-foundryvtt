@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacL0000000",
+  "_key": "!items!dtdAsRacL0000000",
+  "name": "Longbeard",
+  "type": "feat",
+  "img": "icons/svg/statue.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your Resilience increases by 1, and other creatures cannot lower your Resilience.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 219
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Squat",
+      "deity": ""
+    },
+    "automation": "longbeard"
+  },
+  "effects": [],
+  "flags": {}
+}

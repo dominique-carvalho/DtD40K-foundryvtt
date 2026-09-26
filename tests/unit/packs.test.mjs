@@ -1,13 +1,17 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { CHARACTERISTICS, RACE_POWER_AUTOMATION, SKILLS } from "../../module/config.mjs";
+import {
+  ASSET_AUTOMATION, ASSET_GROUPS, CHARACTERISTICS, EXALTATION_FORMULAS, RACE_POWER_AUTOMATION, RESOURCE_ACTIONS, SKILLS
+} from "../../module/config.mjs";
 
-const SOURCE = "src/packs/races";
+/** Every JSON document of a compendium source folder. */
+const readPack = (dir) =>
+  readdirSync(dir)
+    .filter((file) => file.endsWith(".json"))
+    .map((file) => JSON.parse(readFileSync(join(dir, file), "utf8")));
 
-const races = readdirSync(SOURCE)
-  .filter((file) => file.endsWith(".json"))
-  .map((file) => JSON.parse(readFileSync(join(SOURCE, file), "utf8")));
+const races = readPack("src/packs/races");
 
 /**
  * Reference table — spec 002 "Tabela de referência" (DtD 7.7a, cap. 4, pp. 30–63).
@@ -88,5 +92,215 @@ describe("races compendium source (SC-001)", () => {
         for (const list of ["personality", "physical", "names"]) expect(system.lore[list].length).toBeGreaterThan(0);
       }
     });
+  });
+});
+
+const ID = /^[A-Za-z0-9]{16}$/;
+const ELEMENTS = [["air", "int", 0], ["earth", "con", 2], ["fire", "cha", 0], ["water", "str", 0], ["wood", "wis", 0]];
+
+/**
+ * Reference table — spec 004 "Tabela de referência — Exaltações" (DtD 7.7a, cap. 5).
+ * [power stat, cap, resource, formula, debt, healing, pressure, static powers, powers 1–5, page]
+ */
+const EXALTATIONS = {
+  Atlantean: ["Gnosis", "level", "Motes", "motes", "Paradox", "outOfCombat", false,
+    ["Magical Aptitude", "Prestidigitation", "Past Lives", "Paradox"],
+    ["Ancient Style", "Empower Spell", "Excellence", "Maximize Spell", "Quicken Spell"], 67],
+  Chosen: ["Faith", "levelAndDevotion", "Favor", "favor", "", "outOfCombat", false,
+    ["Conviction", "Redeemed", "Divine Power", "Leeway"],
+    ["Overbeing", "Divine Protection", "Prayer Strip", "Trial of Faith", "Demigod"], 71],
+  Daemonhost: ["Arcanoi", "level", "Essence", "essence", "Resonance", "outOfCombat", false,
+    ["Demonic Tutor", "Unholy Might", "Rejected by Creation", "Feeding"],
+    ["Daemonic", "Unnatural Characteristics", "Scorn Earth", "Not Of This World", "Black Miracle"], 75],
+  Dragonblooded: ["Aspect", "level", "Breath", "breath", "", "outOfCombat", false,
+    ["Draconic Aura", "Hot-Blooded", "Claws", "Blood Quickening"],
+    ["Dragon Mind", "Dragon Wings", "Dragon Heart", "Dragon Skin", "Maximum Dragoning"], 79],
+  Paragon: ["Excellence", "level", "Action Points", "actionPoints", "", "outOfCombat", true,
+    ["Destiny", "Statuesque", "Flash", "Perfection"],
+    ["Be a Man", "Swift as a Coursing River", "All the Force of a Great Typhoon", "Strength of a Raging Fire",
+      "Mysterious as the Dark Side of the Moon"], 83],
+  Promethean: ["Generation", "level", "Pyros", "pyros", "", "never", false,
+    ["Living Construct", "Refitting", "Disquiet", "Superlative Constitution"],
+    ["Integrated Armor", "Integrated Weapons", "Transhuman Potential", "Recharge", "Warstrider"], 87],
+  Vampire: ["Blood Potency", "level", "Vitae", "vitae", "", "outOfCombat", false,
+    ["Old Money", "Undead Resilience", "Sunlight Weakness", "Blood Dependency"],
+    ["Auspex", "Dread", "Celerity", "Potence", "Dominate"], 91],
+  Werewolf: ["Feral Heart", "level", "Rage", "rage", "", "anytime", false,
+    ["Shifting", "Lycan Resilience", "Spirit Sight", "Silver Bane"],
+    ["Fast Healing", "Spirit Walk", "Quick Shift", "Stoking Fury", "Luna's Blessing"], 95],
+  Wraith: ["Synergy", "level", "Plasm", "plasm", "", "outOfCombat", false,
+    ["Dematerialize", "Second Death", "Deathsight", "Ghost Dice"],
+    ["Whispers", "Poltergeist", "Curse", "Shroud", "Ectoplasmic Form"], 99]
+};
+
+/** Automated static powers (FR-025); every other static power is text only. */
+const STATIC_AUTOMATION = {
+  Destiny: "destiny", Statuesque: "statuesque", Perfection: "perfection", "Blood Quickening": "bloodQuickening"
+};
+
+const exaltations = readPack("src/packs/exaltations");
+
+describe("exaltations compendium source (spec 004, SC-001)", () => {
+  it("contains exactly the 9 exaltations of the 7.7a", () => {
+    expect(sorted(exaltations.map((entry) => entry.name))).toEqual(sorted(Object.keys(EXALTATIONS)));
+  });
+
+  it("has unique 16-character ids and matching LevelDB keys", () => {
+    for (const entry of exaltations) {
+      expect(entry._id).toMatch(ID);
+      expect(entry._key).toBe(`!items!${entry._id}`);
+      expect(entry.type).toBe("exaltation");
+      expect(entry.effects).toEqual([]);
+    }
+    expect(new Set(exaltations.map((entry) => entry._id)).size).toBe(exaltations.length);
+  });
+
+  describe.each(exaltations.map((entry) => [entry.name, entry]))("%s", (name, entry) => {
+    const [powerStat, cap, resource, formula, debt, healing, pressure, statics, powers, page] = EXALTATIONS[name];
+    const system = entry.system;
+
+    it("matches the book's power stat and resource", () => {
+      expect(system.powerStat).toEqual({ name: powerStat, cap, value: 1 });
+      expect(system.resource.name).toBe(resource);
+      expect(system.resource.formula).toBe(formula);
+      expect(EXALTATION_FORMULAS).toContain(formula);
+      expect(system.resource.debtName).toBe(debt);
+      expect(system.resource.healing).toBe(healing);
+      expect(system.pressure.enabled).toBe(pressure);
+      expect(system.source).toEqual({ book: "DtD 7.7a", page });
+      for (const action of system.resource.actions) expect(RESOURCE_ACTIONS).toContain(action.type);
+    });
+
+    it("lists the static powers and the 5 powers by rank in book order", () => {
+      expect(system.staticPowers.map((power) => power.name)).toEqual(statics);
+      for (const power of system.staticPowers) {
+        expect(power.automation).toBe(STATIC_AUTOMATION[power.name] ?? "none");
+      }
+      expect(system.powers.map((power) => power.name)).toEqual(powers);
+      expect(system.powers.map((power) => power.rank)).toEqual([1, 2, 3, 4, 5]);
+    });
+
+    it("lists the Blood Quickening elements only for the Dragonblooded", () => {
+      const elements = system.elements.map((element) => [element.key, element.characteristic, element.hpMax]);
+      expect(elements).toEqual(name === "Dragonblooded" ? ELEMENTS : []);
+      for (const [, key] of elements) expect(CHARACTERISTICS).toHaveProperty(key);
+    });
+
+    it("ships an empty character state", () => {
+      expect(system.resource.spent).toBe(0);
+      expect(system.round).toEqual({ spent: 0, marker: "none" });
+      expect(system.scene).toEqual({ spent: 0 });
+      expect(system.pressure.spent).toBe(0);
+      expect(system.selection).toEqual({ statuesque: "", element: "" });
+      expect(system.fullText).toBe("");
+    });
+
+    it("has summaries for every power, the Tell and the lore", () => {
+      for (const text of [system.description, system.tell, system.resource.recovery, system.lore.origin]) {
+        expect(text.trim()).not.toBe("");
+      }
+      for (const power of [...system.staticPowers, ...system.powers, ...system.elements]) {
+        expect(power.description.trim()).not.toBe("");
+      }
+    });
+  });
+});
+
+/**
+ * Reference table — spec 004 "Tabela de referência — Exalted Assets" (DtD 7.7a pp. 211–223).
+ * group: [exaltation, pages, asset names]
+ */
+const ASSETS = {
+  atlanteanCaste: ["Atlantean", [211], ["Dawn Caste", "Zenith Caste", "Twilight Caste", "Night Caste", "Eclipse Caste"]],
+  chosenMark: ["Chosen", [212, 213, 214], [
+    "Mark of Acererak", "Mark of Bahamut", "Mark of Chaos", "Mark of Corellon", "Mark of Cuthbert", "Mark of Khorne",
+    "Mark of Lolth", "Mark of Luna", "Mark of Malal", "Mark of Moradin", "Mark of Nurgle", "Mark of Order",
+    "Mark of Pelor", "Mark of the Council", "Mark of the Omnissiah", "Mark of the Raven", "Mark of Tiamat",
+    "Mark of Slaanesh", "Mark of Sigmar", "Mark of Tzeentch", "Mark of Vectron"
+  ]],
+  daemonhostSin: ["Daemonhost", [215], ["Desire", "Hunger", "Pride", "Rage", "Sloth"]],
+  dragonbloodedBloodline: ["Dragonblooded", [216], ["Adamic Dragon", "Blood of Bahamut", "Blood of Io", "Blood of Tiamat", "Double Dragon"]],
+  paragon: ["Paragon", [217], ["Action Hero", "Extra Action", "Stuntman", "Martial Prodigy"]],
+  paragonRacial: ["Paragon", [218, 219], [
+    "You Will Not Falter", "Dark Mirth", "Inner Dragon", "Woodland Magic", "Controlled Warp", "Elven Perfection", "Tuning",
+    "Elusive", "Multiclass", "Tengu Dive", "Blood is Power", "Warboss", "Longbeard", "For the Greater Good", "...and Dangerous"
+  ]],
+  prometheanMaterial: ["Promethean", [220], ["Orichalcum", "Mithril", "Darksteel", "Wraithbone", "Necrodermis"]],
+  vampireClan: ["Vampire", [221], ["Brujah", "Malkavian", "Toreador", "Tremere", "Ventrue"]],
+  werewolfTribe: ["Werewolf", [222], ["Black Spiral Dancers", "Get of Fenris", "Iron Masters", "Red Talons", "Silent Striders"]],
+  wraithHaunting: ["Wraith", [223], ["Children of Ash", "Children of Dust", "Children of Salt", "Children of Silence", "Children of Void"]]
+};
+
+/** Race required by each Paragon Racial Asset (pp. 218–219). Tiefling has none. */
+const PARAGON_RACES = {
+  "You Will Not Falter": "Aasimar", "Dark Mirth": "Dark Eldarin", "Inner Dragon": "Dragonborn", "Woodland Magic": "Dryad",
+  "Controlled Warp": "Eldarin", "Elven Perfection": "Elf", Tuning: "Gnome", Elusive: "Halfling", Multiclass: "Human",
+  "Tengu Dive": "Kenku", "Blood is Power": "Kobold", Warboss: "Ork", Longbeard: "Squat", "For the Greater Good": "Tau",
+  "...and Dangerous": "Thri-Kreen"
+};
+
+/** Automated assets (research R6); every other asset is text only. */
+const ASSET_AUTOMATED = {
+  "Action Hero": "actionHero", "Extra Action": "extraAction", "Blood of Io": "bloodOfIo", Warboss: "warboss",
+  Longbeard: "longbeard", "Mark of Nurgle": "markOfNurgle", Sloth: "sloth", Elusive: "elusive"
+};
+
+const assetPack = readPack("src/packs/exalted-assets");
+const folders = assetPack.filter((doc) => doc._key?.startsWith("!folders!"));
+const assets = assetPack.filter((doc) => doc._key?.startsWith("!items!"));
+
+describe("exalted-assets compendium source (spec 004, SC-002)", () => {
+  it("has one folder per asset group", () => {
+    expect(folders).toHaveLength(ASSET_GROUPS.length);
+    expect(sorted(folders.map((folder) => folder.flags.dtd40k.assetGroup))).toEqual(sorted(ASSET_GROUPS));
+    for (const folder of folders) {
+      expect(folder._id).toMatch(ID);
+      expect(folder._key).toBe(`!folders!${folder._id}`);
+      expect(folder.type).toBe("Item");
+    }
+  });
+
+  it("contains the 75 assets of the book, with unique ids", () => {
+    expect(assets).toHaveLength(75);
+    expect(assetPack).toHaveLength(85);
+    const ids = assetPack.map((doc) => doc._id);
+    expect(new Set(ids).size).toBe(ids.length);
+    for (const asset of assets) {
+      expect(asset._id).toMatch(ID);
+      expect(asset._key).toBe(`!items!${asset._id}`);
+      expect(asset.type).toBe("feat");
+      expect(asset.effects).toEqual([]);
+    }
+  });
+
+  describe.each(Object.entries(ASSETS))("%s", (group, [exaltation, pages, names]) => {
+    const members = assets.filter((asset) => asset.system.group === group);
+    const folder = folders.find((entry) => entry.flags.dtd40k.assetGroup === group);
+
+    it("has the book's assets in the group folder", () => {
+      expect(sorted(members.map((asset) => asset.name))).toEqual(sorted(names));
+      for (const asset of members) expect(asset.folder).toBe(folder._id);
+    });
+
+    it.each(names)("%s matches the reference table", (assetName) => {
+      const { system } = members.find((asset) => asset.name === assetName);
+      expect(system.category).toBe("exaltedAsset");
+      expect(system.xpCost).toBe(100);
+      expect(system.prerequisites.exaltation).toBe(exaltation);
+      expect(system.prerequisites.race).toBe(group === "paragonRacial" ? PARAGON_RACES[assetName] : "");
+      if (group === "chosenMark") expect(system.prerequisites.deity.trim()).not.toBe("");
+      else expect(system.prerequisites.deity).toBe("");
+      expect(system.automation).toBe(ASSET_AUTOMATED[assetName] ?? "none");
+      expect(ASSET_AUTOMATION).toContain(system.automation);
+      expect(system.source.book).toBe("DtD 7.7a");
+      expect(pages).toContain(system.source.page);
+      expect(system.description.trim()).not.toBe("");
+    });
+  });
+
+  it("requires only races that exist in the Races compendium", () => {
+    const raceNames = races.map((race) => race.name);
+    for (const race of Object.values(PARAGON_RACES)) expect(raceNames).toContain(race);
+    expect(Object.values(PARAGON_RACES)).not.toContain("Tiefling");
   });
 });

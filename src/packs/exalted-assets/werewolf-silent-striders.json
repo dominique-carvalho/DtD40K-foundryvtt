@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsWerSilentSt",
+  "_key": "!items!dtdAsWerSilentSt",
+  "name": "Silent Striders",
+  "type": "feat",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "dtdFldWerTribe00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>You gain one rank in the Transmutation magical power and can buy further ranks as though it belonged to any of your classes. Focus Power tests made to cast Transmutation spells receive +1k1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 222
+    },
+    "xpCost": 100,
+    "group": "werewolfTribe",
+    "prerequisites": {
+      "exaltation": "Werewolf",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

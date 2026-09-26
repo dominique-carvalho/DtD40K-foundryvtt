@@ -1,0 +1,109 @@
+{
+  "_id": "dtdExalDaemonhst",
+  "_key": "!items!dtdExalDaemonhst",
+  "name": "Daemonhost",
+  "type": "exaltation",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "description": "<p>A Daemonhost is someone who, on the brink of death, let a warp entity into their body in exchange for more life. The daemon does not simply take control: it merges with the dying soul, and the being that rises is something new — it keeps all of the host's memories but is bent by the daemon's cravings. Of all the Exalted, they are the ones mortals truly fear.</p><p>They are often confused with Atlanteans, since both are an ancient soul in a fresh body, but an Atlantean is a cursed people's second chance whereas the Daemonhost is a parasitic being that revives the dead to escape its own torment. Their magic runs on Essence, and every point spent turns into Resonance.</p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 75
+    },
+    "powerStat": {
+      "name": "Arcanoi",
+      "cap": "level",
+      "value": 1
+    },
+    "resource": {
+      "name": "Essence",
+      "formula": "essence",
+      "fixedMax": 0,
+      "recovery": "<p>Essence starts at Willpower + Charisma + 2×Arcanoi, which also serves as its maximum. It never returns by itself: each point spent becomes Resonance, and only turning Resonance back into Essence restores it. A Resonance Eruption is a free action: test Willpower against TN 10 + 2 per point of Resonance. On a success, 1 Resonance becomes Essence harmlessly. On a failure, you lose 1 hit point, 1 Resonance still becomes Essence, and you must repeat the test while any Resonance remains. While you carry Resonance, any die showing 9 on a magic Test forces an immediate Eruption (multiple 9s stack). Feeding also converts 1 Resonance into Essence per hit point of damage dealt with the Bite.</p>",
+      "actions": [
+        {
+          "type": "unravel",
+          "amount": "1"
+        }
+      ],
+      "debtName": "Resonance",
+      "healing": "outOfCombat",
+      "spent": 0
+    },
+    "round": {
+      "spent": 0,
+      "marker": "none"
+    },
+    "scene": {
+      "spent": 0
+    },
+    "pressure": {
+      "enabled": false,
+      "spent": 0
+    },
+    "staticPowers": [
+      {
+        "name": "Demonic Tutor",
+        "description": "<p>You begin with a free rank in a Magical School of your choice, and can buy further ranks in it as though it appeared in your class progression.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Unholy Might",
+        "description": "<p>Spend 1 Essence to add your Arcanoi rank to your Magical School rank for a single Magic Test.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Rejected by Creation",
+        "description": "<p>Each Essence you spend gives you Resonance, and spent Essence can only be regained by eliminating it through Resonance Eruptions: a free-action Willpower test against TN 10 + 2 per Resonance. Success converts 1 Resonance into Essence harmlessly; failure also converts 1 but costs 1 hit point, and you must test again while Resonance remains. While you have Resonance, any 9 on a die of a magic Test forces an immediate Eruption, and multiple 9s stack.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Feeding",
+        "description": "<p>You recharge by devouring the flesh and blood of the living. Your Bite is a natural weapon (1k2 R; Melee; Brawling), and each hit point of damage it inflicts turns 1 Resonance back into Essence. On a helpless or willing victim you may take only a little blood, leaving hardly any mark.</p>",
+        "automation": "none"
+      }
+    ],
+    "powers": [
+      {
+        "rank": 1,
+        "name": "Daemonic",
+        "description": "<p>Reduce damage you take from every source by your Constitution + Arcanoi, except damage from magical effects or silver weapons.</p>"
+      },
+      {
+        "rank": 2,
+        "name": "Unnatural Characteristics",
+        "description": "<p>You may raise any of your Characteristics to six dots.</p>"
+      },
+      {
+        "rank": 3,
+        "name": "Scorn Earth",
+        "description": "<p>Your power holds you above the ground of creation, so you never need to touch it. You can hover at will, moving at your normal speed along any of the three axes.</p>"
+      },
+      {
+        "rank": 4,
+        "name": "Not Of This World",
+        "description": "<p>You ignore the effects of Critical Damage chart results unless they would kill you.</p>"
+      },
+      {
+        "rank": 5,
+        "name": "Black Miracle",
+        "description": "<p>Killing you only drives the daemon back to the warp temporarily. Unless a ritual is performed to prevent it (which you may thwart by burning Hero Points), you reform after one week per point of Resonance you hold in the warp and then find a new vessel. The vessel mutates to match the old one's characteristics and abilities exactly; at your choice, your appearance stays the same or changes completely.</p>"
+      }
+    ],
+    "elements": [],
+    "tell": "<p>The Tell begins with tattoos that creep across the skin, their style depending on the daemon inside: lacy black and red swirls, golden tracery like spreading sunlight, morbid motifs of rot and death, recurring geometric designs, or something unique to that Exalt. As more Essence is spent, the body twists into more bestial and daemonic shapes, and the daemon's own form shows faintly as a ghostly overlay in the same colours as the markings. These changes become permanent as Arcanoi grows: small horns that first appear only with the Tell may later stay for good, then grow bigger whenever Essence is spent. One point spent in a scene makes it faint (Perception + Wisdom TN 20 to notice); 2–3 points make it unmistakable; 4–5 turn it into a radiant aura; 6 or more make it an epic spectacle.</p>",
+    "lore": {
+      "origin": "<p>Few would ever seek out possession. But someone hovering between life and death may accept almost any bargain for a little more life — or for revenge — and the power is a welcome bonus. Daemons look for such people and offer power, life and vengeance; one of the three usually gets a hearing, and all three together are hard to refuse.</p><p>Daemonhosts are rare because the right conditions seldom meet at the moment of death: the barrier separating reality from the warp has to be weak, and the dying person must somehow appeal to the daemon — perhaps through an unfinished destiny, a martyr's end, some exceptional talent, or some hard-to-define trait of the spirit. The daemon then hides inside the soul, among the rare things able to link the warp and the real world, and the two become inseparable. The body is restored to health and life, although whose life it now is remains an open question.</p>",
+      "appearance": "<p>Daemonhosts can be the most visibly transformed of all Exalts. Even with no Tell showing they may bear mutations that mark them as touched by the warp, and as their Arcanoi grows these become almost impossible to hide: strange colouring, horns or claws, eyes that turn flat black or start to glow. The results range from beautiful to horrifying.</p><p>An inexperienced observer may take a newly made Daemonhost for a tiefling. Both bear the warp's touch, but a tiefling is a mortal with a mutated body, while a Daemonhost's very soul has fused with the Warp, so its mutations keep growing as its power seethes inside them. Daemonhosts of Chaos usually look like classic devils, with horns and tails; those of Order take on angelic imagery — and angels were not always just people with wings.</p>",
+      "society": "<p>Daemonhosts share no culture and rarely seek each other out; escaping other daemons is one reason daemons leave the warp at all. Each is a singular, selfish being chasing its own urges. They are feared and shunned by nearly every culture, though a few keep some support from the church of a fitting god. Those serving Order are usually called Angels or Living Saints, but the kind of daemon changes only their look, not their rules — and alignment does not decide morality: an honourable servant of Khorne is as likely as a tyrannical, bloodthirsty servant of Bahamut.</p><p>A Daemonhost is neither the person they were nor a pure daemon, but a fusion whose balance depends on the host's willpower; since daemons are always strong-willed, some change is unavoidable and usually drastic. The mortal half keeps its old motives and may still feel its old ties, or drift away from them, but most cannot sustain close bonds with mortals because their urges drive them toward immoral and criminal acts.</p><p>In play, this built-in struggle is the heart of the character. The SM should agree on temptations with the player — gambling, drink, lovers, or even kindness toward the poor or vengeance on behalf of the defenceless — and offer them now and then without spoiling the fun. The template can also represent a being of raw magic, a spell that went awry, or an Atlantean who came back wrong.</p>",
+      "examples": []
+    },
+    "selection": {
+      "statuesque": "",
+      "element": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

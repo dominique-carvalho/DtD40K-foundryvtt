@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsVamBrujah00",
+  "_key": "!items!dtdAsVamBrujah00",
+  "name": "Brujah",
+  "type": "feat",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdFldVamClan000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your Resolve equals your Blood Potency. Whenever you spend Resolve, you may choose to enter a Frenzy as well.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 221
+    },
+    "xpCost": 100,
+    "group": "vampireClan",
+    "prerequisites": {
+      "exaltation": "Vampire",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

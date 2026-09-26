@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoVectron0",
+  "_key": "!items!dtdAsChoVectron0",
+  "name": "Mark of Vectron",
+  "type": "feat",
+  "img": "icons/svg/regen.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Once per scene, you regain 1 Favor by loudly praising Vectron for something where others can hear you.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 214
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Vectron"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

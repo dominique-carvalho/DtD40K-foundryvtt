@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsDraAD000000",
+  "_key": "!items!dtdAsDraAD000000",
+  "name": "Adamic Dragon",
+  "type": "feat",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdFldDraBlood00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Pick one of these instead of the usual Blood Quickening options. <strong>Metal:</strong> +1 Willpower and +1 Resilience; spend 1 Breath for Armor equal to Aspect until your next turn; claws get Power Field and +4 Pen. <strong>Void:</strong> +1 Composure; no need to breathe, surviving vacuum without a void suit; claws drain all of the victim's Hero Points and block their hit point recovery for one round. <strong>Heart:</strong> +1 Fellowship; spend 1 Breath to count one die of a social attack or social skill roll as a 10; claws gain Volatile and Orgone Array.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 216
+    },
+    "xpCost": 100,
+    "group": "dragonbloodedBloodline",
+    "prerequisites": {
+      "exaltation": "Dragonblooded",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

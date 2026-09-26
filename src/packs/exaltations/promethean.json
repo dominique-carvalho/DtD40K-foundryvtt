@@ -1,0 +1,109 @@
+{
+  "_id": "dtdExalPromethea",
+  "_key": "!items!dtdExalPromethea",
+  "name": "Promethean",
+  "type": "exaltation",
+  "img": "icons/svg/clockwork.svg",
+  "system": {
+    "description": "<p>Other heroes are born or picked by destiny; a Promethean is built. Mortal artisans pour the wealth of whole Crystal Spheres into forging each one from the finest materials and magic — a living device meant to change the world, free a people or save the Great Wheel.</p><p>Its undying body of metal, sorcery and alchemical fluids is unique and carefully crafted, but its true centre is the Promethean Core: a glowing reactor of Pyros that powers impossible feats and houses the soul of a willing subject with exceptional willpower and will to live.</p>",
+    "fullText": "",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 87
+    },
+    "powerStat": {
+      "name": "Generation",
+      "cap": "level",
+      "value": 1
+    },
+    "resource": {
+      "name": "Pyros",
+      "formula": "pyros",
+      "fixedMax": 0,
+      "recovery": "<p>A Promethean can hold Pyros up to three times their Generation, and the reactor regenerates 1 Pyros every hour. Pyros cannot be spent to heal Hit Points (see Refitting).</p>",
+      "actions": [
+        {
+          "type": "regain",
+          "amount": "1"
+        }
+      ],
+      "debtName": "",
+      "healing": "never",
+      "spent": 0
+    },
+    "round": {
+      "spent": 0,
+      "marker": "none"
+    },
+    "scene": {
+      "spent": 0
+    },
+    "pressure": {
+      "enabled": false,
+      "spent": 0
+    },
+    "staticPowers": [
+      {
+        "name": "Living Construct",
+        "description": "<p>Fatigue, Poison and Disease do not affect it, and eating, drinking, sleeping and breathing are optional. Since a Pyros Reactor replaces the heart, a Promethean gains nothing from a Bionic Heart or its artifact versions.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Refitting",
+        "description": "<p>No natural healing — a Promethean must be repaired with a Craft + Int Test: TN 15 when lightly wounded, 20 when heavily wounded, 25 with critical damage; each success restores 1 Hit Point and takes one hour. Pyros cannot be spent to heal. Lost limbs or a destroyed body can be rebuilt rather than replaced: Craft + Int tests at TN 25, one day each, with the limb restored after five successes.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Disquiet",
+        "description": "<p>An aura of subtle wrongness, partly magical and partly due to their machine-like, weaponised nature, imposes −2k1 on all social rolls against non-Exalts.</p>",
+        "automation": "none"
+      },
+      {
+        "name": "Superlative Constitution",
+        "description": "<p>Critical damage works differently and does not use the Critical charts. Each limb tracks its own critical damage and is destroyed at 5. Destroying the gizzards, where the Pyros Reactor sits, kills the Promethean; destroying the Body or Head knocks it unconscious until repaired; any other destroyed limb is simply lost.</p>",
+        "automation": "none"
+      }
+    ],
+    "powers": [
+      {
+        "rank": 1,
+        "name": "Integrated Armor",
+        "description": "<p>Gains AP equal to Generation + 3 and proficiency with all armor.</p>"
+      },
+      {
+        "rank": 2,
+        "name": "Integrated Weapons",
+        "description": "<p>Can build a number of weapons equal to Generation into its body. They are hidden well enough to evade a normal search and can be drawn as a free action.</p>"
+      },
+      {
+        "rank": 3,
+        "name": "Transhuman Potential",
+        "description": "<p>May spend Pyros to raise Characteristics, 1 Pyros per +1. The bonus lasts for one test or one round, whichever is longer.</p>"
+      },
+      {
+        "rank": 4,
+        "name": "Recharge",
+        "description": "<p>When hit by E-type damage, the Promethean recovers 1 spent Pyros for each hit point that attack takes from it.</p>"
+      },
+      {
+        "rank": 5,
+        "name": "Warstrider",
+        "description": "<p>Once per day, for a single scene, the Promethean can take on a huge battle form: its size doubles and it gains +3 dots in every physical Characteristic. Integrated weapons deal an extra +1k1 damage thanks to the larger frame.</p>"
+      }
+    ],
+    "elements": [],
+    "tell": "<p>As more Pyros is spent, hidden systems come into view: extra tools or sensors unfold, steam or plasma vents, limbs disjoint for better angles, all shaped by the task at hand. At higher levels the Promethean blazes with energy and heat, skin layers peel back, optics glow at full power, and it becomes an unmistakable machine wearing a living shape. It follows the general scale for points spent in a scene (1 point faint, Perception + Wisdom vs. TN 20; 2–3 unmistakable; 4–5 an aura of power; 6+ epic).</p>",
+    "lore": {
+      "origin": "<p>A Promethean is less born than constructed: a deliberate masterwork, part art and part science, fed by the resources of entire Crystal Spheres. Most are made for one purpose, almost always as a superweapon — though that weapon might be an ideal leader, a mighty wizard or a healer rather than a mere engine of destruction. Many think they are divinely inspired; the techniques behind them often cannot be repeated, even by their own makers, and the Pyros reactor in particular defies replication. As long as the reactor survives, the body can be rebuilt around it.</p><p>Many are living people, often heroes and usually volunteers, upgraded piece by piece until they are something more. Others are raised from the recently dead by groups unwilling to let great potential be lost. Rarest are those synthesised entirely in a lab; these may receive a soul from a soulstone or phylactery (as some races such as the Eldarin use), one torn from the Warp, or — most often — seem to develop sentience and a Warp presence on their own. As Generation rises, the Promethean usually returns to its birthplace to swap old equipment for newer gear, growing more ornate with added components; its abilities, spells and feats may all come from these installations.</p>",
+      "appearance": "<p>Appearance varies enormously with culture and origin. Most are built to closely resemble their parent race and pass for one at a glance; some are flawless infiltrators, while others look like ordinary people with heavy bionics. Beneath the surface they fuse biology and machinery, every part enhanced with cutting-edge bionics — unique prototypes worth billions of thrones, built by strokes of design genius that fail to work for anyone else and are then lost.</p>",
+      "society": "<p>Prometheans stand apart from their races, thinking and feeling differently; many come across as detached or strange, with quirks that suggest they no longer understand people. Even a perfectly human-looking one seems off: animals sense it and dislike them, and people feel uneasy too. Play up these odd traits and their muted emotions. Knowing they can almost always be repaired while the reactor remains, they take calculated risks without fear of injury.</p><p>Key questions are who built the Promethean, why, and who it was before. Backing is the most common background, since most remain tied to the group that made them; a rogue Promethean has at least one enemy hunting for it. Tough and deadly in battle but awkward socially, they should get scenes that show both sides. Built for a purpose, they tend to serve the powers that made them and struggle to leave that role — even leaders see themselves as servants of their people. They rarely meet each other, since even a Faction can barely afford to build one.</p><p>They adapt readily as generic undead such as zombies or liches, which share their toughness, indifference to injury and social friction.</p>",
+      "examples": []
+    },
+    "selection": {
+      "statuesque": "",
+      "element": ""
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

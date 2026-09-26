@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsRacID000000",
+  "_key": "!items!dtdAsRacID000000",
+  "name": "Inner Dragon",
+  "type": "feat",
+  "img": "icons/svg/fire.svg",
+  "folder": "dtdFldParRacial0",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>You grow a natural claw attack (2k3 R; Melee; uses Brawling). Your AP also increases by an amount equal to your Constitution.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 218
+    },
+    "xpCost": 100,
+    "group": "paragonRacial",
+    "prerequisites": {
+      "exaltation": "Paragon",
+      "race": "Dragonborn",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

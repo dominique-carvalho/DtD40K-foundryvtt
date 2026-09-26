@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoMalal000",
+  "_key": "!items!dtdAsChoMalal000",
+  "name": "Mark of Malal",
+  "type": "feat",
+  "img": "icons/svg/skull.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your attacks against neutral or allied targets inflict one additional wound.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Malal"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

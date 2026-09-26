@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoAcererak",
+  "_key": "!items!dtdAsChoAcererak",
+  "name": "Mark of Acererak",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Gain +2k0 on Forbidden Lore tests. Pick one Magic School: you receive a rank in it and can always advance it as though it belonged to your class.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 212
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Acererak"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

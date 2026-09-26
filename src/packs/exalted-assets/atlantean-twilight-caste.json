@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsAtlTC000000",
+  "_key": "!items!dtdAsAtlTC000000",
+  "name": "Twilight Caste",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFldAtlCaste00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Spend 1 Mote to add rolled dice equal to the Hero's Gnosis rating to a single Parry or Dodge roll.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 211
+    },
+    "xpCost": 100,
+    "group": "atlanteanCaste",
+    "prerequisites": {
+      "exaltation": "Atlantean",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

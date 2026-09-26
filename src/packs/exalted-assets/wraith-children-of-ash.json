@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsWraChAsh000",
+  "_key": "!items!dtdAsWraChAsh000",
+  "name": "Children of Ash",
+  "type": "feat",
+  "img": "icons/svg/terror.svg",
+  "folder": "dtdFldWraHaunt00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Spend 2 Plasm to make an opponent roll on the Shock table.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 223
+    },
+    "xpCost": 100,
+    "group": "wraithHaunting",
+    "prerequisites": {
+      "exaltation": "Wraith",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

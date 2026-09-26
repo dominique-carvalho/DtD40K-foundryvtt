@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoOmnissia",
+  "_key": "!items!dtdAsChoOmnissia",
+  "name": "Mark of the Omnissiah",
+  "type": "feat",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>You gain the Promethean Living Construct power, without needing its Pyros Reactor.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Omnissiah"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

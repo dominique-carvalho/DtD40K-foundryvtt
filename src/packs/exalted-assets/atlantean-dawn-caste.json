@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsAtlDC000000",
+  "_key": "!items!dtdAsAtlDC000000",
+  "name": "Dawn Caste",
+  "type": "feat",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdFldAtlCaste00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Whenever the Hero uses a Mote (for any purpose, even just to activate this Asset), Intimidate and Weaponry rolls get +2k0 for the rest of the Scene. Spending several Motes does not stack the bonus.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 211
+    },
+    "xpCost": 100,
+    "group": "atlanteanCaste",
+    "prerequisites": {
+      "exaltation": "Atlantean",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

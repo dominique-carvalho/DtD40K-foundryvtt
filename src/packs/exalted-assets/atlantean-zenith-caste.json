@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsAtlZC000000",
+  "_key": "!items!dtdAsAtlZC000000",
+  "name": "Zenith Caste",
+  "type": "feat",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdFldAtlCaste00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Whenever the Hero uses a Mote (for any purpose, even just to activate this Asset), damage the Hero takes is reduced by his Gnosis rating until the round ends. Spending several Motes in one round does not stack the reduction.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 211
+    },
+    "xpCost": 100,
+    "group": "atlanteanCaste",
+    "prerequisites": {
+      "exaltation": "Atlantean",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

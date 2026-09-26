@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoLuna0000",
+  "_key": "!items!dtdAsChoLuna0000",
+  "name": "Mark of Luna",
+  "type": "feat",
+  "img": "icons/svg/eye.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Pay 1 Favor plus 1 Hero Point to copy the effect of any other Mark; the copied effect lasts until the scene ends.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Luna"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

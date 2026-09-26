@@ -1,5 +1,7 @@
 import { CHARACTERISTICS, GROUPS, RACE_POWER_AUTOMATION, SKILLS } from "../config.mjs";
 
+import { lockedPackHint } from "./item-sheet-helpers.mjs";
+
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
 /** Lore fields edited as tag lists. */
@@ -51,9 +53,7 @@ export class RaceSheet extends HandlebarsApplicationMixin(foundry.applications.s
       system,
       editable: this.isEditable,
       // GMs can unlock the compendium to edit its races (core "Toggle Edit Lock").
-      lockedPackHint: item.pack && game.packs.get(item.pack)?.locked && game.user.isGM
-        ? game.i18n.format("DTD.Race.LockedPackHint", { option: localize("COMPENDIUM.ToggleLocked.Option") })
-        : "",
+      lockedPackHint: lockedPackHint(item),
       characteristicOptions: Object.keys(CHARACTERISTICS).map((key) => ({
         key,
         label: characteristicName(key),

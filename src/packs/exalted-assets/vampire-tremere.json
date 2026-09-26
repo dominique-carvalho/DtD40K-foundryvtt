@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsVamTremere0",
+  "_key": "!items!dtdAsVamTremere0",
+  "name": "Tremere",
+  "type": "feat",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdFldVamClan000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>You gain one rank in the Necromancy magical power and can buy further ranks as though it belonged to any of your classes. Focus Power tests made to cast Necromancy spells receive +1k1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 221
+    },
+    "xpCost": 100,
+    "group": "vampireClan",
+    "prerequisites": {
+      "exaltation": "Vampire",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

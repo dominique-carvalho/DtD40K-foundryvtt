@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsDraBoI00000",
+  "_key": "!items!dtdAsDraBoI00000",
+  "name": "Blood of Io",
+  "type": "feat",
+  "img": "icons/svg/regen.svg",
+  "folder": "dtdFldDraBlood00",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Your maximum Breath increases by an amount equal to your Aspect.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 216
+    },
+    "xpCost": 100,
+    "group": "dragonbloodedBloodline",
+    "prerequisites": {
+      "exaltation": "Dragonblooded",
+      "race": "",
+      "deity": ""
+    },
+    "automation": "bloodOfIo"
+  },
+  "effects": [],
+  "flags": {}
+}

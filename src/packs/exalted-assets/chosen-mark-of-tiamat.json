@@ -1,0 +1,26 @@
+{
+  "_id": "dtdAsChoTiamat00",
+  "_key": "!items!dtdAsChoTiamat00",
+  "name": "Mark of Tiamat",
+  "type": "feat",
+  "img": "icons/svg/wing.svg",
+  "folder": "dtdFldChoMark000",
+  "system": {
+    "category": "exaltedAsset",
+    "description": "<p>Once each session you can grow red-scaled wings, which grant the Flyer trait for the rest of that scene.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 213
+    },
+    "xpCost": 100,
+    "group": "chosenMark",
+    "prerequisites": {
+      "exaltation": "Chosen",
+      "race": "",
+      "deity": "Tiamat"
+    },
+    "automation": "none"
+  },
+  "effects": [],
+  "flags": {}
+}

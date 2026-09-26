@@ -1,0 +1,16 @@
+{
+  "_id": "dtdFldWerTribe00",
+  "_key": "!folders!dtdFldWerTribe00",
+  "name": "Werewolf Tribes",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 900000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "assetGroup": "werewolfTribe"
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "_id": "dtdCa91321609e88",
+  "_key": "!items!dtdCa91321609e88",
+  "name": "Monk",
+  "type": "class",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdCFdb5564e5415",
+  "system": {
+    "description": "<p>The Monk track's unarmed martial artist, fighting without armor through speed and discipline. It learns Stunning Fist, Diamond Body and Defensive Mobility, and practices the Setting Sun, Shadow Hand and Diamond Mind schools.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 151
+    },
+    "level": 3,
+    "track": "Monk",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "acrobatics"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Ki Strike"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "wis"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "forbiddenLore",
+      "acrobatics",
+      "athletics",
+      "brawl",
+      "stealth",
+      "animalKen",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Stunning Fist",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Diamond Body",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improvisational Master",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Swift Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Acrobatics",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Defensive Mobility",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Setting Sun",
+      "Shadow Hand",
+      "Diamond Mind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Wholeness of Body grants 1 extra point of Armor.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,3 @@
+{{#if advance}}
+<a class="advance-button{{#unless advance.allowed}} refused{{/unless}}{{#if advance.doubled}} doubled{{/if}}" data-action="{{action}}" data-key="{{key}}" data-tooltip="{{advance.tooltip}}" aria-label="{{advance.tooltip}}"><i class="fa-solid fa-plus" inert></i>{{#if advance.allowed}} {{advance.cost}}{{/if}}</a>
+{{/if}}

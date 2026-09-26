@@ -1,0 +1,122 @@
+{
+  "_id": "dtdCf404df256d27",
+  "_key": "!items!dtdCf404df256d27",
+  "name": "Apprentice",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd8d68c1b723",
+  "system": {
+    "description": "<p>The opening step of the Magic User track: a studious novice who learns the fundamentals of arcane study. Apprentices build their memory and foresight, bind a familiar or focus through an implement, and dabble across six schools of magic.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 144
+    },
+    "level": 1,
+    "track": "Magic User",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "cha",
+      "wil"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "commonLore",
+      "forbiddenLore",
+      "techUse",
+      "ballistics",
+      "brawl",
+      "deceive",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Obtain Familiar",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Implement Focus",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Eidetic Memory",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Foresight",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Might",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Tested",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Ordinary",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Abjuration",
+      "Evocation",
+      "Illusion",
+      "Conjuration",
+      "Divination",
+      "Necromancy"
+    ],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 on every Focus Power test.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

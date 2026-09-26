@@ -1,0 +1,100 @@
+{
+  "_id": "dtdC4dbc5d097f85",
+  "_key": "!items!dtdC4dbc5d097f85",
+  "name": "Tactical Officer",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd3d80d0dc1c",
+  "system": {
+    "description": "<p>A ship-crew class for the officer who handles weapons and boarding defense. Tactical Officers direct bombardments and unleash the Worf Barrage.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 172
+    },
+    "level": 2,
+    "track": "",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 1
+        },
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 1
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "con",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "athletics",
+      "ballistics",
+      "brawl",
+      "command",
+      "pilot",
+      "weaponry"
+    ],
+    "feats": [
+      {
+        "name": "Master of Bombardment",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Worf Barrage",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Unremarkable",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Light",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Any ship whose Tactical Officer you are gains +1 Melee when resisting Boarding Actions.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,7 +1,9 @@
-import { CHARACTERISTICS, DERIVED_KEYS, SKILLS } from "../config.mjs";
+import { CHARACTERISTICS, DERIVED_KEYS, SKILLS, STARTING_XP, XP_KINDS } from "../config.mjs";
+import { characterLevel } from "../rules/class.mjs";
 import { computeDerived } from "../rules/derived.mjs";
 import { computeExaltation } from "../rules/exaltation.mjs";
 import { capValue } from "../rules/race.mjs";
+import { xpTotals } from "../rules/xp.mjs";
 
 const { ArrayField, BooleanField, HTMLField, NumberField, SchemaField, StringField } = foundry.data.fields;
 
@@ -80,6 +82,24 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
         fatigueMax: integer(0),
         initiative: integer(0)
       }),
+      // Experience: starting XP and the ledger of purchases and awards (spec 006, research R6).
+      xp: new SchemaField({
+        starting: integer(STARTING_XP, { min: 0 }),
+        log: new ArrayField(new SchemaField({
+          id: new StringField({ required: true, blank: false }),
+          type: new StringField({ required: true, choices: ["purchase", "award"], initial: "purchase" }),
+          kind: new StringField({ required: true, blank: true, initial: "", choices: ["", ...XP_KINDS] }),
+          key: new StringField({ required: true, blank: true }),
+          label: new StringField({ required: true, blank: true }),
+          from: integer(0),
+          to: integer(0),
+          cost: integer(0),
+          itemId: new StringField({ required: true, blank: true }),
+          reason: new StringField({ required: true, blank: true }),
+          user: new StringField({ required: true, blank: true }),
+          date: integer(0)
+        }))
+      }),
       biography: new HTMLField({ required: true, blank: true })
     };
   }
@@ -90,6 +110,7 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
+    this.#prepareClasses();
     this.#capRatings();
     const derived = computeDerived(this, this.derivedMods, this.modifiers);
     this.derived = {
@@ -102,6 +123,27 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     this.resolve.max = derived.resolveMax;
     this.fatigue.max = derived.fatigueMax;
     this.#prepareExaltation();
+  }
+
+  /**
+   * Level from the classes taken (p. 106), class state and XP totals (spec 006, research R2/R6).
+   * Runs first, so everything that reads the Level uses the derived value. Never persisted.
+   */
+  #prepareClasses() {
+    const items = this.parent?.items ?? [];
+    const classes = items.filter((item) => item.type === "class").sort((a, b) => a.system.startedAt - b.system.startedAt);
+    this.level = characterLevel(classes, this.level);
+    const current = classes.find((item) => item.system.status === "current");
+    this.classState = {
+      hasClasses: classes.length > 0,
+      current: current?.id ?? null,
+      freeStudy: classes.length > 0 && !current,
+      completed: classes.filter((item) => item.system.status === "completed").map((item) => item.id)
+    };
+    const hindranceXp = items
+      .filter((item) => item.type === "feat" && item.system.category === "hindrance")
+      .reduce((sum, item) => sum + (item.system.xpGranted ?? 0), 0);
+    this.xp.totals = xpTotals({ starting: this.xp.starting, log: this.xp.log, hindranceXp });
   }
 
   /**

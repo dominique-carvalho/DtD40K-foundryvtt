@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd824f2a1072",
+  "_key": "!folders!dtdCFd824f2a1072",
+  "name": "Thief",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 180000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Thief"
+    }
+  }
+}

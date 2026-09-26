@@ -1,0 +1,102 @@
+{
+  "_id": "dtdCe7ed458ff1e1",
+  "_key": "!items!dtdCe7ed458ff1e1",
+  "name": "Walking Gunshow",
+  "type": "class",
+  "img": "icons/svg/explosion.svg",
+  "folder": "dtdCFdac2d70a126",
+  "system": {
+    "description": "<p>A Heavy who blasts foes with big guns at range and crushes them in a bear hug up close, too stubborn to go down.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 143
+    },
+    "level": 4,
+    "track": "Heavy",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Bear Hug",
+        "Crack Shot"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "con",
+      "str",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "athletics",
+      "ballistics",
+      "brawl",
+      "drive",
+      "command",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Death Before Defeat",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Rock and Roll",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Crushing Bear",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Setting Sun"
+    ],
+    "gunKata": [
+      "Crisis Zone",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Your HP increases by 1.</p>",
+      "automation": "hpMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

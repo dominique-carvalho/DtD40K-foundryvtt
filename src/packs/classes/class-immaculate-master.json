@@ -1,0 +1,109 @@
+{
+  "_id": "dtdC71fbb155a353",
+  "_key": "!items!dtdC71fbb155a353",
+  "name": "Immaculate Master",
+  "type": "class",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdCFdb5564e5415",
+  "system": {
+    "description": "<p>An advanced Monk who fights with bare hands and no armor, having honed body and mind to the point of Perfect Self and true unarmed mastery.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 152
+    },
+    "level": 4,
+    "track": "Monk",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "acrobatics"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Unarmed Warrior",
+        "Diamond Body"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "wis"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "forbiddenLore",
+      "acrobatics",
+      "athletics",
+      "brawl",
+      "stealth",
+      "animalKen",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Unarmed Master",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Perfect Self",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improvisational Savant",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Wall of Steel",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Setting Sun",
+      "Shadow Hand",
+      "Diamond Mind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Wholeness of Body grants 1 more point of Armor.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

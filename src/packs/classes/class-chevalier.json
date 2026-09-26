@@ -1,0 +1,108 @@
+{
+  "_id": "dtdCceb50c0341e5",
+  "_key": "!items!dtdCceb50c0341e5",
+  "name": "Chevalier",
+  "type": "class",
+  "img": "icons/svg/angel.svg",
+  "folder": "dtdCFd34623d0231",
+  "system": {
+    "description": "<p>The culmination of the Paladin track, a fearless crusader in power armor who would rather die than yield, protected by an Armor of Contempt.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 158
+    },
+    "level": 5,
+    "track": "Paladin",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "forbiddenLore"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Wall of Steel"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "wil",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "forbiddenLore",
+      "medicae",
+      "athletics",
+      "weaponry",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Fearless",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Power",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor of Contempt",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Death Before Defeat",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "White Raven",
+      "Devoted Spirit",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain +1 AP whenever you are armored.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

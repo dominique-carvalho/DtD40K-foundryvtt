@@ -1,0 +1,104 @@
+{
+  "_id": "dtdCee4ae0883a7d",
+  "_key": "!items!dtdCee4ae0883a7d",
+  "name": "Targetmaster",
+  "type": "class",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdCFd6fe71ac156",
+  "system": {
+    "description": "<p>The ultimate Operator marksman, ricocheting impossible shots and landing devastating criticals on targets who never see them coming.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 155
+    },
+    "level": 5,
+    "track": "Operator",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "perception"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Sharpshooter"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "dex",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "techUse",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "command",
+      "disguise",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Pinball Wizard",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Defensive Mobility",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Devastating Critical",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Sneak Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Clay Pigeon",
+      "Tin Star",
+      "Silent Scope"
+    ],
+    "completion": {
+      "text": "<p>You get +2 on Stealth tests made to stay hidden while you remain motionless.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

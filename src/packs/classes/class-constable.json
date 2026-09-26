@@ -1,0 +1,140 @@
+{
+  "_id": "dtdCa8a193ca0785",
+  "_key": "!items!dtdCa8a193ca0785",
+  "name": "Constable",
+  "type": "class",
+  "img": "icons/svg/castle.svg",
+  "folder": "dtdCFd97d6f8d323",
+  "system": {
+    "description": "<p>A seasoned lawkeeper of the Sheriff track, known and backed by the authorities. Fast with a pistol through Fan the Hammer and hard to rattle thanks to Armor of Contempt, it works the Clay Pigeon, Tin Star and Point Blank kata.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 160
+    },
+    "level": 3,
+    "track": "Sheriff",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "command"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "intimidation"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Peer (Law Enforcement)"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "cha",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "medicae",
+      "perception",
+      "politics",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "drive",
+      "stealth",
+      "animalKen",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Good Reputation",
+        "subcategory": "Law Enforcement",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Luck",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Fan The Hammer",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor of Contempt",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Evasion",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Improvisational Master",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Raven's Eye",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Clay Pigeon",
+      "Tin Star",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Your Backing (Law Enforcement) rises by 1, capped at 5.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

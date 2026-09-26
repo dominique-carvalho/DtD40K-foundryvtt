@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd1ee77afc60",
+  "_key": "!folders!dtdCFd1ee77afc60",
+  "name": "Fighter",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 80000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Fighter"
+    }
+  }
+}

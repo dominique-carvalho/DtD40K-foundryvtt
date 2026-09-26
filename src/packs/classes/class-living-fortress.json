@@ -1,0 +1,107 @@
+{
+  "_id": "dtdC3ad6c4474b7b",
+  "_key": "!items!dtdC3ad6c4474b7b",
+  "name": "Living Fortress",
+  "type": "class",
+  "img": "icons/svg/explosion.svg",
+  "folder": "dtdCFdac2d70a126",
+  "system": {
+    "description": "<p>The final Heavy, an immovable wall of muscle and firepower with nerves of steel who is just as deadly with fists as with heavy weapons.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 143
+    },
+    "level": 5,
+    "track": "Heavy",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Rock and Roll"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "con",
+      "str",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "athletics",
+      "ballistics",
+      "brawl",
+      "drive",
+      "command",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Nerves of Steel",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Iron Jaw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Unarmed Master",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Iron Curtain",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Setting Sun"
+    ],
+    "gunKata": [
+      "Crisis Zone",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Your HP increases by 1.</p>",
+      "automation": "hpMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

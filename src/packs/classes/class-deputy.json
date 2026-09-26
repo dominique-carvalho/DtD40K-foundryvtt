@@ -1,0 +1,132 @@
+{
+  "_id": "dtdC0b9c55f77887",
+  "_key": "!items!dtdC0b9c55f77887",
+  "name": "Deputy",
+  "type": "class",
+  "img": "icons/svg/castle.svg",
+  "folder": "dtdCFd97d6f8d323",
+  "system": {
+    "description": "<p>Opening class of the Sheriff track: a capable gunfighter with a broad kit of everyday skills. Deputies are well-rounded keepers of the peace, backed by their law enforcement connections.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 159
+    },
+    "level": 1,
+    "track": "Sheriff",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "command"
+          ],
+          "value": 1
+        },
+        {
+          "keys": [
+            "intimidation"
+          ],
+          "value": 1
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "cha",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "medicae",
+      "perception",
+      "politics",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "drive",
+      "stealth",
+      "animalKen",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Light",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Basic",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Common Sense",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Peer",
+        "subcategory": "Law Enforcement",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improvisational Warrior",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Quick Draw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Clay Pigeon",
+      "Tin Star",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Increase Backing (Law Enforcement) by +1, up to a cap of 5.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

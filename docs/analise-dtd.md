@@ -179,6 +179,13 @@ Fonte: 1.6 pp. 10–15, 333–334.
 
 Só pode gastar XP no que está nas listas da **classe atual**.
 
+**Na 7.7a** (cap. 2 p. 16, cap. 14 p. 515; implementado na feature `006-classes-xp`): 600 XP iniciais,
++100 por hindrance da criação (no máximo 2); custos fixos de §0. Feats raciais da própria raça contam como
+se estivessem na lista da classe. O sistema guarda um histórico de XP (compras e prêmios do Mestre, com
+desfazer), cobra só compras permitidas (o Mestre pode incluir fora da regra sem custo) e nunca cobra feats
+concedidos. Escolas, Special Attacks, Trick Shots, Spell Combos, Backgrounds e Devotion ainda não são
+compráveis pela ficha (ficam para as features de magia, combate e backgrounds).
+
 **Recompensa de XP** (p. 333–334): abstrato 500 XP/sessão/jogador; ou por encontro: Easy 50 · Routine 70 · Ordinary 100 · Average 130 · Challenging 170 · Hard 200 · Very Hard 250.
 
 ---
@@ -264,6 +271,15 @@ Fonte: 1.6 pp. 85–115; Book 2 pp. 21–53.
 - **Free Study** (p. 87): após concluir, pode comprar opcionais pulados e itens de listas de classes concluídas; fora disso custa o dobro.
 - **Bônus de conclusão** por classe (igual dentro da trilha).
 - Trilhas de 5 níveis; pode trocar de trilha.
+
+**Na 7.7a** (cap. 6, pp. 111–172; implementado na feature `006-classes-xp`): **103 classes** — 18 trilhas
+de 5 níveis (as 9 do livro base e as 9 do Book 2, agora no mesmo livro) e 13 avulsas (Ratcatcher, Scholar,
+Initiate, Mercenary, Peasant e as 8 classes de Oficial); 23/21/22/19/18 por Level. Compêndio *Classes* com
+pastas por trilha. Automatizados: Level derivado, pré-requisitos (perícias e feats; escolas e texto livre
+só avisam), progresso e conclusão, Free Study em dobro e os bônus simples (HP máximo, iniciativa, Resolve
+máximo, Static Defense, especialidade, ponto de perícia e feats concedidos, como Improved Animal Companion
+e Upgraded); os demais bônus ficam como texto. Listas de Sword/Magic Schools e Gun Kata são guardadas como
+dado.
 
 **Estrutura**: `name, level (1–5), track, prerequisites (perícias/feats/escolas, com OU), characteristics[], skills[], feats[] {mandatory|optional|orGroup}, swordSchools[], magicSchools[], gunKata[], completionBonus`.
 

@@ -1,0 +1,110 @@
+{
+  "_id": "dtdC9f5234d5f7fc",
+  "_key": "!items!dtdC9f5234d5f7fc",
+  "name": "Riflemancer",
+  "type": "class",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdCFd1fb65dfd09",
+  "system": {
+    "description": "<p>Second step of the Magitek Gunman track, fusing firearms with spellcraft. Riflemancers weave minor magic into their shooting and dodge danger with Evasion.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 147
+    },
+    "level": 2,
+    "track": "Magitek Gunman",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Elemental Shot I"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wil",
+      "dex",
+      "cha"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "stealth",
+      "charm",
+      "deceive"
+    ],
+    "feats": [
+      {
+        "name": "Minor Magic",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Throwing",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Quick Draw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Evasion",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Elemental Shot I",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Evocation",
+      "Conjuration"
+    ],
+    "swordSchools": [],
+    "gunKata": [
+      "Elemental Gearbolt",
+      "Clay Pigeon"
+    ],
+    "completion": {
+      "text": "<p>Once more per session, you can use Elemental Shot I.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

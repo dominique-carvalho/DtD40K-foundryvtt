@@ -1,0 +1,107 @@
+{
+  "_id": "dtdCd20ca0d3d643",
+  "_key": "!items!dtdCd20ca0d3d643",
+  "name": "Heavy Weapons Guy",
+  "type": "class",
+  "img": "icons/svg/explosion.svg",
+  "folder": "dtdCFdac2d70a126",
+  "system": {
+    "description": "<p>The Heavy track's walking artillery, lugging big guns and pounding foes up close. Tough and stubborn, it learns Crack Shot, Bear Hug and Crushing Blow, plus the Setting Sun school and the Crisis Zone and Point Blank kata.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 142
+    },
+    "level": 3,
+    "track": "Heavy",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Steel Rain"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "con",
+      "str",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "athletics",
+      "ballistics",
+      "brawl",
+      "drive",
+      "command",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Headstrong",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Bear Hug",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Crack Shot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Crushing Blow",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Setting Sun"
+    ],
+    "gunKata": [
+      "Crisis Zone",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Gain +1 HP.</p>",
+      "automation": "hpMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,101 @@
+{
+  "_id": "dtdCed146a4ba23f",
+  "_key": "!items!dtdCed146a4ba23f",
+  "name": "Mercenary",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd3d80d0dc1c",
+  "system": {
+    "description": "<p>An always-available starter class that teaches the basics of combat. Mercenaries pick up armor, basic weapons and a hardy constitution, making them a good fit for meeting prerequisites.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 112
+    },
+    "level": 1,
+    "track": "",
+    "prerequisites": {
+      "skills": [],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "con",
+      "wis"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "command",
+      "scrutiny",
+      "commonLore",
+      "athletics",
+      "ballistics",
+      "weaponry",
+      "perception",
+      "brawl"
+    ],
+    "feats": [
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Light",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Medium",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Quick Draw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Speak Language",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Peer",
+        "subcategory": "Mercenary Organization",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Basic",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your maximum HP rises by +2.</p>",
+      "automation": "hpMax",
+      "value": 2,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

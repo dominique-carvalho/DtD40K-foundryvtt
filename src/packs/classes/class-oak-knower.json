@@ -1,0 +1,126 @@
+{
+  "_id": "dtdCc870c5c61e0e",
+  "_key": "!items!dtdCc870c5c61e0e",
+  "name": "Oak-Knower",
+  "type": "class",
+  "img": "icons/svg/oak.svg",
+  "folder": "dtdCFd867ca5a053",
+  "system": {
+    "description": "<p>The Druid track's second class, drawing deeper on nature's power. Oak-Knowers commune with beasts, take on animal forms with Wild Shape and loathe machines.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 132
+    },
+    "level": 2,
+    "track": "Druid",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "animalKen"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [
+        "Druid's Oath"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "medicae",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "stealth",
+      "animalKen",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Heightened Senses",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Light Sleeper",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Wild Empathy",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Wild Shape",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Mana Generator",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Hatred",
+        "subcategory": "Machines",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Healing",
+      "Transmutation",
+      "Divination"
+    ],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain two feats: Beastmaster and Improved Animal Companion.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [
+        {
+          "name": "Improved Animal Companion",
+          "subcategory": "",
+          "choose": false
+        },
+        {
+          "name": "Beastmaster",
+          "subcategory": "",
+          "choose": false
+        }
+      ],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

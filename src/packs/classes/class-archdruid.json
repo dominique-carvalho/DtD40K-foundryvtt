@@ -1,0 +1,127 @@
+{
+  "_id": "dtdC962381e83d4a",
+  "_key": "!items!dtdC962381e83d4a",
+  "name": "Archdruid",
+  "type": "class",
+  "img": "icons/svg/oak.svg",
+  "folder": "dtdCFd867ca5a053",
+  "system": {
+    "description": "<p>A senior Druid who channels nature's power through Healing, Transmutation and Divination, relying on keen senses, tracking and a resilient mind to guide the party through the wild.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 134
+    },
+    "level": 4,
+    "track": "Druid",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "animalKen"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Channel Energy",
+        "Meditation"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "medicae",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "stealth",
+      "animalKen",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Danger Sense",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Heightened Senses",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Virgil's Guidance",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Expert Tracker",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Absolution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Strong Minded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Healing",
+      "Transmutation",
+      "Divination"
+    ],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain two feats: Improved Animal Companion and Beastmaster.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [
+        {
+          "name": "Improved Animal Companion",
+          "subcategory": "",
+          "choose": false
+        },
+        {
+          "name": "Beastmaster",
+          "subcategory": "",
+          "choose": false
+        }
+      ],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

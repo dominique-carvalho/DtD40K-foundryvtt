@@ -1,0 +1,115 @@
+{
+  "_id": "dtdC7eb568d8fc70",
+  "_key": "!items!dtdC7eb568d8fc70",
+  "name": "Defender",
+  "type": "class",
+  "img": "icons/svg/angel.svg",
+  "folder": "dtdCFd34623d0231",
+  "system": {
+    "description": "<p>The armored heart of the Paladin track: a holy warrior who stands between allies and harm. It combines faith-based feats like Divine Ministration and True Grit with the White Raven, Devoted Spirit and Desert Wind schools.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 157
+    },
+    "level": 3,
+    "track": "Paladin",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "forbiddenLore"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Guardian",
+        "Divine Bond"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "wil",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "forbiddenLore",
+      "medicae",
+      "athletics",
+      "weaponry",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Divine Ministration",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "True Grit",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Specialization",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Swift Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "White Raven",
+      "Devoted Spirit",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 AP whenever you are wearing armor.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

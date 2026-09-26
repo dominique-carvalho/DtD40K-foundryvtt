@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFdaebebd4a00",
+  "_key": "!folders!dtdCFdaebebd4a00",
+  "name": "Arcane Knight",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 20000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Arcane Knight"
+    }
+  }
+}

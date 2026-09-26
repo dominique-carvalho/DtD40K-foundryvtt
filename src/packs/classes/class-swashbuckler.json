@@ -1,0 +1,134 @@
+{
+  "_id": "dtdC8253c3557429",
+  "_key": "!items!dtdC8253c3557429",
+  "name": "Swashbuckler",
+  "type": "class",
+  "img": "icons/svg/sound.svg",
+  "folder": "dtdCFdc71739a5ba",
+  "system": {
+    "description": "<p>A dashing Bard who mixes charm, reputation and light swordplay with enchantments and illusions, catching foes off guard with sneak attacks.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 125
+    },
+    "level": 4,
+    "track": "Bard",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "commonLore"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "performer"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Decadence"
+      ],
+      "schools": [
+        {
+          "name": "Enchantment or Illusion",
+          "value": 2
+        }
+      ],
+      "text": ""
+    },
+    "characteristics": [
+      "cha",
+      "fel",
+      "dex"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "commonLore",
+      "forbiddenLore",
+      "perception",
+      "politics",
+      "techUse",
+      "acrobatics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "animalKen",
+      "charm",
+      "command",
+      "deceive",
+      "disguise",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Speak Language",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Fearless",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Good Reputation",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Focus",
+        "subcategory": "Enchantment or Illusion",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sneak Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Enchantment",
+      "Illusion"
+    ],
+    "swordSchools": [
+      "Iron Heart",
+      "Diamond Mind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Pick a skill whose rank is below your Level and add 1 dot to it.</p>",
+      "automation": "skillDot",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

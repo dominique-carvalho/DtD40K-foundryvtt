@@ -1,0 +1,118 @@
+{
+  "_id": "dtdC566c5ff17c8d",
+  "_key": "!items!dtdC566c5ff17c8d",
+  "name": "Conscript",
+  "type": "class",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdCFd29e9d6f032",
+  "system": {
+    "description": "<p>The Guardsman track begins here: a rank-and-file soldier drilled in firearms and in simply staying alive. Conscripts toughen up with Sound Constitution and Hardy and learn to draw fast.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 138
+    },
+    "level": 1,
+    "track": "Guardsman",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 1
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "drive",
+      "pilot",
+      "weaponry",
+      "command"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Hardy",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Quick Draw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Jaded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Tin Star",
+      "Silent Scope",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Gain +1 on every Ranged attack test.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

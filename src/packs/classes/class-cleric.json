@@ -1,0 +1,119 @@
+{
+  "_id": "dtdC5ebeb46f621f",
+  "_key": "!items!dtdC5ebeb46f621f",
+  "name": "Cleric",
+  "type": "class",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdCFd94e8732b9c",
+  "system": {
+    "description": "<p>The third step of the Cleric track, where a devoted caster grows into a true minister of the faith. It adds Channel Energy, Divine Ministration and True Grit to the Priest's holy magic across Abjuration, Divination, Healing, Necromancy and Transmutation.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 127
+    },
+    "level": 3,
+    "track": "Cleric",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "forbiddenLore"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Virgil's Guidance"
+      ],
+      "schools": [
+        {
+          "name": "Healing or Abjuration",
+          "value": 2
+        }
+      ],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "wil",
+      "int"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "forbiddenLore",
+      "medicae",
+      "politics",
+      "techUse",
+      "ballistics",
+      "weaponry",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Divine Ministration",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "True Grit",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Focus",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Channel Energy",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Abjuration",
+      "Divination",
+      "Healing",
+      "Necromancy",
+      "Transmutation"
+    ],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your maximum HP increases by 1.</p>",
+      "automation": "hpMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

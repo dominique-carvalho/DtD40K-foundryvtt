@@ -1,0 +1,128 @@
+{
+  "_id": "dtdC117751dead82",
+  "_key": "!items!dtdC117751dead82",
+  "name": "Stormtrooper",
+  "type": "class",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdCFd29e9d6f032",
+  "system": {
+    "description": "<p>The elite of the Guardsman track, a shock soldier who pairs heavy specialization with firearms and relentless grit to break enemy lines.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 140
+    },
+    "level": 5,
+    "track": "Guardsman",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Iron Jaw",
+        "Double Tap",
+        "Weapon Specialization"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "drive",
+      "pilot",
+      "weaponry",
+      "command"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Devastating Critical",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "True Grit",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sharpshooter",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Fan The Hammer",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Weapon Specialization",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Specialization",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Tin Star",
+      "Silent Scope",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Your Ranged attack tests get +1.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

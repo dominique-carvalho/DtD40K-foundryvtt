@@ -1,0 +1,107 @@
+{
+  "_id": "dtdC2cd15f3df044",
+  "_key": "!items!dtdC2cd15f3df044",
+  "name": "Berserker",
+  "type": "class",
+  "img": "icons/svg/blood.svg",
+  "folder": "dtdCFd66518142b0",
+  "system": {
+    "description": "<p>The final step of the Barbarian track, a frenzied killer whose Lightning Attacks and Devastating Criticals tear enemies apart while True Grit keeps them standing.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 122
+    },
+    "level": 5,
+    "track": "Barbarian",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Battle Rage",
+        "Cleave"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "con",
+      "wil"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "acrobatics",
+      "athletics",
+      "brawl",
+      "weaponry",
+      "animalKen",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Devastating Critical",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "True Grit",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Lightning Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Weapon Specialization",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Stone Dragon",
+      "Tiger Claw",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your melee damage increases by 1 on every hit.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

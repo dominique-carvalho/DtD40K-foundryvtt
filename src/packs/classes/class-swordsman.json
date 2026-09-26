@@ -1,0 +1,113 @@
+{
+  "_id": "dtdCf5acaedc3c2c",
+  "_key": "!items!dtdCf5acaedc3c2c",
+  "name": "Swordsman",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdCFd1ee77afc60",
+  "system": {
+    "description": "<p>The Fighter track opens with this all-round master of melee. Swordsmen draw fast, react quickly and put their strength behind every blow with Power Attack.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 135
+    },
+    "level": 1,
+    "track": "Fighter",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 1
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "weaponry",
+      "intimidation",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Quick Draw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Hardy",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Fast Reflexes",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Power Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Iron Heart",
+      "Diamond Mind",
+      "White Raven",
+      "Stone Dragon"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 on every Melee attack test.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

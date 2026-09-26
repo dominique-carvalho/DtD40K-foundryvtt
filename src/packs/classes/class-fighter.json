@@ -1,0 +1,129 @@
+{
+  "_id": "dtdC812bfff4d6d2",
+  "_key": "!items!dtdC812bfff4d6d2",
+  "name": "Fighter",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdCFd1ee77afc60",
+  "system": {
+    "description": "<p>A seasoned Fighter who has mastered melee, controlling the fight with Combat Master and Wall of Steel while taking punishment without flinching.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 137
+    },
+    "level": 4,
+    "track": "Fighter",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Swift Attack",
+        "Weapon Specialization",
+        "Jaded"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "weaponry",
+      "intimidation",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Fearless",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Iron Jaw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Combat Master",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Wall of Steel",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Cleave",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Iron Heart",
+      "Diamond Mind",
+      "White Raven",
+      "Stone Dragon"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Melee attack tests get +1.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

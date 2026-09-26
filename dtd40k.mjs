@@ -6,12 +6,14 @@ import { CharacterData } from "./module/data/character-data.mjs";
 import { RaceData } from "./module/data/race-data.mjs";
 import { ExaltationData } from "./module/data/exaltation-data.mjs";
 import { FeatData } from "./module/data/feat-data.mjs";
+import { ClassData } from "./module/data/class-data.mjs";
 import { DtdActor } from "./module/documents/actor.mjs";
 import { DtdItem } from "./module/documents/item.mjs";
 import { CharacterSheet } from "./module/apps/character-sheet.mjs";
 import { RaceSheet } from "./module/apps/race-sheet.mjs";
 import { ExaltationSheet } from "./module/apps/exaltation-sheet.mjs";
 import { FeatSheet } from "./module/apps/feat-sheet.mjs";
+import { ClassSheet } from "./module/apps/class-sheet.mjs";
 
 Hooks.once("init", () => {
   console.log("dtd40k | Initializing Dungeons the Dragoning system");
@@ -24,6 +26,7 @@ Hooks.once("init", () => {
   CONFIG.Item.dataModels.race = RaceData;
   CONFIG.Item.dataModels.exaltation = ExaltationData;
   CONFIG.Item.dataModels.feat = FeatData;
+  CONFIG.Item.dataModels.class = ClassData;
 
   // Initiative: 1d10 + Dexterity + Composure, no explosion (DtD 1.6 p. 241).
   CONFIG.Combat.initiative = {
@@ -53,6 +56,12 @@ Hooks.once("init", () => {
     types: ["feat"],
     makeDefault: true,
     label: "DTD.Sheet.Feat"
+  });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", ClassSheet, {
+    types: ["class"],
+    makeDefault: true,
+    label: "DTD.Sheet.Class"
   });
 
   foundry.applications.handlebars.loadTemplates(CharacterSheet.PARTIALS);

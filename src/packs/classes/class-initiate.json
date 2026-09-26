@@ -1,0 +1,85 @@
+{
+  "_id": "dtdCc281f8d4eeb5",
+  "_key": "!items!dtdCc281f8d4eeb5",
+  "name": "Initiate",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd3d80d0dc1c",
+  "system": {
+    "description": "<p>An always-available starter class that blends a little arcane power with a little faith. Initiates learn Minor Magic and Divine Ministration and belong to a religious organization.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 111
+    },
+    "level": 1,
+    "track": "",
+    "prerequisites": {
+      "skills": [],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "fel",
+      "int"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "forbiddenLore",
+      "medicae",
+      "crafts"
+    ],
+    "feats": [
+      {
+        "name": "Divine Ministration",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Hatred",
+        "subcategory": "Heretics",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Minor Magic",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Peer",
+        "subcategory": "Religious Organization",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Basic",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain a specialty in a skill of your choice.</p>",
+      "automation": "specialty",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

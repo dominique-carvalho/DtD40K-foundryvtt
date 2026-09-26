@@ -1,0 +1,114 @@
+{
+  "_id": "dtdC9cd289ff4870",
+  "_key": "!items!dtdC9cd289ff4870",
+  "name": "Paladin",
+  "type": "class",
+  "img": "icons/svg/angel.svg",
+  "folder": "dtdCFd34623d0231",
+  "system": {
+    "description": "<p>An armored holy knight of the Paladin track who holds the front line with Wall of Steel and blade mastery, backed by the standing of a religious order.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 158
+    },
+    "level": 4,
+    "track": "Paladin",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "forbiddenLore"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Divine Ministration"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "wil",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "forbiddenLore",
+      "medicae",
+      "athletics",
+      "weaponry",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Good Reputation",
+        "subcategory": "Religious Order",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Wall of Steel",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Blademaster",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "White Raven",
+      "Devoted Spirit",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain +1 AP whenever you are armored.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

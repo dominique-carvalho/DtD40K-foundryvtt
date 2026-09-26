@@ -1,0 +1,120 @@
+{
+  "_id": "dtdC73b14de1a74d",
+  "_key": "!items!dtdC73b14de1a74d",
+  "name": "Disciple",
+  "type": "class",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdCFdb5564e5415",
+  "system": {
+    "description": "<p>The Monk track's second step, deepening the unarmed discipline. Disciples channel ki into their blows, evade danger, meditate and sharpen their combat awareness.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 150
+    },
+    "level": 2,
+    "track": "Monk",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "acrobatics"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [
+        "Unarmed Warrior"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "wis"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "forbiddenLore",
+      "acrobatics",
+      "athletics",
+      "brawl",
+      "stealth",
+      "animalKen",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Improvisational Warrior",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Ki Strike",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Evasion",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Strong Minded",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Meditation",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Combat Sense",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Setting Sun",
+      "Shadow Hand",
+      "Diamond Mind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Wholeness of Body grants +1 more Armor.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

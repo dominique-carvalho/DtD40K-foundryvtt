@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFdee8da68050",
+  "_key": "!folders!dtdCFdee8da68050",
+  "name": "Assassin",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 10000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Assassin"
+    }
+  }
+}

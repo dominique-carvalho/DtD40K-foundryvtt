@@ -1,0 +1,129 @@
+{
+  "_id": "dtdCf6b3f9030436",
+  "_key": "!items!dtdCf6b3f9030436",
+  "name": "Outlaw",
+  "type": "class",
+  "img": "icons/svg/trap.svg",
+  "folder": "dtdCFd824f2a1072",
+  "system": {
+    "description": "<p>Second step of the Thief track, the criminal who strikes where it hurts. Outlaws land sneak attacks, react fast and slip out of harm's way with Evasion.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 165
+    },
+    "level": 2,
+    "track": "Thief",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "larceny"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Two Weapon Fighting"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "fel"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "perception",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "charm",
+      "deceive",
+      "disguise",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Sneak Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Light",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Fast Reflexes",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Evasion",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Blind Fighting",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Gain Access",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Shadow Hand",
+      "Diamond Mind",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Static Defense increases by +1.</p>",
+      "automation": "staticDefense",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

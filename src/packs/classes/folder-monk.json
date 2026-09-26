@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFdb5564e5415",
+  "_key": "!folders!dtdCFdb5564e5415",
+  "name": "Monk",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 130000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Monk"
+    }
+  }
+}

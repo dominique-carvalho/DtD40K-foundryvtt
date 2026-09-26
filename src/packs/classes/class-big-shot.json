@@ -1,0 +1,117 @@
+{
+  "_id": "dtdC8eb2571a1ec6",
+  "_key": "!items!dtdC8eb2571a1ec6",
+  "name": "Big Shot",
+  "type": "class",
+  "img": "icons/svg/explosion.svg",
+  "folder": "dtdCFdac2d70a126",
+  "system": {
+    "description": "<p>Entry point of the Heavy track: a tough bruiser who hauls heavy guns around. A Big Shot pours fire at distant foes with Storm of Iron and settles close-range scraps with bare fists.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 141
+    },
+    "level": 1,
+    "track": "Heavy",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "con",
+      "str",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "athletics",
+      "ballistics",
+      "brawl",
+      "drive",
+      "command",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Basic",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Storm of Iron",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Unarmed Warrior",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Jaded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Setting Sun"
+    ],
+    "gunKata": [
+      "Crisis Zone",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Gain +1 HP.</p>",
+      "automation": "hpMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

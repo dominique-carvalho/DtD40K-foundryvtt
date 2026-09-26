@@ -1,0 +1,118 @@
+{
+  "_id": "dtdC21aeca26062c",
+  "_key": "!items!dtdC21aeca26062c",
+  "name": "Courtier",
+  "type": "class",
+  "img": "icons/svg/coins.svg",
+  "folder": "dtdCFd0007f24f55",
+  "system": {
+    "description": "<p>Second step of the Courtier track: a polished social operator at home among nobles and high society. Courtiers master protocol, trade on their privilege and reputation, and know how to enjoy decadence.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 129
+    },
+    "level": 2,
+    "track": "Courtier",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "persuasion"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "scrutiny"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [
+        "Peer (Any)"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "cha",
+      "fel",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "commonLore",
+      "politics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "weaponry",
+      "charm",
+      "command",
+      "deceive",
+      "disguise",
+      "intimidation",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Protocol",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Chem Geld",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Courtier's Privilege",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Good Reputation",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Decadence",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 Resolve.</p>",
+      "automation": "resolveMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

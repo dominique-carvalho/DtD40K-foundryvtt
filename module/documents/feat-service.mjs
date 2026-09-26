@@ -2,6 +2,7 @@ import { CHARACTERISTICS, GROUPS, SKILLS } from "../config.mjs";
 import { activeGrants, buildFeatEffects, characteristicOptions, fullName, grantedByOf, grantPlan, needsFeatSelection,
   releasePlan, validateFeatAdd, validateFeatSelection, withSkillFocusName } from "../rules/feat.mjs";
 import { getRace } from "./race-service.mjs";
+import { priceFeat, recordEntry } from "./xp-service.mjs";
 
 /**
  * Adding, removing and granting feats, racial feats, assets and hindrances (spec 005, US2–US4).
@@ -131,8 +132,21 @@ export async function addFeat(actor, featItem, { selection } = {}) {
     if (!(await confirm("DTD.Feat.MissingDependencyTitle", `<p>${text}</p>`))) return null;
   }
 
+  // Bought feats and assets cost XP when the class lists allow them (spec 006, FR-018).
+  const price = await priceFeat(actor, featItem, chosen);
+  if (!price.ok) return null;
   const created = await createFeat(actor, featItem, chosen, { purchased: true });
   if (!created) return null;
+  if (price.cost) {
+    await recordEntry(actor, {
+      kind: featItem.system.category === "asset" ? "asset" : "feat",
+      label: name,
+      from: 0,
+      to: 1,
+      cost: price.cost,
+      itemId: created.id
+    });
+  }
   for (const notice of check.notices) {
     ui.notifications.info(game.i18n.format(`DTD.Feat.Notice.${notice.type}`, { count: notice.count ?? 0 }));
   }
@@ -167,9 +181,10 @@ export async function removeFeat(actor, itemId) {
  * @param {Item} origin  embedded item of the actor
  */
 export async function grantFeats(actor, origin) {
-  const grants = origin.type === "exaltation"
-    ? activeGrants(origin.system, actor.system.exaltation?.powerStat.value ?? 1)
-    : origin.system.grants ?? [];
+  let grants = origin.system.grants ?? [];
+  if (origin.type === "exaltation") grants = activeGrants(origin.system, actor.system.exaltation?.powerStat.value ?? 1);
+  // Class completion bonuses grant feats only once the class is completed (spec 006, research R4).
+  if (origin.type === "class") grants = origin.system.status === "completed" ? origin.system.completion.grants : [];
   if (!grants.length) return;
 
   // Feats whose only origins already left the actor are being released: treat them as absent.

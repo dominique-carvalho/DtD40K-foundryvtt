@@ -1,0 +1,109 @@
+{
+  "_id": "dtdC8ff4f6460693",
+  "_key": "!items!dtdC8ff4f6460693",
+  "name": "Runeblade",
+  "type": "class",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdCFdaebebd4a00",
+  "system": {
+    "description": "<p>The Arcane Knight track's battle mage, who fights up close with sword and spell together. Fueled by a Mana Generator, it learns Spell Parry and Blind Fighting and specializes in a chosen weapon.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 118
+    },
+    "level": 3,
+    "track": "Arcane Knight",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Mana Generator"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "wil",
+      "cha"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "acrobatics",
+      "athletics",
+      "weaponry",
+      "charm",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Extracurricular Study",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Blind Fighting",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Parry",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Medium",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Specialization",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Melee 3",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Focus Power TNs are 1 lower for you while using an Implement.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

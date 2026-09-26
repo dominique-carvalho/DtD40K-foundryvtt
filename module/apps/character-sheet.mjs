@@ -8,6 +8,9 @@ import { applyRace, getRace, reconfigureRace, removeRace } from "../documents/ra
 import { prepareAssetsContext, prepareExaltationContext } from "./exaltation-context.mjs";
 import { addFeat, removeFeat } from "../documents/feat-service.mjs";
 import { prepareFeatsContext } from "./feats-context.mjs";
+import { advanceInfo, prepareClassContext } from "./class-context.mjs";
+import { getCurrentClass, removeClass, startClass, uncompleteClass } from "../documents/class-service.mjs";
+import { advance, awardXp, undoXp } from "../documents/xp-service.mjs";
 import { needsChoice } from "../rules/race.mjs";
 import { buildDots, filterSkills, nextBaseValue, sanitizeDerivedMods } from "../rules/sheet.mjs";
 import { buildCharacteristicPool, buildSkillPool, formatPool, normalizePool } from "../rules/pool.mjs";
@@ -15,8 +18,9 @@ import { buildCharacteristicPool, buildSkillPool, formatPool, normalizePool } fr
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
 const TEMPLATE_ROOT = "systems/dtd40k/templates/actor/parts";
-const MODES = { EDIT: "edit", PLAY: "play" };
-const TAB_IDS = ["main", "traits"];
+// Advance mode spends XP (spec 006, research R7); edit mode stays free.
+const MODES = { EDIT: "edit", PLAY: "play", ADVANCE: "advance" };
+const TAB_IDS = ["main", "traits", "class"];
 
 /**
  * Split a specialties list into the stored ones (editable) and those added by feat effects.
@@ -74,7 +78,16 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       openFeat: CharacterSheet.#onOpenAsset,
       removeFeat: CharacterSheet.#onRemoveFeat,
       removeAsset: CharacterSheet.#onRemoveAsset,
-      toggleItemEffect: CharacterSheet.#onToggleItemEffect
+      toggleItemEffect: CharacterSheet.#onToggleItemEffect,
+      openClass: CharacterSheet.#onOpenAsset,
+      removeClass: CharacterSheet.#onRemoveClass,
+      uncompleteClass: CharacterSheet.#onUncompleteClass,
+      buyClassFeat: CharacterSheet.#onBuyClassFeat,
+      awardXp: CharacterSheet.#onAwardXp,
+      undoXp: CharacterSheet.#onUndoXp,
+      advanceCharacteristic: CharacterSheet.#onAdvance,
+      advanceSkill: CharacterSheet.#onAdvance,
+      advancePowerStat: CharacterSheet.#onAdvance
     }
   };
 
@@ -93,6 +106,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     tabs: { template: "templates/generic/tab-navigation.hbs" },
     main: { template: `${TEMPLATE_ROOT}/main.hbs` },
     traits: { template: `${TEMPLATE_ROOT}/traits.hbs` },
+    class: { template: `${TEMPLATE_ROOT}/class.hbs` },
     footer: { template: `${TEMPLATE_ROOT}/footer.hbs` }
   };
 
@@ -104,7 +118,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     `${TEMPLATE_ROOT}/dots.hbs`,
     `${TEMPLATE_ROOT}/exaltation.hbs`,
     `${TEMPLATE_ROOT}/assets.hbs`,
-    `${TEMPLATE_ROOT}/feats.hbs`
+    `${TEMPLATE_ROOT}/feats.hbs`,
+    `${TEMPLATE_ROOT}/advance-button.hbs`
   ];
 
   /** Skill search state, kept across re-renders. */
@@ -146,6 +161,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     const system = actor.system;
     const source = actor._source.system;
     const isEdit = this.mode === MODES.EDIT;
+    const isAdvance = this.mode === MODES.ADVANCE;
     const capped = system.capped ?? {};
 
     const percent = (value, max) => (max > 0 ? Math.clamp(Math.round((value / max) * 100), 0, 100) : 0);
@@ -163,6 +179,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
         pool: formatPool(normalizePool(buildCharacteristicPool({ characteristic: data.value }))),
         ...specialtyLists(data.specialties, source.characteristics[key].specialties),
         valuePath: `system.characteristics.${key}.value`,
+        advance: isAdvance ? advanceInfo(actor, "characteristic", key, source.characteristics[key].value) : null,
         specialtiesPath: `system.characteristics.${key}.specialties`
       };
     };
@@ -182,11 +199,19 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       system,
       isEdit,
       canToggle: actor.isOwner,
+      isAdvance,
+      isGM: game.user.isGM,
+      classContext: await prepareClassContext(actor),
+      currentClass: getCurrentClass(actor)?.name ?? "",
+      hasClasses: system.classState.hasClasses,
       canEditRace: actor.isOwner,
       // Individual racial modifiers are switched on and off by the GM (FR-010).
       canToggleEffects: game.user.isGM,
       race: await this.#prepareRace(),
       exaltation: await prepareExaltationContext(actor),
+      powerStatAdvance: isAdvance && system.exaltation
+        ? advanceInfo(actor, "powerStat", "", system.exaltation.powerStat.value)
+        : null,
       assets: await prepareAssetsContext(actor),
       featsContext: await prepareFeatsContext(actor),
       // Inputs of fields that racial effects can change show the base value (research R3).
@@ -234,6 +259,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
                 capped: capped[`skills.${key}`] ?? false,
                 ...specialtyLists(data.specialties, source.skills[key].specialties),
                 valuePath: `system.skills.${key}.value`,
+                advance: isAdvance ? advanceInfo(actor, "skill", key, source.skills[key].value) : null,
                 specialtiesPath: `system.skills.${key}.specialties`
               };
             })
@@ -302,6 +328,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       // Exaltations and Exalted Assets follow the race pattern (spec 004, FR-010, FR-022).
       let apply = null;
       if (item.type === "race") apply = () => applyRace(this.actor, item);
+      else if (item.type === "class") apply = () => startClass(this.actor, item);
       else if (item.type === "feat" && item.system.category !== "exaltedAsset") apply = () => addFeat(this.actor, item);
       else if (item.type === "exaltation") apply = () => applyExaltation(this.actor, item);
       else if (item.type === "feat" && item.system.category === "exaltedAsset") apply = () => addExaltedAsset(this.actor, item);
@@ -325,7 +352,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
   _onRender(context, options) {
     super._onRender(context, options);
     this.element.classList.toggle("mode-edit", context.isEdit);
-    this.element.classList.toggle("mode-play", !context.isEdit);
+    this.element.classList.toggle("mode-play", !context.isEdit && !context.isAdvance);
+    this.element.classList.toggle("mode-advance", context.isAdvance);
     this.#bindSpecialtyInputs();
     this.#bindSkillFilters();
   }
@@ -612,6 +640,80 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
    */
   static #onOpenAsset(event, target) {
     this.document.items.get(target.dataset.itemId)?.sheet.render(true);
+  }
+
+  /**
+   * Buy one point of a characteristic, skill or the Power Stat in advance mode (spec 006, FR-013).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onAdvance(event, target) {
+    if (!this.document.isOwner || this.mode !== MODES.ADVANCE) return;
+    const kind = { advanceCharacteristic: "characteristic", advanceSkill: "skill", advancePowerStat: "powerStat" }[target.dataset.action];
+    await advance(this.document, kind, target.dataset.key ?? "");
+  }
+
+  /**
+   * Remove a class (spec 006, FR-011).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRemoveClass(event, target) {
+    if (this.document.isOwner) await removeClass(this.document, target.dataset.itemId);
+  }
+
+  /**
+   * Undo the completion of a class — GM only (spec 006, FR-011).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onUncompleteClass(event, target) {
+    const item = this.document.items.get(target.dataset.itemId);
+    if (game.user.isGM && item) await uncompleteClass(this.document, item);
+  }
+
+  /**
+   * Buy a missing feat of the current class list, with its fixed sub-category (spec 006, R7).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onBuyClassFeat(event, target) {
+    if (!this.document.isOwner) return;
+    const pack = game.packs.get("dtd40k.feats");
+    const index = await pack.getIndex();
+    const entry = index.find((doc) => doc.name.toLowerCase() === target.dataset.name.toLowerCase());
+    if (!entry) return;
+    const feat = await pack.getDocument(entry._id);
+    const sub = target.dataset.subcategory?.trim();
+    const fixed = sub && !/^any$/i.test(sub);
+    const selection = fixed ? { subcategory: sub, characteristic: "", characteristic2: "", skill: "", specialty: "" } : undefined;
+    await addFeat(this.document, feat, { selection });
+  }
+
+  /**
+   * Award XP with a reason — GM only (spec 006, FR-016).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onAwardXp(event, target) {
+    const box = target.closest(".xp-award");
+    const amount = Number(box?.querySelector(".xp-award-amount")?.value);
+    await awardXp(this.document, amount, box?.querySelector(".xp-award-reason")?.value ?? "");
+  }
+
+  /**
+   * Undo an XP ledger entry (spec 006, FR-016).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onUndoXp(event, target) {
+    if (this.document.isOwner) await undoXp(this.document, target.dataset.entryId);
   }
 
   /**

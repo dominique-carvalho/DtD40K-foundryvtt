@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd0007f24f55",
+  "_key": "!folders!dtdCFd0007f24f55",
+  "name": "Courtier",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 60000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Courtier"
+    }
+  }
+}

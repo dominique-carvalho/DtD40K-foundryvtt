@@ -982,29 +982,30 @@
 /* ---------- Exaltation and feat item sheets (spec 004, FR-005) ---------- */
 
 .dtd40k.sheet.item.exaltation .window-content,
-.dtd40k.sheet.item.feat .window-content {
+.dtd40k.sheet.item.feat .window-content,
+.dtd40k.sheet.item.class .window-content {
   padding: 0 0.75rem 0.75rem;
   overflow-y: auto;
   color: var(--dtd-text);
 }
 
-.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body) {
+.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body, .class-sheet-body) {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat) .sheet-header {
+.dtd40k.item:is(.exaltation, .feat, .class) .sheet-header {
   flex-direction: row;
   align-items: center;
   gap: 0.75rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat) .profile-img[data-action] {
+.dtd40k.item:is(.exaltation, .feat, .class) .profile-img[data-action] {
   cursor: pointer;
 }
 
-.dtd40k.item:is(.exaltation, .feat) .item-name {
+.dtd40k.item:is(.exaltation, .feat, .class) .item-name {
   margin: 0;
   font-size: 1.4rem;
   height: auto;
@@ -1012,54 +1013,54 @@
   color: var(--dtd-text);
 }
 
-.dtd40k.item:is(.exaltation, .feat) input.item-name {
+.dtd40k.item:is(.exaltation, .feat, .class) input.item-name {
   width: 100%;
   border-bottom: 1px solid var(--dtd-border);
 }
 
-.dtd40k.item:is(.exaltation, .feat) .identity-line input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat, .class) .identity-line input[type="text"] {
   width: 6rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat) :is(.exaltation-section, .feat-section) {
+.dtd40k.item:is(.exaltation, .feat, .class) :is(.exaltation-section, .feat-section, .class-section) {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat) .form-group {
+.dtd40k.item:is(.exaltation, .feat, .class) .form-group {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat) .form-group > label:first-child {
+.dtd40k.item:is(.exaltation, .feat, .class) .form-group > label:first-child {
   flex: 0 0 11rem;
   font-weight: bold;
 }
 
-.dtd40k.item:is(.exaltation, .feat) .form-group.stacked {
+.dtd40k.item:is(.exaltation, .feat, .class) .form-group.stacked {
   flex-direction: column;
   align-items: stretch;
 }
 
-.dtd40k.item:is(.exaltation, .feat) :is(dl.exaltation-stats-list, dl.feat-stats) {
+.dtd40k.item:is(.exaltation, .feat, .class) :is(dl.exaltation-stats-list, dl.feat-stats, dl.class-stats) {
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: 0.25rem 0.75rem;
   margin: 0;
 }
 
-.dtd40k.item:is(.exaltation, .feat) dt {
+.dtd40k.item:is(.exaltation, .feat, .class) dt {
   font-weight: bold;
   color: var(--dtd-text-muted);
 }
 
-.dtd40k.item:is(.exaltation, .feat) dd {
+.dtd40k.item:is(.exaltation, .feat, .class) dd {
   margin: 0;
 }
 
-.dtd40k.item:is(.exaltation, .feat) .automation-tag {
+.dtd40k.item:is(.exaltation, .feat, .class) .automation-tag {
   font-size: 0.8rem;
   font-weight: normal;
   color: var(--dtd-text-subtle);
@@ -1067,7 +1068,7 @@
   letter-spacing: 0.04em;
 }
 
-.dtd40k.item:is(.exaltation, .feat) prose-mirror {
+.dtd40k.item:is(.exaltation, .feat, .class) prose-mirror {
   min-height: 5rem;
 }
 
@@ -1076,13 +1077,13 @@
   padding-left: 1.25rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat) .list-row {
+.dtd40k.item:is(.exaltation, .feat, .class) .list-row {
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat) .list-row input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat, .class) .list-row input[type="text"] {
   flex: 1;
 }
 
@@ -1090,7 +1091,7 @@
   width: 3.5rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat) .list-control {
+.dtd40k.item:is(.exaltation, .feat, .class) .list-control {
   cursor: pointer;
   margin-left: 0.3rem;
   font-size: 0.85rem;
@@ -1102,7 +1103,7 @@
   font-size: 1rem;
 }
 
-.dtd40k.item.exaltation .tag {
+.dtd40k.item:is(.exaltation, .class) .tag {
   display: inline-block;
   margin: 0 0.3rem 0.2rem 0;
   padding: 0 0.4rem;
@@ -1393,4 +1394,136 @@
 .dtd40k.feat-choice input[type="text"],
 .dtd40k.feat-choice select {
   width: 100%;
+}
+
+/* ---------- Class & XP tab and advance mode (spec 006) ---------- */
+
+.dtd40k .class-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dtd40k .xp-totals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.dtd40k .xp-available b {
+  font-size: 1.2rem;
+}
+
+.dtd40k .xp-summary.negative .xp-available {
+  color: var(--dtd-hp);
+}
+
+.dtd40k .xp-award {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+
+.dtd40k .xp-award input[type="number"] {
+  width: 5rem;
+}
+
+.dtd40k .xp-award .xp-award-reason {
+  flex: 1;
+}
+
+.dtd40k .class-card {
+  padding: 0.4rem 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 4px;
+}
+
+.dtd40k .class-card.current {
+  border-color: var(--dtd-accent);
+}
+
+.dtd40k .class-card header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.dtd40k .class-card header a[data-action="openClass"] {
+  font-weight: bold;
+  flex: 1;
+}
+
+.dtd40k .class-feats {
+  margin: 0.3rem 0;
+  padding: 0;
+  list-style: none;
+  columns: 2;
+}
+
+.dtd40k .class-feats li {
+  break-inside: avoid;
+  padding: 0.1rem 0;
+}
+
+.dtd40k .class-feats li.owned i {
+  color: var(--dtd-resolve);
+}
+
+.dtd40k .class-feats li.blocked {
+  color: var(--dtd-text-subtle);
+  text-decoration: line-through;
+}
+
+.dtd40k .class-buy {
+  margin-left: 0.3rem;
+  font-size: 0.75rem;
+}
+
+.dtd40k .xp-entries {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k .xp-entries li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  padding: 0.15rem 0;
+  border-bottom: 1px dotted var(--dtd-border);
+}
+
+.dtd40k .xp-entries .xp-cost {
+  min-width: 3.5rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.dtd40k .xp-entries li.award .xp-cost {
+  color: var(--dtd-resolve);
+}
+
+.dtd40k .xp-entries .xp-label {
+  flex: 1;
+}
+
+.dtd40k .advance-button {
+  margin-left: 0.3rem;
+  padding: 0 0.3rem;
+  border: 1px solid var(--dtd-accent);
+  border-radius: 3px;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.dtd40k .advance-button.doubled {
+  border-style: dashed;
+}
+
+.dtd40k .advance-button.refused {
+  border-color: var(--dtd-border);
+  color: var(--dtd-text-subtle);
 }

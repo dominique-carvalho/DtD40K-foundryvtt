@@ -1,0 +1,118 @@
+{
+  "_id": "dtdC7d9652b1141f",
+  "_key": "!items!dtdC7d9652b1141f",
+  "name": "Sell-Steel",
+  "type": "class",
+  "img": "icons/svg/cowled.svg",
+  "folder": "dtdCFdee8da68050",
+  "system": {
+    "description": "<p>First class of the Assassin track: a fast, aggressive fighter who travels light and uses both guns and blades. Sell-Steels are paranoid, fight well while blinded and use a weapon in each hand.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 114
+    },
+    "level": 1,
+    "track": "Assassin",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry",
+            "ballistics"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "str",
+      "int"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "perception",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "charm",
+      "deceive",
+      "disguise",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Paranoia",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Blind Fighting",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Feint",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Two Weapon Fighting",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Shadow Hand",
+      "Setting Sun"
+    ],
+    "gunKata": [
+      "Clay Pigeon",
+      "Silent Scope"
+    ],
+    "completion": {
+      "text": "<p>Gain +1 on all initiative rolls.</p>",
+      "automation": "initiative",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

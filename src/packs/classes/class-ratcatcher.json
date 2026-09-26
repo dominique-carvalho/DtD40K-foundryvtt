@@ -1,0 +1,96 @@
+{
+  "_id": "dtdCedc3448d780b",
+  "_key": "!items!dtdCedc3448d780b",
+  "name": "Ratcatcher",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd3d80d0dc1c",
+  "system": {
+    "description": "<p>An always-available starter class for hardy lowlifes with street sense and basic skills. Ratcatchers sleep lightly, fight in the dark and keep a familiar critter at their side.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 113
+    },
+    "level": 1,
+    "track": "",
+    "prerequisites": {
+      "skills": [],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "cmp",
+      "wis"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "crafts",
+      "animalKen",
+      "commonLore",
+      "perception",
+      "larceny",
+      "stealth",
+      "deceive",
+      "performer",
+      "disguise"
+    ],
+    "feats": [
+      {
+        "name": "Common Sense",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Fast Reflexes",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Blind Fighting",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Light Sleeper",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Obtain Familiar",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Basic",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your maximum Hit Points rise by +2.</p>",
+      "automation": "hpMax",
+      "value": 2,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

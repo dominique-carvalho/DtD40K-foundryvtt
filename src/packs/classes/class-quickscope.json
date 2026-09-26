@@ -1,0 +1,104 @@
+{
+  "_id": "dtdCa844ff2a7d46",
+  "_key": "!items!dtdCa844ff2a7d46",
+  "name": "Quickscope",
+  "type": "class",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdCFd6fe71ac156",
+  "system": {
+    "description": "<p>An Operator sniper who strikes from hiding with foresight and deadly specialization, then slips away unseen.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 155
+    },
+    "level": 4,
+    "track": "Operator",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "perception"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Deadeye Shot"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "dex",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "techUse",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "command",
+      "disguise",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Foresight",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Stealth",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Weapon Specialization",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sharpshooter",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Clay Pigeon",
+      "Tin Star",
+      "Silent Scope"
+    ],
+    "completion": {
+      "text": "<p>You get +2 on Stealth tests made to stay hidden while you remain motionless.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

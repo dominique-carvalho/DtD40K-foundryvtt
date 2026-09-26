@@ -1,0 +1,139 @@
+{
+  "_id": "dtdCee6db6c4a03f",
+  "_key": "!items!dtdCee6db6c4a03f",
+  "name": "Freeblade",
+  "type": "class",
+  "img": "icons/svg/cowled.svg",
+  "folder": "dtdCFdee8da68050",
+  "system": {
+    "description": "<p>An Assassin-track killer for hire, quick and lightly equipped with guns or blades, who strikes from the shadows with improved sneak attacks and a bit of luck.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 115
+    },
+    "level": 4,
+    "track": "Assassin",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry",
+            "ballistics"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Back Stab",
+        "Sneak Attack"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "str",
+      "int"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "perception",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "charm",
+      "deceive",
+      "disguise",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Crack Shot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Crushing Blow",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Improved Sneak Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Luck",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Jaded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Weapon Focus",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Shadow Hand",
+      "Setting Sun"
+    ],
+    "gunKata": [
+      "Clay Pigeon",
+      "Silent Scope"
+    ],
+    "completion": {
+      "text": "<p>Your initiative rolls get +1.</p>",
+      "automation": "initiative",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

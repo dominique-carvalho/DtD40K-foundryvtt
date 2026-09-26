@@ -8,12 +8,14 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
 
 ## Recursos (versão 0.1.0)
 
-- **Ficha de personagem** no layout clássico da ficha oficial, com dois modos:
+- **Ficha de personagem** no layout clássico da ficha oficial, com três modos:
   - **Edição** — características na grade 3×3 (Power / Finesse / Resistance × Mental / Físico /
     Social) e 27 perícias em 3 colunas, com pontos clicáveis, especialidades e ajustes do Mestre
     (bônus e substituição dos valores derivados).
   - **Jogo** — cabeçalho fixo com HP, Resolve, defesas e Hero Points; perícias com busca e filtro
     "só treinadas"; clique para rolar, com a parada (ex.: `6k3`) ao lado de cada item.
+  - **Evolução** — como o modo Jogo, com um botão `+custo` em cada característica, perícia e no Power
+    Stat para comprar com XP (sem cobrança no modo Edição).
 - **Valores derivados** calculados automaticamente: Static Defense, Hit Points, Mental Defense,
   Resolve, Speed, Resilience e Fatigue máxima; iniciativas de combate e social no rodapé.
 - **Rolagem Roll & Keep**: 10 explode e soma no mesmo dado, conversão acima de 10 dados, perícia
@@ -34,6 +36,12 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   grupo, confere repetição, raça, dependências e o limite de 2 hindrances (o Mestre pode incluir mesmo
   assim), aplica 15 efeitos simples como modificadores desligáveis e concede automaticamente os feats que
   raças, exaltações e assets dão — removidos junto com a origem.
+- **Classes e XP**: compêndio *Classes* com as 103 classes do cap. 6 da 7.7a (18 trilhas e 13 avulsas).
+  Arrastar uma classe para a ficha confere Level e pré-requisitos (o Mestre pode iniciar mesmo assim); a aba
+  *Classe e XP* mostra o progresso nos feats obrigatórios, conclui a classe com o bônus (os simples como
+  modificadores desligáveis, feats concedidos) e deriva o Level da classe mais alta. O modo **Evolução**
+  compra características, perícias, feats e Power Stat com os custos da 7.7a, restritos às listas da classe
+  (Free Study em dobro), com histórico de XP, prêmios do Mestre e desfazer.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos
@@ -112,7 +120,7 @@ npm run build:packs
 - Depois do build, abra o Foundry e confira o compêndio (ex.: 16 raças).
 - Nunca edite `packs/` à mão; altere os JSON em `src/packs/` e rode o build de novo.
 - Para editar um compêndio pelo Foundry: clique com o botão direito no compêndio → "Alternar trava de edição", edite os itens, feche o Foundry e rode `npm run extract:packs` para gravar as mudanças de volta em `src/packs/` (depois revise o diff e faça o commit).
-- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a).
+- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7) e `classes` (103 classes do cap. 6).
 
 ## Licença
 

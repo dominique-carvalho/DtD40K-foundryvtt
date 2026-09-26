@@ -1,0 +1,123 @@
+{
+  "_id": "dtdCc22917880c65",
+  "_key": "!items!dtdCc22917880c65",
+  "name": "Mech-Wright",
+  "type": "class",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdCFd473201da26",
+  "system": {
+    "description": "<p>The Techpriest track begins with this engineer who starts trading flesh for machinery. Mech-Wrights receive Mechanicus implants and can unleash a Luminen Charge.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 162
+    },
+    "level": 1,
+    "track": "Techpriest",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "techUse"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "crafts"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "wis",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "commonLore",
+      "crafts",
+      "forbiddenLore",
+      "medicae",
+      "techUse",
+      "ballistics",
+      "drive",
+      "pilot",
+      "weaponry",
+      "command"
+    ],
+    "feats": [
+      {
+        "name": "Mechanicus Implants",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Jaded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Luminen Charge",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain the Upgraded (Rare) feat.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [
+        {
+          "name": "Upgraded",
+          "subcategory": "Rare",
+          "choose": false
+        }
+      ],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

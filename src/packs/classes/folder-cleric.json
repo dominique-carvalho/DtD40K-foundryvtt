@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd94e8732b9c",
+  "_key": "!folders!dtdCFd94e8732b9c",
+  "name": "Cleric",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 50000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Cleric"
+    }
+  }
+}

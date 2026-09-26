@@ -1,0 +1,114 @@
+{
+  "_id": "dtdCd1e369fd77ae",
+  "_key": "!items!dtdCd1e369fd77ae",
+  "name": "Protector",
+  "type": "class",
+  "img": "icons/svg/angel.svg",
+  "folder": "dtdCFd34623d0231",
+  "system": {
+    "description": "<p>The Paladin track's second class, the holy warrior who shields others. Protectors guard their allies, forge a Divine Bond and serve a religious order.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 156
+    },
+    "level": 2,
+    "track": "Paladin",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "forbiddenLore"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Pure Faith"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "wil",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "forbiddenLore",
+      "medicae",
+      "athletics",
+      "weaponry",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Peer",
+        "subcategory": "Religious Order",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Guardian",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Divine Bond",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Divine Grace",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "White Raven",
+      "Devoted Spirit",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 AP whenever you wear armor.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

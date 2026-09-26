@@ -1,0 +1,100 @@
+{
+  "_id": "dtdC69497427e03b",
+  "_key": "!items!dtdC69497427e03b",
+  "name": "Operations Officer",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd3d80d0dc1c",
+  "system": {
+    "description": "<p>A ship-crew class for the engineer who keeps a vessel running. Operations Officers work miracles on failing systems and bodge repairs together from whatever is at hand.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 171
+    },
+    "level": 2,
+    "track": "",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "techUse"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "crafts"
+          ],
+          "value": 1
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "wis",
+      "wil"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "command",
+      "commonLore",
+      "crafts",
+      "pilot",
+      "techUse"
+    ],
+    "feats": [
+      {
+        "name": "Miracle Worker",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Bodge Together",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Hardy",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Jack of All Trades",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Any ship whose Chief of Engineering you are gains +1 Shield Regen.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,66 @@
+<div class="class-sheet-body">
+  {{#if lockedPackHint}}
+  <p class="notification info locked-pack-hint"><i class="fa-solid fa-lock" inert></i> {{lockedPackHint}}</p>
+  {{/if}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}" {{#if editable}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if editable}}
+      <input class="item-name" type="text" name="name" value="{{item.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="item-name">{{item.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <span>{{localize "TYPES.Item.class"}}</span>
+        <label>{{localize "DTD.Class.Level"}}
+          {{#if editable}}<input type="number" name="system.level" value="{{system.level}}" min="1" max="5" step="1">{{else}}<b>{{system.level}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Class.Track"}}
+          {{#if editable}}<input type="text" name="system.track" value="{{system.track}}">{{else}}<b>{{#if system.track}}{{system.track}}{{else}}—{{/if}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Race.Page"}} <b>{{system.source.page}}</b></label>
+      </div>
+    </div>
+  </header>
+
+  <section class="class-section">
+    {{#if editable}}
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.description}}}</div>{{/if}}
+  </section>
+
+  <section class="class-section">
+    <dl class="class-stats">
+      <dt>{{localize "DTD.Class.Prerequisites"}}</dt>
+      <dd>{{#each prerequisites as |req|}}<span class="tag">{{req}}</span>{{else}}—{{/each}}</dd>
+      <dt>{{localize "DTD.Class.Characteristics"}}</dt><dd>{{characteristicsText}}</dd>
+      <dt>{{localize "DTD.Class.Skills"}}</dt><dd>{{skillsText}}</dd>
+      {{#each schools as |school|}}<dt>{{localize school.label}}</dt><dd>{{school.text}}</dd>{{/each}}
+    </dl>
+  </section>
+
+  <section class="class-section">
+    <h2 class="section-title">{{localize "DTD.Class.Feats"}}</h2>
+    <dl class="class-stats">
+      <dt>{{localize "DTD.Class.Mandatory"}}</dt><dd>{{#each mandatory as |name|}}<span class="tag">{{name}}</span>{{else}}—{{/each}}</dd>
+      {{#each choices as |choice|}}
+      <dt>{{localize "DTD.Class.Choice"}}{{#unless choice.mandatory}} ({{localize "DTD.Class.Optional"}}){{/unless}}</dt><dd><span class="tag">{{choice.text}}</span></dd>
+      {{/each}}
+      <dt>{{localize "DTD.Class.Optional"}}</dt><dd>{{#each optional as |name|}}<span class="tag">{{name}}</span>{{else}}—{{/each}}</dd>
+    </dl>
+  </section>
+
+  <section class="class-section">
+    <h2 class="section-title">{{localize "DTD.Class.CompletionBonus"}}</h2>
+    {{#if editable}}
+    <prose-mirror name="system.completion.text" value="{{system.completion.text}}" toggled>{{{enriched.completion}}}</prose-mirror>
+    <div class="form-group"><label>{{localize "DTD.Class.Automation"}}</label>
+      <select name="system.completion.automation">{{selectOptions automationOptions selected=system.completion.automation localize=true}}</select>
+    </div>
+    <div class="form-group"><label>{{localize "DTD.Class.Value"}}</label><input type="number" name="system.completion.value" value="{{system.completion.value}}" step="1"></div>
+    {{else}}
+    <div class="enriched">{{{enriched.completion}}}</div>
+    <p><span class="automation-tag">{{localize automationLabel}}</span>{{#if grantsText}} · {{localize "DTD.Feat.Grants"}}: {{grantsText}}{{/if}}</p>
+    {{/if}}
+  </section>
+</div>

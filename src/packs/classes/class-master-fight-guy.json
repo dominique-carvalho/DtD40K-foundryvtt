@@ -1,0 +1,128 @@
+{
+  "_id": "dtdC1b276aa28dfc",
+  "_key": "!items!dtdC1b276aa28dfc",
+  "name": "Master Fight Guy",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdCFd1ee77afc60",
+  "system": {
+    "description": "<p>The ultimate melee warrior of the Fighter track, striking with Lightning Attacks, counters and blademaster technique across four Sword Schools.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 137
+    },
+    "level": 5,
+    "track": "Fighter",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Swift Attack",
+        "Combat Master"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "weaponry",
+      "intimidation",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Counter Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "True Grit",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Blademaster",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Lightning Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Devastating Critical",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Weapon Specialization",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Weapon Specialization",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Iron Heart",
+      "Diamond Mind",
+      "White Raven",
+      "Stone Dragon"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Melee attack tests get +1.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

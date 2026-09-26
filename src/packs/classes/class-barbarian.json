@@ -1,0 +1,119 @@
+{
+  "_id": "dtdCca92f9d3fb0d",
+  "_key": "!items!dtdCca92f9d3fb0d",
+  "name": "Barbarian",
+  "type": "class",
+  "img": "icons/svg/blood.svg",
+  "folder": "dtdCFd66518142b0",
+  "system": {
+    "description": "<p>A raging melee brute of the Barbarian track who shrugs off blows with Iron Jaw and Diamond Body, cleaving through foes while in a Battle Rage.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 122
+    },
+    "level": 4,
+    "track": "Barbarian",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Crushing Blow",
+        "Frenzy"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "con",
+      "wil"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "acrobatics",
+      "athletics",
+      "brawl",
+      "weaponry",
+      "animalKen",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Battle Rage",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Fearless",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Iron Jaw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Cleave",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Diamond Body",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Stone Dragon",
+      "Tiger Claw",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your melee damage increases by 1 on every hit.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

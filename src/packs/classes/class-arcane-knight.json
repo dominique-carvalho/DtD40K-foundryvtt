@@ -1,0 +1,115 @@
+{
+  "_id": "dtdCade65ac6acfe",
+  "_key": "!items!dtdCade65ac6acfe",
+  "name": "Arcane Knight",
+  "type": "class",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdCFdaebebd4a00",
+  "system": {
+    "description": "<p>A battle-mage of the Arcane Knight track who fuses spellcraft and swordplay, firing Sword Beams from the blade and fighting in the Daggerspell Stance.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 119
+    },
+    "level": 4,
+    "track": "Arcane Knight",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Spell Parry"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "wil",
+      "cha"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "acrobatics",
+      "athletics",
+      "weaponry",
+      "charm",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Extracurricular Study",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Swift Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Touch Spell Specialization",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Sword Beam",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Daggerspell Stance",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Melee 1",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>While casting through an Implement, your Focus Power TNs drop by 1.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

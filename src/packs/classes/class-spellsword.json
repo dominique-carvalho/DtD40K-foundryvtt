@@ -1,0 +1,107 @@
+{
+  "_id": "dtdC20fbb1429671",
+  "_key": "!items!dtdC20fbb1429671",
+  "name": "Spellsword",
+  "type": "class",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdCFdaebebd4a00",
+  "system": {
+    "description": "<p>First class of the Arcane Knight track, a dabbler in both blade and spell. Spellswords imbue their weapon with arcane power and brand foes with an Arcane Mark.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 117
+    },
+    "level": 1,
+    "track": "Arcane Knight",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "wil",
+      "cha"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "acrobatics",
+      "athletics",
+      "weaponry",
+      "charm",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Extracurricular Study",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Arcane Blade",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Arcane Mark",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Tested",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Light",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Basic",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Focus Power TNs drop by 1 while you use an Implement.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

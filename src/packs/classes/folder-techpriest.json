@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd473201da26",
+  "_key": "!folders!dtdCFd473201da26",
+  "name": "Techpriest",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 170000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Techpriest"
+    }
+  }
+}

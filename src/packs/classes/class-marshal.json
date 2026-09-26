@@ -1,0 +1,134 @@
+{
+  "_id": "dtdCdba6a098edba",
+  "_key": "!items!dtdCdba6a098edba",
+  "name": "Marshal",
+  "type": "class",
+  "img": "icons/svg/castle.svg",
+  "folder": "dtdCFd97d6f8d323",
+  "system": {
+    "description": "<p>A senior Sheriff who hunts outlaws across the frontier, pairing sharp gunplay with combat mastery and a refusal to fall.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 161
+    },
+    "level": 4,
+    "track": "Sheriff",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "command"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "intimidation"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Fan The Hammer"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "cha",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "medicae",
+      "perception",
+      "politics",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "drive",
+      "stealth",
+      "animalKen",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Crack Shot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Combat Master",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Death Before Defeat",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Specialization",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Expert Tracker",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Two Weapon Fighting",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Clay Pigeon",
+      "Tin Star",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Your Backing (Law Enforcement) rises by 1, capped at 5.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

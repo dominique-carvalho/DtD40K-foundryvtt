@@ -1,0 +1,120 @@
+{
+  "_id": "dtdCc7c826385752",
+  "_key": "!items!dtdCc7c826385752",
+  "name": "Hunter",
+  "type": "class",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdCFd6fe71ac156",
+  "system": {
+    "description": "<p>First class of the Operator track, the dedicated sniper. Hunters stay patient and hidden, steady their aim with Trance and focus on a single favored weapon.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 153
+    },
+    "level": 1,
+    "track": "Operator",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "perception"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 1
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "dex",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "techUse",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "command",
+      "disguise",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Catfall",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Lead Fingers",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Ranged 1",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Ranged 2",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Trance",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Zen Shooting",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Clay Pigeon",
+      "Tin Star",
+      "Silent Scope"
+    ],
+    "completion": {
+      "text": "<p>Gain +2 on Stealth tests made to stay hidden while you remain motionless.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -145,3 +145,14 @@ describe("feat constants (005)", () => {
     expect(DTD.FEAT_REQUIREMENT_TYPES).toEqual(["feat", "racePower"]);
   });
 });
+
+describe("class and XP constants (006)", () => {
+  it("lists the completion automations, the class states and the XP costs of pp. 15–16", () => {
+    expect(DTD.CLASS_COMPLETION).toEqual(["none", "hpMax", "initiative", "resolveMax", "staticDefense", "specialty", "skillDot"]);
+    expect(DTD.CLASS_STATUS).toEqual(["current", "completed"]);
+    expect(DTD.XP_COSTS).toEqual({ characteristic: 200, newSkill: 100, skill: 50, feat: 100, asset: 100, powerStat: 300 });
+    expect(DTD.STARTING_XP).toBe(600);
+    expect(DTD.FREE_STUDY_MULTIPLIER).toBe(2);
+    expect(DTD.XP_KINDS).toEqual(["characteristic", "skill", "feat", "asset", "powerStat"]);
+  });
+});

@@ -1,0 +1,122 @@
+{
+  "_id": "dtdCfabd88a3540b",
+  "_key": "!items!dtdCfabd88a3540b",
+  "name": "Stubjack",
+  "type": "class",
+  "img": "icons/svg/trap.svg",
+  "folder": "dtdCFd824f2a1072",
+  "system": {
+    "description": "<p>The last step of the Thief track, a slippery criminal who sidesteps attacks and punishes foes with improved back stabs and devastating criticals.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 167
+    },
+    "level": 5,
+    "track": "Thief",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "larceny"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Back Stab"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "fel"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "perception",
+      "techUse",
+      "acrobatics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "charm",
+      "deceive",
+      "disguise",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Step Aside",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Fearless",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Back Stab",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Devastating Critical",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Raven's Eye",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Shadow Hand",
+      "Diamond Mind",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Static Defense increases by 1.</p>",
+      "automation": "staticDefense",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

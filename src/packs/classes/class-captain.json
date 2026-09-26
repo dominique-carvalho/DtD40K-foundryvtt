@@ -1,0 +1,108 @@
+{
+  "_id": "dtdC5a0397180f92",
+  "_key": "!items!dtdC5a0397180f92",
+  "name": "Captain",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd3d80d0dc1c",
+  "system": {
+    "description": "<p>A starship commander who leads from the bridge through presence, politics and persuasion. Its feats, such as Acceptable Losses, Lend Expertise and Luck, focus on steering a crew and weighing lives in the heat of command.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 168
+    },
+    "level": 3,
+    "track": "",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "command"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "politics"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "persuasion"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "fel",
+      "cha",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "scrutiny",
+      "politics",
+      "persuasion",
+      "perception",
+      "pilot",
+      "intimidation",
+      "command",
+      "charm"
+    ],
+    "feats": [
+      {
+        "name": "Acceptable Losses",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Lend Expertise",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Luck",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Common Sense",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Strong Minded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Receive one Specialty of your choice in a Social Skill at no cost.</p>",
+      "automation": "specialty",
+      "value": 0,
+      "skillGroup": "social",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,3 +1,4 @@
+import { syncClassCompletion } from "./class-service.mjs";
 import { grantFeats, releaseGrants } from "./feat-service.mjs";
 
 /**
@@ -35,8 +36,14 @@ export class DtdItem extends Item {
    */
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
-    if (userId !== game.user.id || this.parent?.type !== "character" || !this.system.grants?.length) return;
-    grantFeats(this.parent, this).catch((error) => console.error("dtd40k | Could not grant feats", error));
+    if (userId !== game.user.id || this.parent?.type !== "character") return;
+    const actor = this.parent;
+    const work = async () => {
+      if (this.type !== "class" && this.system.grants?.length) await grantFeats(actor, this);
+      // A new feat may complete the current class (spec 006, research R3).
+      if (this.type === "feat") await syncClassCompletion(actor);
+    };
+    work().catch((error) => console.error("dtd40k | Could not update granted feats or class progress", error));
   }
 
   /**

@@ -1,0 +1,127 @@
+{
+  "_id": "dtdCa103d381811c",
+  "_key": "!items!dtdCa103d381811c",
+  "name": "Guardsman",
+  "type": "class",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdCFd29e9d6f032",
+  "system": {
+    "description": "<p>The second class of the Guardsman track, turning a conscript into a seasoned rifleman. Guardsmen fire twice in quick succession, land precise shots and hit targets at long range.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 138
+    },
+    "level": 2,
+    "track": "Guardsman",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [
+        "Quick Draw",
+        "Sound Constitution"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "drive",
+      "pilot",
+      "weaponry",
+      "command"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Double Tap",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Crack Shot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Far Shot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Tin Star",
+      "Silent Scope",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Gain +1 on every Ranged attack test.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

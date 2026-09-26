@@ -1,0 +1,119 @@
+{
+  "_id": "dtdC48daee1afa16",
+  "_key": "!items!dtdC48daee1afa16",
+  "name": "Magos",
+  "type": "class",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdCFd473201da26",
+  "system": {
+    "description": "<p>The pinnacle of the Techpriest track, a cybernetic sage who calls metal to their hand with Ferric Summons and holds vast technical knowledge.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 164
+    },
+    "level": 5,
+    "track": "Techpriest",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "techUse"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "crafts"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Luminen Blast"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "wis",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "commonLore",
+      "crafts",
+      "forbiddenLore",
+      "medicae",
+      "techUse",
+      "ballistics",
+      "drive",
+      "pilot",
+      "weaponry",
+      "command"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Ferric Summons",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Strong Minded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Expanded Knowledge",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Upgraded",
+        "subcategory": "Rare",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain the Upgraded feat at the Artifact tier.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [
+        {
+          "name": "Upgraded",
+          "subcategory": "Artifact",
+          "choose": false
+        }
+      ],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,112 @@
+{
+  "_id": "dtdC5f529338052e",
+  "_key": "!items!dtdC5f529338052e",
+  "name": "Savage",
+  "type": "class",
+  "img": "icons/svg/blood.svg",
+  "folder": "dtdCFd66518142b0",
+  "system": {
+    "description": "<p>The Barbarian track's second class, a relentless and hardened brawler. Savages launch furious assaults and fortify their body through Constitution.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 120
+    },
+    "level": 2,
+    "track": "Barbarian",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [
+        "Frenzy"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "con",
+      "wil"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "acrobatics",
+      "athletics",
+      "brawl",
+      "weaponry",
+      "animalKen",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Hardy",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Quick Draw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Light Sleeper",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Furious Assault",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Wholeness of Body",
+        "subcategory": "Constitution",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Stone Dragon",
+      "Tiger Claw",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 to all melee damage.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

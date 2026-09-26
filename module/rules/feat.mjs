@@ -99,6 +99,19 @@ export function validateFeatSelection(system, selection, { characteristics }) {
   return { valid: true };
 }
 
+/**
+ * Skill Focus is taken once per skill specialty: its sub-category becomes "<Skill>: <specialty>",
+ * so the full name tells the copies apart ("Skill Focus (Pilot: Starships)").
+ * @param {object} system
+ * @param {FeatSelection} selection
+ * @param {string} skillLabel  localized name of the chosen skill
+ * @returns {FeatSelection}
+ */
+export function withSkillFocusName(system, selection, skillLabel) {
+  if (system.automation !== "skillFocus" || !selection.specialty?.trim()) return selection;
+  return { ...selection, subcategory: `${skillLabel}: ${selection.specialty.trim()}` };
+}
+
 /** Hindrances the book asks for in exchange of an asset (Sturdy p. 207; Veteran o' the Wheel p. 207). */
 const EXTRA_HINDRANCES = { sturdy: 2, veteran: 1 };
 

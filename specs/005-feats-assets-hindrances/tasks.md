@@ -69,7 +69,7 @@ antes e confirmar que falham. UI: roteiro manual do quickstart.
 - [X] T017 [US1] Em `templates/item/feat-sheet.hbs` e `module/apps/feat-sheet.mjs`: campos novos por categoria (raça, XP concedido, repetível, grupo + opções como tags, dependências e concessões como listas editáveis, automação `FEAT_AUTOMATION`), a escolha feita no personagem (subcategoria, característica, perícia, especialidade) e somente leitura com texto formatado; `_processFormData` para as listas
 - [X] T018 [P] [US1] i18n em `lang/*.json`: `DTD.Feat.{Feats, Assets, Hindrances, XpCost, XpGranted, Repeatable, Group, Options, Subcategory, Requires, Grants, Choose, Race}`
 - [X] T019 [P] [US1] Estilos da ficha de feat em `styles/dtd40k.css` (listas de dependências/concessões)
-- [ ] T020 [US1] Validar quickstart passos 1–3 **conferindo antes o índice do pack compilado no Foundry** (`index.size === 274`) e registrar em `quickstart.md`
+- [X] T020 [US1] Validar quickstart passos 1–3 **conferindo antes o índice do pack compilado no Foundry** (`index.size === 274`) e registrar em `quickstart.md`
 
 **Checkpoint**: compêndio Feats utilizável (MVP)
 
@@ -94,7 +94,7 @@ antes e confirmar que falham. UI: roteiro manual do quickstart.
 - [X] T026 [US2] Em `module/apps/character-sheet.mjs`: `_onDropItem` desvia `feat` com `category !== "exaltedAsset"` para `addFeat`; `_prepareContext` expõe `feats`; ações `openFeat`, `removeFeat`; `toggleItemEffect` já cobre os efeitos
 - [X] T027 [P] [US2] i18n: `DTD.Feat.{DropHint, Remove, RemoveConfirm, GMOverride, MissingDependency, CreationOnly, ExtraHindrances, HindranceCount, WrongRace, ChooseTitle, SubcategoryHint, Error.*}`
 - [X] T028 [P] [US2] Estilos das seções de feats na aba Traits e do diálogo em `styles/dtd40k.css`
-- [ ] T029 [US2] Validar quickstart passos 4–9 e registrar
+- [X] T029 [US2] Validar quickstart passos 4–9 e registrar
 
 **Checkpoint**: feats, assets e hindrances adicionáveis com as regras do livro
 
@@ -119,7 +119,7 @@ antes e confirmar que falham. UI: roteiro manual do quickstart.
 - [X] T035 [US3] Especialidades base × final (research R5): em `character-sheet.mjs` o contexto de características/perícias separa as especialidades do `_source` (com remover) das vindas de efeitos (marcadas, sem remover); `#onAddSpecialty`/`#onRemoveSpecialty` leem o `_source`; atualizar `templates/actor/parts/specialties.hbs`
 - [X] T036 [US3] Iniciativa: `initiativeBonus` do rodapé em `character-sheet.mjs` soma `system.modifiers.initiative`
 - [X] T037 [P] [US3] i18n: `DTD.Feat.{Effect, ChooseCharacteristic, ChooseCharacteristic2, ChooseSkill, Specialty}`, `DTD.Sheet.FromFeat`
-- [ ] T038 [US3] Validar quickstart passos 10–15 e registrar
+- [X] T038 [US3] Validar quickstart passos 10–15 e registrar
 
 **Checkpoint**: derivados já contam os feats
 
@@ -145,7 +145,7 @@ antes e confirmar que falham. UI: roteiro manual do quickstart.
 - [X] T045 [US4] Em `module/documents/exaltation-service.mjs` `setPowerStat`: ao cruzar o `rank` de uma concessão, chamar `grantFeats`/`releaseGrants` para as concessões afetadas
 - [X] T046 [US4] Em `feats-context.mjs`/`feats.hbs`: badges "concedido por <origem>" e "comprado"; remover oculto para concedidos (exceto Mestre); nos Exalted Assets (`assets.hbs` da 004), badge com o número de feats concedidos
 - [X] T047 [P] [US4] i18n: `DTD.Feat.{GrantedBy, Purchased, RemoveGranted, GrantMissing}`
-- [ ] T048 [US4] Validar quickstart passos 16–23 e registrar
+- [X] T048 [US4] Validar quickstart passos 16–23 e registrar
 
 **Checkpoint**: criação de personagem completa com feats concedidos
 
@@ -155,7 +155,7 @@ antes e confirmar que falham. UI: roteiro manual do quickstart.
 
 - [X] T049 [P] Atualizar `docs/analise-dtd.md` (seção de feats/assets/hindrances para a 7.7a) e `README.md` (recursos)
 - [X] T050 Rodar `npm run lint` e `npm test` sem erros
-- [ ] T051 Rodar o quickstart completo (1–24), inclusive o passo 24 com um usuário jogador de teste (criar e remover ao final), e registrar
+- [X] T051 Rodar o quickstart completo (1–24), inclusive o passo 24 com um usuário jogador de teste (criar e remover ao final), e registrar
 - [X] T052 Rodar `graphify update .`
 
 ---

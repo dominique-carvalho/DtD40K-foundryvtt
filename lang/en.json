@@ -469,7 +469,7 @@
       "Error": {
         "notRepeatable": "The character already has {feat}, and it can only be taken once.",
         "duplicate": "The character already has {feat}.",
-        "wrongRace": "{feat} is a {race} racial feat.",
+        "wrongRace": "{feat} is a racial feat of the {race} race.",
         "noRace": "{feat} is a racial feat: apply a race first.",
         "hindranceLimit": "A character can have at most two hindrances.",
         "noSubcategory": "Pick or type a sub-category.",

@@ -53,3 +53,46 @@ Esperado: `packs/feats/` compilado sem "in use". No mundo, conferir `game.packs.
 | 22 | Comprar Armor Proficiency (Light) e depois aplicar Gnome; trocar a raça | Sem duplicar; a comprada fica após a troca | US4-9 |
 | 23 | Jogador tenta remover feat concedido | Aviso; só o Mestre remove | US4-10 |
 | 24 | Observador abre a ficha | Tudo somente leitura | FR-017 |
+
+## Registro de validação
+
+### 2026-09-26 — Foundry 13.351, mundo "teste dtd", usuário Gamemaster (e jogador de teste)
+
+Sistema carregado do worktree `DtD40K-foundryvtt-005` (junction `Data/systems/dtd40k`), packs gerados com
+`npm run build:packs`. **Pack compilado conferido no Foundry antes dos passos**: `index.size` = 274
+(181 feat, 49 racialFeat, 22 asset, 22 hindrance), 20 pastas, Racial Feats com 16 subpastas. Os passos
+foram executados pelo mesmo caminho da ficha (`_onDropItem`, diálogos respondidos na interface); atores,
+um usuário jogador sem senha e um combate de teste foram criados e apagados no fim.
+
+| Passos | Resultado |
+|---|---|
+| 1 | ✅ 274 entradas; pastas Feats 181, Racial Feats 49 (16 subpastas), Assets 22, Hindrances 22 |
+| 2 | ✅ Peer: grupo com as 11 subcategorias, repetível, p. 192, somente leitura com aviso de compêndio bloqueado; Battle Rage "depende de Frenzy"; Halfling Agility raça Halfling e automação +4 SD; Loco +100 XP e limite de 2 (após correção) |
+| 3 | ✅ pt-BR: rótulos da ficha de feat e da aba Traits traduzidos; descrições em inglês |
+| 4 | ✅ Peer (Nobility) e Peer (Underworld); terceiro Peer (Nobility) recusado como duplicata, com "incluir mesmo assim" para o Mestre |
+| 5 | ✅ Sound Constitution: HP 12 → 13; segundo recusado ("só pode ser escolhido uma vez") |
+| 6 | ✅ I'm Da Boss! num Halfling recusado (mensagem de raça, texto corrigido nesta validação) |
+| 7 | ✅ Battle Rage sem Frenzy pede confirmação ("depende de Frenzy") |
+| 8 | ✅ 3º hindrance recusado; como Mestre, incluído ao confirmar; seção mostra "3 / 2" |
+| 9 | ✅ Aviso informativo de criação ao adicionar asset/hindrance; Sturdy avisa dos 2 hindrances extras |
+| 10 | ✅ Con 3, Wil 3, Cmp 2: HP 12→13, Resolve 5→6, Resilience 4→5, Fatigue 3→5, Hero Points 2/2→3/3 |
+| 11 | ✅ Tau Farsighted: Resolve 5→8, MD 15→20; Halfling Agility SD 24→28; Squat No One Tougher SD 16→22 (Con 4 no lugar de Dex 2) |
+| 12 | ✅ Paranoia: fórmula de iniciativa `1d10 + Dex + Cmp + 2`; rodapé +5 (Dex 1 + Cmp 2 + 2) |
+| 13 | ✅ Made of Mettle num Aasimar oferece só Int e Wil (empatadas em 1) → Wil 1→2; Veteran: Str 2→3 e Stealth 0→1 |
+| 14 | ✅ Skill Focus (Pilot: Starships): especialidade aparece só na lista final, não no `_source`; especialidade digitada depois fica só no `_source`; remover o feat tira a do feat |
+| 15 | ✅ Mestre desliga o modificador de Sound Constitution: HP 13→12; religa → 13 |
+| 16 | ✅ Aasimar concede Jaded e Fearless (grantedBy = raça); troca para Elf remove os dois; Made of Mettle fica marcado "raça incompatível" |
+| 17 | ✅ Gnome concede as 12 proficiências |
+| 18 | ✅ Atlantean: Speak Language (Syrneth); troca para Promethean: sai o Syrneth, entram 5 Armor Proficiency |
+| 19 | ✅ Paragon Aasimar: Perfection → You Will Not Falter → Armor of Contempt, Armor Proficiency (Power), Armor Specialization (Power); Paragon Gnome: Tuning pede 3 escolhas e concede Weapon Specialization/Focus (Laspistol) e Armor Specialization (Light) |
+| 20 | ✅ Ventrue: Peer (Ventrue); Academy pede 2 Weapon Proficiency, a 2ª lista já sem a 1ª e repetir reabre o diálogo; remover Academy tira as duas |
+| 21 | ✅ Kenjutsu → Extracurricular Study; K'sten'mannav → Armor of Contempt; Lightning Bug → Luminen Blast |
+| 22 | ✅ Armor Proficiency (Light) comprada + Gnome: não duplica (ganha a origem); troca de raça: a comprada fica, sem origem |
+| 23 | ✅ Jogador (dono) não remove Luminen Blast concedido (aviso "só o Mestre"); removendo Lightning Bug, Luminen Blast sai junto |
+| 24 | ✅ Jogador observador: sem edição, sem caixas de modificador |
+
+Não exercitados manualmente (cobertos só pelos testes unitários): Beneficial Mutation, Matron, Noisy Cricket.
+
+Correções feitas durante a validação: Skill Focus passa a ter o nome "Skill Focus (Perícia: especialidade)"
+e pode ser escolhido em perícias diferentes (antes o segundo era recusado como duplicata); texto do erro
+de raça ("is a racial feat of the Ork race"); ficha de hindrance mostra o limite de 2.

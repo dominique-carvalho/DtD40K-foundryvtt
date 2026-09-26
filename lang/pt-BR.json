@@ -469,7 +469,7 @@
       "Error": {
         "notRepeatable": "O personagem já tem {feat}, que só pode ser escolhido uma vez.",
         "duplicate": "O personagem já tem {feat}.",
-        "wrongRace": "{feat} é um feat racial de {race}.",
+        "wrongRace": "{feat} é um feat racial da raça {race}.",
         "noRace": "{feat} é um feat racial: aplique uma raça antes.",
         "hindranceLimit": "Um personagem pode ter no máximo dois hindrances.",
         "noSubcategory": "Escolha ou digite uma subcategoria.",

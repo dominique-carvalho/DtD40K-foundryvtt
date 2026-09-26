@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   activeGrants, buildFeatEffects, characteristicOptions, fullName, grantPlan, lowestCharacteristics, needsFeatSelection,
-  releasePlan, validateFeatAdd, validateFeatSelection
+  releasePlan, validateFeatAdd, validateFeatSelection, withSkillFocusName
 } from "../../module/rules/feat.mjs";
 
 /** Minimal feat system data (FeatData subset). */
@@ -115,6 +115,16 @@ describe("validateFeatAdd (FR-008, research R3)", () => {
     expect(add(feat("Veteran o' the Wheel", { category: "asset", automation: "veteran" }), sel()).notices)
       .toEqual([{ type: "creationOnly" }, { type: "extraHindrances", count: 1 }]);
     expect(add(soundConstitution, sel()).notices).toEqual([]);
+  });
+
+  it("names Skill Focus after its skill and specialty, so each skill can take it once", () => {
+    const focus = feat("Skill Focus", { group: true, repeatable: true, automation: "skillFocus" });
+    const first = withSkillFocusName(focus.system, sel({ skill: "pilot", specialty: "Starships" }), "Pilot");
+    expect(first.subcategory).toBe("Pilot: Starships");
+    const owned = [{ ...focus, name: "Skill Focus (Pilot: Starships)", system: { ...focus.system, selection: first } }];
+    expect(add(focus, withSkillFocusName(focus.system, sel({ skill: "stealth", specialty: "Urban" }), "Stealth"), owned).errors).toEqual([]);
+    expect(add(focus, first, owned).errors).toEqual(["duplicate"]);
+    expect(withSkillFocusName(soundConstitution.system, sel(), "x")).toEqual(sel());
   });
 
   it("counts a granted copy as present", () => {

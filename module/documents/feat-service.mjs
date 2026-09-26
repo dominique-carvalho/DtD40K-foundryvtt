@@ -1,6 +1,6 @@
 import { CHARACTERISTICS, GROUPS, SKILLS } from "../config.mjs";
 import { activeGrants, buildFeatEffects, characteristicOptions, fullName, grantedByOf, grantPlan, needsFeatSelection,
-  releasePlan, validateFeatAdd, validateFeatSelection } from "../rules/feat.mjs";
+  releasePlan, validateFeatAdd, validateFeatSelection, withSkillFocusName } from "../rules/feat.mjs";
 import { getRace } from "./race-service.mjs";
 
 /**
@@ -101,8 +101,9 @@ export async function addFeat(actor, featItem, { selection } = {}) {
     return null;
   }
   const needs = Object.values(needsFeatSelection(featItem.system)).some(Boolean);
-  const chosen = selection ?? (needs ? await promptFeatSelection(featItem, actor) : { ...EMPTY_SELECTION });
-  if (!chosen) return null;
+  const picked = selection ?? (needs ? await promptFeatSelection(featItem, actor) : { ...EMPTY_SELECTION });
+  if (!picked) return null;
+  const chosen = withSkillFocusName(featItem.system, picked, picked.skill ? localize(SKILLS[picked.skill].label) : "");
 
   const name = fullName({ name: featItem.name, system: { selection: chosen } });
   const owned = getFeats(actor);

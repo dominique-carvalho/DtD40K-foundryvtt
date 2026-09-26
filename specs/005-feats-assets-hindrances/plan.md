@@ -80,7 +80,7 @@ dtd40k.mjs                          # CONFIG.Combat.initiative com @modifiers.in
 src/packs/feats/                    # 21 pastas + 274 JSON (plano)
 src/packs/races/aasimar.json, gnome.json                  # + grants
 src/packs/exaltations/atlantean.json, promethean.json     # + grants (rank 1)
-src/packs/exalted-assets/{you-will-not-falter,tuning,ventrue}.json  # + grants
+src/packs/exalted-assets/{paragon-racial-you-will-not-falter,paragon-racial-tuning,vampire-ventrue}.json  # + grants
 module/
 ├── config.mjs                      # FEAT_CATEGORIES, FEAT_AUTOMATION, HINDRANCE_LIMIT, FEAT_REQUIREMENT_TYPES
 ├── rules/feat.mjs                  # NOVO, PURO

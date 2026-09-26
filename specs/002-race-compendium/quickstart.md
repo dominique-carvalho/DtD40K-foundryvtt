@@ -71,6 +71,9 @@ Esperado: `packs/races/` gerado sem erros; abrir o Foundry depois.
 | 2026-09-25 | 15–19 (US3) | ✅ Aprovado | Passo 18 feito com o Eldarin (único com usos por cena na 7.7a); Elf, Dark Eldarin e Dragonborn só com texto. |
 | 2026-09-25 | 25 e roteiro completo | ⚠️ Parcial | Temas claro e escuro ok; dados da 7.7a pendentes (ver correção). |
 | 2026-09-25 | **Correção** | ⚠️ | O pack compilado nunca foi atualizado depois do primeiro build (19:51): o Foundry ficou aberto o tempo todo e segurava o LOCK do pack, então todo `npm run build:packs` falhou. As linhas acima valem para a interface e a mecânica (aplicar, trocar, efeitos, abas, contador, permissões), **não** para os dados da 7.7a. Pendentes: passos 1, 1b, 2, 4 e o 24 com as 16 raças, com o pack recompilado com o Foundry fechado. O build agora verifica o bloqueio antes de mexer no pack e compila numa pasta temporária. |
+| 2026-09-25 | 1, 1b, 2, 24 (dados da 7.7a) | ✅ Aprovado | Pack recompilado com o Foundry fechado; conferido antes da validação que o pack tem as 16 raças com fonte DtD 7.7a (pp. 31–61). Confirmado pelo usuário: compêndio, raças novas (Dryad, Kenku, Kobold, Thri-Kreen), Eldarin p. 39 e troca das 16 raças funcionais. |
+| 2026-09-25 | 4 | ❌ → ✅ | Primeira passada: descrições apareciam parciais na ficha editável da raça (o editor encolhia até a altura mínima e escondia o resto numa rolagem interna). Corrigido no CSS (commit 9dd72c1); após recarregar, o usuário confirmou que as descrições aparecem inteiras. |
+| 2026-09-25 | Integração com a 001 | ✅ Aprovado | Confirmado pelo usuário: paradas das rolagens já incluem o bônus racial e o stunt soma +XkX na janela de rolagem (7.7a p. 418). |
 
 Ajustes feitos durante a validação (já incorporados à spec e às tarefas): lista de modificadores
 raciais com toggle do Mestre e ícone "i" (T054–T055); campo "Texto completo" (T056); descrições

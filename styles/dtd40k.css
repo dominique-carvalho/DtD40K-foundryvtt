@@ -453,6 +453,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* Sections keep their natural height; the sheet body scrolls instead of squeezing them. */
+.dtd40k.item.race .race-sheet-body > * {
+  flex-shrink: 0;
 }
 
 .dtd40k.item.race .sheet-header {
@@ -553,8 +560,15 @@
   letter-spacing: 0.04em;
 }
 
+/* Show the whole text: the core editor would otherwise shrink to its minimum and scroll inside. */
 .dtd40k.item.race prose-mirror {
+  flex: none;
   min-height: 6rem;
+  height: auto;
+}
+
+.dtd40k.item.race prose-mirror.inactive {
+  overflow: visible;
 }
 
 /* ---------- Tabs (spec 002, FR-015a) ---------- */

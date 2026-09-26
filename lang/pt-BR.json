@@ -293,6 +293,52 @@
         "2": "Óbvia — impossível não notar; a natureza do Exalt fica à mostra",
         "3": "Aura — luz para ler, ou escuridão que apaga fogueiras",
         "4": "Épica — visível a quilômetros; mortais se calam ou fogem"
+      },
+      "None": "Sem exaltação",
+      "DropHint": "Arraste uma exaltação do compêndio Exaltations para esta ficha.",
+      "Info": "Informações da exaltação",
+      "ChooseTitle": "Escolhas da exaltação — {exaltation}",
+      "ChooseIntro": "Faça as escolhas de {exaltation}.",
+      "ChooseStatuesque": "Statuesque: +1 numa característica da lista de bônus da sua raça que você ainda não escolheu",
+      "ChooseElement": "Blood Quickening: elemento",
+      "Confirm": "Aplicar",
+      "Reconfigure": "Refazer escolha",
+      "Remove": "Remover exaltação",
+      "RemoveConfirm": "Remover {exaltation}, seus bônus e seus Exalted Assets deste personagem?",
+      "Replace": "Trocar exaltação",
+      "ReplaceConfirm": "Trocar {old} por {exaltation}? O Power Stat comprado, o recurso e os Exalted Assets de {old} serão perdidos.",
+      "NotCharacter": "Exaltações e Exalted Assets só podem ser aplicados a personagens.",
+      "OnlyOne": "Um personagem só pode ter uma exaltação.",
+      "InvalidChoice": "Escolha de exaltação inválida. Marque uma opção em cada grupo.",
+      "AboveCap": "Acima do máximo atual (Level)",
+      "Purchased": "comprado",
+      "DebtHint": "Pontos gastos e ainda não recuperados; só o botão de recuperação os devolve.",
+      "Spend": "Gastar 1",
+      "Adjust": "Definir",
+      "Round": "Nesta rodada",
+      "ResetRound": "Zerar rodada",
+      "NewScene": "Nova cena",
+      "RoundLimit": "Você já gastou {limit} ponto(s) nesta rodada — o limite é o seu {stat}. Gastar mesmo assim?",
+      "Empty": "Sem {resource} disponível.",
+      "SpendPressure": "Gastar",
+      "TellSpent": "pontos gastos na cena:",
+      "GenericSpends": "1 ponto compra",
+      "GenericSpend": {
+        "skill": "+1k0 num teste de perícia",
+        "reaction": "Uma reação",
+        "stunned": "Sair de Stunned",
+        "dazed": "Sair de Dazed"
+      },
+      "Locked": "Bloqueado",
+      "Modifiers": "Modificadores da exaltação",
+      "ModifiersHint": "Só o Mestre pode ligar ou desligar estes modificadores.",
+      "NoRace": "Perfection: o personagem não tem raça, então nenhum Paragon Racial Asset foi adicionado.",
+      "NoPerfectionAsset": "Perfection: {race} não tem Paragon Racial Asset no livro.",
+      "Effect": {
+        "destiny": "{exaltation}: Destiny +2 Hero Points",
+        "statuesque": "{exaltation}: Statuesque +1 {characteristic}",
+        "element": "{exaltation}: {name} +1 {characteristic}",
+        "elementHp": "{exaltation}: {name} +{value} HP"
       }
     },
     "Asset": {
@@ -329,7 +375,21 @@
       "Exaltation": "Exaltação exigida",
       "Race": "Raça exigida",
       "Deity": "Divindade patrona",
-      "XpCost": "Custo em XP"
+      "XpCost": "Custo em XP",
+      "DropHint": "Arraste um Exalted Asset do compêndio Exalted Assets para esta ficha.",
+      "Remove": "Remover asset",
+      "RemoveConfirm": "Remover {asset} e seus bônus deste personagem?",
+      "CreationOnly": "Exalted Assets normalmente só são comprados na criação de personagem (exceto os de Paragon).",
+      "GMOverrideTitle": "Adicionar o asset mesmo assim?",
+      "GMOverride": "Como Mestre, você pode adicioná-lo mesmo assim.",
+      "Effect": "{asset}: {effect}",
+      "Error": {
+        "noExaltation": "{asset} exige uma exaltação: aplique uma antes.",
+        "wrongExaltation": "{asset} é um asset da exaltação {exaltation}.",
+        "wrongRace": "{asset} exige um Paragon {race}.",
+        "duplicate": "O personagem já tem {asset}.",
+        "limit": "Um personagem só pode ter um Exalted Asset (exceto os de Paragon)."
+      }
     },
     "Item": {
       "LockedPackHint": "Este compêndio está bloqueado. Para editar esta entrada, clique com o botão direito no compêndio {pack} e escolha \"{option}\". Alterações no compêndio do sistema são substituídas quando o sistema é atualizado — exporte-as com npm run extract:packs, ou importe a entrada para o mundo e edite a cópia."

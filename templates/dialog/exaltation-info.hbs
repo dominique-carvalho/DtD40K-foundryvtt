@@ -1,0 +1,13 @@
+<div class="dtd40k race-info exaltation-info">
+  <div class="enriched">{{{description}}}</div>
+  {{#if origin}}<h3>{{localize "DTD.Exaltation.Lore.origin"}}</h3><div class="enriched">{{{origin}}}</div>{{/if}}
+  {{#if appearance}}<h3>{{localize "DTD.Exaltation.Lore.appearance"}}</h3><div class="enriched">{{{appearance}}}</div>{{/if}}
+  {{#if society}}<h3>{{localize "DTD.Exaltation.Lore.society"}}</h3><div class="enriched">{{{society}}}</div>{{/if}}
+  {{#if tell}}<h3>{{localize "DTD.Exaltation.Tell"}}</h3><div class="enriched">{{{tell}}}</div>{{/if}}
+  {{#if recovery}}<h3>{{localize "DTD.Exaltation.Recovery"}}</h3><div class="enriched">{{{recovery}}}</div>{{/if}}
+  {{#if fullText}}<h3>{{localize "DTD.Race.FullText"}}</h3><div class="enriched full-text">{{{fullText}}}</div>{{/if}}
+  <dl class="race-lore-list">
+    {{#if examples}}<dt>{{localize "DTD.Exaltation.Lore.examples"}}</dt><dd>{{examples}}</dd>{{/if}}
+    {{#if source.page}}<dt>{{localize "DTD.Race.Source"}}</dt><dd>{{source.book}}, {{localize "DTD.Race.Page"}} {{source.page}}</dd>{{/if}}
+  </dl>
+</div>

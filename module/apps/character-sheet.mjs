@@ -1,5 +1,11 @@
 import { CHARACTERISTIC_GRID, CHARACTERISTICS, DERIVED_KEYS, GROUPS, SKILLS } from "../config.mjs";
+import { addExaltedAsset, removeExaltedAsset } from "../documents/asset-service.mjs";
+import {
+  adjustResource, applyExaltation, getExaltation, newScene, reconfigureExaltation, recoverResource, regainPressure,
+  removeExaltation, resetRound, setPowerStat, spendPressure, spendResource
+} from "../documents/exaltation-service.mjs";
 import { applyRace, getRace, reconfigureRace, removeRace } from "../documents/race-service.mjs";
+import { prepareAssetsContext, prepareExaltationContext } from "./exaltation-context.mjs";
 import { needsChoice } from "../rules/race.mjs";
 import { buildDots, filterSkills, nextBaseValue, sanitizeDerivedMods } from "../rules/sheet.mjs";
 import { buildCharacteristicPool, buildSkillPool, formatPool, normalizePool } from "../rules/pool.mjs";
@@ -34,7 +40,22 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       spendRaceUse: CharacterSheet.#onSpendRaceUse,
       resetRaceUses: CharacterSheet.#onResetRaceUses,
       toggleRaceEffect: CharacterSheet.#onToggleRaceEffect,
-      showRaceInfo: CharacterSheet.#onShowRaceInfo
+      showRaceInfo: CharacterSheet.#onShowRaceInfo,
+      openExaltation: CharacterSheet.#onOpenExaltation,
+      reconfigureExaltation: CharacterSheet.#onReconfigureExaltation,
+      removeExaltation: CharacterSheet.#onRemoveExaltation,
+      showExaltationInfo: CharacterSheet.#onShowExaltationInfo,
+      setPowerStat: CharacterSheet.#onSetPowerStat,
+      spendResource: CharacterSheet.#onSpendResource,
+      recoverResource: CharacterSheet.#onRecoverResource,
+      adjustResource: CharacterSheet.#onAdjustResource,
+      resetRound: CharacterSheet.#onResetRound,
+      newScene: CharacterSheet.#onNewScene,
+      spendPressure: CharacterSheet.#onSpendPressure,
+      regainPressure: CharacterSheet.#onRegainPressure,
+      openAsset: CharacterSheet.#onOpenAsset,
+      removeAsset: CharacterSheet.#onRemoveAsset,
+      toggleItemEffect: CharacterSheet.#onToggleItemEffect
     }
   };
 
@@ -61,7 +82,9 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     `${TEMPLATE_ROOT}/characteristics.hbs`,
     `${TEMPLATE_ROOT}/skills.hbs`,
     `${TEMPLATE_ROOT}/specialties.hbs`,
-    `${TEMPLATE_ROOT}/dots.hbs`
+    `${TEMPLATE_ROOT}/dots.hbs`,
+    `${TEMPLATE_ROOT}/exaltation.hbs`,
+    `${TEMPLATE_ROOT}/assets.hbs`
   ];
 
   /** Skill search state, kept across re-renders. */
@@ -143,6 +166,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       // Individual racial modifiers are switched on and off by the GM (FR-010).
       canToggleEffects: game.user.isGM,
       race: await this.#prepareRace(),
+      exaltation: await prepareExaltationContext(actor),
+      assets: await prepareAssetsContext(actor),
       // Inputs of fields that racial effects can change show the base value (research R3).
       base: {
         size: source.size,
@@ -252,9 +277,13 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
    * @override
    */
   async _onDropItem(event, item) {
-    if (item.type === "race" && item.parent?.uuid !== this.actor.uuid) {
-      if (!this.actor.isOwner) return null;
-      return applyRace(this.actor, item);
+    if (item.parent?.uuid !== this.actor.uuid) {
+      // Exaltations and Exalted Assets follow the race pattern (spec 004, FR-010, FR-022).
+      let apply = null;
+      if (item.type === "race") apply = () => applyRace(this.actor, item);
+      else if (item.type === "exaltation") apply = () => applyExaltation(this.actor, item);
+      else if (item.type === "feat" && item.system.category === "exaltedAsset") apply = () => addExaltedAsset(this.actor, item);
+      if (apply) return this.actor.isOwner ? apply() : null;
     }
     return super._onDropItem(event, item);
   }
@@ -451,6 +480,170 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
   static async #onResetRaceUses() {
     const race = getRace(this.document);
     if (this.document.isOwner && race) await race.update({ "system.power.uses.spent": 0 });
+  }
+
+  /**
+   * Open the exaltation item sheet.
+   * @this {CharacterSheet}
+   */
+  static #onOpenExaltation() {
+    getExaltation(this.document)?.sheet.render(true);
+  }
+
+  /**
+   * Re-open the exaltation choices (Statuesque, Blood Quickening) — spec 004, FR-013.
+   * @this {CharacterSheet}
+   */
+  static async #onReconfigureExaltation() {
+    if (this.document.isOwner) await reconfigureExaltation(this.document);
+  }
+
+  /**
+   * Remove the exaltation, its effects and its assets (FR-012).
+   * @this {CharacterSheet}
+   */
+  static async #onRemoveExaltation() {
+    if (this.document.isOwner) await removeExaltation(this.document);
+  }
+
+  /**
+   * Set the purchased Power Stat from a clicked dot (FR-014).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onSetPowerStat(event, target) {
+    if (this.document.isOwner) await setPowerStat(this.document, Number(target.dataset.value));
+  }
+
+  /**
+   * Spend one Resource Point (FR-016, FR-017).
+   * @this {CharacterSheet}
+   */
+  static async #onSpendResource() {
+    if (this.document.isOwner) await spendResource(this.document);
+  }
+
+  /**
+   * Run one of the exaltation recovery buttons (FR-016, FR-020).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRecoverResource(event, target) {
+    if (this.document.isOwner) await recoverResource(this.document, Number(target.dataset.index));
+  }
+
+  /**
+   * Set the current resource to the value typed next to the button.
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onAdjustResource(event, target) {
+    const input = target.closest(".adjust-resource")?.querySelector(".adjust-input");
+    if (this.document.isOwner && input) await adjustResource(this.document, Number(input.value));
+  }
+
+  /**
+   * Clear the points spent this round (FR-017).
+   * @this {CharacterSheet}
+   */
+  static async #onResetRound() {
+    if (this.document.isOwner) await resetRound(this.document);
+  }
+
+  /**
+   * New scene: clear the Tell and refill Pressure (FR-018, FR-021).
+   * @this {CharacterSheet}
+   */
+  static async #onNewScene() {
+    if (this.document.isOwner) await newScene(this.document);
+  }
+
+  /**
+   * Spend the number of Pressure Points typed next to the button (FR-021).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onSpendPressure(event, target) {
+    const input = target.closest(".pressure")?.querySelector(".pressure-input");
+    if (this.document.isOwner && input) await spendPressure(this.document, Number(input.value));
+  }
+
+  /**
+   * Regain Pressure Points: +5 or +Excellence (FR-021).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRegainPressure(event, target) {
+    if (this.document.isOwner) await regainPressure(this.document, target.dataset.amount);
+  }
+
+  /**
+   * Open an Exalted Asset sheet.
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static #onOpenAsset(event, target) {
+    this.document.items.get(target.dataset.itemId)?.sheet.render(true);
+  }
+
+  /**
+   * Remove an Exalted Asset (FR-024).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRemoveAsset(event, target) {
+    if (this.document.isOwner) await removeExaltedAsset(this.document, target.dataset.itemId);
+  }
+
+  /**
+   * Enable or disable one exaltation or asset modifier — GM only (FR-027).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onToggleItemEffect(event, target) {
+    const effect = this.document.items.get(target.dataset.itemId)?.effects.get(target.dataset.effectId);
+    if (!game.user.isGM || !effect) return;
+    await effect.update({ disabled: !effect.disabled });
+  }
+
+  /**
+   * Show the exaltation description, lore and Tell in a popup (the info button).
+   * @this {CharacterSheet}
+   */
+  static async #onShowExaltationInfo() {
+    const exaltation = getExaltation(this.document);
+    if (!exaltation) return;
+    const system = exaltation.system;
+    const enrich = (html) => (html
+      ? foundry.applications.ux.TextEditor.implementation.enrichHTML(html, { relativeTo: exaltation, secrets: exaltation.isOwner })
+      : "");
+    const content = await foundry.applications.handlebars.renderTemplate("systems/dtd40k/templates/dialog/exaltation-info.hbs", {
+      description: await enrich(system.description),
+      origin: await enrich(system.lore.origin),
+      appearance: await enrich(system.lore.appearance),
+      society: await enrich(system.lore.society),
+      tell: await enrich(system.tell),
+      recovery: await enrich(system.resource.recovery),
+      fullText: await enrich(system.fullText),
+      examples: system.lore.examples.join(", "),
+      source: system.source
+    });
+    await foundry.applications.api.DialogV2.prompt({
+      window: { title: exaltation.name, icon: "fa-solid fa-circle-info" },
+      classes: ["dtd40k", "race-info-dialog"],
+      position: { width: 560 },
+      content,
+      ok: { label: game.i18n.localize("Close"), icon: "fa-solid fa-check" },
+      rejectClose: false
+    });
   }
 
   /**

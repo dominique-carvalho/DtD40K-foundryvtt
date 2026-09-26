@@ -293,6 +293,52 @@
         "2": "Obvious — impossible to miss; the Exalt’s nature is on display",
         "3": "Aura — bright enough to read by, or darkness that smothers campfires",
         "4": "Epic — visible for kilometres; mortals fall silent or flee"
+      },
+      "None": "No exaltation",
+      "DropHint": "Drag an exaltation from the Exaltations compendium onto this sheet.",
+      "Info": "Exaltation information",
+      "ChooseTitle": "Exaltation choices — {exaltation}",
+      "ChooseIntro": "Pick the choices of {exaltation}.",
+      "ChooseStatuesque": "Statuesque: +1 to a characteristic of your race's bonus list you did not pick before",
+      "ChooseElement": "Blood Quickening: element",
+      "Confirm": "Apply",
+      "Reconfigure": "Change choice",
+      "Remove": "Remove exaltation",
+      "RemoveConfirm": "Remove {exaltation}, its bonuses and its Exalted Assets from this character?",
+      "Replace": "Replace exaltation",
+      "ReplaceConfirm": "Replace {old} with {exaltation}? The purchased Power Stat, the resource and the Exalted Assets of {old} are lost.",
+      "NotCharacter": "Exaltations and Exalted Assets can only be applied to characters.",
+      "OnlyOne": "A character can only have one exaltation.",
+      "InvalidChoice": "Invalid exaltation choice. Pick one option in each group.",
+      "AboveCap": "Above the current maximum (Level)",
+      "Purchased": "purchased",
+      "DebtHint": "Points spent and not yet recovered; only the recovery button returns them.",
+      "Spend": "Spend 1",
+      "Adjust": "Set",
+      "Round": "This round",
+      "ResetRound": "Clear round",
+      "NewScene": "New scene",
+      "RoundLimit": "You already spent {limit} point(s) this round — the limit equals your {stat}. Spend anyway?",
+      "Empty": "No {resource} left.",
+      "SpendPressure": "Spend",
+      "TellSpent": "points spent this scene:",
+      "GenericSpends": "1 point can buy",
+      "GenericSpend": {
+        "skill": "+1k0 on a skill test",
+        "reaction": "One reaction",
+        "stunned": "Recover from Stunned",
+        "dazed": "Recover from Dazed"
+      },
+      "Locked": "Locked",
+      "Modifiers": "Exaltation modifiers",
+      "ModifiersHint": "Only the GM can switch these modifiers on or off.",
+      "NoRace": "Perfection: the character has no race, so no Paragon Racial Asset was added.",
+      "NoPerfectionAsset": "Perfection: {race} has no Paragon Racial Asset in the book.",
+      "Effect": {
+        "destiny": "{exaltation}: Destiny +2 Hero Points",
+        "statuesque": "{exaltation}: Statuesque +1 {characteristic}",
+        "element": "{exaltation}: {name} +1 {characteristic}",
+        "elementHp": "{exaltation}: {name} +{value} HP"
       }
     },
     "Asset": {
@@ -329,7 +375,21 @@
       "Exaltation": "Required exaltation",
       "Race": "Required race",
       "Deity": "Patron deity",
-      "XpCost": "XP cost"
+      "XpCost": "XP cost",
+      "DropHint": "Drag an Exalted Asset from the Exalted Assets compendium onto this sheet.",
+      "Remove": "Remove asset",
+      "RemoveConfirm": "Remove {asset} and its bonuses from this character?",
+      "CreationOnly": "Exalted Assets are normally bought during character creation only (Paragons excepted).",
+      "GMOverrideTitle": "Add the asset anyway?",
+      "GMOverride": "As the GM you can add it anyway.",
+      "Effect": "{asset}: {effect}",
+      "Error": {
+        "noExaltation": "{asset} needs an exaltation: apply one first.",
+        "wrongExaltation": "{asset} is an asset of the {exaltation} exaltation.",
+        "wrongRace": "{asset} requires a {race} Paragon.",
+        "duplicate": "The character already has {asset}.",
+        "limit": "A character can have only one Exalted Asset (Paragon assets excepted)."
+      }
     },
     "Item": {
       "LockedPackHint": "This compendium is locked. To edit this entry, right-click the {pack} compendium and choose \"{option}\". Changes to the system compendium are replaced when the system updates — export them with npm run extract:packs, or import the entry into the world and edit the copy."

@@ -1,8 +1,9 @@
 import { CHARACTERISTICS, DERIVED_KEYS, SKILLS } from "../config.mjs";
 import { computeDerived } from "../rules/derived.mjs";
+import { computeExaltation } from "../rules/exaltation.mjs";
 import { capValue } from "../rules/race.mjs";
 
-const { ArrayField, HTMLField, NumberField, SchemaField, StringField } = foundry.data.fields;
+const { ArrayField, BooleanField, HTMLField, NumberField, SchemaField, StringField } = foundry.data.fields;
 
 /**
  * Integer field helper.
@@ -63,7 +64,14 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       // Targets of racial power effects only — never rendered as sheet inputs (spec 002, research R3/R4).
       modifiers: new SchemaField({
         staticDefenseFormula: new StringField({ required: true, choices: ["standard", "shifty"], initial: "standard" }),
-        resilience: integer(0)
+        resilience: integer(0),
+        // Targets of exaltation and Exalted Asset effects only (spec 004, research R6).
+        hpMax: integer(0),
+        staticDefenseSize: new BooleanField({ initial: true }),
+        exaltation: new SchemaField({
+          resourceBonus: integer(0),
+          resourcePerPowerStat: integer(0)
+        })
       }),
       biography: new HTMLField({ required: true, blank: true })
     };
@@ -86,6 +94,27 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     this.hp.max = derived.hpMax;
     this.resolve.max = derived.resolveMax;
     this.fatigue.max = derived.fatigueMax;
+    this.#prepareExaltation();
+  }
+
+  /**
+   * State of the exaltation, computed after the derived values because the Wraith reads the
+   * maximum Resolve (spec 004, research R2). Never persisted.
+   */
+  #prepareExaltation() {
+    const item = this.parent?.items.find((entry) => entry.type === "exaltation");
+    if (!item) {
+      this.exaltation = null;
+      return;
+    }
+    const combat = game.combat;
+    const currentMarker = combat?.started ? `${combat.id}:${combat.round}` : "none";
+    this.exaltation = computeExaltation(
+      item.system,
+      { characteristics: this.characteristics, level: this.level, devotion: this.devotion.value, resolveMax: this.resolve.max },
+      this.modifiers.exaltation,
+      { currentMarker }
+    );
   }
 
   /**

@@ -57,3 +57,24 @@ Hooks.once("init", () => {
 
   foundry.applications.handlebars.loadTemplates(CharacterSheet.PARTIALS);
 });
+
+/**
+ * The exaltation's "spent this round" counter depends on the current combat round (spec 004,
+ * research R4). When the round changes, recompute the combatants locally and refresh their
+ * open sheets; nothing is written to the database.
+ * @param {Combat} combat
+ */
+function refreshCombatants(combat) {
+  for (const combatant of combat.combatants) {
+    const actor = combatant.actor;
+    if (actor?.type !== "character" || !actor.items.some((item) => item.type === "exaltation")) continue;
+    actor.reset();
+    if (actor.sheet?.rendered) actor.sheet.render();
+  }
+}
+
+Hooks.on("updateCombat", (combat, changes) => {
+  if ("round" in changes || "turn" in changes) refreshCombatants(combat);
+});
+Hooks.on("combatStart", refreshCombatants);
+Hooks.on("deleteCombat", refreshCombatants);

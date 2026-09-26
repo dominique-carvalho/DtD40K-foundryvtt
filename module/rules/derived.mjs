@@ -37,21 +37,24 @@ function applyMod(base, mod) {
  * Compute all derived values of a character.
  * @param {{characteristics: Record<string, {value: number}>, size: number, level: number}} source
  * @param {Record<string, DerivedMod>} [derivedMods]
- * @param {{staticDefenseFormula?: "standard"|"shifty", resilience?: number}} [modifiers]
- *   racial power modifiers (spec 002, FR-016), applied before the GM bonus/override
+ * @param {{staticDefenseFormula?: "standard"|"shifty", resilience?: number, hpMax?: number, staticDefenseSize?: boolean}} [modifiers]
+ *   racial power, exaltation and asset modifiers (spec 002 FR-016, spec 004 FR-025), applied before the GM bonus/override
  * @returns {DerivedValues}
  */
 export function computeDerived({ characteristics, size, level }, derivedMods = {}, modifiers = {}) {
   const c = (key) => characteristics[key]?.value ?? 0;
-  const { staticDefenseFormula = "standard", resilience = 0 } = modifiers;
+  const { staticDefenseFormula = "standard", resilience = 0, hpMax = 0, staticDefenseSize = true } = modifiers;
+  // Elusive (7.7a p. 218): Size no longer lowers Static Defense.
+  const sizePenalty = staticDefenseSize ? 2 * size : 0;
 
   const base = {
     // Halfling "Shifty" (DtD 7.7a p. 45): 10 + 6×Dex − 2×Size instead of Dex + Wis.
     staticDefense: staticDefenseFormula === "shifty"
-      ? 10 + 6 * c("dex") - 2 * size
-      : 10 + 3 * c("dex") + 3 * c("wis") - 2 * size,
+      ? 10 + 6 * c("dex") - sizePenalty
+      : 10 + 3 * c("dex") + 3 * c("wis") - sizePenalty,
     // Decision (spec clarification): 2×(Con + Wil), book pp. 14/17.
-    hpMax: 2 * (c("con") + c("wil")),
+    // Sloth and the Earth Blood Quickening add to maximum HP (spec 004).
+    hpMax: 2 * (c("con") + c("wil")) + (Number(hpMax) || 0),
     mentalDefense: 5 + 5 * c("cmp"),
     resolveMax: c("wil") + c("cmp"),
     speed: c("str") + c("dex"),

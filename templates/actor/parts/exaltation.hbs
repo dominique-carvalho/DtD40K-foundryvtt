@@ -26,13 +26,14 @@
       <span class="tracker-label">{{exaltation.powerStat.name}}</span>
       <span class="dots{{#if canEditRace}} editable{{/if}}">
         {{#each exaltation.powerStat.dots as |dot|}}
-        {{#if (and @root.canEditRace (not dot.disabled))}}
+        {{#if (and @root.canEditRace @root.isEdit (not dot.disabled))}}
         <a class="dot{{#if dot.filled}} filled{{/if}}" data-action="setPowerStat" data-value="{{dot.index}}" aria-label="{{dot.index}}"></a>
         {{else}}
         <span class="dot{{#if dot.filled}} filled{{/if}}{{#if dot.disabled}} locked{{/if}}"{{#if dot.disabled}} data-tooltip="{{localize "DTD.Exaltation.AboveCap"}}"{{/if}}></span>
         {{/if}}
         {{/each}}
       </span>
+      {{> "systems/dtd40k/templates/actor/parts/advance-button.hbs" advance=@root.powerStatAdvance action="advancePowerStat" key=""}}
       <span class="hint">{{localize "DTD.Exaltation.CapLabel"}} {{exaltation.powerStat.max}}{{#if exaltation.powerStat.capped}} · {{localize "DTD.Exaltation.Purchased"}} {{exaltation.powerStat.purchased}}{{/if}}</span>
     </div>
 

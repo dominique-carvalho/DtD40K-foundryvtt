@@ -1,0 +1,16 @@
+<div class="dtd40k race-choice class-bonus">
+  <p class="race-choice-intro">{{intro}}</p>
+  <fieldset>
+    <legend>{{localize "DTD.Feat.ChooseSkill"}}</legend>
+    <select name="skill">
+      <option value=""></option>
+      {{#each skills as |skill|}}<option value="{{skill.key}}">{{skill.label}}</option>{{/each}}
+    </select>
+  </fieldset>
+  {{#if withSpecialty}}
+  <fieldset>
+    <legend>{{localize "DTD.Feat.Specialty"}}</legend>
+    <input type="text" name="specialty">
+  </fieldset>
+  {{/if}}
+</div>

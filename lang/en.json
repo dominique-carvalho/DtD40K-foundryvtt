@@ -6,7 +6,8 @@
     "Item": {
       "race": "Race",
       "exaltation": "Exaltation",
-      "feat": "Feat"
+      "feat": "Feat",
+      "class": "Class"
     }
   },
   "DTD": {
@@ -113,14 +114,17 @@
       "Race": "DtD Race Sheet",
       "Tab": {
         "main": "Characteristics & Skills",
-        "traits": "Traits"
+        "traits": "Traits",
+        "class": "Class & XP"
       },
       "SocialInitiative": "Social Initiative",
       "Fatigue": "Fatigue",
       "Exaltation": "Exaltation Sheet",
       "Feat": "Feat Sheet",
       "FromFeat": "From {feat} — removed with the feat",
-      "FromFeatShort": "Granted by a feat — removed with it"
+      "FromFeatShort": "Granted by a feat — removed with it",
+      "Class": "DtD Class Sheet",
+      "ModeAdvance": "Advance"
     },
     "Roll": {
       "Success": "Success",
@@ -482,6 +486,97 @@
       "WrongRaceHint": "This racial feat belongs to another race. The GM decides whether to remove it.",
       "Limit": "Limit",
       "HindranceLimit": "At most {max} per character, chosen at character creation (p. 179)"
+    },
+    "Class": {
+      "Level": "Level",
+      "Track": "Track",
+      "Prerequisites": "Prerequisites",
+      "Characteristics": "Characteristics",
+      "Skills": "Skills",
+      "AnyCharacteristic": "Any characteristic",
+      "Feats": "Feats",
+      "Mandatory": "Mandatory",
+      "Optional": "Optional",
+      "Choice": "Choose one",
+      "Or": "or",
+      "MagicSchools": "Magic Schools",
+      "SwordSchools": "Sword Schools",
+      "GunKata": "Gun Kata",
+      "CompletionBonus": "Completion bonus",
+      "Automation": "Automation",
+      "Value": "Value",
+      "Completion": {
+        "none": "Text only",
+        "hpMax": "Max Hit Points",
+        "initiative": "Initiative",
+        "resolveMax": "Max Resolve",
+        "staticDefense": "Static Defense",
+        "specialty": "Skill specialty",
+        "skillDot": "Skill dot"
+      },
+      "Current": "Current class",
+      "Completed": "Completed classes",
+      "Progress": "Progress",
+      "FreeStudy": "Free Study",
+      "FreeStudyHint": "No class in progress: purchases are Free Study and cost double. Drop a class here to start one.",
+      "DropHint": "Drag a class from the Classes compendium onto the sheet to start it.",
+      "BuyFeat": "Buy",
+      "Remove": "Remove class",
+      "RemoveConfirm": "Remove {class}? Its completion bonus and the feats it granted leave with it.",
+      "Uncomplete": "Undo completion",
+      "LevelFromClasses": "Derived from the highest-Level class",
+      "NotCharacter": "Only characters can take classes.",
+      "GMOverrideTitle": "Class requirements not met",
+      "GMOverride": "As GM, start the class anyway?",
+      "ConfirmTitle": "Check the prerequisites",
+      "BonusTitle": "{class}: completion bonus",
+      "BonusIntro": "{class} is complete. Choose where the bonus goes.",
+      "BonusEffect": "{class}: {bonus}",
+      "CompletedNotice": "{class} completed.",
+      "Error": {
+        "levelTooHigh": "This class is Level {level}; the character can take up to Level {max}.",
+        "currentIncomplete": "Complete {name} first.",
+        "alreadyTaken": "The character already has this class.",
+        "missingSkills": "Missing skills: {list}.",
+        "missingFeats": "Missing feats: {list}.",
+        "bonusChoice": "Choose a skill (and write the specialty, if asked)."
+      },
+      "Warning": {
+        "schools": "The class also requires schools the system does not check: {list}. Confirm the character has them.",
+        "text": "Other prerequisites: {text}. Confirm the character meets them."
+      }
+    },
+    "XP": {
+      "XP": "Experience",
+      "Total": "total",
+      "Spent": "spent",
+      "Available": "available",
+      "Starting": "Starting XP",
+      "FromHindrances": "From hindrances",
+      "Award": "Award XP",
+      "AwardReason": "Reason",
+      "Negative": "More XP was spent than earned.",
+      "AdvanceHint": "Advance mode: buy characteristics, skills and feats with XP, following the class lists.",
+      "Log": "XP log",
+      "Empty": "No entries yet.",
+      "Buy": "Buy with XP",
+      "BuyConfirm": "Buy {label} for {cost} XP? ({available} available)",
+      "CostTooltip": "Buy for {cost} XP",
+      "CostFreeStudy": "Free Study: {cost} XP (double cost)",
+      "GMOverrideTitle": "Purchase not allowed",
+      "GMOverride": "As GM, allow it anyway at no cost?",
+      "Undo": "Undo",
+      "UndoConfirm": "Undo {label} and refund {cost} XP?",
+      "RefundOnly": "XP refunded; the value was not changed.",
+      "Error": {
+        "noClass": "The character needs a class before buying with XP.",
+        "offList": "Not on the current class list.",
+        "notOnList": "Not on the list of any class the character has.",
+        "ownedOrBlocked": "Already owned, or excluded by another choice.",
+        "atMax": "{label} is already at the maximum.",
+        "notEnough": "Not enough XP: costs {cost}, {available} available.",
+        "onlyLast": "Only the GM can undo entries other than the last one."
+      }
     }
   }
 }

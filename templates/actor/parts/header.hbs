@@ -9,7 +9,7 @@
       {{/if}}
       <div class="identity-line">
         <label>{{localize "DTD.Sheet.Level"}}
-          {{#if isEdit}}<input type="number" name="system.level" value="{{system.level}}" min="1" max="10" step="1">{{else}}<b>{{system.level}}</b>{{/if}}
+          {{#if (and isEdit (not hasClasses))}}<input type="number" name="system.level" value="{{system.level}}" min="1" max="10" step="1">{{else}}<b{{#if hasClasses}} data-tooltip="{{localize "DTD.Class.LevelFromClasses"}}"{{/if}}>{{system.level}}</b>{{/if}}
         </label>
         <label>{{localize "DTD.Sheet.Size"}}
           {{#if isEdit}}<input type="number" name="system.size" value="{{base.size}}" min="1" max="10" step="1">{{#if base.sizeChanged}}<span class="final-value" data-tooltip="{{localize "DTD.Race.FinalValue"}}">→ {{system.size}}</span>{{/if}}{{else}}<b>{{system.size}}</b>{{/if}}
@@ -20,6 +20,9 @@
         <span class="identity-race">{{localize "DTD.Exaltation.Exaltation"}}:
           {{#if exaltation}}<a data-action="openExaltation">{{exaltation.name}}</a>{{else}}<b>—</b>{{/if}}
         </span>
+        <span class="identity-race">{{localize "TYPES.Item.class"}}:
+          {{#if currentClass}}<b>{{currentClass}}</b>{{else if hasClasses}}<b>{{localize "DTD.Class.FreeStudy"}}</b>{{else}}<b>—</b>{{/if}}
+        </span>
       </div>
     </div>
     {{#if canToggle}}
@@ -27,8 +30,11 @@
       <button type="button" class="mode-button{{#if isEdit}} active{{/if}}" data-action="toggleMode" data-mode="edit">
         <i class="fa-solid fa-pen" aria-hidden="true"></i> {{localize "DTD.Sheet.ModeEdit"}}
       </button>
-      <button type="button" class="mode-button{{#unless isEdit}} active{{/unless}}" data-action="toggleMode" data-mode="play">
+      <button type="button" class="mode-button{{#if (and (not isEdit) (not isAdvance))}} active{{/if}}" data-action="toggleMode" data-mode="play">
         <i class="fa-solid fa-dice-d10" aria-hidden="true"></i> {{localize "DTD.Sheet.ModePlay"}}
+      </button>
+      <button type="button" class="mode-button{{#if isAdvance}} active{{/if}}" data-action="toggleMode" data-mode="advance" data-tooltip="{{localize "DTD.XP.AdvanceHint"}}">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> {{localize "DTD.Sheet.ModeAdvance"}}
       </button>
     </div>
     {{/if}}

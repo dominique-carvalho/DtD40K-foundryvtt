@@ -6,7 +6,8 @@
     "Item": {
       "race": "Raça",
       "exaltation": "Exaltação",
-      "feat": "Feat"
+      "feat": "Feat",
+      "class": "Classe"
     }
   },
   "DTD": {
@@ -113,14 +114,17 @@
       "Race": "Ficha de Raça DtD",
       "Tab": {
         "main": "Características e Perícias",
-        "traits": "Traços"
+        "traits": "Traços",
+        "class": "Classe e XP"
       },
       "SocialInitiative": "Iniciativa social",
       "Fatigue": "Fatigue",
       "Exaltation": "Ficha de Exaltação",
       "Feat": "Ficha de Feat",
       "FromFeat": "De {feat} — sai junto com o feat",
-      "FromFeatShort": "Concedida por um feat — sai junto com ele"
+      "FromFeatShort": "Concedida por um feat — sai junto com ele",
+      "Class": "Ficha de Classe DtD",
+      "ModeAdvance": "Evolução"
     },
     "Roll": {
       "Success": "Sucesso",
@@ -482,6 +486,97 @@
       "WrongRaceHint": "Este feat racial é de outra raça. O Mestre decide se remove.",
       "Limit": "Limite",
       "HindranceLimit": "No máximo {max} por personagem, escolhidos na criação (p. 179)"
+    },
+    "Class": {
+      "Level": "Nível",
+      "Track": "Trilha",
+      "Prerequisites": "Pré-requisitos",
+      "Characteristics": "Características",
+      "Skills": "Perícias",
+      "AnyCharacteristic": "Qualquer característica",
+      "Feats": "Feats",
+      "Mandatory": "Obrigatórios",
+      "Optional": "Opcionais",
+      "Choice": "Escolha um",
+      "Or": "ou",
+      "MagicSchools": "Escolas de Magia",
+      "SwordSchools": "Escolas de Espada",
+      "GunKata": "Gun Kata",
+      "CompletionBonus": "Bônus de conclusão",
+      "Automation": "Automação",
+      "Value": "Valor",
+      "Completion": {
+        "none": "Só texto",
+        "hpMax": "Pontos de Vida máximos",
+        "initiative": "Iniciativa",
+        "resolveMax": "Resolve máximo",
+        "staticDefense": "Defesa Estática",
+        "specialty": "Especialidade de perícia",
+        "skillDot": "Ponto de perícia"
+      },
+      "Current": "Classe atual",
+      "Completed": "Classes concluídas",
+      "Progress": "Progresso",
+      "FreeStudy": "Estudo Livre",
+      "FreeStudyHint": "Nenhuma classe em andamento: as compras são Estudo Livre e custam o dobro. Solte uma classe aqui para começar.",
+      "DropHint": "Arraste uma classe do compêndio Classes para a ficha para começá-la.",
+      "BuyFeat": "Comprar",
+      "Remove": "Remover classe",
+      "RemoveConfirm": "Remover {class}? O bônus de conclusão e os feats concedidos saem junto.",
+      "Uncomplete": "Desfazer conclusão",
+      "LevelFromClasses": "Derivado da classe de maior Nível",
+      "NotCharacter": "Só personagens podem ter classes.",
+      "GMOverrideTitle": "Requisitos da classe não atendidos",
+      "GMOverride": "Como Mestre, começar a classe mesmo assim?",
+      "ConfirmTitle": "Confira os pré-requisitos",
+      "BonusTitle": "{class}: bônus de conclusão",
+      "BonusIntro": "{class} foi concluída. Escolha onde aplicar o bônus.",
+      "BonusEffect": "{class}: {bonus}",
+      "CompletedNotice": "{class} concluída.",
+      "Error": {
+        "levelTooHigh": "Esta classe é de Nível {level}; o personagem pode pegar até o Nível {max}.",
+        "currentIncomplete": "Conclua {name} primeiro.",
+        "alreadyTaken": "O personagem já tem esta classe.",
+        "missingSkills": "Perícias faltando: {list}.",
+        "missingFeats": "Feats faltando: {list}.",
+        "bonusChoice": "Escolha uma perícia (e escreva a especialidade, se pedida)."
+      },
+      "Warning": {
+        "schools": "A classe também exige escolas que o sistema não confere: {list}. Confirme que o personagem as tem.",
+        "text": "Outros pré-requisitos: {text}. Confirme que o personagem os cumpre."
+      }
+    },
+    "XP": {
+      "XP": "Experiência",
+      "Total": "total",
+      "Spent": "gasto",
+      "Available": "disponível",
+      "Starting": "XP inicial",
+      "FromHindrances": "De hindrances",
+      "Award": "Dar XP",
+      "AwardReason": "Motivo",
+      "Negative": "Foi gasto mais XP do que o ganho.",
+      "AdvanceHint": "Modo evolução: compre características, perícias e feats com XP, seguindo as listas da classe.",
+      "Log": "Registro de XP",
+      "Empty": "Nenhum lançamento ainda.",
+      "Buy": "Comprar com XP",
+      "BuyConfirm": "Comprar {label} por {cost} XP? ({available} disponível)",
+      "CostTooltip": "Comprar por {cost} XP",
+      "CostFreeStudy": "Estudo Livre: {cost} XP (custo dobrado)",
+      "GMOverrideTitle": "Compra não permitida",
+      "GMOverride": "Como Mestre, permitir mesmo assim, sem custo?",
+      "Undo": "Desfazer",
+      "UndoConfirm": "Desfazer {label} e devolver {cost} XP?",
+      "RefundOnly": "XP devolvido; o valor não foi alterado.",
+      "Error": {
+        "noClass": "O personagem precisa de uma classe para comprar com XP.",
+        "offList": "Fora da lista da classe atual.",
+        "notOnList": "Fora da lista de todas as classes do personagem.",
+        "ownedOrBlocked": "Já possui, ou foi excluído por outra escolha.",
+        "atMax": "{label} já está no máximo.",
+        "notEnough": "XP insuficiente: custa {cost}, há {available} disponível.",
+        "onlyLast": "Só o Mestre pode desfazer lançamentos que não sejam o último."
+      }
     }
   }
 }

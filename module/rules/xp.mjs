@@ -56,9 +56,11 @@ export function canAdvance({ kind, key, feat, classes, race, owned }) {
       const progress = classProgress(cls.system, owned);
       const entry = progress.entries.find((e) => matchesListFeat(e, feat) && (current || !e.mandatory));
       if (!entry) continue;
-      return entry.owned && !cls.system.feats.find((e) => e === entry)?.subcategory?.match(/any/i)
-        ? no("ownedOrBlocked")
-        : entry.blocked ? no("ownedOrBlocked") : ok();
+      if (entry.blocked) return no("ownedOrBlocked");
+      // An "(Any)" entry can be bought again with another sub-category; duplicates are checked by the feat rules.
+      const open = !entry.subcategory || /^any$/i.test(entry.subcategory.trim());
+      if (entry.owned && !(open && feat.system.selection?.subcategory)) return no("ownedOrBlocked");
+      return ok();
     }
     return no("notOnList");
   }

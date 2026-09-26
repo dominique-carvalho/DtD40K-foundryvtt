@@ -1,0 +1,98 @@
+<section class="tab class-tab {{tabs.class.cssClass}}" data-group="primary" data-tab="class">
+  <section class="xp-summary{{#if classContext.xp.negative}} negative{{/if}}">
+    <h2 class="section-title">{{localize "DTD.XP.XP"}}</h2>
+    <div class="xp-totals">
+      <span><b>{{classContext.xp.total}}</b> {{localize "DTD.XP.Total"}}</span>
+      <span><b>{{classContext.xp.spent}}</b> {{localize "DTD.XP.Spent"}}</span>
+      <span class="xp-available"><b>{{classContext.xp.available}}</b> {{localize "DTD.XP.Available"}}</span>
+      {{#if classContext.xp.hindranceXp}}<span class="hint">{{localize "DTD.XP.FromHindrances"}} +{{classContext.xp.hindranceXp}}</span>{{/if}}
+    </div>
+    {{#if isGM}}
+    <div class="xp-award">
+      <label>{{localize "DTD.XP.Starting"}} <input type="number" name="system.xp.starting" value="{{classContext.xp.starting}}" min="0" step="10"></label>
+      <input type="number" class="xp-award-amount" value="100" step="10" aria-label="{{localize "DTD.XP.Award"}}">
+      <input type="text" class="xp-award-reason" placeholder="{{localize "DTD.XP.AwardReason"}}">
+      <button type="button" data-action="awardXp"><i class="fa-solid fa-gift" inert></i> {{localize "DTD.XP.Award"}}</button>
+    </div>
+    {{/if}}
+    {{#if classContext.xp.negative}}<p class="notification warning">{{localize "DTD.XP.Negative"}}</p>{{/if}}
+    <p class="hint">{{localize "DTD.XP.AdvanceHint"}}</p>
+  </section>
+
+  <section class="class-current">
+    <h2 class="section-title">{{localize "DTD.Class.Current"}}</h2>
+    {{#if classContext.current}}
+    {{#with classContext.current as |cls|}}
+    <article class="class-card current">
+      <header>
+        <img class="asset-img" src="{{cls.img}}" alt="{{cls.name}}">
+        <a data-action="openClass" data-item-id="{{cls.id}}">{{cls.name}}</a>
+        <span class="automation-tag">{{localize "DTD.Class.Level"}} {{cls.level}}{{#if cls.track}} · {{cls.track}}{{/if}}</span>
+        <span class="feat-badge">{{localize "DTD.Class.Progress"}} {{cls.progressText}}</span>
+        {{#if @root.canEditRace}}<a class="asset-remove" data-action="removeClass" data-item-id="{{cls.id}}" data-tooltip="{{localize "DTD.Class.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>{{/if}}
+      </header>
+      <p class="hint">{{localize "DTD.Class.Characteristics"}}: {{cls.characteristics}} · {{localize "DTD.Class.Skills"}}: {{cls.skills}}</p>
+      <ul class="class-feats">
+        {{#each cls.entries as |entry|}}
+        <li class="{{#if entry.owned}}owned{{else if entry.blocked}}blocked{{/if}}">
+          <i class="fa-solid {{#if entry.owned}}fa-circle-check{{else if entry.blocked}}fa-ban{{else}}fa-circle{{/if}}" inert></i>
+          {{entry.label}}
+          {{#unless entry.mandatory}}<span class="hint">({{localize "DTD.Class.Optional"}})</span>{{/unless}}
+          {{#if entry.choice}}<span class="hint">({{localize "DTD.Class.Choice"}})</span>{{/if}}
+          {{#if (and @root.canEditRace (not entry.owned) (not entry.blocked))}}
+          <a class="class-buy" data-action="buyClassFeat" data-name="{{entry.name}}" data-subcategory="{{entry.subcategory}}"><i class="fa-solid fa-cart-plus" inert></i> {{localize "DTD.Class.BuyFeat"}}</a>
+          {{/if}}
+        </li>
+        {{/each}}
+      </ul>
+      <details><summary>{{localize "DTD.Class.CompletionBonus"}}</summary><div class="enriched">{{{cls.completion}}}</div></details>
+    </article>
+    {{/with}}
+    {{else}}
+    {{#if classContext.freeStudy}}<p class="notification info">{{localize "DTD.Class.FreeStudyHint"}}</p>{{/if}}
+    <p class="race-drop-hint"><i class="fa-solid fa-hand-pointer" inert></i> {{localize "DTD.Class.DropHint"}}</p>
+    {{/if}}
+  </section>
+
+  {{#if classContext.completed.length}}
+  <section class="class-completed">
+    <h2 class="section-title">{{localize "DTD.Class.Completed"}}</h2>
+    {{#each classContext.completed as |cls|}}
+    <article class="class-card">
+      <header>
+        <img class="asset-img" src="{{cls.img}}" alt="{{cls.name}}">
+        <a data-action="openClass" data-item-id="{{cls.id}}">{{cls.name}}</a>
+        <span class="automation-tag">{{localize "DTD.Class.Level"}} {{cls.level}}{{#if cls.track}} · {{cls.track}}{{/if}}</span>
+        {{#if @root.isGM}}
+        <a class="asset-remove" data-action="uncompleteClass" data-item-id="{{cls.id}}" data-tooltip="{{localize "DTD.Class.Uncomplete"}}"><i class="fa-solid fa-rotate-left" inert></i></a>
+        <a class="asset-remove" data-action="removeClass" data-item-id="{{cls.id}}" data-tooltip="{{localize "DTD.Class.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
+        {{/if}}
+      </header>
+      <div class="enriched">{{{cls.completion}}}</div>
+      {{#each cls.effects as |effect|}}
+      <label class="race-effect{{#unless effect.active}} inactive{{/unless}}">
+        <input type="checkbox" data-action="toggleItemEffect" data-item-id="{{effect.itemId}}" data-effect-id="{{effect.id}}" {{checked effect.active}} {{disabled (not @root.canToggleEffects)}}>
+        {{effect.name}}
+      </label>
+      {{/each}}
+    </article>
+    {{/each}}
+  </section>
+  {{/if}}
+
+  <section class="xp-log">
+    <h2 class="section-title">{{localize "DTD.XP.Log"}}</h2>
+    <ol class="xp-entries">
+      {{#each classContext.xp.log as |entry|}}
+      <li class="{{#if entry.award}}award{{/if}}">
+        <span class="xp-cost">{{entry.sign}}{{entry.cost}}</span>
+        <span class="xp-label">{{#if entry.label}}{{entry.label}}{{else}}{{entry.reason}}{{/if}}</span>
+        <span class="hint">{{entry.user}} · {{entry.when}}</span>
+        {{#if (and @root.canEditRace entry.undoable)}}<a class="asset-remove" data-action="undoXp" data-entry-id="{{entry.id}}" data-tooltip="{{localize "DTD.XP.Undo"}}"><i class="fa-solid fa-rotate-left" inert></i></a>{{/if}}
+      </li>
+      {{else}}
+      <li class="hint">{{localize "DTD.XP.Empty"}}</li>
+      {{/each}}
+    </ol>
+  </section>
+</section>

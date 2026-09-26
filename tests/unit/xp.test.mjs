@@ -56,6 +56,12 @@ describe("canAdvance (p. 106)", () => {
       .toMatchObject({ allowed: false, reason: "ownedOrBlocked" });
   });
 
+  it("lets an (Any) list feat be bought again with another sub-category", () => {
+    const wp = (sub) => ({ name: sub ? `Weapon Proficiency (${sub})` : "Weapon Proficiency", system: { category: "feat", prerequisites: { race: "" }, selection: { subcategory: sub } } });
+    const owned = [wp("Basic")];
+    expect(canAdvance({ ...ctx, owned, kind: "feat", feat: { name: "Weapon Proficiency", system: wp("Melee 1").system } })).toMatchObject({ allowed: true });
+  });
+
   it("always allows the Power Stat and refuses everything without a class", () => {
     expect(canAdvance({ ...ctx, kind: "powerStat" })).toMatchObject({ allowed: true });
     expect(canAdvance({ classes: [], race: null, owned: [], kind: "characteristic", key: "str" })).toEqual({ allowed: false, multiplier: 1, reason: "noClass" });

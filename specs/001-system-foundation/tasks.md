@@ -164,6 +164,7 @@ e confirmar que falham. UI/integração: roteiro manual do quickstart.md.
 - [X] T058 [US1] Rodapé com iniciativa social `1d10 + Fel + Cmp` além da de combate — 7.7a p. 17
 - [X] T059 [US1] Exemplo da Traya da 7.7a (pp. 17–18) em `tests/unit/derived.test.mjs`, data-model e quickstart
 - [X] T060 Spec e contratos ajustados para stunts +XkX (7.7a p. 418) e para a escala de TN da 7.7a
+- [X] T061 [US3] Após integrar a `main`: `applyModifiers` soma o nível de stunt em rolados **e** mantidos (+1k1 por nível, 7.7a p. 418); testes em `tests/unit/pool.test.mjs` e `tests/unit/test.test.mjs`; texto do campo Stunt na janela de rolagem; citações de página do código de rolagem passam para a 7.7a
 ---
 
 ## Dependencies & Execution Order

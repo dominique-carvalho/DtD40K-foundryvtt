@@ -1,7 +1,7 @@
 /**
  * Test outcome: success, raises and checks.
  * PURE module: must never reference Foundry globals (constitution, principle III).
- * Source: DtD 1.6 pp. 8, 236 — each 5 over the TN is a raise, each 5 under is a check.
+ * Source: DtD 7.7a p. 11 — each 5 over the TN is a raise, each 5 under is a check.
  */
 
 /**

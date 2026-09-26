@@ -75,12 +75,12 @@ describe("formatPool", () => {
 describe("applyModifiers (US3)", () => {
   const base = { rolled: 5, kept: 3 };
 
-  it("adds stunt dice as rolled dice", () => {
-    expect(applyModifiers(base, { stuntDice: 2 })).toEqual({ rolled: 7, kept: 3, flat: 0 });
+  it("adds +1k1 per stunt level (DtD 7.7a p. 418: 5k3 + stunt 2 → 7k5)", () => {
+    expect(applyModifiers(base, { stuntDice: 2 })).toEqual({ rolled: 7, kept: 5, flat: 0 });
   });
 
-  it("clamps stunt dice to 0–3", () => {
-    expect(applyModifiers(base, { stuntDice: 5 })).toEqual({ rolled: 8, kept: 3, flat: 0 });
+  it("clamps the stunt level to 0–3", () => {
+    expect(applyModifiers(base, { stuntDice: 5 })).toEqual({ rolled: 8, kept: 6, flat: 0 });
     expect(applyModifiers(base, { stuntDice: -1 })).toEqual({ rolled: 5, kept: 3, flat: 0 });
   });
 

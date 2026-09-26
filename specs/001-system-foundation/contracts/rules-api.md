@@ -48,7 +48,7 @@ funções são puras, exceto pelo gerador `rng` injetado. Cobertura obrigatória
 efetiva (após o −1 de "sem treino") for ≤ 0, ela conta como **1 dado rolado e 1 mantido** e
 `zeroCharacteristic: true`. Ex.: perícia 2 + característica 0 → 3k1; teste de característica 0
 → 1k1; perícia básica sem treino com característica 1 → 1k1 (`untrained` e `zeroCharacteristic`).
-| `applyModifiers(base, {rolled=0, kept=0, flat=0, freeRaises=0, stunt=0})` → `Pool` | rolled += rolled + stunt; kept += kept + stunt; flat += flat + 5·freeRaises. `stunt` (nível 0–3) limitado a 0–3; cada nível vale +1k1 (7.7a p. 418) |
+| `applyModifiers(base, {rolled=0, kept=0, flat=0, freeRaises=0, stuntDice=0})` → `Pool` | rolled += rolled + stuntDice; kept += kept + stuntDice; flat += flat + 5·freeRaises. `stuntDice` é o nível do stunt (0–3, limitado); cada nível vale +1k1 (7.7a p. 418) |
 
 O sinal `zeroCharacteristic` retornado é repassado a `rollAndKeep` (ver `dice.mjs`).
 

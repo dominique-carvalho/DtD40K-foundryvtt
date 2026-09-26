@@ -1,0 +1,113 @@
+{
+  "_id": "dtdCcb461870bc92",
+  "_key": "!items!dtdCcb461870bc92",
+  "name": "Preacher",
+  "type": "class",
+  "img": "icons/svg/holy-shield.svg",
+  "folder": "dtdCFd94e8732b9c",
+  "system": {
+    "description": "<p>The Cleric track's second step, a spellcaster who serves a religious order. Preachers focus their divine spells and guide others with Virgil's Guidance.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 126
+    },
+    "level": 2,
+    "track": "Cleric",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "forbiddenLore"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Pure Faith"
+      ],
+      "schools": [
+        {
+          "name": "Healing or Abjuration",
+          "value": 1
+        }
+      ],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "wil",
+      "int"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "forbiddenLore",
+      "medicae",
+      "politics",
+      "techUse",
+      "ballistics",
+      "weaponry",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Peer",
+        "subcategory": "Religious Order",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Focus",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Virgil's Guidance",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Abjuration",
+      "Divination",
+      "Healing",
+      "Necromancy",
+      "Transmutation"
+    ],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your maximum HP rises by +1.</p>",
+      "automation": "hpMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

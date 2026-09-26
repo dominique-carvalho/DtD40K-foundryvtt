@@ -1,0 +1,115 @@
+{
+  "_id": "dtdC108912a28356",
+  "_key": "!items!dtdC108912a28356",
+  "name": "Sorcerer-Swordsman",
+  "type": "class",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdCFdaebebd4a00",
+  "system": {
+    "description": "<p>The pinnacle of the Arcane Knight path, a blade-wielding sorcerer whose Mental Fortress and Spell Shield let them stand in melee while hurling magic, optionally clad in heavy armor.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 119
+    },
+    "level": 5,
+    "track": "Arcane Knight",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Sword Beam"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "wil",
+      "cha"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "acrobatics",
+      "athletics",
+      "weaponry",
+      "charm",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Extracurricular Study",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Mental Fortress",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Blademaster",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Shield",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Heavy",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>While casting through an Implement, your Focus Power TNs drop by 1.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

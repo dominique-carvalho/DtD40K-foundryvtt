@@ -1,0 +1,123 @@
+{
+  "_id": "dtdCdfe81c76a40e",
+  "_key": "!items!dtdCdfe81c76a40e",
+  "name": "Rogue",
+  "type": "class",
+  "img": "icons/svg/trap.svg",
+  "folder": "dtdCFd824f2a1072",
+  "system": {
+    "description": "<p>An agile, elusive Thief who lives by stealth, luck and larceny, slipping past guards and sneak attacking when the moment is right.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 167
+    },
+    "level": 4,
+    "track": "Thief",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "larceny"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Sneak Attack"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "fel"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "perception",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "charm",
+      "deceive",
+      "disguise",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Improved Sneak Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Hard Target",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Luck",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Jaded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Shadow Hand",
+      "Diamond Mind",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Static Defense increases by 1.</p>",
+      "automation": "staticDefense",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

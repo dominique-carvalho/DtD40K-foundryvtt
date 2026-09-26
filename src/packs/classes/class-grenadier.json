@@ -1,0 +1,127 @@
+{
+  "_id": "dtdC7b7a7259f46f",
+  "_key": "!items!dtdC7b7a7259f46f",
+  "name": "Grenadier",
+  "type": "class",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdCFd29e9d6f032",
+  "system": {
+    "description": "<p>A veteran Guardsman who has learned to survive the battlefield, a hard target with tough nerves who pours ranged fire onto the enemy.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 140
+    },
+    "level": 4,
+    "track": "Guardsman",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Deadeye Shot",
+        "Weapon Focus"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "drive",
+      "pilot",
+      "weaponry",
+      "command"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Defensive Mobility",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Fearless",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Iron Jaw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Hard Target",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Tin Star",
+      "Silent Scope",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Your Ranged attack tests get +1.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

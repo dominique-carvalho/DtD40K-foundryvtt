@@ -1,0 +1,87 @@
+{
+  "_id": "dtdC44db773d6bf4",
+  "_key": "!items!dtdC44db773d6bf4",
+  "name": "Scholar",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd3d80d0dc1c",
+  "system": {
+    "description": "<p>An always-available starter class for skill specialists devoted to knowledge and lore. Scholars have eidetic memory and broad learning, and count other scholars among their peers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 113
+    },
+    "level": 1,
+    "track": "",
+    "prerequisites": {
+      "skills": [],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "wil",
+      "wis"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "academicLore",
+      "commonLore",
+      "forbiddenLore",
+      "politics",
+      "techUse"
+    ],
+    "feats": [
+      {
+        "name": "Eidetic Memory",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Speak Language",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any Lore",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Peer",
+        "subcategory": "Scholars",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Expanded Knowledge",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain a specialty in a skill of your choice.</p>",
+      "automation": "specialty",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

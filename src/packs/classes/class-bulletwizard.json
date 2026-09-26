@@ -1,0 +1,116 @@
+{
+  "_id": "dtdCbea284b5b4db",
+  "_key": "!items!dtdCbea284b5b4db",
+  "name": "Bulletwizard",
+  "type": "class",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdCFd1fb65dfd09",
+  "system": {
+    "description": "<p>A Magitek Gunman who loads spells into ammunition, hitting distant targets with Far Shot and elemental rounds while wielding Evocation and Conjuration.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 149
+    },
+    "level": 4,
+    "track": "Magitek Gunman",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Elemental Shot II"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wil",
+      "dex",
+      "cha"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "stealth",
+      "charm",
+      "deceive"
+    ],
+    "feats": [
+      {
+        "name": "Strong Minded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Combat Insight",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Far Shot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Elemental Shot II",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Elemental Shot II",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Evocation",
+      "Conjuration"
+    ],
+    "swordSchools": [],
+    "gunKata": [
+      "Elemental Gearbolt",
+      "Clay Pigeon"
+    ],
+    "completion": {
+      "text": "<p>Elemental Shot II gains one extra use each session.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

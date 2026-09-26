@@ -1,0 +1,118 @@
+{
+  "_id": "dtdCb883a2ba8bb2",
+  "_key": "!items!dtdCb883a2ba8bb2",
+  "name": "Gallant",
+  "type": "class",
+  "img": "icons/svg/angel.svg",
+  "folder": "dtdCFd34623d0231",
+  "system": {
+    "description": "<p>The Paladin track starts with this armored holy warrior who fights on the front line. Gallants hold pure faith, hate heretics and crash into enemies with powerful charges.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 156
+    },
+    "level": 1,
+    "track": "Paladin",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "forbiddenLore"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "wil",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "forbiddenLore",
+      "medicae",
+      "athletics",
+      "weaponry",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Pure Faith",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Powerful Charge",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Hatred",
+        "subcategory": "Heretics",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Jaded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Melee 1",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "White Raven",
+      "Devoted Spirit",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 AP whenever you wear armor.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

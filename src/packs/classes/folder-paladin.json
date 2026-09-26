@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd34623d0231",
+  "_key": "!folders!dtdCFd34623d0231",
+  "name": "Paladin",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 150000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Paladin"
+    }
+  }
+}

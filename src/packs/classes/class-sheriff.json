@@ -1,0 +1,141 @@
+{
+  "_id": "dtdC17a58eebf24b",
+  "_key": "!items!dtdC17a58eebf24b",
+  "name": "Sheriff",
+  "type": "class",
+  "img": "icons/svg/castle.svg",
+  "folder": "dtdCFd97d6f8d323",
+  "system": {
+    "description": "<p>Second step of the Sheriff track, the hardened lawman. Sheriffs fire double taps, endure punishment and stay alert for threats.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 160
+    },
+    "level": 2,
+    "track": "Sheriff",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "command"
+          ],
+          "value": 1
+        },
+        {
+          "keys": [
+            "intimidation"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [
+        "Common Sense",
+        "Quick Draw"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "cha",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "medicae",
+      "perception",
+      "politics",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "drive",
+      "stealth",
+      "animalKen",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Double Tap",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Jaded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Fleet of Foot",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Hardy",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Blind Fighting",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Paranoia",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Clay Pigeon",
+      "Tin Star",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Increase Backing (Law Enforcement) by +1, up to a cap of 5.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

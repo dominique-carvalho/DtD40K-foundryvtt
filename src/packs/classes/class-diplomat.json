@@ -1,0 +1,112 @@
+{
+  "_id": "dtdC0d8b76961f5c",
+  "_key": "!items!dtdC0d8b76961f5c",
+  "name": "Diplomat",
+  "type": "class",
+  "img": "icons/svg/coins.svg",
+  "folder": "dtdCFd0007f24f55",
+  "system": {
+    "description": "<p>The Courtier track's accomplished envoy, a master of talk, disguise and courtly influence. It picks up Master of Disguise, Courtier's Privilege and Meditation to navigate intrigue with a cool head.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 130
+    },
+    "level": 3,
+    "track": "Courtier",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "persuasion"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "scrutiny"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Protocol"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "cha",
+      "fel",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "commonLore",
+      "politics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "weaponry",
+      "charm",
+      "command",
+      "deceive",
+      "disguise",
+      "intimidation",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Courtier's Privilege",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Master of Disguise",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Meditation",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Peer",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 Resolve.</p>",
+      "automation": "resolveMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

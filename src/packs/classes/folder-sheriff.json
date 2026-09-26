@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd97d6f8d323",
+  "_key": "!folders!dtdCFd97d6f8d323",
+  "name": "Sheriff",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 160000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Sheriff"
+    }
+  }
+}

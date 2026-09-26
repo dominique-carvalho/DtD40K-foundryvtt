@@ -1,0 +1,115 @@
+{
+  "_id": "dtdC56efe1a5b777",
+  "_key": "!items!dtdC56efe1a5b777",
+  "name": "Grand Master of Flowers",
+  "type": "class",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdCFdb5564e5415",
+  "system": {
+    "description": "<p>The supreme Monk, whose Iron Fist, Feather Step and blinding speed let them dodge blows and strike back without ever needing weapons or armor.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 152
+    },
+    "level": 5,
+    "track": "Monk",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "acrobatics"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Unarmed Master",
+        "Swift Attack"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "wis"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "forbiddenLore",
+      "acrobatics",
+      "athletics",
+      "brawl",
+      "stealth",
+      "animalKen",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Iron Fist",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Feather Step",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Counter Attack",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Step Aside",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Lightning Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Setting Sun",
+      "Shadow Hand",
+      "Diamond Mind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Wholeness of Body grants 1 more point of Armor.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

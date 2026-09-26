@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd6fe71ac156",
+  "_key": "!folders!dtdCFd6fe71ac156",
+  "name": "Operator",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 140000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Operator"
+    }
+  }
+}

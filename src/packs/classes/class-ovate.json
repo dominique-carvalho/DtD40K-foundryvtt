@@ -1,0 +1,124 @@
+{
+  "_id": "dtdC4775b61d4b8f",
+  "_key": "!items!dtdC4775b61d4b8f",
+  "name": "Ovate",
+  "type": "class",
+  "img": "icons/svg/oak.svg",
+  "folder": "dtdCFd867ca5a053",
+  "system": {
+    "description": "<p>First class of the Druid track: a nature spellcaster who can adopt animal traits. Ovates swear the Druid's Oath, bond with an animal companion or familiar and sharpen their senses.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 132
+    },
+    "level": 1,
+    "track": "Druid",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "animalKen"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 1
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "medicae",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "stealth",
+      "animalKen",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Light",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Druid's Oath",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Animal Companion",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Heightened Senses",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Obtain Familiar",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Basic",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Healing",
+      "Transmutation",
+      "Divination"
+    ],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain two feats: Beastmaster and Improved Animal Companion.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [
+        {
+          "name": "Improved Animal Companion",
+          "subcategory": "",
+          "choose": false
+        },
+        {
+          "name": "Beastmaster",
+          "subcategory": "",
+          "choose": false
+        }
+      ],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

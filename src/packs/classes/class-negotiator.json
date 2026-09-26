@@ -1,0 +1,116 @@
+{
+  "_id": "dtdCb54be32221f9",
+  "_key": "!items!dtdCb54be32221f9",
+  "name": "Negotiator",
+  "type": "class",
+  "img": "icons/svg/coins.svg",
+  "folder": "dtdCFd0007f24f55",
+  "system": {
+    "description": "<p>Opening class of the Courtier track: a socially brilliant deal-maker with a wide skill set. Negotiators rely on charm, research and their connections to get their way.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 129
+    },
+    "level": 1,
+    "track": "Courtier",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "persuasion"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "scrutiny"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "cha",
+      "fel",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "commonLore",
+      "politics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "weaponry",
+      "charm",
+      "command",
+      "deceive",
+      "disguise",
+      "intimidation",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Courtier's Privilege",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Peer",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Research",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Eidetic Memory",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Charm",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 Resolve.</p>",
+      "automation": "resolveMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

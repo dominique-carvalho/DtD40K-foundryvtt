@@ -1,0 +1,109 @@
+{
+  "_id": "dtdCcfdf0cb68240",
+  "_key": "!items!dtdCcfdf0cb68240",
+  "name": "Swordmage",
+  "type": "class",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "dtdCFdaebebd4a00",
+  "system": {
+    "description": "<p>The Arcane Knight track's second class, blending swordplay and sorcery more tightly. Swordmages adopt the Iron Tower, generate mana and sense danger coming.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 118
+    },
+    "level": 2,
+    "track": "Arcane Knight",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Arcane Blade"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "wil",
+      "cha"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "acrobatics",
+      "athletics",
+      "weaponry",
+      "charm",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Extracurricular Study",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Iron Tower",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Mana Generator",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Danger Sense",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Melee 2",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Focus Power TNs drop by 1 while you use an Implement.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

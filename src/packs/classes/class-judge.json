@@ -1,0 +1,129 @@
+{
+  "_id": "dtdC4f50b923e182",
+  "_key": "!items!dtdC4f50b923e182",
+  "name": "Judge",
+  "type": "class",
+  "img": "icons/svg/castle.svg",
+  "folder": "dtdCFd97d6f8d323",
+  "system": {
+    "description": "<p>The highest authority of the Sheriff track, a gunslinging arbiter of the law who reads every fight and dispenses justice with cold precision.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 161
+    },
+    "level": 5,
+    "track": "Sheriff",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "command"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "intimidation"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Crack Shot",
+        "Combat Master"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "cha",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "medicae",
+      "perception",
+      "politics",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "drive",
+      "stealth",
+      "animalKen",
+      "command",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Hip Shooting",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Danger Sense",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "True Grit",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Step Aside",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Combat Master",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Clay Pigeon",
+      "Tin Star",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Your Backing (Law Enforcement) rises by 1, capped at 5.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,132 @@
+{
+  "_id": "dtdC75aa640d55ac",
+  "_key": "!items!dtdC75aa640d55ac",
+  "name": "Assassin",
+  "type": "class",
+  "img": "icons/svg/cowled.svg",
+  "folder": "dtdCFdee8da68050",
+  "system": {
+    "description": "<p>The midpoint of the Assassin track, for killers who already strike from hiding. It teaches Back Stab, evasive movement and weapon focus, blending blade and gun work through the Shadow Hand and Setting Sun schools and the Clay Pigeon and Silent Scope kata.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 115
+    },
+    "level": 3,
+    "track": "Assassin",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry",
+            "ballistics"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Sneak Attack"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "str",
+      "int"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "perception",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "charm",
+      "deceive",
+      "disguise",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Fleet of Foot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Swift Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Double Tap",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Back Stab",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Hard Target",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Shadow Hand",
+      "Setting Sun"
+    ],
+    "gunKata": [
+      "Clay Pigeon",
+      "Silent Scope"
+    ],
+    "completion": {
+      "text": "<p>Gain +1 on every initiative roll.</p>",
+      "automation": "initiative",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

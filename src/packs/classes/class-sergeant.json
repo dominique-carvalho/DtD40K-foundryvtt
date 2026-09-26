@@ -1,0 +1,133 @@
+{
+  "_id": "dtdC69db172fceaa",
+  "_key": "!items!dtdC69db172fceaa",
+  "name": "Sergeant",
+  "type": "class",
+  "img": "icons/svg/shield.svg",
+  "folder": "dtdCFd29e9d6f032",
+  "system": {
+    "description": "<p>The Guardsman track's veteran rifleman and squad leader. Hardened and quick to react, it gains Deadeye Shot, Hip Shooting and Fast Reflexes along with the Tin Star, Silent Scope and Point Blank kata.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 139
+    },
+    "level": 3,
+    "track": "Guardsman",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Crack Shot",
+        "Far Shot"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "drive",
+      "pilot",
+      "weaponry",
+      "command"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Evasion",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Armor Specialization",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Hip Shooting",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Fast Reflexes",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Deadeye Shot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Specialization",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Tin Star",
+      "Silent Scope",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Gain +1 on every Ranged attack test.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

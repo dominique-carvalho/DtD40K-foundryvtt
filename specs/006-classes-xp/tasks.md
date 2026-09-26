@@ -46,14 +46,14 @@ quickstart.md
 
 ### Tests for User Story 1 ⚠️
 
-- [ ] T010 [P] [US1] Em `tests/unit/packs.test.mjs` o bloco "classes compendium source (spec 006, SC-001)": 103 classes + 19 pastas; contagem por Level 23/21/22/19/18; 18 trilhas com 5 classes (Level 1–5) e 13 avulsas; Swordsman, Initiate, Mercenary e Fighter campo a campo (Level, trilha, página, pré-requisitos, listas, feats obrigatórios/opcionais, escolas, `completion.automation`/`value`); toda chave de característica/perícia válida; todo feat da lista e de pré-requisito existe no pack `feats` (nome canônico); automações de conclusão iguais à spec FR-009 (Mercenary/Ratcatcher hpMax 2; trilhas Cleric e Heavy hpMax 1; Assassin initiative 1; Courtier resolveMax 1; Thief staticDefense 1; Initiate/Scholar specialty any; Captain/Commodore specialty social; Bard skillDot; Druid grants Improved Animal Companion + Beastmaster; Techpriest grants Upgraded com a raridade); `status: "current"`, `startedAt: 0`, `completion.selection` vazio; `_id`/`_key` únicos
+- [X] T010 [P] [US1] Em `tests/unit/packs.test.mjs` o bloco "classes compendium source (spec 006, SC-001)": 103 classes + 19 pastas; contagem por Level 23/21/22/19/18; 18 trilhas com 5 classes (Level 1–5) e 13 avulsas; Swordsman, Initiate, Mercenary e Fighter campo a campo (Level, trilha, página, pré-requisitos, listas, feats obrigatórios/opcionais, escolas, `completion.automation`/`value`); toda chave de característica/perícia válida; todo feat da lista e de pré-requisito existe no pack `feats` (nome canônico); automações de conclusão iguais à spec FR-009 (Mercenary/Ratcatcher hpMax 2; trilhas Cleric e Heavy hpMax 1; Assassin initiative 1; Courtier resolveMax 1; Thief staticDefense 1; Initiate/Scholar specialty any; Captain/Commodore specialty social; Bard skillDot; Druid grants Improved Animal Companion + Beastmaster; Techpriest grants Upgraded com a raridade); `status: "current"`, `startedAt: 0`, `completion.selection` vazio; `_id`/`_key` únicos
 
 ### Implementation for User Story 1
 
-- [ ] T011 [US1] Gerar `src/packs/classes/` a partir do inventário com um script no scratchpad (não versionado): 19 pastas (trilhas + "Other"), 103 `class-<slug>.json` com nomes mapeados para chaves (`CHARACTERISTICS`, `SKILLS`; "Tech-Use" → `techUse`; "Craft" → `crafts`, "Decieve" → `deceive`), feats com o nome canônico do pack `feats` (comparação sem maiúsculas), grupos "A ou B" com `orGroup` (com `*` → todas opcionais), `completion` com automação/valor/concessões e `description`/`completion.text` vazios; rodar `node scripts/assign-pack-ids.mjs --pack classes`
-- [ ] T012 [P] [US1] Descrições das classes Level 1–2 (44): `description` (1–3 frases) e `completion.text` em inglês de redação própria, a partir do livro, com checagem de 6+ palavras
-- [ ] T013 [P] [US1] Descrições das classes Level 3 (22), mesmas regras
-- [ ] T014 [P] [US1] Descrições das classes Level 4–5 (37), mesmas regras
+- [X] T011 [US1] Gerar `src/packs/classes/` a partir do inventário com um script no scratchpad (não versionado): 19 pastas (trilhas + "Other"), 103 `class-<slug>.json` com nomes mapeados para chaves (`CHARACTERISTICS`, `SKILLS`; "Tech-Use" → `techUse`; "Craft" → `crafts`, "Decieve" → `deceive`), feats com o nome canônico do pack `feats` (comparação sem maiúsculas), grupos "A ou B" com `orGroup` (com `*` → todas opcionais), `completion` com automação/valor/concessões e `description`/`completion.text` vazios; rodar `node scripts/assign-pack-ids.mjs --pack classes`
+- [X] T012 [P] [US1] Descrições das classes Level 1–2 (44): `description` (1–3 frases) e `completion.text` em inglês de redação própria, a partir do livro, com checagem de 6+ palavras
+- [X] T013 [P] [US1] Descrições das classes Level 3 (22), mesmas regras
+- [X] T014 [P] [US1] Descrições das classes Level 4–5 (37), mesmas regras
 - [ ] T015 [US1] `npm test` (T010 passa) e `npm run build:packs`
 - [ ] T016 [US1] Criar `templates/item/class-sheet.hbs` e `module/apps/class-sheet.mjs` (`ClassSheet`, padrão da `FeatSheet`): cabeçalho, pré-requisitos, listas, feats agrupados (obrigatórios, opcionais, "A ou B"), escolas, bônus; edição com listas indexadas; aviso de compêndio bloqueado; registrar em `dtd40k.mjs`
 - [ ] T017 [P] [US1] i18n: `DTD.Sheet.Class`, `DTD.Class.{Level, Track, Prerequisites, Characteristics, AnyCharacteristic, Skills, Feats, Mandatory, Optional, Choice, MagicSchools, SwordSchools, GunKata, CompletionBonus, Automation, Value, SkillGroup.*}`
@@ -68,11 +68,11 @@ quickstart.md
 
 ### Tests for User Story 2 ⚠️
 
-- [ ] T020 [P] [US2] Escrever `tests/unit/class.test.mjs` com os casos de contracts/rules-api.md (`matchesListFeat`, `classProgress`, `checkClassEntry`, `characterLevel`, `buildCompletionEffects`, `completionSkillOptions`)
+- [X] T020 [P] [US2] Escrever `tests/unit/class.test.mjs` com os casos de contracts/rules-api.md (`matchesListFeat`, `classProgress`, `checkClassEntry`, `characterLevel`, `buildCompletionEffects`, `completionSkillOptions`)
 
 ### Implementation for User Story 2
 
-- [ ] T021 [US2] Implementar `module/rules/class.mjs` (PURO); fazer T020 passar
+- [X] T021 [US2] Implementar `module/rules/class.mjs` (PURO); fazer T020 passar
 - [ ] T022 [US2] Em `character-data.mjs` `prepareDerivedData`: no início, `this.level = characterLevel(classes, this.level)` e `this.classState` (atual, Free Study, concluídas)
 - [ ] T023 [US2] Criar `module/documents/class-service.mjs`: `getClasses`, `getCurrentClass`, `startClass` (`checkClassEntry` com erros → aviso + override do Mestre, avisos → confirmação; cria com `status: "current"` e `startedAt`), `syncClassCompletion` (quando completa → `completeClass`), `completeClass` (escolha do bônus em `templates/dialog/class-bonus.hbs` quando `specialty`/`skillDot`; efeitos de `buildCompletionEffects`; `status: "completed"`; `grantFeats`), `uncompleteClass` (Mestre; apaga efeitos, `releaseGrants`, `status: "current"`), `removeClass` (confirmação)
 - [ ] T024 [US2] Em `module/documents/feat-service.mjs` `grantFeats`: para `class`, usar `completion.grants` só com `status === "completed"`; em `module/documents/item.mjs` `_onCreate` de feat (autor) → `syncClassCompletion`
@@ -90,11 +90,11 @@ quickstart.md
 
 ### Tests for User Story 3 ⚠️
 
-- [ ] T030 [P] [US3] Escrever `tests/unit/xp.test.mjs` com os casos de contracts/rules-api.md (`advanceCost`, `canAdvance`, `xpTotals`, `undoPlan`)
+- [X] T030 [P] [US3] Escrever `tests/unit/xp.test.mjs` com os casos de contracts/rules-api.md (`advanceCost`, `canAdvance`, `xpTotals`, `undoPlan`)
 
 ### Implementation for User Story 3
 
-- [ ] T031 [US3] Implementar `module/rules/xp.mjs` (PURO); fazer T030 passar
+- [X] T031 [US3] Implementar `module/rules/xp.mjs` (PURO); fazer T030 passar
 - [ ] T032 [US3] Em `character-data.mjs`: `this.xp.totals = xpTotals(...)` com o XP dos hindrances (itens `feat` categoria `hindrance`)
 - [ ] T033 [US3] Criar `module/documents/xp-service.mjs`: `advance(actor, kind, key)` (`canAdvance` + custo × multiplicador + saldo; grava `_source` + 1; registra), `chargeForFeat(actor, feat, selection)`, `recordPurchase`, `undoXp` (`undoPlan`; dono só a última, Mestre qualquer), `awardXp` (Mestre)
 - [ ] T034 [US3] Em `feat-service.addFeat`: chamar `chargeForFeat` após as validações (asset 100; feat/racialFeat por `canAdvance`; recusa → override do Mestre sem cobrança; hindrance sem cobrança); a entrada guarda o `itemId`

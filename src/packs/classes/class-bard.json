@@ -1,0 +1,146 @@
+{
+  "_id": "dtdC0a679bd1c671",
+  "_key": "!items!dtdC0a679bd1c671",
+  "name": "Bard",
+  "type": "class",
+  "img": "icons/svg/sound.svg",
+  "folder": "dtdCFdc71739a5ba",
+  "system": {
+    "description": "<p>The Bard track's second step turns the jack-of-all-trades entertainer into an agile adventurer. Bards stay light on their feet with Catfall and Defensive Mobility, draw weapons quickly, and keep dabbling in enchantment, illusion and a pair of sword schools.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 123
+    },
+    "level": 2,
+    "track": "Bard",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "commonLore"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "performer"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [
+        "Jack of All Trades"
+      ],
+      "schools": [
+        {
+          "name": "Enchantment or Illusion",
+          "value": 1
+        }
+      ],
+      "text": ""
+    },
+    "characteristics": [
+      "cha",
+      "fel",
+      "dex"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "commonLore",
+      "forbiddenLore",
+      "perception",
+      "politics",
+      "techUse",
+      "acrobatics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "animalKen",
+      "charm",
+      "command",
+      "deceive",
+      "disguise",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Speak Language",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Peer",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Catfall",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Quick Draw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Defensive Mobility",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Common Sense",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Light",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Enchantment",
+      "Illusion"
+    ],
+    "swordSchools": [
+      "Iron Heart",
+      "Diamond Mind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Add one dot to any skill whose rank is below your Level.</p>",
+      "automation": "skillDot",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

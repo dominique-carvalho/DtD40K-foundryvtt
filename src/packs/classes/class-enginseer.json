@@ -1,0 +1,119 @@
+{
+  "_id": "dtdC9190a184d87d",
+  "_key": "!items!dtdC9190a184d87d",
+  "name": "Enginseer",
+  "type": "class",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdCFd473201da26",
+  "system": {
+    "description": "<p>Second class of the Techpriest track, for devotees already fitted with Mechanicus implants. Enginseers wield mechadendrites, draw metal to themselves with Ferric Lure and move further from their flesh.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 162
+    },
+    "level": 2,
+    "track": "Techpriest",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "techUse"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "crafts"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Mechanicus Implants"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "wis",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "commonLore",
+      "crafts",
+      "forbiddenLore",
+      "medicae",
+      "techUse",
+      "ballistics",
+      "drive",
+      "pilot",
+      "weaponry",
+      "command"
+    ],
+    "feats": [
+      {
+        "name": "Mechadendrite Use",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Ferric Lure",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Chem Geld",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Foresight",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Upgraded",
+        "subcategory": "Rare",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain the Upgraded (Rare) feat.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [
+        {
+          "name": "Upgraded",
+          "subcategory": "Rare",
+          "choose": false
+        }
+      ],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

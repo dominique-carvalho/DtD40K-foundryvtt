@@ -1,0 +1,107 @@
+{
+  "_id": "dtdCfbe55da230f8",
+  "_key": "!items!dtdCfbe55da230f8",
+  "name": "Chief Arcana Officer",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd3d80d0dc1c",
+  "system": {
+    "description": "<p>The senior scholar of the arcane aboard a vessel, responsible for its sensors and warp-touched phenomena. It draws on lore and arcana to run tricks like Tachyon Beam and Rotate Shield Frequency, with a touch of Minor Magic.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 168
+    },
+    "level": 3,
+    "track": "",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "forbiddenLore"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "animalKen",
+      "command",
+      "forbiddenLore",
+      "medicae",
+      "techUse"
+    ],
+    "feats": [
+      {
+        "name": "Tachyon Beam",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Rotate Shield Frequency",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Minor Magic",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Speak Language",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Foresight",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>While you hold the Chief Arcana Officer post on a ship, that ship gains +1 Sensors.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,111 @@
+{
+  "_id": "dtdC967235833f8e",
+  "_key": "!items!dtdC967235833f8e",
+  "name": "Witch-Sniper",
+  "type": "class",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdCFd1fb65dfd09",
+  "system": {
+    "description": "<p>The peak of the Magitek Gunman track, a spell-slinging marksman who fires Spell Bullets and third-tier elemental rounds with sniper precision.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 149
+    },
+    "level": 5,
+    "track": "Magitek Gunman",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Elemental Shot II",
+        "Far Shot"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wil",
+      "dex",
+      "cha"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "stealth",
+      "charm",
+      "deceive"
+    ],
+    "feats": [
+      {
+        "name": "Double Tap",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Bullet",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sharpshooter",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Elemental Shot III",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Elemental Shot III",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Evocation",
+      "Conjuration"
+    ],
+    "swordSchools": [],
+    "gunKata": [
+      "Elemental Gearbolt",
+      "Clay Pigeon"
+    ],
+    "completion": {
+      "text": "<p>Elemental Shot III gains one extra use each session.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

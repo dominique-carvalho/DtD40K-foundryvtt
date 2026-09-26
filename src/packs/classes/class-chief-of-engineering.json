@@ -1,0 +1,100 @@
+{
+  "_id": "dtdC1ce46c467720",
+  "_key": "!items!dtdC1ce46c467720",
+  "name": "Chief of Engineering",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd3d80d0dc1c",
+  "system": {
+    "description": "<p>The officer who keeps a ship's machinery and shields running, whatever the damage. Built around Tech-Use and Crafts, it leads repair crews with Engineering Team Leader and improvises fixes with Jerry Rig.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 169
+    },
+    "level": 3,
+    "track": "",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "techUse"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "crafts"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "wis",
+      "wil"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "command",
+      "commonLore",
+      "crafts",
+      "pilot",
+      "techUse"
+    ],
+    "feats": [
+      {
+        "name": "Jerry Rig",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Engineering Team Leader",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>While you hold the Chief of Engineering post on a ship, that ship gains +1 Shield Regen.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

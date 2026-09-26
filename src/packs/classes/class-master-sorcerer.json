@@ -1,0 +1,127 @@
+{
+  "_id": "dtdC7b3cd73dab73",
+  "_key": "!items!dtdC7b3cd73dab73",
+  "name": "Master Sorcerer",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd8d68c1b723",
+  "system": {
+    "description": "<p>The apex of the Magic User track, an archmage who has mastered spells and can break through magical defenses with ease.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 146
+    },
+    "level": 5,
+    "track": "Magic User",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Spell Penetration"
+      ],
+      "schools": [
+        {
+          "name": "any Magic School",
+          "value": 4
+        },
+        {
+          "name": "any two Magic Schools",
+          "value": 3
+        }
+      ],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "cha",
+      "wil"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "commonLore",
+      "forbiddenLore",
+      "techUse",
+      "ballistics",
+      "brawl",
+      "deceive",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Spell Book",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Archmage Tradition",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Greater Spell Penetration",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Mastery",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Book",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Spell Specialization",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      }
+    ],
+    "magicSchools": [
+      "Abjuration",
+      "Evocation",
+      "Illusion",
+      "Conjuration",
+      "Divination",
+      "Necromancy"
+    ],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Focus Power tests get +1.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

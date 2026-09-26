@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd1fb65dfd09",
+  "_key": "!folders!dtdCFd1fb65dfd09",
+  "name": "Magitek Gunman",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 120000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Magitek Gunman"
+    }
+  }
+}

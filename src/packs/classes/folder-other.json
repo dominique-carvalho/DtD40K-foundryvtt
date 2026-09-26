@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd3d80d0dc1c",
+  "_key": "!folders!dtdCFd3d80d0dc1c",
+  "name": "Other Classes",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 990000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Other"
+    }
+  }
+}

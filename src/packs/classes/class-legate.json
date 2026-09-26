@@ -1,0 +1,106 @@
+{
+  "_id": "dtdC0b539ec693b0",
+  "_key": "!items!dtdC0b539ec693b0",
+  "name": "Legate",
+  "type": "class",
+  "img": "icons/svg/coins.svg",
+  "folder": "dtdCFd0007f24f55",
+  "system": {
+    "description": "<p>A Courtier who acts as a trusted envoy, using privilege, disguise and carefully laid plans to steer politics and negotiations in their favor.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 131
+    },
+    "level": 4,
+    "track": "Courtier",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "persuasion"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "scrutiny"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Master of Disguise"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "cha",
+      "fel",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "commonLore",
+      "politics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "weaponry",
+      "charm",
+      "command",
+      "deceive",
+      "disguise",
+      "intimidation",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Courtier's Privilege",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Just as Planned",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Good Reputation",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Resolve increases by 1.</p>",
+      "automation": "resolveMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

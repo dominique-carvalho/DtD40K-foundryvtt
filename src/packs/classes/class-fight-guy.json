@@ -1,0 +1,134 @@
+{
+  "_id": "dtdC430464db7ce0",
+  "_key": "!items!dtdC430464db7ce0",
+  "name": "Fight Guy",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "folder": "dtdCFd1ee77afc60",
+  "system": {
+    "description": "<p>The Fighter track's dedicated brawler, focused purely on winning melee fights. It stacks armor and weapon specializations, Crushing Blow and Swift Attack, and trains in the White Raven, Iron Heart, Stone Dragon and Diamond Mind schools.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 136
+    },
+    "level": 3,
+    "track": "Fighter",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Weapon Focus",
+        "Blind Fighting"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "acrobatics",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "weaponry",
+      "intimidation",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Armor Specialization",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Crushing Blow",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Fleet of Foot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Combat Sense",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Swift Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Guardian",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Specialization",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Iron Heart",
+      "Diamond Mind",
+      "White Raven",
+      "Stone Dragon"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 on every Melee attack test.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

@@ -1,0 +1,124 @@
+{
+  "_id": "dtdC17f120bb5475",
+  "_key": "!items!dtdC17f120bb5475",
+  "name": "Brother",
+  "type": "class",
+  "img": "icons/svg/walk.svg",
+  "folder": "dtdCFdb5564e5415",
+  "system": {
+    "description": "<p>First class of the Monk track: a martial artist who fights empty-handed and without armor. Brothers are fast and nimble, and draw on Wholeness of Body to protect themselves through Wisdom rather than plate.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 150
+    },
+    "level": 1,
+    "track": "Monk",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "acrobatics"
+          ],
+          "value": 1
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 1
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "wis"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "forbiddenLore",
+      "acrobatics",
+      "athletics",
+      "brawl",
+      "stealth",
+      "animalKen",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Unarmed Warrior",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Catfall",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Fleet of Foot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Wholeness of Body",
+        "subcategory": "Wisdom",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Athletics",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Basic",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Blind Fighting",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Setting Sun",
+      "Shadow Hand",
+      "Diamond Mind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Wholeness of Body grants +1 more Armor.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

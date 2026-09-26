@@ -506,3 +506,150 @@ describe("feats granted by races, exaltations and Exalted Assets (spec 005, US4)
     });
   });
 });
+
+/** Reference — spec 006 "Tabela de referência" (DtD 7.7a, cap. 6, pp. 104–172). */
+const CLASS_TRACKS = {
+  Assassin: ["Sell-Steel", "Nighthawk", "Assassin", "Freeblade", "Nihilator"],
+  "Arcane Knight": ["Spellsword", "Swordmage", "Runeblade", "Arcane Knight", "Sorcerer-Swordsman"],
+  Barbarian: ["Feral", "Savage", "Rager", "Barbarian", "Berserker"],
+  Bard: ["Minstrel", "Bard", "Skald", "Swashbuckler", "Master Bard"],
+  Cleric: ["Priest", "Preacher", "Cleric", "Zealot", "Bishop"],
+  Courtier: ["Negotiator", "Courtier", "Diplomat", "Legate", "Emissary"],
+  Druid: ["Ovate", "Oak-Knower", "Druid", "Archdruid", "Patriarch"],
+  Fighter: ["Swordsman", "Myrmidon", "Fight Guy", "Fighter", "Master Fight Guy"],
+  Guardsman: ["Conscript", "Guardsman", "Sergeant", "Grenadier", "Stormtrooper"],
+  Heavy: ["Big Shot", "Krazy Ivan", "Heavy Weapons Guy", "Walking Gunshow", "Living Fortress"],
+  "Magic User": ["Apprentice", "Aspirant", "Magic User", "Sorcerer", "Master Sorcerer"],
+  "Magitek Gunman": ["Spellshooter", "Riflemancer", "Gunmage", "Bulletwizard", "Witch-Sniper"],
+  Monk: ["Brother", "Disciple", "Monk", "Immaculate Master", "Grand Master of Flowers"],
+  Operator: ["Hunter", "Marksman", "Sniper", "Quickscope", "Targetmaster"],
+  Paladin: ["Gallant", "Protector", "Defender", "Paladin", "Chevalier"],
+  Sheriff: ["Deputy", "Sheriff", "Constable", "Marshal", "Judge"],
+  Techpriest: ["Mech-Wright", "Enginseer", "Tech-Priest", "Technomancer", "Magos"],
+  Thief: ["Outcast", "Outlaw", "Renegade", "Rogue", "Stubjack"]
+};
+const OTHER_CLASSES = {
+  Initiate: 1, Mercenary: 1, Peasant: 1, Ratcatcher: 1, Scholar: 1, "Operations Officer": 2, "Science Officer": 2,
+  "Tactical Officer": 2, Captain: 3, "Chief Arcana Officer": 3, "Chief of Engineering": 3, "Chief of Security": 3, Commodore: 4
+};
+const trackOf = (list, value) => Object.fromEntries(list.map((name) => [name, value]));
+const COMPLETION_006 = {
+  ...trackOf(["Mercenary", "Ratcatcher"], ["hpMax", 2]),
+  ...trackOf([...CLASS_TRACKS.Cleric, ...CLASS_TRACKS.Heavy], ["hpMax", 1]),
+  ...trackOf(CLASS_TRACKS.Assassin, ["initiative", 1]),
+  ...trackOf(CLASS_TRACKS.Courtier, ["resolveMax", 1]),
+  ...trackOf(CLASS_TRACKS.Thief, ["staticDefense", 1]),
+  ...trackOf(["Initiate", "Scholar"], ["specialty", 0, "any"]),
+  ...trackOf(["Captain", "Commodore"], ["specialty", 0, "social"]),
+  ...trackOf(CLASS_TRACKS.Bard, ["skillDot", 0])
+};
+const COMPLETION_GRANTS = {
+  ...trackOf(CLASS_TRACKS.Druid, [["Improved Animal Companion", ""], ["Beastmaster", ""]]),
+  "Mech-Wright": [["Upgraded", "Rare"]], Enginseer: [["Upgraded", "Rare"]], "Tech-Priest": [["Upgraded", "Very Rare"]],
+  Technomancer: [["Upgraded", "Mythic Rare"]], Magos: [["Upgraded", "Artifact"]]
+};
+const featLabel = (f) => `${f.mandatory ? "" : "*"}${f.name}${f.subcategory ? ` (${f.subcategory})` : ""}${f.orGroup ? ` |${f.orGroup}` : ""}`;
+
+const classPack = readPack("src/packs/classes");
+const classFolders = classPack.filter((doc) => doc._key?.startsWith("!folders!"));
+const classDocs = classPack.filter((doc) => doc._key?.startsWith("!items!"));
+const classByName = (name) => classDocs.find((doc) => doc.name === name);
+const featNameSet = new Set(feats.map((doc) => doc.name));
+
+describe("classes compendium source (spec 006, SC-001)", () => {
+  it("has 103 classes in 19 folders, 23/21/22/19/18 by Level", () => {
+    expect(classDocs).toHaveLength(103);
+    expect(classFolders).toHaveLength(19);
+    const byLevel = [1, 2, 3, 4, 5].map((level) => classDocs.filter((doc) => doc.system.level === level).length);
+    expect(byLevel).toEqual([23, 21, 22, 19, 18]);
+  });
+
+  it("has unique ids, matching keys and valid folders", () => {
+    const ids = classPack.map((doc) => doc._id);
+    expect(new Set(ids).size).toBe(ids.length);
+    const folderIds = new Set(classFolders.map((doc) => doc._id));
+    for (const doc of classPack) {
+      expect(doc._id).toMatch(ID);
+      expect(doc._key).toBe(`${doc.type === "class" ? "!items!" : "!folders!"}${doc._id}`);
+    }
+    for (const doc of classDocs) expect(folderIds.has(doc.folder)).toBe(true);
+  });
+
+  it.each(Object.entries(CLASS_TRACKS))("puts the %s track in its folder, Level 1 to 5", (track, names) => {
+    const folder = classFolders.find((doc) => doc.flags.dtd40k.classFolder === track);
+    for (const [index, name] of names.entries()) {
+      const doc = classByName(name);
+      expect(doc, name).toBeDefined();
+      expect(doc.system.track).toBe(track);
+      expect(doc.system.level).toBe(index + 1);
+      expect(doc.folder).toBe(folder._id);
+    }
+  });
+
+  it("keeps the starter and starship classes in Other", () => {
+    const folder = classFolders.find((doc) => doc.flags.dtd40k.classFolder === "Other");
+    for (const [name, level] of Object.entries(OTHER_CLASSES)) {
+      expect(classByName(name).system).toMatchObject({ level, track: "" });
+      expect(classByName(name).folder).toBe(folder._id);
+    }
+  });
+
+  it("matches the book for Swordsman, Fighter, Initiate, Peasant and Nighthawk", () => {
+    const sw = classByName("Swordsman").system;
+    expect(sw.source.page).toBe(135);
+    expect(sw.prerequisites.skills).toEqual([{ keys: ["weaponry"], value: 2 }, { keys: ["athletics"], value: 1 }]);
+    expect(sw.characteristics).toEqual(["str", "dex", "con"]);
+    expect(sw.skills).toHaveLength(8);
+    expect(sw.feats.map(featLabel)).toEqual(["Quick Draw", "*Armor Proficiency (Any)", "Hardy", "Fast Reflexes", "Power Attack", "*Weapon Proficiency (Any)"]);
+    expect(sw.swordSchools).toEqual(["Iron Heart", "Diamond Mind", "White Raven", "Stone Dragon"]);
+    const fi = classByName("Fighter").system;
+    expect(fi.prerequisites.feats).toEqual(["Swift Attack", "Weapon Specialization", "Jaded"]);
+    expect(fi.feats.map(featLabel)).toEqual([
+      "Fearless", "Iron Jaw", "Combat Master", "Wall of Steel", "*Sound Constitution |or1", "*Cleave |or1",
+      "*Weapon Focus (Any)", "Improved Weapon Focus (Any)"
+    ]);
+    const ini = classByName("Initiate").system;
+    expect(ini.prerequisites).toEqual({ skills: [], feats: [], schools: [], text: "" });
+    expect(ini.feats.map(featLabel)).toEqual(["Divine Ministration", "Hatred (Heretics)", "Minor Magic", "Peer (Religious Organization)", "*Weapon Proficiency (Basic)"]);
+    expect(classByName("Peasant").system.anyCharacteristic).toBe(true);
+    expect(classByName("Nighthawk").system.prerequisites.skills[0]).toEqual({ keys: ["weaponry", "ballistics"], value: 2 });
+  });
+
+  it("automates the completion bonuses of FR-009", () => {
+    for (const doc of classDocs) {
+      const { automation, value, skillGroup, grants } = doc.system.completion;
+      const expected = COMPLETION_006[doc.name];
+      if (expected) {
+        expect([automation, value], doc.name).toEqual(expected.slice(0, 2));
+        if (expected[2]) expect(skillGroup).toBe(expected[2]);
+      } else {
+        expect(automation, doc.name).toBe("none");
+      }
+      expect(grants.map((g) => [g.name, g.subcategory]), doc.name).toEqual(COMPLETION_GRANTS[doc.name] ?? []);
+    }
+  });
+
+  it("uses only valid keys and feats of the Feats compendium", () => {
+    for (const doc of classDocs) {
+      const { system } = doc;
+      for (const key of system.characteristics) expect(CHARACTERISTICS).toHaveProperty(key);
+      for (const key of system.skills) expect(SKILLS).toHaveProperty(key);
+      for (const req of system.prerequisites.skills) for (const key of req.keys) expect(SKILLS).toHaveProperty(key);
+      for (const feat of system.feats) expect(featNameSet.has(feat.name), `${doc.name}: ${feat.name}`).toBe(true);
+      for (const feat of system.prerequisites.feats) expect(featNameSet.has(feat.replace(/\s*\(.*\)$/, "")), `${doc.name}: ${feat}`).toBe(true);
+      for (const grant of system.completion.grants) expect(featNameSet.has(grant.name)).toBe(true);
+    }
+  });
+
+  it("ships descriptions, bonus texts and an empty character state", () => {
+    for (const doc of classDocs) {
+      expect(doc.type).toBe("class");
+      expect(doc.system.description.trim(), doc.name).not.toBe("");
+      expect(doc.system.completion.text.trim(), doc.name).not.toBe("");
+      expect(doc.system.status).toBe("current");
+      expect(doc.system.startedAt).toBe(0);
+      expect(doc.system.completion.selection).toEqual({ skill: "", specialty: "" });
+      expect(doc.effects).toEqual([]);
+    }
+  });
+});

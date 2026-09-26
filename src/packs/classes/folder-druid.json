@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd867ca5a053",
+  "_key": "!folders!dtdCFd867ca5a053",
+  "name": "Druid",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 70000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Druid"
+    }
+  }
+}

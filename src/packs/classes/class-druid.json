@@ -1,0 +1,132 @@
+{
+  "_id": "dtdC7a0de1d2cf00",
+  "_key": "!items!dtdC7a0de1d2cf00",
+  "name": "Druid",
+  "type": "class",
+  "img": "icons/svg/oak.svg",
+  "folder": "dtdCFd867ca5a053",
+  "system": {
+    "description": "<p>The Druid track's full nature priest, able to heal, transform and read the wild. It channels divine energy, gains animal traits via Nekomimi Mode, and casts from Healing, Transmutation and Divination.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 133
+    },
+    "level": 3,
+    "track": "Druid",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "animalKen"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Wild Empathy"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "medicae",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "stealth",
+      "animalKen",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Heightened Senses",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Nature Sense",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Nekomimi Mode",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Channel Energy",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Meditation",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Specialization",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Unremarkable",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Healing",
+      "Transmutation",
+      "Divination"
+    ],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You receive both the Improved Animal Companion feat and the Beastmaster feat.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [
+        {
+          "name": "Improved Animal Companion",
+          "subcategory": "",
+          "choose": false
+        },
+        {
+          "name": "Beastmaster",
+          "subcategory": "",
+          "choose": false
+        }
+      ],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

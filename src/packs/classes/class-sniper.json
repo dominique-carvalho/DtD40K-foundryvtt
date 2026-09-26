@@ -1,0 +1,116 @@
+{
+  "_id": "dtdC85d5ad4481ff",
+  "_key": "!items!dtdC85d5ad4481ff",
+  "name": "Sniper",
+  "type": "class",
+  "img": "icons/svg/target.svg",
+  "folder": "dtdCFd6fe71ac156",
+  "system": {
+    "description": "<p>The Operator track's patient long-range marksman, killing unseen from a hidden perch. It gains Deadeye Shot, Crack Shot and Expert Tracker, and uses the Clay Pigeon, Tin Star and Silent Scope kata.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 154
+    },
+    "level": 3,
+    "track": "Operator",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "perception"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Far Shot"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "dex",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "perception",
+      "techUse",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "command",
+      "disguise",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Deadeye Shot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Scrutiny",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Weapon Focus",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Crack Shot",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Paranoia",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Expert Tracker",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Clay Pigeon",
+      "Tin Star",
+      "Silent Scope"
+    ],
+    "completion": {
+      "text": "<p>While you stay still, you get +2 on Stealth tests made to stay hidden.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

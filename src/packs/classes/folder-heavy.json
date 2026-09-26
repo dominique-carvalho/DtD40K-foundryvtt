@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFdac2d70a126",
+  "_key": "!folders!dtdCFdac2d70a126",
+  "name": "Heavy",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Heavy"
+    }
+  }
+}

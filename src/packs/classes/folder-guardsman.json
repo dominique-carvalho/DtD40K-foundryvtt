@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd29e9d6f032",
+  "_key": "!folders!dtdCFd29e9d6f032",
+  "name": "Guardsman",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 90000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Guardsman"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd8d68c1b723",
+  "_key": "!folders!dtdCFd8d68c1b723",
+  "name": "Magic User",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 110000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Magic User"
+    }
+  }
+}

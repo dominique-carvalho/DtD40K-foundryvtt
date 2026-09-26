@@ -1,0 +1,114 @@
+{
+  "_id": "dtdC3d304920a09e",
+  "_key": "!items!dtdC3d304920a09e",
+  "name": "Spellshooter",
+  "type": "class",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdCFd1fb65dfd09",
+  "system": {
+    "description": "<p>The Magitek Gunman track begins with this shooter who charges bullets with magic. Spellshooters bless their guns and fire elemental shots.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 147
+    },
+    "level": 1,
+    "track": "Magitek Gunman",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wil",
+      "dex",
+      "cha"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "stealth",
+      "charm",
+      "deceive"
+    ],
+    "feats": [
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Light",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Ranged 1",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Ranged 2",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Gun Blessing",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Elemental Shot I",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Blind Fighting",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Evocation",
+      "Conjuration"
+    ],
+    "swordSchools": [],
+    "gunKata": [
+      "Elemental Gearbolt",
+      "Clay Pigeon"
+    ],
+    "completion": {
+      "text": "<p>Once more per session, you can use Elemental Shot I.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

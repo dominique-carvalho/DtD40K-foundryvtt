@@ -1,0 +1,146 @@
+{
+  "_id": "dtdC26722d6638a0",
+  "_key": "!items!dtdC26722d6638a0",
+  "name": "Master Bard",
+  "type": "class",
+  "img": "icons/svg/sound.svg",
+  "folder": "dtdCFdc71739a5ba",
+  "system": {
+    "description": "<p>The greatest Bard, a charismatic performer and jack of all trades who weaves Enchantment and Illusion while fighting with blade and wit.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 125
+    },
+    "level": 5,
+    "track": "Bard",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "commonLore"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "performer"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Good Reputation"
+      ],
+      "schools": [
+        {
+          "name": "Enchantment or Illusion",
+          "value": 3
+        }
+      ],
+      "text": ""
+    },
+    "characteristics": [
+      "cha",
+      "fel",
+      "dex"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "commonLore",
+      "forbiddenLore",
+      "perception",
+      "politics",
+      "techUse",
+      "acrobatics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "animalKen",
+      "charm",
+      "command",
+      "deceive",
+      "disguise",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Expanded Knowledge",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Heightened Senses",
+        "subcategory": "Hearing",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Counter Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Back Stab",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Penetration",
+        "subcategory": "Enchantment or Illusion",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Speak Language",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": "or1"
+      }
+    ],
+    "magicSchools": [
+      "Enchantment",
+      "Illusion"
+    ],
+    "swordSchools": [
+      "Iron Heart",
+      "Diamond Mind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Pick a skill whose rank is below your Level and add 1 dot to it.</p>",
+      "automation": "skillDot",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

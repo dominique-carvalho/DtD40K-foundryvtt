@@ -1,0 +1,140 @@
+{
+  "_id": "dtdC3c3a92815d06",
+  "_key": "!items!dtdC3c3a92815d06",
+  "name": "Skald",
+  "type": "class",
+  "img": "icons/svg/sound.svg",
+  "folder": "dtdCFdc71739a5ba",
+  "system": {
+    "description": "<p>The Bard track's warrior-poet, a charming duelist who inspires through performance. It blends fencing and feints with Enchantment and Illusion magic, and trains in the Iron Heart and Diamond Mind schools.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 124
+    },
+    "level": 3,
+    "track": "Bard",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "commonLore"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "performer"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Common Sense"
+      ],
+      "schools": [
+        {
+          "name": "Enchantment or Illusion",
+          "value": 2
+        }
+      ],
+      "text": ""
+    },
+    "characteristics": [
+      "cha",
+      "fel",
+      "dex"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "commonLore",
+      "forbiddenLore",
+      "perception",
+      "politics",
+      "techUse",
+      "acrobatics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "animalKen",
+      "charm",
+      "command",
+      "deceive",
+      "disguise",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Speak Language",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Peer",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Focus",
+        "subcategory": "Fencing",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Decadence",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Divine Grace",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Feint",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Enchantment",
+      "Illusion"
+    ],
+    "swordSchools": [
+      "Iron Heart",
+      "Diamond Mind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Raise by 1 dot one skill whose rank is below your Level.</p>",
+      "automation": "skillDot",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

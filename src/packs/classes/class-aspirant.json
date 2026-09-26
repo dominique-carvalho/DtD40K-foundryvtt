@@ -1,0 +1,135 @@
+{
+  "_id": "dtdC271e72271361",
+  "_key": "!items!dtdC271e72271361",
+  "name": "Aspirant",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd8d68c1b723",
+  "system": {
+    "description": "<p>The second rung of the Magic User track, where a wizard formalizes their craft. Aspirants keep a spell book, focus or specialize their spells, pick a wizard tradition and learn to improvise magic on the fly.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 144
+    },
+    "level": 2,
+    "track": "Magic User",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Foresight"
+      ],
+      "schools": [
+        {
+          "name": "any two Magic Schools",
+          "value": 1
+        }
+      ],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "cha",
+      "wil"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "commonLore",
+      "forbiddenLore",
+      "techUse",
+      "ballistics",
+      "brawl",
+      "deceive",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Spell Book",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Focus",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improvisational Magic",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Strong Minded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Wizard Tradition",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Book",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Spell Specialization",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any Lore",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Abjuration",
+      "Evocation",
+      "Illusion",
+      "Conjuration",
+      "Divination",
+      "Necromancy"
+    ],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 on every Focus Power test.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

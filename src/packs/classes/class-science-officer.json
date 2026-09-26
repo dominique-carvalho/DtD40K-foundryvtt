@@ -1,0 +1,107 @@
+{
+  "_id": "dtdC3b22f9ffe2c9",
+  "_key": "!items!dtdC3b22f9ffe2c9",
+  "name": "Science Officer",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd3d80d0dc1c",
+  "system": {
+    "description": "<p>A ship-crew class for the analyst who reads sensors and data. Science Officers perform detailed analysis and gain access to secured systems.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 171
+    },
+    "level": 2,
+    "track": "",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "forbiddenLore"
+          ],
+          "value": 1
+        },
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "animalKen",
+      "command",
+      "forbiddenLore",
+      "medicae",
+      "techUse"
+    ],
+    "feats": [
+      {
+        "name": "Detailed Analysis",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Gain Access",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Eidetic Memory",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Speak Language",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Any ship whose Chief Arcana Officer you are gains +1 Sensors.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

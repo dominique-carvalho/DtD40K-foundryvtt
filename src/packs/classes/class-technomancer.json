@@ -1,0 +1,119 @@
+{
+  "_id": "dtdC231241b2c9a3",
+  "_key": "!items!dtdC231241b2c9a3",
+  "name": "Technomancer",
+  "type": "class",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "dtdCFd473201da26",
+  "system": {
+    "description": "<p>A Techpriest well on the way to becoming machine, working miracles of repair and blasting foes with Luminen energy.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 164
+    },
+    "level": 4,
+    "track": "Techpriest",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "techUse"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "crafts"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Binary Chatter"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "wis",
+      "con"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "commonLore",
+      "crafts",
+      "forbiddenLore",
+      "medicae",
+      "techUse",
+      "ballistics",
+      "drive",
+      "pilot",
+      "weaponry",
+      "command"
+    ],
+    "feats": [
+      {
+        "name": "Luminen Blast",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Iron Jaw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Miracle Worker",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Research",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Upgraded",
+        "subcategory": "Rare",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain the Upgraded feat at the Mythic Rare tier.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [
+        {
+          "name": "Upgraded",
+          "subcategory": "Mythic Rare",
+          "choose": false
+        }
+      ],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

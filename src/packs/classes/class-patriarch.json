@@ -1,0 +1,121 @@
+{
+  "_id": "dtdCc5201dfe36ef",
+  "_key": "!items!dtdCc5201dfe36ef",
+  "name": "Patriarch",
+  "type": "class",
+  "img": "icons/svg/oak.svg",
+  "folder": "dtdCFd867ca5a053",
+  "system": {
+    "description": "<p>The highest rank of the Druid track, a shapeshifting nature priest who takes on animal forms through Improved Wild Shape and can blend in anywhere as a master of disguise.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 134
+    },
+    "level": 5,
+    "track": "Druid",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "animalKen"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Expert Tracker",
+        "Wild Shape"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wis",
+      "wil",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "medicae",
+      "athletics",
+      "ballistics",
+      "brawl",
+      "stealth",
+      "animalKen",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Improved Wild Shape",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Naturalize",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Master of Disguise",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Mastery",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Heightened Senses",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Healing",
+      "Transmutation",
+      "Divination"
+    ],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>You gain two feats: Improved Animal Companion and Beastmaster.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [
+        {
+          "name": "Improved Animal Companion",
+          "subcategory": "",
+          "choose": false
+        },
+        {
+          "name": "Beastmaster",
+          "subcategory": "",
+          "choose": false
+        }
+      ],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

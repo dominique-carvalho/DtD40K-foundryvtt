@@ -1,0 +1,133 @@
+{
+  "_id": "dtdCd918f238bec5",
+  "_key": "!items!dtdCd918f238bec5",
+  "name": "Nihilator",
+  "type": "class",
+  "img": "icons/svg/cowled.svg",
+  "folder": "dtdCFdee8da68050",
+  "system": {
+    "description": "<p>The deadliest Assassin, finishing targets with Assassin Strike, improved back stabs and devastating criticals, whether by blade or bullet.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 116
+    },
+    "level": 5,
+    "track": "Assassin",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry",
+            "ballistics"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Back Stab",
+        "Improved Sneak Attack"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "dex",
+      "str",
+      "int"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "perception",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "charm",
+      "deceive",
+      "disguise",
+      "intimidation",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Step Aside",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Assassin Strike",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Counter Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Back Stab",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Devastating Critical",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sharpshooter",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Shadow Hand",
+      "Setting Sun"
+    ],
+    "gunKata": [
+      "Clay Pigeon",
+      "Silent Scope"
+    ],
+    "completion": {
+      "text": "<p>Your initiative rolls get +1.</p>",
+      "automation": "initiative",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

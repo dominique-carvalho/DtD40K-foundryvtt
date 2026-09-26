@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFd66518142b0",
+  "_key": "!folders!dtdCFd66518142b0",
+  "name": "Barbarian",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 30000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Barbarian"
+    }
+  }
+}

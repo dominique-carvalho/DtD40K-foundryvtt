@@ -1,0 +1,121 @@
+{
+  "_id": "dtdCdfa2430d9546",
+  "_key": "!items!dtdCdfa2430d9546",
+  "name": "Minstrel",
+  "type": "class",
+  "img": "icons/svg/sound.svg",
+  "folder": "dtdCFdc71739a5ba",
+  "system": {
+    "description": "<p>First class of the Bard track: a versatile performer skilled at a bit of everything. Minstrels rely on luck and Jack of All Trades, with a touch of melee and magic on the side.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 123
+    },
+    "level": 1,
+    "track": "Bard",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "commonLore"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "performer"
+          ],
+          "value": 1
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "cha",
+      "fel",
+      "dex"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "commonLore",
+      "forbiddenLore",
+      "perception",
+      "politics",
+      "techUse",
+      "acrobatics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "animalKen",
+      "charm",
+      "command",
+      "deceive",
+      "disguise",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Speak Language",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Luck",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Jack of All Trades",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Peer",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Melee 2",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Enchantment",
+      "Illusion"
+    ],
+    "swordSchools": [
+      "Iron Heart",
+      "Diamond Mind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Add one dot to any skill whose rank is below your Level.</p>",
+      "automation": "skillDot",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

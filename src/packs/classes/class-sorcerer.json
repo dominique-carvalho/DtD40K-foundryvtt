@@ -1,0 +1,133 @@
+{
+  "_id": "dtdCe1c15b930fb1",
+  "_key": "!items!dtdCe1c15b930fb1",
+  "name": "Sorcerer",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd8d68c1b723",
+  "system": {
+    "description": "<p>An accomplished Magic User who studies from a spell book and wields six schools of arcane power, protected by a Mental Fortress.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 146
+    },
+    "level": 4,
+    "track": "Magic User",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "academicLore"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 4
+        }
+      ],
+      "feats": [
+        "Spell Focus"
+      ],
+      "schools": [
+        {
+          "name": "any Magic School",
+          "value": 3
+        },
+        {
+          "name": "any two Magic Schools",
+          "value": 2
+        }
+      ],
+      "text": ""
+    },
+    "characteristics": [
+      "int",
+      "cha",
+      "wil"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "arcana",
+      "commonLore",
+      "forbiddenLore",
+      "techUse",
+      "ballistics",
+      "brawl",
+      "deceive",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Spell Book",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Greater Spell Focus",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Mental Fortress",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Wizard Tradition",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Spell Book",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Spell Specialization",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": "or1"
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any Lore",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Abjuration",
+      "Evocation",
+      "Illusion",
+      "Conjuration",
+      "Divination",
+      "Necromancy"
+    ],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Focus Power tests get +1.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

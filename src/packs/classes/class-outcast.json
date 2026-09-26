@@ -1,0 +1,127 @@
+{
+  "_id": "dtdC7069b3dbb521",
+  "_key": "!items!dtdC7069b3dbb521",
+  "name": "Outcast",
+  "type": "class",
+  "img": "icons/svg/trap.svg",
+  "folder": "dtdCFd824f2a1072",
+  "system": {
+    "description": "<p>The Thief track begins with this light, elusive melee fighter who is hard to pin down. Outcasts wield a weapon in each hand, feint cleverly and move with feline grace.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 165
+    },
+    "level": 1,
+    "track": "Thief",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "larceny"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "stealth"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "dex",
+      "fel"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "commonLore",
+      "crafts",
+      "perception",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "stealth",
+      "weaponry",
+      "charm",
+      "deceive",
+      "disguise",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Catfall",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Two Weapon Fighting",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Quick Draw",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Improved Feint",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Basic",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Melee 2",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Throwing",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Shadow Hand",
+      "Diamond Mind",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Static Defense increases by +1.</p>",
+      "automation": "staticDefense",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

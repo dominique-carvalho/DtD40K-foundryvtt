@@ -1,0 +1,116 @@
+{
+  "_id": "dtdCaaa951c0c0af",
+  "_key": "!items!dtdCaaa951c0c0af",
+  "name": "Feral",
+  "type": "class",
+  "img": "icons/svg/blood.svg",
+  "folder": "dtdCFd66518142b0",
+  "system": {
+    "description": "<p>First class of the Barbarian track, built for fighters who embrace their rage. Ferals frenzy, hit hard with Power Attack and sense danger coming, relying on raw toughness in melee.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 120
+    },
+    "level": 1,
+    "track": "Barbarian",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "weaponry"
+          ],
+          "value": 2
+        },
+        {
+          "keys": [
+            "athletics"
+          ],
+          "value": 1
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "str",
+      "con",
+      "wil"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "acrobatics",
+      "athletics",
+      "brawl",
+      "weaponry",
+      "animalKen",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Frenzy",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Jaded",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Danger Sense",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Power Attack",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Weapon Proficiency",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Stone Dragon",
+      "Tiger Claw",
+      "Desert Wind"
+    ],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Gain +1 to all melee damage.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

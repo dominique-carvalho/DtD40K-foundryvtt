@@ -1,0 +1,111 @@
+{
+  "_id": "dtdC6326e973460d",
+  "_key": "!items!dtdC6326e973460d",
+  "name": "Gunmage",
+  "type": "class",
+  "img": "icons/svg/lightning.svg",
+  "folder": "dtdCFd1fb65dfd09",
+  "system": {
+    "description": "<p>The Magitek Gunman track's core spellslinger, who loads elemental magic into every round. It masters Elemental Shot II, gains a familiar, and mixes Evocation and Conjuration with the Elemental Gearbolt and Clay Pigeon kata.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 148
+    },
+    "level": 3,
+    "track": "Magitek Gunman",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "arcana"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 3
+        }
+      ],
+      "feats": [
+        "Elemental Shot I",
+        "Quick Draw"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "wil",
+      "dex",
+      "cha"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "arcana",
+      "forbiddenLore",
+      "techUse",
+      "acrobatics",
+      "ballistics",
+      "stealth",
+      "charm",
+      "deceive"
+    ],
+    "feats": [
+      {
+        "name": "Obtain Familiar",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Decadence",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Meditation",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Elemental Shot II",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Elemental Shot I",
+        "subcategory": "",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [
+      "Evocation",
+      "Conjuration"
+    ],
+    "swordSchools": [],
+    "gunKata": [
+      "Elemental Gearbolt",
+      "Clay Pigeon"
+    ],
+    "completion": {
+      "text": "<p>Once more per session, you can use Elemental Shot II.</p>",
+      "automation": "none",
+      "value": 0,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

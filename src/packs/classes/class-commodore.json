@@ -1,0 +1,112 @@
+{
+  "_id": "dtdC7411caa0f2f1",
+  "_key": "!items!dtdC7411caa0f2f1",
+  "name": "Commodore",
+  "type": "class",
+  "img": "icons/svg/book.svg",
+  "folder": "dtdCFd3d80d0dc1c",
+  "system": {
+    "description": "<p>A senior starship commander who leads the bridge crew, keeping communications open, shielding the officers with expendable crewmen and drawing on noble peers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 170
+    },
+    "level": 4,
+    "track": "",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "command"
+          ],
+          "value": 4
+        },
+        {
+          "keys": [
+            "politics"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "persuasion"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "fel",
+      "cha",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "scrutiny",
+      "politics",
+      "persuasion",
+      "perception",
+      "pilot",
+      "intimidation",
+      "command",
+      "charm"
+    ],
+    "feats": [
+      {
+        "name": "Hailing Frequencies",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Redshirt Shield",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Peer",
+        "subcategory": "Any",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Virgil's Guidance",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [
+      "Clay Pigeon",
+      "Silent Scope",
+      "Tin Star"
+    ],
+    "completion": {
+      "text": "<p>Choose one Social Skill and gain a Specialty in it for free.</p>",
+      "automation": "specialty",
+      "value": 0,
+      "skillGroup": "social",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

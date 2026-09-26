@@ -1,0 +1,16 @@
+{
+  "_id": "dtdCFdc71739a5ba",
+  "_key": "!folders!dtdCFdc71739a5ba",
+  "name": "Bard",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 40000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "classFolder": "Bard"
+    }
+  }
+}

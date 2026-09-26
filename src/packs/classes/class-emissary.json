@@ -1,0 +1,112 @@
+{
+  "_id": "dtdC4c6169de3a0f",
+  "_key": "!items!dtdC4c6169de3a0f",
+  "name": "Emissary",
+  "type": "class",
+  "img": "icons/svg/coins.svg",
+  "folder": "dtdCFd0007f24f55",
+  "system": {
+    "description": "<p>The top of the Courtier track, a social mastermind whose air of authority and contempt for danger lets them dominate courts and command any room.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 131
+    },
+    "level": 5,
+    "track": "Courtier",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "persuasion"
+          ],
+          "value": 5
+        },
+        {
+          "keys": [
+            "scrutiny"
+          ],
+          "value": 5
+        }
+      ],
+      "feats": [
+        "Just as Planned"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "cha",
+      "fel",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "academicLore",
+      "commonLore",
+      "politics",
+      "ballistics",
+      "drive",
+      "larceny",
+      "pilot",
+      "weaponry",
+      "charm",
+      "command",
+      "deceive",
+      "disguise",
+      "intimidation",
+      "performer",
+      "persuasion",
+      "scrutiny"
+    ],
+    "feats": [
+      {
+        "name": "Courtier's Privilege",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Air of Authority",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Armor of Contempt",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Peer",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      },
+      {
+        "name": "Skill Focus",
+        "subcategory": "Any",
+        "mandatory": false,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [],
+    "gunKata": [],
+    "completion": {
+      "text": "<p>Your Resolve increases by 1.</p>",
+      "automation": "resolveMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

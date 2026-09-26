@@ -1,0 +1,102 @@
+{
+  "_id": "dtdC17be20abd3d7",
+  "_key": "!items!dtdC17be20abd3d7",
+  "name": "Krazy Ivan",
+  "type": "class",
+  "img": "icons/svg/explosion.svg",
+  "folder": "dtdCFdac2d70a126",
+  "system": {
+    "description": "<p>The Heavy track's second class, for a gunner who would rather soak damage than take cover. Krazy Ivans rain steel on the enemy, shrug off punishment and guard their allies.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 142
+    },
+    "level": 2,
+    "track": "Heavy",
+    "prerequisites": {
+      "skills": [
+        {
+          "keys": [
+            "ballistics"
+          ],
+          "value": 3
+        },
+        {
+          "keys": [
+            "brawl"
+          ],
+          "value": 2
+        }
+      ],
+      "feats": [
+        "Unarmed Warrior",
+        "Sound Constitution"
+      ],
+      "schools": [],
+      "text": ""
+    },
+    "characteristics": [
+      "con",
+      "str",
+      "cmp"
+    ],
+    "anyCharacteristic": false,
+    "skills": [
+      "athletics",
+      "ballistics",
+      "brawl",
+      "drive",
+      "command",
+      "intimidation"
+    ],
+    "feats": [
+      {
+        "name": "Sound Constitution",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Hardy",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Steel Rain",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      },
+      {
+        "name": "Guardian",
+        "subcategory": "",
+        "mandatory": true,
+        "orGroup": ""
+      }
+    ],
+    "magicSchools": [],
+    "swordSchools": [
+      "Setting Sun"
+    ],
+    "gunKata": [
+      "Crisis Zone",
+      "Point Blank"
+    ],
+    "completion": {
+      "text": "<p>Gain +1 HP.</p>",
+      "automation": "hpMax",
+      "value": 1,
+      "skillGroup": "any",
+      "grants": [],
+      "selection": {
+        "skill": "",
+        "specialty": ""
+      }
+    },
+    "status": "current",
+    "startedAt": 0
+  },
+  "effects": [],
+  "flags": {}
+}

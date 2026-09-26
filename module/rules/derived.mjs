@@ -18,6 +18,7 @@
  * @property {number} resolveMax
  * @property {number} speed
  * @property {number} resilience
+ * @property {number} fatigueMax
  */
 
 /**
@@ -55,7 +56,9 @@ export function computeDerived({ characteristics, size, level }, derivedMods = {
     resolveMax: c("wil") + c("cmp"),
     speed: c("str") + c("dex"),
     // Squat Toughness (7.7a p. 55) adds to Resilience.
-    resilience: Math.ceil((size + level) / 2) + 1 + (Number(resilience) || 0)
+    resilience: Math.ceil((size + level) / 2) + 1 + (Number(resilience) || 0),
+    // Max Fatigue = Constitution (DtD 7.7a p. 17).
+    fatigueMax: c("con")
   };
 
   const result = Object.fromEntries(

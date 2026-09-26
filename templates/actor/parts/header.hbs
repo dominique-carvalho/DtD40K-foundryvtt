@@ -58,6 +58,13 @@
     <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.mentalDefense"}}</span><span class="stat-value">{{system.derived.mentalDefense}}</span></div>
     <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.resilience"}}</span><span class="stat-value">{{system.derived.resilience}}</span></div>
     <div class="stat-box">
+      <span class="stat-label">{{localize "DTD.Sheet.Fatigue"}}</span>
+      <span class="stat-value pair">
+        <input type="number" name="system.fatigue.value" value="{{system.fatigue.value}}" min="0" step="1">
+        <span>/ {{system.fatigue.max}}</span>
+      </span>
+    </div>
+    <div class="stat-box">
       <span class="stat-label">{{localize "DTD.Sheet.HeroPoints"}}</span>
       <span class="stat-value pair">
         <input type="number" name="system.heroPoints.value" value="{{system.heroPoints.value}}" min="0" step="1">

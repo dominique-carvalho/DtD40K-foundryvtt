@@ -70,7 +70,8 @@
       "mentalDefense": "Mental Defense",
       "resolveMax": "Resolve máximo",
       "speed": "Speed",
-      "resilience": "Resilience"
+      "resilience": "Resilience",
+      "fatigueMax": "Fatigue máxima"
     },
     "Sheet": {
       "Character": "Ficha de Personagem DtD",
@@ -95,7 +96,7 @@
       "SearchSkills": "Buscar perícia",
       "OnlyTrained": "Só treinadas",
       "GmAdjustments": "Ajustes do Mestre",
-      "Initiative": "Iniciativa",
+      "Initiative": "Iniciativa de combate",
       "SpeedMeters": "m",
       "Row": {
         "power": "Power",
@@ -111,7 +112,9 @@
       "Tab": {
         "main": "Características e Perícias",
         "traits": "Traços"
-      }
+      },
+      "SocialInitiative": "Iniciativa social",
+      "Fatigue": "Fatigue"
     },
     "Race": {
       "Automation": {

@@ -8,7 +8,8 @@
 
 **Input**: User description: "Fundação do sistema DtD para Foundry VTT (Fase 1, primeira feature): manifesto instalável no Foundry v13+; ator 'character' com as 9 características, as 27 perícias (básicas/avançadas, com especialidades) e os valores derivados (Static Defense, Hit Points, Mental Defense, Resolve, Speed, Resilience, Size, Level, Hero Points, Devotion); ficha de personagem básica editável; e a rolagem Roll & Keep (XkY com 10 explodindo, conversão acima de 10 dados, TN, raises/checks, diálogo com TN/modificadores/stunt dice, mensagem no chat) para testes de perícia e de característica. Base de regras: docs/analise-dtd.md seções 2, 3 e 4. Contradições a resolver: fórmula de HP e se Arcana é básica ou avançada."
 
-**Referência de regras**: `docs/analise-dtd.md` §2 (Roll & Keep), §3 (personagem), §4 (criação); livro 1.6 pp. 8, 14, 19–25, 235–236.
+**Referência de regras**: `docs/analise-dtd.md` §2 (Roll & Keep), §3 (personagem), §4 (criação); DtD **7.7a** pp. 10–11 (Roll & Keep), 12–18 (criação), 22–29 (características e perícias),
+416–419 (testes e stunts) — constituição v1.2.0; versão original: livro 1.6 pp. 8, 14, 19–25, 235–236.
 
 ## Clarifications
 
@@ -24,6 +25,11 @@
 - Q: Qual livro é a referência? → A: DtD 7.7a. Consequências para esta feature: Acrobatics passa a
   Básica e Athletics passa a usar Strength; HP = 2×(Con + Wil) e Arcana Básica são confirmados pela
   7.7a (p. 17 e p. 25), eliminando as contradições da 1.6.
+- Demais mudanças da 7.7a aplicadas a esta feature: teste com sucesso quando o total **atinge ou
+  supera** o TN (p. 11); **stunts** de 1/2/3 níveis dão **+1k1/+2k2/+3k3** (p. 418; na 1.6 eram só
+  dados rolados); escala de TN 5 Trivial … 50 Never to be done again (p. 417); **Max Fatigue =
+  Constitution** e **iniciativa social = Fellowship + Composure** (p. 17); exemplo da Traya refeito
+  (pp. 17–18).
 
 ### Session 2026-09-25 (validação manual da US1)
 
@@ -55,7 +61,7 @@ ou o Level mudam.
 todas as features seguintes.
 
 **Independent Test**: instalar o sistema num Foundry limpo, criar um mundo, criar um personagem,
-preencher os valores do exemplo do livro (Traya, p. 15) e conferir os derivados.
+preencher os valores do exemplo do livro (Traya, 7.7a pp. 17–18) e conferir os derivados.
 
 **Acceptance Scenarios**:
 
@@ -114,7 +120,7 @@ sem treino, perícia avançada sem treino e característica, e conferir a mensag
 
 Antes de rolar, o jogador vê uma janela onde pode definir o TN (ou deixá-lo em branco), trocar a
 característica usada, somar modificadores de dados (+XkY) ou fixos (+Z), aplicar free raises,
-adicionar stunt dice (0–3) concedidos pelo Mestre e marcar que a especialidade se aplica.
+aplicar um stunt de nível 0–3 concedido pelo Mestre e marcar que a especialidade se aplica.
 
 **Why this priority**: o Mestre frequentemente pede combinações diferentes de perícia +
 característica e concede stunts; sem isso a rolagem do P2 cobre só o caso padrão.
@@ -126,7 +132,8 @@ efeito na parada e no resultado.
 
 1. **Given** Persuasion 2 + Cha 3, **When** o jogador troca para Fellowship 4, **Then** a parada
    passa a 6k4.
-2. **Given** uma parada 5k3, **When** o jogador aplica 2 stunt dice, **Then** a parada vira 7k3.
+2. **Given** uma parada 5k3, **When** o jogador aplica um stunt de nível 2, **Then** a parada vira
+   7k5 (+2k2, 7.7a p. 418).
 3. **Given** 1 free raise, **When** a rolagem totaliza 14 contra TN 15, **Then** o total final é 19
    e o resultado é sucesso.
 4. **Given** a especialidade marcada, **When** saem dados com resultado 1, **Then** esses dados são
@@ -180,7 +187,7 @@ efeito na parada e no resultado.
 - **FR-007**: Características MUST aceitar valores de 0 a 6, e cada característica MUST aceitar
   especialidades, como as perícias.
 - **FR-008**: O personagem MUST ter Size (padrão 4), Level (padrão 1), Hero Points atuais/máximo
-  (padrão 2/2), Devotion (padrão 6), Hit Points atuais e Resolve atual.
+  (padrão 2/2), Devotion (padrão 6), Hit Points atuais, Resolve atual e Fatigue atual (padrão 0).
 - **FR-009**: O sistema MUST calcular automaticamente:
   - Static Defense = 10 + 3×Dexterity + 3×Wisdom − 2×Size
   - Hit Points máximos = 2×(Constitution + Willpower) (decisão: segue cap. 2, ficha e resumo da
@@ -188,6 +195,7 @@ efeito na parada e no resultado.
   - Mental Defense = 5 + 5×Composure
   - Resolve máximo = Willpower + Composure
   - Speed = Strength + Dexterity
+  - Fatigue máxima = Constitution (7.7a p. 17)
   - Resilience = arredondar para cima((Size + Level) / 2) + 1, mínimo 1
 - **FR-010**: Os derivados MUST ser recalculados e **exibidos na ficha aberta** imediatamente
   quando qualquer valor de origem muda, sem reabrir a ficha; cada derivado MUST aceitar um bônus
@@ -211,14 +219,14 @@ efeito na parada e no resultado.
   ponto igual ao valor atual o reduz em 1 (permitindo chegar a 0).
 - **FR-026**: Um cabeçalho fixo, visível nos dois modos e ao rolar a ficha, MUST mostrar: nome e
   imagem, Level e Size, barras de HP e Resolve (valor atual editável, máximo calculado), Static
-  Defense, Mental Defense, Resilience, Hero Points (atual/máximo) e Devotion.
+  Defense, Mental Defense, Resilience, Fatigue (atual/máxima), Hero Points (atual/máximo) e Devotion.
 - **FR-027**: No modo jogo, a coluna de perícias MUST oferecer busca por nome (sem diferenciar
   maiúsculas e acentos, no idioma ativo) e filtro "só treinadas" (valor ≥ 1), aplicados sem
   recarregar a ficha.
 - **FR-028**: No modo edição, as especialidades e os ajustes do Mestre (bônus/override dos
   derivados) MUST estar visíveis; no modo jogo, as especialidades aparecem só como leitura.
-- **FR-029**: Um rodapé MUST mostrar Speed (em metros) e a fórmula de iniciativa do personagem
-  (1d10 + Dex + Cmp).
+- **FR-029**: Um rodapé MUST mostrar Speed (em metros) e as fórmulas de iniciativa do personagem:
+  de combate (1d10 + Dex + Cmp) e social (1d10 + Fel + Cmp) — 7.7a p. 17.
 - **FR-030**: A ficha MUST ser legível nos temas claro e escuro do Foundry v13 e rolar
   verticalmente sem cortar conteúdo, com largura mínima de 720 px.
 
@@ -239,8 +247,8 @@ efeito na parada e no resultado.
   TN, e calcular raises = ⌊(total − TN)/5⌋ no sucesso e checks = ⌊(TN − total)/5⌋ na falha.
 - **FR-018**: A janela de rolagem MUST permitir: TN (padrão 15, podendo ficar em branco), escolha
   da característica, modificador de dados (±X rolados, ±Y mantidos), modificador fixo (±Z), free
-  raises (+5 cada), stunt dice 0–3 (+1 rolado cada) e marcação de especialidade (rerrola os 1s uma
-  vez).
+  raises (+5 cada), nível de stunt 0–3 (+1k1 por nível: +1k1, +2k2, +3k3 — 7.7a p. 418) e marcação
+  de especialidade (rerrola os 1s uma vez).
 - **FR-019**: MUST existir uma forma de rolagem rápida que pula a janela e usa os valores padrão.
 - **FR-020**: Cada rolagem MUST gerar uma mensagem no chat com: personagem, teste realizado,
   parada final (XkY e conversões aplicadas), cada dado rolado com mantidos e explosões destacados,
@@ -267,7 +275,7 @@ efeito na parada e no resultado.
 
 - **SC-001**: Um Mestre instala o sistema, cria um mundo e um personagem funcional em menos de
   5 minutos, sem mensagens de erro.
-- **SC-002**: 100% dos valores derivados do personagem de exemplo do livro (Traya, p. 15)
+- **SC-002**: 100% dos valores derivados do personagem de exemplo do livro (Traya, 7.7a pp. 17–18)
   batem com o cálculo esperado pela regra adotada.
 - **SC-003**: 100% dos exemplos de conversão do livro (12k6→10k7, 15k10→10k10+25, 11k11→10k10+10)
   e dos casos-limite listados produzem a parada correta.

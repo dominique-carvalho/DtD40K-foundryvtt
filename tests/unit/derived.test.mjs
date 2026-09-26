@@ -8,20 +8,30 @@ const chars = (values = {}) => {
 };
 
 describe("computeDerived", () => {
-  it("matches the Traya example (DtD 1.6 p. 15)", () => {
+  it("matches the Traya example (DtD 7.7a pp. 17–18)", () => {
+    // Str 4, Dex 2, Wis 2 and Size 5 are given in the example text; Con 4, Wil 4 and Cmp 2 follow
+    // from its Fatigue 4, HP 16 and Resolve 6.
     const result = computeDerived({
-      characteristics: chars({ str: 4, dex: 3, con: 4, wil: 2, wis: 2, cmp: 2 }),
+      characteristics: chars({ str: 4, dex: 2, con: 4, wil: 4, wis: 2, cmp: 2 }),
       size: 5,
       level: 1
     });
     expect(result).toEqual({
-      staticDefense: 15,
-      hpMax: 12,
+      staticDefense: 12,
+      hpMax: 16,
       mentalDefense: 15,
-      resolveMax: 4,
-      speed: 7,
-      resilience: 4
+      resolveMax: 6,
+      speed: 6,
+      resilience: 4,
+      fatigueMax: 4
     });
+  });
+
+  it("sets Max Fatigue to Constitution, with GM bonus and override (7.7a p. 17)", () => {
+    const source = { characteristics: chars({ con: 3 }), size: 4, level: 1 };
+    expect(computeDerived(source).fatigueMax).toBe(3);
+    expect(computeDerived(source, { fatigueMax: { bonus: 1, override: null } }).fatigueMax).toBe(4);
+    expect(computeDerived(source, { fatigueMax: { bonus: 0, override: 6 } }).fatigueMax).toBe(6);
   });
 
   it("computes a fresh character (all 1, size 4, level 1)", () => {
@@ -32,6 +42,7 @@ describe("computeDerived", () => {
     expect(result.mentalDefense).toBe(10);
     expect(result.speed).toBe(2);
     expect(result.resilience).toBe(4);
+    expect(result.fatigueMax).toBe(1);
   });
 
   it("rounds resilience up: level 5 human has resilience 6 (p. 14)", () => {

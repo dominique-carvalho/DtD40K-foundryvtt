@@ -70,7 +70,8 @@
       "mentalDefense": "Mental Defense",
       "resolveMax": "Maximum Resolve",
       "speed": "Speed",
-      "resilience": "Resilience"
+      "resilience": "Resilience",
+      "fatigueMax": "Maximum Fatigue"
     },
     "Sheet": {
       "Character": "DtD Character Sheet",
@@ -95,7 +96,7 @@
       "SearchSkills": "Search skills",
       "OnlyTrained": "Only trained",
       "GmAdjustments": "GM adjustments",
-      "Initiative": "Initiative",
+      "Initiative": "Combat Initiative",
       "SpeedMeters": "m",
       "Row": {
         "power": "Power",
@@ -111,7 +112,9 @@
       "Tab": {
         "main": "Characteristics & Skills",
         "traits": "Traits"
-      }
+      },
+      "SocialInitiative": "Social Initiative",
+      "Fatigue": "Fatigue"
     },
     "Race": {
       "Automation": {

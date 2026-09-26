@@ -85,9 +85,9 @@ describe("SKILLS", () => {
 });
 
 describe("DERIVED_KEYS", () => {
-  it("lists the 6 derived values", () => {
+  it("lists the 7 derived values (Max Fatigue added in DtD 7.7a)", () => {
     expect(DERIVED_KEYS).toEqual([
-      "staticDefense", "hpMax", "mentalDefense", "resolveMax", "speed", "resilience"
+      "staticDefense", "hpMax", "mentalDefense", "resolveMax", "speed", "resilience", "fatigueMax"
     ]);
   });
 });

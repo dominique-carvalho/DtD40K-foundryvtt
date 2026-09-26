@@ -25,8 +25,24 @@
   visão), Dragonborn (Dragon Breath sem limite), Elf (Elven Accuracy 1×/rodada), Gnome (todas as
   proficiências de arma e armadura), Ork (HP temporário = Level no início do combate), Tau (Fall Back
   após esquivar qualquer ataque). Detalhes em `specs/002-race-compendium/spec.md`.
-- **Outros** (não verificados em detalhe): custos de XP fixos, compra de itens simplificada,
-  armaduras como traje completo, veículos simplificados.
+- **Testes** (7.7a pp. 11, 416–418): sucesso quando o total **atinge ou supera** o TN (1.6: "maior
+  que"). Escala de TN renomeada e estendida: 5 Trivial · 10 Easy · 15 Average · 20 Advanced · 25 Hard ·
+  30 Very Hard · 35 Exceptional · 40 Heroic · 45 Never Done Before · 50 Never To Be Done Again.
+- **Stunts** (7.7a p. 418): níveis 1/2/3 dão **+1k1 / +2k2 / +3k3** (dados rolados **e** mantidos; na
+  1.6 eram só dados rolados, +Xk0).
+- **Ficha** (7.7a p. 17): **Max Fatigue = Constitution**; **iniciativa social = Fel + Cmp** (a de
+  combate continua Dex + Cmp); Size "determinado pela raça" (Humano 4).
+- **Criação** (7.7a pp. 12–16): nenhuma perícia acima de 3 no passo de pontos iniciais; 4º e 5º
+  pontos só com XP; equipamento inicial por raridade (1 Rare, 1 Uncommon, 2 Common, 2 Very Common) em
+  vez dos pacotes Earth/Air/Fire/Water/Void; sem a alternativa de point-buy por XP.
+- **Custos de XP fixos** (7.7a p. 16): Característica 200 · Perícia nova 100 · Melhorar perícia 50 ·
+  Escola nova 200 · Melhorar escola 100 × rank atual · Feat 100 · Asset 100 (só criação) · Power Stat
+  300 · Background 1–3: 50/ponto, 4–5: 100/ponto (só criação). Power Stat, escolas e Gun Kata limitados
+  ao Level.
+- **Exemplo da Traya** (7.7a pp. 17–18): monk, str 4, dex 2, con 4, wil 4, wis 2, cmp 2, Size 5 → SD 12,
+  HP 16, MD 15, Resolve 6, Speed 6, Resilience 4, Fatigue 4.
+- **Outros** (não verificados em detalhe): compra de itens simplificada, armaduras como traje
+  completo, armas desarmadas substituem o soco 0k1, veículos simplificados.
 
 ## Sumário
 
@@ -77,9 +93,9 @@ Fonte: 1.6 pp. 8, 19–21, 235–239.
 - **Especialidade** (ganha no 4º ponto de perícia/característica): rerrola 1s quando aplicável.
 - **Teste oposto**: ambos rolam; só um passa → vence; ambos passam → maior total; empate → maior característica.
 
-**Tabela de TN** (p. 236): 5 Mundano · 10 Fácil · 15 Médio · 20 Difícil · 25 Muito Difícil · 30 Heroico · 35 Nunca Feito · 40 Nunca Será Feito de Novo.
+**Tabela de TN** (p. 236; **substituída pela escala da 7.7a em §0**): 5 Mundano · 10 Fácil · 15 Médio · 20 Difícil · 25 Muito Difícil · 30 Heroico · 35 Nunca Feito · 40 Nunca Será Feito de Novo.
 
-**Stunts** (pp. 237–238): SM concede 0–3 dados rolados extras (+Xk0) por descrição/uso do ambiente/ato épico. NPCs sem importância não recebem.
+**Stunts** (pp. 237–238; **7.7a p. 418: +1k1/+2k2/+3k3**): SM concede 0–3 níveis por descrição/uso do ambiente/ato épico (na 1.6, +Xk0). NPCs sem importância não recebem.
 
 **Hero Points** (p. 239): 2 iniciais (Humano +1, Paragon +2), renovam por sessão. Gasto (ação livre): rerrolar teste falho · −5 no TN (antes de rolar) · +1 raise em sucesso · dado de iniciativa conta 10 · sair de Stunned. **Queimar** (perde permanentemente) = sobrevive a algo que o mataria.
 
@@ -144,7 +160,7 @@ Fonte: 1.6 pp. 10–15, 333–334.
 - Alternativa point-buy: 4800 / 5200 / 5600 XP (baixo/médio/alto), até 10% reservado para feats/assets/backgrounds.
 - Pacotes de equipamento: Earth, Air, Fire, Water, Void (p. 13).
 
-**Custos de XP** ("rank atual" = antes de subir):
+**Custos de XP** (1.6 — **substituídos pelos custos fixos da 7.7a em §0**; "rank atual" = antes de subir):
 | Compra | Custo |
 |---|---|
 | Característica | 100 × rank |

@@ -127,21 +127,21 @@ e confirmar que falham. UI/integração: roteiro manual do quickstart.md.
 
 ## Phase 5: User Story 3 - Ajustar a rolagem antes de lançar (Priority: P3)
 
-**Goal**: diálogo com TN, troca de característica, modificadores, free raises, stunt dice, especialidade e modo de rolagem; Shift+clique pula o diálogo
+**Goal**: diálogo com TN, troca de característica, modificadores, free raises, stunt (+XkX), especialidade e modo de rolagem; Shift+clique pula o diálogo
 
 **Independent Test**: quickstart.md passos 8, 11, 13 e 14
 
 ### Tests for User Story 3 ⚠️
 
-- [ ] T044 [US3] Acrescentar em `tests/unit/pool.test.mjs` casos de `applyModifiers`: 5k3 + 2 stunt dice → 7k3; `stuntDice` limitado a 0–3 (5 → 3, −1 → 0); 1 free raise → flat +5; modificadores ±rolled/±kept/±flat somam; em `tests/unit/test.test.mjs`: total 14 + 1 free raise vs TN 15 → 19, sucesso; troca de característica (Persuasion 2 + Fel 4 → 6k4)
+- [ ] T044 [US3] Acrescentar em `tests/unit/pool.test.mjs` casos de `applyModifiers`: 5k3 + stunt de nível 2 → 7k5 (7.7a p. 418: +1k1 por nível); `stunt` limitado a 0–3 (5 → 3, −1 → 0); 1 free raise → flat +5; modificadores ±rolled/±kept/±flat somam; em `tests/unit/test.test.mjs`: total 14 + 1 free raise vs TN 15 → 19, sucesso; troca de característica (Persuasion 2 + Fel 4 → 6k4)
 
 ### Implementation for User Story 3
 
-- [ ] T045 [US3] Implementar `applyModifiers(base, { rolled = 0, kept = 0, flat = 0, freeRaises = 0, stuntDice = 0 })` em `module/rules/pool.mjs` e usá-lo em `module/rules/test.mjs`; fazer T044 passar
-- [ ] T046 [P] [US3] Criar `templates/dialog/roll-dialog.hbs` com os campos de contracts/foundry-api.md: TN (padrão 15, vazio permitido), seletor de característica (padrão da perícia; oculto em teste de característica), modificador de dados rolados/mantidos, modificador fixo, free raises, stunt dice (0–3), checkbox de especialidade (só se houver especialidades, listando-as) e seletor de modo de rolagem a partir de `CONFIG.Dice.rollModes` (v13)
+- [ ] T045 [US3] Implementar `applyModifiers(base, { rolled = 0, kept = 0, flat = 0, freeRaises = 0, stunt = 0 })` (stunt soma em rolados **e** mantidos) em `module/rules/pool.mjs` e usá-lo em `module/rules/test.mjs`; fazer T044 passar
+- [ ] T046 [P] [US3] Criar `templates/dialog/roll-dialog.hbs` com os campos de contracts/foundry-api.md: TN (padrão 15, vazio permitido), seletor de característica (padrão da perícia; oculto em teste de característica), modificador de dados rolados/mantidos, modificador fixo, free raises, nível de stunt (0–3, +1k1 cada), checkbox de especialidade (só se houver especialidades, listando-as) e seletor de modo de rolagem a partir de `CONFIG.Dice.rollModes` (v13)
 - [ ] T047 [US3] Implementar `module/apps/roll-dialog.mjs`: `async function promptRollOptions({ actor, skillKey, characteristicKey, tn })` usando `foundry.applications.api.DialogV2` com o template de T046; retorna `{ characteristic, tn, modifiers, specialty, rollMode }` ou `null` se cancelado
 - [ ] T048 [US3] Integrar o diálogo em `rollSkill`/`rollCharacteristic` de `module/documents/actor.mjs`: sem `fastForward` abre `promptRollOptions` (cancelado → `null`); passa `modifiers`, `specialty` (→ `rerollOnes`), característica escolhida e `rollMode` para `runTest`/`postTest`; com `fastForward` usa padrões
-- [ ] T049 [P] [US3] Adicionar chaves `DTD.Roll.Dialog.*` (Title, TN, Characteristic, RolledMod, KeptMod, FlatMod, FreeRaises, StuntDice, Specialty, RollMode, Roll, Cancel) em `lang/en.json` e `lang/pt-BR.json` e estilos do diálogo em `styles/dtd40k.css`
+- [ ] T049 [P] [US3] Adicionar chaves `DTD.Roll.Dialog.*` (Title, TN, Characteristic, RolledMod, KeptMod, FlatMod, FreeRaises, Stunt, Specialty, RollMode, Roll, Cancel) em `lang/en.json` e `lang/pt-BR.json` e estilos do diálogo em `styles/dtd40k.css`
 - [ ] T050 [US3] Validar manualmente quickstart.md passos 8, 11, 13 e 14 (incluindo Dice So Nice) e registrar em `specs/001-system-foundation/quickstart.md`
 
 **Checkpoint**: todas as histórias funcionais de forma independente
@@ -156,6 +156,14 @@ e confirmar que falham. UI/integração: roteiro manual do quickstart.md.
 - [ ] T054 Executar o roteiro completo de `specs/001-system-foundation/quickstart.md` (passos 1–22) e `npm test` com cobertura de `module/rules/**`
 - [ ] T055 Rodar `graphify update .` na raiz do repositório para atualizar o grafo de conhecimento
 
+
+## Phase 7: Adoção da DtD 7.7a (constituição v1.2.0, 2026-09-25)
+
+- [X] T056 [US1] Perícias conforme a 7.7a (pp. 25–29): Acrobatics Básica, Athletics com Strength, em `module/config.mjs` e `tests/unit/config.test.mjs`
+- [X] T057 [US1] Fatigue: `fatigue.value` no modelo, derivado `fatigueMax = Con` com bônus/override (`DERIVED_KEYS`), caixa Fatigue atual/máxima no cabeçalho — 7.7a p. 17
+- [X] T058 [US1] Rodapé com iniciativa social `1d10 + Fel + Cmp` além da de combate — 7.7a p. 17
+- [X] T059 [US1] Exemplo da Traya da 7.7a (pp. 17–18) em `tests/unit/derived.test.mjs`, data-model e quickstart
+- [X] T060 Spec, contratos e tarefas pendentes (T044–T049) ajustados para stunts +XkX e para a escala de TN da 7.7a
 ---
 
 ## Dependencies & Execution Order

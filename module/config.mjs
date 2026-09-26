@@ -103,7 +103,7 @@ export const SKILLS = {
 };
 
 /** Derived values that accept a manual bonus and override. */
-export const DERIVED_KEYS = ["staticDefense", "hpMax", "mentalDefense", "resolveMax", "speed", "resilience"];
+export const DERIVED_KEYS = ["staticDefense", "hpMax", "mentalDefense", "resolveMax", "speed", "resilience", "fatigueMax"];
 
 /** Highest characteristic or skill rating, racial bonuses included (spec 002, FR-015). */
 export const MAX_RATING = 6;

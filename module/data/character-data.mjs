@@ -53,6 +53,7 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       level: integer(1, { min: 1, max: 10 }),
       hp: new SchemaField({ value: integer(0, { min: 0 }) }),
       resolve: new SchemaField({ value: integer(0, { min: 0 }) }),
+      fatigue: new SchemaField({ value: integer(0, { min: 0 }) }),
       heroPoints: new SchemaField({
         value: integer(2, { min: 0 }),
         max: integer(2, { min: 0 })
@@ -84,6 +85,7 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     };
     this.hp.max = derived.hpMax;
     this.resolve.max = derived.resolveMax;
+    this.fatigue.max = derived.fatigueMax;
   }
 
   /**

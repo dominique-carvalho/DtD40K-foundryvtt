@@ -126,7 +126,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       mentalDefense: system.derived.mentalDefense,
       resolveMax: system.resolve.max,
       speed: system.derived.speed,
-      resilience: system.derived.resilience
+      resilience: system.derived.resilience,
+      fatigueMax: system.fatigue.max
     };
 
     Object.assign(context, {
@@ -148,6 +149,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       hpPct: percent(system.hp.value, system.hp.max),
       resolvePct: percent(system.resolve.value, system.resolve.max),
       initiativeBonus: system.characteristics.dex.value + system.characteristics.cmp.value,
+      // Social initiative = Fellowship + Composure (DtD 7.7a p. 17).
+      socialInitiativeBonus: system.characteristics.fel.value + system.characteristics.cmp.value,
       gridColumns: CHARACTERISTIC_GRID.columns.map((key) => ({ key, label: `DTD.Sheet.Column.${key}` })),
       gridRows: CHARACTERISTIC_GRID.rows.map((row) => ({
         key: row,

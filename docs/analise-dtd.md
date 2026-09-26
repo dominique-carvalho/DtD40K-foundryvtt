@@ -1,5 +1,10 @@
 # Análise — Dungeons the Dragoning (DtD) para sistema Foundry VTT
 
+> ⚠️ **Base de regras atualizada (2026-09-25):** o projeto adotou a **DtD 7.7a**. Esta análise foi
+> escrita sobre a 1.6 + Book 2 v2.2; as diferenças estão em [`comparativo-7.7a.md`](comparativo-7.7a.md)
+> e, quando houver divergência, **prevalece a 7.7a** (constituição v1.2.0).
+
+
 > Fontes analisadas:
 > - **Livro base 1.6z** — `Dungeons the Dragoning 1.6 - Bookmarked Final.pdf` (394 pp.)
 > - **Book 2 v2.2 "For a Few Subtitles More"** — `Dungeons_the_Dragoning_Book_2.2_-_Bookmarked.pdf` (178 pp., suplemento, beta incompleto)

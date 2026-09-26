@@ -54,7 +54,7 @@ de escolha, 1 cartão novo na aba Traits, ~9 efeitos distintos; ~30 arquivos nov
 | III. Lógica Pura e Testada | `rules/exaltation.mjs`, `rules/asset.mjs` e alteração de `derived.mjs` puros, com os exemplos numéricos da spec em contracts/rules-api.md; packs validados por teste | ✅ |
 | IV. Automação Pragmática | Só fórmulas, tetos, contadores e 12 efeitos numéricos simples; gastos, rolagens e poderes complexos ficam como texto/botões; todo efeito desativável; recusas de asset podem ser confirmadas pelo Mestre; override do Mestre vence | ✅ |
 | V. Conteúdo como Dados | Fonte JSON em `src/packs/`, compilada pelo CLI; descrições com redação própria; tabelas conferidas no PDF (ordem dos poderes rechecada na implementação) | ✅ |
-| VI. Entrega Incremental | Feature da Fase 1 (cap. 5 da 7.7a); US1 (compêndio) utilizável sozinha; feats/assets gerais, magia e combate fora de escopo; `feat` com uma única categoria (YAGNI) mas reaproveitável (R1). **Pendência**: o texto do princípio VI ainda cita "exaltações" do Book 2 na Fase 2 — Wraith e Dragonblooded estão no cap. 5 da 7.7a; propor emenda PATCH via `/speckit-constitution` (como na adoção da 7.7a para as raças) antes do merge | ⚠️ justificado |
+| VI. Entrega Incremental | Feature da Fase 1 (cap. 5 da 7.7a); US1 (compêndio) utilizável sozinha; feats/assets gerais, magia e combate fora de escopo; `feat` com uma única categoria (YAGNI) mas reaproveitável (R1). A constituição v1.2.1 (emenda PATCH de 2026-09-25) explicita que as 9 exaltações do cap. 5, inclusive Wraith e Dragonblooded, e os Exalted Assets fazem parte do núcleo de personagem da Fase 1 | ✅ |
 | Restrições técnicas | JS ESM + JSDoc, CSS puro, i18n `DTD.*` pt-BR/en, ids em inglês, nomes do livro (`feralHeart` → dado, `bloodOfIo`, `warboss`) | ✅ |
 
 **Re-check pós-design (Phase 1)**: data-model, contratos e quickstart mantêm todos os itens. A única
@@ -126,7 +126,7 @@ da exaltação ganha um módulo de contexto próprio porque `character-sheet.mjs
 
 ## Complexity Tracking
 
-Nenhuma violação da constituição além da pendência de redação do princípio VI (acima). Escolhas não
+Nenhuma violação da constituição (a pendência de redação do princípio VI foi resolvida na v1.2.1). Escolhas não
 óbvias, justificadas em research:
 
 | Escolha | Por quê | Alternativa mais simples rejeitada porque |

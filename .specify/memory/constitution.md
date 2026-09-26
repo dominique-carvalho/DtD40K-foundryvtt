@@ -1,6 +1,15 @@
 <!--
 Sync Impact Report
-- Version change: 1.1.0 → 1.2.0 (MINOR — muda materialmente a fonte de regras do princípio I)
+- Version change: 1.2.0 → 1.2.1 (PATCH — clarifica o escopo da Fase 1 sem mudar a ordem das fases)
+- Modified principles:
+  VI. Entrega Incremental por Fases: novo item explicita que o núcleo de personagem da Fase 1
+  abrange todo o conteúdo de criação da 7.7a — 16 raças (cap. 4), 9 exaltações (cap. 5, inclusive
+  Wraith e Dragonblooded, antes do Book 2) e Exalted Assets (cap. 7) — e que a Fase 2 fica com as
+  opções que ampliam esse núcleo. Origem: decisão do usuário em 2026-09-25 na feature
+  004-exaltation-compendium (Constitution Check do plan.md).
+- Artefatos afetados: specs/004-exaltation-compendium/plan.md (item VI do Constitution Check passa
+  de "⚠️ justificado" a ✅ — ajustar fora desta emenda).
+- Histórico 1.1.0 → 1.2.0 (MINOR — muda materialmente a fonte de regras do princípio I):
 - Modified principles:
   I. Fidelidade às Regras: fonte de verdade passa de "1.6 + Book 2 v2.2" para **DtD 7.7a**;
   diferenças registradas em docs/comparativo-7.7a.md; contradições referenciadas ao §11 do
@@ -96,6 +105,11 @@ permite testar sem subir o Foundry.
 - Ordem de entrega: Fase 1 núcleo (personagem, rolagem, combate, magia, escolas marciais) →
   Fase 2 demais opções de personagem nos moldes existentes → Fase 3 veículos e naves. Uma fase
   só inicia com a anterior utilizável.
+- O núcleo de personagem da Fase 1 inclui todo o conteúdo de criação de personagem da 7.7a:
+  as 16 raças do cap. 4, as 9 exaltações do cap. 5 (inclusive Wraith e Dragonblooded) e os
+  Exalted Assets do cap. 7 — ainda que parte venha do antigo *Book 2*. A Fase 2 cobre as opções
+  que ampliam esse núcleo sem ser necessárias para criar um Herói (ex.: classes e escolas extras,
+  Gun Kata).
 - Cada feature MUST ser entregável e utilizável de forma independente dentro do Foundry.
 - Estruturas reutilizáveis MUST ser preferidas a duplicação (ex.: um único `martialSchool`
   para Sword Schools e Gun Kata).
@@ -134,4 +148,4 @@ permite testar sem subir o Foundry.
   princípio ou seção; PATCH para clarificações de redação.
 - Revisão de conformidade: verificada no `/speckit-plan` (Constitution Check) e em cada PR.
 
-**Version**: 1.2.0 | **Ratified**: 2026-09-24 | **Last Amended**: 2026-09-25
+**Version**: 1.2.1 | **Ratified**: 2026-09-24 | **Last Amended**: 2026-09-25

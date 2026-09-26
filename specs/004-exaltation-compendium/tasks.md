@@ -199,7 +199,7 @@ Perfection do Paragon
 
 ## Phase 8: Polish & Cross-Cutting Concerns
 
-- [ ] T070 Propor via `/speckit-constitution` a emenda PATCH do princípio VI (Wraith e Dragonblooded, do cap. 5 da 7.7a, entram na Fase 1, como as 4 raças do Book 2) — pendência do Constitution Check do plan.md
+- [X] T070 Propor via `/speckit-constitution` a emenda PATCH do princípio VI (Wraith e Dragonblooded, do cap. 5 da 7.7a, entram na Fase 1, como as 4 raças do Book 2) — pendência do Constitution Check do plan.md
 - [X] T071 [P] Atualizar `docs/analise-dtd.md` §6 (Exaltações) para a 7.7a: páginas, ordem dos poderes (Werewolf, Chosen Overbeing), Pressure 5×Excellence, contagem de 75 assets
 - [X] T072 [P] Atualizar `README.md` (recursos: compêndios Exaltations e Exalted Assets, aplicação na ficha)
 - [X] T073 Rodar `npm run lint` e `npm test` sem erros; corrigir o que aparecer

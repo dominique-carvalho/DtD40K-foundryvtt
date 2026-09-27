@@ -51,43 +51,43 @@ quickstart.md
 
 ## Phase 4: User Story 2 — Escolas no personagem (P2)
 
-- [ ] T014 [P] [US2] Em `tests/unit/xp.test.mjs` e `martial.test.mjs`: `advanceCost("martial")`, `canAdvance` de `martial` (listas `swordSchools`/`gunKata`, Free Study, `atCap`), `undoPlan`; `adeptLevels` (contrato)
-- [ ] T015 [US2] Estender `module/rules/xp.mjs`; criar `module/rules/martial.mjs` com universais e `adeptLevels`; fazer T014 passar
-- [ ] T016 [US2] `module/documents/martial-service.mjs`: `schoolData` (cache do pack) e `syncPassives`; `xp-service`: `advance(actor, "martial", key)` e desfazer chamando `syncPassives`
-- [ ] T017 [US2] Aba `martial` (`templates/actor/parts/martial.hbs`, `module/apps/martial-context.mjs`, `character-sheet.mjs`): Martial Adept/Gunslinger Level, escolas com valor, `+custo` no modo Evolução, níveis liberados, passivas, universais
-- [ ] T018 [P] [US2] i18n e estilos
+- [X] T014 [P] [US2] Em `tests/unit/xp.test.mjs` e `martial.test.mjs`: `advanceCost("martial")`, `canAdvance` de `martial` (listas `swordSchools`/`gunKata`, Free Study, `atCap`), `undoPlan`; `adeptLevels` (contrato)
+- [X] T015 [US2] Estender `module/rules/xp.mjs`; criar `module/rules/martial.mjs` com universais e `adeptLevels`; fazer T014 passar
+- [X] T016 [US2] `module/documents/martial-service.mjs`: `schoolData` (cache do pack) e `syncPassives`; `xp-service`: `advance(actor, "martial", key)` e desfazer chamando `syncPassives`
+- [X] T017 [US2] Aba `martial` (`templates/actor/parts/martial.hbs`, `module/apps/martial-context.mjs`, `character-sheet.mjs`): Martial Adept/Gunslinger Level, escolas com valor, `+custo` no modo Evolução, níveis liberados, passivas, universais
+- [X] T018 [P] [US2] i18n e estilos
 - [ ] T019 [US2] Validar quickstart 1–8 e registrar
 
 ---
 
 ## Phase 5: User Story 3 — Montador (P3)
 
-- [ ] T020 [P] [US3] Em `tests/unit/martial.test.mjs`: `options`, `points`, `budget` (exemplos pp. 261 e 273), `attackCost` (contrato)
-- [ ] T021 [US3] Completar `module/rules/martial.mjs`; fazer T020 passar
-- [ ] T022 [US3] `module/apps/martial-builder.mjs` + `templates/dialog/martial-builder.hbs` (tipo, nome, ação-base, vantagens com quantidade/escolha, restrições, orçamento ao vivo)
-- [ ] T023 [US3] `martial-service.saveAttack` / `deleteAttack` (histórico `specialAttack`, edição com `history`); desfazer do `xp-service` para `specialAttack` restaura a definição anterior ou apaga o ataque
-- [ ] T024 [US3] Na aba `martial`: lista de ataques (Usar, Editar, Apagar; inválido quando falta nível)
-- [ ] T025 [P] [US3] i18n e estilos
+- [X] T020 [P] [US3] Em `tests/unit/martial.test.mjs`: `options`, `points`, `budget` (exemplos pp. 261 e 273), `attackCost` (contrato)
+- [X] T021 [US3] Completar `module/rules/martial.mjs`; fazer T020 passar
+- [X] T022 [US3] `module/apps/martial-builder.mjs` + `templates/dialog/martial-builder.hbs` (tipo, nome, ação-base, vantagens com quantidade/escolha, restrições, orçamento ao vivo)
+- [X] T023 [US3] `martial-service.saveAttack` / `deleteAttack` (histórico `specialAttack`, edição com `history`); desfazer do `xp-service` para `specialAttack` restaura a definição anterior ou apaga o ataque
+- [X] T024 [US3] Na aba `martial`: lista de ataques (Usar, Editar, Apagar; inválido quando falta nível)
+- [X] T025 [P] [US3] i18n e estilos
 - [ ] T026 [US3] Validar quickstart 9–12 e registrar
 
 ---
 
 ## Phase 6: User Story 4 — Uso em combate (P4)
 
-- [ ] T027 [P] [US4] Em `tests/unit/martial.test.mjs` e `damage.test.mjs`: `usageCheck`, `attackModifiers` (contrato); `resolveDamage` com `ignoreArmor`, `resilienceMod`, `resilienceMultiplier`, `noCritical`
-- [ ] T028 [US4] Completar `module/rules/martial.mjs` e estender `module/rules/damage.mjs`; fazer T027 passar
-- [ ] T029 [US4] `attack-service`: `rollAttack(..., { special })` (parada, flag, cartão com vantagens em texto, aviso de Blast/Flame, `onMiss`) e `rollDamage` (dano, Pen, Força, `explodeOn`, por raise, qualidades, `resolve` na flag); `damage-service.applyTo` passa `resolve`
-- [ ] T030 [US4] `turn-service.useAction(..., { special })` e `multipleAttacks` (vantagens no primeiro ataque)
-- [ ] T031 [US4] `martial-service.useAttack` (restrições com override, ação-base, preparo, teste de perícia, efeitos no atacante, estado), `applyAttackEffects` (botão no cartão, socket da 008), `newScene`; hook `deleteCombat`; `CHAT_ACTIONS.martialEffects`
-- [ ] T032 [P] [US4] i18n e estilos
+- [X] T027 [P] [US4] Em `tests/unit/martial.test.mjs` e `damage.test.mjs`: `usageCheck`, `attackModifiers` (contrato); `resolveDamage` com `ignoreArmor`, `resilienceMod`, `resilienceMultiplier`, `noCritical`
+- [X] T028 [US4] Completar `module/rules/martial.mjs` e estender `module/rules/damage.mjs`; fazer T027 passar
+- [X] T029 [US4] `attack-service`: `rollAttack(..., { special })` (parada, flag, cartão com vantagens em texto, aviso de Blast/Flame, `onMiss`) e `rollDamage` (dano, Pen, Força, `explodeOn`, por raise, qualidades, `resolve` na flag); `damage-service.applyTo` passa `resolve`
+- [X] T030 [US4] `turn-service.useAction(..., { special })` e `multipleAttacks` (vantagens no primeiro ataque)
+- [X] T031 [US4] `martial-service.useAttack` (restrições com override, ação-base, preparo, teste de perícia, efeitos no atacante, estado), `applyAttackEffects` (botão no cartão, socket da 008), `newScene`; hook `deleteCombat`; `CHAT_ACTIONS.martialEffects`
+- [X] T032 [P] [US4] i18n e estilos
 - [ ] T033 [US4] Validar quickstart 13–21 e registrar
 
 ---
 
 ## Phase 7: Polish
 
-- [ ] T034 [P] Atualizar `docs/analise-dtd.md` §10 para a 7.7a e o `README.md`
-- [ ] T035 `npm run lint` e `npm test`
+- [X] T034 [P] Atualizar `docs/analise-dtd.md` §10 para a 7.7a e o `README.md`
+- [X] T035 `npm run lint` e `npm test`
 - [ ] T036 `graphify update .`
 
 ## Dependencies

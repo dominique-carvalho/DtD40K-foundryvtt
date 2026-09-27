@@ -29,12 +29,18 @@ const ARMOR_OF = {
  * @param {number} input.hp              current HP
  * @param {number} [input.critical]      accumulated Critical Damage
  * @param {{ap: number, locations: string[]}|null} [input.cover]
+ * @param {boolean} [input.ignoreArmor]         Special Attacks (spec 010): no armor soak
+ * @param {number} [input.armorMultiplier]      the armor counts this many times (Hollow Point)
+ * @param {number} [input.resilienceMod]        added to the Resilience, at least 1 (Felling Giants Blow)
+ * @param {number} [input.resilienceMultiplier] Resilience × this, rounding up (Castigating Blow, Demonic Weapon)
+ * @param {boolean} [input.noCritical]          wounds beyond the HP are lost, not Critical Damage
  * @returns {{effective: number, wounds: number, hpLoss: number, criticalGain: number, critical: number,
  *   row: number, fatigue: number, coverHit: boolean, steps: {label: string, value: number}[]}}
  */
 export function resolveDamage({
   total, pen = 0, location, magic = false, tearing = false, unarmed = false, armor, aura = 0, resilience, hp,
-  critical = 0, cover = null
+  critical = 0, cover = null, ignoreArmor = false, armorMultiplier = 1, resilienceMod = 0, resilienceMultiplier = 1,
+  noCritical = false
 }) {
   const steps = [{ label: "total", value: total }];
   const armorLocation = ARMOR_OF[location] ?? "body";
@@ -51,17 +57,18 @@ export function resolveDamage({
     coverHit = remaining > 0;
   }
 
-  const soak = magic ? Math.max(0, aura) : Math.max(0, (armor?.[armorLocation] ?? 0) - penLeft);
+  const ap = ignoreArmor ? 0 : (armor?.[armorLocation] ?? 0) * armorMultiplier;
+  const soak = magic ? Math.max(0, aura) : Math.max(0, ap - penLeft);
   remaining -= soak;
   steps.push({ label: magic ? "aura" : "armor", value: -soak });
 
   const effective = Math.max(0, remaining);
-  const res = Math.max(1, resilience);
+  const res = Math.max(1, Math.ceil((resilience + resilienceMod) * resilienceMultiplier));
   const wounds = effective > 0 ? (tearing ? Math.ceil(effective / res) : Math.floor(effective / res)) : 0;
   steps.push({ label: "resilience", value: res });
 
   const hpLoss = Math.min(wounds, Math.max(0, hp));
-  const criticalGain = wounds - hpLoss;
+  const criticalGain = noCritical ? 0 : wounds - hpLoss;
   const newCritical = critical + criticalGain;
   return {
     effective,

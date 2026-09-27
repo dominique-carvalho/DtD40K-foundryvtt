@@ -3,6 +3,7 @@ import { postTest, rng } from "../dice/roll-service.mjs";
 import { rollAndKeep } from "../rules/dice.mjs";
 import { formatPool, normalizePool } from "../rules/pool.mjs";
 import { runTest } from "../rules/test.mjs";
+import { toggleCondition } from "./condition-service.mjs";
 import { combatFlags, situationModifiers } from "../rules/defense.mjs";
 import {
   UNARMED, attackPool, attackSkill, damagePool, effectiveQualities, fullAutoHits, hitLocation, isJammed, isProficient
@@ -89,10 +90,10 @@ export function weaponPools(actor, item) {
  * @param {{fastForward?: boolean, action?: object, preset?: object, penalty?: number}} [options]
  *   action: attack options of a combat action (spec 008: allOut, charge, calledShot, defensive, mode, aim);
  *   preset: options of an earlier attack to reuse without the dialog (Multiple Attacks); penalty: rolled dice to
- *   subtract (two weapons)
+ *   subtract (two weapons); special: a Special Attack or Trick Shot (spec 010: `martial-service`, `attackModifiers`)
  * @returns {Promise<ChatMessage|null>}
  */
-export async function rollAttack(actor, itemId, { fastForward = false, action = {}, preset = null, penalty = 0 } = {}) {
+export async function rollAttack(actor, itemId, { fastForward = false, action = {}, preset = null, penalty = 0, special = null } = {}) {
   const item = itemId === "unarmed" ? null : actor.items.get(itemId);
   if (itemId !== "unarmed" && !item) return null;
   const weapon = profileOf(item);
@@ -150,6 +151,11 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   });
   pool.requiredRaises += sit.requiredRaises;
   pool.notes.push(...sit.notes);
+  // Special Attack / Trick Shot (spec 010): accuracy Advantages and Restrictions, Dead Man's Hand.
+  if (special) {
+    pool.rolled += special.modifiers.attack.rolled + (special.rolledBonus ?? 0);
+    pool.kept += special.modifiers.attack.kept;
+  }
   if (penalty) pool.notes.push("twoWeapons");
   const testResult = runTest({
     base: { rolled: pool.rolled + sit.rolled - penalty, kept: pool.kept },
@@ -181,8 +187,13 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   const attack = {
     actorUuid: actor.uuid, itemId: item?.id ?? "unarmed", options: options.weapon, raises, hits, location,
     ammoId: options.ammoId, rollMode: options.rollMode, targetUuid: target?.uuid ?? "", total: testResult.total,
-    tn: testResult.tn, requiredRaises: pool.requiredRaises, helpless, melee, preset: options
+    tn: testResult.tn, requiredRaises: pool.requiredRaises, helpless, melee, preset: options, special
   };
+  // Death From Above: a miss leaves the attacker Prone (p. 270).
+  if (special && hit === false) {
+    for (const miss of special.modifiers.onMiss) if (miss.condition) await toggleCondition(actor, miss.condition, { active: true });
+  }
+  const areaWeapon = Boolean(qualities.blast || qualities.flame);
 
   const extraContent = await foundry.applications.handlebars.renderTemplate(EXTRA_TEMPLATE, {
     proficient,
@@ -198,9 +209,18 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
       .map((q) => ({ label: localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].label), hint: localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].hint) })),
     canDamage: Boolean(weapon.damage.kept || weapon.ammoGroup) && hit !== false,
     canDefend: Boolean(target) && hit !== false && !helpless,
-    melee
+    melee,
+    special: special ? {
+      name: special.name,
+      texts: special.modifiers.texts,
+      qualities: special.modifiers.qualities.map((q) => localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].label) + (q.value ? ` (${q.value})` : "")),
+      // Trick Shots with Blast or Flame: Advantages only on the target closest to the source (p. 272).
+      areaNote: special.kind === "trick" && areaWeapon,
+      missNote: hit === false && special.modifiers.onMiss.length > 0
+    } : null,
+    canApplyEffects: Boolean(special?.modifiers.onHit.length) && Boolean(target) && hit !== false
   });
-  const label = `${weapon.name} — ${localize(CONFIG.DTD.SKILLS[skill].label)}`;
+  const label = `${special ? `${special.name} · ` : ""}${weapon.name} — ${localize(CONFIG.DTD.SKILLS[skill].label)}`;
   return postTest({ actor, label, testResult, rollMode: options.rollMode, extraContent, flags: { attack } });
 }
 
@@ -225,14 +245,28 @@ export async function rollDamage(message) {
     }
     weapon = { ...profileOf(ammo), weaponType: "heavy", thrown: false };
   }
+  // Special Attack / Trick Shot (spec 010): qualities the Advantages add count as the weapon's.
+  const m = attack.special?.modifiers ?? null;
+  if (m?.qualities.length) weapon = { ...weapon, qualities: [...weapon.qualities, ...m.qualities.map((q) => ({ key: q.key, value: q.value ?? null }))] };
   const pool = damagePool({
     weapon,
-    str: actor.system.characteristics.str.value,
+    str: m?.noStrength ? 0 : actor.system.characteristics.str.value,
     options: attack.options,
     extraHits: Math.max(0, attack.hits - 1),
     specialization: item ? hasWeaponFeat(actor, "Weapon Specialization", item) : false,
     raises: attack.raises
   });
+  let resolve = {};
+  if (m) {
+    pool.rolled += m.damage.rolled + m.damagePerRaise.rolled * attack.raises;
+    pool.kept += m.damage.kept;
+    pool.pen = m.penZero ? 0 : pool.pen + m.pen;
+    pool.explodeOn = Math.min(pool.explodeOn, m.explodeOn);
+    resolve = { ...m.resolve };
+    // Castigating Blow: only on a head or gizzards hit.
+    if (resolve.locations && !resolve.locations.includes(attack.location)) delete resolve.resilienceMultiplier;
+    delete resolve.locations;
+  }
   const normalized = normalizePool(pool);
   const result = rollAndKeep(normalized, { rng, explodeOn: pool.explodeOn, rerollBelow: pool.rerollBelow });
   // Helpless target: damage is rolled twice and added (p. 443).
@@ -254,7 +288,7 @@ export async function rollDamage(message) {
     pen: pool.pen,
     location: localize(`DTD.Location.${attack.location}`),
     hits: attack.hits > 1 ? attack.hits : 0,
-    notes: pool.notes.map((note) => localize(`DTD.Attack.Note.${note}`)),
+    notes: [...pool.notes.map((note) => localize(`DTD.Attack.Note.${note}`)), ...(m ? [attack.special.name, ...m.qualities.map((q) => localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].label) + (q.value ? ` (${q.value})` : ""))] : [])],
     proven: pool.rerollBelow,
     volatile: pool.explodeOn === 9
   });
@@ -263,7 +297,7 @@ export async function rollDamage(message) {
     content,
     flags: { dtd40k: { damage: {
       total: result.total, pen: pool.pen, type: weapon.damage.type, location: attack.location,
-      tearing: Boolean(effectiveQualities(weapon).tearing), unarmed: attackSkill(weapon) === "brawl", magic: false
+      tearing: Boolean(effectiveQualities(weapon).tearing), unarmed: attackSkill(weapon) === "brawl", magic: false, resolve
     } } }
   };
   ChatMessage.applyRollMode(chatData, attack.rollMode ?? game.settings.get("core", "rollMode"));

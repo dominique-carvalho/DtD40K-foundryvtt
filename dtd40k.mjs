@@ -22,6 +22,7 @@ import { applyDamage, undoDamage } from "./module/documents/damage-service.mjs";
 import { rollDefense } from "./module/documents/turn-service.mjs";
 import { resolveSocial } from "./module/documents/social-service.mjs";
 import { resistSpell, rollSpellDamage } from "./module/documents/magic-service.mjs";
+import { applyAttackEffects, newScene } from "./module/documents/martial-service.mjs";
 import { DtdActor } from "./module/documents/actor.mjs";
 import { DtdItem } from "./module/documents/item.mjs";
 import { CharacterSheet } from "./module/apps/character-sheet.mjs";
@@ -148,7 +149,9 @@ const CHAT_ACTIONS = {
   socialRefute: (message) => resolveSocial(message, "refute"),
   // Magic (spec 009): spell damage and resistance.
   spellDamage: (message) => rollSpellDamage(message),
-  resistSpell: (message) => resistSpell(message)
+  resistSpell: (message) => resistSpell(message),
+  // Sword Schools and Gun Kata (spec 010): effects of a Special Attack on the target.
+  martialEffects: (message) => applyAttackEffects(message)
 };
 Hooks.on("renderChatMessageHTML", (message, html) => {
   for (const button of html.querySelectorAll("[data-dtd-action]")) {
@@ -165,10 +168,16 @@ Hooks.once("ready", () => {
     const message = game.messages.get(payload.messageId);
     if (!message) return;
     if (action === "applyDamage") await applyDamage(message, payload.tokenUuids);
+    if (action === "martialEffects") await applyAttackEffects(message);
     if (action === "markSocial") await message.setFlag("dtd40k", "social", { ...message.getFlag("dtd40k", "social"), resolved: payload.resolved });
   });
 });
 Hooks.on("deleteCombat", refreshCombatants);
+// Last Resort (spec 010): once per scene; the end of a combat starts a new one.
+Hooks.on("deleteCombat", async (combat) => {
+  if (game.users.activeGM !== game.user) return;
+  for (const actor of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "character"))) await newScene(actor);
+});
 // The turn state lives on the Combatant (spec 008): refresh the open sheet when it changes.
 Hooks.on("updateCombatant", (combatant) => {
   if (combatant.actor?.sheet?.rendered) combatant.actor.sheet.render();

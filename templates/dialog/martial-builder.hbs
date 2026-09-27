@@ -1,0 +1,25 @@
+<div class="martial-builder">
+  <div class="form-group">
+    <label>{{localize "DTD.Martial.AttackName"}}</label>
+    <div class="form-fields"><input type="text" name="name" value="{{name}}" placeholder="{{kindLabel}}" autofocus></div>
+  </div>
+  <div class="form-group">
+    <label>{{localize "DTD.Martial.BaseAction"}}</label>
+    <div class="form-fields"><select name="action">{{#each actions as |a|}}<option value="{{a.key}}" {{#if a.selected}}selected{{/if}}>{{a.name}}</option>{{/each}}</select></div>
+  </div>
+  <p class="martial-budget"></p>
+
+  <h3 class="section-title">{{localize "DTD.Martial.Advantages"}}</h3>
+  <ul class="martial-options">
+    {{#each advantages as |o|}}
+    {{> "systems/dtd40k/templates/dialog/martial-builder-row.hbs" o=o}}
+    {{/each}}
+  </ul>
+
+  <h3 class="section-title">{{localize "DTD.Martial.Restrictions"}}</h3>
+  <ul class="martial-options">
+    {{#each restrictions as |o|}}
+    {{> "systems/dtd40k/templates/dialog/martial-builder-row.hbs" o=o}}
+    {{/each}}
+  </ul>
+</div>

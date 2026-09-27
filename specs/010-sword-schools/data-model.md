@@ -36,8 +36,8 @@ hpHalf, reminder}`, `cooldown`, `perScene`, `test {skill}`, `unlocksAction` (cha
 | Campo | Tipo |
 |---|---|
 | `martial.schools.<key>.value` | 0–6 |
-| `martial.attacks` | `[{ id, name, kind: special\|trick, action, advantages: [{ref, count, choice}], restrictions: [{ref, count}], paid, history: [], state: { lastRound, usedScene, ready } }]` |
-| `martial` (derivado) | `{ adeptLevel, gunslingerLevel }` |
+| `martial.attacks` | `[{ id, name, kind: special\|trick, action, advantages: [{ref, count, choice}], restrictions: [{ref, count}], paid, history: [], state: { lastRound, lastCombat, usedScene, readyUntil } }]` |
+| `martial.levels` (derivado) | `{ adeptLevel, gunslingerLevel }` |
 
 ## Flags
 

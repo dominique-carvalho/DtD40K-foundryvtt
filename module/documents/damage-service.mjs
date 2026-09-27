@@ -87,7 +87,9 @@ async function applyTo(actor, token, damage) {
   const result = resolveDamage({
     total: damage.total, pen: damage.pen, location: damage.location, magic: damage.magic, tearing: damage.tearing,
     unarmed: damage.unarmed, armor: system.armor.locations, aura: system.modifiers.combat.aura,
-    resilience: system.derived.resilience, hp: system.hp.value, critical: system.critical.value, cover
+    resilience: system.derived.resilience, hp: system.hp.value, critical: system.critical.value, cover,
+    // Special Attacks (spec 010): armor ignored or doubled, Resilience lowered or halved, no Critical Damage.
+    ...(damage.resolve ?? {})
   });
   const before = { hp: system.hp.value, critical: system.critical.value, fatigue: system.fatigue.value, effects: actor.effects.map((e) => e.id) };
   await actor.update({ "system.hp.value": system.hp.value - result.hpLoss, "system.critical.value": result.critical });

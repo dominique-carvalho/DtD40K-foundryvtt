@@ -23,9 +23,11 @@ const TEMPLATE = "systems/dtd40k/templates/dialog/attack-dialog.hbs";
  * @param {{melee: boolean, canThrow: boolean, auto: boolean, single: boolean, heavy: boolean, basic: boolean}} args.shape
  * @param {{id: string, name: string}[]} [args.ammo]  launcher ammunition carried
  * @param {number|null} [args.tn]
+ * @param {object} [args.situation]  defaults from the target (spec 008)
+ * @param {object} [args.action]     combat action (calledShot shows the location choice)
  * @returns {Promise<AttackOptions|null>}
  */
-export async function promptAttackOptions({ actor, title, skillKey, shape, ammo = [], tn = null }) {
+export async function promptAttackOptions({ actor, title, skillKey, shape, ammo = [], tn = null, situation = {}, action = {} }) {
   const currentMode = game.settings.get("core", "rollMode");
   const skill = actor.system.skills[skillKey];
   const content = await foundry.applications.handlebars.renderTemplate(TEMPLATE, {
@@ -34,6 +36,10 @@ export async function promptAttackOptions({ actor, title, skillKey, shape, ammo 
     ammo,
     specialtyList: skill.specialties.join(", "),
     ranges: ["pointBlank", "short", "normal", "long", "extreme"].map((key) => ({ key, selected: key === "normal" })),
+    situation,
+    calledShot: Boolean(action.calledShot),
+    aimDefault: action.aim ? 1 : 0,
+    locations: ["head", "body", "gizzards", "leftArm", "rightArm", "leftLeg", "rightLeg"],
     rollModes: Object.entries(CONFIG.Dice.rollModes).map(([key, mode]) => ({
       key, label: mode.label ?? mode, selected: key === currentMode
     }))
@@ -75,6 +81,15 @@ export async function promptAttackOptions({ actor, title, skillKey, shape, ammo 
       oneHanded: Boolean(result.oneHanded),
       thrown: Boolean(result.thrown)
     },
-    ammoId: result.ammoId || ""
+    ammoId: result.ammoId || "",
+    situation: {
+      advantage: Boolean(result.advantage),
+      targetProne: Boolean(result.targetProne),
+      targetRan: Boolean(result.targetRan),
+      intoMelee: Boolean(result.intoMelee),
+      gangUp: Number(result.gangUp) || 0,
+      terrain: result.terrain || "",
+      calledLocation: result.calledLocation || ""
+    }
   };
 }

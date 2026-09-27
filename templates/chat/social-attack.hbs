@@ -1,0 +1,13 @@
+<div class="dtd40k social-card">
+  <p>{{localize "DTD.Social.Versus" target=target md=md total=total}}</p>
+  {{#if success}}
+  <p class="notification info">{{localize "DTD.Social.Defeated" target=target}}</p>
+  <div class="defense-buttons">
+    <button type="button" data-dtd-action="socialSpend"><i class="fa-solid fa-brain" inert></i> {{localize "DTD.Social.Spend"}}</button>
+    <button type="button" data-dtd-action="socialComply"><i class="fa-solid fa-handshake" inert></i> {{localize "DTD.Social.Comply"}}</button>
+    <button type="button" data-dtd-action="socialRefute"><i class="fa-solid fa-comment-slash" inert></i> {{localize "DTD.Social.Refute"}}</button>
+  </div>
+  {{else}}
+  <p class="notification warning">{{localize "DTD.Social.Resisted" target=target}}</p>
+  {{/if}}
+</div>

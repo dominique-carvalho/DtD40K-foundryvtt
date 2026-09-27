@@ -1,0 +1,22 @@
+<div class="dtd40k roll-dialog rest-dialog">
+  <p class="roll-dialog-summary">{{localize "DTD.Combat.WoundState"}}: <b>{{state}}</b></p>
+  <div class="form-group">
+    <label for="dtd-rest-period">{{localize "DTD.Combat.RestPeriod"}}</label>
+    <div class="form-fields">
+      <input id="dtd-rest-count" type="number" name="count" value="1" min="1" step="1">
+      <select id="dtd-rest-period" name="period">
+        <option value="day">{{localize "DTD.Combat.Days"}}</option>
+        <option value="week">{{localize "DTD.Combat.Weeks"}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="dtd-rest-full">{{localize "DTD.Combat.FullRest"}}</label>
+    <div class="form-fields"><input id="dtd-rest-full" type="checkbox" name="full"></div>
+  </div>
+  <div class="form-group">
+    <label for="dtd-rest-medical">{{localize "DTD.Combat.Medical"}}</label>
+    <div class="form-fields"><input id="dtd-rest-medical" type="checkbox" name="medical"></div>
+    <p class="hint">{{localize "DTD.Combat.RestHint"}}</p>
+  </div>
+</div>

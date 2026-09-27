@@ -13,6 +13,10 @@ import { GearData } from "./module/data/gear-data.mjs";
 import { DtdActiveEffect } from "./module/documents/active-effect.mjs";
 import { rollDamage } from "./module/documents/attack-service.mjs";
 import { spendLiquid } from "./module/documents/acquisition-service.mjs";
+import { DtdCombat, DtdCombatant } from "./module/documents/combat.mjs";
+import { applyDamage, undoDamage } from "./module/documents/damage-service.mjs";
+import { rollDefense } from "./module/documents/turn-service.mjs";
+import { resolveSocial } from "./module/documents/social-service.mjs";
 import { DtdActor } from "./module/documents/actor.mjs";
 import { DtdItem } from "./module/documents/item.mjs";
 import { CharacterSheet } from "./module/apps/character-sheet.mjs";
@@ -39,6 +43,11 @@ Hooks.once("init", () => {
   CONFIG.Item.dataModels.gear = GearData;
   // Equipment effects apply only while the item is in use (spec 007, research R2).
   CONFIG.ActiveEffect.documentClass = DtdActiveEffect;
+  // Combat order, turn limits and the conditions of the book (spec 008, research R3–R5).
+  CONFIG.Combat.documentClass = DtdCombat;
+  CONFIG.Combatant.documentClass = DtdCombatant;
+  CONFIG.statusEffects = foundry.utils.deepClone(DTD.STATUS_EFFECTS);
+  CONFIG.specialStatusEffects.DEFEATED = "dead";
 
   // Initiative: 1d10 + Dexterity + Composure, no explosion (DtD 1.6 p. 241).
   CONFIG.Combat.initiative = {
@@ -94,8 +103,9 @@ Hooks.once("init", () => {
 function refreshCombatants(combat) {
   for (const combatant of combat.combatants) {
     const actor = combatant.actor;
-    if (actor?.type !== "character" || !actor.items.some((item) => item.type === "exaltation")) continue;
-    actor.reset();
+    if (actor?.type !== "character") continue;
+    // Exaltation spending depends on the round (004); the Combat tab shows the turn state (008).
+    if (actor.items.some((item) => item.type === "exaltation")) actor.reset();
     if (actor.sheet?.rendered) actor.sheet.render();
   }
 }
@@ -106,8 +116,38 @@ Hooks.on("updateCombat", (combat, changes) => {
 Hooks.on("combatStart", refreshCombatants);
 
 // Buttons of the attack and acquisition cards (spec 007, research R7/R9).
+const CHAT_ACTIONS = {
+  rollDamage: (message) => rollDamage(message),
+  spendLiquid: (message) => spendLiquid(message),
+  // Combat (spec 008): apply damage, undo, reactions, social answers.
+  applyDamage: (message) => applyDamage(message),
+  undoDamage: (message) => undoDamage(message),
+  dodge: (message) => rollDefense(message, "dodge"),
+  parry: (message) => rollDefense(message, "parry"),
+  socialSpend: (message) => resolveSocial(message, "spend"),
+  socialComply: (message) => resolveSocial(message, "comply"),
+  socialRefute: (message) => resolveSocial(message, "refute")
+};
 Hooks.on("renderChatMessageHTML", (message, html) => {
-  html.querySelector("[data-dtd-action=\"rollDamage\"]")?.addEventListener("click", () => rollDamage(message));
-  html.querySelector("[data-dtd-action=\"spendLiquid\"]")?.addEventListener("click", () => spendLiquid(message));
+  for (const button of html.querySelectorAll("[data-dtd-action]")) {
+    const handler = CHAT_ACTIONS[button.dataset.dtdAction];
+    if (button.classList.contains("gm-only") && !game.user.isGM) button.remove();
+    else if (handler) button.addEventListener("click", () => handler(message));
+  }
+});
+
+// Requests from players that only the active GM may perform (spec 008, research R1).
+Hooks.once("ready", () => {
+  game.socket.on("system.dtd40k", async ({ action, payload }) => {
+    if (game.users.activeGM !== game.user) return;
+    const message = game.messages.get(payload.messageId);
+    if (!message) return;
+    if (action === "applyDamage") await applyDamage(message, payload.tokenUuids);
+    if (action === "markSocial") await message.setFlag("dtd40k", "social", { ...message.getFlag("dtd40k", "social"), resolved: payload.resolved });
+  });
 });
 Hooks.on("deleteCombat", refreshCombatants);
+// The turn state lives on the Combatant (spec 008): refresh the open sheet when it changes.
+Hooks.on("updateCombatant", (combatant) => {
+  if (combatant.actor?.sheet?.rendered) combatant.actor.sheet.render();
+});

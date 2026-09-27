@@ -33,7 +33,7 @@ export class DtdActor extends Actor {
    * @param {number|null} [options.tn=15]
    * @returns {Promise<ChatMessage|null>}      null when cancelled or the test cannot be rolled
    */
-  async rollSkill(key, { characteristic, fastForward = false, tn = 15 } = {}) {
+  async rollSkill(key, { characteristic, fastForward = false, tn = 15, modifiers = {}, label: labelOverride } = {}) {
     const def = CONFIG.DTD.SKILLS[key];
     if (!def) throw new Error(`dtd40k | Unknown skill "${key}"`);
     if (def.advanced && this.system.skills[key].value <= 0) {
@@ -41,7 +41,7 @@ export class DtdActor extends Actor {
       return null;
     }
 
-    let options = { characteristic: characteristic ?? def.characteristic, tn, modifiers: {}, specialty: false };
+    let options = { characteristic: characteristic ?? def.characteristic, tn, modifiers, specialty: false };
     if (!fastForward) {
       const chosen = await promptRollOptions({ actor: this, skillKey: key, characteristicKey: options.characteristic, tn });
       if (!chosen) return null;
@@ -54,7 +54,7 @@ export class DtdActor extends Actor {
       characteristic: this.system.characteristics[charKey].value,
       advanced: def.advanced
     });
-    const label = `${game.i18n.localize(def.label)} + ${game.i18n.localize(CONFIG.DTD.CHARACTERISTICS[charKey].label)}`;
+    const label = labelOverride ?? `${game.i18n.localize(def.label)} + ${game.i18n.localize(CONFIG.DTD.CHARACTERISTICS[charKey].label)}`;
     const testResult = runTest({ base, tn: options.tn, specialty: options.specialty, rng, ...this.withRollModifiers(options.modifiers, key) });
     return postTest({ actor: this, label, testResult, rollMode: options.rollMode });
   }

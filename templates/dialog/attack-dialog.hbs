@@ -52,12 +52,28 @@
   {{/if}}
   {{/unless}}
 
+  <fieldset class="attack-situation">
+    <legend>{{localize "DTD.Attack.Situation"}}</legend>
+    <label><input type="checkbox" name="advantage" {{checked situation.advantage}}> {{localize "DTD.Attack.Advantage"}}</label>
+    <label><input type="checkbox" name="targetProne" {{checked situation.targetProne}}> {{localize "DTD.Attack.TargetProne"}}</label>
+    <label><input type="checkbox" name="targetRan" {{checked situation.targetRan}}> {{localize "DTD.Attack.TargetRan"}}</label>
+    {{#if shape.melee}}
+    <label>{{localize "DTD.Attack.GangUp"}} <select name="gangUp"><option value="0">—</option><option value="2">2:1 (+2k0)</option><option value="3">3:1 (+3k0)</option></select></label>
+    {{else}}
+    <label><input type="checkbox" name="intoMelee"> {{localize "DTD.Attack.IntoMelee"}}</label>
+    {{/if}}
+    <label>{{localize "DTD.Attack.Terrain"}} <select name="terrain"><option value="">—</option><option value="difficult">{{localize "DTD.Attack.Difficult"}}</option><option value="arduous">{{localize "DTD.Attack.Arduous"}}</option></select></label>
+    {{#if calledShot}}
+    <label>{{localize "DTD.Attack.CalledLocation"}} <select name="calledLocation">{{#each locations as |loc|}}<option value="{{loc}}">{{localize (concat "DTD.Location." loc)}}</option>{{/each}}</select></label>
+    {{/if}}
+  </fieldset>
+
   <div class="form-group">
     <label for="dtd-attack-aim">{{localize "DTD.Attack.Aim"}}</label>
     <div class="form-fields">
       <select id="dtd-attack-aim" name="aim">
         <option value="0">{{localize "DTD.Attack.AimNone"}}</option>
-        <option value="1">{{localize "DTD.Attack.AimHalf"}}</option>
+        <option value="1"{{#if aimDefault}} selected{{/if}}>{{localize "DTD.Attack.AimHalf"}}</option>
         <option value="2">{{localize "DTD.Attack.AimFull"}}</option>
       </select>
     </div>

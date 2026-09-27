@@ -1695,3 +1695,100 @@
   width: 100%;
   margin-top: 0.3rem;
 }
+
+/* ---------- Combat tab, damage and social cards (spec 008) ---------- */
+
+.dtd40k .combat-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dtd40k .combat-status-line,
+.dtd40k .combat-buttons,
+.dtd40k .derangement-add {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.dtd40k .critical-input,
+.dtd40k .insanity-add {
+  width: 3.5rem;
+}
+
+.dtd40k .condition-list,
+.dtd40k .action-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k .condition-list a {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: 3px;
+  opacity: 0.55;
+}
+
+.dtd40k .condition-list li.active a {
+  border-color: var(--dtd-hp);
+  opacity: 1;
+}
+
+.dtd40k .condition-list img {
+  width: 1rem;
+  height: 1rem;
+  border: none;
+}
+
+.dtd40k .action-group {
+  margin: 0.4rem 0 0.2rem;
+  font-size: 0.85rem;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .action-list a {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid var(--dtd-accent);
+  border-radius: 3px;
+}
+
+.dtd40k .action-list li.used a {
+  border-color: var(--dtd-border);
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .attack-situation {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.2rem 0.6rem;
+  margin: 0.4rem 0;
+}
+
+.dtd40k .defense-buttons {
+  display: flex;
+  gap: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.dtd40k .defense-buttons button,
+.dtd40k .damage-card button[data-dtd-action="applyDamage"],
+.dtd40k .damage-applied button {
+  flex: 1;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.dtd40k .damage-applied .applied-row {
+  padding: 0.2rem 0;
+  border-bottom: 1px dotted var(--dtd-border);
+}

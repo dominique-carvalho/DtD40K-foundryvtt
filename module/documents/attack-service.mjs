@@ -3,6 +3,7 @@ import { postTest, rng } from "../dice/roll-service.mjs";
 import { rollAndKeep } from "../rules/dice.mjs";
 import { formatPool, normalizePool } from "../rules/pool.mjs";
 import { runTest } from "../rules/test.mjs";
+import { combatFlags, situationModifiers } from "../rules/defense.mjs";
 import {
   UNARMED, attackPool, attackSkill, damagePool, effectiveQualities, fullAutoHits, hitLocation, isJammed, isProficient
 } from "../rules/weapon.mjs";
@@ -85,14 +86,19 @@ export function weaponPools(actor, item) {
  * Roll an attack with a weapon of the character, or unarmed (FR-014 to FR-018).
  * @param {Actor} actor
  * @param {string} itemId  "unarmed" for the default unarmed attack
- * @param {{fastForward?: boolean}} [options]
+ * @param {{fastForward?: boolean, action?: object, preset?: object, penalty?: number}} [options]
+ *   action: attack options of a combat action (spec 008: allOut, charge, calledShot, defensive, mode, aim);
+ *   preset: options of an earlier attack to reuse without the dialog (Multiple Attacks); penalty: rolled dice to
+ *   subtract (two weapons)
  * @returns {Promise<ChatMessage|null>}
  */
-export async function rollAttack(actor, itemId, { fastForward = false } = {}) {
+export async function rollAttack(actor, itemId, { fastForward = false, action = {}, preset = null, penalty = 0 } = {}) {
   const item = itemId === "unarmed" ? null : actor.items.get(itemId);
   if (itemId !== "unarmed" && !item) return null;
   const weapon = profileOf(item);
-  const target = [...game.user.targets][0]?.actor;
+  const targetToken = [...game.user.targets][0];
+  const target = targetToken?.actor;
+  const targetFlags = combatFlags(target?.statuses ?? new Set());
   const defaultTn = target?.system?.derived?.staticDefense ?? null;
   const skillKey = attackSkill(weapon);
   const shape = {
@@ -110,14 +116,21 @@ export async function rollAttack(actor, itemId, { fastForward = false } = {}) {
     return null;
   }
 
-  let options = {
-    tn: defaultTn ?? 15, modifiers: {}, specialty: false, rollMode: undefined,
-    weapon: { range: "normal", aim: 0, mode: shape.single ? "single" : "auto", braced: false, oneHanded: false, thrown: false },
-    ammoId: ammo[0]?.id ?? ""
+  // Situation defaults from the target (spec 008, FR-010): Combat Advantage, Prone, running.
+  const situation = {
+    advantage: targetFlags.grantsAdvantage, targetProne: Boolean(target?.statuses.has("prone")),
+    targetRan: Boolean(target?.statuses.has("running")), gangUp: 0, intoMelee: false, terrain: "", calledLocation: ""
   };
-  if (!fastForward) {
+  let options = preset ?? {
+    tn: defaultTn ?? 15, modifiers: {}, specialty: false, rollMode: undefined,
+    weapon: { range: "normal", aim: action.aim ? 1 : 0, mode: action.mode ?? (shape.single ? "single" : "auto"), braced: false, oneHanded: false, thrown: false },
+    ammoId: ammo[0]?.id ?? "",
+    situation
+  };
+  if (!fastForward && !preset) {
     const chosen = await promptAttackOptions({
-      actor, title: game.i18n.format("DTD.Attack.Title", { weapon: weapon.name }), skillKey, shape, ammo, tn: defaultTn
+      actor, title: game.i18n.format("DTD.Attack.Title", { weapon: weapon.name }), skillKey, shape, ammo, tn: defaultTn,
+      situation, action
     });
     if (!chosen) return null;
     options = chosen;
@@ -130,17 +143,32 @@ export async function rollAttack(actor, itemId, { fastForward = false } = {}) {
     weapon, skill: actor.system.skills[skill].value, level: actor.system.level, proficient,
     focus: item ? hasWeaponFeat(actor, "Weapon Focus", item) : false, options: options.weapon
   });
+  const melee = shape.melee && !thrown;
+  const sit = situationModifiers({
+    ...(options.situation ?? situation), melee, pointBlank: options.weapon.range === "pointBlank",
+    calledShot: Boolean(action.calledShot), allOut: Boolean(action.allOut), charge: Boolean(action.charge), defensive: Boolean(action.defensive)
+  });
+  pool.requiredRaises += sit.requiredRaises;
+  pool.notes.push(...sit.notes);
+  if (penalty) pool.notes.push("twoWeapons");
   const testResult = runTest({
-    base: { rolled: pool.rolled, kept: pool.kept },
+    base: { rolled: pool.rolled + sit.rolled - penalty, kept: pool.kept },
     tn: options.tn,
     specialty: options.specialty,
     rng,
-    ...actor.withRollModifiers(options.modifiers, skill)
+    ...actor.withRollModifiers({ ...options.modifiers, freeRaises: (Number(options.modifiers.freeRaises) || 0) + sit.freeRaises }, skill)
   });
 
   const qualities = effectiveQualities(weapon);
+  // Blinded: Ballistics Tests fail; Helpless target: the attack hits (pp. 442–443).
+  const blindShot = !melee && combatFlags(actor.statuses).autoFailBallistics;
+  const helpless = targetFlags.helpless;
+  if (blindShot) pool.notes.push("blinded");
+  if (helpless) pool.notes.push("helpless");
   const raises = Math.max(0, (testResult.outcome?.raises ?? 0) - pool.requiredRaises);
-  const hit = testResult.outcome ? testResult.outcome.success && testResult.outcome.raises >= pool.requiredRaises : null;
+  let hit = testResult.outcome ? testResult.outcome.success && testResult.outcome.raises >= pool.requiredRaises : null;
+  if (helpless) hit = true;
+  if (blindShot) hit = false;
   const auto = options.weapon.mode === "auto" && pool.autoAllowed;
   const hits = auto && hit ? fullAutoHits(raises, weapon.rof.auto) : hit ? 1 : 0;
   const jammed = !shape.melee && isJammed({
@@ -148,10 +176,12 @@ export async function rollAttack(actor, itemId, { fastForward = false } = {}) {
     level: actor.system.level, reliable: Boolean(qualities.reliable), unreliable: Boolean(qualities.unreliable)
   });
   const d10 = Math.floor(rng() * 10) + 1;
-  const location = hitLocation(d10);
+  const called = action.calledShot && options.situation?.calledLocation;
+  const location = called || hitLocation(d10);
   const attack = {
     actorUuid: actor.uuid, itemId: item?.id ?? "unarmed", options: options.weapon, raises, hits, location,
-    ammoId: options.ammoId, rollMode: options.rollMode
+    ammoId: options.ammoId, rollMode: options.rollMode, targetUuid: target?.uuid ?? "", total: testResult.total,
+    tn: testResult.tn, requiredRaises: pool.requiredRaises, helpless, melee, preset: options
   };
 
   const extraContent = await foundry.applications.handlebars.renderTemplate(EXTRA_TEMPLATE, {
@@ -160,12 +190,15 @@ export async function rollAttack(actor, itemId, { fastForward = false } = {}) {
     requiredRaises: pool.requiredRaises,
     hits: auto ? hits : 0,
     location: localize(`DTD.Location.${location}`),
-    d10,
+    d10: called ? null : d10,
+    called: Boolean(called),
     jammed,
     overheats: jammed && Boolean(qualities.overheats),
     textQualities: weapon.qualities.filter((q) => !CONFIG.DTD.WEAPON_QUALITIES[q.key]?.automated)
       .map((q) => ({ label: localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].label), hint: localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].hint) })),
-    canDamage: Boolean(weapon.damage.kept || weapon.ammoGroup) && hit !== false
+    canDamage: Boolean(weapon.damage.kept || weapon.ammoGroup) && hit !== false,
+    canDefend: Boolean(target) && hit !== false && !helpless,
+    melee
   });
   const label = `${weapon.name} — ${localize(CONFIG.DTD.SKILLS[skill].label)}`;
   return postTest({ actor, label, testResult, rollMode: options.rollMode, extraContent, flags: { attack } });
@@ -202,6 +235,13 @@ export async function rollDamage(message) {
   });
   const normalized = normalizePool(pool);
   const result = rollAndKeep(normalized, { rng, explodeOn: pool.explodeOn, rerollBelow: pool.rerollBelow });
+  // Helpless target: damage is rolled twice and added (p. 443).
+  if (attack.helpless) {
+    const second = rollAndKeep(normalized, { rng, explodeOn: pool.explodeOn, rerollBelow: pool.rerollBelow });
+    result.dice.push(...second.dice);
+    result.total += second.total;
+    pool.notes.push("helpless");
+  }
   const dice = result.dice.map((die) => ({
     total: die.total, kept: die.kept, exploded: die.chain.length > 1, chainText: die.chain.join(" + "), rerolled: die.rerolled?.join(", ")
   }));
@@ -221,7 +261,10 @@ export async function rollDamage(message) {
   const chatData = {
     speaker: ChatMessage.getSpeaker({ actor }),
     content,
-    flags: { dtd40k: { damage: { total: result.total, pen: pool.pen, type: weapon.damage.type, location: attack.location } } }
+    flags: { dtd40k: { damage: {
+      total: result.total, pen: pool.pen, type: weapon.damage.type, location: attack.location,
+      tearing: Boolean(effectiveQualities(weapon).tearing), unarmed: attackSkill(weapon) === "brawl", magic: false
+    } } }
   };
   ChatMessage.applyRollMode(chatData, attack.rollMode ?? game.settings.get("core", "rollMode"));
   return ChatMessage.create(chatData);

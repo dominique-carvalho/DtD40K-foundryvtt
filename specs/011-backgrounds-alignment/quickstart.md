@@ -64,11 +64,11 @@ Alinhamento. O jogador comum (recusa fora da criação) não foi exercitado no F
 | 8 | ✅ Inheritance 1: "1 Common + 1 Very Common" recusado; "2 Common" aceito → vagas Common 4; quatro itens Common entram, o quinto é recusado |
 | 9 | ✅ Contacts 3 + Fel 2: 5k2 |
 | 10 | ✅ Desfazer Fame 3 → 4: Fame 3 e 100 XP de volta; desfazer as compras do Crown: 2 → 1 → removido, 100 XP de volta |
-| 11 | ✅ Sigmar arrastado vira o alinhamento |
+| 11 | ✅ Sigmar pelo serviço que o drop chama (`setAlignment`): vira o alinhamento; o arrastar em si não foi feito com o mouse |
 | 12 | ✅ 1d10 7 contra 6: passou; 3 contra 8: falhou, Devotion 7, sem segundo teste; 4 + 2 contra 6: passou |
 | 13 | ✅ 2 contra 6: Devotion 5; segundo teste 1 contra 5: falhou; Degeneration 05 = Palsy registrada em 5 |
 | 14 | ✅ Recuperar 7 contra 5: Devotion 6 e Palsy (ponto 5) superada, Dex de volta; recuperar 2 contra 6: nada muda |
-| 15 | ✅ Devotion 1 e falha: Devotion 0, mensagem de fora de jogo e aviso na ficha |
+| 15 | ✅ Devotion 1 e falha (1d10 1 com bônus −5): Devotion 0, mensagem de fora de jogo e aviso na ficha |
 | 16 | ✅ Para Pelor (mesmo panteão): 6 → 4; para Khorne: recusado (só uma vez); com override do Mestre: Devotion 4 e Degeneration (Ill-fortuned) em 7 |
 | 17 | ✅ Palsy: Dex −1 (efeito); compra de Dex por XP recusada ("reduzida por uma Degeneration"), também no botão de Evolução |
 | 18 | ✅ Palsy repetida → rolada de novo (Skin Affliction: Charm −2k0, Athletics sem mudança); Horrific Nightmare: Night Terrors sem XP (total 600 → 600); repetida com Night Terrors → rolada de novo (Ashen Taste); Blighted Mind: derangement menor; curar remove efeitos, item e derangement |

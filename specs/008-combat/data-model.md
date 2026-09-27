@@ -4,7 +4,7 @@
 
 | Nome | Valor |
 |---|---|
-| `STATUS_EFFECTS` | condições (id, nome i18n, ícone, `changes`): blinded, bloodLoss, dazed (rolls −1k0), deafened, diseased, onFire, helpless, immobilized, pinned, prone, restrained, stunned, surprised, unconscious, dead, grappled, jaded, lostHand, lostArm, lostEye, lostFoot, lostLeg; efeitos de ação: fullDefense (SD +10), fightDefensively, allOutAttack, healingSurge (SD +5) |
+| `STATUS_EFFECTS` | condições (id, nome i18n, ícone, `changes`): blinded, bloodLoss, dazed (rolls −1k0), deafened, diseased, onFire, helpless, immobilized, pinned, prone, restrained, stunned, surprised, unconscious, dead, grappled, jaded, lostHand, lostArm, lostEye, lostFoot, lostLeg; efeitos de ação: fullDefense (SD +10), fightDefensively, allOutAttack, healingSurge (SD +5), running (efeito de Run) |
 | `DAMAGE_TABLE_TYPES` | `E energy · X explosive · I impact · R rending` |
 | `CRITICAL_LOCATIONS` | hit location → tabela: leftArm/rightArm → arm, body, gizzards, head, leftLeg/rightLeg → legs |
 | `FEAR_TN` | `1: 15, 2: 20, 3: 25, 4: 30, 5: 35` |
@@ -25,7 +25,7 @@ próximo turno), `reaction: "dodge"|"parry"`, `extraReactions`, `multiple`.
 | `critical` | `{ value ≥ 0 }` | Critical Damage acumulado |
 | `resolve.drainedScene` | inteiro ≥ 0 | Resolve drenado por ataques sociais na cena |
 | `insanity` | `{ value 0–100, derangements: [{ name, severity: minor|severe|acute }] }` | |
-| `modifiers.combat` | `{ sd, reactions, meleeAttack {rolled,kept}, rangedAttack {rolled,kept}, dodge {rolled,kept}, mentalDefense }` | alvos de efeito (condições, ações) |
+| `modifiers.combat` | `{ sd, reactions, mentalDefense, aura }` | alvos de efeito (condições, ações; Aura de templates/feats/magias) |
 | `combat` | derivado | `{ reactionsMax, woundState, flags }` (R3/R5/R8) |
 
 ## Combatant (`flags.dtd40k.turn`)

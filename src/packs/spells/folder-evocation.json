@@ -1,0 +1,16 @@
+{
+  "_id": "dtdSFd59980be393",
+  "_key": "!folders!dtdSFd59980be393",
+  "name": "Evocation",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 50000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "spellFolder": "evocation"
+    }
+  }
+}

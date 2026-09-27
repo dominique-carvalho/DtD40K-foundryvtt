@@ -1,0 +1,56 @@
+{
+  "name": "Precognition",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Grants one reroll of a failed roll. Usable on top of other reroll abilities, and any number may be spent on the same test.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 240
+    },
+    "school": "divination",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "comboOk",
+      "subtle"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": true,
+      "concentration": "",
+      "text": "One Scene (E)"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Grants one reroll of a failed roll. Usable on top of other reroll abilities, and any number may be spent on the same test.",
+    "perRaise": "+1 reroll per raise.",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS230b45d29329",
+  "_key": "!items!dtdS230b45d29329",
+  "folder": "dtdSFdd1dc71d110"
+}

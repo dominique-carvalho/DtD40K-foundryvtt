@@ -1,0 +1,16 @@
+{
+  "_id": "dtdSFd15e7ccabb1",
+  "_key": "!folders!dtdSFd15e7ccabb1",
+  "name": "Abjuration",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 10000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "spellFolder": "abjuration"
+    }
+  }
+}

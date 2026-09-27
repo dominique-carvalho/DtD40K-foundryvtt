@@ -1,0 +1,57 @@
+{
+  "name": "Heal",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Cure Moderate Wounds that additionally clears disease, drug effects and blood loss.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 250
+    },
+    "school": "healing",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "somatic",
+      "touch",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Cure Moderate Wounds that additionally clears disease, drug effects and blood loss.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSb6c6dca8ad41",
+  "_key": "!items!dtdSb6c6dca8ad41",
+  "folder": "dtdSFdb0e4189fd7"
+}

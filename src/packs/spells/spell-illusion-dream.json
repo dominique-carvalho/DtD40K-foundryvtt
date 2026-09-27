@@ -1,0 +1,58 @@
+{
+  "name": "Dream",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Reaches a sleeping person through the Warp. A dream carries a single message; a nightmare denies all bed-rest benefits, including wound healing.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 252
+    },
+    "school": "illusion",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "material",
+      "social",
+      "somatic",
+      "verbal"
+    ],
+    "range": "none (works through the Warp, crosses Crystal Spheres)",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Reaches a sleeping person through the Warp. A dream carries a single message; a nightmare denies all bed-rest benefits, including wound healing.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS0eb3d8433b2b",
+  "_key": "!items!dtdS0eb3d8433b2b",
+  "folder": "dtdSFd9e3382db01"
+}

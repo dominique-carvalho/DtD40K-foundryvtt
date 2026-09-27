@@ -1,0 +1,57 @@
+{
+  "name": "Charm Person",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The target's Disposition toward the caster improves one step, as toward an old friend; resisted with Arcana + Willpower. Treating them well may make the friendship outlast the spell.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 242
+    },
+    "school": "enchantment",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "mindAffecting",
+      "social",
+      "subtle"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "The target's Disposition toward the caster improves one step, as toward an old friend; resisted with Arcana + Willpower. Treating them well may make the friendship outlast the spell.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSd639ddbf8db6",
+  "_key": "!items!dtdSd639ddbf8db6",
+  "folder": "dtdSFdc5d0e74c02"
+}

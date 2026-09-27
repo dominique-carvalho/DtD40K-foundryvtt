@@ -1,0 +1,16 @@
+{
+  "_id": "dtdSFdb0e4189fd7",
+  "_key": "!folders!dtdSFdb0e4189fd7",
+  "name": "Healing",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 60000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "spellFolder": "healing"
+    }
+  }
+}

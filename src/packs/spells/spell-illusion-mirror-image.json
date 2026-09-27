@@ -1,0 +1,57 @@
+{
+  "name": "Mirror Image",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Creates 1 duplicate that stays near the caster. Attackers randomly determine whether they hit the caster or an image; a struck image is destroyed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 252
+    },
+    "school": "illusion",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "comboOk",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": true,
+      "concentration": "",
+      "text": "One Scene (E)"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Creates 1 duplicate that stays near the caster. Attackers randomly determine whether they hit the caster or an image; a struck image is destroyed.",
+    "perRaise": "+1 image per raise (max = Level).",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSe41670599f69",
+  "_key": "!items!dtdSe41670599f69",
+  "folder": "dtdSFd9e3382db01"
+}

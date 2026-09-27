@@ -1,0 +1,60 @@
+{
+  "name": "Commune",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Opens a conversation with any named person, ignoring distance and obstacles; the target can end it at any time. The description separately caps it at five minutes.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 241
+    },
+    "school": "divination",
+    "level": 5,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "focus",
+      "languageDependent",
+      "material",
+      "mindAffecting",
+      "social",
+      "verbal"
+    ],
+    "range": "unlimited",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "perLevel": true,
+      "expendable": false,
+      "concentration": "",
+      "text": "One minute per caster level"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Opens a conversation with any named person, ignoring distance and obstacles; the target can end it at any time. The description separately caps it at five minutes.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS92c4b386d2db",
+  "_key": "!items!dtdS92c4b386d2db",
+  "folder": "dtdSFdd1dc71d110"
+}

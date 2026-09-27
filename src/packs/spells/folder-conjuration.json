@@ -1,0 +1,16 @@
+{
+  "_id": "dtdSFdbc7123416e",
+  "_key": "!folders!dtdSFdbc7123416e",
+  "name": "Conjuration",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 20000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "spellFolder": "conjuration"
+    }
+  }
+}

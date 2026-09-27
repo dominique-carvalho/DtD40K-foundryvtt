@@ -1,0 +1,59 @@
+{
+  "name": "Energyball",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Attack out to 30m with Blast 10 for 2k1 E damage per Level.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 245
+    },
+    "school": "evocation",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "material",
+      "rangedTouch",
+      "somatic"
+    ],
+    "range": "30m",
+    "target": "",
+    "area": "Blast 10",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "E",
+      "perLevelRolled": 2,
+      "perLevelKept": 1
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Attack out to 30m with Blast 10 for 2k1 E damage per Level.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSadbf9e750c7c",
+  "_key": "!items!dtdSadbf9e750c7c",
+  "folder": "dtdSFd59980be393"
+}

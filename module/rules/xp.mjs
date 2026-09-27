@@ -5,16 +5,19 @@
  * Source: DtD 7.7a pp. 15–16 (costs), p. 106 (leveling and Free Study), p. 179 (racial feats);
  * specs/006-classes-xp/contracts/rules-api.md.
  */
-import { FREE_STUDY_MULTIPLIER, XP_COSTS } from "../config.mjs";
+import { FREE_STUDY_MULTIPLIER, MAGIC_XP, XP_COSTS } from "../config.mjs";
 import { classProgress, matchesListFeat } from "./class.mjs";
 
 /**
  * Cost of one advance.
- * @param {"characteristic"|"skill"|"feat"|"asset"|"powerStat"} kind
- * @param {number} from  current value (skills: 0 = new skill)
+ * @param {"characteristic"|"skill"|"feat"|"asset"|"powerStat"|"school"|"combo"} kind
+ * @param {number} from  current value (skills: 0 = new skill; schools: current rank; combos: sum of spell levels)
  * @returns {number}
  */
 export function advanceCost(kind, from) {
+  // Magic Schools: new 200, then 100 × current rank; Spell Combos 50 × levels (spec 009, p. 16, p. 229).
+  if (kind === "school") return from === 0 ? MAGIC_XP.newSchool : MAGIC_XP.perRank * from;
+  if (kind === "combo") return MAGIC_XP.comboPerLevel * from;
   if (kind === "skill") return from === 0 ? XP_COSTS.newSkill : XP_COSTS.skill;
   return XP_COSTS[kind] ?? 0;
 }
@@ -35,10 +38,12 @@ const listed = (cls, kind, key) => (kind === "characteristic"
  * - Racial feats of the character's race and the Power Stat are always allowed.
  * @param {{kind: string, key?: string, feat?: {name: string, system: object}, classes: object[],
  *   race: {name: string}|null, owned: object[]}} params
- * @returns {{allowed: boolean, multiplier: number, reason: ""|"noClass"|"offList"|"notOnList"|"ownedOrBlocked"}}
+ * @returns {{allowed: boolean, multiplier: number, reason: ""|"noClass"|"offList"|"notOnList"|"ownedOrBlocked"|"atCap"}}
  */
-export function canAdvance({ kind, key, feat, classes, race, owned }) {
+export function canAdvance({ kind, key, feat, classes, race, owned, level, from }) {
   if (kind === "powerStat") return ok();
+  // School ranks never exceed the character Level (p. 16).
+  if (kind === "school" && Number.isFinite(level) && (from ?? 0) + 1 > level) return no("atCap");
   if (kind === "feat" && feat?.system.category === "racialFeat" && feat.system.prerequisites.race === race?.name) return ok();
   if (!classes.length) return no("noClass");
 
@@ -49,6 +54,14 @@ export function canAdvance({ kind, key, feat, classes, race, owned }) {
     if (current) return listed(current, kind, key) ? ok() : no("offList");
     return completed.some((cls) => listed(cls, kind, key)) ? ok() : ok(FREE_STUDY_MULTIPLIER);
   }
+
+  // Magic Schools of the class lists (spec 009): the current class, or the completed ones in Free Study.
+  if (kind === "school") {
+    const lists = current ? [current] : completed;
+    const onList = lists.some((cls) => (cls.system.magicSchools ?? []).some((name) => name.toLowerCase() === key));
+    return onList ? ok() : no(current ? "offList" : "notOnList");
+  }
+  if (kind === "combo") return ok();
 
   if (kind === "feat") {
     const lists = current ? [current] : completed;
@@ -86,7 +99,8 @@ export function xpTotals({ starting, log, hindranceXp }) {
 const PATHS = {
   characteristic: (key) => `system.characteristics.${key}.value`,
   skill: (key) => `system.skills.${key}.value`,
-  powerStat: () => "powerStat"
+  powerStat: () => "powerStat",
+  school: (key) => `system.magic.schools.${key}.value`
 };
 
 /**

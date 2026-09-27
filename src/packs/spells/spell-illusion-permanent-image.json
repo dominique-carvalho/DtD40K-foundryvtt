@@ -1,0 +1,56 @@
+{
+  "name": "Permanent Image",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>An Image needing no maintenance; persists until dispelled.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 253
+    },
+    "school": "illusion",
+    "level": 5,
+    "tn": {
+      "value": 35,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "indefinite",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Indefinite"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "An Image needing no maintenance; persists until dispelled.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdScb4b7dc0aa65",
+  "_key": "!items!dtdScb4b7dc0aa65",
+  "folder": "dtdSFd9e3382db01"
+}

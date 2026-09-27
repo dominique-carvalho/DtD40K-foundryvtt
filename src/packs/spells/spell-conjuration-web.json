@@ -1,0 +1,58 @@
+{
+  "name": "Web",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>A Blast (5) burst of umbral webbing; everyone inside suffers the Snare property, with the Focus Power result used as the starting TN to break free.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 236
+    },
+    "school": "conjuration",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "comboOk",
+      "verbal",
+      "somatic",
+      "material"
+    ],
+    "range": "",
+    "target": "",
+    "area": "Blast (5)",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "A Blast (5) burst of umbral webbing; everyone inside suffers the Snare property, with the Focus Power result used as the starting TN to break free.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS5202e96c5763",
+  "_key": "!items!dtdS5202e96c5763",
+  "folder": "dtdSFdbc7123416e"
+}

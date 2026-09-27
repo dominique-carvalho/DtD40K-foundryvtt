@@ -1,0 +1,53 @@
+{
+  "name": "Dispel",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Reaction that counters another caster's spell in progress; its TN equals that caster's Focus Power result.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 234
+    },
+    "school": "abjuration",
+    "level": 2,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "reaction",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Reaction that counters another caster's spell in progress; its TN equals that caster's Focus Power result.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS4afcc93ffaa1",
+  "_key": "!items!dtdS4afcc93ffaa1",
+  "folder": "dtdSFd15e7ccabb1"
+}

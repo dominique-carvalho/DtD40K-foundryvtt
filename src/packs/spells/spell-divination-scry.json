@@ -1,0 +1,58 @@
+{
+  "name": "Scry",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Needs an item owned by, or a body part of, the target, who may resist with Arcana + Willpower. On success the caster sees and hears the target and about 10m around; maintaining costs a half action each round.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 240
+    },
+    "school": "divination",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "focus",
+      "social",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "concentration",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "half",
+      "text": "Concentration (Half)"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Needs an item owned by, or a body part of, the target, who may resist with Arcana + Willpower. On success the caster sees and hears the target and about 10m around; maintaining costs a half action each round.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS7eeeeb74b89c",
+  "_key": "!items!dtdS7eeeeb74b89c",
+  "folder": "dtdSFdd1dc71d110"
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Energy Meteors",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Attack out to 120m with Burst 10 for 6k4 E; one copy is made per dot the caster has in Evocation.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 247
+    },
+    "school": "evocation",
+    "level": 5,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "rangedTouch",
+      "somatic",
+      "verbal"
+    ],
+    "range": "120m",
+    "target": "",
+    "area": "Burst 10",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 6,
+      "kept": 4,
+      "type": "E",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Attack out to 120m with Burst 10 for 6k4 E; one copy is made per dot the caster has in Evocation.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS43b537cf0c0c",
+  "_key": "!items!dtdS43b537cf0c0c",
+  "folder": "dtdSFd59980be393"
+}

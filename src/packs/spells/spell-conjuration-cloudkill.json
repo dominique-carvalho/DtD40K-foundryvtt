@@ -1,0 +1,56 @@
+{
+  "name": "Cloudkill",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Poison cloud of up to one 5m cube per caster level; blocks sight past 2m and always gives concealment. Breathing creatures that begin a turn in it or cross it are treated as hit by a Toxic weapon. Disperses in about five minutes normally.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 237
+    },
+    "school": "conjuration",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "",
+    "target": "",
+    "area": "up to one 5m cube per caster level",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Poison cloud of up to one 5m cube per caster level; blocks sight past 2m and always gives concealment. Breathing creatures that begin a turn in it or cross it are treated as hit by a Toxic weapon. Disperses in about five minutes normally.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS577bd479d3a4",
+  "_key": "!items!dtdS577bd479d3a4",
+  "folder": "dtdSFdbc7123416e"
+}

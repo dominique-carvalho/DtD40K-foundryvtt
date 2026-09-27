@@ -1,0 +1,58 @@
+{
+  "name": "Holy Weapon",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The touched weapon gains +1k1 damage against enemies of the caster's god and counts as magical for one day; enchanting another weapon ends it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 250
+    },
+    "school": "healing",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "material",
+      "somatic",
+      "touch",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "days",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Day"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "+1k1 vs enemies of your god",
+    "save": "",
+    "effect": "The touched weapon gains +1k1 damage against enemies of the caster's god and counts as magical for one day; enchanting another weapon ends it.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSe80c549a7d4e",
+  "_key": "!items!dtdSe80c549a7d4e",
+  "folder": "dtdSFdb0e4189fd7"
+}

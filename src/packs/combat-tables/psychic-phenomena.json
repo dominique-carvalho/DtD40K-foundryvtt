@@ -1,0 +1,526 @@
+{
+  "name": "Psychic Phenomena",
+  "img": "icons/svg/lightning.svg",
+  "description": "<p>Roll 1d100 plus the casting modifiers (Push, Unsanctioned Unfettered, combos); 75 or more goes to the Perils of the Warp (DtD 7.7a p. 231).</p>",
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 01-03",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Dark Foreboding: a faint breeze and a shared sense that something bad just happened somewhere in the galaxy. No mechanical effect.</p>",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr11b96ab5dfb",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr11b96ab5dfb"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 04-05",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Spoilage: food and drink within a 5d10 meter radius go bad.</p>",
+      "weight": 1,
+      "range": [
+        4,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr45cbb2602bc",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr45cbb2602bc"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 06-08",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Unnatural Decay: plants within 3d10 meters wither and die.</p>",
+      "weight": 1,
+      "range": [
+        6,
+        8
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr327026987dc",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr327026987dc"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 09-11",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Warp Echo: all sounds echo briefly, whatever the setting.</p>",
+      "weight": 1,
+      "range": [
+        9,
+        11
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr255812eac21",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr255812eac21"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 12-14",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Unholy Stench: a strange foul odour surrounds the caster.</p>",
+      "weight": 1,
+      "range": [
+        12,
+        14
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTre97cc001e93",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTre97cc001e93"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 15-17",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Hoarfrost: temperature drops; frost coats everything within 3d10 meters.</p>",
+      "weight": 1,
+      "range": [
+        15,
+        17
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrcdc8b628b51",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTrcdc8b628b51"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 18-20",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Warp Mind: caster gains 1 Insanity Point.</p>",
+      "weight": 1,
+      "range": [
+        18,
+        20
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "insanity": 1
+          }
+        }
+      },
+      "_id": "dtdTr05757b162a9",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr05757b162a9"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 21-23",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Aura of Taint: animals in a 1d100 meter radius grow agitated.</p>",
+      "weight": 1,
+      "range": [
+        21,
+        23
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr7ec6987c25a",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr7ec6987c25a"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 24-26",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Memory Worm: everyone with line of sight to the caster forgets something trivial.</p>",
+      "weight": 1,
+      "range": [
+        24,
+        26
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrc750792ae68",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTrc750792ae68"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 27-29",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Distorted Reflections: mirrors and reflective surfaces within 5d10 meters warp or break.</p>",
+      "weight": 1,
+      "range": [
+        27,
+        29
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr923fbb32c91",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr923fbb32c91"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 30-32",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Bloody Tears: within 3d10 meters, wood and stone ooze blood; images of people seem to weep blood.</p>",
+      "weight": 1,
+      "range": [
+        30,
+        32
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrca785fe5182",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTrca785fe5182"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 33-35",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Warp Mind: caster gains 1 Insanity Point (duplicate of 18-20).</p>",
+      "weight": 1,
+      "range": [
+        33,
+        35
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "insanity": 1
+          }
+        }
+      },
+      "_id": "dtdTrb872391ef1f",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTrb872391ef1f"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 36-38",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Shadow of the Warp: everyone within 1d100 meters, caster included, tests Willpower TN 20 or gains 1d5 insanity points.</p>",
+      "weight": 1,
+      "range": [
+        36,
+        38
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr69472ea55dd",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr69472ea55dd"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 39-41",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Mask of Fear: caster briefly looks horrific, with Fear 1 for what remains of this round.</p>",
+      "weight": 1,
+      "range": [
+        39,
+        41
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr7e4f392edec",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr7e4f392edec"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 42-44",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Warp Madness: every creature within 2d10 meters except the caster is Frenzied for a round unless it passes Willpower TN 20.</p>",
+      "weight": 1,
+      "range": [
+        42,
+        44
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr15723cac07d",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr15723cac07d"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 45-47",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Haunting Breeze: brief wind scatters light objects and makes fires flicker within 3d10 meters.</p>",
+      "weight": 1,
+      "range": [
+        45,
+        47
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr6df97fb41c5",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr6df97fb41c5"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 48-50",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Veil of Darkness: a 3d10 meter area falls into total darkness until the round ends.</p>",
+      "weight": 1,
+      "range": [
+        48,
+        50
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr797a9e0ddc8",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr797a9e0ddc8"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 51-53",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Breath Leech: everyone, caster included, is winded for one round: no Run or Charge actions.</p>",
+      "weight": 1,
+      "range": [
+        51,
+        53
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr389a7ae4f8a",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr389a7ae4f8a"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 54-56",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Spectral Gale: caster and anyone within 4d10 meters test Dexterity or Strength TN 10 or are knocked down.</p>",
+      "weight": 1,
+      "range": [
+        54,
+        56
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr5f882d4d71b",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr5f882d4d71b"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 57-59",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>The Earth Protests: everyone within 5d10 meters, caster included, tests Dexterity TN 15 or is knocked down.</p>",
+      "weight": 1,
+      "range": [
+        57,
+        59
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrfe24c69b520",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTrfe24c69b520"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 60-62",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Tech Scorn: tech within 5d10 meters glitches briefly and ranged weapons jam; those with cybernetic implants (and prometheans) test Constitution TN 15 or lose 1d5 hit points.</p>",
+      "weight": 1,
+      "range": [
+        60,
+        62
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr28045eb474d",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr28045eb474d"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 63-65",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Psy Discharge: static in a 5d10 meter area raises hair and shorts unshielded electronics.</p>",
+      "weight": 1,
+      "range": [
+        63,
+        65
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr68dd0f22abb",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr68dd0f22abb"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 66-68",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Banshee Howl: glass shatters; every creature in the area tests Constitution TN 15 or is deafened for 1d10 rounds.</p>",
+      "weight": 1,
+      "range": [
+        66,
+        68
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr9ba1abb4434",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTr9ba1abb4434"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 69-71",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Warp Ghosts: apparitions within 3d10 meters; everyone in the radius tests against Fear 1.</p>",
+      "weight": 1,
+      "range": [
+        69,
+        71
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrc7ba79637ae",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTrc7ba79637ae"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 72-74",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>The Furies: caster is hurled down, loses 1d5 hit points and tests against Fear 2.</p>",
+      "weight": 1,
+      "range": [
+        72,
+        74
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "hpLoss": "1d5",
+            "statuses": [
+              "prone"
+            ]
+          }
+        }
+      },
+      "_id": "dtdTrdc5f140e6b4",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTrdc5f140e6b4"
+    },
+    {
+      "type": "text",
+      "name": "Psychic Phenomena 75+",
+      "img": "icons/svg/lightning.svg",
+      "description": "<p>Perils of the Warp: a rift tears open; go to the Perils table.</p>",
+      "weight": 1,
+      "range": [
+        75,
+        200
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "perils": true
+          }
+        }
+      },
+      "_id": "dtdTrb6979fb5f63",
+      "_key": "!tables.results!dtdTf3ef90f40906.dtdTrb6979fb5f63"
+    }
+  ],
+  "flags": {
+    "dtd40k": {
+      "table": {
+        "kind": "phenomena",
+        "page": 231
+      }
+    }
+  },
+  "_id": "dtdTf3ef90f40906",
+  "_key": "!tables!dtdTf3ef90f40906",
+  "folder": "dtdTFd24b769ab83"
+}

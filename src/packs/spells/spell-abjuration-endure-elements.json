@@ -1,0 +1,56 @@
+{
+  "name": "Endure Elements",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The caster lives comfortably in most natural climates and ignores weather penalties to actions. Expendable: the first time E wounds are taken they drop by 1, and the first time the caster would catch fire it is cancelled, then the spell ends.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 233
+    },
+    "school": "abjuration",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "caster",
+    "area": "",
+    "duration": {
+      "type": "hours",
+      "value": 24,
+      "perLevel": false,
+      "expendable": true,
+      "concentration": "",
+      "text": "24 hours (E)"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "The caster lives comfortably in most natural climates and ignores weather penalties to actions. Expendable: the first time E wounds are taken they drop by 1, and the first time the caster would catch fire it is cancelled, then the spell ends.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS1d072d771b3a",
+  "_key": "!items!dtdS1d072d771b3a",
+  "folder": "dtdSFd15e7ccabb1"
+}

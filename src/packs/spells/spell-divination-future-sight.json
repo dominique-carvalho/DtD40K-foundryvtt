@@ -1,0 +1,57 @@
+{
+  "name": "Future Sight",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Caster gets a vague hint about the next major threat, enough to prepare; the SM need not name it. When the danger arrives (or is sidestepped), the spell warns the caster again that the moment has come.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 240
+    },
+    "school": "divination",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "somatic",
+      "verbal",
+      "social"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Caster gets a vague hint about the next major threat, enough to prepare; the SM need not name it. When the danger arrives (or is sidestepped), the spell warns the caster again that the moment has come.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSbc47015090b6",
+  "_key": "!items!dtdSbc47015090b6",
+  "folder": "dtdSFdd1dc71d110"
+}

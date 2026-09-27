@@ -1,0 +1,59 @@
+{
+  "name": "Energy Aura",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>An aura strikes anyone the caster hits in melee, plus everyone within melee reach when the caster's turn ends, for 1k1 E +3 per Level. No focus item is named.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 246
+    },
+    "school": "evocation",
+    "level": 3,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "reaction",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "focus",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 1,
+      "kept": 1,
+      "type": "E",
+      "perLevelRolled": 3,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "An aura strikes anyone the caster hits in melee, plus everyone within melee reach when the caster's turn ends, for 1k1 E +3 per Level. No focus item is named.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS651a5d865746",
+  "_key": "!items!dtdS651a5d865746",
+  "folder": "dtdSFd59980be393"
+}

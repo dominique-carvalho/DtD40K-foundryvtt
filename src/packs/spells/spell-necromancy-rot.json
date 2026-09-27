@@ -1,0 +1,57 @@
+{
+  "name": "Rot",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Ages unattended items in a 1m cube within 20m: food spoils and water stagnates. Attended items (someone's gear) are immune.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 254
+    },
+    "school": "necromancy",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "somatic"
+    ],
+    "range": "20m",
+    "target": "",
+    "area": "1m cube",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Ages unattended items in a 1m cube within 20m: food spoils and water stagnates. Attended items (someone's gear) are immune.",
+    "perRaise": "1 raise: wood decays; 2 raises: metal rusts away.",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS9bdecd989d0f",
+  "_key": "!items!dtdS9bdecd989d0f",
+  "folder": "dtdSFdbff4ce756f"
+}

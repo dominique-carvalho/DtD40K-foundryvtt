@@ -1,0 +1,56 @@
+{
+  "name": "Image",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Makes an illusory image within 20m filling a 3m cube. Keeping it costs a half action every turn after the first; a full action lets it move within its cube. Wisdom + Perception reveals it as fake.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 251
+    },
+    "school": "illusion",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "comboOk",
+      "somatic"
+    ],
+    "range": "20m",
+    "target": "",
+    "area": "3m cube + 1m per raise",
+    "duration": {
+      "type": "concentration",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "half",
+      "text": "Concentration (Half)"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Makes an illusory image within 20m filling a 3m cube. Keeping it costs a half action every turn after the first; a full action lets it move within its cube. Wisdom + Perception reveals it as fake.",
+    "perRaise": "+1m cube size per raise.",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSf578be3f805c",
+  "_key": "!items!dtdSf578be3f805c",
+  "folder": "dtdSFd9e3382db01"
+}

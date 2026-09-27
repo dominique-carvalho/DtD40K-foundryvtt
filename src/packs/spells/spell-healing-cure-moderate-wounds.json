@@ -1,0 +1,58 @@
+{
+  "name": "Cure Moderate Wounds",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The touched target regains one hit point for every resource point the caster pays (any amount).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 248
+    },
+    "school": "healing",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "comboOk",
+      "somatic",
+      "touch",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "The touched target regains one hit point for every resource point the caster pays (any amount).",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS7f9df9d56ce8",
+  "_key": "!items!dtdS7f9df9d56ce8",
+  "folder": "dtdSFdb0e4189fd7"
+}

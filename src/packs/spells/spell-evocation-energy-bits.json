@@ -1,0 +1,59 @@
+{
+  "name": "Energy Bits",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Creates one energy sphere lasting the scene. At the start of the caster's turn any number may be spent as a free action, each making a 50m ranged attack for 4k2 E; at most 2 spheres per target per turn.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 247
+    },
+    "school": "evocation",
+    "level": 4,
+    "tn": {
+      "value": 5,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "rangedTouch",
+      "somatic",
+      "verbal"
+    ],
+    "range": "50m",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": true,
+      "concentration": "",
+      "text": "One Scene (E)"
+    },
+    "damage": {
+      "rolled": 4,
+      "kept": 2,
+      "type": "E",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Creates one energy sphere lasting the scene. At the start of the caster's turn any number may be spent as a free action, each making a 50m ranged attack for 4k2 E; at most 2 spheres per target per turn.",
+    "perRaise": "+1 sphere per raise.",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSf70edb1e2a99",
+  "_key": "!items!dtdSf70edb1e2a99",
+  "folder": "dtdSFd59980be393"
+}

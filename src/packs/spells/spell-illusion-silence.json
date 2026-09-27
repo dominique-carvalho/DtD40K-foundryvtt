@@ -1,0 +1,56 @@
+{
+  "name": "Silence",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>A touched object or person emits silence out to 5m: sound-based Stealth Tests there succeed automatically and Verbal spells automatically fail. Maximum 1 minute per Level.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 252
+    },
+    "school": "illusion",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "comboOk",
+      "somatic"
+    ],
+    "range": "",
+    "target": "",
+    "area": "5m aura",
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "perLevel": true,
+      "expendable": false,
+      "concentration": "",
+      "text": "One minute per level"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "A touched object or person emits silence out to 5m: sound-based Stealth Tests there succeed automatically and Verbal spells automatically fail. Maximum 1 minute per Level.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSe4912146f08d",
+  "_key": "!items!dtdSe4912146f08d",
+  "folder": "dtdSFd9e3382db01"
+}

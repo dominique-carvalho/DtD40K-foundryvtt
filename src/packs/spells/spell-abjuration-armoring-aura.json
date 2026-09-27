@@ -1,0 +1,64 @@
+{
+  "name": "Armoring Aura",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The touched creature receives Aura 1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 233
+    },
+    "school": "abjuration",
+    "level": 1,
+    "tn": {
+      "value": 10,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "somatic",
+      "touch"
+    ],
+    "range": "",
+    "target": "touched creature",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "The touched creature receives Aura 1.",
+    "perRaise": "+1 Aura per raise, capped at 3 x the caster's Level.",
+    "automation": {
+      "target": "target",
+      "changes": [
+        {
+          "key": "system.modifiers.combat.aura",
+          "value": 1,
+          "perRaise": 1,
+          "capLevelMultiplier": 3,
+          "perLevel": 0
+        }
+      ],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS3c9d5cee124e",
+  "_key": "!items!dtdS3c9d5cee124e",
+  "folder": "dtdSFd15e7ccabb1"
+}

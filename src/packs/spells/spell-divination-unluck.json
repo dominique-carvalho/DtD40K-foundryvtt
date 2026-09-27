@@ -1,0 +1,58 @@
+{
+  "name": "Unluck",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>A target within 10m loses 1 rolled die on every test; resisted with Arcana + Willpower.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 240
+    },
+    "school": "divination",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "savingThrow",
+      "subtle"
+    ],
+    "range": "10m",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "wil",
+    "effect": "A target within 10m loses 1 rolled die on every test; resisted with Arcana + Willpower.",
+    "perRaise": "-1 more rolled die per raise.",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS7daf8076757b",
+  "_key": "!items!dtdS7daf8076757b",
+  "folder": "dtdSFdd1dc71d110"
+}

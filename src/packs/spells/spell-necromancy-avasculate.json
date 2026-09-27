@@ -1,0 +1,58 @@
+{
+  "name": "Avasculate",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>One creature within 30m saves with Arcana + Constitution; on failure it loses half its remaining hit points (round down).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 255
+    },
+    "school": "necromancy",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "somatic",
+      "verbal"
+    ],
+    "range": "30m",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "con",
+    "effect": "One creature within 30m saves with Arcana + Constitution; on failure it loses half its remaining hit points (round down).",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSbce0939a813c",
+  "_key": "!items!dtdSbce0939a813c",
+  "folder": "dtdSFdbff4ce756f"
+}

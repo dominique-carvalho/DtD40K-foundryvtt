@@ -1,0 +1,58 @@
+{
+  "name": "Screen",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Protects an area from scrying and remote viewing: the caster sets what remote observers see there, fooling cameras, satellites and magic. Direct viewing or interaction can grant a save when there is cause for suspicion.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 253
+    },
+    "school": "illusion",
+    "level": 5,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "focus",
+      "social",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "hours",
+      "value": 24,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "24 Hours"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Protects an area from scrying and remote viewing: the caster sets what remote observers see there, fooling cameras, satellites and magic. Direct viewing or interaction can grant a save when there is cause for suspicion.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS9f764a853127",
+  "_key": "!items!dtdS9f764a853127",
+  "folder": "dtdSFd9e3382db01"
+}

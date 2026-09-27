@@ -1,0 +1,402 @@
+{
+  "name": "Perils of the Warp",
+  "img": "icons/svg/portal.svg",
+  "description": "<p>Roll 1d100 when the Psychic Phenomena total reaches 75 (DtD 7.7a p. 232). 00 reads as 100.</p>",
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "name": "Perils of the Warp 01-05",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Warp Whispers: everyone within 4d10 meters tests Willpower TN 25 or gains 1d10 Insanity Points.</p>",
+      "weight": 1,
+      "range": [
+        1,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrd9afaa0f6c8",
+      "_key": "!tables.results!dtdT65597d517072.dtdTrd9afaa0f6c8"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 06-09",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>The Gibbering: caster tests Willpower TN 20; on failure 1d5+1 Insanity Points plus 1d5 rounds stunned.</p>",
+      "weight": 1,
+      "range": [
+        6,
+        9
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "test": {
+              "characteristic": "wil",
+              "tn": 20,
+              "onFail": "stunned",
+              "rounds": "1d5"
+            },
+            "insanity": "1d5+1"
+          }
+        }
+      },
+      "_id": "dtdTr9c3ded5ddb0",
+      "_key": "!tables.results!dtdT65597d517072.dtdTr9c3ded5ddb0"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 10-13",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Teleport Storm: everyone within 3d10 meters randomly swaps places with someone else.</p>",
+      "weight": 1,
+      "range": [
+        10,
+        13
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTre6e60ac5015",
+      "_key": "!tables.results!dtdT65597d517072.dtdTre6e60ac5015"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 14-18",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Power Drain: everyone within 3d10 meters loses all unspent hero points.</p>",
+      "weight": 1,
+      "range": [
+        14,
+        18
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr8c529922b5f",
+      "_key": "!tables.results!dtdT65597d517072.dtdTr8c529922b5f"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 19-24",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Rending the Veil: sentient creatures within 1d100 meters test against Fear 3; lasts 1d5 rounds.</p>",
+      "weight": 1,
+      "range": [
+        19,
+        24
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrfee447e5347",
+      "_key": "!tables.results!dtdT65597d517072.dtdTrfee447e5347"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 25-30",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Psy-Blast: caster is flung 1d10 meters up and falls to the ground.</p>",
+      "weight": 1,
+      "range": [
+        25,
+        30
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr5d6ebee6816",
+      "_key": "!tables.results!dtdT65597d517072.dtdTr5d6ebee6816"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 31-38",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Blood Rain: in a 5d10 meter area everyone tests Strength TN 15 or is knocked down; for 1d5 rounds every spell cast there automatically triggers a Perils roll.</p>",
+      "weight": 1,
+      "range": [
+        31,
+        38
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr73a875101d4",
+      "_key": "!tables.results!dtdT65597d517072.dtdTr73a875101d4"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 39-46",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Warp Burn: caster suffers a loss of 1d5 Hit Points plus 1d5 rounds stunned.</p>",
+      "weight": 1,
+      "range": [
+        39,
+        46
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "hpLoss": "1d5",
+            "statuses": [
+              "stunned"
+            ],
+            "rounds": "1d5"
+          }
+        }
+      },
+      "_id": "dtdTr1a1f206cddd",
+      "_key": "!tables.results!dtdT65597d517072.dtdTr1a1f206cddd"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 47-55",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>The Darkness: everyone within 5d10 meters is blind and deaf for 1d10 rounds.</p>",
+      "weight": 1,
+      "range": [
+        47,
+        55
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "blinded",
+              "deafened"
+            ],
+            "rounds": "1d10"
+          }
+        }
+      },
+      "_id": "dtdTr5fbaab8a376",
+      "_key": "!tables.results!dtdT65597d517072.dtdTr5fbaab8a376"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 56-58",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Locked In: caster falls catatonic; each round spends a full action testing Willpower TN 15, freed on success.</p>",
+      "weight": 1,
+      "range": [
+        56,
+        58
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "helpless"
+            ]
+          }
+        }
+      },
+      "_id": "dtdTrb48508c6d8e",
+      "_key": "!tables.results!dtdT65597d517072.dtdTrb48508c6d8e"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 59-67",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Psychic Mirror: the spell resolves against the caster instead; a beneficial spell is cancelled and the caster loses 1d5 Hit Points.</p>",
+      "weight": 1,
+      "range": [
+        59,
+        67
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "hpLoss": "1d5"
+          }
+        }
+      },
+      "_id": "dtdTrb84a4b540b5",
+      "_key": "!tables.results!dtdT65597d517072.dtdTrb84a4b540b5"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 68-72",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Psychic Concussion: caster is unconscious 1d5 rounds; everyone within 3d10 meters tests Willpower TN 15 or is stunned one round.</p>",
+      "weight": 1,
+      "range": [
+        68,
+        72
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "unconscious"
+            ],
+            "rounds": "1d5"
+          }
+        }
+      },
+      "_id": "dtdTr209d3d9257c",
+      "_key": "!tables.results!dtdT65597d517072.dtdTr209d3d9257c"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 73-78",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Chronological Incontinence: caster vanishes, returns after 1d10 rounds and gains 1d5 Insanity Points.</p>",
+      "weight": 1,
+      "range": [
+        73,
+        78
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "insanity": "1d5"
+          }
+        }
+      },
+      "_id": "dtdTraa788052bab",
+      "_key": "!tables.results!dtdT65597d517072.dtdTraa788052bab"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 79-82",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Soul Sear: no powers usable by the caster for an hour.</p>",
+      "weight": 1,
+      "range": [
+        79,
+        82
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr98745529d74",
+      "_key": "!tables.results!dtdT65597d517072.dtdTr98745529d74"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 83-86",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Cataclysmic Blast: everyone within 1d10 meters, caster included, loses 1d5+2 Hit Points; caster cannot cast for 1d5 hours.</p>",
+      "weight": 1,
+      "range": [
+        83,
+        86
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "hpLoss": "1d5+2"
+          }
+        }
+      },
+      "_id": "dtdTrd2e305d8e12",
+      "_key": "!tables.results!dtdT65597d517072.dtdTrd2e305d8e12"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 87-90",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Reality Quake: all within a 3d10 meter radius lose 1d10+3 hit points amid rotting, burning and freezing.</p>",
+      "weight": 1,
+      "range": [
+        87,
+        90
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "hpLoss": "1d10+3"
+          }
+        }
+      },
+      "_id": "dtdTr56cc1545cdd",
+      "_key": "!tables.results!dtdT65597d517072.dtdTr56cc1545cdd"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 91-99",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Lost to the Warp: caster tests Willpower TN 30 or is taken into the warp, returning after 1d10 weeks on some inhabited planet with 3d10 Insanity Points; all later Perils rolls get +10.</p>",
+      "weight": 1,
+      "range": [
+        91,
+        99
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr28d4331e218",
+      "_key": "!tables.results!dtdT65597d517072.dtdTr28d4331e218"
+    },
+    {
+      "type": "text",
+      "name": "Perils of the Warp 00",
+      "img": "icons/svg/portal.svg",
+      "description": "<p>Destruction: caster is pulled into the Warp forever. Character is gone.</p>",
+      "weight": 1,
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "dead": true
+          }
+        }
+      },
+      "_id": "dtdTr849d94b2ca9",
+      "_key": "!tables.results!dtdT65597d517072.dtdTr849d94b2ca9"
+    }
+  ],
+  "flags": {
+    "dtd40k": {
+      "table": {
+        "kind": "perils",
+        "page": 232
+      }
+    }
+  },
+  "_id": "dtdT65597d517072",
+  "_key": "!tables!dtdT65597d517072",
+  "folder": "dtdTFd24b769ab83"
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Battering Ram",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>A target within 30m tests Arcana + Strength and is shoved 2m per check on that test. Pushed farther than its speed, it falls prone. Flyers move double distance but are not knocked prone.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 245
+    },
+    "school": "evocation",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "comboOk",
+      "attack",
+      "savingThrow",
+      "somatic",
+      "verbal"
+    ],
+    "range": "30m",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "str",
+    "effect": "A target within 30m tests Arcana + Strength and is shoved 2m per check on that test. Pushed farther than its speed, it falls prone. Flyers move double distance but are not knocked prone.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS4e550f02877e",
+  "_key": "!items!dtdS4e550f02877e",
+  "folder": "dtdSFd59980be393"
+}

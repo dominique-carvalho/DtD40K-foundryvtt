@@ -1,0 +1,58 @@
+{
+  "name": "Awe",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Stun applied to every creature in a 10m radius.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 243
+    },
+    "school": "enchantment",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "savingThrow",
+      "somatic"
+    ],
+    "range": "",
+    "target": "",
+    "area": "10m radius",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "wil",
+    "effect": "Stun applied to every creature in a 10m radius.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS4b618648a9f3",
+  "_key": "!items!dtdS4b618648a9f3",
+  "folder": "dtdSFdc5d0e74c02"
+}

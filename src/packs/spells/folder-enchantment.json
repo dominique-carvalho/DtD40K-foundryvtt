@@ -1,0 +1,16 @@
+{
+  "_id": "dtdSFdc5d0e74c02",
+  "_key": "!folders!dtdSFdc5d0e74c02",
+  "name": "Enchantment",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 40000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "spellFolder": "enchantment"
+    }
+  }
+}

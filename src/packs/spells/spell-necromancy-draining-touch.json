@@ -1,0 +1,58 @@
+{
+  "name": "Draining Touch",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Unarmed melee attack for 2k2 R; the caster recovers 1 hit point per wound inflicted. Vampires gain 1 Vitae per wound instead.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 254
+    },
+    "school": "necromancy",
+    "level": 2,
+    "tn": {
+      "value": 20,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "somatic",
+      "touch"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 2,
+      "kept": 2,
+      "type": "R",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Unarmed melee attack for 2k2 R; the caster recovers 1 hit point per wound inflicted. Vampires gain 1 Vitae per wound instead.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSeb91d0644b19",
+  "_key": "!items!dtdSeb91d0644b19",
+  "folder": "dtdSFdbff4ce756f"
+}

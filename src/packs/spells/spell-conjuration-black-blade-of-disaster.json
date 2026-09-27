@@ -1,0 +1,56 @@
+{
+  "name": "Black Blade of Disaster",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Opens a sword-shaped rift into a devouring void. It acts as a Power Sword with unlimited Penetration that always destroys ordinary weapons, so parrying it fails. It vanishes if it leaves the caster's hands.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 238
+    },
+    "school": "conjuration",
+    "level": 5,
+    "tn": {
+      "value": 35,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "verbal",
+      "somatic"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Opens a sword-shaped rift into a devouring void. It acts as a Power Sword with unlimited Penetration that always destroys ordinary weapons, so parrying it fails. It vanishes if it leaves the caster's hands.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSc99dbd57c992",
+  "_key": "!items!dtdSc99dbd57c992",
+  "folder": "dtdSFdbc7123416e"
+}

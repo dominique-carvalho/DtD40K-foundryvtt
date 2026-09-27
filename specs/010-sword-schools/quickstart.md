@@ -74,11 +74,11 @@ de teste apagados no fim.
 | 15 | ✅ Blistering Flourish com 2 raises (24 contra TN 10): botão Aplicar efeitos → alvo Dazed 2 rodadas |
 | 16 | ✅ Skill (Athletics) 5k3 = 3 contra SD 8 do alvo: falha, cartão "o ataque falha", sem rolar o ataque |
 | 17 | ✅ Difficult Strike na rodada 2 recusado; Last Resort recusado na mesma cena; "Nova cena" libera |
-| 18 | ✅ Trick Shot com base Called Shot (Laspistol): localização Head escolhida, −2k0, ação completa |
+| 18 | ✅ Trick Shot com base Called Shot (Laspistol): localização Head escolhida, Ballistics 3k3 − 2k0 = 1k1 (normalizado), ação completa |
 | 19 | ✅ Burning Blade: dano com Incendiary; Opening the Path: SD do atacante 14 → 4, volta no início do próximo turno; meia ação gasta |
 | 20 | ✅ Trick Shot com Heavy Webber (Blast): aviso "só o alvo mais próximo" |
 | 21 | ✅ Base Aim: meia ação `aim` e ataque pronto; "Ataque preparado" pela aba: Standard Attack 6k3 (3 + 2 das vantagens + 1 da mira), pronto zerado |
-| — | ✅ Aplicar dano com `resolve`: armadura 5 ignorada e Resilience ÷ 2 → 10 / 2 = 5 ferimentos (4 HP + 1 crítico); Felling Giants (Res 4 − 2) |
+| — | ✅ Aplicar dano com `resolve` (cartão de dano montado por script): sem `resolve`, 10 − AP 5 = 5 ÷ Res 4 = 1 HP; com armadura ignorada e Resilience × ½, 10 ÷ 2 = 5 ferimentos (4 HP + 1 crítico); com Resilience − 2, ÷ 2 |
 
 Correção da validação: o cartão de dano aplicado mostrava a Resilience da ficha, não a usada; passa a mostrar a
 Resilience ajustada (`damage-service.applyTo`).

@@ -98,7 +98,7 @@ mensagens de teste apagados no fim.
 | 27 | ✅ Helpless: 3 contra TN 30 acerta; dano rolado duas vezes (12 dados) |
 | 28 | ✅ Ataque social 36 contra MD 15: botão "Gastar Resolve" → Resolve 4 → 3, drenado 1 |
 | 29 | ✅ Drenado 4: Jaded; Nova cena zera e tira Jaded |
-| 30 | ✅ Refute: MD 15 + 4 = 19 contra 9, o ataque falha |
+| 30 | ⚠️ Refute somou metade do total (MD 15 + 4 = 19), mas foi rodado antes da correção, contra um ataque que já tinha falhado; Refute contra ataque bem-sucedido não exercitado no Foundry (coberto pelo teste unitário de `refuteBonus`) |
 | 31 | ✅ Fear 2 falhado com 3 checks: Shock 1d10 + 3 = 13 (Catatonic → Unconscious) e +1d10 Insanity |
 | 32 | ✅ Medo fora de combate: +1d5 Insanity com a nota de −1k1 |
 | 33 | ✅ Insanity 9 → 10: Trauma Test TN 12 e Mental Traumas na falha; 19 → 20: TN 14 + derangement; 95 → 100: aviso de saída |

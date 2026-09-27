@@ -57,7 +57,7 @@ quickstart.md
 - [X] T017 [US2] `module/documents/background-service.mjs` (`raiseBackground`, `addInstance`, `setInheritancePicks`, `rollContacts`); `xp-service` desfaz `background`; `equipment-service` com as vagas de Inheritance
 - [X] T018 [US2] Seção Backgrounds na aba Traits (`templates/actor/parts/backgrounds.hbs`, contexto): valores com descrição, pontos 7/7, botões de compra na criação, instâncias, Inheritance, Contacts; campos do Mestre no modo Edição
 - [X] T019 [P] [US2] i18n e estilos
-- [ ] T020 [US2] Validar quickstart 3–10 e registrar
+- [X] T020 [US2] Validar quickstart 3–10 e registrar
 
 ---
 
@@ -68,7 +68,7 @@ quickstart.md
 - [X] T023 [US3] `module/documents/alignment-service.mjs`: `setAlignment` (drop e troca), `rollAlignmentCheck` (diálogo `templates/dialog/alignment-check.hbs`, segundo teste, recuperar); drop de `deity` na ficha
 - [X] T024 [US3] Seção Alinhamento na aba Traits (`templates/actor/parts/alignment.hbs`): deus, panteão, mandamentos, Devotion, botões, aviso de fora de jogo
 - [X] T025 [P] [US3] i18n e estilos
-- [ ] T026 [US3] Validar quickstart 1–2 e 11–16 e registrar
+- [X] T026 [US3] Validar quickstart 1–2 e 11–16 e registrar
 
 ---
 
@@ -79,7 +79,7 @@ quickstart.md
 - [X] T029 [US4] `alignment-service`: `applyDegeneration` (tabela, rerrolar repetidas, registro por ponto, efeitos: característica, Night Terrors, derangement, social) e `cureDegeneration`; `xp-service` passa as características bloqueadas
 - [X] T030 [US4] Na seção Alinhamento: Degenerations por ponto (nome, efeito, curar pelo Mestre)
 - [X] T031 [P] [US4] i18n e estilos
-- [ ] T032 [US4] Validar quickstart 17–18 e registrar
+- [X] T032 [US4] Validar quickstart 17–18 e registrar
 
 ---
 

@@ -38,3 +38,37 @@ Antes de registrar dados: `game.packs.get("dtd40k.deities").index.size === 21` e
 | 16 | Trocar para Pelor; para Khorne; segunda troca | 4; 4 + Degeneration em 7; recusa | US3-8 |
 | 17 | Degeneration Palsy | Dex −1, compra de Dex recusada | US4-1/2 |
 | 18 | Palsy repetida; Horrific Nightmare; Blighted Mind; Skin Affliction | Nova rolagem; Night Terrors; derangement; −2k0 social | US4-3/4/5/6 |
+
+## Registro de validação
+
+### 2026-09-27 — Foundry 13.351, mundo "teste-dtd" (título "Mist of Imlarin"), usuário Gamemaster
+
+Sistema carregado do worktree `DtD40K-foundryvtt-011` (junction `Data/systems/dtd40k`), packs gerados com
+`npm run build:packs`. **Pack compilado conferido no Foundry antes dos passos**: `deities` com `index.size` = 21 em 3
+pastas (7 por panteão); `combat-tables` com 25 tabelas em 4 pastas, Degeneration com 16 resultados na pasta Alignment;
+tipo `deity` registrado. Ator temporário "T011 Herói" (em criação, 600 XP). Os passos foram executados pelos serviços
+que a ficha chama, com os diálogos respondidos por script e os dados controlados (d10, d100 e dados de teste); pela
+interface: ficha do deus, seção Backgrounds na aba Traços (campo do Mestre no modo Edição) e o botão Curar da seção
+Alinhamento. O jogador comum (recusa fora da criação) não foi exercitado no Foundry: o mundo só tem o Gamemaster
+(coberto por teste unitário de `canRaise`). Ator e mensagens de teste apagados no fim.
+
+| # | Resultado |
+|---|---|
+| 1 | ✅ 21 deuses em 3 pastas, 7 em cada |
+| 2 | ✅ Slaanesh: Ruinous Powers, p. 295, 5 palavras-chave, 3 mandamentos, "Emancipation of Slaanesh", cultos Noise Marines e The S Academy; compêndio bloqueado; Degeneration com 16 linhas |
+| 3 | ✅ Criação: Contacts 3, Wealth 2, Fame 2 = 7/7, 0 XP (7 entradas de custo 0 no histórico) |
+| 4 | ✅ Mentor 1 e Fame 3 por 50 cada; Fame 4 por 100 |
+| 5 | ✅ Fora da criação o Mestre sobe Status sem XP (entrada de custo 0) e edita Mentor no campo do modo Edição; recusa do jogador: só teste unitário |
+| 6 | ✅ Sword of Ages 3 + Crown 2: o terceiro ponto do Crown (total 6) é recusado ("no máximo 5 pontos de Artifacts") |
+| 7 | ✅ Aquisição do Laspistol com Wealth 2 do Background: 2k2 |
+| 8 | ✅ Inheritance 1: "1 Common + 1 Very Common" recusado; "2 Common" aceito → vagas Common 4; quatro itens Common entram, o quinto é recusado |
+| 9 | ✅ Contacts 3 + Fel 2: 5k2 |
+| 10 | ✅ Desfazer Fame 3 → 4: Fame 3 e 100 XP de volta; desfazer as compras do Crown: 2 → 1 → removido, 100 XP de volta |
+| 11 | ✅ Sigmar arrastado vira o alinhamento |
+| 12 | ✅ 1d10 7 contra 6: passou; 3 contra 8: falhou, Devotion 7, sem segundo teste; 4 + 2 contra 6: passou |
+| 13 | ✅ 2 contra 6: Devotion 5; segundo teste 1 contra 5: falhou; Degeneration 05 = Palsy registrada em 5 |
+| 14 | ✅ Recuperar 7 contra 5: Devotion 6 e Palsy (ponto 5) superada, Dex de volta; recuperar 2 contra 6: nada muda |
+| 15 | ✅ Devotion 1 e falha: Devotion 0, mensagem de fora de jogo e aviso na ficha |
+| 16 | ✅ Para Pelor (mesmo panteão): 6 → 4; para Khorne: recusado (só uma vez); com override do Mestre: Devotion 4 e Degeneration (Ill-fortuned) em 7 |
+| 17 | ✅ Palsy: Dex −1 (efeito); compra de Dex por XP recusada ("reduzida por uma Degeneration"), também no botão de Evolução |
+| 18 | ✅ Palsy repetida → rolada de novo (Skin Affliction: Charm −2k0, Athletics sem mudança); Horrific Nightmare: Night Terrors sem XP (total 600 → 600); repetida com Night Terrors → rolada de novo (Ashen Taste); Blighted Mind: derangement menor; curar remove efeitos, item e derangement |

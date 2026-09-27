@@ -1,0 +1,16 @@
+{
+  "_id": "dtdTFd9f007d2ba0",
+  "_key": "!folders!dtdTFd9f007d2ba0",
+  "name": "Critical Damage",
+  "type": "RollTable",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "tableFolder": "critical"
+    }
+  }
+}

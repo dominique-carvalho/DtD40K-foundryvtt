@@ -1,7 +1,7 @@
 {
   "name": "Cortex Implants",
   "type": "gear",
-  "img": "icons/svg/circuit.svg",
+  "img": "icons/svg/clockwork.svg",
   "system": {
     "description": "<p>A \"cyberbrain\" that repairs a damaged brain or boosts it with data storage and pre-loaded knowledge, usually with visible plugs at the temple or nape. Common implants only restore an injured brain to normal.</p><p>Poor: little more than animating a corpse into a cyber-zombie; -1 Intelligence and -1 Fellowship. Good: every Lore test has its TN reduced by 5. Best: as Good, plus +1 Intelligence.</p>",
     "source": {

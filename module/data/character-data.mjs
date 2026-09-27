@@ -3,6 +3,8 @@ import { effectiveWealth } from "../rules/acquisition.mjs";
 import { characterLevel } from "../rules/class.mjs";
 import { computeDerived } from "../rules/derived.mjs";
 import { armorProfile } from "../rules/equipment.mjs";
+import { reactionsMax } from "../rules/defense.mjs";
+import { woundState } from "../rules/healing.mjs";
 import { computeExaltation } from "../rules/exaltation.mjs";
 import { capValue } from "../rules/race.mjs";
 import { xpTotals } from "../rules/xp.mjs";
@@ -57,7 +59,17 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       size: integer(4, { min: 1, max: 10 }),
       level: integer(1, { min: 1, max: 10 }),
       hp: new SchemaField({ value: integer(0, { min: 0 }) }),
-      resolve: new SchemaField({ value: integer(0, { min: 0 }) }),
+      // drainedScene: Resolve lost to social attacks this scene (spec 008, p. 446).
+      resolve: new SchemaField({ value: integer(0, { min: 0 }), drainedScene: integer(0, { min: 0 }) }),
+      // Accumulated Critical Damage (spec 008, p. 437).
+      critical: new SchemaField({ value: integer(0, { min: 0 }) }),
+      insanity: new SchemaField({
+        value: integer(0, { min: 0, max: 100 }),
+        derangements: new ArrayField(new SchemaField({
+          name: new StringField({ required: true, blank: false, trim: true }),
+          severity: new StringField({ required: true, choices: ["minor", "severe", "acute"], initial: "minor" })
+        }))
+      }),
       fatigue: new SchemaField({ value: integer(0, { min: 0 }) }),
       heroPoints: new SchemaField({
         value: integer(2, { min: 0 }),
@@ -83,6 +95,14 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
         staticDefenseCharacteristic: new StringField({ required: true, choices: ["dex", "con"], initial: "dex" }),
         fatigueMax: integer(0),
         initiative: integer(0),
+        // Targets of condition and combat-action effects only (spec 008, research R3/R5).
+        combat: new SchemaField({
+          sd: integer(0),
+          reactions: integer(0),
+          mentalDefense: integer(0),
+          // Aura against spell damage: from templates, feats and spells only (p. 436).
+          aura: integer(0)
+        }),
         // Targets of equipment effects only (spec 007, research R3/R8).
         armor: new SchemaField({ apAll: integer(0), gizzards: integer(0) }),
         rolls: new SchemaField({
@@ -141,7 +161,9 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     this.#capRatings();
     this.#prepareEquipment();
     const derived = computeDerived(this, this.derivedMods, {
-      ...this.modifiers, armorPenalty: this.armor.sdPenalty, maxDex: this.armor.maxDex
+      ...this.modifiers, armorPenalty: this.armor.sdPenalty, maxDex: this.armor.maxDex,
+      staticDefense: this.modifiers.staticDefense + this.modifiers.combat.sd,
+      mentalDefense: this.modifiers.mentalDefense + this.modifiers.combat.mentalDefense
     });
     this.derived = {
       staticDefense: derived.staticDefense,
@@ -153,6 +175,7 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     this.resolve.max = derived.resolveMax;
     this.fatigue.max = derived.fatigueMax;
     this.#prepareExaltation();
+    this.#prepareCombat();
   }
 
   /**
@@ -207,7 +230,20 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       rolls.all.kept -= 2;
     }
     this.addictionLevel = worst;
+    // Any Fatigue at all: −1k0 to every Test (p. 443).
+    if (this.fatigue.value > 0) rolls.all.rolled -= 1;
     this.wealth.effective = effectiveWealth(this.wealth);
+  }
+
+  /**
+   * Combat state (spec 008, research R3/R5/R8): reactions per round and wound state. Never persisted.
+   */
+  #prepareCombat() {
+    const statuses = this.parent?.statuses ?? new Set();
+    this.combat = {
+      reactionsMax: reactionsMax(statuses, this.modifiers.combat.reactions),
+      woundState: woundState({ hpLost: Math.max(0, this.hp.max - this.hp.value), wil: this.characteristics.wil.value, critical: this.critical.value })
+    };
   }
 
   /**

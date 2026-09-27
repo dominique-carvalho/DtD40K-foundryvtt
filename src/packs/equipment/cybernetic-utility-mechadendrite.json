@@ -1,7 +1,7 @@
 {
   "name": "Utility Mechadendrite",
   "type": "gear",
-  "img": "icons/svg/circuit.svg",
+  "img": "icons/svg/clockwork.svg",
   "system": {
     "description": "<p>A two-meter limb packed with tools. It works as a combi-tool, can hold almost any ordinary tool, and handles fine objects with great precision.</p><p>Only tech-priests can use mechadendrites, up to a number equal to their Constitution.</p>",
     "source": {

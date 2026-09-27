@@ -257,6 +257,70 @@ export const STARTING_SLOTS = { rare: 1, uncommon: 1, common: 2, veryCommon: 2 }
 /** Wealth Strain: minimum 1d10 result → Wealth penalty until the end of the next session (p. 316). */
 export const WEALTH_STRAIN = [{ min: 11, penalty: 5 }, { min: 10, penalty: 3 }, { min: 7, penalty: 1 }, { min: 1, penalty: 0 }];
 
+/* ---------- Combat (spec 008, DtD 7.7a ch. XVII, pp. 416–452) ---------- */
+
+const ADD_MODE = 2;
+const status = (id, img, changes = []) => ({
+  id, name: `DTD.Condition.${id}`, img,
+  changes: changes.map(([key, value]) => ({ key, mode: ADD_MODE, value: String(value) }))
+});
+
+/**
+ * Conditions of the book (pp. 442–444) and effects of defensive actions (pp. 425–428), used as the token status
+ * effects. Numeric effects are `changes`; the others are read from `actor.statuses` by the pure rules.
+ */
+export const STATUS_EFFECTS = [
+  status("blinded", "icons/svg/blind.svg"),
+  status("bloodLoss", "icons/svg/blood.svg"),
+  status("dazed", "icons/svg/daze.svg", [["system.modifiers.rolls.all.rolled", -1]]),
+  status("deafened", "icons/svg/deaf.svg"),
+  status("diseased", "icons/svg/biohazard.svg"),
+  status("onFire", "icons/svg/fire.svg"),
+  status("helpless", "icons/svg/paralysis.svg"),
+  status("immobilized", "icons/svg/anchor.svg"),
+  status("pinned", "icons/svg/terror.svg"),
+  status("prone", "icons/svg/falling.svg"),
+  status("restrained", "icons/svg/net.svg"),
+  status("stunned", "icons/svg/stoned.svg"),
+  status("surprised", "icons/svg/hazard.svg"),
+  status("unconscious", "icons/svg/unconscious.svg"),
+  status("dead", "icons/svg/skull.svg"),
+  status("grappled", "icons/svg/thrust.svg"),
+  status("jaded", "icons/svg/silenced.svg"),
+  status("lostHand", "icons/svg/downgrade.svg"),
+  status("lostArm", "icons/svg/downgrade.svg"),
+  status("lostEye", "icons/svg/invisible.svg"),
+  status("lostFoot", "icons/svg/leg.svg"),
+  status("lostLeg", "icons/svg/leg.svg"),
+  status("fullDefense", "icons/svg/holy-shield.svg", [["system.modifiers.combat.sd", 10], ["system.modifiers.combat.reactions", 2]]),
+  status("fightDefensively", "icons/svg/shield.svg", [["system.modifiers.combat.reactions", 1]]),
+  status("allOutAttack", "icons/svg/sword.svg"),
+  status("healingSurge", "icons/svg/regen.svg", [["system.modifiers.combat.sd", 5]]),
+  status("running", "icons/svg/wingfoot.svg")
+];
+
+/** Statuses that are effects of an action and last until the character's next turn (research R5). */
+export const UNTIL_NEXT_TURN = ["fullDefense", "fightDefensively", "allOutAttack", "healingSurge", "running"];
+
+/** Damage type letter → critical table (pp. 438–441). */
+export const DAMAGE_TABLE_TYPES = { E: "energy", X: "explosive", I: "impact", R: "rending" };
+
+/** Hit location → critical table location; left and right share a table (p. 437). */
+export const CRITICAL_LOCATIONS = {
+  leftArm: "arm", rightArm: "arm", arms: "arm", body: "body", gizzards: "gizzards", head: "head",
+  leftLeg: "legs", rightLeg: "legs", legs: "legs"
+};
+
+/** Fear rating → Willpower TN (p. 448). */
+export const FEAR_TN = { 1: 15, 2: 20, 3: 25, 4: 30, 5: 35 };
+
+/** Action types and subtypes (pp. 423–424). */
+export const ACTION_TYPES = ["half", "full", "free", "reaction", "varies"];
+export const ACTION_SUBTYPES = ["attack", "melee", "ranged", "movement", "concentration", "miscellaneous", "defense", "provokes"];
+
+/** At most 4 Resolve drained per scene by social attacks, then Jaded (p. 446). */
+export const RESOLVE_DRAIN_LIMIT = 4;
+
 export const DTD = {
   GROUPS,
   CHARACTERISTICS,
@@ -298,5 +362,13 @@ export const DTD = {
   ADDICTIVITY,
   ADDICTION_LEVELS,
   STARTING_SLOTS,
-  WEALTH_STRAIN
+  WEALTH_STRAIN,
+  STATUS_EFFECTS,
+  UNTIL_NEXT_TURN,
+  DAMAGE_TABLE_TYPES,
+  CRITICAL_LOCATIONS,
+  FEAR_TN,
+  ACTION_TYPES,
+  ACTION_SUBTYPES,
+  RESOLVE_DRAIN_LIMIT
 };

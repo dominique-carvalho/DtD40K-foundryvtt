@@ -204,3 +204,33 @@ describe("equipment constants (007)", () => {
     expect(DTD.WEALTH_STRAIN.map((s) => [s.min, s.penalty])).toEqual([[11, 5], [10, 3], [7, 1], [1, 0]]);
   });
 });
+
+describe("combat constants (008)", () => {
+  it("defines the conditions and action effects as status effects with i18n names", () => {
+    const ids = DTD.STATUS_EFFECTS.map((s) => s.id);
+    expect(ids).toEqual([
+      "blinded", "bloodLoss", "dazed", "deafened", "diseased", "onFire", "helpless", "immobilized", "pinned", "prone",
+      "restrained", "stunned", "surprised", "unconscious", "dead", "grappled", "jaded", "lostHand", "lostArm", "lostEye",
+      "lostFoot", "lostLeg", "fullDefense", "fightDefensively", "allOutAttack", "healingSurge", "running"
+    ]);
+    for (const s of DTD.STATUS_EFFECTS) {
+      expect(s.name).toBe(`DTD.Condition.${s.id}`);
+      expect(s.img).toMatch(/^icons\/svg\/.+\.svg$/);
+    }
+    const changes = (id) => DTD.STATUS_EFFECTS.find((s) => s.id === id).changes.map((c) => `${c.key}=${c.value}`);
+    expect(changes("dazed")).toEqual(["system.modifiers.rolls.all.rolled=-1"]);
+    expect(changes("fullDefense")).toEqual(["system.modifiers.combat.sd=10", "system.modifiers.combat.reactions=2"]);
+    expect(changes("healingSurge")).toEqual(["system.modifiers.combat.sd=5"]);
+    for (const id of DTD.UNTIL_NEXT_TURN) expect(ids).toContain(id);
+  });
+
+  it("maps damage types, locations, Fear TNs, action types and the Resolve limit", () => {
+    expect(DTD.DAMAGE_TABLE_TYPES).toEqual({ E: "energy", X: "explosive", I: "impact", R: "rending" });
+    expect(DTD.CRITICAL_LOCATIONS.leftArm).toBe("arm");
+    expect(DTD.CRITICAL_LOCATIONS.rightLeg).toBe("legs");
+    expect(DTD.FEAR_TN).toEqual({ 1: 15, 2: 20, 3: 25, 4: 30, 5: 35 });
+    expect(DTD.ACTION_TYPES).toEqual(["half", "full", "free", "reaction", "varies"]);
+    expect(DTD.ACTION_SUBTYPES).toContain("provokes");
+    expect(DTD.RESOLVE_DRAIN_LIMIT).toBe(4);
+  });
+});

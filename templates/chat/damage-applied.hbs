@@ -1,0 +1,16 @@
+<div class="dtd40k damage-applied">
+  <h3 class="roll-card-title">{{localize "DTD.Combat.DamageApplied"}}</h3>
+  {{#each rows as |r|}}
+  <section class="applied-row">
+    <p><b>{{r.name}}</b> · {{r.location}}</p>
+    <p class="roll-card-note">{{localize "DTD.Combat.DamageMath" total=r.total effective=r.effective resilience=r.resilience hp=r.hpLoss}}</p>
+    {{#if r.coverHit}}<p class="roll-card-note">{{localize "DTD.Combat.CoverHit"}}</p>{{/if}}
+    {{#if r.fatigue}}<p class="roll-card-note">{{localize "DTD.Combat.FatigueGained" n=r.fatigue}}</p>{{/if}}
+    {{#if r.criticalGain}}
+    <p class="notification warning">{{localize "DTD.Combat.CriticalGained" gain=r.criticalGain total=r.critical}} — {{r.criticalTable}}</p>
+    <div class="critical-text">{{{r.criticalText}}}</div>
+    {{/if}}
+  </section>
+  {{/each}}
+  <button type="button" data-dtd-action="undoDamage" class="gm-only"><i class="fa-solid fa-rotate-left" inert></i> {{localize "DTD.Combat.Undo"}}</button>
+</div>

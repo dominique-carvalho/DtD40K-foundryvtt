@@ -500,6 +500,18 @@ Cortex Implants, Implanted Equipment, Injector Rig, Machinator Array, Voidskin, 
 
 ## 13. Combate
 
+**Na 7.7a** (cap. XVII pp. 416–452; implementado na feature `008-combat`): iniciativa 1d10 + Dex + Cmp uma vez por
+combate (desempate: dado, Dex, rerrolar; Hero Point = dado 10); turno com 1 ação completa ou 2 meias diferentes, livres
+uma vez cada e 1 reação por rodada; **38 ações** (33 da tabela da p. 423 + Clear Jam, Drop Prone, Extinguish Flames,
+Staunch Bleeding, Spend Hero Point); Dodge/Parry somam **metade do total à Static Defense** (o texto da ação; a seção
+de ataque fala em teste oposto — premissa); Full Defense +2 reações e +10 SD; Multiple Attacks gasta 1 reação por ataque
+extra. Dano: cobertura, AP − Pen (magia: Aura), ÷ Resilience (mín. 1; Tearing arredonda para cima); o que passa do HP
+vira Critical Damage acumulado, efeito da linha = total (1–5) na tabela tipo × localização (20 tabelas, 100 entradas,
+pp. 438–441). Automatizados: botão Aplicar com Desfazer, críticos com condições/fadiga/testes/morte, condições como
+status effects, controle do turno, menu de ações, efeitos até o próximo turno, fim de turno (On Fire, Blood Loss),
+descanso, Hero Point contra a morte, combate social (Resolve, Jaded, Refute), medo (Shock Table) e insanidade (Trauma
+Test, derangements). Minions ficam para um ator próprio.
+
 Fonte: 1.6 pp. 240–254.
 
 - **Iniciativa**: 1d10 + Dex + Cmp, rolada uma vez por combate. Desempate: maior dado → maior Dex → rerrolar.

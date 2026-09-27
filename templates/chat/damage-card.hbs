@@ -22,4 +22,5 @@
     <span class="roll-card-tn">Pen {{pen}}</span>
   </div>
   <p class="attack-location">{{localize "DTD.Attack.Location"}}: <b>{{location}}</b>{{#if hits}} · {{localize "DTD.Attack.Hits" hits=hits}}{{/if}}</p>
+  <button type="button" data-dtd-action="applyDamage" data-tooltip="{{localize "DTD.Combat.ApplyHint"}}"><i class="fa-solid fa-heart-crack" inert></i> {{localize "DTD.Combat.Apply"}}</button>
 </div>

@@ -49,6 +49,12 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   localização; efeitos de itens só valem equipados (desligáveis pelo Mestre). Aquisição pelo teste de Wealth com
   qualidade, tentativas, Liquid Wealth e Wealth Strain; vagas do equipamento inicial; drogas com doses e vício;
   materiais mágicos e encaixe de hearthstones.
+- **Combate**: aba *Combate* com as 38 ações do cap. XVII (turno controlado: ação completa ou duas meias diferentes,
+  livres e 1 reação por rodada), condições da 7.7a como status effects com efeitos numéricos, Critical Damage,
+  ferimentos, fadiga, descanso e Hero Point contra a morte. O cartão de dano ganha **Aplicar** (cobertura, AP − Pen,
+  Resilience, HP e críticos das 20 tabelas do compêndio *Combat Tables*, com Desfazer); o cartão de ataque ganha
+  Dodge e Parry; iniciativa com o desempate do livro; combate social (Resolve, Jaded, Refute), testes de medo com a
+  Shock Table e insanidade com Trauma Test e derangements.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos
@@ -127,7 +133,7 @@ npm run build:packs
 - Depois do build, abra o Foundry e confira o compêndio (ex.: 16 raças).
 - Nunca edite `packs/` à mão; altere os JSON em `src/packs/` e rode o build de novo.
 - Para editar um compêndio pelo Foundry: clique com o botão direito no compêndio → "Alternar trava de edição", edite os itens, feche o Foundry e rode `npm run extract:packs` para gravar as mudanças de volta em `src/packs/` (depois revise o diff e faça o commit).
-- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) e `equipment` (170 itens dos caps. XIII–XIV).
+- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) e `combat-tables` (22 tabelas do cap. XVII).
 
 ## Licença
 

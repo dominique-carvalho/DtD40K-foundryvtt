@@ -1,0 +1,83 @@
+<section class="tab combat-tab {{tabs.combat.cssClass}}" data-group="primary" data-tab="combat">
+  {{#with combatTab as |c|}}
+  <section class="combat-status">
+    <h2 class="section-title">{{localize "DTD.Combat.State"}}</h2>
+    <div class="combat-status-line">
+      <span>{{localize "DTD.Combat.WoundState"}}: <b>{{c.woundState}}</b></span>
+      <span>{{localize "DTD.Combat.Critical"}}: <b>{{c.critical}}</b>{{#if @root.isGM}} <input class="critical-input" type="number" min="0" value="{{c.critical}}" aria-label="{{localize "DTD.Combat.Critical"}}">{{/if}}</span>
+      <span>{{localize "DTD.Sheet.Fatigue"}}: <b>{{c.fatigue.value}} / {{c.fatigue.max}}</b></span>
+      {{#if c.turn}}<span class="feat-badge">{{localize "DTD.Combat.TurnState" halves=c.turn.halves reactions=c.turn.reactions max=c.turn.reactionsMax}}{{#if c.turn.full}} · {{localize "DTD.Combat.FullUsed"}}{{/if}}</span>{{/if}}
+    </div>
+    <div class="combat-buttons">
+      {{#if c.inCombat}}<button type="button" data-action="heroInitiative"><i class="fa-solid fa-star" inert></i> {{localize "DTD.Combat.HeroInitiative"}}</button>{{/if}}
+      {{#if c.dead}}<button type="button" data-action="burnHeroPoint"><i class="fa-solid fa-fire" inert></i> {{localize "DTD.Combat.BurnHeroPoint"}}</button>{{/if}}
+      {{#if @root.isGM}}<button type="button" data-action="restActor"><i class="fa-solid fa-bed" inert></i> {{localize "DTD.Combat.Rest"}}</button>{{/if}}
+    </div>
+  </section>
+
+  <section class="combat-conditions">
+    <h2 class="section-title">{{localize "DTD.Combat.Conditions"}}</h2>
+    <ul class="condition-list">
+      {{#each c.conditions as |cond|}}
+      <li class="{{#if cond.active}}active{{/if}}">
+        <a data-action="toggleCondition" data-status="{{cond.id}}" data-tooltip="{{localize (concat "DTD.Condition.Hint." cond.id)}}" {{#unless @root.canEditRace}}inert{{/unless}}>
+          <img src="{{cond.img}}" alt=""> {{cond.label}}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+    {{#if c.actionEffects.length}}<p class="hint">{{localize "DTD.Combat.UntilNextTurn"}}: {{#each c.actionEffects as |e|}}<span class="tag">{{e.label}}</span>{{/each}}</p>{{/if}}
+  </section>
+
+  <section class="combat-actions">
+    <h2 class="section-title">{{localize "DTD.Combat.Actions"}}</h2>
+    <label class="combat-weapon">{{localize "DTD.Combat.Weapon"}}
+      <select class="combat-weapon-select" aria-label="{{localize "DTD.Combat.Weapon"}}">{{#each c.weapons as |w|}}<option value="{{w.id}}">{{w.name}}</option>{{/each}}</select>
+    </label>
+    {{#each c.groups as |g|}}
+    <h3 class="action-group">{{g.label}}</h3>
+    <ul class="action-list">
+      {{#each g.actions as |a|}}
+      <li class="{{#if a.used}}used{{/if}}">
+        <a data-action="useAction" data-key="{{a.key}}" data-tooltip="{{a.summary}} (p. {{a.page}})" {{#unless @root.canEditRace}}inert{{/unless}}>{{#if a.attack}}<i class="fa-solid fa-crosshairs" inert></i> {{/if}}{{a.name}}</a>
+      </li>
+      {{/each}}
+    </ul>
+    {{/each}}
+  </section>
+
+  <section class="combat-mental">
+    <h2 class="section-title">{{localize "DTD.Mental.Title"}}</h2>
+    <div class="combat-status-line">
+      <span>{{localize "DTD.Social.Resolve"}}: <b>{{c.resolve.value}} / {{c.resolve.max}}</b> · {{localize "DTD.Social.Drained" n=c.resolve.drained}}{{#if c.resolve.jaded}} · <span class="feat-badge warning">{{localize "DTD.Condition.jaded"}}</span>{{/if}}</span>
+      <span>{{localize "DTD.Mental.Insanity"}}: <b>{{c.insanity.value}}</b>{{#if @root.canEditRace}} <input class="insanity-add" type="number" min="1" placeholder="+" aria-label="{{localize "DTD.Mental.AddInsanity"}}">{{/if}}</span>
+    </div>
+    {{#if @root.canEditRace}}
+    <div class="combat-buttons">
+      <label>{{localize "DTD.Mental.Fear"}} <select class="fear-rating">{{#each c.fearRatings as |r|}}<option value="{{r}}">{{r}}</option>{{/each}}</select></label>
+      <button type="button" data-action="fearTest"><i class="fa-solid fa-ghost" inert></i> {{localize "DTD.Mental.FearTest"}}</button>
+      <label>{{localize "DTD.Social.Attack"}}
+        <select class="social-characteristic"><option value="cha">{{localize "DTD.Characteristic.cha"}}</option><option value="fel">{{localize "DTD.Characteristic.fel"}}</option></select>
+        <select class="social-skill">{{#each c.socialSkills as |s|}}<option value="{{s.key}}">{{s.label}}</option>{{/each}}</select>
+      </label>
+      <button type="button" data-action="socialAttack"><i class="fa-solid fa-comments" inert></i> {{localize "DTD.Social.AttackButton"}}</button>
+      {{#if @root.isGM}}<button type="button" data-action="newSocialScene"><i class="fa-solid fa-clapperboard" inert></i> {{localize "DTD.Social.NewScene"}}</button>{{/if}}
+    </div>
+    {{/if}}
+    <ul class="equipment-list">
+      {{#each c.insanity.derangements as |d|}}
+      <li class="equipment-row"><span class="equipment-name">{{d.name}} <span class="feat-badge warning">{{localize (concat "DTD.Mental.Severity." d.severity)}}</span></span>
+        {{#if @root.canEditRace}}<a class="asset-remove" data-action="removeDerangement" data-index="{{@index}}"><i class="fa-solid fa-trash" inert></i></a>{{/if}}
+      </li>
+      {{/each}}
+    </ul>
+    {{#if @root.canEditRace}}
+    <div class="derangement-add">
+      <input class="derangement-name" type="text" placeholder="{{localize "DTD.Mental.DerangementName"}}">
+      <select class="derangement-severity">{{#each c.severities as |s|}}<option value="{{s.key}}">{{s.label}}</option>{{/each}}</select>
+      <button type="button" data-action="addDerangement"><i class="fa-solid fa-plus" inert></i> {{localize "DTD.Mental.AddDerangement"}}</button>
+    </div>
+    {{/if}}
+  </section>
+  {{/with}}
+</section>

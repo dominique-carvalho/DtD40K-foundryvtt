@@ -1,0 +1,146 @@
+{
+  "name": "Critical — Impact — Legs",
+  "img": "icons/svg/blood.svg",
+  "description": "<p>Critical Damage (Impact, Legs), DtD 7.7a p. 440. Use the row equal to the accumulated Critical Damage.</p>",
+  "formula": "1d5",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "name": "Impact Legs 1",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Stumbles: movement halved 1 round.</p>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrb57fff431a4",
+      "_key": "!tables.results!dtdT05bdc790fec3.dtdTrb57fff431a4"
+    },
+    {
+      "type": "text",
+      "name": "Impact Legs 2",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Leg broken: Stunned 1 round; movement halved 1d5 rounds; 1 Fatigue.</p>",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "stunned"
+            ],
+            "rounds": 1,
+            "fatigue": 1
+          }
+        }
+      },
+      "_id": "dtdTra8600e20cf5",
+      "_key": "!tables.results!dtdT05bdc790fec3.dtdTra8600e20cf5"
+    },
+    {
+      "type": "text",
+      "name": "Impact Legs 3",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Foot bones snap: Con TN 20 at once or permanently lose use of the foot; if passed, movement halved until medical attention; 2 Fatigue.</p>",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "test": {
+              "characteristic": "con",
+              "tn": 20,
+              "onFail": "lostFoot"
+            },
+            "fatigue": 2
+          }
+        }
+      },
+      "_id": "dtdTrceff5b9a861",
+      "_key": "!tables.results!dtdT05bdc790fec3.dtdTrceff5b9a861"
+    },
+    {
+      "type": "text",
+      "name": "Impact Legs 4",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Lower leg torn away: Con TN 20 or die of shock; if passed, Stunned 1d10 rounds, 1d5 Fatigue, Blood Loss, one leg left.</p>",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "stunned",
+              "bloodLoss",
+              "lostLeg"
+            ],
+            "rounds": "1d10",
+            "fatigue": "1d5",
+            "test": {
+              "characteristic": "con",
+              "tn": 20,
+              "onFail": "dead"
+            }
+          }
+        }
+      },
+      "_id": "dtdTr4feba72eec3",
+      "_key": "!tables.results!dtdT05bdc790fec3.dtdTr4feba72eec3"
+    },
+    {
+      "type": "text",
+      "name": "Impact Legs 5",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Leg torn apart; dies in a pool of gore.</p>",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "dead": true
+          }
+        }
+      },
+      "_id": "dtdTr6df834cd28c",
+      "_key": "!tables.results!dtdT05bdc790fec3.dtdTr6df834cd28c"
+    }
+  ],
+  "flags": {
+    "dtd40k": {
+      "table": {
+        "kind": "critical",
+        "type": "impact",
+        "location": "legs",
+        "page": 440
+      }
+    }
+  },
+  "_id": "dtdT05bdc790fec3",
+  "_key": "!tables!dtdT05bdc790fec3",
+  "folder": "dtdTFd9f007d2ba0"
+}

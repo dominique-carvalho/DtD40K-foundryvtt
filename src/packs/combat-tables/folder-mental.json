@@ -1,0 +1,16 @@
+{
+  "_id": "dtdTFdb3588ad13d",
+  "_key": "!folders!dtdTFdb3588ad13d",
+  "name": "Fear and Insanity",
+  "type": "RollTable",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 200000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "tableFolder": "mental"
+    }
+  }
+}

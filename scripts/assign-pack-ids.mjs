@@ -6,6 +6,7 @@
  *   node scripts/assign-pack-ids.mjs --pack feats
  *   node scripts/assign-pack-ids.mjs --pack classes
  *   node scripts/assign-pack-ids.mjs --pack equipment
+ *   node scripts/assign-pack-ids.mjs --pack combat-tables
  */
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -44,11 +45,11 @@ const slug = (text) => text.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g
 const idFor = (seed, prefix) => prefix + createHash("sha1").update(seed).digest("hex").slice(0, 16 - prefix.length);
 
 /** Folder document; `seed` keeps the ids of the feats pack unchanged. */
-const folder = (seed, prefix, key, name, parent = null, sort = 0, flag = "featFolder") => ({
+const folder = (seed, prefix, key, name, parent = null, sort = 0, flag = "featFolder", type = "Item") => ({
   _id: idFor(seed, prefix),
   _key: "",
   name,
-  type: "Item",
+  type,
   folder: parent,
   description: "",
   sorting: "a",
@@ -113,6 +114,21 @@ const LAYOUTS = {
       seed: (file) => `equipment:${file}`,
       prefix: "dtdE"
     };
+  },
+  // RollTables of chapter XVII (spec 008): critical effects, Shock Table, Mental Traumas.
+  "combat-tables": () => {
+    const folders = {
+      critical: folder("table-folder:critical", "dtdTFd", "critical", "Critical Damage", null, 100000, "tableFolder", "RollTable"),
+      mental: folder("table-folder:mental", "dtdTFd", "mental", "Fear and Insanity", null, 200000, "tableFolder", "RollTable")
+    };
+    return {
+      folders,
+      fileOf: (key) => `folder-${slug(key)}.json`,
+      folderOf: ({ flags }) => folders[flags?.dtd40k?.table?.kind === "critical" ? "critical" : "mental"],
+      seed: (file) => `table:${file}`,
+      prefix: "dtdT",
+      collection: "tables"
+    };
   }
 };
 
@@ -136,12 +152,18 @@ for (const file of readdirSync(DIR).filter((name) => name.endsWith(".json") && !
   const target = layout.folderOf(doc);
   if (!target) throw new Error(`${file}: no folder for this entry`);
   doc._id ||= idFor(layout.seed(file), layout.prefix);
-  doc._key = `!items!${doc._id}`;
+  const collection = layout.collection ?? "items";
+  doc._key = `!${collection}!${doc._id}`;
   doc.folder = target._id;
   // Embedded Active Effects are packed as their own LevelDB entries (spec 007: equipment effects).
   (doc.effects ?? []).forEach((effect, index) => {
     effect._id ||= idFor(`${layout.seed(file)}:effect:${index}`, "dtdEf");
     effect._key = `!items.effects!${doc._id}.${effect._id}`;
+  });
+  // Table results, likewise (spec 008).
+  (doc.results ?? []).forEach((result, index) => {
+    result._id ||= idFor(`${layout.seed(file)}:result:${index}`, "dtdTr");
+    result._key = `!tables.results!${doc._id}.${result._id}`;
   });
   write(file, doc);
   count++;

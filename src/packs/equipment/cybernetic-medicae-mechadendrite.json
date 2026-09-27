@@ -1,7 +1,7 @@
 {
   "name": "Medicae Mechadendrite",
   "type": "gear",
-  "img": "icons/svg/circuit.svg",
+  "img": "icons/svg/clockwork.svg",
   "system": {
     "description": "<p>A flexible two-meter limb for field surgery: +2k0 on Medicae Tests, a bonus that also applies to rolls made to interrogate. Its six injector pistons each hold one drug dose (bought separately), and it can stop blood loss as a half action.</p><p>Its small chainscalpel serves as an improvised weapon dealing 1k1 damage with the user's Strength as normal. Only tech-priests can use mechadendrites, up to a number equal to their Constitution.</p>",
     "source": {

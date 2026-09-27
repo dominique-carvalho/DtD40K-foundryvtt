@@ -13,6 +13,9 @@ const foundryGlobals = {
   Item: "readonly",
   ActiveEffect: "readonly",
   ChatMessage: "readonly",
+  Combat: "readonly",
+  Combatant: "readonly",
+  canvas: "readonly",
   Roll: "readonly"
 };
 

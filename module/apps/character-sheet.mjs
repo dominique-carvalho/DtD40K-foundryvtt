@@ -18,6 +18,11 @@ import {
 import { rollAttack } from "../documents/attack-service.mjs";
 import { acquire, endStrain } from "../documents/acquisition-service.mjs";
 import { ADDICTION_LEVELS } from "../config.mjs";
+import { prepareCombatContext } from "./combat-context.mjs";
+import { heroInitiative, useAction } from "../documents/turn-service.mjs";
+import { burnHeroPoint, rest, toggleCondition } from "../documents/condition-service.mjs";
+import { resetSocialScene, socialAttack } from "../documents/social-service.mjs";
+import { addInsanity, fearTest } from "../documents/mental-service.mjs";
 import { needsChoice } from "../rules/race.mjs";
 import { buildDots, filterSkills, nextBaseValue, sanitizeDerivedMods } from "../rules/sheet.mjs";
 import { buildCharacteristicPool, buildSkillPool, formatPool, normalizePool } from "../rules/pool.mjs";
@@ -27,7 +32,7 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 const TEMPLATE_ROOT = "systems/dtd40k/templates/actor/parts";
 // Advance mode spends XP (spec 006, research R7); edit mode stays free.
 const MODES = { EDIT: "edit", PLAY: "play", ADVANCE: "advance" };
-const TAB_IDS = ["main", "traits", "equipment", "class"];
+const TAB_IDS = ["main", "traits", "equipment", "combat", "class"];
 
 /**
  * Split a specialties list into the stored ones (editable) and those added by feat effects.
@@ -105,7 +110,17 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       unsocket: CharacterSheet.#onUnsocket,
       endStrain: CharacterSheet.#onEndStrain,
       clearAttempts: CharacterSheet.#onClearAttempts,
-      endCreation: CharacterSheet.#onEndCreation
+      endCreation: CharacterSheet.#onEndCreation,
+      useAction: CharacterSheet.#onUseAction,
+      toggleCondition: CharacterSheet.#onToggleCondition,
+      heroInitiative: CharacterSheet.#onHeroInitiative,
+      burnHeroPoint: CharacterSheet.#onBurnHeroPoint,
+      restActor: CharacterSheet.#onRest,
+      fearTest: CharacterSheet.#onFearTest,
+      socialAttack: CharacterSheet.#onSocialAttack,
+      newSocialScene: CharacterSheet.#onNewSocialScene,
+      addDerangement: CharacterSheet.#onAddDerangement,
+      removeDerangement: CharacterSheet.#onRemoveDerangement
     }
   };
 
@@ -125,6 +140,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     main: { template: `${TEMPLATE_ROOT}/main.hbs` },
     traits: { template: `${TEMPLATE_ROOT}/traits.hbs` },
     equipment: { template: `${TEMPLATE_ROOT}/equipment.hbs` },
+    combat: { template: `${TEMPLATE_ROOT}/combat.hbs` },
     class: { template: `${TEMPLATE_ROOT}/class.hbs` },
     footer: { template: `${TEMPLATE_ROOT}/footer.hbs` }
   };
@@ -222,6 +238,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       isGM: game.user.isGM,
       classContext: await prepareClassContext(actor),
       equipment: prepareEquipmentContext(actor),
+      combatTab: prepareCombatContext(actor),
       addictionOptions: ADDICTION_LEVELS.map((key, value) => ({ value, label: game.i18n.localize(`DTD.Addiction.${key}`) })),
       currentClass: getCurrentClass(actor)?.name ?? "",
       hasClasses: system.classState.hasClasses,
@@ -394,6 +411,17 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     bind(".quantity-input", (input) => setQuantity(this.document, input.dataset.itemId, input.value));
     bind(".socket-select", (select) => select.value && socketHearthstone(this.document, select.dataset.itemId, select.value));
     bind(".addiction-select", (select) => setAddiction(this.document, select.dataset.name, Number(select.value)));
+    // Combat tab (spec 008): the GM edits Critical Damage; owners add Insanity points.
+    bind(".critical-input", (input) => game.user.isGM && this.document.update({ "system.critical.value": Math.max(0, Number(input.value) || 0) }));
+    bind(".insanity-add", (input) => Number(input.value) > 0 && addInsanity(this.document, Number(input.value)));
+    for (const selector of [".combat-weapon-select", ".fear-rating", ".social-characteristic", ".social-skill", ".derangement-severity", ".derangement-name"]) {
+      for (const control of this.element.querySelectorAll(selector)) control.addEventListener("change", (event) => event.stopPropagation());
+    }
+  }
+
+  /** Value of a control of the Combat tab. */
+  #combatControl(selector) {
+    return this.element.querySelector(selector)?.value ?? "";
   }
 
   /** Pressing Enter in a specialty field adds it instead of submitting the form. */
@@ -678,6 +706,97 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
    */
   static #onOpenAsset(event, target) {
     this.document.items.get(target.dataset.itemId)?.sheet.render(true);
+  }
+
+  /**
+   * Use a combat action with the weapon chosen in the tab (spec 008, FR-006).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onUseAction(event, target) {
+    await useAction(this.document, target.dataset.key, { weaponId: this.#combatControl(".combat-weapon-select") });
+  }
+
+  /**
+   * Turn a condition on or off (spec 008, FR-013).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onToggleCondition(event, target) {
+    if (this.document.isOwner) await toggleCondition(this.document, target.dataset.status);
+  }
+
+  /**
+   * Hero Point on initiative: the die counts as 10 (spec 008, FR-005).
+   * @this {CharacterSheet}
+   */
+  static async #onHeroInitiative() {
+    await heroInitiative(this.document);
+  }
+
+  /**
+   * Burn a Hero Point to survive (spec 008, FR-016).
+   * @this {CharacterSheet}
+   */
+  static async #onBurnHeroPoint() {
+    if (this.document.isOwner) await burnHeroPoint(this.document);
+  }
+
+  /**
+   * GM rest dialog (spec 008, FR-017).
+   * @this {CharacterSheet}
+   */
+  static async #onRest() {
+    await rest(this.document);
+  }
+
+  /**
+   * Fear Test with the chosen rating (spec 008, FR-019).
+   * @this {CharacterSheet}
+   */
+  static async #onFearTest() {
+    await fearTest(this.document, Number(this.#combatControl(".fear-rating")) || 1);
+  }
+
+  /**
+   * Social attack against the targeted character (spec 008, FR-018).
+   * @this {CharacterSheet}
+   */
+  static async #onSocialAttack() {
+    await socialAttack(this.document, { characteristic: this.#combatControl(".social-characteristic") || "fel", skill: this.#combatControl(".social-skill") || "persuasion" });
+  }
+
+  /**
+   * New scene for social combat: Resolve drained and Jaded reset — GM only.
+   * @this {CharacterSheet}
+   */
+  static async #onNewSocialScene() {
+    if (game.user.isGM) await resetSocialScene(this.document);
+  }
+
+  /**
+   * Record a derangement (spec 008, FR-020).
+   * @this {CharacterSheet}
+   */
+  static async #onAddDerangement() {
+    const name = this.#combatControl(".derangement-name").trim();
+    if (!name) return;
+    const list = [...this.document._source.system.insanity.derangements, { name, severity: this.#combatControl(".derangement-severity") || "minor" }];
+    await this.document.update({ "system.insanity.derangements": list });
+  }
+
+  /**
+   * Remove a derangement.
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRemoveDerangement(event, target) {
+    const list = [...this.document._source.system.insanity.derangements];
+    list.splice(Number(target.dataset.index), 1);
+    await this.document.update({ "system.insanity.derangements": list });
   }
 
   /**

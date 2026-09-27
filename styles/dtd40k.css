@@ -1928,3 +1928,31 @@
 .dtd40k .deity-list li {
   margin: 0.15rem 0;
 }
+
+.dtd40k :is(.alignment-section, .backgrounds-section) .section-title {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.dtd40k .alignment-deity {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.dtd40k .background-row input[type="number"] {
+  width: 3rem;
+}
+
+.dtd40k :is(.background-add, .inheritance-picks) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  align-items: center;
+  margin: 0.3rem 0;
+}
+
+.dtd40k .inheritance-picks input[type="number"] {
+  width: 3rem;
+}

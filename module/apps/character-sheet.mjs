@@ -26,6 +26,9 @@ import { addInsanity, fearTest } from "../documents/mental-service.mjs";
 import { prepareMagicContext } from "./magic-context.mjs";
 import { castSpell, endSustained, learnCombo, learnSpell } from "../documents/magic-service.mjs";
 import { prepareMartialContext } from "./martial-context.mjs";
+import { prepareAlignmentContext, prepareBackgroundContext } from "./background-context.mjs";
+import { addInstance, raiseBackground, rollContacts, setInheritancePicks } from "../documents/background-service.mjs";
+import { cureDegeneration, rollAlignmentCheck, setAlignment } from "../documents/alignment-service.mjs";
 import { buildAttack, deleteAttack, newScene as newMartialScene, useAttack } from "../documents/martial-service.mjs";
 import { needsChoice } from "../rules/race.mjs";
 import { buildDots, filterSkills, nextBaseValue, sanitizeDerivedMods } from "../rules/sheet.mjs";
@@ -138,7 +141,15 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       deleteMartialAttack: CharacterSheet.#onDeleteMartialAttack,
       useMartialAttack: CharacterSheet.#onUseMartialAttack,
       martialNewScene: CharacterSheet.#onMartialNewScene,
-      toggleMartialPassive: CharacterSheet.#onToggleMartialPassive
+      toggleMartialPassive: CharacterSheet.#onToggleMartialPassive,
+      raiseBackground: CharacterSheet.#onRaiseBackground,
+      addBackgroundInstance: CharacterSheet.#onAddBackgroundInstance,
+      saveInheritance: CharacterSheet.#onSaveInheritance,
+      rollContacts: CharacterSheet.#onRollContacts,
+      alignmentCheck: CharacterSheet.#onAlignmentCheck,
+      alignmentRecover: CharacterSheet.#onAlignmentCheck,
+      openDeity: CharacterSheet.#onOpenAsset,
+      cureDegeneration: CharacterSheet.#onCureDegeneration
     }
   };
 
@@ -175,7 +186,9 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     `${TEMPLATE_ROOT}/assets.hbs`,
     `${TEMPLATE_ROOT}/feats.hbs`,
     `${TEMPLATE_ROOT}/advance-button.hbs`,
-    "systems/dtd40k/templates/dialog/martial-builder-row.hbs"
+    "systems/dtd40k/templates/dialog/martial-builder-row.hbs",
+    `${TEMPLATE_ROOT}/alignment.hbs`,
+    `${TEMPLATE_ROOT}/backgrounds.hbs`
   ];
 
   /** Skill search state, kept across re-renders. */
@@ -262,6 +275,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       combatTab: prepareCombatContext(actor),
       magic: prepareMagicContext(actor, { isAdvance }),
       martial: await prepareMartialContext(actor, { isAdvance }),
+      backgroundsTab: prepareBackgroundContext(actor, { isEdit }),
+      alignmentTab: prepareAlignmentContext(actor),
       addictionOptions: ADDICTION_LEVELS.map((key, value) => ({ value, label: game.i18n.localize(`DTD.Addiction.${key}`) })),
       currentClass: getCurrentClass(actor)?.name ?? "",
       hasClasses: system.classState.hasClasses,
@@ -395,6 +410,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       else if (item.type === "feat" && item.system.category === "exaltedAsset") apply = () => addExaltedAsset(this.actor, item);
       else if (["weapon", "armor", "gear"].includes(item.type)) apply = () => addEquipment(this.actor, item);
       else if (item.type === "spell") apply = () => learnSpell(this.actor, item);
+      else if (item.type === "deity") apply = () => setAlignment(this.actor, item);
       if (apply) return this.actor.isOwner ? apply() : null;
     }
     return super._onDropItem(event, item);
@@ -438,7 +454,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     // Combat tab (spec 008): the GM edits Critical Damage; owners add Insanity points.
     bind(".critical-input", (input) => game.user.isGM && this.document.update({ "system.critical.value": Math.max(0, Number(input.value) || 0) }));
     bind(".insanity-add", (input) => Number(input.value) > 0 && addInsanity(this.document, Number(input.value)));
-    for (const selector of [".martial-weapon-select", ".combo-pick", ".combo-name", ".combat-weapon-select", ".fear-rating", ".social-characteristic", ".social-skill", ".derangement-severity", ".derangement-name"]) {
+    for (const selector of [".background-instance-name", ".inheritance-pick", ".martial-weapon-select", ".combo-pick", ".combo-name", ".combat-weapon-select", ".fear-rating", ".social-characteristic", ".social-skill", ".derangement-severity", ".derangement-name"]) {
       for (const control of this.element.querySelectorAll(selector)) control.addEventListener("change", (event) => event.stopPropagation());
     }
   }
@@ -730,6 +746,68 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
    */
   static #onOpenAsset(event, target) {
     this.document.items.get(target.dataset.itemId)?.sheet.render(true);
+  }
+
+  /**
+   * Raise a Background by one dot (spec 011, FR-006).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRaiseBackground(event, target) {
+    await raiseBackground(this.document, target.dataset.key, { id: target.dataset.id ?? "" });
+  }
+
+  /**
+   * A new Artifact or Backing with the name typed beside the button.
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onAddBackgroundInstance(event, target) {
+    const key = target.dataset.key;
+    const name = this.element.querySelector(`.background-instance-name[data-key="${key}"]`)?.value ?? "";
+    if (!name.trim()) return ui.notifications.warn(game.i18n.localize("DTD.Background.NeedName"));
+    await addInstance(this.document, key, name);
+  }
+
+  /**
+   * Save the Inheritance picks typed in the section (spec 011, FR-009).
+   * @this {CharacterSheet}
+   */
+  static async #onSaveInheritance() {
+    const picks = Object.fromEntries([...this.element.querySelectorAll(".inheritance-pick")].map((input) => [input.dataset.key, Number(input.value) || 0]));
+    await setInheritancePicks(this.document, picks);
+  }
+
+  /**
+   * Contacts roll with Charisma or Fellowship (spec 011, FR-010).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRollContacts(event, target) {
+    if (this.document.isOwner) await rollContacts(this.document, target.dataset.characteristic);
+  }
+
+  /**
+   * Alignment Check or raising Devotion (spec 011, FR-012, FR-013).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onAlignmentCheck(event, target) {
+    await rollAlignmentCheck(this.document, { recover: target.dataset.action === "alignmentRecover" });
+  }
+
+  /**
+   * Cure the Degenerations of a Devotion point (GM, spec 011).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onCureDegeneration(event, target) {
+    if (game.user.isGM) await cureDegeneration(this.document, Number(target.dataset.point));
   }
 
   /**

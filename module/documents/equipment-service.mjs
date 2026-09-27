@@ -48,9 +48,13 @@ export async function addEquipment(actor, item, { starting, overrides = {} } = {
   }
   if (asStarting) {
     const rarity = data.system.piece ? rarityStep(data.system.rarity, -1) : data.system.rarity;
-    const slot = startingSlotFor(rarity, data.system.craftsmanship);
-    const slots = startingSlots(actor.items.filter((entry) => EQUIPMENT_TYPES.includes(entry.type)));
-    const free = slot && slots[slot].used < slots[slot].max;
+    // Inheritance picks add starting picks (spec 011); "any non-artifact item" takes what fits nowhere else.
+    const slots = startingSlots(actor.items.filter((entry) => EQUIPMENT_TYPES.includes(entry.type)), actor.system.backgrounds?.inheritancePicks ?? {});
+    let slot = startingSlotFor(rarity, data.system.craftsmanship, Object.keys(slots));
+    const artifact = Boolean(data.system.material) || data.system.category === "wonder";
+    const open = (key) => key && slots[key] && slots[key].used < slots[key].max;
+    if (!open(slot) && !artifact && open("anyNonArtifact")) slot = "anyNonArtifact";
+    const free = open(slot);
     if (!free) {
       const message = slot ? game.i18n.format("DTD.Equipment.NoSlot", { slot: localize(`DTD.Rarity.${slot}`) }) : localize("DTD.Equipment.NotStartingRarity");
       ui.notifications.warn(message);

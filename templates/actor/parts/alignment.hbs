@@ -1,0 +1,36 @@
+{{#with alignmentTab as |al|}}
+<section class="alignment-section">
+  <h2 class="section-title">{{localize "DTD.Alignment.Title"}}
+    <span class="hint">{{localize "DTD.Sheet.Devotion"}} <b>{{al.devotion}}</b></span>
+    {{#if al.canRoll}}
+    <a class="pool-button" data-action="alignmentCheck"><i class="fa-solid fa-dice-d10" inert></i> {{localize "DTD.Alignment.Check"}}</a>
+    <a class="pool-button" data-action="alignmentRecover" data-tooltip="{{localize "DTD.Alignment.RecoverHint"}}"><i class="fa-solid fa-hands-praying" inert></i> {{localize "DTD.Alignment.Recover"}}</a>
+    {{/if}}
+  </h2>
+  {{#if al.outOfPlay}}<p class="notification error">{{localize "DTD.Alignment.OutOfPlayBadge"}}</p>{{/if}}
+  {{#if al.deity}}
+  <div class="alignment-deity">
+    <img class="race-img" src="{{al.deity.img}}" alt="{{al.deity.name}}">
+    <div>
+      <p><a data-action="openDeity" data-item-id="{{al.deity.id}}"><b>{{al.deity.name}}</b></a> <span class="hint">{{al.deity.pantheon}}</span>
+        {{#if al.changes}}<span class="feat-badge">{{localize "DTD.Alignment.Changed"}}</span>{{/if}}</p>
+      <ul class="deity-list">{{#each al.deity.commandments as |c|}}<li>{{c}}</li>{{/each}}</ul>
+      <p class="quality-tags">{{#each al.deity.keywords as |k|}}<span class="tag">{{k}}</span>{{/each}}</p>
+    </div>
+  </div>
+  {{else}}
+  <p class="race-drop-hint"><i class="fa-solid fa-hand-pointer" inert></i> {{localize "DTD.Alignment.DropHint"}}</p>
+  {{/if}}
+  {{#if al.degenerations.length}}
+  <h3>{{localize "DTD.Alignment.Degenerations"}}</h3>
+  <ul class="equipment-list">
+    {{#each al.degenerations as |d|}}
+    <li class="equipment-row"><span class="equipment-name"><b>{{d.point}}</b> · {{d.names}}</span>
+      {{#if @root.isGM}}<a data-action="cureDegeneration" data-point="{{d.point}}" data-tooltip="{{localize "DTD.Alignment.Cure"}}"><i class="fa-solid fa-heart-circle-check" inert></i></a>{{/if}}
+    </li>
+    {{/each}}
+  </ul>
+  {{#if al.blocked}}<p class="hint">{{localize "DTD.Alignment.BlockedXp"}}: {{al.blocked}}</p>{{/if}}
+  {{/if}}
+</section>
+{{/with}}

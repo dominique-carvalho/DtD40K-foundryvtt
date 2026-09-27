@@ -1,0 +1,18 @@
+<div class="dtd40k spell-card-extra">
+  <p class="roll-card-note">{{strength}}{{#if success}}{{#if raises}} · {{localize "DTD.Magic.Raises" raises=raises}}{{/if}}{{/if}}</p>
+  {{#each rows as |r|}}
+  <section class="spell-row">
+    <p><b>{{r.name}}</b>{{#if r.damageText}} · {{r.damageText}}{{/if}}</p>
+    {{#if @root.success}}
+    <p>{{r.effect}}</p>
+    {{#if @root.raises}}{{#if r.perRaise}}<p class="hint">{{localize "DTD.Magic.PerRaise"}}: {{r.perRaise}}</p>{{/if}}{{/if}}
+    {{/if}}
+  </section>
+  {{/each}}
+  {{#unless success}}<p class="notification warning">{{localize "DTD.Magic.Failed"}}</p>{{/unless}}
+  {{#if phenomena}}<p class="notification warning">{{localize "DTD.Magic.PhenomenaRolled" mod=phenomenaMod}}</p>{{/if}}
+  <div class="defense-buttons">
+    {{#if canDamage}}<button type="button" data-dtd-action="spellDamage"><i class="fa-solid fa-burst" inert></i> {{localize "DTD.Attack.RollDamage"}}</button>{{/if}}
+    {{#if canResist}}<button type="button" data-dtd-action="resistSpell"><i class="fa-solid fa-shield-halved" inert></i> {{localize "DTD.Magic.Resist"}}</button>{{/if}}
+  </div>
+</div>

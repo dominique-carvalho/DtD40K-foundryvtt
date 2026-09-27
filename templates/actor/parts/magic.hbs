@@ -1,0 +1,66 @@
+<section class="tab magic-tab {{tabs.magic.cssClass}}" data-group="primary" data-tab="magic">
+  {{#with magic as |m|}}
+  <section class="magic-state">
+    <p class="combat-status-line">
+      <span>{{localize "DTD.Magic.CasterLevel"}}: <b>{{m.casterLevel}}</b></span>
+      <span class="feat-badge{{#unless m.sanctioned}} warning{{/unless}}">{{#if m.sanctioned}}{{localize "DTD.Magic.Sanctioned"}}{{else}}{{localize "DTD.Magic.Unsanctioned"}}{{/if}}</span>
+      {{#if m.hasImplement}}<span class="feat-badge granted">{{localize "DTD.Magic.ImplementEquipped"}}</span>{{/if}}
+    </p>
+  </section>
+
+  {{#each m.schools as |s|}}
+  <section class="magic-school">
+    <h2 class="section-title">{{s.label}} <span class="hint">({{s.characteristic}})</span> · <b>{{s.value}}</b>
+      {{> "systems/dtd40k/templates/actor/parts/advance-button.hbs" advance=s.advance action="advanceSchool" key=s.key}}
+      <span class="feat-badge{{#if s.over}} warning{{/if}}">{{localize "DTD.Magic.Slots" used=s.slots.used max=s.slots.max}}</span>
+    </h2>
+    <ul class="equipment-list">
+      {{#each s.spells as |sp|}}
+      <li class="equipment-row">
+        <span class="equipment-name"><a data-action="openSpell" data-item-id="{{sp.id}}">{{sp.name}}</a>
+          <span class="hint">{{localize "DTD.Class.Level"}} {{sp.level}} · TN {{sp.tn}} · {{sp.action}}</span>
+          {{#if sp.comboOk}}<span class="tag">Combo-OK</span>{{/if}}
+        </span>
+        {{#if @root.canEditRace}}
+        <a class="pool-button" data-action="castSpell" data-item-id="{{sp.id}}"><i class="fa-solid fa-wand-sparkles" inert></i> {{localize "DTD.Magic.Cast"}}</a>
+        <a class="asset-remove" data-action="removeSpell" data-item-id="{{sp.id}}" data-tooltip="{{localize "DTD.Magic.Forget"}}"><i class="fa-solid fa-trash" inert></i></a>
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/each}}
+  {{#if m.empty}}<p class="race-drop-hint"><i class="fa-solid fa-hand-pointer" inert></i> {{localize "DTD.Magic.DropHint"}}</p>{{/if}}
+
+  {{#if m.sustained.length}}
+  <section class="magic-sustained">
+    <h2 class="section-title">{{localize "DTD.Magic.Sustained"}}</h2>
+    <ul class="equipment-list">
+      {{#each m.sustained as |x|}}
+      <li class="equipment-row"><span class="equipment-name">{{x.name}} <span class="hint">{{localize (concat "DTD.Magic.Action." x.action)}}</span></span>
+        {{#if @root.canEditRace}}<a data-action="endSustained" data-id="{{x.id}}" data-tooltip="{{localize "DTD.Magic.EndSustained"}}"><i class="fa-solid fa-stop" inert></i></a>{{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
+
+  <section class="magic-combos">
+    <h2 class="section-title">{{localize "DTD.Magic.Combos"}}</h2>
+    <ul class="equipment-list">
+      {{#each m.combos as |c|}}
+      <li class="equipment-row"><span class="equipment-name">{{c.name}} <span class="hint">{{c.text}}</span></span>
+        {{#if @root.canEditRace}}<a class="pool-button" data-action="castCombo" data-id="{{c.id}}"><i class="fa-solid fa-wand-sparkles" inert></i> {{localize "DTD.Magic.Cast"}}</a>{{/if}}
+      </li>
+      {{/each}}
+    </ul>
+    {{#if (and @root.canEditRace m.comboCandidates.length)}}
+    <div class="combo-builder">
+      {{#each m.comboCandidates as |c|}}<label><input type="checkbox" class="combo-pick" value="{{c.id}}"> {{c.name}} ({{c.level}})</label>{{/each}}
+      <input type="text" class="combo-name" placeholder="{{localize "DTD.Magic.ComboName"}}">
+      <button type="button" data-action="learnCombo"><i class="fa-solid fa-link" inert></i> {{localize "DTD.Magic.LearnCombo"}}</button>
+    </div>
+    {{/if}}
+  </section>
+  {{/with}}
+</section>

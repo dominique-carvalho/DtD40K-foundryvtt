@@ -1,0 +1,48 @@
+<div class="dtd40k roll-dialog cast-dialog">
+  <div class="form-group">
+    <label for="dtd-cast-strength">{{localize "DTD.Magic.StrengthLabel"}}</label>
+    <div class="form-fields">
+      <select id="dtd-cast-strength" name="strength">
+        {{#each strengths as |s|}}<option value="{{s.key}}"{{#if s.selected}} selected{{/if}}>{{localize (concat "DTD.Magic.Strength." s.key)}}</option>{{/each}}
+      </select>
+    </div>
+    <p class="hint">{{#if tested}}{{localize "DTD.Magic.SanctionedHint"}}{{else}}{{localize "DTD.Magic.UnsanctionedHint"}}{{/if}}{{#if combo}} {{localize "DTD.Magic.ComboHint"}}{{/if}}</p>
+  </div>
+  <div class="form-group">
+    <label for="dtd-cast-push">{{localize "DTD.Magic.Push"}}</label>
+    <div class="form-fields"><input id="dtd-cast-push" type="number" name="push" value="0" min="0" max="{{maxPush}}" step="1"></div>
+    <p class="hint">{{localize "DTD.Magic.PushHint" max=maxPush}}</p>
+  </div>
+  <div class="form-group">
+    <label for="dtd-cast-tn">{{localize "DTD.Roll.Dialog.TN"}}</label>
+    <div class="form-fields"><input id="dtd-cast-tn" type="number" name="tn" value="{{tn}}" min="0" step="1" placeholder="—"></div>
+  </div>
+  <div class="form-group">
+    <label>{{localize "DTD.Roll.Dialog.DiceMod"}}</label>
+    <div class="form-fields dice-mod">
+      <input type="number" name="rolledMod" value="0" step="1" aria-label="{{localize "DTD.Roll.Dialog.RolledMod"}}">
+      <span>k</span>
+      <input type="number" name="keptMod" value="0" step="1" aria-label="{{localize "DTD.Roll.Dialog.KeptMod"}}">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="dtd-cast-raises">{{localize "DTD.Roll.Dialog.FreeRaises"}}</label>
+    <div class="form-fields"><input id="dtd-cast-raises" type="number" name="freeRaises" value="0" min="0" step="1"></div>
+  </div>
+  <div class="form-group">
+    <label for="dtd-cast-stunt">{{localize "DTD.Roll.Dialog.StuntDice"}}</label>
+    <div class="form-fields"><input id="dtd-cast-stunt" type="number" name="stuntDice" value="0" min="0" max="3" step="1"></div>
+  </div>
+  {{#if implementFocus}}
+  <div class="form-group">
+    <label for="dtd-cast-implement">{{localize "DTD.Magic.ImplementReroll"}}</label>
+    <div class="form-fields"><input id="dtd-cast-implement" type="checkbox" name="implementReroll" checked></div>
+  </div>
+  {{/if}}
+  <div class="form-group">
+    <label for="dtd-cast-mode">{{localize "DTD.Roll.Dialog.RollMode"}}</label>
+    <div class="form-fields">
+      <select id="dtd-cast-mode" name="rollMode">{{#each rollModes as |mode|}}<option value="{{mode.key}}"{{#if mode.selected}} selected{{/if}}>{{localize mode.label}}</option>{{/each}}</select>
+    </div>
+  </div>
+</div>

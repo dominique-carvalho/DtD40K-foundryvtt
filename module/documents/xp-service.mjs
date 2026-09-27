@@ -1,4 +1,4 @@
-import { CHARACTERISTICS, MAX_RATING, SKILLS } from "../config.mjs";
+import { CHARACTERISTICS, MAGIC_SCHOOLS, MAX_RATING, SKILLS } from "../config.mjs";
 import { fullName } from "../rules/feat.mjs";
 import { advanceCost, canAdvance, undoPlan } from "../rules/xp.mjs";
 import { getExaltation, setPowerStat } from "./exaltation-service.mjs";
@@ -72,14 +72,17 @@ export async function recordEntry(actor, entry) {
  * Buy one point of a characteristic, a skill or the Power Stat in advance mode (FR-013, FR-014).
  * The stored (base) value goes up by one; the cost follows the class lists and Free Study.
  * @param {Actor} actor
- * @param {"characteristic"|"skill"|"powerStat"} kind
+ * @param {"characteristic"|"skill"|"powerStat"|"school"} kind
  * @param {string} [key]
  * @returns {Promise<boolean>}
  */
 export async function advance(actor, kind, key = "") {
   const label = kind === "characteristic" ? localize(CHARACTERISTICS[key].label)
     : kind === "skill" ? localize(SKILLS[key].label)
-      : getExaltation(actor)?.system.powerStat.name ?? localize("DTD.Exaltation.PowerStat");
+      : kind === "school" ? localize(MAGIC_SCHOOLS[key].label)
+        : getExaltation(actor)?.system.powerStat.name ?? localize("DTD.Exaltation.PowerStat");
+  // Magic Schools (spec 009): stored rank, capped at the Level by canAdvance.
+  const schoolPath = `system.magic.schools.${key}.value`;
 
   let from;
   if (kind === "powerStat") {
@@ -91,6 +94,8 @@ export async function advance(actor, kind, key = "") {
       ui.notifications.warn(game.i18n.format("DTD.XP.Error.atMax", { label }));
       return false;
     }
+  } else if (kind === "school") {
+    from = foundry.utils.getProperty(actor._source, schoolPath);
   } else {
     const path = `system.${kind === "characteristic" ? "characteristics" : "skills"}.${key}.value`;
     from = foundry.utils.getProperty(actor._source, path);
@@ -101,7 +106,7 @@ export async function advance(actor, kind, key = "") {
     }
   }
 
-  const check = canAdvance({ kind, key, ...context(actor) });
+  const check = canAdvance({ kind, key, ...context(actor), level: actor.system.level, from });
   let cost = advanceCost(kind, from) * check.multiplier;
   if (!check.allowed) {
     if (!(await refuse(check.reason, { label }))) return false;
@@ -112,6 +117,7 @@ export async function advance(actor, kind, key = "") {
   }
 
   if (kind === "powerStat") await setPowerStat(actor, from + 1);
+  else if (kind === "school") await actor.update({ [schoolPath]: from + 1 });
   else await actor.update({ [`system.${kind === "characteristic" ? "characteristics" : "skills"}.${key}.value`]: from + 1 });
   await recordEntry(actor, { kind, key, label: `${label} ${from} → ${from + 1}`, from, to: from + 1, cost });
   return true;
@@ -168,11 +174,15 @@ export async function undoXp(actor, entryId) {
     const current = entry.kind === "powerStat" ? exaltation?.system.powerStat.value ?? null
       : entry.kind === "characteristic" || entry.kind === "skill"
         ? foundry.utils.getProperty(actor._source, `system.${entry.kind === "characteristic" ? "characteristics" : "skills"}.${entry.key}.value`)
-        : null;
+        : entry.kind === "school" ? foundry.utils.getProperty(actor._source, `system.magic.schools.${entry.key}.value`) : null;
+    // A learned Spell Combo leaves with its purchase (spec 009).
+    if (entry.kind === "combo") {
+      await actor.update({ "system.magic.combos": actor._source.system.magic.combos.filter((c) => c.id !== entry.key) });
+    }
     const plan = undoPlan(entry, current);
     if (plan.restore?.path === "powerStat") await exaltation.update({ "system.powerStat.value": plan.restore.value });
     else if (plan.restore) await actor.update({ [plan.restore.path]: plan.restore.value });
-    else if (entry.kind !== "feat" && entry.kind !== "asset") ui.notifications.info(localize("DTD.XP.RefundOnly"));
+    else if (!["feat", "asset", "combo"].includes(entry.kind)) ui.notifications.info(localize("DTD.XP.RefundOnly"));
     if (plan.deleteItem && actor.items.has(plan.deleteItem)) await actor.items.get(plan.deleteItem).delete();
   }
   await actor.update({ "system.xp.log": actor._source.system.xp.log.filter((item) => item.id !== entryId) });

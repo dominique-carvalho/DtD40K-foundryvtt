@@ -83,6 +83,11 @@
         "htmlFields": [
           "description"
         ]
+      },
+      "spell": {
+        "htmlFields": [
+          "description"
+        ]
       }
     }
   },
@@ -158,6 +163,17 @@
       "label": "Combat Tables",
       "path": "packs/combat-tables",
       "type": "RollTable",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "spells",
+      "label": "Spells",
+      "path": "packs/spells",
+      "type": "Item",
       "system": "dtd40k",
       "ownership": {
         "PLAYER": "OBSERVER",

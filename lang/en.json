@@ -10,7 +10,8 @@
       "class": "Class",
       "weapon": "Weapon",
       "armor": "Armor",
-      "gear": "Gear"
+      "gear": "Gear",
+      "spell": "Spell"
     }
   },
   "DTD": {
@@ -120,7 +121,8 @@
         "traits": "Traits",
         "class": "Class & XP",
         "equipment": "Equipment",
-        "combat": "Combat"
+        "combat": "Combat",
+        "magic": "Magic"
       },
       "SocialInitiative": "Social Initiative",
       "Fatigue": "Fatigue",
@@ -130,7 +132,8 @@
       "FromFeatShort": "Granted by a feat — removed with it",
       "Class": "DtD Class Sheet",
       "ModeAdvance": "Advance",
-      "Equipment": "DtD Equipment Sheet"
+      "Equipment": "DtD Equipment Sheet",
+      "Spell": "DtD Spell Sheet"
     },
     "Roll": {
       "Success": "Success",
@@ -582,7 +585,8 @@
         "ownedOrBlocked": "Already owned, or excluded by another choice.",
         "atMax": "{label} is already at the maximum.",
         "notEnough": "Not enough XP: costs {cost}, {available} available.",
-        "onlyLast": "Only the GM can undo entries other than the last one."
+        "onlyLast": "Only the GM can undo entries other than the last one.",
+        "atCap": "School ranks cannot exceed the character's Level."
       },
       "UndoAwardConfirm": "Remove the award {label} ({cost} XP)?"
     },
@@ -1167,6 +1171,135 @@
         "severe": "Severe",
         "acute": "Acute"
       }
+    },
+    "Magic": {
+      "School": {
+        "abjuration": "Abjuration",
+        "conjuration": "Conjuration",
+        "divination": "Divination",
+        "enchantment": "Enchantment",
+        "evocation": "Evocation",
+        "healing": "Healing",
+        "illusion": "Illusion",
+        "necromancy": "Necromancy",
+        "transmutation": "Transmutation"
+      },
+      "Keyword": {
+        "attack": {
+          "label": "Attack",
+          "hint": "Counts as an attack on the target."
+        },
+        "comboOk": {
+          "label": "Combo-OK",
+          "hint": "May be included in a Spell Combo."
+        },
+        "focus": {
+          "label": "Focus",
+          "hint": "Needs a physical focus item; destroying it ends the spell at once."
+        },
+        "languageDependent": {
+          "label": "Language Dependent",
+          "hint": "Only works if caster and target share a language."
+        },
+        "material": {
+          "label": "Material",
+          "hint": "Needs material components that the casting uses up."
+        },
+        "mindAffecting": {
+          "label": "Mind-Affecting",
+          "hint": "Targets the mind: only sentient targets."
+        },
+        "rangedTouch": {
+          "label": "Ranged Touch",
+          "hint": "Needs a successful ranged attack (Ballistics + Level) to land."
+        },
+        "savingThrow": {
+          "label": "Saving Throw",
+          "hint": "The target may resist against the casting total; resisting reveals the spell, Subtle or not."
+        },
+        "social": {
+          "label": "Social",
+          "hint": "For social scenes; not usable in combat."
+        },
+        "somatic": {
+          "label": "Somatic",
+          "hint": "Needs free movement; not while bound, grappled or restrained."
+        },
+        "subtle": {
+          "label": "Subtle",
+          "hint": "Not obvious; other casters notice it with Arcana + Wisdom TN 20."
+        },
+        "touch": {
+          "label": "Touch",
+          "hint": "The caster touches the target; an unwilling one takes an unarmed Brawl attack."
+        },
+        "verbal": {
+          "label": "Verbal",
+          "hint": "The caster must speak clearly and loudly; not while silenced."
+        }
+      },
+      "Action": {
+        "half": "Half Action",
+        "full": "Full Action",
+        "reaction": "Reaction",
+        "free": "Free Action",
+        "halfOrReaction": "Half Action or Reaction"
+      },
+      "Strength": {
+        "fettered": "Fettered",
+        "unfettered": "Unfettered",
+        "push": "Push"
+      },
+      "Refused": {
+        "alreadyKnown": "{spell} is already known.",
+        "levelTooHigh": "{spell} is above the character's {school} rank.",
+        "noSlot": "No free {school} spell slot for {spell}."
+      },
+      "SchoolLabel": "School",
+      "Test": "Test",
+      "ActionLabel": "Action",
+      "Duration": "Duration",
+      "Target": "Target",
+      "Area": "Area",
+      "Save": "Resisted with",
+      "PerRaise": "Per raise",
+      "PerLevel": "per Level",
+      "TnMentalDefense": "the target's Mental Defense",
+      "CasterLevel": "Caster level",
+      "Sanctioned": "Sanctioned (Tested)",
+      "Unsanctioned": "Unsanctioned",
+      "ImplementEquipped": "Implement equipped",
+      "Slots": "Spells {used}/{max}",
+      "Cast": "Cast",
+      "Forget": "Forget spell",
+      "ForgetConfirm": "Forget {spell}? The slot becomes free.",
+      "DropHint": "Buy school ranks in Advance mode, then drag spells from the Spells compendium onto the sheet.",
+      "Sustained": "Sustained spells",
+      "EndSustained": "End the spell",
+      "Combos": "Spell Combos",
+      "ComboName": "Combo name",
+      "LearnCombo": "Learn combo",
+      "ComboNeedsOk": "A combo needs two or more known Combo-OK spells.",
+      "ComboNotAtCreation": "Spell Combos cannot be bought during character creation.",
+      "Learn": "Learn spell",
+      "Blocked": "{spell} cannot be cast now ({keywords}).",
+      "CastTitle": "Focus Power: {spell}",
+      "BadPush": "Push must be between 1 and the maximum.",
+      "StrengthLabel": "Casting strength",
+      "Push": "Push",
+      "PushHint": "Extra school ranks, up to {max}; Phenomena always happen.",
+      "SanctionedHint": "Sanctioned: Push up to 3, Phenomena +5 per point.",
+      "UnsanctionedHint": "Unsanctioned: Push up to 4, Phenomena +10 per point; Unfettered adds +5 × spell level.",
+      "ComboHint": "Combos cannot be Fettered and add +5 per spell to Phenomena.",
+      "ImplementReroll": "Implement Focus: reroll a die",
+      "Raises": "{raises} raise(s)",
+      "Failed": "The spell fails.",
+      "PhenomenaRolled": "Psychic Phenomena (+{mod}).",
+      "Resist": "Resist",
+      "ResistLabel": "Resist {spell}",
+      "SpellDamage": "spell: Aura instead of armor",
+      "Sustaining": "Sustaining {spell}: the concentration action is spent.",
+      "SustainEnds": "{spell} ends: no action left to sustain it."
     }
   }
 }

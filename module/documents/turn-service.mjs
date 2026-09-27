@@ -34,7 +34,7 @@ export function combatantOf(actor) {
  * @param {{as?: string, count?: number}} [options]  count: reactions spent at once (Multiple Attacks)
  * @returns {Promise<boolean>}
  */
-async function takeAction(actor, action, { as, count = 1 } = {}) {
+export async function takeAction(actor, action, { as, count = 1 } = {}) {
   const combatant = combatantOf(actor);
   if (!combatant) return true;
   let state = combatant.turnState;

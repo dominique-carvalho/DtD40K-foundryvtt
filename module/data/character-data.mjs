@@ -1,4 +1,5 @@
-import { ADDICTION_LEVELS, CHARACTERISTICS, DERIVED_KEYS, SKILLS, STARTING_XP, XP_KINDS } from "../config.mjs";
+import { ADDICTION_LEVELS, CHARACTERISTICS, DERIVED_KEYS, MAGIC_SCHOOLS, SKILLS, STARTING_XP, XP_KINDS } from "../config.mjs";
+import { spellSlots } from "../rules/magic.mjs";
 import { effectiveWealth } from "../rules/acquisition.mjs";
 import { characterLevel } from "../rules/class.mjs";
 import { computeDerived } from "../rules/derived.mjs";
@@ -103,6 +104,13 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
           // Aura against spell damage: from templates, feats and spells only (p. 436).
           aura: integer(0)
         }),
+        // Targets of magic effects only (spec 009): caster level (drugs), Focus Power TN and dice.
+        magic: new SchemaField({
+          casterLevel: integer(0),
+          tn: integer(0),
+          rolled: integer(0),
+          kept: integer(0)
+        }),
         // Targets of equipment effects only (spec 007, research R3/R8).
         armor: new SchemaField({ apAll: integer(0), gizzards: integer(0) }),
         rolls: new SchemaField({
@@ -112,6 +120,24 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
             rolled: integer(0), kept: integer(0), freeRaises: integer(0)
           })])))
         })
+      }),
+      // Magic (spec 009, research R2/R6): school ranks, learned combos and sustained spells.
+      magic: new SchemaField({
+        schools: new SchemaField(Object.fromEntries(Object.keys(MAGIC_SCHOOLS).map((key) => [key, new SchemaField({
+          value: integer(0, { min: 0, max: 6 })
+        })]))),
+        combos: new ArrayField(new SchemaField({
+          id: new StringField({ required: true, blank: false }),
+          name: new StringField({ required: true, blank: false, trim: true }),
+          spells: new ArrayField(new StringField({ required: true, blank: false }))
+        })),
+        sustained: new ArrayField(new SchemaField({
+          id: new StringField({ required: true, blank: false }),
+          name: new StringField({ required: true, blank: true }),
+          spellId: new StringField({ required: true, blank: true }),
+          action: new StringField({ required: true, choices: ["half", "reaction"], initial: "half" }),
+          effects: new ArrayField(new StringField({ required: true, blank: false }))
+        }))
       }),
       // Acquisition (spec 007, research R9): Wealth, windfalls and the active Wealth Strain penalty.
       wealth: new SchemaField({
@@ -176,6 +202,7 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     this.fatigue.max = derived.fatigueMax;
     this.#prepareExaltation();
     this.#prepareCombat();
+    this.#prepareMagic();
   }
 
   /**
@@ -233,6 +260,27 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     // Any Fatigue at all: −1k0 to every Test (p. 443).
     if (this.fatigue.value > 0) rolls.all.rolled -= 1;
     this.wealth.effective = effectiveWealth(this.wealth);
+  }
+
+  /**
+   * Magic state (spec 009, research R2/R3/R7): caster level (the character Level, which the book never defines
+   * otherwise), Sanctioned (the Tested feat), an equipped Implement and the spell slots. Never persisted.
+   */
+  #prepareMagic() {
+    const items = this.parent?.items ?? [];
+    const schools = Object.fromEntries(Object.entries(this.magic.schools).map(([key, s]) => [key, s.value]));
+    const extra = {};
+    for (const feat of items.filter((item) => item.type === "feat" && item.name.startsWith("Spell Book"))) {
+      const key = feat.system.selection?.subcategory?.toLowerCase();
+      if (key in MAGIC_SCHOOLS) extra[key] = (extra[key] ?? 0) + 1;
+    }
+    this.magic.state = {
+      casterLevel: Math.max(1, this.level + this.modifiers.magic.casterLevel),
+      sanctioned: items.some((item) => item.type === "feat" && item.name === "Tested"),
+      hasImplement: items.some((item) => item.type === "gear" && item.name === "Implement" && item.system.equipped),
+      slots: spellSlots({ schools, spells: items.filter((item) => item.type === "spell").map((item) => item.system), extra }),
+      extra
+    };
   }
 
   /**

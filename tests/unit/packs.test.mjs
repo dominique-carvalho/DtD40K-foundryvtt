@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   ASSET_AUTOMATION, ASSET_GROUPS, CHARACTERISTICS, EXALTATION_FORMULAS, RACE_POWER_AUTOMATION, RESOURCE_ACTIONS, SKILLS,
-  RARITIES, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
+  MAGIC_SCHOOLS, RARITIES, SPELL_KEYWORDS, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
 } from "../../module/config.mjs";
 
 /** Every JSON document of a compendium source folder. */
@@ -770,9 +770,9 @@ const tableNamed = (name) => tables.find((doc) => doc.name === name);
 const statusIds = new Set(STATUS_EFFECTS.map((s) => s.id));
 
 describe("combat tables compendium source (spec 008, SC-002)", () => {
-  it("has 20 critical tables, the Shock Table and Mental Traumas in 2 folders", () => {
-    expect(tables).toHaveLength(22);
-    expect(tablePack.filter((doc) => doc._key.startsWith("!folders!"))).toHaveLength(2);
+  it("has 20 critical tables, the Shock Table, Mental Traumas and the two Warp tables (009) in 3 folders", () => {
+    expect(tables).toHaveLength(24);
+    expect(tablePack.filter((doc) => doc._key.startsWith("!folders!"))).toHaveLength(3);
     const criticals = tables.filter((doc) => doc.flags.dtd40k.table.kind === "critical");
     expect(criticals).toHaveLength(20);
     for (const type of ["energy", "explosive", "impact", "rending"]) {
@@ -801,5 +801,56 @@ describe("combat tables compendium source (spec 008, SC-002)", () => {
         for (const id of result.flags.dtd40k.effect.statuses ?? []) expect(statusIds.has(id), id).toBe(true);
       }
     }
+  });
+});
+
+// ---------- Spells (spec 009, SC-001) ----------
+
+const spellPack = readPack("src/packs/spells");
+const spells = spellPack.filter((doc) => doc._key.startsWith("!items!"));
+const spellNamed = (name) => spells.find((doc) => doc.name === name);
+
+describe("spells compendium source (spec 009, SC-001)", () => {
+  it("has 126 spells in 9 school folders, 14 per school, 3/3/3/3/2 by level", () => {
+    expect(spells).toHaveLength(126);
+    expect(spellPack.filter((doc) => doc._key.startsWith("!folders!"))).toHaveLength(9);
+    for (const school of Object.keys(MAGIC_SCHOOLS)) {
+      const list = spells.filter((doc) => doc.system.school === school);
+      expect(list, school).toHaveLength(14);
+      expect([1, 2, 3, 4, 5].map((level) => list.filter((doc) => doc.system.level === level).length)).toEqual([3, 3, 3, 3, 2]);
+    }
+  });
+
+  it("matches the reference spells", () => {
+    expect(spellNamed("Magic Missile").system).toMatchObject({
+      school: "evocation", level: 1, tn: { value: 15, special: "" }, action: "half", keywords: ["attack", "comboOk", "somatic"],
+      duration: { type: "instant" }, range: "30m", damage: { rolled: 2, kept: 1, type: "E" }, source: { page: 245 }
+    });
+    expect(spellNamed("Armoring Aura").system.automation).toEqual({
+      target: "target", changes: [{ key: "system.modifiers.combat.aura", value: 1, perRaise: 1, perLevel: 0, capLevelMultiplier: 3 }], statuses: []
+    });
+    expect(spellNamed("Scry").system.duration).toMatchObject({ type: "concentration", concentration: "half" });
+    expect(spellNamed("Energy Burst").system.damage).toMatchObject({ rolled: 3, kept: 2, perLevelRolled: 2 });
+    expect(spellNamed("Detect Thoughts").system.tn.special).toBe("mentalDefense");
+    expect(spellNamed("Blindness").system).toMatchObject({ save: "wil", automation: { statuses: ["blinded"] } });
+  });
+
+  it("uses valid keywords and has descriptions, unique ids and folders", () => {
+    const folderIds = new Set(spellPack.filter((doc) => doc._key.startsWith("!folders!")).map((doc) => doc._id));
+    for (const doc of spells) {
+      for (const k of doc.system.keywords) expect(SPELL_KEYWORDS).toContain(k);
+      expect(doc.system.description, doc.name).toMatch(/^<p>.+<\/p>$/s);
+      expect(folderIds.has(doc.folder), doc.name).toBe(true);
+    }
+    expect(new Set(spells.map((doc) => doc._id)).size).toBe(126);
+  });
+
+  it("has the Warp tables", () => {
+    const phenomena = tableNamed("Psychic Phenomena");
+    const perils = tableNamed("Perils of the Warp");
+    expect(phenomena.results).toHaveLength(26);
+    expect(phenomena.results.at(-1).flags.dtd40k.effect).toEqual({ perils: true });
+    expect(perils.results).toHaveLength(18);
+    expect(perils.results.at(-1)).toMatchObject({ range: [100, 100], flags: { dtd40k: { effect: { dead: true } } } });
   });
 });

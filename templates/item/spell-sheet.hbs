@@ -1,0 +1,47 @@
+<div class="spell-sheet-body">
+  {{#if lockedPackHint}}
+  <p class="notification info locked-pack-hint"><i class="fa-solid fa-lock" inert></i> {{lockedPackHint}}</p>
+  {{/if}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}" {{#if editable}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if editable}}
+      <input class="item-name" type="text" name="name" value="{{item.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="item-name">{{item.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <span>{{localize "TYPES.Item.spell"}}</span>
+        <label>{{localize "DTD.Magic.SchoolLabel"}}
+          {{#if editable}}<select name="system.school">{{selectOptions schoolOptions selected=system.school localize=true}}</select>{{else}}<b>{{schoolLabel}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Class.Level"}}
+          {{#if editable}}<input type="number" name="system.level" value="{{system.level}}" min="1" max="5">{{else}}<b>{{system.level}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Race.Page"}} <b>{{system.source.page}}</b></label>
+      </div>
+    </div>
+  </header>
+
+  <section class="spell-section">
+    <dl class="spell-stats">
+      <dt>{{localize "DTD.Magic.Test"}}</dt><dd>{{test}}</dd>
+      <dt>TN</dt><dd>{{#if editable}}<input type="number" name="system.tn.value" value="{{system.tn.value}}" min="0">{{else}}{{tn}}{{/if}}</dd>
+      <dt>{{localize "DTD.Magic.ActionLabel"}}</dt><dd>{{#if editable}}<select name="system.action">{{selectOptions actionOptions selected=system.action localize=true}}</select>{{else}}{{actionLabel}}{{/if}}</dd>
+      <dt>{{localize "DTD.Magic.Duration"}}</dt><dd>{{system.duration.text}}</dd>
+      {{#if system.range}}<dt>{{localize "DTD.Equipment.Range"}}</dt><dd>{{system.range}}</dd>{{/if}}
+      {{#if system.target}}<dt>{{localize "DTD.Magic.Target"}}</dt><dd>{{system.target}}</dd>{{/if}}
+      {{#if system.area}}<dt>{{localize "DTD.Magic.Area"}}</dt><dd>{{system.area}}</dd>{{/if}}
+      {{#if damage}}<dt>{{localize "DTD.Equipment.Damage"}}</dt><dd>{{damage}}</dd>{{/if}}
+      {{#if save}}<dt>{{localize "DTD.Magic.Save"}}</dt><dd>{{save}}</dd>{{/if}}
+    </dl>
+    {{#if keywords.length}}<p class="quality-tags">{{#each keywords as |k|}}<span class="tag" data-tooltip="{{k.hint}}">{{k.label}}</span>{{/each}}</p>{{/if}}
+    {{#if system.perRaise}}<p><b>{{localize "DTD.Magic.PerRaise"}}:</b> {{system.perRaise}}</p>{{/if}}
+  </section>
+
+  <section class="spell-section">
+    {{#if editable}}
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.description}}}</div>{{/if}}
+  </section>
+</div>

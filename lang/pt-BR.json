@@ -10,7 +10,8 @@
       "class": "Classe",
       "weapon": "Arma",
       "armor": "Armadura",
-      "gear": "Equipamento"
+      "gear": "Equipamento",
+      "spell": "Magia"
     }
   },
   "DTD": {
@@ -120,7 +121,8 @@
         "traits": "Traços",
         "class": "Classe e XP",
         "equipment": "Equipamento",
-        "combat": "Combate"
+        "combat": "Combate",
+        "magic": "Magia"
       },
       "SocialInitiative": "Iniciativa social",
       "Fatigue": "Fatigue",
@@ -130,7 +132,8 @@
       "FromFeatShort": "Concedida por um feat — sai junto com ele",
       "Class": "Ficha de Classe DtD",
       "ModeAdvance": "Evolução",
-      "Equipment": "Ficha de Equipamento DtD"
+      "Equipment": "Ficha de Equipamento DtD",
+      "Spell": "Ficha de Magia DtD"
     },
     "Roll": {
       "Success": "Sucesso",
@@ -582,7 +585,8 @@
         "ownedOrBlocked": "Já possui, ou foi excluído por outra escolha.",
         "atMax": "{label} já está no máximo.",
         "notEnough": "XP insuficiente: custa {cost}, há {available} disponível.",
-        "onlyLast": "Só o Mestre pode desfazer lançamentos que não sejam o último."
+        "onlyLast": "Só o Mestre pode desfazer lançamentos que não sejam o último.",
+        "atCap": "O valor da escola não pode passar do Level do personagem."
       },
       "UndoAwardConfirm": "Remover o prêmio {label} ({cost} XP)?"
     },
@@ -1167,6 +1171,135 @@
         "severe": "Severo",
         "acute": "Agudo"
       }
+    },
+    "Magic": {
+      "School": {
+        "abjuration": "Abjuration",
+        "conjuration": "Conjuration",
+        "divination": "Divination",
+        "enchantment": "Enchantment",
+        "evocation": "Evocation",
+        "healing": "Healing",
+        "illusion": "Illusion",
+        "necromancy": "Necromancy",
+        "transmutation": "Transmutation"
+      },
+      "Keyword": {
+        "attack": {
+          "label": "Attack",
+          "hint": "Conta como ataque contra o alvo."
+        },
+        "comboOk": {
+          "label": "Combo-OK",
+          "hint": "Pode entrar num Spell Combo."
+        },
+        "focus": {
+          "label": "Focus",
+          "hint": "Precisa de um objeto de foco; destruí-lo encerra a magia na hora."
+        },
+        "languageDependent": {
+          "label": "Language Dependent",
+          "hint": "Só funciona se conjurador e alvo falam a mesma língua."
+        },
+        "material": {
+          "label": "Material",
+          "hint": "Precisa de componentes materiais, gastos na conjuração."
+        },
+        "mindAffecting": {
+          "label": "Mind-Affecting",
+          "hint": "Afeta a mente: só alvos sencientes."
+        },
+        "rangedTouch": {
+          "label": "Ranged Touch",
+          "hint": "Precisa acertar um ataque à distância (Ballistics + Level)."
+        },
+        "savingThrow": {
+          "label": "Saving Throw",
+          "hint": "O alvo pode resistir contra o total da conjuração; resistir revela a magia, mesmo Subtle."
+        },
+        "social": {
+          "label": "Social",
+          "hint": "Para cenas sociais; não pode ser usada em combate."
+        },
+        "somatic": {
+          "label": "Somatic",
+          "hint": "Precisa de movimento livre; não quando amarrado, agarrado ou contido."
+        },
+        "subtle": {
+          "label": "Subtle",
+          "hint": "Não é óbvia; outros conjuradores percebem com Arcana + Wisdom TN 20."
+        },
+        "touch": {
+          "label": "Touch",
+          "hint": "O conjurador toca o alvo; se ele não quiser, é um ataque desarmado de Brawl."
+        },
+        "verbal": {
+          "label": "Verbal",
+          "hint": "O conjurador precisa falar alto e claro; não quando silenciado."
+        }
+      },
+      "Action": {
+        "half": "Meia ação",
+        "full": "Ação completa",
+        "reaction": "Reação",
+        "free": "Ação livre",
+        "halfOrReaction": "Meia ação ou reação"
+      },
+      "Strength": {
+        "fettered": "Contida (Fettered)",
+        "unfettered": "Livre (Unfettered)",
+        "push": "Forçada (Push)"
+      },
+      "Refused": {
+        "alreadyKnown": "{spell} já é conhecida.",
+        "levelTooHigh": "{spell} está acima do valor de {school} do personagem.",
+        "noSlot": "Não há vaga de {school} livre para {spell}."
+      },
+      "SchoolLabel": "Escola",
+      "Test": "Teste",
+      "ActionLabel": "Ação",
+      "Duration": "Duração",
+      "Target": "Alvo",
+      "Area": "Área",
+      "Save": "Resistida com",
+      "PerRaise": "Por raise",
+      "PerLevel": "por Level",
+      "TnMentalDefense": "a Mental Defense do alvo",
+      "CasterLevel": "Nível de conjurador",
+      "Sanctioned": "Sancionado (Tested)",
+      "Unsanctioned": "Não sancionado",
+      "ImplementEquipped": "Implement equipado",
+      "Slots": "Magias {used}/{max}",
+      "Cast": "Conjurar",
+      "Forget": "Esquecer magia",
+      "ForgetConfirm": "Esquecer {spell}? A vaga fica livre.",
+      "DropHint": "Compre pontos de escola no modo Evolução e arraste magias do compêndio Spells para a ficha.",
+      "Sustained": "Magias sustentadas",
+      "EndSustained": "Encerrar a magia",
+      "Combos": "Spell Combos",
+      "ComboName": "Nome do combo",
+      "LearnCombo": "Aprender combo",
+      "ComboNeedsOk": "Um combo precisa de duas ou mais magias Combo-OK conhecidas.",
+      "ComboNotAtCreation": "Spell Combos não podem ser comprados na criação do personagem.",
+      "Learn": "Aprender magia",
+      "Blocked": "{spell} não pode ser conjurada agora ({keywords}).",
+      "CastTitle": "Focus Power: {spell}",
+      "BadPush": "O Push precisa ser de 1 até o máximo.",
+      "StrengthLabel": "Força da conjuração",
+      "Push": "Push",
+      "PushHint": "Pontos extras de escola, até {max}; sempre há Phenomena.",
+      "SanctionedHint": "Sancionado: Push até 3, Phenomena +5 por ponto.",
+      "UnsanctionedHint": "Não sancionado: Push até 4, Phenomena +10 por ponto; Unfettered soma +5 × nível da magia.",
+      "ComboHint": "Combos não podem ser Fettered e somam +5 por magia nos Phenomena.",
+      "ImplementReroll": "Implement Focus: rerrolar um dado",
+      "Raises": "{raises} raise(s)",
+      "Failed": "A magia falha.",
+      "PhenomenaRolled": "Psychic Phenomena (+{mod}).",
+      "Resist": "Resistir",
+      "ResistLabel": "Resistir a {spell}",
+      "SpellDamage": "magia: Aura no lugar da armadura",
+      "Sustaining": "Sustentando {spell}: a ação de concentração foi gasta.",
+      "SustainEnds": "{spell} termina: não há ação para sustentá-la."
     }
   }
 }

@@ -23,6 +23,8 @@ import { heroInitiative, useAction } from "../documents/turn-service.mjs";
 import { burnHeroPoint, rest, toggleCondition } from "../documents/condition-service.mjs";
 import { resetSocialScene, socialAttack } from "../documents/social-service.mjs";
 import { addInsanity, fearTest } from "../documents/mental-service.mjs";
+import { prepareMagicContext } from "./magic-context.mjs";
+import { castSpell, endSustained, learnCombo, learnSpell } from "../documents/magic-service.mjs";
 import { needsChoice } from "../rules/race.mjs";
 import { buildDots, filterSkills, nextBaseValue, sanitizeDerivedMods } from "../rules/sheet.mjs";
 import { buildCharacteristicPool, buildSkillPool, formatPool, normalizePool } from "../rules/pool.mjs";
@@ -32,7 +34,7 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 const TEMPLATE_ROOT = "systems/dtd40k/templates/actor/parts";
 // Advance mode spends XP (spec 006, research R7); edit mode stays free.
 const MODES = { EDIT: "edit", PLAY: "play", ADVANCE: "advance" };
-const TAB_IDS = ["main", "traits", "equipment", "combat", "class"];
+const TAB_IDS = ["main", "traits", "equipment", "combat", "magic", "class"];
 
 /**
  * Split a specialties list into the stored ones (editable) and those added by feat effects.
@@ -120,7 +122,14 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       socialAttack: CharacterSheet.#onSocialAttack,
       newSocialScene: CharacterSheet.#onNewSocialScene,
       addDerangement: CharacterSheet.#onAddDerangement,
-      removeDerangement: CharacterSheet.#onRemoveDerangement
+      removeDerangement: CharacterSheet.#onRemoveDerangement,
+      openSpell: CharacterSheet.#onOpenAsset,
+      castSpell: CharacterSheet.#onCastSpell,
+      removeSpell: CharacterSheet.#onRemoveSpell,
+      advanceSchool: CharacterSheet.#onAdvance,
+      endSustained: CharacterSheet.#onEndSustained,
+      learnCombo: CharacterSheet.#onLearnCombo,
+      castCombo: CharacterSheet.#onCastCombo
     }
   };
 
@@ -141,6 +150,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     traits: { template: `${TEMPLATE_ROOT}/traits.hbs` },
     equipment: { template: `${TEMPLATE_ROOT}/equipment.hbs` },
     combat: { template: `${TEMPLATE_ROOT}/combat.hbs` },
+    magic: { template: `${TEMPLATE_ROOT}/magic.hbs` },
     class: { template: `${TEMPLATE_ROOT}/class.hbs` },
     footer: { template: `${TEMPLATE_ROOT}/footer.hbs` }
   };
@@ -239,6 +249,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       classContext: await prepareClassContext(actor),
       equipment: prepareEquipmentContext(actor),
       combatTab: prepareCombatContext(actor),
+      magic: prepareMagicContext(actor, { isAdvance }),
       addictionOptions: ADDICTION_LEVELS.map((key, value) => ({ value, label: game.i18n.localize(`DTD.Addiction.${key}`) })),
       currentClass: getCurrentClass(actor)?.name ?? "",
       hasClasses: system.classState.hasClasses,
@@ -371,6 +382,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       else if (item.type === "exaltation") apply = () => applyExaltation(this.actor, item);
       else if (item.type === "feat" && item.system.category === "exaltedAsset") apply = () => addExaltedAsset(this.actor, item);
       else if (["weapon", "armor", "gear"].includes(item.type)) apply = () => addEquipment(this.actor, item);
+      else if (item.type === "spell") apply = () => learnSpell(this.actor, item);
       if (apply) return this.actor.isOwner ? apply() : null;
     }
     return super._onDropItem(event, item);
@@ -414,7 +426,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     // Combat tab (spec 008): the GM edits Critical Damage; owners add Insanity points.
     bind(".critical-input", (input) => game.user.isGM && this.document.update({ "system.critical.value": Math.max(0, Number(input.value) || 0) }));
     bind(".insanity-add", (input) => Number(input.value) > 0 && addInsanity(this.document, Number(input.value)));
-    for (const selector of [".combat-weapon-select", ".fear-rating", ".social-characteristic", ".social-skill", ".derangement-severity", ".derangement-name"]) {
+    for (const selector of [".combo-pick", ".combo-name", ".combat-weapon-select", ".fear-rating", ".social-characteristic", ".social-skill", ".derangement-severity", ".derangement-name"]) {
       for (const control of this.element.querySelectorAll(selector)) control.addEventListener("change", (event) => event.stopPropagation());
     }
   }
@@ -709,6 +721,61 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
   }
 
   /**
+   * Cast a known spell (spec 009, FR-008).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onCastSpell(event, target) {
+    if (this.document.isOwner) await castSpell(this.document, target.dataset.itemId);
+  }
+
+  /**
+   * Forget a spell, after confirmation.
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onRemoveSpell(event, target) {
+    const spell = this.document.items.get(target.dataset.itemId);
+    if (!spell || !this.document.isOwner) return;
+    const ok = await foundry.applications.api.DialogV2.confirm({
+      window: { title: game.i18n.localize("DTD.Magic.Forget") },
+      content: `<p>${game.i18n.format("DTD.Magic.ForgetConfirm", { spell: spell.name })}</p>`, rejectClose: false
+    });
+    if (ok) await spell.delete();
+  }
+
+  /**
+   * End a sustained spell (spec 009, FR-014).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onEndSustained(event, target) {
+    if (this.document.isOwner) await endSustained(this.document, target.dataset.id);
+  }
+
+  /**
+   * Learn a Spell Combo from the checked spells (spec 009, FR-015).
+   * @this {CharacterSheet}
+   */
+  static async #onLearnCombo() {
+    const ids = [...this.element.querySelectorAll(".combo-pick:checked")].map((box) => box.value);
+    await learnCombo(this.document, ids, this.element.querySelector(".combo-name")?.value.trim() ?? "");
+  }
+
+  /**
+   * Cast a learned Spell Combo.
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onCastCombo(event, target) {
+    if (this.document.isOwner) await castSpell(this.document, "", { comboId: target.dataset.id });
+  }
+
+  /**
    * Use a combat action with the weapon chosen in the tab (spec 008, FR-006).
    * @this {CharacterSheet}
    * @param {PointerEvent} event
@@ -902,7 +969,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
    */
   static async #onAdvance(event, target) {
     if (!this.document.isOwner || this.mode !== MODES.ADVANCE) return;
-    const kind = { advanceCharacteristic: "characteristic", advanceSkill: "skill", advancePowerStat: "powerStat" }[target.dataset.action];
+    const kind = { advanceCharacteristic: "characteristic", advanceSkill: "skill", advancePowerStat: "powerStat", advanceSchool: "school" }[target.dataset.action];
     await advance(this.document, kind, target.dataset.key ?? "");
   }
 

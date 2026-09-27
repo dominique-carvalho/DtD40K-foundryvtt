@@ -56,7 +56,7 @@ quickstart.md
 - [X] T016 [US2] `module/documents/martial-service.mjs`: `schoolData` (cache do pack) e `syncPassives`; `xp-service`: `advance(actor, "martial", key)` e desfazer chamando `syncPassives`
 - [X] T017 [US2] Aba `martial` (`templates/actor/parts/martial.hbs`, `module/apps/martial-context.mjs`, `character-sheet.mjs`): Martial Adept/Gunslinger Level, escolas com valor, `+custo` no modo Evolução, níveis liberados, passivas, universais
 - [X] T018 [P] [US2] i18n e estilos
-- [ ] T019 [US2] Validar quickstart 1–8 e registrar
+- [X] T019 [US2] Validar quickstart 1–8 e registrar
 
 ---
 
@@ -68,7 +68,7 @@ quickstart.md
 - [X] T023 [US3] `martial-service.saveAttack` / `deleteAttack` (histórico `specialAttack`, edição com `history`); desfazer do `xp-service` para `specialAttack` restaura a definição anterior ou apaga o ataque
 - [X] T024 [US3] Na aba `martial`: lista de ataques (Usar, Editar, Apagar; inválido quando falta nível)
 - [X] T025 [P] [US3] i18n e estilos
-- [ ] T026 [US3] Validar quickstart 9–12 e registrar
+- [X] T026 [US3] Validar quickstart 9–12 e registrar
 
 ---
 
@@ -80,7 +80,7 @@ quickstart.md
 - [X] T030 [US4] `turn-service.useAction(..., { special })` e `multipleAttacks` (vantagens no primeiro ataque)
 - [X] T031 [US4] `martial-service.useAttack` (restrições com override, ação-base, preparo, teste de perícia, efeitos no atacante, estado), `applyAttackEffects` (botão no cartão, socket da 008), `newScene`; hook `deleteCombat`; `CHAT_ACTIONS.martialEffects`
 - [X] T032 [P] [US4] i18n e estilos
-- [ ] T033 [US4] Validar quickstart 13–21 e registrar
+- [X] T033 [US4] Validar quickstart 13–21 e registrar
 
 ---
 

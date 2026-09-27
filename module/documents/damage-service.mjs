@@ -104,7 +104,8 @@ async function applyTo(actor, token, damage) {
       location: localize(`DTD.Location.${damage.location}`),
       total: damage.total,
       effective: result.effective,
-      resilience: Math.max(1, system.derived.resilience),
+      // The Resilience actually used (Special Attacks may lower or halve it, spec 010).
+      resilience: result.steps.find((step) => step.label === "resilience")?.value ?? Math.max(1, system.derived.resilience),
       hpLoss: result.hpLoss,
       criticalGain: result.criticalGain,
       critical: result.critical,

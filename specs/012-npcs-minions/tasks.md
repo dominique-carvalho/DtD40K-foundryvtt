@@ -57,7 +57,7 @@ quickstart.md
 - [X] T017 [US2] `condition-service.toggleCondition`: imunidades de Undead/Stuff of Nightmares
 - [X] T018 [US2] `module/documents/npc-service.mjs`: `regenerate` (chamado em `DtdCombat#_onStartTurn`), `fearCard` e `fearFromCard` (`CHAT_ACTIONS.npcFear`), `templates/chat/npc-fear.hbs`
 - [X] T019 [P] [US2] i18n e estilos
-- [ ] T020 [US2] Validar quickstart 1–13 e registrar
+- [X] T020 [US2] Validar quickstart 1–13 e registrar
 
 ---
 
@@ -68,7 +68,7 @@ quickstart.md
 - [X] T023 [US3] `actor.withRollModifiers`: bônus dos minions aliados em testes de perícia
 - [X] T024 [US3] `module/apps/minion-sheet.mjs` + `templates/actor/minion-sheet.hbs` (TR, minions, Damage Ratings, SD/Speed/alcance, atacar, aliado); registrar
 - [X] T025 [P] [US3] i18n e estilos
-- [ ] T026 [US3] Validar quickstart 14–18 e registrar
+- [X] T026 [US3] Validar quickstart 14–18 e registrar
 
 ---
 

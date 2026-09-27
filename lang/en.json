@@ -12,7 +12,8 @@
       "armor": "Armor",
       "gear": "Gear",
       "spell": "Spell",
-      "martialSchool": "Martial School"
+      "martialSchool": "Martial School",
+      "deity": "Deity"
     }
   },
   "DTD": {
@@ -136,7 +137,8 @@
       "ModeAdvance": "Advance",
       "Equipment": "DtD Equipment Sheet",
       "Spell": "DtD Spell Sheet",
-      "MartialSchool": "DtD Martial School Sheet"
+      "MartialSchool": "DtD Martial School Sheet",
+      "Deity": "DtD Deity Sheet"
     },
     "Roll": {
       "Success": "Success",
@@ -589,7 +591,8 @@
         "atMax": "{label} is already at the maximum.",
         "notEnough": "Not enough XP: costs {cost}, {available} available.",
         "onlyLast": "Only the GM can undo entries other than the last one.",
-        "atCap": "School ranks cannot exceed the character's Level."
+        "atCap": "School ranks cannot exceed the character's Level.",
+        "degenerated": "This characteristic is reduced by a Degeneration and cannot be raised with XP."
       },
       "UndoAwardConfirm": "Remove the award {label} ({cost} XP)?"
     },
@@ -619,7 +622,8 @@
         "fabulousMax": "1d10 weeks",
         "irrationallyExpensive": "One month",
         "glittergold": "1d5 months"
-      }
+      },
+      "anyNonArtifact": "Any non-artifact item"
     },
     "Craftsmanship": {
       "poor": "Poor",
@@ -1400,6 +1404,90 @@
       "UsePrepared": "Prepared attack",
       "Edit": "Edit attack",
       "Universals": "Universal Advantages and Restrictions"
+    },
+    "Background": {
+      "allies": {
+        "label": "Allies"
+      },
+      "artifact": {
+        "label": "Artifact"
+      },
+      "backing": {
+        "label": "Backing"
+      },
+      "contacts": {
+        "label": "Contacts"
+      },
+      "fame": {
+        "label": "Fame"
+      },
+      "followers": {
+        "label": "Followers"
+      },
+      "holdings": {
+        "label": "Holdings"
+      },
+      "inheritance": {
+        "label": "Inheritance"
+      },
+      "mentor": {
+        "label": "Mentor"
+      },
+      "status": {
+        "label": "Status"
+      },
+      "wealth": {
+        "label": "Wealth"
+      },
+      "Title": "Backgrounds",
+      "Dots": "Creation dots {used}/{max}",
+      "GMAdjust": "Outside character creation only the GM adjusts Backgrounds (no XP).",
+      "FreeDot": "Free creation dot",
+      "InstanceName": "Name",
+      "NeedName": "Type a name first.",
+      "InheritancePicks": "Inheritance picks",
+      "InheritanceFits": "Fits the rating",
+      "InheritanceOver": "The picks do not fit the Inheritance rating.",
+      "SavePicks": "Save picks",
+      "WealthHint": "Wealth is a Background: raise it in the Traits tab at creation; the GM adjusts it here.",
+      "Refused": {
+        "notCreation": "{label}: Backgrounds change only during character creation.",
+        "atMax": "{label} is already at 5.",
+        "artifactCap": "{label}: at most 5 dots of Artifacts at character creation."
+      }
+    },
+    "Alignment": {
+      "Pantheon": {
+        "ruinousPowers": "Ruinous Powers",
+        "blessedPantheon": "Blessed Pantheon",
+        "grayCouncil": "Gray Council"
+      },
+      "Title": "Alignment",
+      "Commandments": "Commandments",
+      "Cults": "Cults",
+      "Check": "Alignment Check",
+      "Recover": "Raise Devotion",
+      "RecoverHint": "With the GM's agreement, after deeds of repentance or exemplary acts: a pass gains one Devotion point.",
+      "SecondCheck": "Second Alignment Check (Degeneration)",
+      "CheckHint": "1d10 + bonus against your Devotion; effects from feats and assets are added.",
+      "Bonus": "Bonus",
+      "Passed": "1d10 {d10} + {bonus} = {total} against Devotion {devotion}: passed.",
+      "Failed": "1d10 {d10} + {bonus} = {total} against Devotion {devotion}: failed.",
+      "OutOfPlay": "{name} reaches Devotion 0 and leaves play.",
+      "OutOfPlayBadge": "Devotion 0: the character is out of play.",
+      "AlreadyAligned": "Already aligned with {deity}.",
+      "OnlyOnce": "Alignment can be changed only once.",
+      "Change": "Change alignment",
+      "ChangeSame": "Change from {from} to {to} (same pantheon): Devotion becomes {devotion}.",
+      "ChangeOther": "Change from {from} to {to} (another pantheon): Devotion becomes {devotion} and a Degeneration is written at 7.",
+      "Changed": "Changed once",
+      "DropHint": "Drag a deity from the Deities compendium to choose the alignment.",
+      "Degeneration": "Degeneration",
+      "Degenerations": "Degenerations by Devotion point",
+      "WrittenAt": "written at Devotion {point}",
+      "Cured": "{names} (Devotion {point}) is overcome.",
+      "Cure": "Cure",
+      "BlockedXp": "No XP purchase while reduced"
     }
   }
 }

@@ -1,0 +1,50 @@
+{
+  "name": "Pelor",
+  "type": "deity",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Sun god of mercy, kindness and healing who wants everyone to be decent to one another; hugely popular and rarely banned.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 304
+    },
+    "key": "pelor",
+    "pantheon": "blessedPantheon",
+    "summary": "Sun god of mercy, kindness and healing who wants everyone to be decent to one another; hugely popular and rarely banned.",
+    "commandments": [
+      "Ease suffering wherever you meet it.",
+      "Carry his light into dark places with compassion.",
+      "Stay alert against evil."
+    ],
+    "keywords": [
+      "Mercy",
+      "Peace",
+      "Empathy",
+      "Generosity",
+      "Light"
+    ],
+    "directivesTitle": "Pelor's Light",
+    "directives": [
+      "Show mercy to everyone; it is strength that can redeem even souls.",
+      "Embrace and preserve peace in a war-torn Wheel.",
+      "Study others' ways and reasons so you can understand them.",
+      "Giving is the best gift; rejoice in freeing others from strife.",
+      "Light is his face; it exposes lies and drives heretics from hiding."
+    ],
+    "cults": [
+      {
+        "name": "The Children of the Sun",
+        "summary": "A vast, powerless movement of strict pacifists and vegetarians who give away their money and send missionaries far afield."
+      },
+      {
+        "name": "The Solar Skimmers",
+        "summary": "Wealthy thrill-seekers who fly ships as near to stars as possible and honor Pelor as sun and healer."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdD01963d6dde96",
+  "_key": "!items!dtdD01963d6dde96",
+  "folder": "dtdDFdb670b52d51"
+}

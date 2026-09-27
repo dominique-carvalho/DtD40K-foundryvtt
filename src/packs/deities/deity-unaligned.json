@@ -1,0 +1,52 @@
+{
+  "name": "Unaligned",
+  "type": "deity",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>People who back no god, from doubt, abandonment or disbelief; they lack divine protection but mostly avoid divine wrath by going unnoticed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 306
+    },
+    "key": "unaligned",
+    "pantheon": "grayCouncil",
+    "summary": "People who back no god, from doubt, abandonment or disbelief; they lack divine protection but mostly avoid divine wrath by going unnoticed.",
+    "commandments": [
+      "Disbelief does not spare you from judgment; follow local ideas of right and sin.",
+      "Wishful thinking achieves nothing; only the living create change.",
+      "The plainest explanation is usually right.",
+      "Lacking a divine mandate, pick your own cause and path.",
+      "Secular life guarantees nothing; you stand opposed to cults, gods and daemons alike."
+    ],
+    "keywords": [
+      "Morality",
+      "Unbelief",
+      "Mundane",
+      "Motive",
+      "Secular"
+    ],
+    "directivesTitle": "Unaligned",
+    "directives": [
+      "Disbelief does not spare you from judgment; follow local ideas of right and sin.",
+      "Wishful thinking achieves nothing; only the living create change.",
+      "The plainest explanation is usually right.",
+      "Lacking a divine mandate, pick your own cause and path.",
+      "Secular life guarantees nothing; you stand opposed to cults, gods and daemons alike."
+    ],
+    "cults": [
+      {
+        "name": "The Uninterested",
+        "summary": "The indifferent majority, outnumbering the faithful, used in numbers games and courted as prizes by rival gods."
+      },
+      {
+        "name": "Militant Atheists",
+        "summary": "Activists who hate the gods and seek to topple religions by debate, protest and publishing, or by violence."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdDaf8c16f11aff",
+  "_key": "!items!dtdDaf8c16f11aff",
+  "folder": "dtdDFd996f879335"
+}

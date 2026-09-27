@@ -1,4 +1,4 @@
-import { ADDICTION_LEVELS, STARTING_SLOTS, WEAPON_QUALITIES } from "../config.mjs";
+import { ADDICTION_LEVELS, WEAPON_QUALITIES } from "../config.mjs";
 import { weaponPools } from "../documents/attack-service.mjs";
 import { socketsOf } from "../documents/equipment-service.mjs";
 import { startingSlots } from "../rules/acquisition.mjs";
@@ -92,7 +92,8 @@ export function prepareEquipmentContext(actor) {
     }))
   })).filter((group) => group.items.length);
 
-  const slots = startingSlots(items);
+  // Inheritance picks add starting picks (spec 011).
+  const slots = startingSlots(items, actor.system.backgrounds?.inheritancePicks ?? {});
   return {
     armor: {
       locations: ARMOR_LOCATIONS.map((key) => ({ key, label: localize(`DTD.Location.${key}`), ap: armor.locations[key] })),
@@ -106,7 +107,7 @@ export function prepareEquipmentContext(actor) {
     gear,
     wealth: { ...actor.system.wealth, attemptsCount: actor.system.wealth.attempts.length },
     creation: actor.system.creation.active,
-    slots: Object.keys(STARTING_SLOTS).map((key) => ({ key, label: localize(`DTD.Rarity.${key}`), ...slots[key] })),
+    slots: Object.keys(slots).map((key) => ({ key, label: localize(`DTD.Rarity.${key}`), ...slots[key] })),
     addictions: actor.system.addictions.map((entry) => ({
       ...entry, label: localize(`DTD.Addiction.${ADDICTION_LEVELS[entry.level]}`)
     })),

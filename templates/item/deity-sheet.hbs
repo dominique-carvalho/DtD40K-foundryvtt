@@ -1,0 +1,41 @@
+<div class="deity-sheet-body">
+  {{#if lockedPackHint}}
+  <p class="notification info locked-pack-hint"><i class="fa-solid fa-lock" inert></i> {{lockedPackHint}}</p>
+  {{/if}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}" {{#if editable}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if editable}}
+      <input class="item-name" type="text" name="name" value="{{item.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="item-name">{{item.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <span>{{pantheonLabel}}</span>
+        <label>{{localize "DTD.Race.Page"}} <b>{{system.source.page}}</b></label>
+      </div>
+    </div>
+  </header>
+
+  <section class="spell-section">
+    {{#if editable}}
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.description}}}</div>{{/if}}
+    <p class="quality-tags">{{#each system.keywords as |k|}}<span class="tag">{{k}}</span>{{/each}}</p>
+  </section>
+
+  <section class="spell-section">
+    <h3 class="section-title">{{localize "DTD.Alignment.Commandments"}}</h3>
+    <ul class="deity-list">{{#each system.commandments as |c|}}<li>{{c}}</li>{{/each}}</ul>
+  </section>
+
+  <section class="spell-section">
+    <h3 class="section-title">{{system.directivesTitle}}</h3>
+    <ul class="deity-list">{{#each system.directives as |d|}}<li>{{d}}</li>{{/each}}</ul>
+  </section>
+
+  <section class="spell-section">
+    <h3 class="section-title">{{localize "DTD.Alignment.Cults"}}</h3>
+    <dl class="spell-stats">{{#each system.cults as |c|}}<dt>{{c.name}}</dt><dd>{{c.summary}}</dd>{{/each}}</dl>
+  </section>
+</div>

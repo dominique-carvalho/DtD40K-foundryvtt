@@ -4,6 +4,7 @@ import { advanceCost, canAdvance, undoPlan } from "../rules/xp.mjs";
 import { getExaltation, setPowerStat } from "./exaltation-service.mjs";
 import { getRace } from "./race-service.mjs";
 import { restoreAttack, syncPassives } from "./martial-service.mjs";
+import { restoreInstance } from "./background-service.mjs";
 
 /**
  * Spending and awarding XP (spec 006, US3). Contract: specs/006-classes-xp/contracts/foundry-api.md.
@@ -19,7 +20,9 @@ function context(actor) {
   return {
     classes: actor.items.filter((item) => item.type === "class"),
     race: getRace(actor),
-    owned: actor.items.filter((item) => item.type === "feat")
+    owned: actor.items.filter((item) => item.type === "feat"),
+    // Characteristics reduced by a Degeneration (spec 011).
+    blocked: actor.system.alignment?.blocked ?? []
   };
 }
 
@@ -179,17 +182,21 @@ export async function undoXp(actor, entryId) {
       : entry.kind === "characteristic" || entry.kind === "skill"
         ? foundry.utils.getProperty(actor._source, `system.${entry.kind === "characteristic" ? "characteristics" : "skills"}.${entry.key}.value`)
         : entry.kind === "school" ? foundry.utils.getProperty(actor._source, `system.magic.schools.${entry.key}.value`)
-          : entry.kind === "martial" ? foundry.utils.getProperty(actor._source, `system.martial.schools.${entry.key}.value`) : null;
+          : entry.kind === "martial" ? foundry.utils.getProperty(actor._source, `system.martial.schools.${entry.key}.value`)
+            : entry.kind === "background" && !entry.key.includes(":")
+              ? foundry.utils.getProperty(actor._source, entry.key === "wealth" ? "system.wealth.value" : `system.backgrounds.${entry.key}.value`) : null;
     // A learned Spell Combo leaves with its purchase (spec 009).
     if (entry.kind === "combo") {
       await actor.update({ "system.magic.combos": actor._source.system.magic.combos.filter((c) => c.id !== entry.key) });
     }
     // A Special Attack goes back to its previous definition, or leaves with its first purchase (spec 010).
     if (entry.kind === "specialAttack") await restoreAttack(actor, entry.key);
+    // Artifact and Backing instances (spec 011).
+    if (entry.kind === "background" && entry.key.includes(":")) await restoreInstance(actor, entry.key, entry.from);
     const plan = undoPlan(entry, current);
     if (plan.restore?.path === "powerStat") await exaltation.update({ "system.powerStat.value": plan.restore.value });
     else if (plan.restore) await actor.update({ [plan.restore.path]: plan.restore.value });
-    else if (!["feat", "asset", "combo", "specialAttack"].includes(entry.kind)) ui.notifications.info(localize("DTD.XP.RefundOnly"));
+    else if (!["feat", "asset", "combo", "specialAttack", "background"].includes(entry.kind)) ui.notifications.info(localize("DTD.XP.RefundOnly"));
     if (plan.deleteItem && actor.items.has(plan.deleteItem)) await actor.items.get(plan.deleteItem).delete();
     if (entry.kind === "martial") await syncPassives(actor);
   }

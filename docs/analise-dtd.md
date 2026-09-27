@@ -449,6 +449,14 @@ Análogo à distância das Sword Schools. **Gunslinger Level** = maior rank em G
 
 ## 11. Backgrounds, Alinhamento, Devotion
 
+**Na 7.7a** (cap. XI pp. 280–283 e cap. XII pp. 284–312; implementado na feature `011-backgrounds-alignment`): os mesmos
+11 Backgrounds, 7 pontos na criação (nenhum acima de 3 sem XP; 50 XP por ponto 1–3, 100 por ponto 4–5, só na
+criação; Artifacts no máximo 5 pontos). Devotion 6; Alignment Check 1d10 + bônus ≥ Devotion; falha −1 Devotion e, em 6
+ou menos, segundo teste e Degeneration (16 linhas; 59–62 e 62–69 se sobrepõem: 62 = Malign Sight); recuperar Devotion
+cura a Degeneration do ponto; troca uma vez (mesmo panteão −2; outro, Devotion 4 e Degeneration em 7). **21 deuses**,
+7 por panteão, cada um com 3 mandamentos, 5 palavras-chave, 5 diretrizes e 2 cultos (a Morality chart de 10 atos do
+Book 2 saiu). Devotion não é comprada com XP (o livro não dá custo). O texto abaixo é o levantamento da 1.6/Book 2.
+
 ### Backgrounds (1.6 pp. 187–190)
 11, valores 0–5: Allies, Artifact (múltiplo, 1 por item, máx. 5 pontos na criação), Backing (múltiplo, por organização), Contacts, Fame, Followers, Holdings, Inheritance (itens iniciais por raridade), Mentor, Status, Wealth (reserva de dados para Wealth Tests). Majoritariamente narrativos.
 

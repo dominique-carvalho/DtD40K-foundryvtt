@@ -80,7 +80,8 @@ export function advanceInfo(actor, kind, key, from) {
     race: getRace(actor),
     owned: ownedFeats(actor),
     level: actor.system.level,
-    from
+    from,
+    blocked: actor.system.alignment?.blocked ?? []
   });
   const cost = advanceCost(kind, from) * check.multiplier;
   return {

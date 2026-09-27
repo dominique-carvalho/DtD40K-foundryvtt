@@ -40,11 +40,14 @@ const listed = (cls, kind, key) => (kind === "characteristic"
  *   and skills off them at double cost; only the optional feats of completed classes.
  * - Racial feats of the character's race and the Power Stat are always allowed.
  * @param {{kind: string, key?: string, feat?: {name: string, system: object}, classes: object[],
- *   race: {name: string}|null, owned: object[]}} params
- * @returns {{allowed: boolean, multiplier: number, reason: ""|"noClass"|"offList"|"notOnList"|"ownedOrBlocked"|"atCap"}}
+ *   race: {name: string}|null, owned: object[], level?: number, from?: number, blocked?: string[]}} params
+ *   blocked: characteristics reduced by a Degeneration (spec 011)
+ * @returns {{allowed: boolean, multiplier: number, reason: ""|"noClass"|"offList"|"notOnList"|"ownedOrBlocked"|"atCap"|"degenerated"}}
  */
-export function canAdvance({ kind, key, feat, classes, race, owned, level, from }) {
+export function canAdvance({ kind, key, feat, classes, race, owned, level, from, blocked = [] }) {
   if (kind === "powerStat") return ok();
+  // A characteristic reduced by a Degeneration cannot be raised with XP (spec 011, p. 285).
+  if (kind === "characteristic" && blocked.includes(key)) return no("degenerated");
   // School ranks never exceed the character Level (p. 16).
   if ((kind === "school" || kind === "martial") && Number.isFinite(level) && (from ?? 0) + 1 > level) return no("atCap");
   if (kind === "specialAttack") return ok();
@@ -114,7 +117,9 @@ const PATHS = {
   skill: (key) => `system.skills.${key}.value`,
   powerStat: () => "powerStat",
   school: (key) => `system.magic.schools.${key}.value`,
-  martial: (key) => `system.martial.schools.${key}.value`
+  martial: (key) => `system.martial.schools.${key}.value`,
+  // Backgrounds (spec 011): Wealth is the spec 007 value; Artifact/Backing instances are restored by the service.
+  background: (key) => (key === "wealth" ? "system.wealth.value" : key.includes(":") ? null : `system.backgrounds.${key}.value`)
 };
 
 /**

@@ -1,0 +1,50 @@
+{
+  "name": "Slaanesh",
+  "type": "deity",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>God of excess and self-fulfilment: indulge yourself and ignore advice and social mores; any pursuit taken to extremes, from art to perfection of skill, counts as worship.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 295
+    },
+    "key": "slaanesh",
+    "pantheon": "ruinousPowers",
+    "summary": "God of excess and self-fulfilment: indulge yourself and ignore advice and social mores; any pursuit taken to extremes, from art to perfection of skill, counts as worship.",
+    "commandments": [
+      "Try every new experience once unless it would be fatal.",
+      "Refuse to blend in; conformity erases the self.",
+      "Lure others into your pleasures and toward hedonism."
+    ],
+    "keywords": [
+      "Excellence",
+      "Experience",
+      "Excess",
+      "Self-Indulgence",
+      "Pride"
+    ],
+    "directivesTitle": "Emancipation of Slaanesh",
+    "directives": [
+      "Discover your greatest talent and become unrivalled in it.",
+      "Treat every moment as a chance for new sensation.",
+      "Never settle for a little; push life to its limits while you can.",
+      "Look after yourself first and grab all you can.",
+      "Discard shame; it only holds you back."
+    ],
+    "cults": [
+      {
+        "name": "Noise Marines",
+        "summary": "Surgically enhanced musicians who stage deafening free concerts that throw whole spheres into disorder and are banned in many places."
+      },
+      {
+        "name": "The S Academy",
+        "summary": "An invitation-only elite school and open temple to Slaanesh where students pursue perfection in one talent to an obsessive degree."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdD4cd53b93a093",
+  "_key": "!items!dtdD4cd53b93a093",
+  "folder": "dtdDFdce114eb321"
+}

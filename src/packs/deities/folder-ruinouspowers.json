@@ -1,0 +1,16 @@
+{
+  "_id": "dtdDFdce114eb321",
+  "_key": "!folders!dtdDFdce114eb321",
+  "name": "Ruinous Powers",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 10000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "deityFolder": "ruinousPowers"
+    }
+  }
+}

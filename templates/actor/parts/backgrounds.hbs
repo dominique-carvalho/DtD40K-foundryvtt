@@ -1,0 +1,47 @@
+{{#with backgroundsTab as |bg|}}
+<section class="backgrounds-section">
+  <h2 class="section-title">{{localize "DTD.Background.Title"}}
+    {{#if bg.creation}}<span class="feat-badge{{#if (gt bg.dots.used bg.dots.max)}} warning{{/if}}">{{localize "DTD.Background.Dots" used=bg.dots.used max=bg.dots.max}}</span>{{/if}}
+  </h2>
+  <ul class="equipment-list">
+    {{#each bg.singles as |b|}}
+    <li class="equipment-row background-row">
+      <span class="equipment-name" data-tooltip="{{b.summary}}"><b>{{b.label}}</b>
+        {{#if (and bg.gmEdit (ne b.key "wealth"))}}<input type="number" name="{{b.path}}" value="{{b.value}}" min="0" max="5" step="1">{{else}}<b>{{b.value}}</b>{{/if}}
+        {{#if b.text}}<span class="hint">{{b.text}}</span>{{/if}}
+      </span>
+      {{#if (eq b.key "contacts")}}{{#if b.value}}
+      <a class="pool-button" data-action="rollContacts" data-characteristic="cha"><i class="fa-solid fa-dice-d10" inert></i> Cha</a>
+      <a class="pool-button" data-action="rollContacts" data-characteristic="fel"><i class="fa-solid fa-dice-d10" inert></i> Fel</a>
+      {{/if}}{{/if}}
+      {{#if b.raise}}<a class="advance-button" data-action="raiseBackground" data-key="{{b.key}}" data-tooltip="{{b.raise.tooltip}}"><i class="fa-solid fa-plus" inert></i>{{#if b.raise.cost}} {{b.raise.cost}}{{/if}}</a>{{/if}}
+    </li>
+    {{/each}}
+  </ul>
+
+  {{#each bg.lists as |l|}}
+  <h3 data-tooltip="{{l.summary}}">{{l.label}}</h3>
+  <ul class="equipment-list">
+    {{#each l.items as |i|}}
+    <li class="equipment-row background-row"><span class="equipment-name">{{i.name}} <b>{{i.value}}</b></span>
+      {{#if i.raise}}<a class="advance-button" data-action="raiseBackground" data-key="{{l.key}}" data-id="{{i.id}}" data-tooltip="{{i.raise.tooltip}}"><i class="fa-solid fa-plus" inert></i>{{#if i.raise.cost}} {{i.raise.cost}}{{/if}}</a>{{/if}}
+    </li>
+    {{/each}}
+  </ul>
+  {{#if l.add}}
+  <div class="background-add">
+    <input type="text" class="background-instance-name" data-key="{{l.key}}" placeholder="{{localize "DTD.Background.InstanceName"}}">
+    <button type="button" data-action="addBackgroundInstance" data-key="{{l.key}}" data-tooltip="{{l.add.tooltip}}"><i class="fa-solid fa-plus" inert></i> {{l.label}}</button>
+  </div>
+  {{/if}}
+  {{/each}}
+
+  {{#if bg.inheritance}}
+  <h3>{{localize "DTD.Background.InheritancePicks"}} <span class="feat-badge{{#unless bg.inheritance.fits}} warning{{/unless}}">{{#if bg.inheritance.fits}}{{localize "DTD.Background.InheritanceFits"}}{{else}}{{localize "DTD.Background.InheritanceOver"}}{{/if}}</span></h3>
+  <div class="inheritance-picks">
+    {{#each bg.inheritance.picks as |p|}}<label>{{p.label}} <input type="number" class="inheritance-pick" data-key="{{p.key}}" value="{{p.count}}" min="0" step="1"></label>{{/each}}
+    {{#if bg.canRaise}}<button type="button" data-action="saveInheritance"><i class="fa-solid fa-floppy-disk" inert></i> {{localize "DTD.Background.SavePicks"}}</button>{{/if}}
+  </div>
+  {{/if}}
+</section>
+{{/with}}

@@ -63,6 +63,10 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   escolas compradas com XP (lista da classe, teto no Level), Martial Adept e Gunslinger Level, passivas numéricas como
   efeitos; aba *Marcial* com o montador de Special Attacks e Trick Shots (orçamento de Style Points, 50 XP por ponto)
   e o uso em combate: restrições de uso, teste de perícia, bônus de ataque/dano/Pen, qualidades e efeitos no alvo.
+- **Backgrounds e Alinhamento**: os 11 Backgrounds na aba *Traços* com 7 pontos de criação e XP 50/100 (só na
+  criação), Artifact e Backing nomeados, Wealth da aquisição, Inheritance somando itens iniciais e rolagem de Contacts;
+  compêndio *Deities* (21 deuses em 3 panteões) arrastado para a ficha; Alignment Check, recuperar Devotion, troca de
+  alinhamento e Degeneration rolada, registrada por ponto de Devotion e com efeitos aplicados.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos
@@ -141,7 +145,7 @@ npm run build:packs
 - Depois do build, abra o Foundry e confira o compêndio (ex.: 16 raças).
 - Nunca edite `packs/` à mão; altere os JSON em `src/packs/` e rode o build de novo.
 - Para editar um compêndio pelo Foundry: clique com o botão direito no compêndio → "Alternar trava de edição", edite os itens, feche o Foundry e rode `npm run extract:packs` para gravar as mudanças de volta em `src/packs/` (depois revise o diff e faça o commit).
-- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) `combat-tables` (22 tabelas do cap. XVII e as 2 do Warp) `spells` (126 magias do cap. VIII) e `martial-schools` (15 escolas dos caps. IX–X).
+- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) `combat-tables` (22 tabelas do cap. XVII e as 2 do Warp) `spells` (126 magias do cap. VIII) `martial-schools` (15 escolas dos caps. IX–X) e `deities` (21 deuses do cap. XII); a tabela Degeneration fica em `combat-tables`.
 
 ## Licença
 

@@ -1,0 +1,50 @@
+{
+  "name": "Sigmar",
+  "type": "deity",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Wrathful warrior-king and unifier, protector of his people and god of stable civilization; the most widely worshipped god among humans, with many squat followers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 301
+    },
+    "key": "sigmar",
+    "pantheon": "blessedPantheon",
+    "summary": "Wrathful warrior-king and unifier, protector of his people and god of stable civilization; the most widely worshipped god among humans, with many squat followers.",
+    "commandments": [
+      "Cooperate with others; organized communities beat lone efforts.",
+      "Tame the wild for settlement and guard civilization from the dark.",
+      "Pursue new ideas, lands and inventions; build machines, cities and empires."
+    ],
+    "keywords": [
+      "Expansion",
+      "Domestication",
+      "Community",
+      "Governance",
+      "Preservation"
+    ],
+    "directivesTitle": "Imperative of Sigmar",
+    "directives": [
+      "Spread civilization until the whole Wheel is linked.",
+      "Bring nature to heel and turn Chaos into Order.",
+      "His will needs many hands; join something larger than yourself.",
+      "Government embodies his will and must meet his standards to keep his blessing.",
+      "Raise armies and protect civilization from those who would ruin it."
+    ],
+    "cults": [
+      {
+        "name": "The Inquisition",
+        "summary": "A relentless, well-funded organization with divine authority to wipe out Chaos worship, rumoured to have agents everywhere."
+      },
+      {
+        "name": "The City Watch",
+        "summary": "Civic cults in most major cities that organize public works, report threats and keep communities safe and united."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdD5e616e9a954a",
+  "_key": "!items!dtdD5e616e9a954a",
+  "folder": "dtdDFdb670b52d51"
+}

@@ -58,6 +58,22 @@ describe("starting equipment (p. 16)", () => {
   });
 });
 
+describe("starting equipment with Inheritance (spec 011, p. 282)", () => {
+  it("adds the Inheritance picks to the starting picks", () => {
+    expect(startingSlots([], { common: 2, veryRare: 1 })).toEqual({
+      rare: { used: 0, max: 1 }, uncommon: { used: 0, max: 1 }, common: { used: 0, max: 4 }, veryCommon: { used: 0, max: 2 },
+      veryRare: { used: 0, max: 1 }
+    });
+    expect(startingSlots([], { ubiquitous: 0 })).not.toHaveProperty("ubiquitous");
+  });
+
+  it("fits rarities the Inheritance opened", () => {
+    expect(startingSlotFor("veryRare", "common", ["rare", "veryRare"])).toBe("veryRare");
+    expect(startingSlotFor("ubiquitous", "common", ["ubiquitous"])).toBe("ubiquitous");
+    expect(startingSlotFor("mythicRare", "common", ["rare"])).toBeNull();
+  });
+});
+
 describe("rarityStep and effectiveWealth", () => {
   it("clamps at the ends of the ladder", () => {
     expect(rarityStep("worthless", -1)).toBe("worthless");

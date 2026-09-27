@@ -12,7 +12,8 @@
       "armor": "Armadura",
       "gear": "Equipamento",
       "spell": "Magia",
-      "martialSchool": "Escola Marcial"
+      "martialSchool": "Escola Marcial",
+      "deity": "Divindade"
     }
   },
   "DTD": {
@@ -136,7 +137,8 @@
       "ModeAdvance": "Evolução",
       "Equipment": "Ficha de Equipamento DtD",
       "Spell": "Ficha de Magia DtD",
-      "MartialSchool": "Ficha de Escola Marcial DtD"
+      "MartialSchool": "Ficha de Escola Marcial DtD",
+      "Deity": "Ficha de Divindade DtD"
     },
     "Roll": {
       "Success": "Sucesso",
@@ -589,7 +591,8 @@
         "atMax": "{label} já está no máximo.",
         "notEnough": "XP insuficiente: custa {cost}, há {available} disponível.",
         "onlyLast": "Só o Mestre pode desfazer lançamentos que não sejam o último.",
-        "atCap": "O valor da escola não pode passar do Level do personagem."
+        "atCap": "O valor da escola não pode passar do Level do personagem.",
+        "degenerated": "Esta característica está reduzida por uma Degeneration e não pode ser comprada com XP."
       },
       "UndoAwardConfirm": "Remover o prêmio {label} ({cost} XP)?"
     },
@@ -619,7 +622,8 @@
         "fabulousMax": "1d10 semanas",
         "irrationallyExpensive": "Um mês",
         "glittergold": "1d5 meses"
-      }
+      },
+      "anyNonArtifact": "Qualquer item não-artefato"
     },
     "Craftsmanship": {
       "poor": "Ruim",
@@ -1400,6 +1404,90 @@
       "UsePrepared": "Ataque preparado",
       "Edit": "Editar ataque",
       "Universals": "Vantagens e restrições universais"
+    },
+    "Background": {
+      "allies": {
+        "label": "Allies"
+      },
+      "artifact": {
+        "label": "Artifact"
+      },
+      "backing": {
+        "label": "Backing"
+      },
+      "contacts": {
+        "label": "Contacts"
+      },
+      "fame": {
+        "label": "Fame"
+      },
+      "followers": {
+        "label": "Followers"
+      },
+      "holdings": {
+        "label": "Holdings"
+      },
+      "inheritance": {
+        "label": "Inheritance"
+      },
+      "mentor": {
+        "label": "Mentor"
+      },
+      "status": {
+        "label": "Status"
+      },
+      "wealth": {
+        "label": "Wealth"
+      },
+      "Title": "Backgrounds",
+      "Dots": "Pontos de criação {used}/{max}",
+      "GMAdjust": "Fora da criação só o Mestre ajusta Backgrounds (sem XP).",
+      "FreeDot": "Ponto grátis da criação",
+      "InstanceName": "Nome",
+      "NeedName": "Digite um nome primeiro.",
+      "InheritancePicks": "Escolhas de Inheritance",
+      "InheritanceFits": "Cabe no valor",
+      "InheritanceOver": "As escolhas não cabem no valor de Inheritance.",
+      "SavePicks": "Salvar escolhas",
+      "WealthHint": "Wealth é um Background: suba na aba Traços durante a criação; o Mestre ajusta aqui.",
+      "Refused": {
+        "notCreation": "{label}: Backgrounds só mudam durante a criação.",
+        "atMax": "{label} já está em 5.",
+        "artifactCap": "{label}: no máximo 5 pontos de Artifacts na criação."
+      }
+    },
+    "Alignment": {
+      "Pantheon": {
+        "ruinousPowers": "Ruinous Powers",
+        "blessedPantheon": "Blessed Pantheon",
+        "grayCouncil": "Gray Council"
+      },
+      "Title": "Alinhamento",
+      "Commandments": "Mandamentos",
+      "Cults": "Cultos",
+      "Check": "Alignment Check",
+      "Recover": "Recuperar Devotion",
+      "RecoverHint": "Com o acordo do Mestre, depois de atos de penitência ou exemplares: passando, ganha um ponto de Devotion.",
+      "SecondCheck": "Segundo Alignment Check (Degeneration)",
+      "CheckHint": "1d10 + bônus contra a Devotion; efeitos de feats e assets somam.",
+      "Bonus": "Bônus",
+      "Passed": "1d10 {d10} + {bonus} = {total} contra Devotion {devotion}: passou.",
+      "Failed": "1d10 {d10} + {bonus} = {total} contra Devotion {devotion}: falhou.",
+      "OutOfPlay": "{name} chega a Devotion 0 e sai de jogo.",
+      "OutOfPlayBadge": "Devotion 0: o personagem está fora de jogo.",
+      "AlreadyAligned": "Já alinhado com {deity}.",
+      "OnlyOnce": "O alinhamento só pode ser trocado uma vez.",
+      "Change": "Trocar alinhamento",
+      "ChangeSame": "Trocar de {from} para {to} (mesmo panteão): Devotion passa a {devotion}.",
+      "ChangeOther": "Trocar de {from} para {to} (outro panteão): Devotion passa a {devotion} e uma Degeneration fica no ponto 7.",
+      "Changed": "Trocado uma vez",
+      "DropHint": "Arraste uma divindade do compêndio Deities para escolher o alinhamento.",
+      "Degeneration": "Degeneration",
+      "Degenerations": "Degenerations por ponto de Devotion",
+      "WrittenAt": "registrada em Devotion {point}",
+      "Cured": "{names} (Devotion {point}) foi superada.",
+      "Cure": "Curar",
+      "BlockedXp": "Sem compra por XP enquanto reduzida"
     }
   }
 }

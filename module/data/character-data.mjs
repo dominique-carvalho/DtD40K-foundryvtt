@@ -1,6 +1,9 @@
-import { ADDICTION_LEVELS, CHARACTERISTICS, DERIVED_KEYS, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, SKILLS, STARTING_XP, XP_KINDS } from "../config.mjs";
+import {
+  ADDICTION_LEVELS, CHARACTERISTICS, DERIVED_KEYS, INHERITANCE_SLOTS, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, SKILLS, STARTING_XP, XP_KINDS
+} from "../config.mjs";
 import { spellSlots } from "../rules/magic.mjs";
 import { adeptLevels } from "../rules/martial.mjs";
+import { creationDots } from "../rules/backgrounds.mjs";
 import { effectiveWealth } from "../rules/acquisition.mjs";
 import { characterLevel } from "../rules/class.mjs";
 import { computeDerived } from "../rules/derived.mjs";
@@ -78,6 +81,38 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
         max: integer(2, { min: 0 })
       }),
       devotion: new SchemaField({ value: integer(6, { min: 0, max: 10 }) }),
+      // Backgrounds (spec 011, research R2): Wealth stays in system.wealth.value (spec 007).
+      backgrounds: new SchemaField({
+        ...Object.fromEntries(["allies", "contacts", "fame", "followers", "holdings", "inheritance", "mentor", "status"]
+          .map((key) => [key, new SchemaField({ value: integer(0, { min: 0, max: 5 }) })])),
+        artifacts: new ArrayField(new SchemaField({
+          id: new StringField({ required: true, blank: false }),
+          name: new StringField({ required: true, blank: false, trim: true }),
+          value: integer(1, { min: 1, max: 5 })
+        })),
+        backings: new ArrayField(new SchemaField({
+          id: new StringField({ required: true, blank: false }),
+          name: new StringField({ required: true, blank: false, trim: true }),
+          value: integer(1, { min: 1, max: 5 })
+        })),
+        // Inheritance choices: extra starting items by rarity (p. 282).
+        inheritancePicks: new SchemaField(Object.fromEntries(Object.keys(INHERITANCE_SLOTS).map((key) => [key, integer(0, { min: 0 })])))
+      }),
+      // Alignment (spec 011, research R5/R6): the embedded deity is the god; changes made; Degenerations by Devotion point.
+      alignment: new SchemaField({
+        changes: integer(0, { min: 0 }),
+        degenerations: new ArrayField(new SchemaField({
+          id: new StringField({ required: true, blank: false }),
+          point: integer(0, { min: 0, max: 10 }),
+          name: new StringField({ required: true, blank: false }),
+          row: integer(0, { min: 0 }),
+          // Characteristic lowered by it: no XP purchase while it lasts (p. 285).
+          characteristic: new StringField({ required: true, blank: true }),
+          effectIds: new ArrayField(new StringField({ required: true, blank: false })),
+          itemIds: new ArrayField(new StringField({ required: true, blank: false })),
+          derangement: new StringField({ required: true, blank: true })
+        }))
+      }),
       derivedMods: new SchemaField(derivedMods),
       // Targets of racial power effects only — never rendered as sheet inputs (spec 002, research R3/R4).
       modifiers: new SchemaField({
@@ -97,6 +132,8 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
         staticDefenseCharacteristic: new StringField({ required: true, choices: ["dex", "con"], initial: "dex" }),
         fatigueMax: integer(0),
         initiative: integer(0),
+        // Alignment Check bonus from feats and assets (spec 011, p. 284).
+        alignmentCheck: integer(0),
         // Targets of condition and combat-action effects only (spec 008, research R3/R5).
         combat: new SchemaField({
           sd: integer(0),
@@ -237,6 +274,10 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     this.#prepareCombat();
     this.#prepareMagic();
     // Martial Adept and Gunslinger Level: the highest Sword School and Gun Kata (pp. 260, 272).
+    // Backgrounds dots at creation and alignment state (spec 011).
+    this.backgrounds.dots = creationDots({ backgrounds: this.backgrounds, wealth: this.wealth.value });
+    this.alignment.outOfPlay = this.devotion.value <= 0;
+    this.alignment.blocked = [...new Set(this.alignment.degenerations.map((d) => d.characteristic).filter(Boolean))];
     this.martial.levels = adeptLevels(Object.fromEntries(Object.entries(this.martial.schools).map(([key, s]) => [key, s.value])));
   }
 

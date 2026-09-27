@@ -1,0 +1,50 @@
+{
+  "name": "Acerath",
+  "type": "deity",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>A frail wizard who gave up body, face and name piece by piece to become the skull-god of magic and secrets, knowing every answer but rarely sharing.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 311
+    },
+    "key": "acerath",
+    "pantheon": "grayCouncil",
+    "summary": "A frail wizard who gave up body, face and name piece by piece to become the skull-god of magic and secrets, knowing every answer but rarely sharing.",
+    "commandments": [
+      "Seek mental perfection by balancing reason, perception and emotion.",
+      "Gather, preserve and guard secret knowledge; found libraries and hunt ancient lore.",
+      "Always keep something back."
+    ],
+    "keywords": [
+      "Secrets",
+      "Magic",
+      "Discovery",
+      "Undeath",
+      "Immortality"
+    ],
+    "directivesTitle": "Acerath's Enigma",
+    "directives": [
+      "Secrets carry fear and hope, and above all power.",
+      "Master the Warp and sorcery, braving its riskiest paths.",
+      "Whoever uncovers the unknown gains mastery over fate.",
+      "Existence after death lasts longer and offers more than life.",
+      "Immortality does more than prolong life; it makes the impossible possible."
+    ],
+    "cults": [
+      {
+        "name": "Confessionals",
+        "summary": "Temples that pay outsiders cash for secrets according to their worth and keep them perfectly; liars quietly vanish."
+      },
+      {
+        "name": "Librarians",
+        "summary": "Guardians of true history who copy records into a hidden library whose location even they do not know."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdDad900587de96",
+  "_key": "!items!dtdDad900587de96",
+  "folder": "dtdDFd996f879335"
+}

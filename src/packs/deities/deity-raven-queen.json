@@ -1,0 +1,50 @@
+{
+  "name": "Raven Queen",
+  "type": "deity",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>Humorless goddess of death as the exact, proper end of life; those who dodge or deny death offend the natural cycle.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 307
+    },
+    "key": "ravenQueen",
+    "pantheon": "grayCouncil",
+    "summary": "Humorless goddess of death as the exact, proper end of life; those who dodge or deny death offend the natural cycle.",
+    "commandments": [
+      "Do not pity those who suffer and die; death is life's natural close.",
+      "Humble the proud who try to escape fate and punish arrogance.",
+      "Walk the shadows, avoiding both zealous good and utter evil."
+    ],
+    "keywords": [
+      "Death",
+      "Fate",
+      "Humility",
+      "Mortality",
+      "Funerals"
+    ],
+    "directivesTitle": "Repose of the Raven Queen",
+    "directives": [
+      "Death is life's intended end and must not be avoided.",
+      "Each being has a fate; she allows some change in exchange for the soul at the proper time.",
+      "All are equal before death, and knowing this keeps everyone humble.",
+      "Mortal life, in step with death, surpasses immortality.",
+      "Every dead being is owed funeral rites for her glory."
+    ],
+    "cults": [
+      {
+        "name": "Cannibals",
+        "summary": "Secretive cults honoring the dead by ritually eating part of the body, mostly as a burial custom."
+      },
+      {
+        "name": "Undead Hunters",
+        "summary": "Devotees with ritual gear who destroy undead and necromancers, heroes in a crisis but seen as paranoid in calm times."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdDa599637892b0",
+  "_key": "!items!dtdDa599637892b0",
+  "folder": "dtdDFd996f879335"
+}

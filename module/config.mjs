@@ -176,7 +176,7 @@ export const STARTING_XP = 600;
 export const FREE_STUDY_MULTIPLIER = 2;
 
 /** What an XP purchase can buy (schools, spells and backgrounds come with their own features). */
-export const XP_KINDS = ["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo", "martial", "specialAttack"];
+export const XP_KINDS = ["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo", "martial", "specialAttack", "background"];
 
 /** Generic 1-point resource spends (DtD 7.7a p. 65). */
 export const GENERIC_SPENDS = ["heal", "skill", "reaction", "stunned", "dazed"];
@@ -372,6 +372,29 @@ export const MARTIAL_ENTRY_TYPES = ["action", "weapon", "flaw", "skill", "advant
 /** XP of Special Attacks and Trick Shots (p. 261, p. 273): 50 per style point of Advantages; schools cost as MAGIC_XP. */
 export const MARTIAL_XP = { perStylePoint: 50 };
 
+/* ---------- Backgrounds and Alignment (spec 011, DtD 7.7a ch. XI–XII, pp. 280–312) ---------- */
+
+/** The three pantheons (pp. 287–291). */
+export const PANTHEONS = Object.fromEntries(["ruinousPowers", "blessedPantheon", "grayCouncil"]
+  .map((key) => [key, { label: `DTD.Alignment.Pantheon.${key}` }]));
+
+/** The eleven Backgrounds (pp. 280–283); Artifact and Backing can be taken several times. */
+export const BACKGROUNDS = Object.fromEntries([
+  "allies", "artifact", "backing", "contacts", "fame", "followers", "holdings", "inheritance", "mentor", "status", "wealth"
+].map((key) => [key, { label: `DTD.Background.${key}.label`, multiple: key === "artifact" || key === "backing" }]));
+
+/**
+ * Backgrounds at creation (pp. 15–16, 281): 7 free dots, none above 3 without XP; 50 XP per dot 1–3 and 100 per
+ * dot 4–5, only during creation; at most 5 dots of Artifacts.
+ */
+export const BACKGROUND_XP = { freeDots: 7, freeMax: 3, low: 50, high: 100, artifactCreationMax: 5 };
+
+/**
+ * Inheritance picks (p. 282) in "slots": a rank-1 choice fills one slot (1 Uncommon, 2 Common, 4 Very Common or 8
+ * Ubiquitous); each rank doubles the slots (a rarer item or two choices of the rank below).
+ */
+export const INHERITANCE_SLOTS = { ubiquitous: 0.125, veryCommon: 0.25, common: 0.5, uncommon: 1, rare: 2, veryRare: 4, mythicRare: 8, anyNonArtifact: 16 };
+
 export const DTD = {
   GROUPS,
   CHARACTERISTICS,
@@ -431,5 +454,9 @@ export const DTD = {
   MAGIC_XP,
   MARTIAL_SCHOOLS,
   MARTIAL_ENTRY_TYPES,
-  MARTIAL_XP
+  MARTIAL_XP,
+  PANTHEONS,
+  BACKGROUNDS,
+  BACKGROUND_XP,
+  INHERITANCE_SLOTS
 };

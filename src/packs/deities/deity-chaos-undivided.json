@@ -1,0 +1,52 @@
+{
+  "name": "Chaos Undivided",
+  "type": "deity",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Worship of Chaos as a whole; its faithful are natural Chaos leaders, at odds with no god but Malal, and face lighter demands while taking care not to offend any power.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 292
+    },
+    "key": "chaosUndivided",
+    "pantheon": "ruinousPowers",
+    "summary": "Worship of Chaos as a whole; its faithful are natural Chaos leaders, at odds with no god but Malal, and face lighter demands while taking care not to offend any power.",
+    "commandments": [
+      "Push for what ought to happen rather than guarding against what might.",
+      "Reject artifice and imposed structure; prefer what is raw and honest.",
+      "Trust feelings over things seen or touched; seek guidance within yourself.",
+      "Live now, since tomorrow is uncertain and rewards may never come.",
+      "Judge the world by your own experience, not by causes you do not care about."
+    ],
+    "keywords": [
+      "Freedom",
+      "Nature",
+      "Emotion",
+      "Immediacy",
+      "Personal"
+    ],
+    "directivesTitle": "Impulse of Chaos Undivided",
+    "directives": [
+      "Push for what ought to happen rather than guarding against what might.",
+      "Reject artifice and imposed structure; prefer what is raw and honest.",
+      "Trust feelings over things seen or touched; seek guidance within yourself.",
+      "Live now, since tomorrow is uncertain and rewards may never come.",
+      "Judge the world by your own experience, not by causes you do not care about."
+    ],
+    "cults": [
+      {
+        "name": "The Black Legion",
+        "summary": "A union-like Chaos coalition that labors to make the rival gods' followers cooperate; entry needs an insider sponsor and proven effort."
+      },
+      {
+        "name": "The Word Bearers",
+        "summary": "Zealous missionaries who conquer communities for Chaos, offer conversion or death, then hold them with political and military force."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdDd4d3b763a0c8",
+  "_key": "!items!dtdDd4d3b763a0c8",
+  "folder": "dtdDFdce114eb321"
+}

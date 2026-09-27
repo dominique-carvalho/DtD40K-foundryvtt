@@ -1,0 +1,50 @@
+{
+  "name": "Omnissiah",
+  "type": "deity",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>God of technology and the machine spirits in every device, seen as a Wheel-wide machine; its faithful treat machines like people and seek efficiency.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 305
+    },
+    "key": "omnissiah",
+    "pantheon": "blessedPantheon",
+    "summary": "God of technology and the machine spirits in every device, seen as a Wheel-wide machine; its faithful treat machines like people and seek efficiency.",
+    "commandments": [
+      "Care for machines and they will care for you.",
+      "Keep all technology healthy and do not hoard it.",
+      "Machines are superior and make everyone equal."
+    ],
+    "keywords": [
+      "Machinery",
+      "Knowledge",
+      "Animism",
+      "Transcension",
+      "Mystery"
+    ],
+    "directivesTitle": "Erudition of the Omnissiah",
+    "directives": [
+      "Machines are too perfect for this chaotic cosmos to exist without divine origin.",
+      "Knowledge is a sacred path to progress and to new machines revealed by the god.",
+      "Each machine holds a blessed spirit, the god's true chosen, never to be abused.",
+      "Machines outrank biology; the living can only tend, revere and perhaps merge with them.",
+      "Pure science fails; the god is beyond understanding and must be worshipped."
+    ],
+    "cults": [
+      {
+        "name": "Tech-Priests",
+        "summary": "Machine worshippers whose prayers, oils and incense appease machine spirits and somehow work, perhaps with deliberate mystique."
+      },
+      {
+        "name": "Transhumanists",
+        "summary": "Cultists replacing their bodies with machinery (a prosthetic is required to join) who treat tech as tools and the body as upgradable."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdD44ece04a8b8b",
+  "_key": "!items!dtdD44ece04a8b8b",
+  "folder": "dtdDFdb670b52d51"
+}

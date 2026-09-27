@@ -143,3 +143,20 @@ describe("Sword Schools and Gun Kata (spec 010, p. 16)", () => {
     });
   });
 });
+
+describe("Backgrounds and Degeneration (spec 011)", () => {
+  it("undoes a Background purchase; instances are restored by the service", () => {
+    expect(undoPlan({ kind: "background", key: "fame", from: 3, to: 4, cost: 100 }, 4)).toEqual({
+      restore: { path: "system.backgrounds.fame.value", value: 3 }, deleteItem: null, refund: 100
+    });
+    expect(undoPlan({ kind: "background", key: "wealth", from: 1, to: 2, cost: 0 }, 2).restore).toEqual({ path: "system.wealth.value", value: 1 });
+    expect(undoPlan({ kind: "background", key: "artifact:abc", from: 1, to: 2, cost: 50 }, null)).toEqual({ restore: null, deleteItem: null, refund: 50 });
+  });
+
+  it("refuses a characteristic reduced by a Degeneration (p. 285)", () => {
+    const cls = { system: { status: "current", characteristics: ["dex", "str"], skills: [], feats: [], magicSchools: [], anyCharacteristic: false } };
+    const base = { kind: "characteristic", classes: [cls], race: null, owned: [], blocked: ["dex"] };
+    expect(canAdvance({ ...base, key: "dex" })).toMatchObject({ allowed: false, reason: "degenerated" });
+    expect(canAdvance({ ...base, key: "str" })).toMatchObject({ allowed: true });
+  });
+});

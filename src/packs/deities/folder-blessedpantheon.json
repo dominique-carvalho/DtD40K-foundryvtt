@@ -1,0 +1,16 @@
+{
+  "_id": "dtdDFdb670b52d51",
+  "_key": "!folders!dtdDFdb670b52d51",
+  "name": "Blessed Pantheon",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 20000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "deityFolder": "blessedPantheon"
+    }
+  }
+}

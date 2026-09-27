@@ -153,7 +153,7 @@ describe("class and XP constants (006)", () => {
     expect(DTD.XP_COSTS).toEqual({ characteristic: 200, newSkill: 100, skill: 50, feat: 100, asset: 100, powerStat: 300 });
     expect(DTD.STARTING_XP).toBe(600);
     expect(DTD.FREE_STUDY_MULTIPLIER).toBe(2);
-    expect(DTD.XP_KINDS).toEqual(["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo", "martial", "specialAttack"]);
+    expect(DTD.XP_KINDS).toEqual(["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo", "martial", "specialAttack", "background"]);
   });
 });
 
@@ -277,5 +277,19 @@ describe("martial constants (010)", () => {
   it("lists entry types and the XP per style point", () => {
     expect(DTD.MARTIAL_ENTRY_TYPES).toEqual(["action", "weapon", "flaw", "skill", "advantage", "mastery"]);
     expect(DTD.MARTIAL_XP).toEqual({ perStylePoint: 50 });
+  });
+});
+
+describe("background and alignment constants (011)", () => {
+  it("lists the three pantheons and the eleven Backgrounds (pp. 280–287)", () => {
+    expect(Object.keys(DTD.PANTHEONS)).toEqual(["ruinousPowers", "blessedPantheon", "grayCouncil"]);
+    expect(Object.keys(DTD.BACKGROUNDS)).toEqual(["allies", "artifact", "backing", "contacts", "fame", "followers", "holdings", "inheritance", "mentor", "status", "wealth"]);
+    expect(Object.entries(DTD.BACKGROUNDS).filter(([, b]) => b.multiple).map(([k]) => k)).toEqual(["artifact", "backing"]);
+    for (const [key, def] of Object.entries(DTD.BACKGROUNDS)) expect(def.label).toBe(`DTD.Background.${key}.label`);
+  });
+
+  it("prices Backgrounds at creation and sizes Inheritance picks (pp. 15–16, 282)", () => {
+    expect(DTD.BACKGROUND_XP).toEqual({ freeDots: 7, freeMax: 3, low: 50, high: 100, artifactCreationMax: 5 });
+    expect(DTD.INHERITANCE_SLOTS).toEqual({ ubiquitous: 0.125, veryCommon: 0.25, common: 0.5, uncommon: 1, rare: 2, veryRare: 4, mythicRare: 8, anyNonArtifact: 16 });
   });
 });

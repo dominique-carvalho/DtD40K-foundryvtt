@@ -1,0 +1,50 @@
+{
+  "name": "Vectron",
+  "type": "deity",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>A parody god, loudly insisted to be real, patron of whatever you need right now, who accepts any worship aimed at him.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 308
+    },
+    "key": "vectron",
+    "pantheon": "grayCouncil",
+    "summary": "A parody god, loudly insisted to be real, patron of whatever you need right now, who accepts any worship aimed at him.",
+    "commandments": [
+      "Never doubt that Vectron is a genuine god, the greatest of all.",
+      "Any problem yields to loud enough praise and one more attempt.",
+      "Credit Vectron publicly and try to win converts."
+    ],
+    "keywords": [
+      "Vectron's Order",
+      "Vectron's Freedom",
+      "Vectron's Salvation",
+      "Vectron's Power",
+      "Vectron's Presence"
+    ],
+    "directivesTitle": "Vectron's Ubiquity",
+    "directives": [
+      "He gives order to those who crave structure.",
+      "He grants freedom to those who reject structure.",
+      "He safeguards the souls of sinners.",
+      "He offers everyone power over their own lives.",
+      "He blesses every place his name is uttered."
+    ],
+    "cults": [
+      {
+        "name": "The Third Reformation of the United Vectron Church",
+        "summary": "A repeatedly split and reunited church with near-daily open-pulpit services broadcast widely as entertainment."
+      },
+      {
+        "name": "Vectron's Witnesses",
+        "summary": "A notorious sect accused of brainwashing and extortion, demanding tithes, endless missions and total isolation from outsiders."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdD8426adac726d",
+  "_key": "!items!dtdD8426adac726d",
+  "folder": "dtdDFd996f879335"
+}

@@ -57,7 +57,7 @@ quickstart.md
 - [X] T017 [US2] `xp-service`: `advance(actor, "school", key)` e desfazer; `magic-service.learnSpell` (drop de `spell` na ficha)
 - [X] T018 [US2] Aba `magic` (`templates/actor/parts/magic.hbs`, `module/apps/magic-context.mjs`): escolas com valor, vagas e `+custo` no modo Evolução; magias por escola
 - [X] T019 [P] [US2] i18n e estilos
-- [ ] T020 [US2] Validar quickstart 3–6 e registrar
+- [X] T020 [US2] Validar quickstart 3–6 e registrar
 
 ---
 
@@ -68,7 +68,7 @@ quickstart.md
 - [X] T023 [US3] `module/apps/cast-dialog.mjs` + `templates/dialog/cast-dialog.hbs` (força, push, TN, modificadores, reroll do Implement)
 - [X] T024 [US3] `magic-service.castSpell`, `resistSpell`, `rollPhenomena`; `templates/chat/spell-card.hbs`; dano via cartão de dano com `magic`; efeitos com duração; turno da 008; botões no hook do chat
 - [X] T025 [P] [US3] i18n e estilos
-- [ ] T026 [US3] Validar quickstart 7–14 e registrar
+- [X] T026 [US3] Validar quickstart 7–14 e registrar
 
 ---
 
@@ -78,7 +78,7 @@ quickstart.md
 - [X] T028 [US4] `magic-service`: sustentadas (`endSustained`, `sustainTurn` no `DtdCombat#_onStartTurn`), `learnCombo` (XP), conjurar combo; Implement Focus no diálogo
 - [X] T029 [US4] Na aba `magic`: sustentadas (encerrar), combos (aprender, conjurar), estado (caster level, Sanctioned, Implement)
 - [X] T030 [P] [US4] i18n e estilos
-- [ ] T031 [US4] Validar quickstart 15–17 e registrar
+- [X] T031 [US4] Validar quickstart 15–17 e registrar
 
 ---
 

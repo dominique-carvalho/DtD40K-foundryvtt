@@ -1,0 +1,50 @@
+{
+  "name": "Tzeentch",
+  "type": "deity",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Chessmaster god of change, hope, trickery, magic and scheming who uses followers as pieces in a vast unseen design, often lifting them to power along the way.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 296
+    },
+    "key": "tzeentch",
+    "pantheon": "ruinousPowers",
+    "summary": "Chessmaster god of change, hope, trickery, magic and scheming who uses followers as pieces in a vast unseen design, often lifting them to power along the way.",
+    "commandments": [
+      "Keep plans flexible and adapt whenever needed.",
+      "Alter what displeases you in yourself, freely using sorcery.",
+      "Pursue your own aims and seize control of your fate."
+    ],
+    "keywords": [
+      "Change",
+      "Ambition",
+      "Manipulation",
+      "Trickery",
+      "Plotting"
+    ],
+    "directivesTitle": "Tzeentch's Designs",
+    "directives": [
+      "Exploit change for your own gain and never waste it.",
+      "Always hold a further goal and find reasons to change things.",
+      "Harness forces greater than yourself; turn the world on itself.",
+      "Conceal your aims behind many lies and act unpredictably.",
+      "Think hard before acting on rage, fear or love; chances are rare."
+    ],
+    "cults": [
+      {
+        "name": "The Player's Club",
+        "summary": "Elite gamblers who engineer wars, plagues and crises in advance and then wager on how they play out."
+      },
+      {
+        "name": "Illuminati",
+        "summary": "Mostly recent 'ancient' secret societies playing at hidden power, sometimes used as pawns by real conspiracies and occasionally becoming genuinely important."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdD742eca5b0cae",
+  "_key": "!items!dtdD742eca5b0cae",
+  "folder": "dtdDFdce114eb321"
+}

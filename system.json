@@ -93,6 +93,11 @@
         "htmlFields": [
           "description"
         ]
+      },
+      "deity": {
+        "htmlFields": [
+          "description"
+        ]
       }
     }
   },
@@ -189,6 +194,17 @@
       "name": "martial-schools",
       "label": "Martial Schools",
       "path": "packs/martial-schools",
+      "type": "Item",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "deities",
+      "label": "Deities",
+      "path": "packs/deities",
       "type": "Item",
       "system": "dtd40k",
       "ownership": {

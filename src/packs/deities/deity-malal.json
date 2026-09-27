@@ -1,0 +1,50 @@
+{
+  "name": "Malal",
+  "type": "deity",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Renegade god of limitless destruction and Chaos's self-destructive streak, loathed by the other gods, feeding on their power and eventually betraying even his own.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 297
+    },
+    "key": "malal",
+    "pantheon": "ruinousPowers",
+    "summary": "Renegade god of limitless destruction and Chaos's self-destructive streak, loathed by the other gods, feeding on their power and eventually betraying even his own.",
+    "commandments": [
+      "Draw strength from hatred and show enemies no mercy.",
+      "Everything is fated to end, so tear everything down.",
+      "Treachery pays; those who cannot protect themselves deserve their fate."
+    ],
+    "keywords": [
+      "Rebellion",
+      "Undermine",
+      "Oblivion",
+      "Isolation",
+      "Contradiction"
+    ],
+    "directivesTitle": "Malignancy of Malal",
+    "directives": [
+      "Serve no master, not even Malal; destroy whatever enrages you.",
+      "Take what makes others admired and turn it ironically against them.",
+      "Save no one, yourself included; bring certain annihilation.",
+      "Unmake every bond and stay alone even among people.",
+      "Honor and slay Malal alike, glorify and burn Chaos, and fade into nothing."
+    ],
+    "cults": [
+      {
+        "name": "Street Gangs",
+        "summary": "Alienated youths who tear down establishments and themselves without deeper motives; the few survivors become terrorists and warlords."
+      },
+      {
+        "name": "Singular Champions",
+        "summary": "Lone avengers consumed by destroying what they hate, whom Malal keeps isolated by ensuring those close to them die."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdD36773d9fdf05",
+  "_key": "!items!dtdD36773d9fdf05",
+  "folder": "dtdDFdce114eb321"
+}

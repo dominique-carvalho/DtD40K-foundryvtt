@@ -14,6 +14,8 @@ import { SpellData } from "./module/data/spell-data.mjs";
 import { SpellSheet } from "./module/apps/spell-sheet.mjs";
 import { MartialSchoolData } from "./module/data/martial-school-data.mjs";
 import { MartialSchoolSheet } from "./module/apps/martial-school-sheet.mjs";
+import { DeityData } from "./module/data/deity-data.mjs";
+import { DeitySheet } from "./module/apps/deity-sheet.mjs";
 import { DtdActiveEffect } from "./module/documents/active-effect.mjs";
 import { rollDamage } from "./module/documents/attack-service.mjs";
 import { spendLiquid } from "./module/documents/acquisition-service.mjs";
@@ -49,6 +51,7 @@ Hooks.once("init", () => {
   CONFIG.Item.dataModels.gear = GearData;
   CONFIG.Item.dataModels.spell = SpellData;
   CONFIG.Item.dataModels.martialSchool = MartialSchoolData;
+  CONFIG.Item.dataModels.deity = DeityData;
   // Equipment effects apply only while the item is in use (spec 007, research R2).
   CONFIG.ActiveEffect.documentClass = DtdActiveEffect;
   // Combat order, turn limits and the conditions of the book (spec 008, research R3–R5).
@@ -109,6 +112,12 @@ Hooks.once("init", () => {
     types: ["martialSchool"],
     makeDefault: true,
     label: "DTD.Sheet.MartialSchool"
+  });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", DeitySheet, {
+    types: ["deity"],
+    makeDefault: true,
+    label: "DTD.Sheet.Deity"
   });
 
   foundry.applications.handlebars.loadTemplates(CharacterSheet.PARTIALS);

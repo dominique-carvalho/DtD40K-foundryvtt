@@ -1,0 +1,50 @@
+{
+  "name": "Tiamat",
+  "type": "deity",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>The dead dragon empress, Bahamut's opposite and a goddess of power held by whoever is strong enough to seize it; her followers await her return.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 298
+    },
+    "key": "tiamat",
+    "pantheon": "ruinousPowers",
+    "summary": "The dead dragon empress, Bahamut's opposite and a goddess of power held by whoever is strong enough to seize it; her followers await her return.",
+    "commandments": [
+      "Respect the hierarchy, obey, and plot your rise.",
+      "Loyalty and custom make weak foundations; do not rely on them.",
+      "Never let weakness show."
+    ],
+    "keywords": [
+      "Power",
+      "Ascendancy",
+      "Hierarchy",
+      "Estimation",
+      "Fear"
+    ],
+    "directivesTitle": "Creed of Tiamat",
+    "directives": [
+      "Power underlies everything; without it you are nothing.",
+      "Life is a ladder climbed only by the strong, and passing someone means their fall.",
+      "Strong lead and weak follow; never obey a lesser, never strike a superior.",
+      "Shape how others see you to become great.",
+      "Use fear as a shield that deters threats and sharpens your vigilance."
+    ],
+    "cults": [
+      {
+        "name": "The Cult of the Dragon Reborn",
+        "summary": "The ancient public face of Tiamat worship, recruiting gently through community centers and indoctrinating 'retreats'."
+      },
+      {
+        "name": "The Council of Wyrms",
+        "summary": "Surviving dragon lords who direct her minions from hiding and gather pieces of her corpse, demanding a fragment from anyone seeking promotion."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdD5f8c6c4a40a4",
+  "_key": "!items!dtdD5f8c6c4a40a4",
+  "folder": "dtdDFdce114eb321"
+}

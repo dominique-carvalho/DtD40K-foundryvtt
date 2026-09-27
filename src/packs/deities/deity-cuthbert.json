@@ -1,0 +1,50 @@
+{
+  "name": "Cuthbert",
+  "type": "deity",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>God of law as Order itself, of oaths and trust; laws must be obeyed whether fair or not, and oath-breakers face his personal curse.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 300
+    },
+    "key": "cuthbert",
+    "pantheon": "blessedPantheon",
+    "summary": "God of law as Order itself, of oaths and trust; laws must be obeyed whether fair or not, and oath-breakers face his personal curse.",
+    "commandments": [
+      "Keep your word without exception.",
+      "Master your own fear and instill it in your enemies.",
+      "Answer betrayal with force; trust until trust is broken and restore it only once repaid."
+    ],
+    "keywords": [
+      "Law",
+      "Trials",
+      "Certainty",
+      "Resolution",
+      "Oaths"
+    ],
+    "directivesTitle": "Cuthbert's Law",
+    "directives": [
+      "Law serves the people and guides them through turmoil.",
+      "Bring lawbreakers to justice without committing crimes yourself.",
+      "Have an answer ready and make the world predictable.",
+      "Never bend the law; its fairness or unfairness must stay consistent.",
+      "Oaths are holy under his law and outrank any mortal statute."
+    ],
+    "cults": [
+      {
+        "name": "Judges",
+        "summary": "Harsh but fair jurists holding legal posts across many spheres, building a shared court network toward one universal legal code."
+      },
+      {
+        "name": "Lynchmen",
+        "summary": "Uniformed vigilantes enforcing law in lawless places through fear, acting as judge and executioner."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdD422d06b5a269",
+  "_key": "!items!dtdD422d06b5a269",
+  "folder": "dtdDFdb670b52d51"
+}

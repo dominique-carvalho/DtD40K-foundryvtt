@@ -1,0 +1,16 @@
+{
+  "_id": "dtdTFd9e1026fdff",
+  "_key": "!folders!dtdTFd9e1026fdff",
+  "name": "Alignment",
+  "type": "RollTable",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 400000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "tableFolder": "alignment"
+    }
+  }
+}

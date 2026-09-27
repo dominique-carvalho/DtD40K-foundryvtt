@@ -1,0 +1,52 @@
+{
+  "name": "Blessed Order",
+  "type": "deity",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>General worship of the whole Blessed Pantheon by spiritual people seeking pattern and purpose, holding that all events serve a divine plan for the common good.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 299
+    },
+    "key": "blessedOrder",
+    "pantheon": "blessedPantheon",
+    "summary": "General worship of the whole Blessed Pantheon by spiritual people seeking pattern and purpose, holding that all events serve a divine plan for the common good.",
+    "commandments": [
+      "Cut away every sinful or flawed act so only purity is left.",
+      "The Wheel is imperfect; describe what it ought to become.",
+      "Put the tangible and measurable ahead of the immaterial.",
+      "Give up present comfort for the sake of the future.",
+      "Bonds between people build Order; labor for the group over the self."
+    ],
+    "keywords": [
+      "Forbearance",
+      "Invented",
+      "Material",
+      "Enduring",
+      "Communal"
+    ],
+    "directivesTitle": "Teachings of the Blessed Order",
+    "directives": [
+      "Cut away every sinful or flawed act so only purity is left.",
+      "The Wheel is imperfect; describe what it ought to become.",
+      "Put the tangible and measurable ahead of the immaterial.",
+      "Give up present comfort for the sake of the future.",
+      "Bonds between people build Order; labor for the group over the self."
+    ],
+    "cults": [
+      {
+        "name": "Conspiracy Theorists",
+        "summary": "Obsessive pattern-seekers who link every event into a grand scheme, yet somehow keep turning up data they should not have."
+      },
+      {
+        "name": "Voidheart",
+        "summary": "Ascetics who abandon personal desire through fasting and meditation and serve as trusted, incorruptible mediators."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdDe4361b4fe63e",
+  "_key": "!items!dtdDe4361b4fe63e",
+  "folder": "dtdDFdb670b52d51"
+}

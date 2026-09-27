@@ -1,0 +1,50 @@
+{
+  "name": "Luna",
+  "type": "deity",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>Fickle moon goddess of change, independence and the true face behind civilized masks; like a mother she lets her children get hurt so they can grow.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 310
+    },
+    "key": "luna",
+    "pantheon": "grayCouncil",
+    "summary": "Fickle moon goddess of change, independence and the true face behind civilized masks; like a mother she lets her children get hurt so they can grow.",
+    "commandments": [
+      "Change is certain, but the faithful must steer it toward good.",
+      "Fight those who would take your freedom and rally others to theirs.",
+      "Neither fear nor judge nature's savagery; dwell at peace with wild places."
+    ],
+    "keywords": [
+      "Trickery",
+      "Prophecy",
+      "Balance",
+      "Myth",
+      "Rage"
+    ],
+    "directivesTitle": "Luna's Aspects",
+    "directives": [
+      "New moon: a playful trickster who loves riddles.",
+      "Crescent moon: an enigmatic seer.",
+      "Half moon: a judge and advisor, above all a mediator.",
+      "Gibbous moon: a singer and teller of myths who speaks for the people.",
+      "Full moon: a raging warrior unafraid of blood."
+    ],
+    "cults": [
+      {
+        "name": "Therians",
+        "summary": "People convinced they have animal souls who use her rituals to explore that identity; werewolves, her chosen, keep their distance."
+      },
+      {
+        "name": "Anarchists",
+        "summary": "Radicals who fight to destroy civilization, sure everyone will be freer and grateful afterward."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdD36ae8b017b34",
+  "_key": "!items!dtdD36ae8b017b34",
+  "folder": "dtdDFd996f879335"
+}

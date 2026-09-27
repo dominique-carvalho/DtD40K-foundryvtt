@@ -1,0 +1,50 @@
+{
+  "name": "Lolth",
+  "type": "deity",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>A daemon turned goddess of the Dark Eldarin after giving them a refuge in the Warp from Slaanesh; shunned by order and Chaos alike, she stands alone.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 312
+    },
+    "key": "lolth",
+    "pantheon": "grayCouncil",
+    "summary": "A daemon turned goddess of the Dark Eldarin after giving them a refuge in the Warp from Slaanesh; shunned by order and Chaos alike, she stands alone.",
+    "commandments": [
+      "She favors women among her greatest followers; few men willingly serve her.",
+      "Sacrifice is required, both your own and that of others.",
+      "Only outcomes count, never the means."
+    ],
+    "keywords": [
+      "Ambition",
+      "Treachery",
+      "Sacrifice",
+      "Suffering",
+      "Amorality"
+    ],
+    "directivesTitle": "Lolth's Disregard",
+    "directives": [
+      "Nurture a deep hunger to take whatever you desire.",
+      "The deadliest blow comes from a supposed ally; embrace that power.",
+      "Know your goal and what you would give up for it.",
+      "Pain is understood by all; be ready to inflict it and to heed it.",
+      "She ignores sins kept hidden; what matters is keeping the secret."
+    ],
+    "cults": [
+      {
+        "name": "Rabid Feminists",
+        "summary": "Secretive female-supremacist cults, not only Dark Eldarin, that want women ruling everything and men subjugated."
+      },
+      {
+        "name": "Black Widows",
+        "summary": "Lone infiltrators and assassins who marry rich or powerful targets and kill them, repeating across worlds."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdDb4b4672a0d21",
+  "_key": "!items!dtdDb4b4672a0d21",
+  "folder": "dtdDFd996f879335"
+}

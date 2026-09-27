@@ -1,0 +1,50 @@
+{
+  "name": "Nurgle",
+  "type": "deity",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>A doting, grandfatherly god of despair, disease and decay who treats rot as one more form of life and urges kindness in life's short span.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 294
+    },
+    "key": "nurgle",
+    "pantheon": "ruinousPowers",
+    "summary": "A doting, grandfatherly god of despair, disease and decay who treats rot as one more form of life and urges kindness in life's short span.",
+    "commandments": [
+      "Do not ask for aid; rise or fall by your own persistence.",
+      "Faith is the only way out of suffering.",
+      "Comfort the dying even though they cannot be saved."
+    ],
+    "keywords": [
+      "Life",
+      "Growth",
+      "Cycles",
+      "Decay",
+      "Death"
+    ],
+    "directivesTitle": "Nurgle's Wisdom",
+    "directives": [
+      "Celebrate and protect life, which is beautiful.",
+      "Grow and be glad, for growth expresses life.",
+      "Respect natural cycles; fleeing them means leaving his embrace.",
+      "Accept decay so that others get their chance to live.",
+      "Do not mourn death; it closes one chapter and opens another."
+    ],
+    "cults": [
+      {
+        "name": "Vectors",
+        "summary": "Heirs of a plague-carrying founder who knowingly spread disease under Nurgle's protection, some personally tending the victims they infected."
+      },
+      {
+        "name": "Hospitallers",
+        "summary": "Cheerful hospices under Nurgle's patronage that comfort the incurable, where remission or symptom-free carriers are common though cures are rare."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdD3b63354b3bd6",
+  "_key": "!items!dtdD3b63354b3bd6",
+  "folder": "dtdDFdce114eb321"
+}

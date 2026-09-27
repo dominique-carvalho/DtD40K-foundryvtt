@@ -55,20 +55,28 @@ export function strainRoll({ tn, wealth, raises = 0, d10 }) {
  * fits none of the picks.
  * @param {string} rarity
  * @param {string} [craftsmanship]
+ * @param {string[]} [keys]  pick kinds available (Inheritance opens more, spec 011)
  * @returns {string|null}
  */
-export function startingSlotFor(rarity, craftsmanship = "common") {
+export function startingSlotFor(rarity, craftsmanship = "common", keys = Object.keys(STARTING_SLOTS)) {
   const key = rarityStep(rarity, CRAFT_STEPS[craftsmanship] ?? 0);
-  return key in STARTING_SLOTS ? key : null;
+  return keys.includes(key) ? key : null;
 }
 
 /**
  * Starting picks used and available.
  * @param {{system: {startingSlot: string}}[]} items
+ * @param {Record<string, number>} [extra]  Inheritance picks by rarity (spec 011)
  * @returns {Record<string, {used: number, max: number}>}
  */
-export function startingSlots(items) {
+export function startingSlots(items, extra = {}) {
   const slots = Object.fromEntries(Object.entries(STARTING_SLOTS).map(([key, max]) => [key, { used: 0, max }]));
+  // Inheritance picks (spec 011, p. 282) add to the picks, opening other rarities too.
+  for (const [key, count] of Object.entries(extra)) {
+    if (!count) continue;
+    slots[key] ??= { used: 0, max: 0 };
+    slots[key].max += count;
+  }
   for (const item of items) {
     const key = item.system?.startingSlot;
     if (key && slots[key]) slots[key].used += 1;

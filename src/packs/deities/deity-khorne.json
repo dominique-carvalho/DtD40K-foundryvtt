@@ -1,0 +1,50 @@
+{
+  "name": "Khorne",
+  "type": "deity",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "description": "<p>Blood-and-battle god of honor who craves the blood of strong foes in worthy fights and scorns killing the weak or innocent.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 293
+    },
+    "key": "khorne",
+    "pantheon": "ruinousPowers",
+    "summary": "Blood-and-battle god of honor who craves the blood of strong foes in worthy fights and scorns killing the weak or innocent.",
+    "commandments": [
+      "Shed blood for him, yours or the enemy's, and never flinch from violence.",
+      "Distrust magic and do not study it; it is for weaklings.",
+      "Fight honorably and never prey on the defenseless."
+    ],
+    "keywords": [
+      "Blood",
+      "Skulls",
+      "Wrath",
+      "Honor",
+      "Effort"
+    ],
+    "directivesTitle": "Pillars of Khorne",
+    "directives": [
+      "All bloodshed pleases him; both killing and dying in his name are glorious.",
+      "Dedicate each victory to him; if you cannot stand proud over the foe, it was no victory.",
+      "Unleash your rage on the world instead of restraining it.",
+      "Keep your dignity before Khorne and never disgrace him.",
+      "Win through hard effort, avoiding tricks, sorcery and technology beyond what is needed."
+    ],
+    "cults": [
+      {
+        "name": "The Dethkvlt",
+        "summary": "Ritual killers who initiate by slaying an armed foe barehanded and hunt only dangerous prey, deliberately evening the odds."
+      },
+      {
+        "name": "Outer Heaven",
+        "summary": "Heirs of a destroyed mercenary space station where soldiers were honored; its scattered enclaves insist that everyone on a mission fights."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdDa18240d72ec4",
+  "_key": "!items!dtdDa18240d72ec4",
+  "folder": "dtdDFdce114eb321"
+}

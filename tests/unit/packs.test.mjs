@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { COMBAT_ACTIONS } from "../../module/rules/combat-actions.mjs";
 import {
   ASSET_AUTOMATION, ASSET_GROUPS, CHARACTERISTICS, EXALTATION_FORMULAS, RACE_POWER_AUTOMATION, RESOURCE_ACTIONS, SKILLS,
-  MAGIC_SCHOOLS, MARTIAL_ENTRY_TYPES, MARTIAL_SCHOOLS, RARITIES, SPELL_KEYWORDS, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
+  MAGIC_SCHOOLS, MARTIAL_ENTRY_TYPES, MARTIAL_SCHOOLS, PANTHEONS, RARITIES, SPELL_KEYWORDS, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
 } from "../../module/config.mjs";
 
 /** Every JSON document of a compendium source folder. */
@@ -771,9 +771,9 @@ const tableNamed = (name) => tables.find((doc) => doc.name === name);
 const statusIds = new Set(STATUS_EFFECTS.map((s) => s.id));
 
 describe("combat tables compendium source (spec 008, SC-002)", () => {
-  it("has 20 critical tables, the Shock Table, Mental Traumas and the two Warp tables (009) in 3 folders", () => {
-    expect(tables).toHaveLength(24);
-    expect(tablePack.filter((doc) => doc._key.startsWith("!folders!"))).toHaveLength(3);
+  it("has 20 critical tables, the Shock Table, Mental Traumas and the two Warp tables (009) and Degeneration (011) in 4 folders", () => {
+    expect(tables).toHaveLength(25);
+    expect(tablePack.filter((doc) => doc._key.startsWith("!folders!"))).toHaveLength(4);
     const criticals = tables.filter((doc) => doc.flags.dtd40k.table.kind === "critical");
     expect(criticals).toHaveLength(20);
     for (const type of ["energy", "explosive", "impact", "rending"]) {
@@ -916,5 +916,57 @@ describe("martial-schools compendium source (spec 010, SC-001)", () => {
         if (["weapon", "flaw", "skill"].includes(e.type)) expect(e.cost, e.name).toBeLessThan(0);
       }
     }
+  });
+});
+
+const deityPack = readPack("src/packs/deities");
+const deities = deityPack.filter((doc) => doc._key.startsWith("!items!"));
+const deityNamed = (name) => deities.find((doc) => doc.name === name);
+
+describe("deities compendium source (spec 011, SC-001)", () => {
+  it("has 21 deities in 3 pantheon folders, 7 each", () => {
+    expect(deities).toHaveLength(21);
+    expect(deityPack.filter((doc) => doc._key.startsWith("!folders!"))).toHaveLength(3);
+    for (const pantheon of Object.keys(PANTHEONS)) expect(deities.filter((doc) => doc.system.pantheon === pantheon), pantheon).toHaveLength(7);
+    expect(sorted(deities.filter((d) => d.system.pantheon === "grayCouncil").map((d) => d.name))).toEqual(
+      ["Acerath", "Corellon", "Lolth", "Luna", "Raven Queen", "Unaligned", "Vectron"]
+    );
+  });
+
+  it("matches the reference deities", () => {
+    expect(deityNamed("Slaanesh").system).toMatchObject({
+      pantheon: "ruinousPowers", keywords: ["Excellence", "Experience", "Excess", "Self-Indulgence", "Pride"],
+      directivesTitle: "Emancipation of Slaanesh", source: { page: 295 }
+    });
+    expect(deityNamed("Slaanesh").system.cults.map((c) => c.name)).toEqual(["Noise Marines", "The S Academy"]);
+    expect(deityNamed("Sigmar").system.pantheon).toBe("blessedPantheon");
+  });
+
+  it("has 3 commandments, 5 keywords, 5 directives and 2 cults each, descriptions and folders", () => {
+    const folderIds = new Set(deityPack.filter((doc) => doc._key.startsWith("!folders!")).map((doc) => doc._id));
+    for (const doc of deities) {
+      const s = doc.system;
+      expect(s.commandments.length, doc.name).toBeGreaterThanOrEqual(3);
+      expect(s.keywords, doc.name).toHaveLength(5);
+      expect(s.directives, doc.name).toHaveLength(5);
+      expect(s.cults, doc.name).toHaveLength(2);
+      expect(s.description, doc.name).toMatch(/^<p>.+<\/p>$/s);
+      expect(folderIds.has(doc.folder), doc.name).toBe(true);
+    }
+  });
+
+  it("has the Degeneration table with its automation", () => {
+    const table = tableNamed("Degeneration");
+    expect(table.results).toHaveLength(16);
+    expect(table.flags.dtd40k.table.kind).toBe("degeneration");
+    expect(table.results[0]).toMatchObject({ range: [1, 7], flags: { dtd40k: { effect: { characteristic: "dex", value: -1 } } } });
+    expect(table.results.at(-1)).toMatchObject({ range: [91, 100], flags: { dtd40k: { effect: { derangement: "minor" } } } });
+    const chars = Object.keys(CHARACTERISTICS);
+    for (const r of table.results) {
+      const e = r.flags.dtd40k.effect;
+      if (e.characteristic) expect(chars).toContain(e.characteristic);
+    }
+    expect(table.results.find((r) => r.name.includes("Horrific Nightmare")).flags.dtd40k.effect).toEqual({ hindrance: "Night Terrors" });
+    expect(table.results.find((r) => r.name.includes("Skin Affliction")).flags.dtd40k.effect).toEqual({ social: { rolled: -2 } });
   });
 });

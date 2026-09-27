@@ -9,6 +9,7 @@
  *   node scripts/assign-pack-ids.mjs --pack combat-tables
  *   node scripts/assign-pack-ids.mjs --pack spells
  *   node scripts/assign-pack-ids.mjs --pack martial-schools
+ *   node scripts/assign-pack-ids.mjs --pack deities
  */
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -123,7 +124,9 @@ const LAYOUTS = {
       critical: folder("table-folder:critical", "dtdTFd", "critical", "Critical Damage", null, 100000, "tableFolder", "RollTable"),
       mental: folder("table-folder:mental", "dtdTFd", "mental", "Fear and Insanity", null, 200000, "tableFolder", "RollTable"),
       // Psychic Phenomena and Perils of the Warp (spec 009).
-      warp: folder("table-folder:warp", "dtdTFd", "warp", "Warp", null, 300000, "tableFolder", "RollTable")
+      warp: folder("table-folder:warp", "dtdTFd", "warp", "Warp", null, 300000, "tableFolder", "RollTable"),
+      // Degeneration (spec 011).
+      alignment: folder("table-folder:alignment", "dtdTFd", "alignment", "Alignment", null, 400000, "tableFolder", "RollTable")
     };
     return {
       folders,
@@ -131,6 +134,7 @@ const LAYOUTS = {
       folderOf: ({ flags }) => {
         const kind = flags?.dtd40k?.table?.kind;
         if (kind === "critical") return folders.critical;
+        if (kind === "degeneration") return folders.alignment;
         return ["phenomena", "perils"].includes(kind) ? folders.warp : folders.mental;
       },
       seed: (file) => `table:${file}`,
@@ -163,6 +167,21 @@ const LAYOUTS = {
       folderOf: ({ system }) => folders[system.kind],
       seed: (file) => `martial:${file}`,
       prefix: "dtdM"
+    };
+  },
+  // Deities of chapter XII (spec 011): one folder per pantheon.
+  deities: () => {
+    const folders = {
+      ruinousPowers: folder("deity-folder:ruinousPowers", "dtdDFd", "ruinousPowers", "Ruinous Powers", null, 10000, "deityFolder"),
+      blessedPantheon: folder("deity-folder:blessedPantheon", "dtdDFd", "blessedPantheon", "Blessed Pantheon", null, 20000, "deityFolder"),
+      grayCouncil: folder("deity-folder:grayCouncil", "dtdDFd", "grayCouncil", "Gray Council", null, 30000, "deityFolder")
+    };
+    return {
+      folders,
+      fileOf: (key) => `folder-${slug(key)}.json`,
+      folderOf: ({ system }) => folders[system.pantheon],
+      seed: (file) => `deity:${file}`,
+      prefix: "dtdD"
     };
   }
 };

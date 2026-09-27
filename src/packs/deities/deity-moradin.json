@@ -1,0 +1,50 @@
+{
+  "name": "Moradin",
+  "type": "deity",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>Stoic, loyal creator god of family and hard work, worshipped mostly by squats and dwarves, who wants followers to leave lasting works and despises destroying others' legacies.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 303
+    },
+    "key": "moradin",
+    "pantheon": "blessedPantheon",
+    "summary": "Stoic, loyal creator god of family and hard work, worshipped mostly by squats and dwarves, who wants followers to leave lasting works and despises destroying others' legacies.",
+    "commandments": [
+      "Face hardship calmly and doggedly.",
+      "Stay loyal to kin, clan, leaders and people.",
+      "Make something that endures, whether as crafter or ruler."
+    ],
+    "keywords": [
+      "History",
+      "Family",
+      "Patience",
+      "Quality",
+      "Stability"
+    ],
+    "directivesTitle": "Moradin's Way",
+    "directives": [
+      "Record events for posterity; erasing history, even an enemy's, is the worst shame.",
+      "You are one link in an unbroken lineage that defines your duty.",
+      "His people endure: they were here before and will remain after.",
+      "Do things properly and learn from the masters.",
+      "Keep traditions for every part of life; their origin matters less than keeping them."
+    ],
+    "cults": [
+      {
+        "name": "Ancestor Cults",
+        "summary": "Household ancestor worship, common among squats, treating Moradin as the eldest ancestor, sometimes sparking inherited feuds."
+      },
+      {
+        "name": "The Stonecutters",
+        "summary": "An ancient guild-like brotherhood of builders behind many great structures, marking cornerstones with their crossed-tools triangle."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdDeb750e25cbdb",
+  "_key": "!items!dtdDeb750e25cbdb",
+  "folder": "dtdDFdb670b52d51"
+}

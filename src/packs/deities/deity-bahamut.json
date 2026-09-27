@@ -1,0 +1,50 @@
+{
+  "name": "Bahamut",
+  "type": "deity",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "description": "<p>The platinum dragon, an ascended mortal ruling over nobility and righteous authority, popular with rulers and Dragonborn; he values protecting the weak from the strong.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 302
+    },
+    "key": "bahamut",
+    "pantheon": "blessedPantheon",
+    "summary": "The platinum dragon, an ascended mortal ruling over nobility and righteous authority, popular with rulers and Dragonborn; he values protecting the weak from the strong.",
+    "commandments": [
+      "Hold to the highest standards of honor and justice.",
+      "Watch for evil everywhere and fight it on every front.",
+      "Shield the weak, free the oppressed and uphold rightful order."
+    ],
+    "keywords": [
+      "Dignity",
+      "Incorruptibility",
+      "Fairness",
+      "Leadership",
+      "Courage"
+    ],
+    "directivesTitle": "Nobility of Bahamut",
+    "directives": [
+      "Behave decently in public, in private and in battle.",
+      "Resist the lure of power and serve crown and people.",
+      "Judge carefully and impartially, showing leniency to the needy.",
+      "Pledge yourself to a good ruler blessed by Bahamut.",
+      "Be fearless and steadfast like the Platinum Dragon."
+    ],
+    "cults": [
+      {
+        "name": "The Final Word of Kings",
+        "summary": "Solitary assassins who remove rulers they judge unfit, from petty bosses to emperors."
+      },
+      {
+        "name": "Platinum Knights",
+        "summary": "Legendary elite warriors from remote fortress-monasteries, founded to fight Tiamat's minions above all."
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdDdc8e2b04a46d",
+  "_key": "!items!dtdDdc8e2b04a46d",
+  "folder": "dtdDFdb670b52d51"
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdNFdc0fbb30a6c",
+  "_key": "!folders!dtdNFdc0fbb30a6c",
+  "name": "Legends",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 80000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "npcFolder": "legends"
+    }
+  }
+}

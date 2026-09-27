@@ -1,0 +1,306 @@
+{
+  "name": "Dragon",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 7,
+        "specialties": []
+      },
+      "dex": {
+        "value": 4,
+        "specialties": []
+      },
+      "con": {
+        "value": 6,
+        "specialties": []
+      },
+      "cha": {
+        "value": 6,
+        "specialties": []
+      },
+      "fel": {
+        "value": 3,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 4,
+        "specialties": []
+      },
+      "int": {
+        "value": 5,
+        "specialties": []
+      },
+      "wis": {
+        "value": 5,
+        "specialties": []
+      },
+      "wil": {
+        "value": 5,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "academicLore": {
+        "value": 4,
+        "specialties": []
+      },
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 4,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 5,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 6,
+        "specialties": []
+      },
+      "charm": {
+        "value": 3,
+        "specialties": []
+      },
+      "command": {
+        "value": 5,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "forbiddenLore": {
+        "value": 5,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 6,
+        "specialties": []
+      },
+      "perception": {
+        "value": 5,
+        "specialties": []
+      },
+      "politics": {
+        "value": 2,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 4,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "size": 12,
+    "level": 5,
+    "hp": {
+      "value": 44
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 13
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 44
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 11
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 10
+      }
+    },
+    "magic": {
+      "schools": {
+        "evocation": {
+          "value": 3
+        },
+        "divination": {
+          "value": 4
+        }
+      }
+    },
+    "npc": {
+      "category": "legends",
+      "description": "<p>A scaled, winged, fire-breathing predator that is ancient, brilliant and steeped in magic; these numbers are for a small young one, and old wyrms are vastly stronger.</p>",
+      "traits": [
+        {
+          "key": "flyer",
+          "value": "22"
+        },
+        {
+          "key": "unnaturalToughness",
+          "value": ""
+        },
+        {
+          "key": "armorPlating",
+          "value": "10"
+        },
+        {
+          "key": "darkSight",
+          "value": ""
+        },
+        {
+          "key": "caster",
+          "value": "Evocation 3, Divination 4"
+        },
+        {
+          "key": "fear",
+          "value": "2"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Frightful Presence",
+          "effect": "Charging or attacking all-out forces every creature in melee reach to roll against its fear rating."
+        }
+      ],
+      "feats": [
+        "Danger Sense",
+        "Eidetic Memory",
+        "Iron Jaw",
+        "Power Attack",
+        "Powerful Charge",
+        "Strong Minded",
+        "Weapon Proficiency (All)"
+      ],
+      "gear": [],
+      "armor": [
+        {
+          "name": "Iron Scales",
+          "ap": 10,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 532
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Claws and Teeth",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 10,
+          "kept": 3,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi69f1c2c0a9d",
+      "_key": "!actors.items!dtdN39949b45d6e7.dtdNi69f1c2c0a9d"
+    },
+    {
+      "name": "Dragon Fire",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 6,
+          "kept": 3,
+          "type": "E"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 80,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "flame",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi604d9425735",
+      "_key": "!actors.items!dtdN39949b45d6e7.dtdNi604d9425735"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Dragon",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN39949b45d6e7",
+  "_key": "!actors!dtdN39949b45d6e7",
+  "folder": "dtdNFdc0fbb30a6c"
+}

@@ -1,0 +1,234 @@
+{
+  "name": "Incarnate Greater Daemon",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 6,
+        "specialties": []
+      },
+      "dex": {
+        "value": 4,
+        "specialties": []
+      },
+      "con": {
+        "value": 6,
+        "specialties": []
+      },
+      "cha": {
+        "value": 3,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 3,
+        "specialties": []
+      },
+      "wis": {
+        "value": 3,
+        "specialties": []
+      },
+      "wil": {
+        "value": 5,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "perception": {
+        "value": 1,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 2,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 8,
+    "level": 4,
+    "hp": {
+      "value": 28
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 15
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 28
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 10
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 7
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "daemons",
+      "description": "<p>A huge, clever daemon that fights with intent and full use of its powers, tough enough to ignore all but the heaviest blows.</p>",
+      "traits": [
+        {
+          "key": "daemonic",
+          "value": ""
+        },
+        {
+          "key": "darkSight",
+          "value": ""
+        },
+        {
+          "key": "fear",
+          "value": "2"
+        },
+        {
+          "key": "resourceStat",
+          "value": "Essence 14"
+        }
+      ],
+      "abilities": [],
+      "feats": [
+        "Frenzy",
+        "Swift Attack",
+        "Weapon Proficiency (Melee 2, Ranged 2)"
+      ],
+      "gear": [],
+      "armor": [
+        {
+          "name": "Daemonic Toughness",
+          "ap": 6,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "Essence",
+        "value": 14,
+        "max": 14
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 529
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Claws and Teeth",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 8,
+          "kept": 3,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi66634cb7764",
+      "_key": "!actors.items!dtdN48c3c5e8d061.dtdNi66634cb7764"
+    },
+    {
+      "name": "Warp Fire",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 4,
+          "kept": 3,
+          "type": "E"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 50,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "flame",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi0146be7b2cf",
+      "_key": "!actors.items!dtdN48c3c5e8d061.dtdNi0146be7b2cf"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Incarnate Greater Daemon",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN48c3c5e8d061",
+  "_key": "!actors!dtdN48c3c5e8d061",
+  "folder": "dtdNFd68837e02d6"
+}

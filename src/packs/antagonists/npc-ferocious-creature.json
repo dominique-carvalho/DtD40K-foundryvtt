@@ -1,0 +1,178 @@
+{
+  "name": "Ferocious Creature",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 4,
+        "specialties": []
+      },
+      "dex": {
+        "value": 4,
+        "specialties": []
+      },
+      "con": {
+        "value": 3,
+        "specialties": []
+      },
+      "cha": {
+        "value": 1,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 1,
+        "specialties": []
+      },
+      "int": {
+        "value": 1,
+        "specialties": []
+      },
+      "wis": {
+        "value": 3,
+        "specialties": []
+      },
+      "wil": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "perception": {
+        "value": 2,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "stealth": {
+        "value": 2,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 2,
+    "hp": {
+      "value": 12
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 23
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 12
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 16
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "creatures",
+      "description": "<p>A predator along feline or lupine lines, far bolder than a draft beast and willing to hunt people for food or for fun.</p>",
+      "traits": [
+        {
+          "key": "quadruped",
+          "value": ""
+        },
+        {
+          "key": "darkSight",
+          "value": ""
+        }
+      ],
+      "abilities": [],
+      "feats": [
+        "Heightened Senses (Scent)",
+        "Step Aside",
+        "Weapon Proficiency (Melee 2)"
+      ],
+      "gear": [],
+      "armor": [],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 530
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Bite",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 6,
+          "kept": 3,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNib1049ff13ca",
+      "_key": "!actors.items!dtdN1a01303de040.dtdNib1049ff13ca"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Ferocious Creature",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN1a01303de040",
+  "_key": "!actors!dtdN1a01303de040",
+  "folder": "dtdNFdef57c3a77f"
+}

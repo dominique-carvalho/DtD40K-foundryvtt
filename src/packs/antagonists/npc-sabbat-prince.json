@@ -1,0 +1,311 @@
+{
+  "name": "Sabbat Prince",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 5,
+        "specialties": []
+      },
+      "dex": {
+        "value": 4,
+        "specialties": []
+      },
+      "con": {
+        "value": 5,
+        "specialties": []
+      },
+      "cha": {
+        "value": 4,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 4,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 3,
+        "specialties": []
+      },
+      "wil": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 3,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 3,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 4,
+        "specialties": []
+      },
+      "drive": {
+        "value": 1,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 3,
+        "specialties": []
+      },
+      "perception": {
+        "value": 3,
+        "specialties": []
+      },
+      "politics": {
+        "value": 3,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 3,
+    "hp": {
+      "value": 21
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 23
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 21
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 9
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "criminals",
+      "description": "<p>A high-ranking Sabbat vampire whose power comes from both undead gifts and political connections; seldom found without guards and hired muscle.</p>",
+      "traits": [
+        {
+          "key": "resourceStat",
+          "value": "Vitae 15"
+        },
+        {
+          "key": "darkSight",
+          "value": ""
+        },
+        {
+          "key": "fear",
+          "value": "1"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Undead Resilience",
+          "effect": "Works like the Vampire power of the same name."
+        },
+        {
+          "name": "Sunlight Weakness",
+          "effect": "Works like the Vampire power of the same name."
+        },
+        {
+          "name": "Blood Dependency",
+          "effect": "Works like the Vampire power of the same name."
+        }
+      ],
+      "feats": [
+        "Sound Constitution ×3",
+        "Weapon Proficiency (Basic)",
+        "Quick Draw",
+        "Swift Attack",
+        "Fearless",
+        "Wall of Steel",
+        "Unarmed Master"
+      ],
+      "gear": [
+        "Sharp black suit",
+        "Brass Knuckles",
+        "Hand Cannon",
+        "Expensive Chrono",
+        "5 reloads for the Hand Cannon"
+      ],
+      "armor": [],
+      "alternate": "",
+      "resource": {
+        "type": "Vitae",
+        "value": 15,
+        "max": 15
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 525
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Bite",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 6,
+          "kept": 3,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "brawling",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi64285b6c289",
+      "_key": "!actors.items!dtdNd5ba84762059.dtdNi64285b6c289"
+    },
+    {
+      "name": "Brass Knuckles",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Unarmed",
+        "damage": {
+          "rolled": 5,
+          "kept": 3,
+          "type": ""
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "brawling",
+            "value": null
+          },
+          {
+            "key": "armMounted",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi45a25943926",
+      "_key": "!actors.items!dtdNd5ba84762059.dtdNi45a25943926"
+    },
+    {
+      "name": "Hand Cannon",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "pistol",
+        "thrown": false,
+        "group": "Ordinary",
+        "damage": {
+          "rolled": 3,
+          "kept": 2,
+          "type": "I"
+        },
+        "pen": 3,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 35,
+          "strMultiplier": 0
+        },
+        "clip": 6,
+        "reload": "2 Full",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNib746fb5c254",
+      "_key": "!actors.items!dtdNd5ba84762059.dtdNib746fb5c254"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Sabbat Prince",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNd5ba84762059",
+  "_key": "!actors!dtdNd5ba84762059",
+  "folder": "dtdNFd42a653d63d"
+}

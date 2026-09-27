@@ -1,0 +1,16 @@
+{
+  "_id": "dtdNFd42a653d63d",
+  "_key": "!folders!dtdNFd42a653d63d",
+  "name": "Criminals",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 30000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "npcFolder": "criminals"
+    }
+  }
+}

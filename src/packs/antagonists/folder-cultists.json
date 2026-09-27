@@ -1,0 +1,16 @@
+{
+  "_id": "dtdNFd88c980f4db",
+  "_key": "!folders!dtdNFd88c980f4db",
+  "name": "Cultists",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 40000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "npcFolder": "cultists"
+    }
+  }
+}

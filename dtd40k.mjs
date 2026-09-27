@@ -3,6 +3,8 @@
  */
 import { DTD } from "./module/config.mjs";
 import { CharacterData } from "./module/data/character-data.mjs";
+import { NpcData } from "./module/data/npc-data.mjs";
+import { MinionSquadData } from "./module/data/minion-squad-data.mjs";
 import { RaceData } from "./module/data/race-data.mjs";
 import { ExaltationData } from "./module/data/exaltation-data.mjs";
 import { FeatData } from "./module/data/feat-data.mjs";
@@ -40,6 +42,9 @@ Hooks.once("init", () => {
 
   CONFIG.Actor.documentClass = DtdActor;
   CONFIG.Actor.dataModels.character = CharacterData;
+  // Antagonists (spec 012): NPCs share the character model; Minion Squads have their own.
+  CONFIG.Actor.dataModels.npc = NpcData;
+  CONFIG.Actor.dataModels.minionSquad = MinionSquadData;
 
   CONFIG.Item.documentClass = DtdItem;
   CONFIG.Item.dataModels.race = RaceData;

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdNFd662d27128e",
+  "_key": "!folders!dtdNFd662d27128e",
+  "name": "Xenos",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "npcFolder": "xenos"
+    }
+  }
+}

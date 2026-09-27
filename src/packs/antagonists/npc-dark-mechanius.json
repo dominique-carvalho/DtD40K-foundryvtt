@@ -1,0 +1,262 @@
+{
+  "name": "Dark Mechanius",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 5,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 6,
+        "specialties": []
+      },
+      "cha": {
+        "value": 3,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 4,
+        "specialties": []
+      },
+      "int": {
+        "value": 5,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 5,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "academicLore": {
+        "value": 3,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 4,
+        "specialties": []
+      },
+      "drive": {
+        "value": 2,
+        "specialties": []
+      },
+      "forbiddenLore": {
+        "value": 3,
+        "specialties": []
+      },
+      "pilot": {
+        "value": 2,
+        "specialties": []
+      },
+      "techUse": {
+        "value": 3,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 4,
+    "hp": {
+      "value": 25
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 17
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 25
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 8
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "cultists",
+      "description": "<p>What a Heretek aspires to become: almost wholly bionic, sometimes little more than a scrap of brain steering a machine body.</p>",
+      "traits": [
+        {
+          "key": "armorPlating",
+          "value": "4"
+        },
+        {
+          "key": "stuffOfNightmares",
+          "value": ""
+        },
+        {
+          "key": "resourceStat",
+          "value": "Pyros 9"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Man of Iron",
+          "effect": "Ignores lethal critical effects, except those caused by crits to its head or gizzards."
+        },
+        {
+          "name": "Mechendrites",
+          "effect": "Extra mechanical arms grant one additional half action per turn, usable only for things those limbs can do (readying, attacking and so on)."
+        }
+      ],
+      "feats": [
+        "Weapon Proficiency (Basic, Ranged 2)",
+        "Crack Shot",
+        "Sound Constitution ×3",
+        "Iron Jaw"
+      ],
+      "gear": [
+        "Tattered robes",
+        "Combi-tool",
+        "Data Slate filled with illegal data",
+        "Chrono",
+        "Power Sword"
+      ],
+      "armor": [
+        {
+          "name": "Subdermal Plating",
+          "ap": 4,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "Pyros",
+        "value": 9,
+        "max": 9
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 528
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Integrated Plasma Gun",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 3,
+          "kept": 3,
+          "type": "E"
+        },
+        "pen": 8,
+        "rof": {
+          "single": true,
+          "auto": 2
+        },
+        "range": {
+          "value": 90,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "-",
+        "qualities": [
+          {
+            "key": "recharge",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi3946a39e7c5",
+      "_key": "!actors.items!dtdN1c939ee02622.dtdNi3946a39e7c5"
+    },
+    {
+      "name": "Power Sword",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Ordinary",
+        "damage": {
+          "rolled": 9,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 4,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "powerField",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi87de4828d59",
+      "_key": "!actors.items!dtdN1c939ee02622.dtdNi87de4828d59"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Dark Mechanius",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN1c939ee02622",
+  "_key": "!actors!dtdN1c939ee02622",
+  "folder": "dtdNFd88c980f4db"
+}

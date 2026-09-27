@@ -1,0 +1,249 @@
+{
+  "name": "Lich",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 2,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 3,
+        "specialties": []
+      },
+      "cha": {
+        "value": 5,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 4,
+        "specialties": []
+      },
+      "int": {
+        "value": 5,
+        "specialties": []
+      },
+      "wis": {
+        "value": 4,
+        "specialties": []
+      },
+      "wil": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "academicLore": {
+        "value": 4,
+        "specialties": []
+      },
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 5,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 4,
+        "specialties": []
+      },
+      "charm": {
+        "value": 3,
+        "specialties": []
+      },
+      "command": {
+        "value": 5,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "forbiddenLore": {
+        "value": 5,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 4,
+        "specialties": []
+      },
+      "perception": {
+        "value": 3,
+        "specialties": []
+      },
+      "politics": {
+        "value": 3,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 4,
+    "hp": {
+      "value": 14
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 23
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 14
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 5
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {
+        "evocation": {
+          "value": 4
+        },
+        "illusion": {
+          "value": 3
+        },
+        "abjuration": {
+          "value": 3
+        },
+        "conjuration": {
+          "value": 3
+        }
+      }
+    },
+    "npc": {
+      "category": "undead",
+      "description": "<p>An aging sorcerer who escaped death by becoming an undead horror, a rite that demands sacrificing someone the caster truly loves.</p>",
+      "traits": [
+        {
+          "key": "undead",
+          "value": ""
+        },
+        {
+          "key": "darkSight",
+          "value": ""
+        },
+        {
+          "key": "caster",
+          "value": "Evocation 4, Illusion 3, Abjuration 3, Conjuration 3"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Phylactery",
+          "effect": "Its death is stored in a hidden, usually valuable crafted object; it cannot be destroyed while that object survives."
+        }
+      ],
+      "feats": [
+        "Wizard Tradition (All)",
+        "Spell Specialization (All)",
+        "Tested"
+      ],
+      "gear": [
+        "Musty but expensive robes",
+        "staff",
+        "ancient gems and jewelry"
+      ],
+      "armor": [
+        {
+          "name": "Mage Armor",
+          "ap": 7,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 532
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Unarmed",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 2,
+          "kept": 1,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "brawling",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNiac0dbe632ef",
+      "_key": "!actors.items!dtdN6a34f5f62b1b.dtdNiac0dbe632ef"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Lich",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN6a34f5f62b1b",
+  "_key": "!actors!dtdN6a34f5f62b1b",
+  "folder": "dtdNFd63c8477145"
+}

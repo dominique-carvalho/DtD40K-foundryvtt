@@ -1,0 +1,191 @@
+{
+  "name": "Zoanoid Thug",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 2,
+        "specialties": []
+      },
+      "con": {
+        "value": 4,
+        "specialties": []
+      },
+      "cha": {
+        "value": 2,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "brawl": {
+        "value": 3,
+        "specialties": []
+      },
+      "perception": {
+        "value": 3,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 2,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 2,
+    "hp": {
+      "value": 12
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 14
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 12
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 5
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "criminals",
+      "description": "<p>A warp-mutated werewolf, the most corrupted of that divided people; in war form it is hard to tell apart from a daemon and may carry extra unlisted mutations.</p>",
+      "traits": [
+        {
+          "key": "resourceStat",
+          "value": "Rage 7"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Shifting",
+          "effect": "Works like the Werewolf power of the same name. Bracketed values are the war form."
+        },
+        {
+          "name": "Lycan Resilience",
+          "effect": "Works like the Werewolf power of the same name."
+        },
+        {
+          "name": "Silver Bane",
+          "effect": "Works like the Werewolf power of the same name."
+        }
+      ],
+      "feats": [
+        "Furious Assault",
+        "Heightened Senses (Smell)",
+        "Iron Jaw",
+        "Weapon Proficiency (Basic)"
+      ],
+      "gear": [
+        "Torn street clothing"
+      ],
+      "armor": [],
+      "alternate": "STR 5, CON 6 (Warform (Shifting))",
+      "resource": {
+        "type": "Rage",
+        "value": 7,
+        "max": 7
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 525
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Unarmed",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 3,
+          "kept": 1,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "brawling",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi28b9356a69a",
+      "_key": "!actors.items!dtdNb40fbfb67d61.dtdNi28b9356a69a"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Zoanoid Thug",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNb40fbfb67d61",
+  "_key": "!actors!dtdNb40fbfb67d61",
+  "folder": "dtdNFd42a653d63d"
+}

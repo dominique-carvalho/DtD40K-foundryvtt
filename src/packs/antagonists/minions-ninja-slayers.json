@@ -1,0 +1,36 @@
+{
+  "name": "Ninja Slayers",
+  "type": "minionSquad",
+  "img": "icons/svg/pawprint.svg",
+  "system": {
+    "threatRating": 4,
+    "count": 6,
+    "melee": {
+      "rating": 2,
+      "type": "R",
+      "weapon": "Shortswords"
+    },
+    "ranged": {
+      "rating": 2,
+      "type": "R",
+      "weapon": "Shuriken"
+    },
+    "allyUuid": "",
+    "description": "<p>Sample Minion Squad of up to six (DtD 7.7a p. 544).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 544
+    }
+  },
+  "items": [],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Ninja Slayers",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNa53d4da8f9fa",
+  "_key": "!actors!dtdNa53d4da8f9fa",
+  "folder": "dtdNFdd2d3359ac2"
+}

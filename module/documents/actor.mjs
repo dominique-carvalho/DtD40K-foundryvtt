@@ -13,7 +13,7 @@ export class DtdActor extends Actor {
     const allowed = await super._preCreate(data, options, user);
     if (allowed === false) return false;
 
-    if (this.type === "character") {
+    if (this.type === "character" || this.type === "npc") {
       // Start fully healed and composed.
       const derived = computeDerived(this.system, this.system.derivedMods, this.system.modifiers);
       this.updateSource({

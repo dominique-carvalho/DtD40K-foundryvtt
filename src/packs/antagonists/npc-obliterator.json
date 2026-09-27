@@ -1,0 +1,294 @@
+{
+  "name": "Obliterator",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 6,
+        "specialties": []
+      },
+      "dex": {
+        "value": 4,
+        "specialties": []
+      },
+      "con": {
+        "value": 6,
+        "specialties": []
+      },
+      "cha": {
+        "value": 3,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 4,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 1,
+        "specialties": []
+      },
+      "wil": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 3,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 4,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "perception": {
+        "value": 2,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 3,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 4,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 8,
+    "level": 4,
+    "hp": {
+      "value": 25
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 9
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 25
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 10
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 7
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>A Chaos Marine fused with his arms and armor by a curse, spell or virus into a mass of guns under stretched skin; mostly insane, yet an effective engine of slaughter.</p>",
+      "traits": [
+        {
+          "key": "autoStabilized",
+          "value": ""
+        },
+        {
+          "key": "machine",
+          "value": "10"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Bloody Minded",
+          "effect": "Works like the Tiefling racial power of the same name."
+        },
+        {
+          "name": "Integrated Weapons Array",
+          "effect": "Can sprout nearly any weapon of the Ordinary, Las, Plasma, Melta, Bolt and Flame families from its flesh beyond those listed, with unlimited ammunition; swapping takes a full round and it can hold two at once."
+        }
+      ],
+      "feats": [
+        "Sound Constitution ×5",
+        "Armor Proficiency (All)",
+        "Weapon Proficiency (All)",
+        "Frenzy"
+      ],
+      "gear": [],
+      "armor": [
+        {
+          "name": "Armor Plating",
+          "ap": 10,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 541
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "MP Lascannon",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Las",
+        "damage": {
+          "rolled": 5,
+          "kept": 5,
+          "type": "E"
+        },
+        "pen": 10,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 300,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "-",
+        "qualities": [
+          {
+            "key": "recharge",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi0ffdd4b5f52",
+      "_key": "!actors.items!dtdN67aa6d9a1092.dtdNi0ffdd4b5f52"
+    },
+    {
+      "name": "Heavy Bolter",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Bolter",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "X"
+        },
+        "pen": 8,
+        "rof": {
+          "single": false,
+          "auto": 10
+        },
+        "range": {
+          "value": 120,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "-",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNiff38918dc77",
+      "_key": "!actors.items!dtdN67aa6d9a1092.dtdNiff38918dc77"
+    },
+    {
+      "name": "Crushing Fist",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 6,
+          "kept": 3,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNifff7832060c",
+      "_key": "!actors.items!dtdN67aa6d9a1092.dtdNifff7832060c"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Obliterator",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN67aa6d9a1092",
+  "_key": "!actors!dtdN67aa6d9a1092",
+  "folder": "dtdNFd662d27128e"
+}

@@ -37,6 +37,17 @@
         "htmlFields": [
           "biography"
         ]
+      },
+      "npc": {
+        "htmlFields": [
+          "biography",
+          "npc.description"
+        ]
+      },
+      "minionSquad": {
+        "htmlFields": [
+          "description"
+        ]
       }
     },
     "Item": {
@@ -209,6 +220,17 @@
       "system": "dtd40k",
       "ownership": {
         "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "antagonists",
+      "label": "Antagonists",
+      "path": "packs/antagonists",
+      "type": "Actor",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "NONE",
         "ASSISTANT": "OWNER"
       }
     }

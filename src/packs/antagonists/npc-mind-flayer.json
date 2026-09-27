@@ -1,0 +1,229 @@
+{
+  "name": "Mind Flayer",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 2,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 2,
+        "specialties": []
+      },
+      "cha": {
+        "value": 3,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 4,
+        "specialties": []
+      },
+      "int": {
+        "value": 5,
+        "specialties": []
+      },
+      "wis": {
+        "value": 5,
+        "specialties": []
+      },
+      "wil": {
+        "value": 5,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "academicLore": {
+        "value": 4,
+        "specialties": []
+      },
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 4,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 4,
+        "specialties": []
+      },
+      "command": {
+        "value": 3,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "forbiddenLore": {
+        "value": 5,
+        "specialties": []
+      },
+      "perception": {
+        "value": 3,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 5,
+        "specialties": []
+      }
+    },
+    "size": 3,
+    "level": 3,
+    "hp": {
+      "value": 14
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 28
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 14
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 5
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {
+        "divination": {
+          "value": 3
+        },
+        "enchantment": {
+          "value": 3
+        },
+        "illusion": {
+          "value": 3
+        }
+      }
+    },
+    "npc": {
+      "category": "legends",
+      "description": "<p>A slimy, tentacle-faced humanoid that enslaves minds and pries open skulls to devour the brains inside; among the deadliest things in the Wheel.</p>",
+      "traits": [
+        {
+          "key": "darkSight",
+          "value": ""
+        },
+        {
+          "key": "caster",
+          "value": "Divination 3, Enchantment 3, Illusion 3"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Mind Blast",
+          "effect": "As a half action it emits a 60' cone of psychic force; anyone caught in it who fails a Willpower roll at TN 25 is stunned for one round."
+        },
+        {
+          "name": "Eats Your Goddamn Brain",
+          "effect": "Its grapple attacks always strike the head, and its tentacles have Tearing while it is grappling."
+        }
+      ],
+      "feats": [
+        "Danger Sense",
+        "Eidetic Memory",
+        "Strong Minded",
+        "Weapon Proficiency (Melee 2)"
+      ],
+      "gear": [
+        "Blasphemous Robes"
+      ],
+      "armor": [],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 533
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Tentacles",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "snare",
+            "value": null
+          },
+          {
+            "key": "brawling",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNic6a124cc548",
+      "_key": "!actors.items!dtdN2b8699ebd7a0.dtdNic6a124cc548"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Mind Flayer",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN2b8699ebd7a0",
+  "_key": "!actors!dtdN2b8699ebd7a0",
+  "folder": "dtdNFdc0fbb30a6c"
+}

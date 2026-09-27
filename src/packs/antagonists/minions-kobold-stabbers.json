@@ -1,0 +1,36 @@
+{
+  "name": "Kobold Stabbers",
+  "type": "minionSquad",
+  "img": "icons/svg/pawprint.svg",
+  "system": {
+    "threatRating": 1,
+    "count": 6,
+    "melee": {
+      "rating": 1,
+      "type": "R",
+      "weapon": "Daggers"
+    },
+    "ranged": {
+      "rating": 0,
+      "type": "",
+      "weapon": ""
+    },
+    "allyUuid": "",
+    "description": "<p>Sample Minion Squad of up to six (DtD 7.7a p. 544).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 544
+    }
+  },
+  "items": [],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Kobold Stabbers",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN5b6c9674ea4e",
+  "_key": "!actors!dtdN5b6c9674ea4e",
+  "folder": "dtdNFdd2d3359ac2"
+}

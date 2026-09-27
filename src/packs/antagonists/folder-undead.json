@@ -1,0 +1,16 @@
+{
+  "_id": "dtdNFd63c8477145",
+  "_key": "!folders!dtdNFd63c8477145",
+  "name": "Undead",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 90000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "npcFolder": "undead"
+    }
+  }
+}

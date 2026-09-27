@@ -293,3 +293,13 @@ describe("background and alignment constants (011)", () => {
     expect(DTD.INHERITANCE_SLOTS).toEqual({ ubiquitous: 0.125, veryCommon: 0.25, common: 0.5, uncommon: 1, rare: 2, veryRare: 4, mythicRare: 8, anyNonArtifact: 16 });
   });
 });
+
+describe("antagonist constants (012)", () => {
+  it("lists the NPC categories, the twenty traits and the minion rules (pp. 520–544)", () => {
+    expect(DTD.NPC_CATEGORIES).toEqual(["people", "military", "criminals", "cultists", "machines", "daemons", "creatures", "legends", "undead", "xenos"]);
+    expect(Object.keys(DTD.NPC_TRAITS)).toHaveLength(20);
+    expect(DTD.NPC_TRAITS.armorPlating).toMatchObject({ label: "DTD.Npc.Trait.armorPlating.label", hint: "DTD.Npc.Trait.armorPlating.hint", hasValue: true });
+    expect(DTD.NPC_TRAITS.undead.hasValue).toBe(false);
+    expect(DTD.MINION).toEqual({ maxCount: 6, sdPerThreat: 5, damagePerRating: 5, rangePerThreat: 10 });
+  });
+});

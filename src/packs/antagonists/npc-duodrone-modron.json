@@ -1,0 +1,257 @@
+{
+  "name": "Duodrone Modron",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 5,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 8,
+        "specialties": []
+      },
+      "cha": {
+        "value": 0,
+        "specialties": []
+      },
+      "fel": {
+        "value": 0,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 0,
+        "specialties": []
+      },
+      "int": {
+        "value": 0,
+        "specialties": []
+      },
+      "wis": {
+        "value": 4,
+        "specialties": []
+      },
+      "wil": {
+        "value": 8,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "weaponry": {
+        "value": 4,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 4,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 4,
+        "specialties": []
+      },
+      "perception": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 6,
+    "level": 4,
+    "hp": {
+      "value": 32
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 19
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 32
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 4
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 6
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "machines",
+      "description": "<p>A tougher, better-armed Modron that goes looking for fresh victims once its first targets are dead.</p>",
+      "traits": [
+        {
+          "key": "armorPlating",
+          "value": "6"
+        },
+        {
+          "key": "aura",
+          "value": "6"
+        },
+        {
+          "key": "crawler",
+          "value": ""
+        },
+        {
+          "key": "fear",
+          "value": "2"
+        },
+        {
+          "key": "mindless",
+          "value": ""
+        },
+        {
+          "key": "regeneration",
+          "value": "1"
+        },
+        {
+          "key": "stuffOfNightmares",
+          "value": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Gauss Weapon",
+          "effect": "Any creature damaged by the Gauss Blaster also takes 1 critical damage on that location, even with hit points left."
+        },
+        {
+          "name": "Frightful Presence",
+          "effect": "Charging or attacking all-out forces every creature in melee reach to roll against its fear rating."
+        },
+        {
+          "name": "We'll Be Back",
+          "effect": "After being 'killed' it rolls 1d10 at the start of each of its turns; on 8+ it vanishes and teleports elsewhere, then revives three rounds later at 0 wounds."
+        }
+      ],
+      "feats": [
+        "True Grit",
+        "Weapon Proficiency (Gauss)"
+      ],
+      "gear": [],
+      "armor": [
+        {
+          "name": "Armor Plating",
+          "ap": 6,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 526
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Gauss Blaster",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "X"
+        },
+        "pen": 12,
+        "rof": {
+          "single": true,
+          "auto": 3
+        },
+        "range": {
+          "value": 80,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "-",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi3e28d3794ea",
+      "_key": "!actors.items!dtdN106d212fc18e.dtdNi3e28d3794ea"
+    },
+    {
+      "name": "Melee Attachment",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 10,
+          "kept": 3,
+          "type": "R"
+        },
+        "pen": 4,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi461b6dd0d29",
+      "_key": "!actors.items!dtdN106d212fc18e.dtdNi461b6dd0d29"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Duodrone Modron",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN106d212fc18e",
+  "_key": "!actors!dtdN106d212fc18e",
+  "folder": "dtdNFd31d2ca75f2"
+}

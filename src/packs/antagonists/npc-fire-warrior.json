@@ -1,0 +1,245 @@
+{
+  "name": "Fire Warrior",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 2,
+        "specialties": []
+      },
+      "cha": {
+        "value": 2,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 1,
+        "specialties": []
+      },
+      "perception": {
+        "value": 1,
+        "specialties": []
+      },
+      "persuasion": {
+        "value": 2,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 1,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 1,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 2,
+    "hp": {
+      "value": 9
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 17
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 9
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 6
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>Standard Tau infantry, bred and drilled from birth to fight for the Greater Good; stockier than most Tau and well armed.</p>",
+      "traits": [],
+      "abilities": [
+        {
+          "name": "Fall Back",
+          "effect": "Works like the Tau racial power of the same name."
+        }
+      ],
+      "feats": [
+        "Weapon Proficiency (Basic, Melee 2)",
+        "Sound Constitution",
+        "Armor Proficiency (Light, Medium)",
+        "Deadeye Shot"
+      ],
+      "gear": [
+        "Uniform",
+        "Flak Suit",
+        "Pulse Rifle",
+        "2 Energy Packs",
+        "Micro-bead",
+        "Torch"
+      ],
+      "armor": [
+        {
+          "name": "Flak Suit",
+          "ap": 5,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 535
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Knife",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Parrying",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi8ea63f9b623",
+      "_key": "!actors.items!dtdNab17665680af.dtdNi8ea63f9b623"
+    },
+    {
+      "name": "Pulse Rifle",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Las",
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "E"
+        },
+        "pen": 2,
+        "rof": {
+          "single": true,
+          "auto": 4
+        },
+        "range": {
+          "value": 100,
+          "strMultiplier": 0
+        },
+        "clip": 40,
+        "reload": "Full",
+        "qualities": [
+          {
+            "key": "reliable",
+            "value": null
+          },
+          {
+            "key": "compact",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNif26e29491c3",
+      "_key": "!actors.items!dtdNab17665680af.dtdNif26e29491c3"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Fire Warrior",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNab17665680af",
+  "_key": "!actors!dtdNab17665680af",
+  "folder": "dtdNFd662d27128e"
+}

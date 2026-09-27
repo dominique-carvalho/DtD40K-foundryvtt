@@ -1,0 +1,169 @@
+{
+  "name": "Flying Creature",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 2,
+        "specialties": []
+      },
+      "dex": {
+        "value": 5,
+        "specialties": []
+      },
+      "con": {
+        "value": 2,
+        "specialties": []
+      },
+      "cha": {
+        "value": 1,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 1,
+        "specialties": []
+      },
+      "int": {
+        "value": 1,
+        "specialties": []
+      },
+      "wis": {
+        "value": 4,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "perception": {
+        "value": 3,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "acrobatics": {
+        "value": 1,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "size": 3,
+    "level": 1,
+    "hp": {
+      "value": 8
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 31
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 8
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 7
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 3
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "creatures",
+      "description": "<p>Birds such as big hawks or furious swans; weak damage, but speed and agility make them hard to hit.</p>",
+      "traits": [
+        {
+          "key": "flyer",
+          "value": "14"
+        }
+      ],
+      "abilities": [],
+      "feats": [
+        "Swift Attack",
+        "Weapon Proficiency (Melee 2)"
+      ],
+      "gear": [],
+      "armor": [],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 530
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Bite",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 3,
+          "kept": 1,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi7d8fe319fee",
+      "_key": "!actors.items!dtdN23b5e7fb56d1.dtdNi7d8fe319fee"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Flying Creature",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN23b5e7fb56d1",
+  "_key": "!actors!dtdN23b5e7fb56d1",
+  "folder": "dtdNFdef57c3a77f"
+}

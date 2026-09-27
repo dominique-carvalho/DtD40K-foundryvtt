@@ -1,0 +1,171 @@
+{
+  "name": "The Walkin' Dead",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 2,
+        "specialties": []
+      },
+      "con": {
+        "value": 2,
+        "specialties": []
+      },
+      "cha": {
+        "value": 0,
+        "specialties": []
+      },
+      "fel": {
+        "value": 0,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 0,
+        "specialties": []
+      },
+      "int": {
+        "value": 0,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "brawl": {
+        "value": 2,
+        "specialties": []
+      },
+      "perception": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 1,
+    "hp": {
+      "value": 8
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 14
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 8
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 5
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "undead",
+      "description": "<p>Flesh-eating shamblers raised by plague, curse or (more often) sorcery and warp power; a real danger only in hordes or to the unprepared.</p>",
+      "traits": [
+        {
+          "key": "undead",
+          "value": ""
+        },
+        {
+          "key": "mindless",
+          "value": ""
+        }
+      ],
+      "abilities": [],
+      "feats": [
+        "Weapon Proficiency (Basic)"
+      ],
+      "gear": [
+        "Bloody and torn clothing"
+      ],
+      "armor": [],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 534
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Claws and Teeth",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 3,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "brawling",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNiac6becf6a6d",
+      "_key": "!actors.items!dtdNafa71790b89b.dtdNiac6becf6a6d"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "The Walkin' Dead",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNafa71790b89b",
+  "_key": "!actors!dtdNafa71790b89b",
+  "folder": "dtdNFd63c8477145"
+}

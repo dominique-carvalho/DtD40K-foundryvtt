@@ -1,0 +1,246 @@
+{
+  "name": "Chaos Marine",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 5,
+        "specialties": []
+      },
+      "dex": {
+        "value": 4,
+        "specialties": []
+      },
+      "con": {
+        "value": 5,
+        "specialties": []
+      },
+      "cha": {
+        "value": 3,
+        "specialties": []
+      },
+      "fel": {
+        "value": 3,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 4,
+        "specialties": []
+      },
+      "int": {
+        "value": 3,
+        "specialties": []
+      },
+      "wis": {
+        "value": 4,
+        "specialties": []
+      },
+      "wil": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 3,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 3,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "perception": {
+        "value": 2,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 3,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 5,
+        "specialties": []
+      }
+    },
+    "size": 6,
+    "level": 3,
+    "hp": {
+      "value": 21
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 15
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 21
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 7
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 7
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>Tiefling counterparts of the Space Marines serving the Ruinous Powers; more varied, with armor reshaped around their mutations and decked in spikes and loud colors.</p>",
+      "traits": [],
+      "abilities": [
+        {
+          "name": "Bloody Minded",
+          "effect": "Works like the Tiefling racial power of the same name."
+        }
+      ],
+      "feats": [
+        "Sound Constitution ×3",
+        "Armor Proficiency (All)",
+        "Weapon Proficiency (All)",
+        "Frenzy"
+      ],
+      "gear": [
+        "Power Armor",
+        "Chainsword",
+        "Boltgun",
+        "2 Bolt clips",
+        "Plain clothing",
+        "charms"
+      ],
+      "armor": [
+        {
+          "name": "Power Armor*",
+          "ap": 12,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 541
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Chainsword",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Chain",
+        "damage": {
+          "rolled": 9,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 4,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNied2babd01be",
+      "_key": "!actors.items!dtdNf626e52cd36d.dtdNied2babd01be"
+    },
+    {
+      "name": "Boltgun",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Bolter",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "X"
+        },
+        "pen": 6,
+        "rof": {
+          "single": true,
+          "auto": 3
+        },
+        "range": {
+          "value": 90,
+          "strMultiplier": 0
+        },
+        "clip": 24,
+        "reload": "Full",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi16d48c53dd8",
+      "_key": "!actors.items!dtdNf626e52cd36d.dtdNi16d48c53dd8"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Chaos Marine",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNf626e52cd36d",
+  "_key": "!actors!dtdNf626e52cd36d",
+  "folder": "dtdNFd662d27128e"
+}

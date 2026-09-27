@@ -1,0 +1,194 @@
+{
+  "name": "Zoanoid Heavy",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 5,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 5,
+        "specialties": []
+      },
+      "cha": {
+        "value": 2,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "brawl": {
+        "value": 4,
+        "specialties": []
+      },
+      "perception": {
+        "value": 3,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 4,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 3,
+    "hp": {
+      "value": 20
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 17
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 20
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 8
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "criminals",
+      "description": "<p>A stronger Zoanoid, often a rampaging berserker, sometimes the charismatic head of a mutant gang; its war form mixes insect and sea-creature traits.</p>",
+      "traits": [
+        {
+          "key": "resourceStat",
+          "value": "Rage 10"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Shifting",
+          "effect": "Works like the Werewolf power of the same name. Bracketed values are the war form."
+        },
+        {
+          "name": "Lycan Resilience",
+          "effect": "Works like the Werewolf power of the same name."
+        },
+        {
+          "name": "Silver Bane",
+          "effect": "Works like the Werewolf power of the same name."
+        }
+      ],
+      "feats": [
+        "Sound Constitution ×2",
+        "Furious Assault",
+        "Power Attack",
+        "Heightened Senses (Smell)",
+        "Iron Jaw",
+        "Weapon Proficiency (Basic)"
+      ],
+      "gear": [
+        "Expendable suit",
+        "sunglasses"
+      ],
+      "armor": [],
+      "alternate": "STR 7, CON 7 (Warform (Shifting))",
+      "resource": {
+        "type": "Rage",
+        "value": 10,
+        "max": 10
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 525
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Unarmed",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 5,
+          "kept": 1,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "brawling",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi04803158639",
+      "_key": "!actors.items!dtdN30952576c268.dtdNi04803158639"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Zoanoid Heavy",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN30952576c268",
+  "_key": "!actors!dtdN30952576c268",
+  "folder": "dtdNFd42a653d63d"
+}

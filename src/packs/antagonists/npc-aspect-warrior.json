@@ -1,0 +1,266 @@
+{
+  "name": "Aspect Warrior",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 4,
+        "specialties": []
+      },
+      "con": {
+        "value": 2,
+        "specialties": []
+      },
+      "cha": {
+        "value": 3,
+        "specialties": []
+      },
+      "fel": {
+        "value": 4,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 4,
+        "specialties": []
+      },
+      "wis": {
+        "value": 4,
+        "specialties": []
+      },
+      "wil": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "academicLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "acrobatics": {
+        "value": 3,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 2,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 4,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 3,
+        "specialties": []
+      },
+      "deceive": {
+        "value": 2,
+        "specialties": []
+      },
+      "perception": {
+        "value": 3,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 2,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 3,
+    "level": 3,
+    "hp": {
+      "value": 10
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 28
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 10
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 7
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>An Eldarin fighter trained at one of their warrior shrines; this is a baseline version with the standard (and very lethal) wargear.</p>",
+      "traits": [],
+      "abilities": [
+        {
+          "name": "Warp Step",
+          "effect": "Works like the Eldarin racial power of the same name."
+        }
+      ],
+      "feats": [
+        "Blademaster",
+        "Armor Proficiency (Light)",
+        "Blind Fighting",
+        "Catfall",
+        "Defensive Mobility",
+        "Fleet of Foot",
+        "Swift Attack",
+        "Weapon Proficiency (Melee 2, Ranged 2)"
+      ],
+      "gear": [
+        "Lightning Gun",
+        "2 Lighting Charges",
+        "3 Photon Flash Grenades",
+        "Fencing Sword",
+        "Mesh Suit",
+        "silk suit"
+      ],
+      "armor": [
+        {
+          "name": "Mesh Suit",
+          "ap": 4,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 539
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Fencing Sword",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Fencing",
+        "damage": {
+          "rolled": 5,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "balanced",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNied3f62b2289",
+      "_key": "!actors.items!dtdNbe0d4b6ac14f.dtdNied3f62b2289"
+    },
+    {
+      "name": "Lighting Gun",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "E"
+        },
+        "pen": 4,
+        "rof": {
+          "single": true,
+          "auto": 2
+        },
+        "range": {
+          "value": 30,
+          "strMultiplier": 0
+        },
+        "clip": 6,
+        "reload": "2 Full",
+        "qualities": [
+          {
+            "key": "scatter",
+            "value": null
+          },
+          {
+            "key": "shocking",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi7a8d24bcb78",
+      "_key": "!actors.items!dtdNbe0d4b6ac14f.dtdNi7a8d24bcb78"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Aspect Warrior",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNbe0d4b6ac14f",
+  "_key": "!actors!dtdNbe0d4b6ac14f",
+  "folder": "dtdNFd662d27128e"
+}

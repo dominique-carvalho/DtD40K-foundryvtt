@@ -1,0 +1,224 @@
+{
+  "name": "Combat Servitor",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 5,
+        "specialties": []
+      },
+      "dex": {
+        "value": 4,
+        "specialties": []
+      },
+      "con": {
+        "value": 6,
+        "specialties": []
+      },
+      "cha": {
+        "value": 1,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 1,
+        "specialties": []
+      },
+      "wis": {
+        "value": 1,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "brawl": {
+        "value": 3,
+        "specialties": []
+      },
+      "crafts": {
+        "value": 1,
+        "specialties": []
+      },
+      "techUse": {
+        "value": 1,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "size": 6,
+    "level": 3,
+    "hp": {
+      "value": 16
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 13
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 16
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 9
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 6
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "machines",
+      "description": "<p>A killing robot with a built-in multi-barrel las weapon; not bright, it mostly guards an area and shoots whatever moves.</p>",
+      "traits": [
+        {
+          "key": "machine",
+          "value": "6"
+        }
+      ],
+      "abilities": [],
+      "feats": [
+        "Weapon Proficiency (Melee 2, Ranged 2)"
+      ],
+      "gear": [],
+      "armor": [
+        {
+          "name": "Machine Toughness",
+          "ap": 6,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 531
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Claw",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 6,
+          "kept": 2,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "snare",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi57aaeebe545",
+      "_key": "!actors.items!dtdNec9dea854e1d.dtdNi57aaeebe545"
+    },
+    {
+      "name": "Multilas",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 3,
+          "kept": 2,
+          "type": "E"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 8
+        },
+        "range": {
+          "value": 60,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "reliable",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi70d15dd7484",
+      "_key": "!actors.items!dtdNec9dea854e1d.dtdNi70d15dd7484"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Combat Servitor",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNec9dea854e1d",
+  "_key": "!actors!dtdNec9dea854e1d",
+  "folder": "dtdNFd31d2ca75f2"
+}

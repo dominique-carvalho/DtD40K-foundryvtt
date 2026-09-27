@@ -23,27 +23,27 @@ quickstart.md
 
 ## Phase 1: Setup
 
-- [ ] T001 Em `system.json`: `documentTypes.Actor.npc` e `.minionSquad` (`htmlFields`) e o pack `antagonists` (Actor, só Mestre/Assistente)
-- [ ] T002 [P] Em `scripts/assign-pack-ids.mjs`: layout `antagonists` (11 pastas; prefixos `dtdNFd`/`dtdN`; `collection: "actors"`; itens embutidos com `_key` `!actors.items!`)
+- [X] T001 Em `system.json`: `documentTypes.Actor.npc` e `.minionSquad` (`htmlFields`) e o pack `antagonists` (Actor, só Mestre/Assistente)
+- [X] T002 [P] Em `scripts/assign-pack-ids.mjs`: layout `antagonists` (11 pastas; prefixos `dtdNFd`/`dtdN`; `collection: "actors"`; itens embutidos com `_key` `!actors.items!`)
 
 ---
 
 ## Phase 2: Foundational
 
-- [ ] T003 [P] Em `tests/unit/config.test.mjs`: `NPC_CATEGORIES` (10), `NPC_TRAITS` (20), `MINION`
-- [ ] T004 Em `module/config.mjs`: as constantes de T003; fazer T003 passar
-- [ ] T005 [P] Em `tests/unit/npc.test.mjs` e `minions.test.mjs`: funções do contrato
-- [ ] T006 Criar `module/rules/npc.mjs` (com `TRAIT_TEXT` em texto próprio) e `module/rules/minions.mjs`; fazer T005 passar
-- [ ] T007 Criar `module/data/npc-data.mjs` (herda `CharacterData`; armadura do bloco e dos traits, Aura, Caster sancionado) e `module/data/minion-squad-data.mjs`; registrar em `dtd40k.mjs`
-- [ ] T008 [P] i18n base: tipos, categorias, traits (rótulo e dica), Minion
-- [ ] T009 Rodar `npm test` e `npx eslint .`
+- [X] T003 [P] Em `tests/unit/config.test.mjs`: `NPC_CATEGORIES` (10), `NPC_TRAITS` (20), `MINION`
+- [X] T004 Em `module/config.mjs`: as constantes de T003; fazer T003 passar
+- [X] T005 [P] Em `tests/unit/npc.test.mjs` e `minions.test.mjs`: funções do contrato
+- [X] T006 Criar `module/rules/npc.mjs` (com `TRAIT_TEXT` em texto próprio) e `module/rules/minions.mjs`; fazer T005 passar
+- [X] T007 Criar `module/data/npc-data.mjs` (herda `CharacterData`; armadura do bloco e dos traits, Aura, Caster sancionado) e `module/data/minion-squad-data.mjs`; registrar em `dtd40k.mjs`
+- [X] T008 [P] i18n base: tipos, categorias, traits (rótulo e dica), Minion
+- [X] T009 Rodar `npm test` e `npx eslint .`
 
 ---
 
 ## Phase 3: User Story 1 — Compêndio e ficha (P1)
 
-- [ ] T010 [P] [US1] Em `tests/unit/packs.test.mjs`: 47 `npc` + 4 `minionSquad`, 11 pastas, Regular Troops/Rebels com os dados da spec, armas embutidas com qualidades válidas, traits válidos, perícias válidas, squads da spec
-- [ ] T011 [US1] Script do scratchpad `gen-antagonists-pack.mjs`: inventário → `src/packs/antagonists/*.json` (overrides dos derivados, armas com `npcDamage`, armadura sem duplicar traits); `assign-pack-ids --pack antagonists`; 6-gramas = 0
+- [X] T010 [P] [US1] Em `tests/unit/packs.test.mjs`: 47 `npc` + 4 `minionSquad`, 11 pastas, Regular Troops/Rebels com os dados da spec, armas embutidas com qualidades válidas, traits válidos, perícias válidas, squads da spec
+- [X] T011 [US1] Script do scratchpad `gen-antagonists-pack.mjs`: inventário → `src/packs/antagonists/*.json` (overrides dos derivados, armas com `npcDamage`, armadura sem duplicar traits); `assign-pack-ids --pack antagonists`; 6-gramas = 0
 - [ ] T012 [US1] `module/apps/npc-sheet.mjs` (herda a ficha do personagem: abas Principal, Combate, Magia, Antagonista), `module/apps/npc-context.mjs`, `templates/actor/npc-header.hbs`, `templates/actor/parts/npc.hbs`; registrar
 - [ ] T013 [P] [US1] i18n e estilos
 - [ ] T014 [US1] `npm test` e `npm run build:packs`

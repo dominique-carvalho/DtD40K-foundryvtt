@@ -1,0 +1,226 @@
+{
+  "name": "Green Troops/Common Outlaws",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 2,
+        "specialties": []
+      },
+      "con": {
+        "value": 3,
+        "specialties": []
+      },
+      "cha": {
+        "value": 2,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 2,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 1,
+        "specialties": []
+      },
+      "perception": {
+        "value": 1,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 1,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 2,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 1,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 2,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 1,
+    "hp": {
+      "value": 10
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 12
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 10
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 5
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "military",
+      "description": "<p>Barely trained conscripts and petty crooks who prey on the helpless and fold against armed resistance; many are simply desperate rather than wicked.</p>",
+      "traits": [],
+      "abilities": [],
+      "feats": [
+        "Weapon Proficiency (Basic, Melee 2)"
+      ],
+      "gear": [
+        "Threadbare clothing",
+        "leather suit",
+        "2 autopistol clips",
+        "a few coins"
+      ],
+      "armor": [
+        {
+          "name": "Leather Suit",
+          "ap": 2,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 523
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Knife",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Parrying",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi9fd139ef6ae",
+      "_key": "!actors.items!dtdN20eaac06f4e4.dtdNi9fd139ef6ae"
+    },
+    {
+      "name": "Autopistol",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "pistol",
+        "thrown": false,
+        "group": "Ordinary",
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 6
+        },
+        "range": {
+          "value": 30,
+          "strMultiplier": 0
+        },
+        "clip": 12,
+        "reload": "Full",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi4374bfb1ebd",
+      "_key": "!actors.items!dtdN20eaac06f4e4.dtdNi4374bfb1ebd"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Green Troops/Common Outlaws",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN20eaac06f4e4",
+  "_key": "!actors!dtdN20eaac06f4e4",
+  "folder": "dtdNFd12019ece64"
+}

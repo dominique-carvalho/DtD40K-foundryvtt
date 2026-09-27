@@ -1,0 +1,224 @@
+{
+  "name": "Industrial Servitor",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 4,
+        "specialties": []
+      },
+      "dex": {
+        "value": 2,
+        "specialties": []
+      },
+      "con": {
+        "value": 5,
+        "specialties": []
+      },
+      "cha": {
+        "value": 1,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 1,
+        "specialties": []
+      },
+      "wis": {
+        "value": 1,
+        "specialties": []
+      },
+      "wil": {
+        "value": 1,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "brawl": {
+        "value": 2,
+        "specialties": []
+      },
+      "crafts": {
+        "value": 1,
+        "specialties": []
+      },
+      "techUse": {
+        "value": 1,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "size": 5,
+    "level": 2,
+    "hp": {
+      "value": 12
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 9
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 12
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 6
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "machines",
+      "description": "<p>A work machine for places too hazardous for people, with reinforced plating and an arc welder whose output can be raised to lethal levels for self-defence.</p>",
+      "traits": [
+        {
+          "key": "machine",
+          "value": "2"
+        }
+      ],
+      "abilities": [],
+      "feats": [
+        "Weapon Proficiency (Basic, Ranged 2)"
+      ],
+      "gear": [],
+      "armor": [
+        {
+          "name": "Machine Toughness",
+          "ap": 2,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 531
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Claw",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 6,
+          "kept": 2,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "snare",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi6f1322bd750",
+      "_key": "!actors.items!dtdN67b3401b7289.dtdNi6f1322bd750"
+    },
+    {
+      "name": "Arc Welder",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 3,
+          "kept": 3,
+          "type": "E"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 10,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "flame",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi9afa505ff81",
+      "_key": "!actors.items!dtdN67b3401b7289.dtdNi9afa505ff81"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Industrial Servitor",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN67b3401b7289",
+  "_key": "!actors!dtdN67b3401b7289",
+  "folder": "dtdNFd31d2ca75f2"
+}

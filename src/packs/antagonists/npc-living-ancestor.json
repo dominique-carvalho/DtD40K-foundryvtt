@@ -1,0 +1,254 @@
+{
+  "name": "Living Ancestor",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 5,
+        "specialties": []
+      },
+      "dex": {
+        "value": 2,
+        "specialties": []
+      },
+      "con": {
+        "value": 5,
+        "specialties": []
+      },
+      "cha": {
+        "value": 4,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 5,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 4,
+        "specialties": []
+      },
+      "wil": {
+        "value": 5,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "athletics": {
+        "value": 3,
+        "specialties": []
+      },
+      "crafts": {
+        "value": 4,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 2,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 4,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "command": {
+        "value": 3,
+        "specialties": []
+      },
+      "academicLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 3,
+    "hp": {
+      "value": 20
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 13
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 20
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 7
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 7
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>A once-a-century Squat sage whose title founds a new noble house; no formal office, but enormous influence through the respect of other Squats.</p>",
+      "traits": [],
+      "abilities": [
+        {
+          "name": "Squat Toughness",
+          "effect": "Works like the Squat racial power of the same name."
+        }
+      ],
+      "feats": [
+        "Iron Jaw",
+        "Armor Proficiency (Power)",
+        "Weapon Proficiency (Basic, Ranged 2)"
+      ],
+      "gear": [
+        "Power Axe",
+        "Power Armor",
+        "Plasma Pistol",
+        "2 extra plasma charges",
+        "mean look",
+        "beard jewelry",
+        "embroidered clothing"
+      ],
+      "armor": [
+        {
+          "name": "Power Armor*",
+          "ap": 12,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 537
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Power Axe",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 9,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "powerField",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi8e64ff05873",
+      "_key": "!actors.items!dtdN761160643389.dtdNi8e64ff05873"
+    },
+    {
+      "name": "Plasma Pistol",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "pistol",
+        "thrown": false,
+        "group": "Plasma",
+        "damage": {
+          "rolled": 3,
+          "kept": 3,
+          "type": "E"
+        },
+        "pen": 8,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 30,
+          "strMultiplier": 0
+        },
+        "clip": 10,
+        "reload": "4 Full",
+        "qualities": [
+          {
+            "key": "recharge",
+            "value": null
+          },
+          {
+            "key": "overheats",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNid587b3ceb3a",
+      "_key": "!actors.items!dtdN761160643389.dtdNid587b3ceb3a"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Living Ancestor",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN761160643389",
+  "_key": "!actors!dtdN761160643389",
+  "folder": "dtdNFd662d27128e"
+}

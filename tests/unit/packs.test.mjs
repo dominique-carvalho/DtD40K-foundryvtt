@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { COMBAT_ACTIONS } from "../../module/rules/combat-actions.mjs";
 import {
   ASSET_AUTOMATION, ASSET_GROUPS, CHARACTERISTICS, EXALTATION_FORMULAS, RACE_POWER_AUTOMATION, RESOURCE_ACTIONS, SKILLS,
-  MAGIC_SCHOOLS, MARTIAL_ENTRY_TYPES, MARTIAL_SCHOOLS, PANTHEONS, RARITIES, SPELL_KEYWORDS, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
+  MAGIC_SCHOOLS, MARTIAL_ENTRY_TYPES, MARTIAL_SCHOOLS, NPC_CATEGORIES, NPC_TRAITS, PANTHEONS, RARITIES, SPELL_KEYWORDS, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
 } from "../../module/config.mjs";
 
 /** Every JSON document of a compendium source folder. */
@@ -968,5 +968,54 @@ describe("deities compendium source (spec 011, SC-001)", () => {
     }
     expect(table.results.find((r) => r.name.includes("Horrific Nightmare")).flags.dtd40k.effect).toEqual({ hindrance: "Night Terrors" });
     expect(table.results.find((r) => r.name.includes("Skin Affliction")).flags.dtd40k.effect).toEqual({ social: { rolled: -2 } });
+  });
+});
+
+const antagonistPack = readPack("src/packs/antagonists");
+const npcs = antagonistPack.filter((doc) => doc._key.startsWith("!actors!") && doc.type === "npc");
+const squads = antagonistPack.filter((doc) => doc._key.startsWith("!actors!") && doc.type === "minionSquad");
+const npcNamed = (name) => npcs.find((doc) => doc.name === name);
+
+describe("antagonists compendium source (spec 012, SC-001)", () => {
+  it("has 47 NPCs and 4 Minion Squads in 11 folders", () => {
+    expect(npcs).toHaveLength(47);
+    expect(squads).toHaveLength(4);
+    expect(antagonistPack.filter((doc) => doc._key.startsWith("!folders!"))).toHaveLength(11);
+    for (const doc of npcs) expect(NPC_CATEGORIES).toContain(doc.system.npc.category);
+  });
+
+  it("matches the reference NPC", () => {
+    const troops = npcNamed("Regular Troops/Rebels");
+    const s = troops.system;
+    expect([s.characteristics.str.value, s.characteristics.dex.value, s.characteristics.con.value]).toEqual([3, 3, 3]);
+    expect([s.skills.weaponry.value, s.skills.ballistics.value, s.skills.intimidation.value]).toEqual([3, 3, 2]);
+    expect(s.derivedMods).toMatchObject({ speed: { override: 6 }, resilience: { override: 4 }, staticDefense: { override: 17 }, hpMax: { override: 12 } });
+    expect(s).toMatchObject({ size: 4, level: 2, hp: { value: 12 }, creation: { active: false } });
+    expect(s.npc.armor).toEqual([{ name: "Flak Suit", ap: 5, locations: ["all"] }]);
+    const lasgun = troops.items.find((i) => i.name === "Lasgun");
+    expect(lasgun.system).toMatchObject({ weaponType: "basic", damage: { rolled: 3, kept: 2, type: "E" }, rof: { single: true, auto: 3 }, range: { value: 60 }, clip: 60, qualities: [{ key: "reliable", value: null }] });
+    expect(lasgun.flags.dtd40k.npcDamage).toBe(true);
+    expect(troops.items.find((i) => i.name === "Knife").system).toMatchObject({ weaponType: "melee", damage: { rolled: 4, kept: 2, type: "R" } });
+  });
+
+  it("uses valid traits, qualities and keys, with descriptions and embedded item keys", () => {
+    for (const doc of npcs) {
+      expect(doc.system.npc.description, doc.name).toMatch(/^<p>.+<\/p>$/s);
+      for (const t of doc.system.npc.traits) expect(NPC_TRAITS[t.key], `${doc.name}: ${t.key}`).toBeDefined();
+      for (const item of doc.items) {
+        expect(item.type).toBe("weapon");
+        expect(item._key).toBe(`!actors.items!${doc._id}.${item._id}`);
+        for (const q of item.system.qualities) expect(WEAPON_QUALITIES[q.key], `${doc.name}: ${item.name} ${q.key}`).toBeDefined();
+      }
+    }
+    expect(npcNamed("Ghost").items).toHaveLength(0);
+    expect(npcNamed("Lich").system.magic.schools).toMatchObject({ evocation: { value: 4 }, illusion: { value: 3 } });
+    expect(npcNamed("Monodrone Modron").system.npc.traits).toEqual(expect.arrayContaining([{ key: "aura", value: "4" }, { key: "regeneration", value: "1" }]));
+  });
+
+  it("has the sample Minion Squads", () => {
+    const pirates = squads.find((s) => s.name === "Space Pirate Crew").system;
+    expect(pirates).toMatchObject({ threatRating: 3, count: 6, melee: { rating: 3, type: "R" }, ranged: { rating: 3, type: "I" } });
+    expect(squads.find((s) => s.name === "Fluffy Bunnies").system).toMatchObject({ threatRating: 1, melee: { rating: 5, type: "R" }, ranged: { rating: 0 } });
   });
 });

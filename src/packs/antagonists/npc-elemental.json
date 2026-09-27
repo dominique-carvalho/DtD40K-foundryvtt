@@ -1,0 +1,186 @@
+{
+  "name": "Elemental",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 3,
+        "specialties": []
+      },
+      "cha": {
+        "value": 1,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 1,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "perception": {
+        "value": 3,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 6,
+    "level": 2,
+    "hp": {
+      "value": 12
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 13
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 12
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 6
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "legends",
+      "description": "<p>A spirit that builds itself a body of earth, air, fire or water; common in the Umbra and in spots where one element is unusually pure, and harmless if left alone.</p>",
+      "traits": [
+        {
+          "key": "amorphous",
+          "value": ""
+        },
+        {
+          "key": "stuffOfNightmares",
+          "value": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Earth",
+          "effect": "Earth version: +6 armor on every location."
+        },
+        {
+          "name": "Air",
+          "effect": "Air version: has the Phasing trait."
+        },
+        {
+          "name": "Fire",
+          "effect": "Fire version: its attacks deal E damage, and every creature within melee reach tests Constitution vs TN 15 each turn or takes 1 fatigue from the heat."
+        },
+        {
+          "name": "Water",
+          "effect": "Water version: has Regeneration 1."
+        }
+      ],
+      "feats": [
+        "Weapon Proficiency (Melee 2)"
+      ],
+      "gear": [],
+      "armor": [],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 534
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Slam",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 6,
+          "kept": 3,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "brawling",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi373342ac6a4",
+      "_key": "!actors.items!dtdN11d177d03ab6.dtdNi373342ac6a4"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Elemental",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN11d177d03ab6",
+  "_key": "!actors!dtdN11d177d03ab6",
+  "folder": "dtdNFdc0fbb30a6c"
+}

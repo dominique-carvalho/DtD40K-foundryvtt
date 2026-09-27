@@ -1,0 +1,165 @@
+{
+  "name": "General Noncombatant",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 2,
+        "specialties": []
+      },
+      "dex": {
+        "value": 2,
+        "specialties": []
+      },
+      "con": {
+        "value": 2,
+        "specialties": []
+      },
+      "cha": {
+        "value": 2,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 2,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "commonLore": {
+        "value": 1,
+        "specialties": []
+      },
+      "perception": {
+        "value": 1,
+        "specialties": []
+      },
+      "crafts": {
+        "value": 1,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 1,
+    "hp": {
+      "value": 8
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 14
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 8
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 4
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "people",
+      "description": "<p>An ordinary worker of the Wheel, such as a factory drudge, ship rating or miner, with no real fighting ability.</p>",
+      "traits": [],
+      "abilities": [],
+      "feats": [],
+      "gear": [
+        "Drab-garb",
+        "a few coins"
+      ],
+      "armor": [],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 522
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Unarmed",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 2,
+          "kept": 1,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "brawling",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi9b94ba847e7",
+      "_key": "!actors.items!dtdN84dbc9f8151d.dtdNi9b94ba847e7"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "General Noncombatant",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN84dbc9f8151d",
+  "_key": "!actors!dtdN84dbc9f8151d",
+  "folder": "dtdNFdebbe164a31"
+}

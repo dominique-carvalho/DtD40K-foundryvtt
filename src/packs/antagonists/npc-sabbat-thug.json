@@ -1,0 +1,298 @@
+{
+  "name": "Sabbat Thug",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 3,
+        "specialties": []
+      },
+      "cha": {
+        "value": 2,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 2,
+        "specialties": []
+      },
+      "int": {
+        "value": 1,
+        "specialties": []
+      },
+      "wis": {
+        "value": 1,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 1,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 1,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 2,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 3,
+        "specialties": []
+      },
+      "drive": {
+        "value": 1,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 1,
+        "specialties": []
+      },
+      "perception": {
+        "value": 2,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 2,
+    "hp": {
+      "value": 11
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 17
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 11
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 6
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "criminals",
+      "description": "<p>Bottom-rung muscle of the Sabbat, a centuries-old vampire crime syndicate with deep pockets and political reach in many cities.</p>",
+      "traits": [
+        {
+          "key": "resourceStat",
+          "value": "Vitae 5"
+        },
+        {
+          "key": "darkSight",
+          "value": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Undead Resilience",
+          "effect": "Works like the Vampire power of the same name."
+        },
+        {
+          "name": "Sunlight Weakness",
+          "effect": "Works like the Vampire power of the same name."
+        },
+        {
+          "name": "Blood Dependency",
+          "effect": "Works like the Vampire power of the same name."
+        }
+      ],
+      "feats": [
+        "Sound Constitution",
+        "Weapon Proficiency (Basic)"
+      ],
+      "gear": [
+        "Dark clothing",
+        "Brass Knuckles",
+        "Hand Cannon",
+        "Chrono",
+        "5 reloads for the Hand Cannon"
+      ],
+      "armor": [],
+      "alternate": "",
+      "resource": {
+        "type": "Vitae",
+        "value": 5,
+        "max": 5
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 524
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Bite",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "brawling",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNida3c68bff5f",
+      "_key": "!actors.items!dtdNb359d24d8599.dtdNida3c68bff5f"
+    },
+    {
+      "name": "Brass Knuckles",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Unarmed",
+        "damage": {
+          "rolled": 3,
+          "kept": 2,
+          "type": ""
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "brawling",
+            "value": null
+          },
+          {
+            "key": "armMounted",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi6422a1a0d2b",
+      "_key": "!actors.items!dtdNb359d24d8599.dtdNi6422a1a0d2b"
+    },
+    {
+      "name": "Hand Cannon",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "pistol",
+        "thrown": false,
+        "group": "Ordinary",
+        "damage": {
+          "rolled": 3,
+          "kept": 2,
+          "type": "I"
+        },
+        "pen": 3,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 35,
+          "strMultiplier": 0
+        },
+        "clip": 6,
+        "reload": "2 Full",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNid3547a1a54c",
+      "_key": "!actors.items!dtdNb359d24d8599.dtdNid3547a1a54c"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Sabbat Thug",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNb359d24d8599",
+  "_key": "!actors!dtdNb359d24d8599",
+  "folder": "dtdNFd42a653d63d"
+}

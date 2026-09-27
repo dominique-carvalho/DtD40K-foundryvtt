@@ -1,0 +1,16 @@
+{
+  "_id": "dtdNFdebbe164a31",
+  "_key": "!folders!dtdNFdebbe164a31",
+  "name": "People",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 10000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "npcFolder": "people"
+    }
+  }
+}

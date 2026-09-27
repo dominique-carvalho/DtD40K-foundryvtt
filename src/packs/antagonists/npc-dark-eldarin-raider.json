@@ -1,0 +1,272 @@
+{
+  "name": "Dark Eldarin Raider",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 5,
+        "specialties": []
+      },
+      "con": {
+        "value": 2,
+        "specialties": []
+      },
+      "cha": {
+        "value": 4,
+        "specialties": []
+      },
+      "fel": {
+        "value": 4,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 3,
+        "specialties": []
+      },
+      "wis": {
+        "value": 3,
+        "specialties": []
+      },
+      "wil": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "academicLore": {
+        "value": 1,
+        "specialties": []
+      },
+      "acrobatics": {
+        "value": 3,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 2,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 3,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "deceive": {
+        "value": 4,
+        "specialties": []
+      },
+      "forbiddenLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "perception": {
+        "value": 3,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 2,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 3,
+    "level": 3,
+    "hp": {
+      "value": 10
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 28
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 10
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 8
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>A raider from a decadent slaver culture that feeds souls to the Daemon Lolth, hunting captives to haul back to hidden Commorragh, from where few return.</p>",
+      "traits": [],
+      "abilities": [
+        {
+          "name": "Warp Miasma",
+          "effect": "Works like the Dark Eldarin racial power of the same name."
+        }
+      ],
+      "feats": [
+        "Blademaster",
+        "Armor Proficiency (Light)",
+        "Backstab",
+        "Catfall",
+        "Defensive Mobility",
+        "Decadence",
+        "Fleet of Foot",
+        "Sneak Attack",
+        "Weapon Proficiency (Melee 2, Ranged 1)"
+      ],
+      "gear": [
+        "Needle Gun",
+        "2 Needle Packs",
+        "3 Smoke Grenades",
+        "Officer's Cutlass",
+        "Mesh Overcoat",
+        "spider silk suit",
+        "6 doses of a random drug"
+      ],
+      "armor": [
+        {
+          "name": "Mesh Suit",
+          "ap": 4,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 542
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Officer's Cutlass",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Fencing",
+        "damage": {
+          "rolled": 5,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "shocking",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi8f806bacc21",
+      "_key": "!actors.items!dtdNcd72aea54125.dtdNi8f806bacc21"
+    },
+    {
+      "name": "Needle Gun",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "E"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 180,
+          "strMultiplier": 0
+        },
+        "clip": 6,
+        "reload": "2 Full",
+        "qualities": [
+          {
+            "key": "accurate",
+            "value": null
+          },
+          {
+            "key": "toxic",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNiaa9ada0f51c",
+      "_key": "!actors.items!dtdNcd72aea54125.dtdNiaa9ada0f51c"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Dark Eldarin Raider",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNcd72aea54125",
+  "_key": "!actors!dtdNcd72aea54125",
+  "folder": "dtdNFd662d27128e"
+}

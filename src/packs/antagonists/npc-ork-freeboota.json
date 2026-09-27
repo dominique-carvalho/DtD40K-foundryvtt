@@ -1,0 +1,230 @@
+{
+  "name": "Ork Freeboota",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 4,
+        "specialties": []
+      },
+      "dex": {
+        "value": 2,
+        "specialties": []
+      },
+      "con": {
+        "value": 3,
+        "specialties": []
+      },
+      "cha": {
+        "value": 3,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 2,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 3,
+        "specialties": []
+      },
+      "wil": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "intimidation": {
+        "value": 2,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 2,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 1,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 3,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "size": 5,
+    "level": 2,
+    "hp": {
+      "value": 12
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 15
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 12
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 6
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>A green, unscarred rank-and-file Ork who still has every tooth, which puts him near the bottom of the pecking order.</p>",
+      "traits": [],
+      "abilities": [
+        {
+          "name": "WAAAAAGH!",
+          "effect": "Works like the Ork racial power of the same name."
+        }
+      ],
+      "feats": [
+        "Cleave",
+        "Crushing Blow",
+        "Power Attack",
+        "Fearless",
+        "Armor Proficiency (Light)",
+        "Weapon Proficiency (Basic)"
+      ],
+      "gear": [
+        "Charm",
+        "Leather Suit",
+        "Choppa",
+        "Autogun",
+        "3 clips",
+        "Patchwork clothing"
+      ],
+      "armor": [
+        {
+          "name": "Leather Suit",
+          "ap": 2,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 538
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Choppa",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 7,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNid9fdb757e6d",
+      "_key": "!actors.items!dtdN24bbc6b29a9c.dtdNid9fdb757e6d"
+    },
+    {
+      "name": "Autogun",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Ordinary",
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 10
+        },
+        "range": {
+          "value": 90,
+          "strMultiplier": 0
+        },
+        "clip": 30,
+        "reload": "Full",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi52bfaa1378d",
+      "_key": "!actors.items!dtdN24bbc6b29a9c.dtdNi52bfaa1378d"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Ork Freeboota",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN24bbc6b29a9c",
+  "_key": "!actors!dtdN24bbc6b29a9c",
+  "folder": "dtdNFd662d27128e"
+}

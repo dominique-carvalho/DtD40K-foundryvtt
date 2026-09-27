@@ -1,0 +1,36 @@
+{
+  "name": "Space Pirate Crew",
+  "type": "minionSquad",
+  "img": "icons/svg/pawprint.svg",
+  "system": {
+    "threatRating": 3,
+    "count": 6,
+    "melee": {
+      "rating": 3,
+      "type": "R",
+      "weapon": "Various blades"
+    },
+    "ranged": {
+      "rating": 3,
+      "type": "I",
+      "weapon": "Various guns"
+    },
+    "allyUuid": "",
+    "description": "<p>Sample Minion Squad of up to six (DtD 7.7a p. 544).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 544
+    }
+  },
+  "items": [],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Space Pirate Crew",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN0dd162fb05c9",
+  "_key": "!actors!dtdN0dd162fb05c9",
+  "folder": "dtdNFdd2d3359ac2"
+}

@@ -1,0 +1,304 @@
+{
+  "name": "Dragonfire Adept",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 4,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 4,
+        "specialties": []
+      },
+      "cha": {
+        "value": 5,
+        "specialties": []
+      },
+      "fel": {
+        "value": 3,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 4,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 3,
+        "specialties": []
+      },
+      "wil": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "command": {
+        "value": 2,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 3,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 2,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 3,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 2,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "perception": {
+        "value": 2,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 2,
+        "specialties": []
+      },
+      "academicLore": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "size": 5,
+    "level": 3,
+    "hp": {
+      "value": 16
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 18
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 16
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 7
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {
+        "evocation": {
+          "value": 3
+        }
+      }
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>A dragonborn who studies inner power and fire magic, and keeps a very large gun for when spells fall short.</p>",
+      "traits": [
+        {
+          "key": "caster",
+          "value": "Evocation 3"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Dragon Breath",
+          "effect": "Works like the Dragonborn racial power of the same name."
+        }
+      ],
+      "feats": [
+        "Armor Proficiency (Medium)",
+        "Weapon Proficiency (Basic, Melee 2, Ranged 2)",
+        "Spell Focus (Evocation)"
+      ],
+      "gear": [
+        "Flak Suit",
+        "Meltagun",
+        "2 extra reloads",
+        "Fencing Sword",
+        "Micro-Bead",
+        "Brightly colored robes"
+      ],
+      "armor": [
+        {
+          "name": "Flak Suit",
+          "ap": 5,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 537
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Fencing Sword",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Fencing",
+        "damage": {
+          "rolled": 6,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "balanced",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNiffc14af297c",
+      "_key": "!actors.items!dtdN97a4714e3c3b.dtdNiffc14af297c"
+    },
+    {
+      "name": "Meltagun",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Melta",
+        "damage": {
+          "rolled": 4,
+          "kept": 3,
+          "type": "E"
+        },
+        "pen": 12,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 20,
+          "strMultiplier": 0
+        },
+        "clip": 5,
+        "reload": "2 Full",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi5366ecf95fd",
+      "_key": "!actors.items!dtdN97a4714e3c3b.dtdNi5366ecf95fd"
+    },
+    {
+      "name": "Dragon Breath",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 3,
+          "kept": 2,
+          "type": "E"
+        },
+        "pen": 6,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 20,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "flame",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi49f051a1e98",
+      "_key": "!actors.items!dtdN97a4714e3c3b.dtdNi49f051a1e98"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Dragonfire Adept",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN97a4714e3c3b",
+  "_key": "!actors!dtdN97a4714e3c3b",
+  "folder": "dtdNFd662d27128e"
+}

@@ -1,0 +1,240 @@
+{
+  "name": "Eldarin Farseer",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 2,
+        "specialties": []
+      },
+      "dex": {
+        "value": 4,
+        "specialties": []
+      },
+      "con": {
+        "value": 2,
+        "specialties": []
+      },
+      "cha": {
+        "value": 4,
+        "specialties": []
+      },
+      "fel": {
+        "value": 4,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 2,
+        "specialties": []
+      },
+      "int": {
+        "value": 4,
+        "specialties": []
+      },
+      "wis": {
+        "value": 3,
+        "specialties": []
+      },
+      "wil": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "academicLore": {
+        "value": 1,
+        "specialties": []
+      },
+      "acrobatics": {
+        "value": 3,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 4,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 3,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 3,
+        "specialties": []
+      },
+      "deceive": {
+        "value": 2,
+        "specialties": []
+      },
+      "forbiddenLore": {
+        "value": 3,
+        "specialties": []
+      },
+      "perception": {
+        "value": 3,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 3,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "size": 3,
+    "level": 4,
+    "hp": {
+      "value": 12
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 23
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 12
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 6
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {
+        "divination": {
+          "value": 4
+        },
+        "enchantment": {
+          "value": 2
+        },
+        "illusion": {
+          "value": 3
+        },
+        "evocation": {
+          "value": 2
+        }
+      }
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>An Eldarin leader who reads the warp through divination to choose the best path; too precious to lose, yet constantly in danger, and a fleeing Farseer is a cue for others to run.</p>",
+      "traits": [
+        {
+          "key": "caster",
+          "value": "Divination 4, Enchantment 2, Illusion 3, Evocation 2"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Warp Step",
+          "effect": "Works like the Eldarin racial power of the same name."
+        }
+      ],
+      "feats": [
+        "Common Sense",
+        "Danger Sense",
+        "Defensive Mobility",
+        "Fast Reflexes",
+        "Foresight",
+        "Spell Might",
+        "Spell Penetration",
+        "Strong Minded",
+        "Weapon Proficiency (Melee 2, Ranged 2)"
+      ],
+      "gear": [
+        "Fencing Sword",
+        "Staff",
+        "Leather Suit",
+        "Elaborate robes"
+      ],
+      "armor": [
+        {
+          "name": "Leather Suit",
+          "ap": 2,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 539
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Fencing Sword",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Fencing",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "balanced",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNiafa6e50f2ac",
+      "_key": "!actors.items!dtdNefd587406f1e.dtdNiafa6e50f2ac"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Eldarin Farseer",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNefd587406f1e",
+  "_key": "!actors!dtdNefd587406f1e",
+  "folder": "dtdNFd662d27128e"
+}

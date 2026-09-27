@@ -1,0 +1,281 @@
+{
+  "name": "Elite Soldiers/Raiders",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 4,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 3,
+        "specialties": []
+      },
+      "cha": {
+        "value": 2,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 1,
+        "specialties": []
+      },
+      "perception": {
+        "value": 2,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 1,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 2,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 1,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 3,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 3,
+    "hp": {
+      "value": 12
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 13
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 12
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 7
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "military",
+      "description": "<p>Special forces with better kit, training and experience than line troops, and the sense to withdraw when a fight turns bad.</p>",
+      "traits": [],
+      "abilities": [],
+      "feats": [
+        "Weapon Proficiency (Basic, Melee 2, Throwing)",
+        "Sound Constitution ×2",
+        "Jaded",
+        "Armor Proficiency (Light, Medium, Heavy)"
+      ],
+      "gear": [
+        "Uniform",
+        "Carapace Suit",
+        "Lasgun",
+        "2 Energy Packs",
+        "Micro-bead",
+        "Torch",
+        "Rebreather",
+        "2 Frag Grenades"
+      ],
+      "armor": [
+        {
+          "name": "Carapace Suit",
+          "ap": 7,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 523
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Knife",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Parrying",
+        "damage": {
+          "rolled": 5,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi4ac08df9e53",
+      "_key": "!actors.items!dtdN305f0f00144f.dtdNi4ac08df9e53"
+    },
+    {
+      "name": "Lasgun",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Las",
+        "damage": {
+          "rolled": 3,
+          "kept": 2,
+          "type": "E"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 3
+        },
+        "range": {
+          "value": 60,
+          "strMultiplier": 0
+        },
+        "clip": 60,
+        "reload": "Full",
+        "qualities": [
+          {
+            "key": "reliable",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNidad2f382ef2",
+      "_key": "!actors.items!dtdN305f0f00144f.dtdNidad2f382ef2"
+    },
+    {
+      "name": "Frag Grenade",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "thrown",
+        "thrown": false,
+        "group": "Grenades and Missiles",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "X"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 12,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "blast",
+            "value": 4
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi244b69d893a",
+      "_key": "!actors.items!dtdN305f0f00144f.dtdNi244b69d893a"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Elite Soldiers/Raiders",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN305f0f00144f",
+  "_key": "!actors!dtdN305f0f00144f",
+  "folder": "dtdNFd12019ece64"
+}

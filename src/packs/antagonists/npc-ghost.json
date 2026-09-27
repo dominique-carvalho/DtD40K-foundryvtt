@@ -1,0 +1,144 @@
+{
+  "name": "Ghost",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 2,
+        "specialties": []
+      },
+      "con": {
+        "value": 2,
+        "specialties": []
+      },
+      "cha": {
+        "value": 4,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 2,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "brawl": {
+        "value": 2,
+        "specialties": []
+      },
+      "perception": {
+        "value": 2,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 3,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 2,
+    "hp": {
+      "value": 8
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 14
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 8
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 5
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "undead",
+      "description": "<p>The furious leftover spirit of someone dead, a warp echo usually met in the Umbra that can reach into the material world where the barrier is weak.</p>",
+      "traits": [
+        {
+          "key": "undead",
+          "value": ""
+        },
+        {
+          "key": "flyer",
+          "value": "10"
+        },
+        {
+          "key": "phasing",
+          "value": ""
+        },
+        {
+          "key": "fear",
+          "value": "1"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Possession",
+          "effect": "Rolls Charisma + Arcana to affect a target as though casting the Dominate spell."
+        }
+      ],
+      "feats": [],
+      "gear": [],
+      "armor": [],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 535
+      }
+    }
+  },
+  "items": [],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Ghost",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNd548a4388c64",
+  "_key": "!actors!dtdNd548a4388c64",
+  "folder": "dtdNFd63c8477145"
+}

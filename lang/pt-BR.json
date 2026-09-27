@@ -1,7 +1,9 @@
 {
   "TYPES": {
     "Actor": {
-      "character": "Personagem"
+      "character": "Personagem",
+      "npc": "NPC",
+      "minionSquad": "Minion Squad"
     },
     "Item": {
       "race": "Raça",
@@ -125,7 +127,8 @@
         "equipment": "Equipamento",
         "combat": "Combate",
         "magic": "Magia",
-        "martial": "Marcial"
+        "martial": "Marcial",
+        "npc": "Antagonista"
       },
       "SocialInitiative": "Iniciativa social",
       "Fatigue": "Fatigue",
@@ -138,7 +141,9 @@
       "Equipment": "Ficha de Equipamento DtD",
       "Spell": "Ficha de Magia DtD",
       "MartialSchool": "Ficha de Escola Marcial DtD",
-      "Deity": "Ficha de Divindade DtD"
+      "Deity": "Ficha de Divindade DtD",
+      "Npc": "Ficha de NPC DtD",
+      "MinionSquad": "Ficha de Minion Squad DtD"
     },
     "Roll": {
       "Success": "Sucesso",
@@ -1488,6 +1493,138 @@
       "Cured": "{names} (Devotion {point}) foi superada.",
       "Cure": "Curar",
       "BlockedXp": "Sem compra por XP enquanto reduzida"
+    },
+    "Npc": {
+      "Category": {
+        "people": "Pessoas",
+        "military": "Militares",
+        "criminals": "Criminosos",
+        "cultists": "Cultistas",
+        "machines": "Máquinas",
+        "daemons": "Daemons",
+        "creatures": "Criaturas",
+        "legends": "Lendas",
+        "undead": "Mortos-vivos",
+        "xenos": "Xenos"
+      },
+      "Trait": {
+        "amphibious": {
+          "label": "Anfíbio",
+          "hint": "Nada com o dobro da Speed e respira debaixo d'água."
+        },
+        "amorphous": {
+          "label": "Amorphous",
+          "hint": "Todo acerto vai para o corpo."
+        },
+        "armorPlating": {
+          "label": "Armor Plating",
+          "hint": "Armadura natural em todos os locais."
+        },
+        "aura": {
+          "label": "Aura",
+          "hint": "Reduz o dano de magia."
+        },
+        "autoStabilized": {
+          "label": "Auto-Stabilized",
+          "hint": "Sempre apoiado; rajada como meia ação."
+        },
+        "caster": {
+          "label": "Caster",
+          "hint": "Conjura com os valores de escola listados; sempre sancionado."
+        },
+        "crawler": {
+          "label": "Crawler",
+          "hint": "Metade da Speed, ignora terreno."
+        },
+        "daemonic": {
+          "label": "Daemonic",
+          "hint": "Constitution somada ao HP e à armadura."
+        },
+        "darkSight": {
+          "label": "Dark Sight",
+          "hint": "Sem penalidade de iluminação."
+        },
+        "fear": {
+          "label": "Fear",
+          "hint": "Os heróis fazem o Fear Test contra o valor."
+        },
+        "flyer": {
+          "label": "Flyer",
+          "hint": "Voa com a Speed listada."
+        },
+        "machine": {
+          "label": "Machine",
+          "hint": "Armadura em todos os locais; imune a vácuo, frio e poderes mentais."
+        },
+        "mindless": {
+          "label": "Mindless",
+          "hint": "Imune a ataques sociais e controle mental."
+        },
+        "phasing": {
+          "label": "Phasing",
+          "hint": "Fica intangível como meia ação."
+        },
+        "quadruped": {
+          "label": "Quadruped",
+          "hint": "Speed em terra dobrada."
+        },
+        "regeneration": {
+          "label": "Regeneration",
+          "hint": "Recupera esse HP no início do turno."
+        },
+        "resourceStat": {
+          "label": "Resource Stat",
+          "hint": "Reserva de pontos como um Exalt."
+        },
+        "stuffOfNightmares": {
+          "label": "Stuff of Nightmares",
+          "hint": "Ignora veneno, sangramento, stun e a maioria dos críticos."
+        },
+        "undead": {
+          "label": "Undead",
+          "hint": "Não respira nem come; nunca sangra nem fica atordoado."
+        },
+        "unnaturalToughness": {
+          "label": "Unnatural Toughness",
+          "hint": "Hit points dobrados."
+        }
+      },
+      "Traits": "Traits",
+      "Abilities": "Habilidades",
+      "Armor": "Armadura",
+      "Feats": "Feats",
+      "Gear": "Equipamento",
+      "Alternate": "Forma alternativa",
+      "AllLocations": "Todos",
+      "Fear": "Fear",
+      "FearHint": "Postar um cartão de Fear Test para os heróis.",
+      "FearCard": "{name} tem Fear {rating}.",
+      "FearTest": "Fear Test ({rating})",
+      "NoHero": "Selecione o token do seu personagem ou associe um personagem ao seu usuário.",
+      "Regenerated": "{name} regenera {hp} HP.",
+      "Immune": "{name} é imune a {condition}.",
+      "MindlessSocial": "{name} é Mindless: ataques sociais não têm efeito."
+    },
+    "Minion": {
+      "ThreatRating": "Threat Rating",
+      "Count": "Minions",
+      "Range": "Alcance à distância",
+      "Attacks": "Ataques",
+      "Attacking": "atacando",
+      "melee": "Corpo a corpo",
+      "ranged": "À distância",
+      "Weapon": "Arma",
+      "Attack": "Atacar",
+      "Ally": "Aliada de um herói",
+      "AllyBonus": "Bônus nos testes de perícia do herói: +{bonus}",
+      "NoAttack": "A squad não tem esse ataque.",
+      "Defeated": "A squad não tem mais minions.",
+      "DefeatedBadge": "Derrotada",
+      "HitDamage": "Acerto: {damage} de dano",
+      "DamageFormula": "5 × (DR {rating} + {raises} raises)",
+      "NoRoll": "Dano de minion: sem rolagem",
+      "Removed": "{name}: {n} minion(s) derrubado(s), restam {left}.",
+      "AllDown": "{name}: {n} minion(s) derrubado(s), a squad foi derrotada."
     }
   }
 }

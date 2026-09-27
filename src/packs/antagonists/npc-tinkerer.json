@@ -1,0 +1,307 @@
+{
+  "name": "Tinkerer",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 2,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 2,
+        "specialties": []
+      },
+      "cha": {
+        "value": 2,
+        "specialties": []
+      },
+      "fel": {
+        "value": 3,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 2,
+        "specialties": []
+      },
+      "int": {
+        "value": 3,
+        "specialties": []
+      },
+      "wis": {
+        "value": 1,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "academicLore": {
+        "value": 3,
+        "specialties": []
+      },
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 2,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 2,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 3,
+        "specialties": []
+      },
+      "drive": {
+        "value": 2,
+        "specialties": []
+      },
+      "perception": {
+        "value": 2,
+        "specialties": []
+      },
+      "pilot": {
+        "value": 3,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 1,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 2,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "size": 3,
+    "level": 2,
+    "hp": {
+      "value": 8
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 16
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 8
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 5
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>A gnome far more interested in building and repairing gadgets than in fighting, who arms up only against thieves and saboteurs.</p>",
+      "traits": [],
+      "abilities": [
+        {
+          "name": "Improvise",
+          "effect": "Works like the Gnome racial power of the same name."
+        }
+      ],
+      "feats": [
+        "Blind Fighting",
+        "Evasion",
+        "Fearless"
+      ],
+      "gear": [
+        "Laspistol",
+        "3 energy packs",
+        "Web Pistol",
+        "2 web loads",
+        "Katar",
+        "Mesh Suit",
+        "Auspex",
+        "Backpack",
+        "Chrono",
+        "Combi-Tool",
+        "Data Slate",
+        "Torch",
+        "Void Suit",
+        "Clothing with a lot of pockets"
+      ],
+      "armor": [
+        {
+          "name": "Mesh Suit",
+          "ap": 4,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 538
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Laspistol",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "pistol",
+        "thrown": false,
+        "group": "Las",
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "E"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 30,
+          "strMultiplier": 0
+        },
+        "clip": 30,
+        "reload": "Full",
+        "qualities": [
+          {
+            "key": "reliable",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNidafb9189cbd",
+      "_key": "!actors.items!dtdN0e924bcf7c6e.dtdNidafb9189cbd"
+    },
+    {
+      "name": "Web Pistol",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "pistol",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 0,
+          "kept": 0,
+          "type": ""
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 30,
+          "strMultiplier": 0
+        },
+        "clip": 1,
+        "reload": "Full",
+        "qualities": [
+          {
+            "key": "snare",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi3453cb20977",
+      "_key": "!actors.items!dtdN0e924bcf7c6e.dtdNi3453cb20977"
+    },
+    {
+      "name": "Katar",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Parrying",
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 3,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNif09821cfb3e",
+      "_key": "!actors.items!dtdN0e924bcf7c6e.dtdNif09821cfb3e"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Tinkerer",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN0e924bcf7c6e",
+  "_key": "!actors!dtdN0e924bcf7c6e",
+  "folder": "dtdNFd662d27128e"
+}

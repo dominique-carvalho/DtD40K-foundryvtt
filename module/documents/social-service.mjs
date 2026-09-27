@@ -1,4 +1,5 @@
 import { refuteBonus, socialOutcome } from "../rules/social.mjs";
+import { isMindless } from "../rules/npc.mjs";
 import { toggleCondition } from "./condition-service.mjs";
 import { requestGm } from "./damage-service.mjs";
 
@@ -17,8 +18,13 @@ const TEMPLATE = "systems/dtd40k/templates/chat/social-attack.hbs";
  */
 export async function socialAttack(actor, { characteristic, skill }) {
   const target = [...game.user.targets][0]?.actor;
-  if (target?.type !== "character") {
+  if (target?.type !== "character" && target?.type !== "npc") {
     ui.notifications.warn(localize("DTD.Combat.NoTarget"));
+    return;
+  }
+  // Mindless creatures are immune to social attacks (spec 012, p. 521).
+  if (target.type === "npc" && isMindless(target.system.npc.traits)) {
+    ui.notifications.warn(game.i18n.format("DTD.Npc.MindlessSocial", { name: target.name }));
     return;
   }
   const md = target.system.derived.mentalDefense;

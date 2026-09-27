@@ -1,0 +1,16 @@
+{
+  "_id": "dtdNFdef57c3a77f",
+  "_key": "!folders!dtdNFdef57c3a77f",
+  "name": "Creatures",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 70000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "npcFolder": "creatures"
+    }
+  }
+}

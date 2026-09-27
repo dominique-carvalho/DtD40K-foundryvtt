@@ -1,0 +1,189 @@
+{
+  "name": "Incarnate Lesser Daemon",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 3,
+        "specialties": []
+      },
+      "cha": {
+        "value": 3,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 1,
+        "specialties": []
+      },
+      "wis": {
+        "value": 3,
+        "specialties": []
+      },
+      "wil": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "perception": {
+        "value": 1,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 2,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 2,
+    "hp": {
+      "value": 15
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 20
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 15
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 6
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 4
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "daemons",
+      "description": "<p>A minor daemon pulled into reality, built more of warp matter than flesh and very hard to destroy; cunning like a beast but neither truly intelligent nor very magical.</p>",
+      "traits": [
+        {
+          "key": "daemonic",
+          "value": ""
+        },
+        {
+          "key": "darkSight",
+          "value": ""
+        },
+        {
+          "key": "fear",
+          "value": "1"
+        },
+        {
+          "key": "resourceStat",
+          "value": "Essence 8"
+        }
+      ],
+      "abilities": [],
+      "feats": [
+        "Weapon Proficiency (Melee 2)"
+      ],
+      "gear": [],
+      "armor": [
+        {
+          "name": "Daemonic Toughness",
+          "ap": 3,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "Essence",
+        "value": 8,
+        "max": 8
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 529
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Claws and Teeth",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 5,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi68c5e259e47",
+      "_key": "!actors.items!dtdN7566a0c3a11b.dtdNi68c5e259e47"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Incarnate Lesser Daemon",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN7566a0c3a11b",
+  "_key": "!actors!dtdN7566a0c3a11b",
+  "folder": "dtdNFd68837e02d6"
+}

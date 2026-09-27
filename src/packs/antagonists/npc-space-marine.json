@@ -1,0 +1,246 @@
+{
+  "name": "Space Marine",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 5,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 5,
+        "specialties": []
+      },
+      "cha": {
+        "value": 3,
+        "specialties": []
+      },
+      "fel": {
+        "value": 3,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 4,
+        "specialties": []
+      },
+      "int": {
+        "value": 3,
+        "specialties": []
+      },
+      "wis": {
+        "value": 5,
+        "specialties": []
+      },
+      "wil": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 3,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 4,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "perception": {
+        "value": 2,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 3,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 6,
+    "level": 3,
+    "hp": {
+      "value": 21
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 15
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 21
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 7
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 7
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>Aasimar elite of the Blessed Pantheon with the finest arms and armor, fearless and dedicated to crushing Chaos across the Wheel.</p>",
+      "traits": [],
+      "abilities": [
+        {
+          "name": "And They Shall Know No Fear",
+          "effect": "Works like the Aasimar racial power of the same name."
+        }
+      ],
+      "feats": [
+        "Sound Constitution ×3",
+        "Combat Master",
+        "Armor Proficiency (All)",
+        "Weapon Proficiency (All)"
+      ],
+      "gear": [
+        "Power Armor",
+        "Chainsword",
+        "Boltgun",
+        "2 Bolt clips",
+        "Plain clothing",
+        "charms"
+      ],
+      "armor": [
+        {
+          "name": "Power Armor*",
+          "ap": 12,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 540
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Chainsword",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Chain",
+        "damage": {
+          "rolled": 9,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 4,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi33d506c585d",
+      "_key": "!actors.items!dtdNd8018e87cbcd.dtdNi33d506c585d"
+    },
+    {
+      "name": "Boltgun",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Bolter",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "X"
+        },
+        "pen": 6,
+        "rof": {
+          "single": true,
+          "auto": 3
+        },
+        "range": {
+          "value": 90,
+          "strMultiplier": 0
+        },
+        "clip": 24,
+        "reload": "Full",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNic9bccd84bd4",
+      "_key": "!actors.items!dtdNd8018e87cbcd.dtdNic9bccd84bd4"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Space Marine",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNd8018e87cbcd",
+  "_key": "!actors!dtdNd8018e87cbcd",
+  "folder": "dtdNFd662d27128e"
+}

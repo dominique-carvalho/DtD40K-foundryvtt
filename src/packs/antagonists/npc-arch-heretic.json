@@ -1,0 +1,254 @@
+{
+  "name": "Arch-Heretic",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 4,
+        "specialties": []
+      },
+      "cha": {
+        "value": 3,
+        "specialties": []
+      },
+      "fel": {
+        "value": 4,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 4,
+        "specialties": []
+      },
+      "int": {
+        "value": 3,
+        "specialties": []
+      },
+      "wis": {
+        "value": 3,
+        "specialties": []
+      },
+      "wil": {
+        "value": 5,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "academicLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "forbiddenLore": {
+        "value": 4,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 3,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 3,
+        "specialties": []
+      },
+      "persuasion": {
+        "value": 3,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 3,
+    "hp": {
+      "value": 20
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 16
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 20
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 5
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "cultists",
+      "description": "<p>The zealous champion and usual leader of a radical sect, possibly serving a daemon directly; blessed with power and impossible to negotiate with.</p>",
+      "traits": [
+        {
+          "key": "resourceStat",
+          "value": "Favor 8"
+        }
+      ],
+      "abilities": [],
+      "feats": [
+        "Lucky",
+        "Powerful Charge",
+        "Weapon Proficiency (Melee 1, Ranged 2)",
+        "Armor Proficiency (Extreme)",
+        "Sound Constitution ×2",
+        "True Grit",
+        "Divine Ministration"
+      ],
+      "gear": [
+        "Ornate Robes",
+        "Dire Flail",
+        "Hand Flamer",
+        "extra fuel tank",
+        "Plate Suit",
+        "Heretical Writings",
+        "Charm"
+      ],
+      "armor": [
+        {
+          "name": "Plate Suit*",
+          "ap": 8,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "Favor",
+        "value": 8,
+        "max": 8
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 527
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Dire-Flail",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 5,
+          "kept": 3,
+          "type": "I"
+        },
+        "pen": 3,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "twoHands",
+            "value": null
+          },
+          {
+            "key": "flexible",
+            "value": null
+          },
+          {
+            "key": "unwieldy",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi518be1221eb",
+      "_key": "!actors.items!dtdNf49b8c7c36e3.dtdNi518be1221eb"
+    },
+    {
+      "name": "Hand Flamer",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "pistol",
+        "thrown": false,
+        "group": "Flamer",
+        "damage": {
+          "rolled": 3,
+          "kept": 2,
+          "type": "E"
+        },
+        "pen": 4,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 10,
+          "strMultiplier": 0
+        },
+        "clip": 3,
+        "reload": "2 Full",
+        "qualities": [
+          {
+            "key": "flame",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi8f22ba801cb",
+      "_key": "!actors.items!dtdNf49b8c7c36e3.dtdNi8f22ba801cb"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Arch-Heretic",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNf49b8c7c36e3",
+  "_key": "!actors!dtdNf49b8c7c36e3",
+  "folder": "dtdNFd88c980f4db"
+}

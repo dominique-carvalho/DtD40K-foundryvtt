@@ -1,4 +1,5 @@
 import { UNTIL_NEXT_TURN } from "../config.mjs";
+import { immunities } from "../rules/npc.mjs";
 import { fatigueCheck, rest as restRule } from "../rules/healing.mjs";
 
 /**
@@ -31,6 +32,12 @@ export async function rollValue(value) {
 export async function toggleCondition(actor, id, { active, rounds = null, untilTurnOf } = {}) {
   const on = active ?? !actor.statuses.has(id);
   if (!on) return actor.toggleStatusEffect(id, { active: false });
+  // Undead and Stuff of Nightmares ignore stun and bleeding (spec 012, p. 522).
+  if (actor.type === "npc" && immunities(actor.system.npc.traits).includes(id)) {
+    const name = game.i18n.localize(CONFIG.statusEffects.find((s) => s.id === id)?.name ?? id);
+    await ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor }), content: `<p>${game.i18n.format("DTD.Npc.Immune", { name: actor.name, condition: name })}</p>` });
+    return undefined;
+  }
   const existing = actor.effects.find((effect) => effect.statuses.has(id));
   const effect = existing ?? await actor.toggleStatusEffect(id, { active: true, overlay: id === "dead" });
   if (!(effect instanceof ActiveEffect)) return effect;

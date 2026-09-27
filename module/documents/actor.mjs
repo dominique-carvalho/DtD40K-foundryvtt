@@ -3,6 +3,8 @@ import { computeDerived } from "../rules/derived.mjs";
 import { runTest } from "../rules/test.mjs";
 import { postTest, rng } from "../dice/roll-service.mjs";
 import { promptRollOptions } from "../apps/roll-dialog.mjs";
+import { allyBonus } from "../rules/minions.mjs";
+import { alliesOf } from "./minion-service.mjs";
 
 /**
  * Actor document class for Dungeons the Dragoning.
@@ -13,7 +15,7 @@ export class DtdActor extends Actor {
     const allowed = await super._preCreate(data, options, user);
     if (allowed === false) return false;
 
-    if (this.type === "character") {
+    if (this.type === "character" || this.type === "npc") {
       // Start fully healed and composed.
       const derived = computeDerived(this.system, this.system.derivedMods, this.system.modifiers);
       this.updateSource({
@@ -93,9 +95,12 @@ export class DtdActor extends Actor {
    */
   withRollModifiers(modifiers = {}, skillKey) {
     const extra = rollModifiers(this.system.modifiers?.rolls, skillKey);
+    // Minions teamed with a character add to every skill roll (spec 012, p. 544).
+    const allies = skillKey && this.type === "character" ? allyBonus(alliesOf(this), this.system.characteristics.fel.value) : 0;
     return {
       modifiers: {
         ...modifiers,
+        flat: (Number(modifiers.flat) || 0) + allies,
         rolled: (Number(modifiers.rolled) || 0) + extra.rolled,
         kept: (Number(modifiers.kept) || 0) + extra.kept,
         freeRaises: (Number(modifiers.freeRaises) || 0) + extra.freeRaises

@@ -1,0 +1,293 @@
+{
+  "name": "Mortal Hero",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 5,
+        "specialties": []
+      },
+      "dex": {
+        "value": 4,
+        "specialties": []
+      },
+      "con": {
+        "value": 4,
+        "specialties": []
+      },
+      "cha": {
+        "value": 3,
+        "specialties": []
+      },
+      "fel": {
+        "value": 4,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "perception": {
+        "value": 2,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 2,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 1,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 4,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 4,
+        "specialties": []
+      }
+    },
+    "size": 4,
+    "level": 3,
+    "hp": {
+      "value": 18
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 13
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 18
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 9
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 6
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "military",
+      "description": "<p>A top-tier human warrior with elite gear and training; grit and luck let them trouble a fresh Exalt in a duel.</p>",
+      "traits": [],
+      "abilities": [],
+      "feats": [
+        "Weapon Proficiency (Basic, Melee 3, Throwing)",
+        "Sound Constitution ×2",
+        "Jaded",
+        "Armor Proficiency (All)",
+        "True Grit",
+        "Blind Fighting",
+        "Luck"
+      ],
+      "gear": [
+        "Flashy clothing",
+        "Light Power Armor",
+        "Pulse Rifle",
+        "2 Energy Packs",
+        "Micro-bead",
+        "Torch",
+        "Rebreather",
+        "2 Frag Grenades"
+      ],
+      "armor": [
+        {
+          "name": "Light Power Armor*",
+          "ap": 10,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 524
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Chainsword",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Chain",
+        "damage": {
+          "rolled": 9,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 4,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNif4801a18790",
+      "_key": "!actors.items!dtdNd20f5aab9a72.dtdNif4801a18790"
+    },
+    {
+      "name": "Pulse Rifle",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "basic",
+        "thrown": false,
+        "group": "Las",
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "E"
+        },
+        "pen": 2,
+        "rof": {
+          "single": true,
+          "auto": 4
+        },
+        "range": {
+          "value": 100,
+          "strMultiplier": 0
+        },
+        "clip": 40,
+        "reload": "Full",
+        "qualities": [
+          {
+            "key": "reliable",
+            "value": null
+          },
+          {
+            "key": "compact",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNic72601f222e",
+      "_key": "!actors.items!dtdNd20f5aab9a72.dtdNic72601f222e"
+    },
+    {
+      "name": "Frag Grenade",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "thrown",
+        "thrown": false,
+        "group": "Grenades and Missiles",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "X"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 15,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "blast",
+            "value": 4
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNid9238195139",
+      "_key": "!actors.items!dtdNd20f5aab9a72.dtdNid9238195139"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Mortal Hero",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdNd20f5aab9a72",
+  "_key": "!actors!dtdNd20f5aab9a72",
+  "folder": "dtdNFd12019ece64"
+}

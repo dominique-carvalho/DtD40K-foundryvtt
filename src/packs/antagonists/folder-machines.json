@@ -1,0 +1,16 @@
+{
+  "_id": "dtdNFd31d2ca75f2",
+  "_key": "!folders!dtdNFd31d2ca75f2",
+  "name": "Machines",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 50000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "npcFolder": "machines"
+    }
+  }
+}

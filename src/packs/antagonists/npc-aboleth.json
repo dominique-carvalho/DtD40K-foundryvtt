@@ -1,0 +1,250 @@
+{
+  "name": "Aboleth",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 5,
+        "specialties": []
+      },
+      "dex": {
+        "value": 3,
+        "specialties": []
+      },
+      "con": {
+        "value": 4,
+        "specialties": []
+      },
+      "cha": {
+        "value": 4,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 4,
+        "specialties": []
+      },
+      "int": {
+        "value": 6,
+        "specialties": []
+      },
+      "wis": {
+        "value": 5,
+        "specialties": []
+      },
+      "wil": {
+        "value": 6,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "academicLore": {
+        "value": 4,
+        "specialties": []
+      },
+      "acrobatics": {
+        "value": 2,
+        "specialties": []
+      },
+      "arcana": {
+        "value": 4,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 4,
+        "specialties": []
+      },
+      "command": {
+        "value": 3,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "forbiddenLore": {
+        "value": 5,
+        "specialties": []
+      },
+      "perception": {
+        "value": 3,
+        "specialties": []
+      },
+      "scrutiny": {
+        "value": 5,
+        "specialties": []
+      }
+    },
+    "size": 8,
+    "level": 4,
+    "hp": {
+      "value": 20
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 18
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 20
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 4
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 7
+      }
+    },
+    "magic": {
+      "schools": {
+        "divination": {
+          "value": 4
+        },
+        "enchantment": {
+          "value": 4
+        },
+        "illusion": {
+          "value": 4
+        }
+      }
+    },
+    "npc": {
+      "category": "legends",
+      "description": "<p>A bloated, armored fish-horror from the Mind Flayers' homeland whose tentacle barbs poison foes and turn the dead into slime it feeds on; it keeps slaves as guards.</p>",
+      "traits": [
+        {
+          "key": "darkSight",
+          "value": ""
+        },
+        {
+          "key": "caster",
+          "value": "Divination 4, Enchantment 4, Illusion 4"
+        },
+        {
+          "key": "crawler",
+          "value": ""
+        },
+        {
+          "key": "amphibious",
+          "value": ""
+        },
+        {
+          "key": "armorPlating",
+          "value": "3"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Mindslaver",
+          "effect": "Keeps Enchantment spells going as a free action, and victims gain no bonus dice to resist based on the commands they receive."
+        }
+      ],
+      "feats": [
+        "Danger Sense",
+        "Eidetic Memory",
+        "Strong Minded",
+        "Swift Attack",
+        "Weapon Proficiency (Melee 2)"
+      ],
+      "gear": [
+        "Slime"
+      ],
+      "armor": [
+        {
+          "name": "Bone Ridges",
+          "ap": 3,
+          "locations": [
+            "all"
+          ]
+        }
+      ],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 533
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Tentacles",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "snare",
+            "value": null
+          },
+          {
+            "key": "toxic",
+            "value": null
+          },
+          {
+            "key": "brawling",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi2c88f03d09e",
+      "_key": "!actors.items!dtdN7a8de1a85db7.dtdNi2c88f03d09e"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Aboleth",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN7a8de1a85db7",
+  "_key": "!actors!dtdN7a8de1a85db7",
+  "folder": "dtdNFdc0fbb30a6c"
+}

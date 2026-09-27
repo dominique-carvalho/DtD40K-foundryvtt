@@ -67,6 +67,10 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   criação), Artifact e Backing nomeados, Wealth da aquisição, Inheritance somando itens iniciais e rolagem de Contacts;
   compêndio *Deities* (21 deuses em 3 panteões) arrastado para a ficha; Alignment Check, recuperar Devotion, troca de
   alinhamento e Degeneration rolada, registrada por ponto de Devotion e com efeitos aplicados.
+- **NPCs e Minions**: atores NPC com o bloco do livro (valores como impressos), armas embutidas no ataque/dano/Aplicar,
+  condições, turno e magia; traits automatizados (armadura, Aura, Regeneration, Fear, Amorphous, Mindless, Undead,
+  Caster); compêndio *Antagonists* com as 47 fichas e 4 Minion Squads; squads com ataque (minions)k(TR), dano
+  5 × (DR + raises), baixas no Aplicar e bônus de minions aliados a um herói.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos
@@ -145,7 +149,7 @@ npm run build:packs
 - Depois do build, abra o Foundry e confira o compêndio (ex.: 16 raças).
 - Nunca edite `packs/` à mão; altere os JSON em `src/packs/` e rode o build de novo.
 - Para editar um compêndio pelo Foundry: clique com o botão direito no compêndio → "Alternar trava de edição", edite os itens, feche o Foundry e rode `npm run extract:packs` para gravar as mudanças de volta em `src/packs/` (depois revise o diff e faça o commit).
-- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) `combat-tables` (22 tabelas do cap. XVII e as 2 do Warp) `spells` (126 magias do cap. VIII) `martial-schools` (15 escolas dos caps. IX–X) e `deities` (21 deuses do cap. XII); a tabela Degeneration fica em `combat-tables`.
+- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) `combat-tables` (22 tabelas do cap. XVII e as 2 do Warp) `spells` (126 magias do cap. VIII) `martial-schools` (15 escolas dos caps. IX–X) `deities` (21 deuses do cap. XII; a tabela Degeneration fica em `combat-tables`) e `antagonists` (47 NPCs e 4 Minion Squads do cap. XX, só para o Mestre).
 
 ## Licença
 

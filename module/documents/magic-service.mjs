@@ -47,7 +47,7 @@ const knownSpells = (actor) => actor.items.filter((item) => item.type === "spell
  * @returns {Promise<Item|null>}
  */
 export async function learnSpell(actor, spell) {
-  if (actor.type !== "character") return null;
+  if (actor.type !== "character" && actor.type !== "npc") return null;
   const check = canLearn({
     spell: { name: spell.name, ...spell.system }, schools: schoolsOf(actor),
     spells: knownSpells(actor).map((item) => ({ name: item.name, ...item.system })), extra: actor.system.magic.state.extra
@@ -235,7 +235,7 @@ export async function endSustained(actor, id) {
  */
 export async function sustainTurn(combatant) {
   const actor = combatant?.actor;
-  if (!actor || actor.type !== "character") return;
+  if (!actor || (actor.type !== "character" && actor.type !== "npc")) return;
   for (const entry of actor.system.magic.sustained) {
     const ok = await takeAction(actor, { key: `sustain:${entry.id}`, name: entry.name, type: entry.action === "reaction" ? "reaction" : "half" });
     const text = game.i18n.format(ok ? "DTD.Magic.Sustaining" : "DTD.Magic.SustainEnds", { spell: entry.name });

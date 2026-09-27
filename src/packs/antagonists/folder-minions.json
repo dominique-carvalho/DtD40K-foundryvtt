@@ -1,0 +1,16 @@
+{
+  "_id": "dtdNFdd2d3359ac2",
+  "_key": "!folders!dtdNFdd2d3359ac2",
+  "name": "Minion Squads",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 110000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "npcFolder": "minions"
+    }
+  }
+}

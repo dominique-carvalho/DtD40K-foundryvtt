@@ -1,0 +1,227 @@
+{
+  "name": "Slayer",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 3,
+        "specialties": []
+      },
+      "dex": {
+        "value": 2,
+        "specialties": []
+      },
+      "con": {
+        "value": 3,
+        "specialties": []
+      },
+      "cha": {
+        "value": 2,
+        "specialties": []
+      },
+      "fel": {
+        "value": 2,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 3,
+        "specialties": []
+      },
+      "int": {
+        "value": 2,
+        "specialties": []
+      },
+      "wis": {
+        "value": 2,
+        "specialties": []
+      },
+      "wil": {
+        "value": 3,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "crafts": {
+        "value": 2,
+        "specialties": []
+      },
+      "intimidation": {
+        "value": 2,
+        "specialties": []
+      },
+      "weaponry": {
+        "value": 3,
+        "specialties": []
+      },
+      "commonLore": {
+        "value": 2,
+        "specialties": []
+      },
+      "ballistics": {
+        "value": 1,
+        "specialties": []
+      }
+    },
+    "size": 3,
+    "level": 2,
+    "hp": {
+      "value": 12
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 16
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 12
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 5
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 5
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "xenos",
+      "description": "<p>A disgraced Squat seeking a glorious death, marked with funeral paint and carrying just an axe plus one grenade to take a foe along at the end.</p>",
+      "traits": [],
+      "abilities": [
+        {
+          "name": "Squat Toughness",
+          "effect": "Works like the Squat racial power of the same name."
+        }
+      ],
+      "feats": [
+        "Iron Jaw",
+        "Weapon Proficiency (Basic, Throwing)"
+      ],
+      "gear": [
+        "Axe",
+        "boots",
+        "loincloth",
+        "body paint",
+        "mean look",
+        "Frag Grenade"
+      ],
+      "armor": [],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 536
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Axe",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 6,
+          "kept": 2,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNide8f1cfb47e",
+      "_key": "!actors.items!dtdN16303d9f1afd.dtdNide8f1cfb47e"
+    },
+    {
+      "name": "Frag Grenade",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "thrown",
+        "thrown": false,
+        "group": "Grenades and Missiles",
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "X"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 9,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "blast",
+            "value": 4
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNib3c3d3b59fa",
+      "_key": "!actors.items!dtdN16303d9f1afd.dtdNib3c3d3b59fa"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Slayer",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN16303d9f1afd",
+  "_key": "!actors!dtdN16303d9f1afd",
+  "folder": "dtdNFd662d27128e"
+}

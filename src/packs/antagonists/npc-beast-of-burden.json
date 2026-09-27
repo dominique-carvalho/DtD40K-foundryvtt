@@ -1,0 +1,164 @@
+{
+  "name": "Beast of Burden",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "str": {
+        "value": 4,
+        "specialties": []
+      },
+      "dex": {
+        "value": 2,
+        "specialties": []
+      },
+      "con": {
+        "value": 4,
+        "specialties": []
+      },
+      "cha": {
+        "value": 1,
+        "specialties": []
+      },
+      "fel": {
+        "value": 1,
+        "specialties": []
+      },
+      "cmp": {
+        "value": 1,
+        "specialties": []
+      },
+      "int": {
+        "value": 1,
+        "specialties": []
+      },
+      "wis": {
+        "value": 3,
+        "specialties": []
+      },
+      "wil": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "skills": {
+      "perception": {
+        "value": 2,
+        "specialties": []
+      },
+      "athletics": {
+        "value": 2,
+        "specialties": []
+      },
+      "brawl": {
+        "value": 2,
+        "specialties": []
+      }
+    },
+    "size": 8,
+    "level": 1,
+    "hp": {
+      "value": 12
+    },
+    "creation": {
+      "active": false
+    },
+    "derivedMods": {
+      "staticDefense": {
+        "bonus": 0,
+        "override": 9
+      },
+      "hpMax": {
+        "bonus": 0,
+        "override": 12
+      },
+      "speed": {
+        "bonus": 0,
+        "override": 12
+      },
+      "resilience": {
+        "bonus": 0,
+        "override": 6
+      }
+    },
+    "magic": {
+      "schools": {}
+    },
+    "npc": {
+      "category": "creatures",
+      "description": "<p>Generic block for draft animals of every world (oxen, heavy horses, grox and the like): stubborn but not much of a threat.</p>",
+      "traits": [
+        {
+          "key": "quadruped",
+          "value": ""
+        }
+      ],
+      "abilities": [],
+      "feats": [
+        "Weapon Proficiency (Melee 2)"
+      ],
+      "gear": [],
+      "armor": [],
+      "alternate": "",
+      "resource": {
+        "type": "",
+        "value": 0,
+        "max": 0
+      },
+      "source": {
+        "book": "DtD 7.7a",
+        "page": 529
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Kick",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 5,
+          "kept": 2,
+          "type": "I"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": []
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true
+        }
+      },
+      "_id": "dtdNi03f1317e0db",
+      "_key": "!actors.items!dtdN054d6bdad094.dtdNi03f1317e0db"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Beast of Burden",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN054d6bdad094",
+  "_key": "!actors!dtdN054d6bdad094",
+  "folder": "dtdNFdef57c3a77f"
+}

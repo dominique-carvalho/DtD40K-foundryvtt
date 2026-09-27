@@ -1,0 +1,16 @@
+{
+  "_id": "dtdNFd12019ece64",
+  "_key": "!folders!dtdNFd12019ece64",
+  "name": "Military",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 20000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "npcFolder": "military"
+    }
+  }
+}

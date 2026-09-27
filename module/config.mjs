@@ -395,6 +395,25 @@ export const BACKGROUND_XP = { freeDots: 7, freeMax: 3, low: 50, high: 100, arti
  */
 export const INHERITANCE_SLOTS = { ubiquitous: 0.125, veryCommon: 0.25, common: 0.5, uncommon: 1, rare: 2, veryRare: 4, mythicRare: 8, anyNonArtifact: 16 };
 
+/* ---------- Antagonists (spec 012, DtD 7.7a ch. XX, pp. 520–544) ---------- */
+
+/** Folders of the Antagonists compendium. */
+export const NPC_CATEGORIES = ["people", "military", "criminals", "cultists", "machines", "daemons", "creatures", "legends", "undead", "xenos"];
+
+/** The twenty creature traits (pp. 520–522); hasValue: printed with a rating, e.g. Armor Plating (X). */
+export const NPC_TRAITS = Object.fromEntries([
+  ["amphibious", false], ["amorphous", false], ["armorPlating", true], ["aura", true], ["autoStabilized", false],
+  ["caster", true], ["crawler", false], ["daemonic", false], ["darkSight", false], ["fear", true], ["flyer", true],
+  ["machine", true], ["mindless", false], ["phasing", false], ["quadruped", false], ["regeneration", true],
+  ["resourceStat", true], ["stuffOfNightmares", false], ["undead", false], ["unnaturalToughness", false]
+].map(([key, hasValue]) => [key, { label: `DTD.Npc.Trait.${key}.label`, hint: `DTD.Npc.Trait.${key}.hint`, hasValue }]));
+
+/**
+ * Minion Squads (pp. 543–544): up to 6 minions; Static Defense 5 × Threat Rating; 5 damage per Damage Rating and
+ * raise; ranged range 10 × Threat Rating (the book also says 5 ×).
+ */
+export const MINION = { maxCount: 6, sdPerThreat: 5, damagePerRating: 5, rangePerThreat: 10 };
+
 export const DTD = {
   GROUPS,
   CHARACTERISTICS,
@@ -458,5 +477,8 @@ export const DTD = {
   PANTHEONS,
   BACKGROUNDS,
   BACKGROUND_XP,
-  INHERITANCE_SLOTS
+  INHERITANCE_SLOTS,
+  NPC_CATEGORIES,
+  NPC_TRAITS,
+  MINION
 };

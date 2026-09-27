@@ -35,7 +35,7 @@ const sameStack = (a, data) => a.type === data.type && a.name === data.name
  * @returns {Promise<Item|null>}
  */
 export async function addEquipment(actor, item, { starting, overrides = {} } = {}) {
-  if (actor.type !== "character" || !EQUIPMENT_TYPES.includes(item.type)) return null;
+  if ((actor.type !== "character" && actor.type !== "npc") || !EQUIPMENT_TYPES.includes(item.type)) return null;
   const data = item.toObject();
   delete data._id;
   delete data.folder;

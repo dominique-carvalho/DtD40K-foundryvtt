@@ -1,0 +1,36 @@
+{
+  "name": "Fluffy Bunnies",
+  "type": "minionSquad",
+  "img": "icons/svg/pawprint.svg",
+  "system": {
+    "threatRating": 1,
+    "count": 6,
+    "melee": {
+      "rating": 5,
+      "type": "R",
+      "weapon": "Sharp pointy teeth"
+    },
+    "ranged": {
+      "rating": 0,
+      "type": "",
+      "weapon": ""
+    },
+    "allyUuid": "",
+    "description": "<p>Sample Minion Squad of up to six (DtD 7.7a p. 544).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 544
+    }
+  },
+  "items": [],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Fluffy Bunnies",
+    "actorLink": false,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdN6cb3e0717500",
+  "_key": "!actors!dtdN6cb3e0717500",
+  "folder": "dtdNFdd2d3359ac2"
+}

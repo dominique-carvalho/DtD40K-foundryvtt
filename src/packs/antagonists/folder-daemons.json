@@ -1,0 +1,16 @@
+{
+  "_id": "dtdNFd68837e02d6",
+  "_key": "!folders!dtdNFd68837e02d6",
+  "name": "Daemons",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 60000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "npcFolder": "daemons"
+    }
+  }
+}

@@ -10,6 +10,7 @@
  *   node scripts/assign-pack-ids.mjs --pack spells
  *   node scripts/assign-pack-ids.mjs --pack martial-schools
  *   node scripts/assign-pack-ids.mjs --pack deities
+ *   node scripts/assign-pack-ids.mjs --pack antagonists
  */
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -183,6 +184,21 @@ const LAYOUTS = {
       seed: (file) => `deity:${file}`,
       prefix: "dtdD"
     };
+  },
+  // Antagonists of chapter XX (spec 012): NPCs by category and the Minion Squads; weapons embedded.
+  antagonists: () => {
+    const names = { people: "People", military: "Military", criminals: "Criminals", cultists: "Cultists", machines: "Machines",
+      daemons: "Daemons", creatures: "Creatures", legends: "Legends", undead: "Undead", xenos: "Xenos", minions: "Minion Squads" };
+    const folders = Object.fromEntries(Object.entries(names).map(([key, name], index) => [key,
+      folder(`npc-folder:${key}`, "dtdNFd", key, name, null, (index + 1) * 10000, "npcFolder", "Actor")]));
+    return {
+      folders,
+      fileOf: (key) => `folder-${slug(key)}.json`,
+      folderOf: (doc) => folders[doc.type === "minionSquad" ? "minions" : doc.system.npc.category],
+      seed: (file) => `npc:${file}`,
+      prefix: "dtdN",
+      collection: "actors"
+    };
   }
 };
 
@@ -214,6 +230,13 @@ for (const file of readdirSync(DIR).filter((name) => name.endsWith(".json") && !
     effect._id ||= idFor(`${layout.seed(file)}:effect:${index}`, "dtdEf");
     effect._key = `!items.effects!${doc._id}.${effect._id}`;
   });
+  // Items embedded in Actors (spec 012: NPC weapons).
+  if (collection === "actors") {
+    (doc.items ?? []).forEach((item, index) => {
+      item._id ||= idFor(`${layout.seed(file)}:item:${index}`, "dtdNi");
+      item._key = `!actors.items!${doc._id}.${item._id}`;
+    });
+  }
   // Table results, likewise (spec 008).
   (doc.results ?? []).forEach((result, index) => {
     result._id ||= idFor(`${layout.seed(file)}:result:${index}`, "dtdTr");

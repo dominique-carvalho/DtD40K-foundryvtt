@@ -1,0 +1,35 @@
+<section class="tab npc-tab {{tabs.npc.cssClass}}" data-group="primary" data-tab="npc">
+  {{#with npcTab as |n|}}
+  <section class="npc-section">
+    <div class="enriched">{{{n.description}}}</div>
+    {{#if n.alternate}}<p class="hint">{{localize "DTD.Npc.Alternate"}}: {{n.alternate}}</p>{{/if}}
+  </section>
+
+  {{#if n.traits.length}}
+  <section class="npc-section">
+    <h2 class="section-title">{{localize "DTD.Npc.Traits"}}</h2>
+    <ul class="martial-entries">
+      {{#each n.traits as |t|}}
+      <li class="martial-entry"><span class="martial-entry-head"><b>{{t.label}}</b>{{#if t.value}} <span class="tag">{{t.value}}</span>{{/if}}</span>
+        <span class="martial-entry-effect">{{t.text}}</span></li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
+
+  {{#if n.abilities.length}}
+  <section class="npc-section">
+    <h2 class="section-title">{{localize "DTD.Npc.Abilities"}}</h2>
+    <dl class="spell-stats">{{#each n.abilities as |a|}}<dt>{{a.name}}</dt><dd>{{a.effect}}</dd>{{/each}}</dl>
+  </section>
+  {{/if}}
+
+  <section class="npc-section">
+    <dl class="spell-stats">
+      {{#if n.armor}}<dt>{{localize "DTD.Npc.Armor"}}</dt><dd>{{n.armor}}</dd>{{/if}}
+      {{#if n.feats}}<dt>{{localize "DTD.Npc.Feats"}}</dt><dd>{{n.feats}}</dd>{{/if}}
+      {{#if n.gear}}<dt>{{localize "DTD.Npc.Gear"}}</dt><dd>{{n.gear}}</dd>{{/if}}
+    </dl>
+  </section>
+  {{/with}}
+</section>

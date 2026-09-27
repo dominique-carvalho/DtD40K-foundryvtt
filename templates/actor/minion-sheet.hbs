@@ -1,0 +1,58 @@
+<div class="minion-sheet-body">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}" {{#if editable}}data-action="editImage"{{/if}}>
+    <div class="identity-text">
+      {{#if editable}}<input class="item-name" type="text" name="name" value="{{actor.name}}">{{else}}<h1 class="item-name">{{actor.name}}</h1>{{/if}}
+      <div class="identity-line">
+        <span>{{localize "TYPES.Actor.minionSquad"}}</span>
+        {{#if system.defeated}}<span class="feat-badge warning">{{localize "DTD.Minion.DefeatedBadge"}}</span>{{/if}}
+      </div>
+    </div>
+  </header>
+
+  <section class="spell-section">
+    <dl class="spell-stats">
+      <dt>{{localize "DTD.Minion.ThreatRating"}}</dt>
+      <dd>{{#if editable}}<input type="number" name="system.threatRating" value="{{system.threatRating}}" min="1" max="5">{{else}}{{system.threatRating}}{{/if}}</dd>
+      <dt>{{localize "DTD.Minion.Count"}}</dt>
+      <dd>{{#if editable}}<input type="number" name="system.count" value="{{system.count}}" min="0" max="{{maxCount}}">{{else}}{{system.count}}{{/if}} / {{maxCount}}</dd>
+      <dt>{{localize "DTD.Derived.staticDefense"}}</dt><dd>{{system.derived.staticDefense}}</dd>
+      <dt>{{localize "DTD.Derived.speed"}}</dt><dd>{{system.derived.speed}}</dd>
+      <dt>{{localize "DTD.Minion.Range"}}</dt><dd>{{system.range}} m</dd>
+    </dl>
+  </section>
+
+  <section class="spell-section minion-attacks">
+    <h3 class="section-title">{{localize "DTD.Minion.Attacks"}}
+      <label class="hint">{{localize "DTD.Minion.Attacking"}} <input type="number" class="minion-attacking" value="{{system.count}}" min="1" max="{{system.count}}"></label>
+    </h3>
+    {{#each kinds as |k|}}
+    <div class="minion-attack-row">
+      <b>{{k.label}}</b>
+      {{#if @root.editable}}
+      <label>DR <input type="number" name="system.{{k.key}}.rating" value="{{k.rating}}" min="0" max="5"></label>
+      <select name="system.{{k.key}}.type">{{selectOptions @root.damageTypes selected=k.type localize=true}}</select>
+      <input type="text" name="system.{{k.key}}.weapon" value="{{k.weapon}}" placeholder="{{localize "DTD.Minion.Weapon"}}">
+      {{else}}
+      <span>DR {{k.rating}} {{k.type}} {{k.weapon}}</span>
+      {{/if}}
+      {{#if k.rating}}<a class="pool-button" data-action="minionAttack" data-kind="{{k.key}}"><i class="fa-solid fa-dice-d10" inert></i> {{localize "DTD.Minion.Attack"}}</a>{{/if}}
+    </div>
+    {{/each}}
+  </section>
+
+  <section class="spell-section">
+    <h3 class="section-title">{{localize "DTD.Minion.Ally"}}</h3>
+    <select class="minion-ally" {{#unless editable}}disabled{{/unless}}>
+      <option value="">—</option>
+      {{#each heroes as |h|}}<option value="{{h.uuid}}" {{#if h.selected}}selected{{/if}}>{{h.name}}</option>{{/each}}
+    </select>
+    {{#if allyBonus}}<p class="hint">{{localize "DTD.Minion.AllyBonus" bonus=allyBonus}}</p>{{/if}}
+  </section>
+
+  <section class="spell-section">
+    {{#if editable}}
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.description}}}</div>{{/if}}
+  </section>
+</div>

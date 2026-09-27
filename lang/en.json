@@ -1,7 +1,9 @@
 {
   "TYPES": {
     "Actor": {
-      "character": "Character"
+      "character": "Character",
+      "npc": "NPC",
+      "minionSquad": "Minion Squad"
     },
     "Item": {
       "race": "Race",
@@ -125,7 +127,8 @@
         "equipment": "Equipment",
         "combat": "Combat",
         "magic": "Magic",
-        "martial": "Martial"
+        "martial": "Martial",
+        "npc": "Antagonist"
       },
       "SocialInitiative": "Social Initiative",
       "Fatigue": "Fatigue",
@@ -138,7 +141,9 @@
       "Equipment": "DtD Equipment Sheet",
       "Spell": "DtD Spell Sheet",
       "MartialSchool": "DtD Martial School Sheet",
-      "Deity": "DtD Deity Sheet"
+      "Deity": "DtD Deity Sheet",
+      "Npc": "DtD NPC Sheet",
+      "MinionSquad": "DtD Minion Squad Sheet"
     },
     "Roll": {
       "Success": "Success",
@@ -1488,6 +1493,138 @@
       "Cured": "{names} (Devotion {point}) is overcome.",
       "Cure": "Cure",
       "BlockedXp": "No XP purchase while reduced"
+    },
+    "Npc": {
+      "Category": {
+        "people": "People",
+        "military": "Military",
+        "criminals": "Criminals",
+        "cultists": "Cultists",
+        "machines": "Machines",
+        "daemons": "Daemons",
+        "creatures": "Creatures",
+        "legends": "Legends",
+        "undead": "Undead",
+        "xenos": "Xenos"
+      },
+      "Trait": {
+        "amphibious": {
+          "label": "Amphibious",
+          "hint": "Swims at double Speed and breathes underwater."
+        },
+        "amorphous": {
+          "label": "Amorphous",
+          "hint": "Every hit goes to the body."
+        },
+        "armorPlating": {
+          "label": "Armor Plating",
+          "hint": "Natural armor on every location."
+        },
+        "aura": {
+          "label": "Aura",
+          "hint": "Reduces magical damage."
+        },
+        "autoStabilized": {
+          "label": "Auto-Stabilized",
+          "hint": "Always braced; full auto as a half action."
+        },
+        "caster": {
+          "label": "Caster",
+          "hint": "Casts spells with the listed school ranks; always sanctioned."
+        },
+        "crawler": {
+          "label": "Crawler",
+          "hint": "Half Speed, ignores terrain."
+        },
+        "daemonic": {
+          "label": "Daemonic",
+          "hint": "Constitution added to HP and armor."
+        },
+        "darkSight": {
+          "label": "Dark Sight",
+          "hint": "No lighting penalties."
+        },
+        "fear": {
+          "label": "Fear",
+          "hint": "Heroes make a Fear Test against its rating."
+        },
+        "flyer": {
+          "label": "Flyer",
+          "hint": "Flies at the listed Speed."
+        },
+        "machine": {
+          "label": "Machine",
+          "hint": "Armor on every location; immune to vacuum, cold and mind powers."
+        },
+        "mindless": {
+          "label": "Mindless",
+          "hint": "Immune to social attacks and mind control."
+        },
+        "phasing": {
+          "label": "Phasing",
+          "hint": "Turns insubstantial as a half action."
+        },
+        "quadruped": {
+          "label": "Quadruped",
+          "hint": "Double ground Speed."
+        },
+        "regeneration": {
+          "label": "Regeneration",
+          "hint": "Heals this many HP at the start of its turn."
+        },
+        "resourceStat": {
+          "label": "Resource Stat",
+          "hint": "A pool of points like an Exalt."
+        },
+        "stuffOfNightmares": {
+          "label": "Stuff of Nightmares",
+          "hint": "Ignores poison, bleeding, stun and most criticals."
+        },
+        "undead": {
+          "label": "Undead",
+          "hint": "Needs no air or food; never bleeds or is stunned."
+        },
+        "unnaturalToughness": {
+          "label": "Unnatural Toughness",
+          "hint": "Hit points doubled."
+        }
+      },
+      "Traits": "Traits",
+      "Abilities": "Abilities",
+      "Armor": "Armor",
+      "Feats": "Feats",
+      "Gear": "Gear",
+      "Alternate": "Alternate form",
+      "AllLocations": "All",
+      "Fear": "Fear",
+      "FearHint": "Post a Fear Test card for the heroes.",
+      "FearCard": "{name} has Fear {rating}.",
+      "FearTest": "Fear Test ({rating})",
+      "NoHero": "Select your character's token or assign a character to your user.",
+      "Regenerated": "{name} regenerates {hp} HP.",
+      "Immune": "{name} is immune to {condition}.",
+      "MindlessSocial": "{name} is Mindless: social attacks have no effect."
+    },
+    "Minion": {
+      "ThreatRating": "Threat Rating",
+      "Count": "Minions",
+      "Range": "Ranged range",
+      "Attacks": "Attacks",
+      "Attacking": "attacking",
+      "melee": "Melee",
+      "ranged": "Ranged",
+      "Weapon": "Weapon",
+      "Attack": "Attack",
+      "Ally": "Teamed with a hero",
+      "AllyBonus": "Bonus to the hero's skill rolls: +{bonus}",
+      "NoAttack": "The squad has no such attack.",
+      "Defeated": "The squad has no minions left.",
+      "DefeatedBadge": "Defeated",
+      "HitDamage": "Hit: {damage} damage",
+      "DamageFormula": "5 × (DR {rating} + {raises} raises)",
+      "NoRoll": "Minion damage: no roll",
+      "Removed": "{name}: {n} minion(s) down, {left} left.",
+      "AllDown": "{name}: {n} minion(s) down, the squad is defeated."
     }
   }
 }

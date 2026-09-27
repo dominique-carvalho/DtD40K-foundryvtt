@@ -1,0 +1,148 @@
+{
+  "name": "Crisis Zone",
+  "type": "martialSchool",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Loud, relentless heavy-weapon fire used for suppression and support.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 275
+    },
+    "key": "crisisZone",
+    "kind": "gunKata",
+    "keySkill": "techUse",
+    "weaponGroup": "",
+    "summary": "Loud, relentless heavy-weapon fire used for suppression and support.",
+    "entries": [
+      {
+        "id": "bulgingBiceps",
+        "rank": 1,
+        "type": "mastery",
+        "name": "Bulging Biceps",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "No penalty for firing Heavy weapons unbraced.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "actionSuppressingFire",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Suppressing Fire)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Trick Shots may be built on Suppressing Fire; the Advantages go to the shot that gains the suppression bonus.",
+        "automation": {
+          "unlocksAction": "suppressingFire",
+          "prepares": true
+        }
+      },
+      {
+        "id": "rockAndRoll",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Rock and Roll",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Heavy weapons only.",
+        "automation": {
+          "requires": {
+            "weaponType": "heavy"
+          }
+        }
+      },
+      {
+        "id": "tracerRounds",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Tracer Rounds",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "A miss still hits for half damage if the roll beat half the target's Static Defense.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "skillTechUse",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Tech Use)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Tech Use against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "techUse"
+          }
+        }
+      },
+      {
+        "id": "squadBreaker",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Squad Breaker",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "A target hit takes one extra raise on each damage roll made against it during the next round.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "danmaku",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Danmaku",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Replace Full Auto's normal effect with Blast (X), X = weapon RoF.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "fiveRoundsRapid",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Five Rounds Rapid",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "A target hit loses a half action next turn.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "razingStorm",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Razing Storm",
+        "cost": 4,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The shot gains Storm.",
+        "automation": {
+          "quality": {
+            "key": "storm"
+          }
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdMe351afed2ea8",
+  "_key": "!items!dtdMe351afed2ea8",
+  "folder": "dtdMFd0aa488a7d9"
+}

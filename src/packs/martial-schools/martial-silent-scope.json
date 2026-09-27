@@ -1,0 +1,152 @@
+{
+  "name": "Silent Scope",
+  "type": "martialSchool",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A long-range sniper and assassin discipline against unsuspecting targets.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 278
+    },
+    "key": "silentScope",
+    "kind": "gunKata",
+    "keySkill": "perception",
+    "weaponGroup": "",
+    "summary": "A long-range sniper and assassin discipline against unsuspecting targets.",
+    "entries": [
+      {
+        "id": "thereIsNoWind",
+        "rank": 1,
+        "type": "mastery",
+        "name": "There Is No Wind",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Maximum range becomes 6x normal instead of 4x (normal penalties).",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "actionAim",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Aim)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Aim may be the base; the Advantages go to the aimed attack that follows, which is not itself a special one.",
+        "automation": {
+          "unlocksAction": "aim",
+          "prepares": true
+        }
+      },
+      {
+        "id": "whenSuddenly",
+        "rank": 2,
+        "type": "flaw",
+        "name": "When Suddenly...",
+        "cost": -2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Usable only against a target unaware of you.",
+        "automation": {
+          "requires": {
+            "targetStatus": [
+              "surprised"
+            ]
+          }
+        }
+      },
+      {
+        "id": "boomHeadshot",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Boom Headshot!",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The shot gains Tearing.",
+        "automation": {
+          "quality": {
+            "key": "tearing"
+          }
+        }
+      },
+      {
+        "id": "skillPerception",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Perception)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Perception against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "perception"
+          }
+        }
+      },
+      {
+        "id": "bullsEye",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Bulls Eye",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The shot gains Accurate.",
+        "automation": {
+          "quality": {
+            "key": "accurate"
+          }
+        }
+      },
+      {
+        "id": "spawnCampingMeditation",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Spawn Camping Meditation",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Right after the shot you may test Stealth at -2k1.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "leadingTheTarget",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Leading the Target",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "No penalty for attacking at extreme range.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "oneBullet",
+        "rank": 5,
+        "type": "mastery",
+        "name": "One Bullet",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Once per scene, your first ranged attack on a target that has not acted yet lowers its Resilience by 2.",
+        "automation": {
+          "text": true
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdMa35c633998e8",
+  "_key": "!items!dtdMa35c633998e8",
+  "folder": "dtdMFd0aa488a7d9"
+}

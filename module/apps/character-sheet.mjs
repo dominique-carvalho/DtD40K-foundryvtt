@@ -25,6 +25,8 @@ import { resetSocialScene, socialAttack } from "../documents/social-service.mjs"
 import { addInsanity, fearTest } from "../documents/mental-service.mjs";
 import { prepareMagicContext } from "./magic-context.mjs";
 import { castSpell, endSustained, learnCombo, learnSpell } from "../documents/magic-service.mjs";
+import { prepareMartialContext } from "./martial-context.mjs";
+import { buildAttack, deleteAttack, newScene as newMartialScene, useAttack } from "../documents/martial-service.mjs";
 import { needsChoice } from "../rules/race.mjs";
 import { buildDots, filterSkills, nextBaseValue, sanitizeDerivedMods } from "../rules/sheet.mjs";
 import { buildCharacteristicPool, buildSkillPool, formatPool, normalizePool } from "../rules/pool.mjs";
@@ -34,7 +36,7 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 const TEMPLATE_ROOT = "systems/dtd40k/templates/actor/parts";
 // Advance mode spends XP (spec 006, research R7); edit mode stays free.
 const MODES = { EDIT: "edit", PLAY: "play", ADVANCE: "advance" };
-const TAB_IDS = ["main", "traits", "equipment", "combat", "magic", "class"];
+const TAB_IDS = ["main", "traits", "equipment", "combat", "magic", "martial", "class"];
 
 /**
  * Split a specialties list into the stored ones (editable) and those added by feat effects.
@@ -129,7 +131,14 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       advanceSchool: CharacterSheet.#onAdvance,
       endSustained: CharacterSheet.#onEndSustained,
       learnCombo: CharacterSheet.#onLearnCombo,
-      castCombo: CharacterSheet.#onCastCombo
+      castCombo: CharacterSheet.#onCastCombo,
+      advanceMartial: CharacterSheet.#onAdvance,
+      newMartialAttack: CharacterSheet.#onNewMartialAttack,
+      editMartialAttack: CharacterSheet.#onEditMartialAttack,
+      deleteMartialAttack: CharacterSheet.#onDeleteMartialAttack,
+      useMartialAttack: CharacterSheet.#onUseMartialAttack,
+      martialNewScene: CharacterSheet.#onMartialNewScene,
+      toggleMartialPassive: CharacterSheet.#onToggleMartialPassive
     }
   };
 
@@ -151,6 +160,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     equipment: { template: `${TEMPLATE_ROOT}/equipment.hbs` },
     combat: { template: `${TEMPLATE_ROOT}/combat.hbs` },
     magic: { template: `${TEMPLATE_ROOT}/magic.hbs` },
+    martial: { template: `${TEMPLATE_ROOT}/martial.hbs` },
     class: { template: `${TEMPLATE_ROOT}/class.hbs` },
     footer: { template: `${TEMPLATE_ROOT}/footer.hbs` }
   };
@@ -164,7 +174,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     `${TEMPLATE_ROOT}/exaltation.hbs`,
     `${TEMPLATE_ROOT}/assets.hbs`,
     `${TEMPLATE_ROOT}/feats.hbs`,
-    `${TEMPLATE_ROOT}/advance-button.hbs`
+    `${TEMPLATE_ROOT}/advance-button.hbs`,
+    "systems/dtd40k/templates/dialog/martial-builder-row.hbs"
   ];
 
   /** Skill search state, kept across re-renders. */
@@ -250,6 +261,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       equipment: prepareEquipmentContext(actor),
       combatTab: prepareCombatContext(actor),
       magic: prepareMagicContext(actor, { isAdvance }),
+      martial: await prepareMartialContext(actor, { isAdvance }),
       addictionOptions: ADDICTION_LEVELS.map((key, value) => ({ value, label: game.i18n.localize(`DTD.Addiction.${key}`) })),
       currentClass: getCurrentClass(actor)?.name ?? "",
       hasClasses: system.classState.hasClasses,
@@ -426,7 +438,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     // Combat tab (spec 008): the GM edits Critical Damage; owners add Insanity points.
     bind(".critical-input", (input) => game.user.isGM && this.document.update({ "system.critical.value": Math.max(0, Number(input.value) || 0) }));
     bind(".insanity-add", (input) => Number(input.value) > 0 && addInsanity(this.document, Number(input.value)));
-    for (const selector of [".combo-pick", ".combo-name", ".combat-weapon-select", ".fear-rating", ".social-characteristic", ".social-skill", ".derangement-severity", ".derangement-name"]) {
+    for (const selector of [".martial-weapon-select", ".combo-pick", ".combo-name", ".combat-weapon-select", ".fear-rating", ".social-characteristic", ".social-skill", ".derangement-severity", ".derangement-name"]) {
       for (const control of this.element.querySelectorAll(selector)) control.addEventListener("change", (event) => event.stopPropagation());
     }
   }
@@ -721,6 +733,67 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
   }
 
   /**
+   * Build a new Special Attack or Trick Shot (spec 010, FR-007).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onNewMartialAttack(event, target) {
+    await buildAttack(this.document, { kind: target.dataset.kind });
+  }
+
+  /**
+   * Edit a Special Attack or Trick Shot (spec 010, FR-009).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onEditMartialAttack(event, target) {
+    await buildAttack(this.document, { id: target.dataset.id });
+  }
+
+  /**
+   * Delete a Special Attack or Trick Shot.
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onDeleteMartialAttack(event, target) {
+    await deleteAttack(this.document, target.dataset.id);
+  }
+
+  /**
+   * Use a Special Attack or Trick Shot with the weapon chosen on its row (spec 010, FR-010).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onUseMartialAttack(event, target) {
+    const id = target.dataset.id;
+    const weaponId = this.element.querySelector(`.martial-weapon-select[data-attack-id="${id}"]`)?.value ?? "unarmed";
+    await useAttack(this.document, id, { weaponId, prepared: target.dataset.prepared === "true" });
+  }
+
+  /**
+   * Last Resort is available again: a new scene (GM, spec 010).
+   * @this {CharacterSheet}
+   */
+  static async #onMartialNewScene() {
+    if (game.user.isGM) await newMartialScene(this.document);
+  }
+
+  /**
+   * Switch a passive Mastery effect on or off (GM, spec 010, FR-006).
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onToggleMartialPassive(event, target) {
+    const effect = this.document.effects.get(target.dataset.effectId);
+    if (effect && game.user.isGM) await effect.update({ disabled: !effect.disabled });
+  }
+
+  /**
    * Cast a known spell (spec 009, FR-008).
    * @this {CharacterSheet}
    * @param {PointerEvent} event
@@ -969,7 +1042,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
    */
   static async #onAdvance(event, target) {
     if (!this.document.isOwner || this.mode !== MODES.ADVANCE) return;
-    const kind = { advanceCharacteristic: "characteristic", advanceSkill: "skill", advancePowerStat: "powerStat", advanceSchool: "school" }[target.dataset.action];
+    const kind = { advanceCharacteristic: "characteristic", advanceSkill: "skill", advancePowerStat: "powerStat", advanceSchool: "school", advanceMartial: "martial" }[target.dataset.action];
     await advance(this.document, kind, target.dataset.key ?? "");
   }
 

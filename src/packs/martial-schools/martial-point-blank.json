@@ -1,0 +1,150 @@
+{
+  "name": "Point Blank",
+  "type": "martialSchool",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A close-quarters gunfighting style that shoves guns into melee.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 277
+    },
+    "key": "pointBlank",
+    "kind": "gunKata",
+    "keySkill": "athletics",
+    "weaponGroup": "",
+    "summary": "A close-quarters gunfighting style that shoves guns into melee.",
+    "entries": [
+      {
+        "id": "yippeeKiYay",
+        "rank": 1,
+        "type": "mastery",
+        "name": "Yippee Ki Yay",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "No penalty for firing into melee.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "actionFullAutoBurst",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Full Auto Burst)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Trick Shots may use the Full Auto Burst action.",
+        "automation": {
+          "unlocksAction": "fullAutoBurst"
+        }
+      },
+      {
+        "id": "dragonsDance",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Dragon's Dance",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Usable only while in melee with a target.",
+        "automation": {
+          "requires": {
+            "reminder": true
+          },
+          "text": true
+        }
+      },
+      {
+        "id": "lessThanLethal",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Less than Lethal",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "A target hit gains 1 fatigue.",
+        "automation": {
+          "onHit": [
+            {
+              "fatigue": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "skillAthletics",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Athletics)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Athletics against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "athletics"
+          }
+        }
+      },
+      {
+        "id": "bulletDanceTechnique",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Bullet Dance Technique",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "A target hit may be moved by you as far as its Speed, in a direction of your choice.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "barrelRoll",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Barrel Roll",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "You can Parry with a gun using Ballistics instead of Weaponry.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "fullFrontal",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Full Frontal",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Basic weapons can be used in melee.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "pistolWhipStrike",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Pistol Whip Strike",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Add an extra unarmed attack to this attack.",
+        "automation": {
+          "text": true
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdM5a5c1c17babd",
+  "_key": "!items!dtdM5a5c1c17babd",
+  "folder": "dtdMFd0aa488a7d9"
+}

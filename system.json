@@ -88,6 +88,11 @@
         "htmlFields": [
           "description"
         ]
+      },
+      "martialSchool": {
+        "htmlFields": [
+          "description"
+        ]
       }
     }
   },
@@ -173,6 +178,17 @@
       "name": "spells",
       "label": "Spells",
       "path": "packs/spells",
+      "type": "Item",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "martial-schools",
+      "label": "Martial Schools",
+      "path": "packs/martial-schools",
       "type": "Item",
       "system": "dtd40k",
       "ownership": {

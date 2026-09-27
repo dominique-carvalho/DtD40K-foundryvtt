@@ -1,0 +1,155 @@
+{
+  "name": "Tiger Claw",
+  "type": "martialSchool",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A wild, instinctive style of leaps and pounces with explosive, unpredictable strikes, favoring chain weapons.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 270
+    },
+    "key": "tigerClaw",
+    "kind": "sword",
+    "keySkill": "acrobatics",
+    "weaponGroup": "Chain",
+    "summary": "A wild, instinctive style of leaps and pounces with explosive, unpredictable strikes, favoring chain weapons.",
+    "entries": [
+      {
+        "id": "weaponChain",
+        "rank": 1,
+        "type": "weapon",
+        "name": "Weapon (Chain)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attack must be made with a Chain weapon.",
+        "automation": {
+          "requires": {
+            "weaponGroup": "Chain"
+          }
+        }
+      },
+      {
+        "id": "actionAllOutAttack",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (All Out Attack)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attacks may use the All Out Attack action.",
+        "automation": {
+          "unlocksAction": "allOutAttack"
+        }
+      },
+      {
+        "id": "deathFromAbove",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Death From Above",
+        "cost": -2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "If the attack misses or is dodged/parried, you fall prone.",
+        "automation": {
+          "onMiss": [
+            {
+              "condition": "prone"
+            }
+          ]
+        }
+      },
+      {
+        "id": "razorSharp",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Razor Sharp",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The attack gains Razor Sharp.",
+        "automation": {
+          "quality": {
+            "key": "razorSharp"
+          }
+        }
+      },
+      {
+        "id": "skillAcrobatics",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Acrobatics)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Acrobatics against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "acrobatics"
+          }
+        }
+      },
+      {
+        "id": "unstableSwordSkill",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Unstable Sword Skill",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "After damage, roll 1d10: a 1 halves damage, a 10 doubles it.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "masteryBrutalReserve",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Mastery (Brutal Reserve)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "You can still take reactions after an All Out Attack.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "demonicWeaponAttack",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Demonic Weapon Attack",
+        "cost": 5,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Optionally spend a hero point: ignore damage reductions such as armor and halve the target's Resilience (round up) for HP loss.",
+        "automation": {
+          "resolve": {
+            "ignoreArmor": true,
+            "resilienceMultiplier": 0.5
+          },
+          "text": true
+        }
+      },
+      {
+        "id": "bloodInTheWater",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Blood in the Water",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Damage dice explode on a 9 as well as a 10.",
+        "automation": {
+          "explodeOn": 9
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdMdb0933933fbe",
+  "_key": "!items!dtdMdb0933933fbe",
+  "folder": "dtdMFd04e0d91db2"
+}

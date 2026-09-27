@@ -991,23 +991,23 @@
   color: var(--dtd-text);
 }
 
-.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body, .class-sheet-body, .equipment-sheet-body, .spell-sheet-body) {
+.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body, .class-sheet-body, .equipment-sheet-body, .spell-sheet-body, .martial-school-body) {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .sheet-header {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) .sheet-header {
   flex-direction: row;
   align-items: center;
   gap: 0.75rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .profile-img[data-action] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) .profile-img[data-action] {
   cursor: pointer;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .item-name {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) .item-name {
   margin: 0;
   font-size: 1.4rem;
   height: auto;
@@ -1015,54 +1015,54 @@
   color: var(--dtd-text);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) input.item-name {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) input.item-name {
   width: 100%;
   border-bottom: 1px solid var(--dtd-border);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .identity-line input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) .identity-line input[type="text"] {
   width: 6rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) :is(.exaltation-section, .feat-section, .class-section, .equipment-section, .spell-section) {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) :is(.exaltation-section, .feat-section, .class-section, .equipment-section, .spell-section) {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .form-group {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) .form-group {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .form-group > label:first-child {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) .form-group > label:first-child {
   flex: 0 0 11rem;
   font-weight: bold;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .form-group.stacked {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) .form-group.stacked {
   flex-direction: column;
   align-items: stretch;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) :is(dl.exaltation-stats-list, dl.feat-stats, dl.class-stats, dl.spell-stats) {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) :is(dl.exaltation-stats-list, dl.feat-stats, dl.class-stats, dl.spell-stats) {
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: 0.25rem 0.75rem;
   margin: 0;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) dt {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) dt {
   font-weight: bold;
   color: var(--dtd-text-muted);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) dd {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) dd {
   margin: 0;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .automation-tag {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) .automation-tag {
   font-size: 0.8rem;
   font-weight: normal;
   color: var(--dtd-text-subtle);
@@ -1070,7 +1070,7 @@
   letter-spacing: 0.04em;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) prose-mirror {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) prose-mirror {
   min-height: 5rem;
 }
 
@@ -1079,13 +1079,13 @@
   padding-left: 1.25rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .list-row {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) .list-row {
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .list-row input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) .list-row input[type="text"] {
   flex: 1;
 }
 
@@ -1093,7 +1093,7 @@
   width: 3.5rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .list-control {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school) .list-control {
   cursor: pointer;
   margin-left: 0.3rem;
   font-size: 0.85rem;
@@ -1105,7 +1105,7 @@
   font-size: 1rem;
 }
 
-.dtd40k.item:is(.exaltation, .class, .equipment, .spell) .tag,
+.dtd40k.item:is(.exaltation, .class, .equipment, .spell, .martial-school) .tag,
 .dtd40k .equipment-tab .tag,
 .dtd40k .attack-card-extra .tag {
   display: inline-block;
@@ -1819,4 +1819,101 @@
 .dtd40k .spell-card-extra .spell-row {
   padding: 0.2rem 0;
   border-bottom: 1px dotted var(--dtd-border);
+}
+
+/* ---------- Sword Schools and Gun Kata (spec 010) ---------- */
+
+.dtd40k .martial-entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dtd40k .martial-entry {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 0;
+  border-bottom: 1px dotted var(--dtd-border);
+}
+
+.dtd40k .martial-entry-head {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.dtd40k .martial-cost {
+  margin-left: auto;
+  font-weight: bold;
+  color: var(--dtd-accent);
+}
+
+.dtd40k .martial-entry-effect {
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .martial-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dtd40k .martial-school-row .section-title,
+.dtd40k .martial-attacks .section-title {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.dtd40k .martial-attack.invalid .equipment-name {
+  opacity: 0.7;
+}
+
+.dtd40k .martial-weapon-select {
+  max-width: 9rem;
+}
+
+.dtd40k .martial-universals summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dtd40k .martial-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dtd40k .martial-budget {
+  font-weight: bold;
+  margin: 0.25rem 0;
+}
+
+.dtd40k .martial-budget.warning {
+  color: var(--color-level-warning, #c9593f);
+}
+
+.dtd40k .martial-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dtd40k .martial-option {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.15rem 0;
+  border-bottom: 1px dotted var(--dtd-border);
+}
+
+.dtd40k .martial-option input[type="number"] {
+  width: 3rem;
+}
+
+.dtd40k .attack-card-extra .martial-card {
+  border-left: 2px solid var(--dtd-accent);
+  padding-left: 0.4rem;
+  margin: 0.3rem 0;
 }

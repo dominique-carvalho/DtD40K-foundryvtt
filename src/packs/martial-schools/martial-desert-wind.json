@@ -1,0 +1,152 @@
+{
+  "name": "Desert Wind",
+  "type": "martialSchool",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A mobile, fiery style of rapid strikes, charges and footwork, traditionally tied to Syrneth weapons.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 263
+    },
+    "key": "desertWind",
+    "kind": "sword",
+    "keySkill": "athletics",
+    "weaponGroup": "Syrneth",
+    "summary": "A mobile, fiery style of rapid strikes, charges and footwork, traditionally tied to Syrneth weapons.",
+    "entries": [
+      {
+        "id": "weaponSyrneth",
+        "rank": 1,
+        "type": "weapon",
+        "name": "Weapon (Syrneth)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attack must be made with a Syrneth weapon.",
+        "automation": {
+          "requires": {
+            "weaponGroup": "Syrneth"
+          }
+        }
+      },
+      {
+        "id": "actionMultipleAttacks",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Multiple Attacks)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The Multiple Attacks action may be the base; only the first attack of the sequence gets the Advantages.",
+        "automation": {
+          "unlocksAction": "multipleAttacks"
+        }
+      },
+      {
+        "id": "emptyHand",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Empty Hand",
+        "cost": -2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Strength is not added to the weapon's damage.",
+        "automation": {
+          "noStrength": true
+        }
+      },
+      {
+        "id": "blisteringFlourish",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Blistering Flourish",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "On a hit, the target is dazed one round per raise on the attack.",
+        "automation": {
+          "onHit": [
+            {
+              "condition": "dazed",
+              "rounds": "perRaise"
+            }
+          ]
+        }
+      },
+      {
+        "id": "skillAthletics",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Athletics)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Athletics against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "athletics"
+          }
+        }
+      },
+      {
+        "id": "burningBlade",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Burning Blade",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The attack gains Incendiary.",
+        "automation": {
+          "quality": {
+            "key": "incendiary"
+          }
+        }
+      },
+      {
+        "id": "masteryZephyrDance",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Mastery (Zephyr Dance)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Permanent immunity to fire effects.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "leapingFlame",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Leaping Flame",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Teleport 5 m just before or just after the attack.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "holocaustCloak",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Holocaust Cloak",
+        "cost": 4,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Flames follow you until your coming turn: whoever closes to melee or steps into them tests Dexterity at TN 20 or suffers 2k2 Energy and catches fire.",
+        "automation": {
+          "text": true
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdM4593c5857a3a",
+  "_key": "!items!dtdM4593c5857a3a",
+  "folder": "dtdMFd04e0d91db2"
+}

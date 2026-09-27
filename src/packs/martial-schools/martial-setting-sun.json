@@ -1,0 +1,163 @@
+{
+  "name": "Setting Sun",
+  "type": "martialSchool",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>An unarmed style that turns the enemy's strength and speed against them.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 267
+    },
+    "key": "settingSun",
+    "kind": "sword",
+    "keySkill": "deceive",
+    "weaponGroup": "Unarmed",
+    "summary": "An unarmed style that turns the enemy's strength and speed against them.",
+    "entries": [
+      {
+        "id": "weaponBrawl",
+        "rank": 1,
+        "type": "weapon",
+        "name": "Weapon (Brawl)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attack must be made unarmed (Unarmed weapon or attack).",
+        "automation": {
+          "requires": {
+            "weaponGroup": "Unarmed"
+          }
+        }
+      },
+      {
+        "id": "actionFightDefensively",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Fight Defensively)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attacks may use the Fight Defensively action.",
+        "automation": {
+          "unlocksAction": "fightDefensively"
+        }
+      },
+      {
+        "id": "eaglesClaw",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Eagle's Claw",
+        "cost": -2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Usable only while holding no weapon.",
+        "automation": {
+          "requires": {
+            "noWeapon": true
+          }
+        }
+      },
+      {
+        "id": "knockoutBlow",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Knockout Blow",
+        "cost": 2,
+        "perPoint": true,
+        "variableCost": [],
+        "effect": "Anyone hit gains a fatigue level even if no HP are lost.",
+        "automation": {
+          "onHit": [
+            {
+              "fatigue": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "skillDeceive",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Deceive)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Deceive against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "deceive"
+          }
+        }
+      },
+      {
+        "id": "distractionMethod",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Distraction Method",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Whoever takes damage rolls every test at -1k0 up to your coming turn.",
+        "automation": {
+          "onHit": [
+            {
+              "changes": [
+                {
+                  "key": "system.modifiers.rolls.all.rolled",
+                  "value": -1
+                }
+              ],
+              "untilNextTurn": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "masteryWindStep",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Mastery (Wind Step)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Permanent free raise on initiative.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "shockingBulletFist",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Shocking Bullet Fist",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The attack gains Shocking.",
+        "automation": {
+          "quality": {
+            "key": "shocking"
+          }
+        }
+      },
+      {
+        "id": "foolsStrike",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Fool's Strike",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Attack with the opponent's own weapon, using its base damage and harmful properties.",
+        "automation": {
+          "text": true
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdM80a3b33b6f9b",
+  "_key": "!items!dtdM80a3b33b6f9b",
+  "folder": "dtdMFd04e0d91db2"
+}

@@ -1,0 +1,166 @@
+{
+  "name": "Stone Dragon",
+  "type": "martialSchool",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A relentless, earth-rooted style of overwhelming force with two-handed weapons.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 269
+    },
+    "key": "stoneDragon",
+    "kind": "sword",
+    "keySkill": "intimidation",
+    "weaponGroup": "Two Handed",
+    "summary": "A relentless, earth-rooted style of overwhelming force with two-handed weapons.",
+    "entries": [
+      {
+        "id": "weaponTwoHanded",
+        "rank": 1,
+        "type": "weapon",
+        "name": "Weapon (Two Handed)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attack must be made with a Two Handed weapon.",
+        "automation": {
+          "requires": {
+            "weaponGroup": "Two Handed"
+          }
+        }
+      },
+      {
+        "id": "actionCalledShot",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Called Shot)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attacks may use the Called Shot action.",
+        "automation": {
+          "unlocksAction": "calledShot"
+        }
+      },
+      {
+        "id": "weightOfTheMountain",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Weight of the Mountain",
+        "cost": -2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Using the attack costs you a fatigue level.",
+        "automation": {
+          "self": [
+            {
+              "fatigue": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "footTrappingBlow",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Foot-Trapping Blow",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The attack gains Snare.",
+        "automation": {
+          "quality": {
+            "key": "snare"
+          }
+        }
+      },
+      {
+        "id": "skillIntimidate",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Intimidate)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Intimidate against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "intimidation"
+          }
+        }
+      },
+      {
+        "id": "stoneSkinConcentration",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Stone Skin Concentration",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Gain 5 armor until the start of your next turn.",
+        "automation": {
+          "self": [
+            {
+              "changes": [
+                {
+                  "key": "system.modifiers.armor.apAll",
+                  "value": 5
+                }
+              ],
+              "untilNextTurn": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "masteryStrengthOfGranite",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Mastery (Strength of Granite)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "+1 Resilience while standing on solid earth or rock.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "fellingGiantsBlow",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Felling Giants Blow",
+        "cost": 4,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Target's Resilience counts as 2 lower (min 1) for HP loss from this attack.",
+        "automation": {
+          "resolve": {
+            "resilienceMod": -2
+          }
+        }
+      },
+      {
+        "id": "earthShatteringAttack",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Earth Shattering Attack",
+        "cost": 1,
+        "perPoint": true,
+        "variableCost": [],
+        "effect": "Attack gains Blast (X), X = 2 x number of purchases.",
+        "automation": {
+          "quality": {
+            "key": "blast",
+            "valuePerCount": 2
+          }
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdM768439e37d5f",
+  "_key": "!items!dtdM768439e37d5f",
+  "folder": "dtdMFd04e0d91db2"
+}

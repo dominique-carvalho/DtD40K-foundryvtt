@@ -11,7 +11,8 @@
       "weapon": "Weapon",
       "armor": "Armor",
       "gear": "Gear",
-      "spell": "Spell"
+      "spell": "Spell",
+      "martialSchool": "Martial School"
     }
   },
   "DTD": {
@@ -122,7 +123,8 @@
         "class": "Class & XP",
         "equipment": "Equipment",
         "combat": "Combat",
-        "magic": "Magic"
+        "magic": "Magic",
+        "martial": "Martial"
       },
       "SocialInitiative": "Social Initiative",
       "Fatigue": "Fatigue",
@@ -133,7 +135,8 @@
       "Class": "DtD Class Sheet",
       "ModeAdvance": "Advance",
       "Equipment": "DtD Equipment Sheet",
-      "Spell": "DtD Spell Sheet"
+      "Spell": "DtD Spell Sheet",
+      "MartialSchool": "DtD Martial School Sheet"
     },
     "Roll": {
       "Success": "Success",
@@ -1300,6 +1303,103 @@
       "SpellDamage": "spell: Aura instead of armor",
       "Sustaining": "Sustaining {spell}: the concentration action is spent.",
       "SustainEnds": "{spell} ends: no action left to sustain it."
+    },
+    "Martial": {
+      "School": {
+        "desertWind": "Desert Wind",
+        "devotedSpirit": "Devoted Spirit",
+        "diamondMind": "Diamond Mind",
+        "ironHeart": "Iron Heart",
+        "settingSun": "Setting Sun",
+        "shadowHand": "Shadow Hand",
+        "stoneDragon": "Stone Dragon",
+        "tigerClaw": "Tiger Claw",
+        "whiteRaven": "White Raven",
+        "clayPigeon": "Clay Pigeon",
+        "crisisZone": "Crisis Zone",
+        "elementalGearbolt": "Elemental Gearbolt",
+        "pointBlank": "Point Blank",
+        "silentScope": "Silent Scope",
+        "tinStar": "Tin Star"
+      },
+      "Kind": {
+        "sword": "Sword School",
+        "gunKata": "Gun Kata"
+      },
+      "EntryType": {
+        "action": "Action",
+        "weapon": "Weapon",
+        "flaw": "School flaw",
+        "skill": "Skill",
+        "advantage": "Advantage",
+        "mastery": "Mastery"
+      },
+      "Rank": {
+        "1": "Apprentice",
+        "2": "Initiate",
+        "3": "Journeyman",
+        "4": "Master",
+        "5": "Grandmaster"
+      },
+      "KeySkill": "Key skill",
+      "WeaponGroup": "Weapon group",
+      "TextOnlyHint": "Not automated: shown as text on the card.",
+      "Budget": {
+        "noLevel": "No Martial Adept or Gunslinger Level for this kind of attack.",
+        "empty": "Choose at least one Advantage.",
+        "overCap": "Advantages cannot pass twice the level ({level}): {missing} point(s) too many.",
+        "needRestrictions": "Above level {level}, each Advantage point needs a point of Restrictions: {missing} missing."
+      },
+      "Blocked": {
+        "notMelee": "Special Attacks need a melee weapon or an unarmed attack.",
+        "weapon": "{name}: wrong weapon.",
+        "target": "{name}: the target is not unaware or helpless.",
+        "hp": "{name}: less than half the HP lost.",
+        "cooldown": "{name}: used in the previous round.",
+        "perScene": "{name}: already used in this scene."
+      },
+      "AttackKind": {
+        "special": "Special Attack",
+        "trick": "Trick Shot"
+      },
+      "Save": "Save attack",
+      "Delete": "Delete attack",
+      "DeleteConfirm": "Delete {name}? The XP stays spent (undo the purchase in the XP log to get it back).",
+      "CannotUse": "{name} cannot be used now. {reasons}",
+      "Reminder": "Check {name} yourself.",
+      "Prepared": "{name} is ready ({action}): the next attack gets its Advantages.",
+      "SkillTest": "{name}: skill Restriction",
+      "SkillFailed": "{name} fails: the skill Test did not beat the Static Defense.",
+      "FatigueNote": "+{n} Fatigue",
+      "HpNote": "−{n} HP",
+      "EffectsApplied": "{name}: {effects}.",
+      "AreaNote": "Blast or Flame: the Advantages affect only the target closest to the source.",
+      "MissNote": "Missed: the attacker falls Prone.",
+      "ApplyEffects": "Apply effects",
+      "Universal": "Universal",
+      "BudgetLine": "Advantages {advantages} (level {level}, max {max}) · Restrictions {restrictions} · {cost} XP",
+      "BuilderTitle": "Build a {kind}",
+      "NeedName": "The attack needs a name.",
+      "AttackName": "Name",
+      "BaseAction": "Base action",
+      "Advantages": "Advantages",
+      "Restrictions": "Restrictions",
+      "Restriction": "Restriction",
+      "MissingEntries": "Uses entries the character no longer has.",
+      "AdeptLevel": "Martial Adept Level",
+      "GunslingerLevel": "Gunslinger Level",
+      "NewScene": "New scene",
+      "NewSceneHint": "Last Resort attacks become available again.",
+      "TogglePassive": "Switch the passive on or off",
+      "EmptyHint": "Buy Sword School or Gun Kata ranks in Advance mode.",
+      "Attacks": "Special Attacks and Trick Shots",
+      "Invalid": "Invalid",
+      "Ready": "Ready",
+      "UsedScene": "Used this scene",
+      "Use": "Use",
+      "UsePrepared": "Prepared attack",
+      "Edit": "Edit attack",
+      "Universals": "Universal Advantages and Restrictions"
     }
   }
 }

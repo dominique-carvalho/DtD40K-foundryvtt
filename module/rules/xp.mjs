@@ -5,18 +5,21 @@
  * Source: DtD 7.7a pp. 15–16 (costs), p. 106 (leveling and Free Study), p. 179 (racial feats);
  * specs/006-classes-xp/contracts/rules-api.md.
  */
-import { FREE_STUDY_MULTIPLIER, MAGIC_XP, XP_COSTS } from "../config.mjs";
+import { FREE_STUDY_MULTIPLIER, MAGIC_XP, MARTIAL_SCHOOLS, MARTIAL_XP, XP_COSTS } from "../config.mjs";
 import { classProgress, matchesListFeat } from "./class.mjs";
 
 /**
  * Cost of one advance.
- * @param {"characteristic"|"skill"|"feat"|"asset"|"powerStat"|"school"|"combo"} kind
- * @param {number} from  current value (skills: 0 = new skill; schools: current rank; combos: sum of spell levels)
+ * @param {"characteristic"|"skill"|"feat"|"asset"|"powerStat"|"school"|"combo"|"martial"|"specialAttack"} kind
+ * @param {number} from  current value (skills: 0 = new skill; schools: current rank; combos: sum of spell levels;
+ *   Special Attacks: style points added)
  * @returns {number}
  */
 export function advanceCost(kind, from) {
   // Magic Schools: new 200, then 100 × current rank; Spell Combos 50 × levels (spec 009, p. 16, p. 229).
-  if (kind === "school") return from === 0 ? MAGIC_XP.newSchool : MAGIC_XP.perRank * from;
+  // Sword Schools and Gun Kata cost as Magic Schools (p. 16); Special Attacks 50 per style point (p. 261).
+  if (kind === "school" || kind === "martial") return from === 0 ? MAGIC_XP.newSchool : MAGIC_XP.perRank * from;
+  if (kind === "specialAttack") return MARTIAL_XP.perStylePoint * from;
   if (kind === "combo") return MAGIC_XP.comboPerLevel * from;
   if (kind === "skill") return from === 0 ? XP_COSTS.newSkill : XP_COSTS.skill;
   return XP_COSTS[kind] ?? 0;
@@ -43,7 +46,8 @@ const listed = (cls, kind, key) => (kind === "characteristic"
 export function canAdvance({ kind, key, feat, classes, race, owned, level, from }) {
   if (kind === "powerStat") return ok();
   // School ranks never exceed the character Level (p. 16).
-  if (kind === "school" && Number.isFinite(level) && (from ?? 0) + 1 > level) return no("atCap");
+  if ((kind === "school" || kind === "martial") && Number.isFinite(level) && (from ?? 0) + 1 > level) return no("atCap");
+  if (kind === "specialAttack") return ok();
   if (kind === "feat" && feat?.system.category === "racialFeat" && feat.system.prerequisites.race === race?.name) return ok();
   if (!classes.length) return no("noClass");
 
@@ -62,6 +66,15 @@ export function canAdvance({ kind, key, feat, classes, race, owned, level, from 
     return onList ? ok() : no(current ? "offList" : "notOnList");
   }
   if (kind === "combo") return ok();
+
+  // Sword Schools and Gun Kata of the class lists (spec 010), matched by name.
+  if (kind === "martial") {
+    const lists = current ? [current] : completed;
+    const name = MARTIAL_SCHOOLS[key]?.name.toLowerCase();
+    const listKey = MARTIAL_SCHOOLS[key]?.kind === "gunKata" ? "gunKata" : "swordSchools";
+    const onList = lists.some((cls) => (cls.system[listKey] ?? []).some((entry) => entry.toLowerCase() === name));
+    return onList ? ok() : no(current ? "offList" : "notOnList");
+  }
 
   if (kind === "feat") {
     const lists = current ? [current] : completed;
@@ -100,7 +113,8 @@ const PATHS = {
   characteristic: (key) => `system.characteristics.${key}.value`,
   skill: (key) => `system.skills.${key}.value`,
   powerStat: () => "powerStat",
-  school: (key) => `system.magic.schools.${key}.value`
+  school: (key) => `system.magic.schools.${key}.value`,
+  martial: (key) => `system.martial.schools.${key}.value`
 };
 
 /**

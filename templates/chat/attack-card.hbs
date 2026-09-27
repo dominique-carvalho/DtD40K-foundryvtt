@@ -4,6 +4,14 @@
   <p class="attack-location"><i class="fa-solid fa-location-crosshairs" inert></i> {{localize "DTD.Attack.Location"}}: <b>{{location}}</b> <span class="hint">{{#if called}}({{localize "DTD.Attack.Called"}}){{else}}(d10 {{d10}}){{/if}}</span></p>
   {{#if hits}}<p class="attack-hits">{{localize "DTD.Attack.Hits" hits=hits}}</p>{{/if}}
   {{#if jammed}}<p class="notification warning">{{localize "DTD.Attack.Jammed"}}{{#if overheats}} {{localize "DTD.Attack.Overheats"}}{{/if}}</p>{{/if}}
+  {{#if special}}
+  <div class="martial-card">
+    <p class="roll-card-note"><i class="fa-solid fa-khanda" inert></i> <b>{{special.name}}</b>{{#each special.qualities as |q|}} · <span class="tag">{{q}}</span>{{/each}}</p>
+    {{#if special.areaNote}}<p class="hint">{{localize "DTD.Martial.AreaNote"}}</p>{{/if}}
+    {{#if special.missNote}}<p class="hint">{{localize "DTD.Martial.MissNote"}}</p>{{/if}}
+    {{#each special.texts as |t|}}<p class="martial-text"><b>{{t.name}}:</b> {{t.effect}}</p>{{/each}}
+  </div>
+  {{/if}}
   {{#if textQualities.length}}
   <p class="quality-tags">{{#each textQualities as |q|}}<span class="tag" data-tooltip="{{q.hint}}">{{q.label}}</span>{{/each}}</p>
   {{/if}}
@@ -12,6 +20,9 @@
     <button type="button" data-dtd-action="dodge"><i class="fa-solid fa-person-running" inert></i> {{localize "DTD.Combat.Dodge"}}</button>
     {{#if melee}}<button type="button" data-dtd-action="parry"><i class="fa-solid fa-shield-halved" inert></i> {{localize "DTD.Combat.Parry"}}</button>{{/if}}
   </div>
+  {{/if}}
+  {{#if canApplyEffects}}
+  <button type="button" data-dtd-action="martialEffects"><i class="fa-solid fa-wand-magic-sparkles" inert></i> {{localize "DTD.Martial.ApplyEffects"}}</button>
   {{/if}}
   {{#if canDamage}}
   <button type="button" class="attack-damage-button" data-dtd-action="rollDamage"><i class="fa-solid fa-burst" inert></i> {{localize "DTD.Attack.RollDamage"}}</button>

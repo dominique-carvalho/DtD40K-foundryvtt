@@ -1,0 +1,17 @@
+<li class="martial-option">
+  <span class="martial-option-pick">
+    {{#if o.perPoint}}
+    <input type="number" name="{{o.prefix}}-{{o.index}}" value="{{o.count}}" min="0" max="10" step="1">
+    {{else}}
+    <input type="checkbox" name="{{o.prefix}}-{{o.index}}" {{#if o.checked}}checked{{/if}}>
+    {{/if}}
+  </span>
+  <span class="martial-option-name" data-tooltip="{{o.effect}}"><b>{{o.name}}</b> <span class="hint">{{o.source}}</span></span>
+  <span class="martial-cost">
+    {{#if o.variable}}
+    <select name="{{o.prefix}}-{{o.index}}-choice">{{#each o.variable as |c|}}<option value="{{c.value}}" {{#if c.selected}}selected{{/if}}>{{c.value}}</option>{{/each}}</select>
+    {{else if o.free}}
+    X <input type="number" name="{{o.prefix}}-{{o.index}}-choice" value="{{o.choice}}" min="0" max="10" step="1">
+    {{else}}{{o.cost}}{{/if}}
+  </span>
+</li>

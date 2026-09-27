@@ -1,0 +1,16 @@
+{
+  "_id": "dtdMFd0aa488a7d9",
+  "_key": "!folders!dtdMFd0aa488a7d9",
+  "name": "Gun Kata",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 20000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "martialFolder": "gunKata"
+    }
+  }
+}

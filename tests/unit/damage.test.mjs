@@ -53,6 +53,24 @@ describe("resolveDamage (pp. 431–437)", () => {
   });
 });
 
+describe("resolveDamage with Special Attacks (spec 010, research R5)", () => {
+  it("ignores the armor (Demonic Weapon Attack) and doubles it (Hollow Point)", () => {
+    expect(resolveDamage({ ...base, total: 12, ignoreArmor: true })).toMatchObject({ effective: 12, wounds: 3 });
+    expect(resolveDamage({ ...base, total: 20, pen: 4, armorMultiplier: 2 })).toMatchObject({ effective: 10 });
+  });
+
+  it("lowers the Resilience (Felling Giants Blow, min 1) and halves it rounding up", () => {
+    expect(resolveDamage({ ...base, total: 15, resilienceMod: -2 })).toMatchObject({ effective: 8, wounds: 4 });
+    expect(resolveDamage({ ...base, total: 15, resilience: 2, resilienceMod: -2 })).toMatchObject({ wounds: 8 });
+    expect(resolveDamage({ ...base, total: 15, resilience: 5, resilienceMultiplier: 0.5 })).toMatchObject({ wounds: 2 });
+  });
+
+  it("never turns wounds into Critical Damage with noCritical", () => {
+    const result = resolveDamage({ ...base, armor: { ...armor, head: 0 }, location: "head", total: 20, hp: 2, noCritical: true });
+    expect(result).toMatchObject({ wounds: 5, hpLoss: 2, criticalGain: 0, critical: 0, row: 0 });
+  });
+});
+
 describe("critical tables (pp. 437–443)", () => {
   it("maps the damage type and location, fire to Energy/Body", () => {
     expect(criticalTableKey("R", "leftArm")).toEqual({ type: "rending", location: "arm" });

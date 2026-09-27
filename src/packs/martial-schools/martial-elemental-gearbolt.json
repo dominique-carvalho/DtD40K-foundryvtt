@@ -1,0 +1,157 @@
+{
+  "name": "Elemental Gearbolt",
+  "type": "martialSchool",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>The oldest Gun Kata, fusing magic with archery and later firearms.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 276
+    },
+    "key": "elementalGearbolt",
+    "kind": "gunKata",
+    "keySkill": "arcana",
+    "weaponGroup": "",
+    "summary": "The oldest Gun Kata, fusing magic with archery and later firearms.",
+    "entries": [
+      {
+        "id": "warpWeapons",
+        "rank": 1,
+        "type": "mastery",
+        "name": "Warp Weapons",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Ballistics attacks may deal Impact, Rending, Explosive or Energy damage, as you choose.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "actionMultipleAttacks",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Multiple Attacks)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The Multiple Attacks action may be the base; only the first attack of the sequence gets the Advantages.",
+        "automation": {
+          "unlocksAction": "multipleAttacks"
+        }
+      },
+      {
+        "id": "rainOfFeatheredDeath",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Rain of Feathered Death",
+        "cost": -2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Primitive weapons only.",
+        "automation": {
+          "requires": {
+            "weaponGroup": "Primitive"
+          }
+        }
+      },
+      {
+        "id": "twiceBoundSpirits",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Twice Bound Spirits",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Each 1 on the damage dice halves total damage; each 10 doubles it.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "skillArcana",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Arcana)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Arcana against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "arcana"
+          }
+        }
+      },
+      {
+        "id": "exitWoundKata",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Exit Wound Kata",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [
+          0
+        ],
+        "effect": "No damage roll: a target hit loses X HP (cost X).",
+        "automation": {
+          "onHit": [
+            {
+              "hpLoss": "choice"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hollowPoint",
+        "rank": 4,
+        "type": "flaw",
+        "name": "Hollow Point",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The target's AP counts double against this shot.",
+        "automation": {
+          "resolve": {
+            "armorMultiplier": 2
+          }
+        }
+      },
+      {
+        "id": "sexPistols",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Sex Pistols",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "On a miss you may reroll the attack once.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "curseOfRedRain",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Curse of Red Rain",
+        "cost": 3,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Targets hit automatically suffer Blood Loss.",
+        "automation": {
+          "onHit": [
+            {
+              "condition": "bloodLoss"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdMaeca34f00eda",
+  "_key": "!items!dtdMaeca34f00eda",
+  "folder": "dtdMFd0aa488a7d9"
+}

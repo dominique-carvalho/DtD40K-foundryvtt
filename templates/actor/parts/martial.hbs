@@ -1,0 +1,66 @@
+<section class="tab martial-tab {{tabs.martial.cssClass}}" data-group="primary" data-tab="martial">
+  {{#with martial as |m|}}
+  <p class="combat-status-line">
+    <span>{{localize "DTD.Martial.AdeptLevel"}}: <b>{{m.levels.adeptLevel}}</b></span>
+    <span>{{localize "DTD.Martial.GunslingerLevel"}}: <b>{{m.levels.gunslingerLevel}}</b></span>
+    {{#if @root.isGM}}<a class="pool-button" data-action="martialNewScene" data-tooltip="{{localize "DTD.Martial.NewSceneHint"}}"><i class="fa-solid fa-rotate" inert></i> {{localize "DTD.Martial.NewScene"}}</a>{{/if}}
+  </p>
+
+  {{#each m.schools as |s|}}
+  <section class="martial-school-row">
+    <h2 class="section-title">{{s.label}} <span class="hint">({{s.skill}}{{#if s.weaponGroup}} · {{s.weaponGroup}}{{/if}})</span> · <b>{{s.value}}</b>
+      {{> "systems/dtd40k/templates/actor/parts/advance-button.hbs" advance=s.advance action="advanceMartial" key=s.key}}
+    </h2>
+    {{#if s.unlocked.length}}
+    <ul class="martial-entries">
+      {{#each s.unlocked as |e|}}
+      <li class="martial-entry martial-entry-{{e.type}}">
+        <span class="martial-entry-head"><span class="hint">{{e.rank}}</span> <b>{{e.name}}</b> <span class="tag">{{e.typeLabel}}</span> <span class="martial-cost">{{e.cost}}</span>
+          {{#if e.effectId}}{{#if @root.isGM}}<a data-action="toggleMartialPassive" data-effect-id="{{e.effectId}}" data-tooltip="{{localize "DTD.Martial.TogglePassive"}}"><i class="fa-solid {{#if e.disabled}}fa-toggle-off{{else}}fa-toggle-on{{/if}}" inert></i></a>{{/if}}{{/if}}
+        </span>
+        <span class="martial-entry-effect">{{e.effect}}</span>
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+  </section>
+  {{/each}}
+  {{#if m.empty}}<p class="race-drop-hint"><i class="fa-solid fa-khanda" inert></i> {{localize "DTD.Martial.EmptyHint"}}</p>{{/if}}
+
+  <section class="martial-attacks">
+    <h2 class="section-title">{{localize "DTD.Martial.Attacks"}}
+      {{#if @root.canEditRace}}
+      {{#if m.canSpecial}}<a class="pool-button" data-action="newMartialAttack" data-kind="special"><i class="fa-solid fa-plus" inert></i> {{localize "DTD.Martial.AttackKind.special"}}</a>{{/if}}
+      {{#if m.canTrick}}<a class="pool-button" data-action="newMartialAttack" data-kind="trick"><i class="fa-solid fa-plus" inert></i> {{localize "DTD.Martial.AttackKind.trick"}}</a>{{/if}}
+      {{/if}}
+    </h2>
+    <ul class="equipment-list">
+      {{#each m.attacks as |a|}}
+      <li class="equipment-row martial-attack{{#unless a.valid}} invalid{{/unless}}">
+        <span class="equipment-name"><b>{{a.name}}</b> <span class="tag">{{a.kindLabel}}</span>
+          <span class="hint">{{a.advantages}}/{{a.restrictions}} · {{a.picks}}</span>
+          {{#unless a.valid}}<span class="feat-badge warning" data-tooltip="{{a.invalidReason}}">{{localize "DTD.Martial.Invalid"}}</span>{{/unless}}
+          {{#if a.ready}}<span class="feat-badge granted">{{localize "DTD.Martial.Ready"}}</span>{{/if}}
+          {{#if a.usedScene}}<span class="feat-badge warning">{{localize "DTD.Martial.UsedScene"}}</span>{{/if}}
+        </span>
+        {{#if @root.canEditRace}}
+        <select class="martial-weapon-select" data-attack-id="{{a.id}}">{{#each m.weapons as |w|}}<option value="{{w.id}}">{{w.name}}</option>{{/each}}</select>
+        <a class="pool-button" data-action="useMartialAttack" data-id="{{a.id}}"><i class="fa-solid fa-khanda" inert></i> {{localize "DTD.Martial.Use"}}</a>
+        {{#if a.ready}}<a class="pool-button" data-action="useMartialAttack" data-id="{{a.id}}" data-prepared="true"><i class="fa-solid fa-bolt" inert></i> {{localize "DTD.Martial.UsePrepared"}}</a>{{/if}}
+        <a data-action="editMartialAttack" data-id="{{a.id}}" data-tooltip="{{localize "DTD.Martial.Edit"}}"><i class="fa-solid fa-pen" inert></i></a>
+        <a class="asset-remove" data-action="deleteMartialAttack" data-id="{{a.id}}" data-tooltip="{{localize "DTD.Martial.Delete"}}"><i class="fa-solid fa-trash" inert></i></a>
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <details class="martial-universals">
+    <summary>{{localize "DTD.Martial.Universals"}}</summary>
+    <ul class="martial-entries">
+      {{#each m.universals.advantages as |u|}}<li class="martial-entry"><span class="martial-entry-head"><b>{{u.name}}</b> <span class="tag">{{localize "DTD.Martial.EntryType.advantage"}}</span> <span class="martial-cost">{{u.costText}}</span></span><span class="martial-entry-effect">{{u.effect}}</span></li>{{/each}}
+      {{#each m.universals.restrictions as |u|}}<li class="martial-entry"><span class="martial-entry-head"><b>{{u.name}}</b> <span class="tag">{{localize "DTD.Martial.Restriction"}}</span> <span class="martial-cost">{{u.costText}}</span></span><span class="martial-entry-effect">{{u.effect}}</span></li>{{/each}}
+    </ul>
+  </details>
+  {{/with}}
+</section>

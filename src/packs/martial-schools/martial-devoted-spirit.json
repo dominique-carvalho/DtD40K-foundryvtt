@@ -1,0 +1,160 @@
+{
+  "name": "Devoted Spirit",
+  "type": "martialSchool",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A zealous, faith-driven style that punishes foes of the cause and sustains allies, using flails.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 264
+    },
+    "key": "devotedSpirit",
+    "kind": "sword",
+    "keySkill": "medicae",
+    "weaponGroup": "Flail",
+    "summary": "A zealous, faith-driven style that punishes foes of the cause and sustains allies, using flails.",
+    "entries": [
+      {
+        "id": "weaponFlail",
+        "rank": 1,
+        "type": "weapon",
+        "name": "Weapon (Flail)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attack must be made with a Flail weapon.",
+        "automation": {
+          "requires": {
+            "weaponGroup": "Flail"
+          }
+        }
+      },
+      {
+        "id": "actionAidAnother",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Aid Another)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attacks may use Aid Another; if aiding someone's attack, the attack-related benefits transfer to that aided attack.",
+        "automation": {
+          "unlocksAction": "aidAnother",
+          "prepares": true
+        }
+      },
+      {
+        "id": "devotion",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Devotion",
+        "cost": -2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "An Alignment Check (with +2) is made as part of the attack.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "revitalizingStrike",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Revitalizing Strike",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [
+          1,
+          3
+        ],
+        "effect": "If the attack wounds, an ally within 10 m regains 1 HP (2 HP at the 3-point cost).",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "skillMedicae",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Medicae)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Medicae against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "medicae"
+          }
+        }
+      },
+      {
+        "id": "foehammer",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Foehammer",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Exploding damage dice add two extra dice per explosion instead of one.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "masteryOxBodyTechnique",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Mastery (Ox Body Technique)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Maximum Hit Points +4.",
+        "automation": {
+          "changes": [
+            {
+              "key": "system.modifiers.hpMax",
+              "value": 4
+            }
+          ]
+        }
+      },
+      {
+        "id": "coveringThePhalanx",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Covering The Phalanx",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Up to your coming turn, foes attacking allies beside you take two checks.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "castigatingBlow",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Castigating Blow",
+        "cost": 3,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "On a head or gizzards hit, the target's Resilience is halved against this damage (after other reductions).",
+        "automation": {
+          "resolve": {
+            "resilienceMultiplier": 0.5,
+            "locations": [
+              "head",
+              "gizzards"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdM5cd080fa1cd3",
+  "_key": "!items!dtdM5cd080fa1cd3",
+  "folder": "dtdMFd04e0d91db2"
+}

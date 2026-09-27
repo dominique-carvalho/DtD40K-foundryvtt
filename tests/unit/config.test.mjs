@@ -153,7 +153,7 @@ describe("class and XP constants (006)", () => {
     expect(DTD.XP_COSTS).toEqual({ characteristic: 200, newSkill: 100, skill: 50, feat: 100, asset: 100, powerStat: 300 });
     expect(DTD.STARTING_XP).toBe(600);
     expect(DTD.FREE_STUDY_MULTIPLIER).toBe(2);
-    expect(DTD.XP_KINDS).toEqual(["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo"]);
+    expect(DTD.XP_KINDS).toEqual(["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo", "martial", "specialAttack"]);
   });
 });
 
@@ -252,5 +252,30 @@ describe("magic constants (009)", () => {
     expect(DTD.CAST_STRENGTHS).toEqual(["fettered", "unfettered", "push"]);
     expect(DTD.MAX_PUSH).toEqual({ sanctioned: 3, unsanctioned: 4 });
     expect(DTD.MAGIC_XP).toEqual({ newSchool: 200, perRank: 100, comboPerLevel: 50 });
+  });
+});
+
+describe("martial constants (010)", () => {
+  it("lists the nine Sword Schools and six Gun Kata with their key skill (pp. 263–279)", () => {
+    const schools = DTD.MARTIAL_SCHOOLS;
+    expect(Object.keys(schools)).toHaveLength(15);
+    expect(Object.values(schools).filter((s) => s.kind === "sword")).toHaveLength(9);
+    expect(Object.values(schools).filter((s) => s.kind === "gunKata")).toHaveLength(6);
+    expect(Object.fromEntries(Object.entries(schools).map(([k, v]) => [k, v.skill]))).toEqual({
+      desertWind: "athletics", devotedSpirit: "medicae", diamondMind: "scrutiny", ironHeart: "perception",
+      settingSun: "deceive", shadowHand: "stealth", stoneDragon: "intimidation", tigerClaw: "acrobatics",
+      whiteRaven: "command", clayPigeon: "performer", crisisZone: "techUse", elementalGearbolt: "arcana",
+      pointBlank: "athletics", silentScope: "perception", tinStar: "scrutiny"
+    });
+    for (const [key, def] of Object.entries(schools)) {
+      expect(def.label).toBe(`DTD.Martial.School.${key}`);
+      expect(DTD.SKILLS[def.skill]).toBeDefined();
+    }
+    expect(schools.desertWind.name).toBe("Desert Wind");
+  });
+
+  it("lists entry types and the XP per style point", () => {
+    expect(DTD.MARTIAL_ENTRY_TYPES).toEqual(["action", "weapon", "flaw", "skill", "advantage", "mastery"]);
+    expect(DTD.MARTIAL_XP).toEqual({ perStylePoint: 50 });
   });
 });

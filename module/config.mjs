@@ -176,7 +176,7 @@ export const STARTING_XP = 600;
 export const FREE_STUDY_MULTIPLIER = 2;
 
 /** What an XP purchase can buy (schools, spells and backgrounds come with their own features). */
-export const XP_KINDS = ["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo"];
+export const XP_KINDS = ["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo", "martial", "specialAttack"];
 
 /** Generic 1-point resource spends (DtD 7.7a p. 65). */
 export const GENERIC_SPENDS = ["heal", "skill", "reaction", "stunned", "dazed"];
@@ -352,6 +352,26 @@ export const MAX_PUSH = { sanctioned: 3, unsanctioned: 4 };
 /** XP of Magic Schools and Spell Combos (p. 16, p. 229): new school 200, then 100 × current rank; combo 50 × levels. */
 export const MAGIC_XP = { newSchool: 200, perRank: 100, comboPerLevel: 50 };
 
+/* ---------- Sword Schools and Gun Kata (spec 010, DtD 7.7a ch. IX–X, pp. 260–279) ---------- */
+
+/** The nine Sword Schools (pp. 263–271) and six Gun Kata (pp. 274–279) with their key skill. */
+export const MARTIAL_SCHOOLS = Object.fromEntries([
+  ["desertWind", "Desert Wind", "sword", "athletics"], ["devotedSpirit", "Devoted Spirit", "sword", "medicae"],
+  ["diamondMind", "Diamond Mind", "sword", "scrutiny"], ["ironHeart", "Iron Heart", "sword", "perception"],
+  ["settingSun", "Setting Sun", "sword", "deceive"], ["shadowHand", "Shadow Hand", "sword", "stealth"],
+  ["stoneDragon", "Stone Dragon", "sword", "intimidation"], ["tigerClaw", "Tiger Claw", "sword", "acrobatics"],
+  ["whiteRaven", "White Raven", "sword", "command"], ["clayPigeon", "Clay Pigeon", "gunKata", "performer"],
+  ["crisisZone", "Crisis Zone", "gunKata", "techUse"], ["elementalGearbolt", "Elemental Gearbolt", "gunKata", "arcana"],
+  ["pointBlank", "Point Blank", "gunKata", "athletics"], ["silentScope", "Silent Scope", "gunKata", "perception"],
+  ["tinStar", "Tin Star", "gunKata", "scrutiny"]
+].map(([key, name, kind, skill]) => [key, { label: `DTD.Martial.School.${key}`, name, kind, skill }]));
+
+/** Kinds of school entries (p. 262): the unlocked action, the weapon, flaw and skill Restrictions, Advantages, Mastery. */
+export const MARTIAL_ENTRY_TYPES = ["action", "weapon", "flaw", "skill", "advantage", "mastery"];
+
+/** XP of Special Attacks and Trick Shots (p. 261, p. 273): 50 per style point of Advantages; schools cost as MAGIC_XP. */
+export const MARTIAL_XP = { perStylePoint: 50 };
+
 export const DTD = {
   GROUPS,
   CHARACTERISTICS,
@@ -408,5 +428,8 @@ export const DTD = {
   SPELL_DURATIONS,
   CAST_STRENGTHS,
   MAX_PUSH,
-  MAGIC_XP
+  MAGIC_XP,
+  MARTIAL_SCHOOLS,
+  MARTIAL_ENTRY_TYPES,
+  MARTIAL_XP
 };

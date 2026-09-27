@@ -1,0 +1,43 @@
+<div class="martial-school-body">
+  {{#if lockedPackHint}}
+  <p class="notification info locked-pack-hint"><i class="fa-solid fa-lock" inert></i> {{lockedPackHint}}</p>
+  {{/if}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}" {{#if editable}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if editable}}
+      <input class="item-name" type="text" name="name" value="{{item.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="item-name">{{item.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <span>{{kindLabel}}</span>
+        <label>{{localize "DTD.Martial.KeySkill"}} <b>{{skillLabel}}</b></label>
+        {{#if system.weaponGroup}}<label>{{localize "DTD.Martial.WeaponGroup"}} <b>{{system.weaponGroup}}</b></label>{{/if}}
+        <label>{{localize "DTD.Race.Page"}} <b>{{system.source.page}}</b></label>
+      </div>
+    </div>
+  </header>
+
+  <section class="spell-section">
+    {{#if editable}}
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.description}}}</div>{{/if}}
+  </section>
+
+  {{#each ranks as |r|}}
+  <section class="martial-rank">
+    <h3 class="section-title">{{r.rank}} · {{r.label}}</h3>
+    <ul class="martial-entries">
+      {{#each r.entries as |e|}}
+      <li class="martial-entry martial-entry-{{e.type}}">
+        <span class="martial-entry-head"><b>{{e.name}}</b> <span class="tag">{{e.typeLabel}}</span> <span class="martial-cost">{{e.cost}}</span>
+          {{#if e.textOnly}}<span class="hint" data-tooltip="{{localize "DTD.Martial.TextOnlyHint"}}"><i class="fa-solid fa-align-left" inert></i></span>{{/if}}
+        </span>
+        <span class="martial-entry-effect">{{e.effect}}</span>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/each}}
+</div>

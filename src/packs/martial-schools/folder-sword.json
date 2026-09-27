@@ -1,0 +1,16 @@
+{
+  "_id": "dtdMFd04e0d91db2",
+  "_key": "!folders!dtdMFd04e0d91db2",
+  "name": "Sword Schools",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 10000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "martialFolder": "sword"
+    }
+  }
+}

@@ -12,6 +12,8 @@ import { ArmorData } from "./module/data/armor-data.mjs";
 import { GearData } from "./module/data/gear-data.mjs";
 import { SpellData } from "./module/data/spell-data.mjs";
 import { SpellSheet } from "./module/apps/spell-sheet.mjs";
+import { MartialSchoolData } from "./module/data/martial-school-data.mjs";
+import { MartialSchoolSheet } from "./module/apps/martial-school-sheet.mjs";
 import { DtdActiveEffect } from "./module/documents/active-effect.mjs";
 import { rollDamage } from "./module/documents/attack-service.mjs";
 import { spendLiquid } from "./module/documents/acquisition-service.mjs";
@@ -20,6 +22,7 @@ import { applyDamage, undoDamage } from "./module/documents/damage-service.mjs";
 import { rollDefense } from "./module/documents/turn-service.mjs";
 import { resolveSocial } from "./module/documents/social-service.mjs";
 import { resistSpell, rollSpellDamage } from "./module/documents/magic-service.mjs";
+import { applyAttackEffects, newScene } from "./module/documents/martial-service.mjs";
 import { DtdActor } from "./module/documents/actor.mjs";
 import { DtdItem } from "./module/documents/item.mjs";
 import { CharacterSheet } from "./module/apps/character-sheet.mjs";
@@ -45,6 +48,7 @@ Hooks.once("init", () => {
   CONFIG.Item.dataModels.armor = ArmorData;
   CONFIG.Item.dataModels.gear = GearData;
   CONFIG.Item.dataModels.spell = SpellData;
+  CONFIG.Item.dataModels.martialSchool = MartialSchoolData;
   // Equipment effects apply only while the item is in use (spec 007, research R2).
   CONFIG.ActiveEffect.documentClass = DtdActiveEffect;
   // Combat order, turn limits and the conditions of the book (spec 008, research R3–R5).
@@ -101,6 +105,12 @@ Hooks.once("init", () => {
     label: "DTD.Sheet.Spell"
   });
 
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", MartialSchoolSheet, {
+    types: ["martialSchool"],
+    makeDefault: true,
+    label: "DTD.Sheet.MartialSchool"
+  });
+
   foundry.applications.handlebars.loadTemplates(CharacterSheet.PARTIALS);
 });
 
@@ -139,7 +149,9 @@ const CHAT_ACTIONS = {
   socialRefute: (message) => resolveSocial(message, "refute"),
   // Magic (spec 009): spell damage and resistance.
   spellDamage: (message) => rollSpellDamage(message),
-  resistSpell: (message) => resistSpell(message)
+  resistSpell: (message) => resistSpell(message),
+  // Sword Schools and Gun Kata (spec 010): effects of a Special Attack on the target.
+  martialEffects: (message) => applyAttackEffects(message)
 };
 Hooks.on("renderChatMessageHTML", (message, html) => {
   for (const button of html.querySelectorAll("[data-dtd-action]")) {
@@ -156,10 +168,16 @@ Hooks.once("ready", () => {
     const message = game.messages.get(payload.messageId);
     if (!message) return;
     if (action === "applyDamage") await applyDamage(message, payload.tokenUuids);
+    if (action === "martialEffects") await applyAttackEffects(message);
     if (action === "markSocial") await message.setFlag("dtd40k", "social", { ...message.getFlag("dtd40k", "social"), resolved: payload.resolved });
   });
 });
 Hooks.on("deleteCombat", refreshCombatants);
+// Last Resort (spec 010): once per scene; the end of a combat starts a new one.
+Hooks.on("deleteCombat", async (combat) => {
+  if (game.users.activeGM !== game.user) return;
+  for (const actor of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "character"))) await newScene(actor);
+});
 // The turn state lives on the Combatant (spec 008): refresh the open sheet when it changes.
 Hooks.on("updateCombatant", (combatant) => {
   if (combatant.actor?.sheet?.rendered) combatant.actor.sheet.render();

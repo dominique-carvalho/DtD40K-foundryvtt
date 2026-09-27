@@ -70,9 +70,10 @@ function weaponFor(actor, itemId) {
  * Use a combat action from the sheet (FR-006).
  * @param {Actor} actor
  * @param {string} key
- * @param {{weaponId?: string, as?: "half"|"full"}} [options]
+ * @param {{weaponId?: string, as?: "half"|"full", special?: object}} [options]
+ *   special: a Special Attack or Trick Shot made with this action (spec 010)
  */
-export async function useAction(actor, key, { weaponId, as } = {}) {
+export async function useAction(actor, key, { weaponId, as, special = null } = {}) {
   const action = COMBAT_ACTIONS.find((a) => a.key === key);
   if (!action || !actor.isOwner) return;
   const flags = combatFlags(actor.statuses);
@@ -93,13 +94,13 @@ export async function useAction(actor, key, { weaponId, as } = {}) {
     }
   }
   if (auto.reaction) return rollReaction(actor, auto.reaction);
-  if (auto.multiple) return multipleAttacks(actor, action);
+  if (auto.multiple) return multipleAttacks(actor, action, special);
   if (!(await takeAction(actor, action, { as: as ?? (auto.attack?.aim ? "half" : undefined) }))) return;
 
   if (auto.effect) await toggleCondition(actor, auto.effect, { active: true });
   if (auto.adds) await toggleCondition(actor, auto.adds, { active: true });
   if (auto.removes) await toggleCondition(actor, auto.removes, { active: false });
-  if (auto.attack && !auto.attack.aim) await rollAttack(actor, weaponFor(actor, weaponId), { action: auto.attack });
+  if (auto.attack && !auto.attack.aim) await rollAttack(actor, weaponFor(actor, weaponId), { action: auto.attack, special });
   if (auto.roll) {
     const message = auto.roll.skill
       ? await actor.rollSkill(auto.roll.skill, { tn: auto.roll.tn ?? 15 })
@@ -120,8 +121,9 @@ export async function useAction(actor, key, { weaponId, as } = {}) {
  * Attack 3 melee; Double Tap 2 shots); each attack after the first costs a reaction.
  * @param {Actor} actor
  * @param {object} action
+ * @param {object|null} [special]  a Special Attack: its Advantages go to the first attack only (p. 263)
  */
-async function multipleAttacks(actor, action) {
+async function multipleAttacks(actor, action, special = null) {
   const has = (name) => actor.items.some((item) => item.type === "feat" && item.name === name);
   const weapons = actor.items.filter((item) => item.type === "weapon" && item.system.equipped);
   let attacks = [];
@@ -144,7 +146,7 @@ async function multipleAttacks(actor, action) {
     if (!(await takeAction(actor, action))) return;
     if (!(await takeAction(actor, reactionAction, { count: attacks.length - 1 }))) return;
   }
-  const first = await rollAttack(actor, attacks[0], { penalty });
+  const first = await rollAttack(actor, attacks[0], { penalty, special });
   const preset = first?.getFlag("dtd40k", "attack")?.preset;
   if (!preset) return;
   for (const id of attacks.slice(1)) await rollAttack(actor, id, { preset, penalty });
@@ -246,6 +248,11 @@ export async function startOfTurn(combat, combatant) {
     return flags.untilTurnOf === combatant.id || (flags.expiresRound && combat.round >= flags.expiresRound);
   }).map((effect) => effect.id);
   if (expired.length) await actor.deleteEmbeddedDocuments("ActiveEffect", expired);
+  // Effects this combatant put on others "until your next turn" (Special Attacks, spec 010) end too.
+  for (const other of new Set(combat.combatants.map((c) => c.actor).filter((a) => a && a !== actor))) {
+    const ids = other.effects.filter((effect) => effect.flags?.dtd40k?.untilTurnOf === combatant.id).map((effect) => effect.id);
+    if (ids.length) await other.deleteEmbeddedDocuments("ActiveEffect", ids);
+  }
   if (actor.statuses.has("surprised") && combat.round === 1) {
     await ChatMessage.create({ content: `<p>${game.i18n.format("DTD.Combat.SurprisedSkip", { name: actor.name })}</p>` });
   } else if (combatFlags(actor.statuses).cannotAct) {

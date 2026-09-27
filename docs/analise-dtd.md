@@ -404,6 +404,14 @@ Fonte: 1.6 pp. 147–173; Book 2 pp. 73–82.
 
 ## 10. Sword Schools e Gun Kata
 
+**Na 7.7a** (cap. IX pp. 260–271 e cap. X pp. 272–279; implementado na feature `010-sword-schools`): 9 Sword Schools
+e 6 Gun Kata, 9 entradas cada pelos 5 níveis (Apprentice a Grandmaster); o grupo de arma virou **restrição −1** do
+nível 1; Style Points grátis = **Martial Adept / Gunslinger Level**; restrições permitem até **2 × o nível**; custo
+**50 XP por ponto de vantagem** (restrições não descontam); escolas custam como as de magia (200, depois 100 × valor,
+teto Level, p. 16). Desert Wind usa **Multiple Attacks**; Stone Dragon, **Called Shot**. Gun Kata **sem** proibição de
+Blast/Flame (as vantagens valem só no alvo mais próximo); as limitações de arma dos Gun Kata são as falhas do nível 2.
+Vantagens e restrições universais iguais nos dois capítulos (5 + 7). O texto abaixo é o levantamento da 1.6.
+
 ### Sword Schools (1.6 pp. 175–186)
 - **Martial Adept Level** = maior rank em qualquer escola.
 - **Ranks**: 1 Apprentice (grupo de arma + ação base) · 2 Initiate (restrição −2 + vantagem) · 3 Journeyman (restrição de perícia −1: teste vs SD do alvo, senão falha + vantagem) · 4 Master (Mastery passiva + vantagem) · 5 Grandmaster (vantagem suprema).

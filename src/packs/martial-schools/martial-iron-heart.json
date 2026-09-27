@@ -1,0 +1,161 @@
+{
+  "name": "Iron Heart",
+  "type": "martialSchool",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>Pure, perfected swordsmanship that raises ordinary strikes to supernatural precision, using Ordinary weapons.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 266
+    },
+    "key": "ironHeart",
+    "kind": "sword",
+    "keySkill": "perception",
+    "weaponGroup": "Ordinary",
+    "summary": "Pure, perfected swordsmanship that raises ordinary strikes to supernatural precision, using Ordinary weapons.",
+    "entries": [
+      {
+        "id": "weaponOrdinary",
+        "rank": 1,
+        "type": "weapon",
+        "name": "Weapon (Ordinary)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attack must be made with a Ordinary weapon.",
+        "automation": {
+          "requires": {
+            "weaponGroup": "Ordinary"
+          }
+        }
+      },
+      {
+        "id": "actionAim",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Aim)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Aim may be the base; the Advantages go to the aimed attack that follows, which is not itself a special one.",
+        "automation": {
+          "unlocksAction": "aim",
+          "prepares": true
+        }
+      },
+      {
+        "id": "openingThePath",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Opening the Path",
+        "cost": -2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Once the attack is made, your Static Defense drops by 10 up to your coming turn.",
+        "automation": {
+          "self": [
+            {
+              "changes": [
+                {
+                  "key": "system.modifiers.combat.sd",
+                  "value": -10
+                }
+              ],
+              "untilNextTurn": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "hammerOfTheEmperor",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Hammer of the Emperor",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The blow gains Tearing; the book gives it an undefined damage value X.",
+        "automation": {
+          "quality": {
+            "key": "tearing"
+          },
+          "text": true
+        }
+      },
+      {
+        "id": "skillPerception",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Perception)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Perception against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "perception"
+          }
+        }
+      },
+      {
+        "id": "steelWind",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Steel Wind",
+        "cost": 4,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The attack targets up to two adjacent enemies.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "masteryMithrilBlade",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Mastery (Mithril Blade)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "A foe's defensive reaction lower than your attack total does not stop your attacks.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "exorcismOfSteel",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Exorcism of Steel",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Your weapons gain Power Field until the start of your next turn.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "strikeOfPerfectClarity",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Strike of Perfect Clarity",
+        "cost": 3,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "+1 rolled damage die per raise on the attack roll.",
+        "automation": {
+          "damagePerRaise": {
+            "rolled": 1
+          }
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdMc2ca7734a5fb",
+  "_key": "!items!dtdMc2ca7734a5fb",
+  "folder": "dtdMFd04e0d91db2"
+}

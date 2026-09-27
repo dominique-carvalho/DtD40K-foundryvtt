@@ -43,7 +43,8 @@ export async function socialAttack(actor, { characteristic, skill }) {
  */
 export async function resolveSocial(message, choice) {
   const data = message.getFlag("dtd40k", "social");
-  if (!data || data.resolved) return;
+  // Only a successful social attack needs an answer (p. 446).
+  if (!data || data.resolved || !data.success) return;
   const target = await foundry.utils.fromUuid(data.targetUuid);
   if (!target?.isOwner) {
     ui.notifications.warn(localize("DTD.Combat.NotYourTarget"));

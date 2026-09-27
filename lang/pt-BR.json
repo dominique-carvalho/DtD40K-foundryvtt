@@ -1126,7 +1126,8 @@
       "FullRest": "Repouso completo",
       "Medical": "Atenção médica",
       "RestHint": "Critical Damage só cura com repouso e atenção médica, 1 por semana.",
-      "Rested": "{name} descansa: +{hp} HP, −{critical} de Critical Damage."
+      "Rested": "{name} descansa: +{hp} HP, −{critical} de Critical Damage.",
+      "EndStunned": "Gastar um Hero Point para sair de Atordoado?"
     },
     "Social": {
       "Attack": "Ataque social",

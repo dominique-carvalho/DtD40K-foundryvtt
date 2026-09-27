@@ -1126,7 +1126,8 @@
       "FullRest": "Full bed rest",
       "Medical": "Medical attention",
       "RestHint": "Critical Damage heals only with rest and medical attention, 1 a week.",
-      "Rested": "{name} rests: +{hp} HP, −{critical} Critical Damage."
+      "Rested": "{name} rests: +{hp} HP, −{critical} Critical Damage.",
+      "EndStunned": "Spend a Hero Point to end Stunned?"
     },
     "Social": {
       "Attack": "Social attack",

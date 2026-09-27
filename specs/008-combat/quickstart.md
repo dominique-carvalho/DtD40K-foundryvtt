@@ -52,3 +52,56 @@ Antes de registrar dados: `game.packs.get("dtd40k.combat-tables").index.size ===
 | 31 | Fear 2 falhado, 2 checks | Shock 1d10 + 2 aplicado | US4-4 |
 | 32 | Medo fora de combate | −1k1, +1d5 Insanity | US4-5 |
 | 33 | Insanity 9 → 10; 19 → 20; 100 | Trauma Test TN 12; derangement; aviso | US4-6/7/8 |
+
+## Registro de validação
+
+### 2026-09-26 — Foundry 13.351, mundo "teste-dtd" (título "Mist of Imlarin"), usuário Gamemaster
+
+Sistema carregado do worktree `DtD40K-foundryvtt-008` (junction `Data/systems/dtd40k`), packs gerados com
+`npm run build:packs`. **Pack compilado conferido no Foundry antes dos passos**: `combat-tables` com `index.size` = 22 em
+2 pastas, 5 resultados por tabela de crítico com a automação nas flags; `DtdCombat` registrado, 27 status effects da
+DtD, socket ativo. A tabela Energy foi conferida linha a linha contra `pdftotext -table` do PDF; as demais seguem o
+inventário. Cena temporária "T008 Arena" com dois tokens vinculados; os passos foram executados pelos serviços que a
+ficha e os cartões chamam, com os diálogos respondidos por script e os dados controlados; clicados no DOM: Aplicar
+(cartão de dano), Gastar Resolve (cartão social), aba Combate (condição, ação Stand). Cena, combates, atores e
+mensagens de teste apagados no fim.
+
+| # | Resultado |
+|---|---|
+| 1 | ✅ 19 Pen 2 no corpo, AP 7, Res 4: 19 → 14 → −3 HP; conta no chat |
+| 2 | ✅ Dano 7 contra AP 7: sem efeito |
+| 3 | ✅ Tearing, 13 efetivo: −4 HP |
+| 4 | ✅ HP 2, 27 Rending na cabeça: HP 0, crítico 3, Rending/Head 3 (Stunned 1d5 rodadas, +1d5 fadiga) |
+| 5 | ✅ Crítico 4 + 2: total 6, Dead |
+| 6 | ✅ Magia com Aura 2 (efeito): 10 − 2 = 8 → −2 HP |
+| 7 | ✅ Cobertura AP 8 (corpo/pernas): 20 − 8 − 7 = 5 → −1 HP; cobertura 8 → 7 |
+| 8 | ✅ Desarmado tirando 1 HP: +1 fadiga |
+| 9 | ⚠️ Não exercitado (o mundo só tem o Gamemaster; o pedido ao Mestre passa pelo socket) |
+| 10 | ✅ Desfazer: HP e fadiga voltam; mensagem marcada |
+| — | ✅ Fluxo completo: ataque com alvo marcado → dano → botão Aplicar no chat → −6 HP |
+| 11 | ✅ Iniciativa 1d10 + 5 (12 = d10 7); empate em 12: dado 8 do alvo passa o 7 do atacante |
+| 12 | ✅ Segunda Standard Attack recusada ("meias diferentes"); terceira meia recusada; meia depois de Full Defense recusada |
+| 13 | ✅ Dodge depois de All Out Attack: "sem reação" |
+| 14 | ✅ Dodge 18 contra ataque 24 na SD 14: SD 23, "ainda acerta"; 1 reação gasta |
+| 15 | ✅ Full Defense: SD +10, 3 reações; expira no início do próximo turno do alvo; estado do turno zera na rodada 2 |
+| 16 | ✅ All Out Attack: +2k0, reações 0 |
+| 17 | ✅ Called Shot na cabeça: localização head, −2k0 |
+| 18 | ✅ Duas armas + Two Weapon Fighting: 2 ataques a −1k0, ação completa e 1 reação |
+| 19 | ✅ Surprised: aviso de turno perdido na rodada 1; o status sai na rodada 2 |
+| 20 | ✅ Alvo Prone: corpo a corpo com Combat Advantage (+5); à distância +1 raise |
+| 21 | ✅ Dazed 4k2 → 3k2; fadiga 1 e 2: 3k2 (não acumula) |
+| 22 | ✅ Fadiga 3 + 1 com Con 3: Unconscious, fadiga 3 |
+| 23 | ✅ Stunned: ações recusadas; aviso no início do turno; Hero Point remove |
+| 24 | ✅ Fim de turno: On Fire −1 HP +1 fadiga; Blood Loss 1d10 = 1 → Dead |
+| 25 | ✅ Queimar Hero Point: Dead → Unconscious, máximo 2 → 1 |
+| 26 | ✅ Descanso: leve +Con (dia de repouso); grave 3 dias sem repouso +0; crítico 1 semana com atenção médica −1 |
+| 27 | ✅ Helpless: 3 contra TN 30 acerta; dano rolado duas vezes (12 dados) |
+| 28 | ✅ Ataque social 36 contra MD 15: botão "Gastar Resolve" → Resolve 4 → 3, drenado 1 |
+| 29 | ✅ Drenado 4: Jaded; Nova cena zera e tira Jaded |
+| 30 | ✅ Refute: MD 15 + 4 = 19 contra 9, o ataque falha |
+| 31 | ✅ Fear 2 falhado com 3 checks: Shock 1d10 + 3 = 13 (Catatonic → Unconscious) e +1d10 Insanity |
+| 32 | ✅ Medo fora de combate: +1d5 Insanity com a nota de −1k1 |
+| 33 | ✅ Insanity 9 → 10: Trauma Test TN 12 e Mental Traumas na falha; 19 → 20: TN 14 + derangement; 95 → 100: aviso de saída |
+
+Correções feitas durante a validação: ataque social falhado aceitava "Gastar Resolve" pelo serviço (agora ignora);
+"Spend Hero Point" com Stunned não encerrava a condição (agora pergunta e encerra).

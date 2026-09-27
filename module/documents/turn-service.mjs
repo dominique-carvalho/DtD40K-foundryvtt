@@ -81,6 +81,17 @@ export async function useAction(actor, key, { weaponId, as } = {}) {
     return;
   }
   const auto = action.automation;
+  // A Hero Point ends Stunned (p. 444).
+  if (action.key === "spendHeroPoint" && actor.statuses.has("stunned") && actor.system.heroPoints.value > 0) {
+    const end = await foundry.applications.api.DialogV2.confirm({
+      window: { title: action.name }, content: `<p>${localize("DTD.Combat.EndStunned")}</p>`, rejectClose: false
+    });
+    if (end) {
+      await actor.update({ "system.heroPoints.value": actor.system.heroPoints.value - 1 });
+      await toggleCondition(actor, "stunned", { active: false });
+      return;
+    }
+  }
   if (auto.reaction) return rollReaction(actor, auto.reaction);
   if (auto.multiple) return multipleAttacks(actor, action);
   if (!(await takeAction(actor, action, { as: as ?? (auto.attack?.aim ? "half" : undefined) }))) return;

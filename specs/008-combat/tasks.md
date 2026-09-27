@@ -47,7 +47,7 @@ quickstart.md
 - [X] T012 [P] [US1] Em `tests/unit/packs.test.mjs`: 22 tabelas, 5 resultados por crítico, linha 5 fatal, Shock e Traumas com os intervalos, flags válidas
 - [X] T013 [US1] Criar `module/documents/damage-service.mjs` (`applyDamage`, `undoDamage`, `applyCritical`) com socket para o Mestre; `templates/chat/damage-applied.hbs`; botão Aplicar no `damage-card` da 007; cobertura no token (`flags.dtd40k.cover`)
 - [X] T014 [P] [US1] i18n e estilos
-- [ ] T015 [US1] `npm test` e `npm run build:packs`; validar quickstart 1–10 e registrar
+- [X] T015 [US1] `npm test` e `npm run build:packs`; validar quickstart 1–10 e registrar
 
 ---
 
@@ -59,7 +59,7 @@ quickstart.md
 - [X] T019 [US2] Em `attack-service.mjs` e `attack-dialog.hbs`: situações (Combat Advantage automática, ganging up, alvo correndo, atirar em corpo a corpo, terreno, Called Shot), Multiple Attacks, botões Dodge/Parry no cartão (`templates/chat/defense.hbs`)
 - [X] T020 [US2] Aba `combat` (`templates/actor/parts/combat.hbs`, `module/apps/combat-actions-context.mjs`): menu de ações por tipo com o gasto do turno; em `character-sheet.mjs`: aba e ações
 - [X] T021 [P] [US2] i18n e estilos
-- [ ] T022 [US2] Validar quickstart 11–20 e registrar
+- [X] T022 [US2] Validar quickstart 11–20 e registrar
 
 ---
 
@@ -70,7 +70,7 @@ quickstart.md
 - [X] T025 [US3] Criar `module/documents/condition-service.mjs` (`toggleCondition`, `burnHeroPoint`, `rest`); fadiga acima da Con no `updateActor`; Stunned/Helpless nas regras de turno e de ataque; `templates/dialog/rest-dialog.hbs`
 - [X] T026 [US3] Na aba `combat`: condições ativas, Critical Damage, estado do ferimento, fadiga, Descanso (Mestre)
 - [X] T027 [P] [US3] i18n e estilos
-- [ ] T028 [US3] Validar quickstart 21–27 e registrar
+- [X] T028 [US3] Validar quickstart 21–27 e registrar
 
 ---
 
@@ -81,7 +81,7 @@ quickstart.md
 - [X] T031 [US4] Criar `module/documents/social-service.mjs` e `mental-service.mjs`, `templates/chat/{social-attack,fear}.hbs`; "Nova cena" zera `resolve.drainedScene`; limiares de Insanity no `updateActor`
 - [X] T032 [US4] Na aba `combat`: Resolve drenado/Jaded, Insanity e derangements, botões Social Attack e Fear Test
 - [X] T033 [P] [US4] i18n e estilos
-- [ ] T034 [US4] Validar quickstart 28–33 e registrar
+- [X] T034 [US4] Validar quickstart 28–33 e registrar
 
 ---
 

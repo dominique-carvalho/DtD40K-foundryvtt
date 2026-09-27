@@ -1,0 +1,56 @@
+{
+  "name": "Legend Lore",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Name any person, location, thing or idea to get a broad picture of it as society at large sees it; if it is present, the caster learns all its possible stats and capabilities.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 240
+    },
+    "school": "divination",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "social",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Name any person, location, thing or idea to get a broad picture of it as society at large sees it; if it is present, the caster learns all its possible stats and capabilities.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSd64883613c1e",
+  "_key": "!items!dtdSd64883613c1e",
+  "folder": "dtdSFdd1dc71d110"
+}

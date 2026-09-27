@@ -984,29 +984,30 @@
 .dtd40k.sheet.item.exaltation .window-content,
 .dtd40k.sheet.item.feat .window-content,
 .dtd40k.sheet.item.class .window-content,
-.dtd40k.sheet.item.equipment .window-content {
+.dtd40k.sheet.item.equipment .window-content,
+.dtd40k.sheet.item.spell .window-content {
   padding: 0 0.75rem 0.75rem;
   overflow-y: auto;
   color: var(--dtd-text);
 }
 
-.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body, .class-sheet-body, .equipment-sheet-body) {
+.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body, .class-sheet-body, .equipment-sheet-body, .spell-sheet-body) {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .sheet-header {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .sheet-header {
   flex-direction: row;
   align-items: center;
   gap: 0.75rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .profile-img[data-action] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .profile-img[data-action] {
   cursor: pointer;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .item-name {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .item-name {
   margin: 0;
   font-size: 1.4rem;
   height: auto;
@@ -1014,54 +1015,54 @@
   color: var(--dtd-text);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) input.item-name {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) input.item-name {
   width: 100%;
   border-bottom: 1px solid var(--dtd-border);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .identity-line input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .identity-line input[type="text"] {
   width: 6rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) :is(.exaltation-section, .feat-section, .class-section, .equipment-section) {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) :is(.exaltation-section, .feat-section, .class-section, .equipment-section, .spell-section) {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .form-group {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .form-group {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .form-group > label:first-child {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .form-group > label:first-child {
   flex: 0 0 11rem;
   font-weight: bold;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .form-group.stacked {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .form-group.stacked {
   flex-direction: column;
   align-items: stretch;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) :is(dl.exaltation-stats-list, dl.feat-stats, dl.class-stats) {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) :is(dl.exaltation-stats-list, dl.feat-stats, dl.class-stats, dl.spell-stats) {
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: 0.25rem 0.75rem;
   margin: 0;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) dt {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) dt {
   font-weight: bold;
   color: var(--dtd-text-muted);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) dd {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) dd {
   margin: 0;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .automation-tag {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .automation-tag {
   font-size: 0.8rem;
   font-weight: normal;
   color: var(--dtd-text-subtle);
@@ -1069,7 +1070,7 @@
   letter-spacing: 0.04em;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) prose-mirror {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) prose-mirror {
   min-height: 5rem;
 }
 
@@ -1078,13 +1079,13 @@
   padding-left: 1.25rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .list-row {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .list-row {
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .list-row input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .list-row input[type="text"] {
   flex: 1;
 }
 
@@ -1092,7 +1093,7 @@
   width: 3.5rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment) .list-control {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell) .list-control {
   cursor: pointer;
   margin-left: 0.3rem;
   font-size: 0.85rem;
@@ -1104,7 +1105,7 @@
   font-size: 1rem;
 }
 
-.dtd40k.item:is(.exaltation, .class, .equipment) .tag,
+.dtd40k.item:is(.exaltation, .class, .equipment, .spell) .tag,
 .dtd40k .equipment-tab .tag,
 .dtd40k .attack-card-extra .tag {
   display: inline-block;
@@ -1789,6 +1790,33 @@
 }
 
 .dtd40k .damage-applied .applied-row {
+  padding: 0.2rem 0;
+  border-bottom: 1px dotted var(--dtd-border);
+}
+
+/* ---------- Magic tab and spell sheet (spec 009) ---------- */
+
+.dtd40k .magic-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dtd40k .magic-school .section-title {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.dtd40k .combo-builder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+
+.dtd40k .spell-card-extra .spell-row {
   padding: 0.2rem 0;
   border-bottom: 1px dotted var(--dtd-border);
 }

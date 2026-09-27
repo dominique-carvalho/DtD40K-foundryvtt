@@ -1,0 +1,57 @@
+{
+  "name": "Treesong",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Sculpts living wood into a simple, clay-like shape that is permanent; up to 1 cubic meter.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 257
+    },
+    "school": "transmutation",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "somatic",
+      "touch",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "1 cubic meter + 1 per raise",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Sculpts living wood into a simple, clay-like shape that is permanent; up to 1 cubic meter.",
+    "perRaise": "+1 cubic meter per raise.",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSfa722525abd0",
+  "_key": "!items!dtdSfa722525abd0",
+  "folder": "dtdSFd2362678279"
+}

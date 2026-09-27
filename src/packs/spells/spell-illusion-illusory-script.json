@@ -1,0 +1,57 @@
+{
+  "name": "Illusory Script",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Writes a magical text showing one message to most readers while hiding a second message only intended recipients see. Writing takes the usual time; any size or surface.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 251
+    },
+    "school": "illusion",
+    "level": 2,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "subtle",
+      "languageDependent",
+      "social"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "indefinite",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Indefinite"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Writes a magical text showing one message to most readers while hiding a second message only intended recipients see. Writing takes the usual time; any size or surface.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSded18a4bcd58",
+  "_key": "!items!dtdSded18a4bcd58",
+  "folder": "dtdSFd9e3382db01"
+}

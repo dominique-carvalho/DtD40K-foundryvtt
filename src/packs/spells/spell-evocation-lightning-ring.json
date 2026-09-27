@@ -1,0 +1,58 @@
+{
+  "name": "Lightning Ring",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Aura dealing Xk2 E to all in melee reach as the caster's turn ends, X = Level + raises. Half action: shoot a bolt at an enemy within 40m (ranged attack, 5k2 E, Shocking); each bolt lowers X by 1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 247
+    },
+    "school": "evocation",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "comboOk",
+      "attack",
+      "somatic",
+      "verbal"
+    ],
+    "range": "bolt 40m",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 5,
+      "kept": 2,
+      "type": "E",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Aura dealing Xk2 E to all in melee reach as the caster's turn ends, X = Level + raises. Half action: shoot a bolt at an enemy within 40m (ranged attack, 5k2 E, Shocking); each bolt lowers X by 1.",
+    "perRaise": "Raises add to X.",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS4176d2775ce1",
+  "_key": "!items!dtdS4176d2775ce1",
+  "folder": "dtdSFd59980be393"
+}

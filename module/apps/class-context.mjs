@@ -78,7 +78,9 @@ export function advanceInfo(actor, kind, key, from) {
     key,
     classes: actor.items.filter((item) => item.type === "class"),
     race: getRace(actor),
-    owned: ownedFeats(actor)
+    owned: ownedFeats(actor),
+    level: actor.system.level,
+    from
   });
   const cost = advanceCost(kind, from) * check.multiplier;
   return {

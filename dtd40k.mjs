@@ -10,6 +10,8 @@ import { ClassData } from "./module/data/class-data.mjs";
 import { WeaponData } from "./module/data/weapon-data.mjs";
 import { ArmorData } from "./module/data/armor-data.mjs";
 import { GearData } from "./module/data/gear-data.mjs";
+import { SpellData } from "./module/data/spell-data.mjs";
+import { SpellSheet } from "./module/apps/spell-sheet.mjs";
 import { DtdActiveEffect } from "./module/documents/active-effect.mjs";
 import { rollDamage } from "./module/documents/attack-service.mjs";
 import { spendLiquid } from "./module/documents/acquisition-service.mjs";
@@ -17,6 +19,7 @@ import { DtdCombat, DtdCombatant } from "./module/documents/combat.mjs";
 import { applyDamage, undoDamage } from "./module/documents/damage-service.mjs";
 import { rollDefense } from "./module/documents/turn-service.mjs";
 import { resolveSocial } from "./module/documents/social-service.mjs";
+import { resistSpell, rollSpellDamage } from "./module/documents/magic-service.mjs";
 import { DtdActor } from "./module/documents/actor.mjs";
 import { DtdItem } from "./module/documents/item.mjs";
 import { CharacterSheet } from "./module/apps/character-sheet.mjs";
@@ -41,6 +44,7 @@ Hooks.once("init", () => {
   CONFIG.Item.dataModels.weapon = WeaponData;
   CONFIG.Item.dataModels.armor = ArmorData;
   CONFIG.Item.dataModels.gear = GearData;
+  CONFIG.Item.dataModels.spell = SpellData;
   // Equipment effects apply only while the item is in use (spec 007, research R2).
   CONFIG.ActiveEffect.documentClass = DtdActiveEffect;
   // Combat order, turn limits and the conditions of the book (spec 008, research R3–R5).
@@ -91,6 +95,12 @@ Hooks.once("init", () => {
     label: "DTD.Sheet.Equipment"
   });
 
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", SpellSheet, {
+    types: ["spell"],
+    makeDefault: true,
+    label: "DTD.Sheet.Spell"
+  });
+
   foundry.applications.handlebars.loadTemplates(CharacterSheet.PARTIALS);
 });
 
@@ -126,7 +136,10 @@ const CHAT_ACTIONS = {
   parry: (message) => rollDefense(message, "parry"),
   socialSpend: (message) => resolveSocial(message, "spend"),
   socialComply: (message) => resolveSocial(message, "comply"),
-  socialRefute: (message) => resolveSocial(message, "refute")
+  socialRefute: (message) => resolveSocial(message, "refute"),
+  // Magic (spec 009): spell damage and resistance.
+  spellDamage: (message) => rollSpellDamage(message),
+  resistSpell: (message) => resistSpell(message)
 };
 Hooks.on("renderChatMessageHTML", (message, html) => {
   for (const button of html.querySelectorAll("[data-dtd-action]")) {

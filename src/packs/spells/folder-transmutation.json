@@ -1,0 +1,16 @@
+{
+  "_id": "dtdSFd2362678279",
+  "_key": "!folders!dtdSFd2362678279",
+  "name": "Transmutation",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 90000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "spellFolder": "transmutation"
+    }
+  }
+}

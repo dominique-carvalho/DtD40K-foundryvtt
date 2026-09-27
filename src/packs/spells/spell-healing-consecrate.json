@@ -1,0 +1,57 @@
+{
+  "name": "Consecrate",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Creates a fixed 50m-radius zone: worshippers of the caster's pantheon inside get +1k0 on all tests, and the caster can reach allies with Healing spells at extended range while both stand inside.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 249
+    },
+    "school": "healing",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "material",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "50m radius (static)",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Creates a fixed 50m-radius zone: worshippers of the caster's pantheon inside get +1k0 on all tests, and the caster can reach allies with Healing spells at extended range while both stand inside.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSba664d9d5b9b",
+  "_key": "!items!dtdSba664d9d5b9b",
+  "folder": "dtdSFdb0e4189fd7"
+}

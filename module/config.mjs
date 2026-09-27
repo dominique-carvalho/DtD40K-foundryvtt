@@ -176,7 +176,7 @@ export const STARTING_XP = 600;
 export const FREE_STUDY_MULTIPLIER = 2;
 
 /** What an XP purchase can buy (schools, spells and backgrounds come with their own features). */
-export const XP_KINDS = ["characteristic", "skill", "feat", "asset", "powerStat"];
+export const XP_KINDS = ["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo"];
 
 /** Generic 1-point resource spends (DtD 7.7a p. 65). */
 export const GENERIC_SPENDS = ["heal", "skill", "reaction", "stunned", "dazed"];
@@ -321,6 +321,37 @@ export const ACTION_SUBTYPES = ["attack", "melee", "ranged", "movement", "concen
 /** At most 4 Resolve drained per scene by social attacks, then Jaded (p. 446). */
 export const RESOLVE_DRAIN_LIMIT = 4;
 
+/* ---------- Magic (spec 009, DtD 7.7a ch. VIII, pp. 224–259) ---------- */
+
+/** The nine Magic Schools and the characteristic each always uses (pp. 227–228). */
+export const MAGIC_SCHOOLS = Object.fromEntries([
+  ["abjuration", "wil"], ["conjuration", "wil"], ["divination", "wis"], ["enchantment", "cha"], ["evocation", "cha"],
+  ["healing", "wis"], ["illusion", "int"], ["necromancy", "int"], ["transmutation", "wis"]
+].map(([key, characteristic]) => [key, {
+  label: `DTD.Magic.School.${key}`, characteristic, name: key.charAt(0).toUpperCase() + key.slice(1)
+}]));
+
+/** Spell keywords (pp. 228–229). */
+export const SPELL_KEYWORDS = [
+  "attack", "comboOk", "focus", "languageDependent", "material", "mindAffecting", "rangedTouch", "savingThrow", "social",
+  "somatic", "subtle", "touch", "verbal"
+];
+
+/** Actions a spell takes (p. 228). */
+export const SPELL_ACTIONS = ["half", "full", "reaction", "free", "halfOrReaction"];
+
+/** Duration types (p. 229). */
+export const SPELL_DURATIONS = ["instant", "scene", "rounds", "minutes", "hours", "days", "indefinite", "concentration", "special"];
+
+/** Casting strength (pp. 226–227). */
+export const CAST_STRENGTHS = ["fettered", "unfettered", "push"];
+
+/** Most points a caster may Push: Sanctioned (the Tested feat) 3, Unsanctioned 4 (p. 227). */
+export const MAX_PUSH = { sanctioned: 3, unsanctioned: 4 };
+
+/** XP of Magic Schools and Spell Combos (p. 16, p. 229): new school 200, then 100 × current rank; combo 50 × levels. */
+export const MAGIC_XP = { newSchool: 200, perRank: 100, comboPerLevel: 50 };
+
 export const DTD = {
   GROUPS,
   CHARACTERISTICS,
@@ -370,5 +401,12 @@ export const DTD = {
   FEAR_TN,
   ACTION_TYPES,
   ACTION_SUBTYPES,
-  RESOLVE_DRAIN_LIMIT
+  RESOLVE_DRAIN_LIMIT,
+  MAGIC_SCHOOLS,
+  SPELL_KEYWORDS,
+  SPELL_ACTIONS,
+  SPELL_DURATIONS,
+  CAST_STRENGTHS,
+  MAX_PUSH,
+  MAGIC_XP
 };

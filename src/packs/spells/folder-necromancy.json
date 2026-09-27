@@ -1,0 +1,16 @@
+{
+  "_id": "dtdSFdbff4ce756f",
+  "_key": "!folders!dtdSFdbff4ce756f",
+  "name": "Necromancy",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 80000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "spellFolder": "necromancy"
+    }
+  }
+}

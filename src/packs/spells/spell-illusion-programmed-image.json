@@ -1,0 +1,57 @@
+{
+  "name": "Programmed Image",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>An Image whose maximum duration is one hour per Level, programmable to respond to a number of triggers up to the caster's Intelligence; may include sounds and speech.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 252
+    },
+    "school": "illusion",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "social",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "hours",
+      "value": 1,
+      "perLevel": true,
+      "expendable": false,
+      "concentration": "",
+      "text": "One hour per level"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "An Image whose maximum duration is one hour per Level, programmable to respond to a number of triggers up to the caster's Intelligence; may include sounds and speech.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS67c8e218fe28",
+  "_key": "!items!dtdS67c8e218fe28",
+  "folder": "dtdSFd9e3382db01"
+}

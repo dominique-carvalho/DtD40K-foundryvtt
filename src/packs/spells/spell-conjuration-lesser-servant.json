@@ -1,0 +1,57 @@
+{
+  "name": "Lesser Servant",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Summons a feeble helper creature with 2 in every characteristic and 2 ranks in relevant skills.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 236
+    },
+    "school": "conjuration",
+    "level": 2,
+    "tn": {
+      "value": 20,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "material",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "perLevel": true,
+      "expendable": false,
+      "concentration": "",
+      "text": "One minute per caster level"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Summons a feeble helper creature with 2 in every characteristic and 2 ranks in relevant skills.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSbcfec79e5051",
+  "_key": "!items!dtdSbcfec79e5051",
+  "folder": "dtdSFdbc7123416e"
+}

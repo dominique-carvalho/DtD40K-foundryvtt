@@ -1,0 +1,16 @@
+{
+  "_id": "dtdTFd24b769ab83",
+  "_key": "!folders!dtdTFd24b769ab83",
+  "name": "Warp",
+  "type": "RollTable",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "tableFolder": "warp"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Suggestion",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Caster makes a simple request with magical pull. Requests within the target's nature allow no save; unusual ones allow a saving throw. Those who resist notice nothing odd beyond a strong urge to comply.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 244
+    },
+    "school": "enchantment",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "subtle",
+      "social",
+      "verbal",
+      "languageDependent",
+      "mindAffecting"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Caster makes a simple request with magical pull. Requests within the target's nature allow no save; unusual ones allow a saving throw. Those who resist notice nothing odd beyond a strong urge to comply.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSbaac8a1e9a72",
+  "_key": "!items!dtdSbaac8a1e9a72",
+  "folder": "dtdSFdc5d0e74c02"
+}

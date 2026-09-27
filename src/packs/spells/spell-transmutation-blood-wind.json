@@ -1,0 +1,57 @@
+{
+  "name": "Blood Wind",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The caster's natural attacks gain Reach and can strike targets up to 10m per caster Level away.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 257
+    },
+    "school": "transmutation",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "material",
+      "somatic",
+      "verbal"
+    ],
+    "range": "10m per caster level",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "The caster's natural attacks gain Reach and can strike targets up to 10m per caster Level away.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSb45c16f121d7",
+  "_key": "!items!dtdSb45c16f121d7",
+  "folder": "dtdSFd2362678279"
+}

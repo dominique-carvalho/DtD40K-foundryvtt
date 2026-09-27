@@ -1,0 +1,59 @@
+{
+  "name": "Torment",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Every creature within 10m, caster and allies included, loses half of its remaining Hit Points; resisted with Arcana + Constitution. Undead get a free raise to resist.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 255
+    },
+    "school": "necromancy",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "savingThrow",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "10m (includes caster and allies)",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "con",
+    "effect": "Every creature within 10m, caster and allies included, loses half of its remaining Hit Points; resisted with Arcana + Constitution. Undead get a free raise to resist.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS9f7311ed31d6",
+  "_key": "!items!dtdS9f7311ed31d6",
+  "folder": "dtdSFdbff4ce756f"
+}

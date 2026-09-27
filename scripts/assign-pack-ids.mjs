@@ -7,6 +7,7 @@
  *   node scripts/assign-pack-ids.mjs --pack classes
  *   node scripts/assign-pack-ids.mjs --pack equipment
  *   node scripts/assign-pack-ids.mjs --pack combat-tables
+ *   node scripts/assign-pack-ids.mjs --pack spells
  */
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -119,15 +120,34 @@ const LAYOUTS = {
   "combat-tables": () => {
     const folders = {
       critical: folder("table-folder:critical", "dtdTFd", "critical", "Critical Damage", null, 100000, "tableFolder", "RollTable"),
-      mental: folder("table-folder:mental", "dtdTFd", "mental", "Fear and Insanity", null, 200000, "tableFolder", "RollTable")
+      mental: folder("table-folder:mental", "dtdTFd", "mental", "Fear and Insanity", null, 200000, "tableFolder", "RollTable"),
+      // Psychic Phenomena and Perils of the Warp (spec 009).
+      warp: folder("table-folder:warp", "dtdTFd", "warp", "Warp", null, 300000, "tableFolder", "RollTable")
     };
     return {
       folders,
       fileOf: (key) => `folder-${slug(key)}.json`,
-      folderOf: ({ flags }) => folders[flags?.dtd40k?.table?.kind === "critical" ? "critical" : "mental"],
+      folderOf: ({ flags }) => {
+        const kind = flags?.dtd40k?.table?.kind;
+        if (kind === "critical") return folders.critical;
+        return ["phenomena", "perils"].includes(kind) ? folders.warp : folders.mental;
+      },
       seed: (file) => `table:${file}`,
       prefix: "dtdT",
       collection: "tables"
+    };
+  },
+  // Spells of chapter VIII (spec 009): one folder per Magic School.
+  spells: () => {
+    const schools = ["Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Healing", "Illusion", "Necromancy", "Transmutation"];
+    const folders = Object.fromEntries(schools.map((name, index) => [name.toLowerCase(),
+      folder(`spell-folder:${name}`, "dtdSFd", name.toLowerCase(), name, null, (index + 1) * 10000, "spellFolder")]));
+    return {
+      folders,
+      fileOf: (key) => `folder-${slug(key)}.json`,
+      folderOf: ({ system }) => folders[system.school],
+      seed: (file) => `spell:${file}`,
+      prefix: "dtdS"
     };
   }
 };

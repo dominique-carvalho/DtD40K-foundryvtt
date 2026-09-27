@@ -1,0 +1,56 @@
+{
+  "name": "False Life",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Caster gets 1 temporary hit point, lost before normal hit points; it does not stack with itself or other temporary hit points.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 254
+    },
+    "school": "necromancy",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "caster",
+    "area": "",
+    "duration": {
+      "type": "hours",
+      "value": 24,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "24 Hours"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Caster gets 1 temporary hit point, lost before normal hit points; it does not stack with itself or other temporary hit points.",
+    "perRaise": "+1 temporary hit point per two raises.",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSb11b50e7f608",
+  "_key": "!items!dtdSb11b50e7f608",
+  "folder": "dtdSFdbff4ce756f"
+}

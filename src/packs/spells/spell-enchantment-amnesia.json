@@ -1,0 +1,60 @@
+{
+  "name": "Amnesia",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>On a failed save the target forgets an event the caster picks. The caster may supply a replacement account in any level of detail; the target accepts it and fills gaps by itself.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 244
+    },
+    "school": "enchantment",
+    "level": 5,
+    "tn": {
+      "value": 35,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "social",
+      "verbal",
+      "touch",
+      "somatic",
+      "languageDependent",
+      "mindAffecting"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "On a failed save the target forgets an event the caster picks. The caster may supply a replacement account in any level of detail; the target accepts it and fills gaps by itself.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS712d735c5d91",
+  "_key": "!items!dtdS712d735c5d91",
+  "folder": "dtdSFdc5d0e74c02"
+}

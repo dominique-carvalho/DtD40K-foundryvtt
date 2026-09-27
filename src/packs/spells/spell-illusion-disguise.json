@@ -1,0 +1,57 @@
+{
+  "name": "Disguise",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Replaces the Disguise skill; the magic test result sets the disguise quality.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 251
+    },
+    "school": "illusion",
+    "level": 1,
+    "tn": {
+      "value": null,
+      "special": "none"
+    },
+    "action": "half",
+    "keywords": [
+      "material",
+      "social",
+      "somatic"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Replaces the Disguise skill; the magic test result sets the disguise quality.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS23912e72b375",
+  "_key": "!items!dtdS23912e72b375",
+  "folder": "dtdSFd9e3382db01"
+}

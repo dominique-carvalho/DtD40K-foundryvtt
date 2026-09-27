@@ -1,0 +1,57 @@
+{
+  "name": "Control Weather",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Alters local weather within what fits the region's climate and season (SM decides), taking 10 minutes to manifest. Controls broad tendencies such as wind direction and strength, not specifics like lightning strikes or a tornado's path.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 258
+    },
+    "school": "transmutation",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "social",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Alters local weather within what fits the region's climate and season (SM decides), taking 10 minutes to manifest. Controls broad tendencies such as wind direction and strength, not specifics like lightning strikes or a tornado's path.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS3a688b458f7f",
+  "_key": "!items!dtdS3a688b458f7f",
+  "folder": "dtdSFd2362678279"
+}

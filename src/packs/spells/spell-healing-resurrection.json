@@ -1,0 +1,58 @@
+{
+  "name": "Resurrection",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>By spending five resource points the caster revives a touched corpse with 0 hit points. Fails, permanently, if the creature was ever resurrected before.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 250
+    },
+    "school": "healing",
+    "level": 5,
+    "tn": {
+      "value": 35,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "social",
+      "somatic",
+      "touch",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "By spending five resource points the caster revives a touched corpse with 0 hit points. Fails, permanently, if the creature was ever resurrected before.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS58be209c1e4b",
+  "_key": "!items!dtdS58be209c1e4b",
+  "folder": "dtdSFdb0e4189fd7"
+}

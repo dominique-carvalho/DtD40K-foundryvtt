@@ -1,0 +1,56 @@
+{
+  "name": "Encore",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Each turn the target tests Arcana + Willpower; on failure it must, if possible, repeat the actions of its previous turn.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 244
+    },
+    "school": "enchantment",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "mindAffecting",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "rounds",
+      "value": 1,
+      "perLevel": true,
+      "expendable": true,
+      "concentration": "",
+      "text": "One round per level (E)"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Each turn the target tests Arcana + Willpower; on failure it must, if possible, repeat the actions of its previous turn.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS7fa04ca31c76",
+  "_key": "!items!dtdS7fa04ca31c76",
+  "folder": "dtdSFdc5d0e74c02"
+}

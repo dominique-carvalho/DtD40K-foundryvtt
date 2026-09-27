@@ -1,0 +1,57 @@
+{
+  "name": "Glyph",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Places a glyph (replacing any earlier one) on something touched. The caster may later cast another spell through it as if through a portal, briefly seeing the far side; the glyph vanishes once used.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 234
+    },
+    "school": "abjuration",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "focus",
+      "somatic",
+      "touch"
+    ],
+    "range": "",
+    "target": "touched object or person",
+    "area": "",
+    "duration": {
+      "type": "days",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Day"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Places a glyph (replacing any earlier one) on something touched. The caster may later cast another spell through it as if through a portal, briefly seeing the far side; the glyph vanishes once used.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS10a3cb7426ed",
+  "_key": "!items!dtdS10a3cb7426ed",
+  "folder": "dtdSFd15e7ccabb1"
+}

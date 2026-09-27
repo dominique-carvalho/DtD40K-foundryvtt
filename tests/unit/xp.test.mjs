@@ -88,3 +88,28 @@ describe("xpTotals and undoPlan (FR-012, FR-016)", () => {
     expect(undoPlan({ kind: "feat", key: "", from: 0, to: 1, cost: 100, itemId: "abc" }, null)).toEqual({ restore: null, deleteItem: "abc", refund: 100 });
   });
 });
+
+describe("Magic Schools and Spell Combos (spec 009, p. 16, p. 229)", () => {
+  const cls = (status, magicSchools) => ({ system: { status, magicSchools, characteristics: [], skills: [], feats: [], anyCharacteristic: false } });
+  it("costs 200 for a new school, 100 × rank after, and 50 × levels for a combo", () => {
+    expect(advanceCost("school", 0)).toBe(200);
+    expect(advanceCost("school", 1)).toBe(100);
+    expect(advanceCost("school", 3)).toBe(300);
+    expect(advanceCost("combo", 3)).toBe(150);
+  });
+
+  it("buys only schools on the current class list, up to the Level", () => {
+    const base = { kind: "school", race: null, owned: [], level: 2 };
+    expect(canAdvance({ ...base, key: "evocation", classes: [cls("current", ["Evocation"])], from: 0 })).toMatchObject({ allowed: true });
+    expect(canAdvance({ ...base, key: "healing", classes: [cls("current", ["Evocation"])], from: 0 })).toMatchObject({ allowed: false, reason: "offList" });
+    expect(canAdvance({ ...base, key: "evocation", classes: [cls("current", ["Evocation"])], from: 2 })).toMatchObject({ allowed: false, reason: "atCap" });
+    expect(canAdvance({ ...base, key: "evocation", classes: [cls("completed", ["Evocation"])], from: 1 })).toMatchObject({ allowed: true });
+    expect(canAdvance({ ...base, key: "healing", classes: [cls("completed", ["Evocation"])], from: 0 })).toMatchObject({ allowed: false, reason: "notOnList" });
+  });
+
+  it("undoes a school purchase", () => {
+    expect(undoPlan({ kind: "school", key: "evocation", from: 1, to: 2, cost: 100 }, 2)).toEqual({
+      restore: { path: "system.magic.schools.evocation.value", value: 1 }, deleteItem: null, refund: 100
+    });
+  });
+});

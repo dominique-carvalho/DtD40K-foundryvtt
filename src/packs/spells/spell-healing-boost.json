@@ -1,0 +1,55 @@
+{
+  "name": "Boost",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>An ally within 10m immediately gets a half action; their initiative position is unchanged.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 248
+    },
+    "school": "healing",
+    "level": 2,
+    "tn": {
+      "value": 20,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "verbal"
+    ],
+    "range": "10m",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "An ally within 10m immediately gets a half action; their initiative position is unchanged.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS70f01318c578",
+  "_key": "!items!dtdS70f01318c578",
+  "folder": "dtdSFdb0e4189fd7"
+}

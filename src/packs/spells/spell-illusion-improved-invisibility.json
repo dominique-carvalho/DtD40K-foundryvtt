@@ -1,0 +1,55 @@
+{
+  "name": "Improved Invisibility",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Invisibility capped at one minute, but attacking does not end it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 252
+    },
+    "school": "illusion",
+    "level": 4,
+    "tn": {
+      "value": null,
+      "special": "none"
+    },
+    "action": "full",
+    "keywords": [
+      "subtle"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Minute"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Invisibility capped at one minute, but attacking does not end it.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS2d376c9a66b2",
+  "_key": "!items!dtdS2d376c9a66b2",
+  "folder": "dtdSFd9e3382db01"
+}

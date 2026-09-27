@@ -1,0 +1,59 @@
+{
+  "name": "Confusion",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>On a failed save the target is confused; at the start of each of its turns roll 1d10: 1-4 loses 1 Hit Point and ends the turn, 5-6 does nothing, 7-9 acts normally, 10 breaks the spell. Confusion effects do not stack.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 243
+    },
+    "school": "enchantment",
+    "level": 2,
+    "tn": {
+      "value": 20,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "somatic",
+      "verbal",
+      "mindAffecting"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "On a failed save the target is confused; at the start of each of its turns roll 1d10: 1-4 loses 1 Hit Point and ends the turn, 5-6 does nothing, 7-9 acts normally, 10 breaks the spell. Confusion effects do not stack.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS729b56063789",
+  "_key": "!items!dtdS729b56063789",
+  "folder": "dtdSFdc5d0e74c02"
+}

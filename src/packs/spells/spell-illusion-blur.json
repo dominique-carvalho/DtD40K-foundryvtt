@@ -1,0 +1,64 @@
+{
+  "name": "Blur",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The caster's outline wavers; Static Defense rises by 3.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 251
+    },
+    "school": "illusion",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "comboOk",
+      "somatic"
+    ],
+    "range": "",
+    "target": "caster",
+    "area": "",
+    "duration": {
+      "type": "concentration",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "reaction",
+      "text": "Concentration (Reaction)"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "The caster's outline wavers; Static Defense rises by 3.",
+    "perRaise": "+1 Static Defense per raise.",
+    "automation": {
+      "target": "self",
+      "changes": [
+        {
+          "key": "system.modifiers.combat.sd",
+          "value": 3,
+          "perRaise": 1,
+          "capLevelMultiplier": 0,
+          "perLevel": 0
+        }
+      ],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS032738737397",
+  "_key": "!items!dtdS032738737397",
+  "folder": "dtdSFd9e3382db01"
+}

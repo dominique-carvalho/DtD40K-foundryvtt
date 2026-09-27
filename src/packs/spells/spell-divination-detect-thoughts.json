@@ -1,0 +1,57 @@
+{
+  "name": "Detect Thoughts",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Reads a person's surface emotions. The test is rolled against the target's Mental Defense; success reveals more specific thoughts. Enough raises yield one answer, possibly wrong if the target is misinformed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 239
+    },
+    "school": "divination",
+    "level": 1,
+    "tn": {
+      "value": null,
+      "special": "mentalDefense"
+    },
+    "action": "half",
+    "keywords": [
+      "subtle",
+      "social",
+      "mindAffecting"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Reads a person's surface emotions. The test is rolled against the target's Mental Defense; success reveals more specific thoughts. Enough raises yield one answer, possibly wrong if the target is misinformed.",
+    "perRaise": "A number of raises matching the target's Willpower: one question answered (only as the target believes it).",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS01bca4203cb4",
+  "_key": "!items!dtdS01bca4203cb4",
+  "folder": "dtdSFdd1dc71d110"
+}

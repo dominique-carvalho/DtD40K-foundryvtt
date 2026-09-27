@@ -1,0 +1,58 @@
+{
+  "name": "Magic Fang",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Natural weapons and unarmed attacks of the touched creature gain one extra kept damage die and are treated as magical.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 258
+    },
+    "school": "transmutation",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "comboOk",
+      "somatic",
+      "touch",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "+1 kept die (natural/unarmed)",
+    "save": "",
+    "effect": "Natural weapons and unarmed attacks of the touched creature gain one extra kept damage die and are treated as magical.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSc7a31a199907",
+  "_key": "!items!dtdSc7a31a199907",
+  "folder": "dtdSFd2362678279"
+}

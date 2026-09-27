@@ -1,0 +1,57 @@
+{
+  "name": "Exploding Runes",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Runes written on an object detonate when read by anyone other than the caster or those the caster declared safe while casting, hitting everyone in Blast (3) for 8k4 X damage.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 234
+    },
+    "school": "abjuration",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "social",
+      "somatic",
+      "touch"
+    ],
+    "range": "",
+    "target": "",
+    "area": "Blast (3)",
+    "duration": {
+      "type": "indefinite",
+      "value": 0,
+      "perLevel": false,
+      "expendable": true,
+      "concentration": "",
+      "text": "Indefinite (E)"
+    },
+    "damage": {
+      "rolled": 8,
+      "kept": 4,
+      "type": "X",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Runes written on an object detonate when read by anyone other than the caster or those the caster declared safe while casting, hitting everyone in Blast (3) for 8k4 X damage.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSe38abf9859e9",
+  "_key": "!items!dtdSe38abf9859e9",
+  "folder": "dtdSFd15e7ccabb1"
+}

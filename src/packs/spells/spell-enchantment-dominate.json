@@ -1,0 +1,59 @@
+{
+  "name": "Dominate",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Caster controls a creature within 10m, maintained by spending a half action each round; resisted with Arcana + Willpower. Orders against its nature give it one free raise to resist; self-harm or violence toward allies gives three.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 243
+    },
+    "school": "enchantment",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "languageDependent",
+      "mindAffecting",
+      "savingThrow"
+    ],
+    "range": "10m",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "concentration",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "half",
+      "text": "Concentration (Half)"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "wil",
+    "effect": "Caster controls a creature within 10m, maintained by spending a half action each round; resisted with Arcana + Willpower. Orders against its nature give it one free raise to resist; self-harm or violence toward allies gives three.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSd84d6b28e5f4",
+  "_key": "!items!dtdSd84d6b28e5f4",
+  "folder": "dtdSFdc5d0e74c02"
+}

@@ -1,6 +1,7 @@
 import { compareInitiative, initiativeDie } from "../rules/combat-actions.mjs";
 import { resetForRound } from "../rules/turn.mjs";
 import { endOfTurn, startOfRound, startOfTurn } from "./turn-service.mjs";
+import { sustainTurn } from "./magic-service.mjs";
 
 /**
  * Combat and Combatant for Dungeons the Dragoning (spec 008, research R4/R5).
@@ -39,6 +40,8 @@ export class DtdCombat extends Combat {
   async _onStartTurn(combatant, context) {
     await super._onStartTurn(combatant, context);
     await startOfTurn(this, combatant);
+    // Sustained spells spend their concentration action (spec 009, FR-014).
+    await sustainTurn(combatant);
   }
 
   /** Surprised ends after round 1. @override */

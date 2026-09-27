@@ -1,0 +1,56 @@
+{
+  "name": "Knock",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Every mundane (non-magical) lock on the touched object is disabled.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 233
+    },
+    "school": "abjuration",
+    "level": 2,
+    "tn": {
+      "value": 20,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "somatic",
+      "touch"
+    ],
+    "range": "",
+    "target": "touched object",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Every mundane (non-magical) lock on the touched object is disabled.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSac7174085d2c",
+  "_key": "!items!dtdSac7174085d2c",
+  "folder": "dtdSFd15e7ccabb1"
+}

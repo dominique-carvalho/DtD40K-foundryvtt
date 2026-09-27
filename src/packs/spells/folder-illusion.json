@@ -1,0 +1,16 @@
+{
+  "_id": "dtdSFd9e3382db01",
+  "_key": "!folders!dtdSFd9e3382db01",
+  "name": "Illusion",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 70000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "spellFolder": "illusion"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Raise Dead",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Spending a Resource Point turns a touched humanoid corpse into an undead horror; if intact it can briefly pass as a sick living person. It always uses a Walkin' Dead statblock (Chapter 17).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 255
+    },
+    "school": "necromancy",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "material",
+      "social",
+      "somatic",
+      "touch",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "indefinite",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Indefinite"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Spending a Resource Point turns a touched humanoid corpse into an undead horror; if intact it can briefly pass as a sick living person. It always uses a Walkin' Dead statblock (Chapter 17).",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS956e139b89db",
+  "_key": "!items!dtdS956e139b89db",
+  "folder": "dtdSFdbff4ce756f"
+}

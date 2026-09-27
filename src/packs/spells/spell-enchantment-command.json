@@ -1,0 +1,60 @@
+{
+  "name": "Command",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Issue a single-word order; a target failing Arcana + Willpower must try to follow it with their next action. Clearly self-destructive orders are resisted automatically; if it cannot be finished in one combat action they do their best.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 242
+    },
+    "school": "enchantment",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "languageDependent",
+      "mindAffecting",
+      "savingThrow",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "wil",
+    "effect": "Issue a single-word order; a target failing Arcana + Willpower must try to follow it with their next action. Clearly self-destructive orders are resisted automatically; if it cannot be finished in one combat action they do their best.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSac3c10a6e31e",
+  "_key": "!items!dtdSac3c10a6e31e",
+  "folder": "dtdSFdc5d0e74c02"
+}

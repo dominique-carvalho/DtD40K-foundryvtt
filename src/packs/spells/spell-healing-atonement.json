@@ -1,0 +1,59 @@
+{
+  "name": "Atonement",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Removes the target's Degeneration at their highest Devotion level (e.g. only the Devotion 5 one out of 5/4/3). It cannot help the same target again until their Devotion rises by at least one. No material is named.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 249
+    },
+    "school": "healing",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "touch",
+      "somatic",
+      "verbal",
+      "social",
+      "material"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Removes the target's Degeneration at their highest Devotion level (e.g. only the Devotion 5 one out of 5/4/3). It cannot help the same target again until their Devotion rises by at least one. No material is named.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS5d49906cb9d5",
+  "_key": "!items!dtdS5d49906cb9d5",
+  "folder": "dtdSFdb0e4189fd7"
+}

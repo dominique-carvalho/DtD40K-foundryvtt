@@ -1,0 +1,58 @@
+{
+  "name": "Energy Burst",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Attack out to 30m with Blast 2 dealing 3k2 E damage plus 2 per Level.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 245
+    },
+    "school": "evocation",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "rangedTouch",
+      "somatic"
+    ],
+    "range": "30m",
+    "target": "",
+    "area": "Blast 2",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "E",
+      "perLevelRolled": 2,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Attack out to 30m with Blast 2 dealing 3k2 E damage plus 2 per Level.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS906af9d225b6",
+  "_key": "!items!dtdS906af9d225b6",
+  "folder": "dtdSFd59980be393"
+}

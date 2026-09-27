@@ -1,0 +1,59 @@
+{
+  "name": "Prismatic Ray",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Roll 1d10 three times for X, Y and Z: deals XkY E damage to as many as Z targets within 50m per Level.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 246
+    },
+    "school": "evocation",
+    "level": 3,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "comboOk",
+      "attack",
+      "rangedTouch",
+      "somatic",
+      "verbal"
+    ],
+    "range": "50m per level",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "XkY E (X, Y, Z = three 1d10 rolls)",
+    "save": "",
+    "effect": "Roll 1d10 three times for X, Y and Z: deals XkY E damage to as many as Z targets within 50m per Level.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS4ddd3ecc7f13",
+  "_key": "!items!dtdS4ddd3ecc7f13",
+  "folder": "dtdSFd59980be393"
+}

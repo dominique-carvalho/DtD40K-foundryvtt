@@ -1,0 +1,64 @@
+{
+  "name": "Mage Armor",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The touched creature receives AP equal to the caster's Level. This armor does not stack with mundane armor and needs no proficiency.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 234
+    },
+    "school": "abjuration",
+    "level": 3,
+    "tn": {
+      "value": 20,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "somatic",
+      "touch"
+    ],
+    "range": "",
+    "target": "touched creature",
+    "area": "",
+    "duration": {
+      "type": "days",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Day"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "The touched creature receives AP equal to the caster's Level. This armor does not stack with mundane armor and needs no proficiency.",
+    "perRaise": "+1 AP per raise, capped at 3 x the caster's Level.",
+    "automation": {
+      "target": "target",
+      "changes": [
+        {
+          "key": "system.modifiers.armor.apAll",
+          "value": 0,
+          "perRaise": 1,
+          "capLevelMultiplier": 3,
+          "perLevel": 1
+        }
+      ],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS2ecb649f4200",
+  "_key": "!items!dtdS2ecb649f4200",
+  "folder": "dtdSFd15e7ccabb1"
+}

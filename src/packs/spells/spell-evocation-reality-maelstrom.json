@@ -1,0 +1,59 @@
+{
+  "name": "Reality Maelstrom",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>All creatures within 10m test Arcana + Willpower; those failing must roll Perils of the Warp.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 247
+    },
+    "school": "evocation",
+    "level": 5,
+    "tn": {
+      "value": 25,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "comboOk",
+      "attack",
+      "savingThrow",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "10m",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "wil",
+    "effect": "All creatures within 10m test Arcana + Willpower; those failing must roll Perils of the Warp.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS31eeca17441b",
+  "_key": "!items!dtdS31eeca17441b",
+  "folder": "dtdSFd59980be393"
+}

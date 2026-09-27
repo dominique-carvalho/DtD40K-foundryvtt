@@ -1,0 +1,60 @@
+{
+  "name": "Blindness",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>A touched target is blinded for one day unless it resists with Arcana + Willpower.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 244
+    },
+    "school": "enchantment",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "savingThrow",
+      "somatic"
+    ],
+    "range": "",
+    "target": "touched target",
+    "area": "",
+    "duration": {
+      "type": "days",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Day"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "wil",
+    "effect": "A touched target is blinded for one day unless it resists with Arcana + Willpower.",
+    "perRaise": "",
+    "automation": {
+      "target": "target",
+      "changes": [],
+      "statuses": [
+        "blinded"
+      ]
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS44c6d1e74837",
+  "_key": "!items!dtdS44c6d1e74837",
+  "folder": "dtdSFdc5d0e74c02"
+}

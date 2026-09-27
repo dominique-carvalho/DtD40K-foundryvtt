@@ -1,0 +1,56 @@
+{
+  "name": "Swift Change",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Instantly swap into any clothing or armor being carried; a natural shapechanging ability (e.g. a werewolf's) can also be triggered this way.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 257
+    },
+    "school": "transmutation",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "free",
+    "keywords": [
+      "comboOk",
+      "somatic"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Instantly swap into any clothing or armor being carried; a natural shapechanging ability (e.g. a werewolf's) can also be triggered this way.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS9acc18b28306",
+  "_key": "!items!dtdS9acc18b28306",
+  "folder": "dtdSFd2362678279"
+}

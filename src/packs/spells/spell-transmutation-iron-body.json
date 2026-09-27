@@ -1,0 +1,79 @@
+{
+  "name": "Iron Body",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>The caster's body becomes living iron: 10 armor on all locations (not stacking with other armor), no need to breathe, +2 Strength and -2 Dexterity (minimum 1).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 259
+    },
+    "school": "transmutation",
+    "level": 5,
+    "tn": {
+      "value": 35,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "focus",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "caster",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "The caster's body becomes living iron: 10 armor on all locations (not stacking with other armor), no need to breathe, +2 Strength and -2 Dexterity (minimum 1).",
+    "perRaise": "",
+    "automation": {
+      "target": "self",
+      "changes": [
+        {
+          "key": "system.modifiers.armor.apAll",
+          "value": 10,
+          "perRaise": 0,
+          "capLevelMultiplier": 0,
+          "perLevel": 0
+        },
+        {
+          "key": "system.characteristics.str.value",
+          "value": 2,
+          "perRaise": 0,
+          "capLevelMultiplier": 0,
+          "perLevel": 0
+        },
+        {
+          "key": "system.characteristics.dex.value",
+          "value": -2,
+          "perRaise": 0,
+          "capLevelMultiplier": 0,
+          "perLevel": 0
+        }
+      ],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS2ade8eeef7fc",
+  "_key": "!items!dtdS2ade8eeef7fc",
+  "folder": "dtdSFd2362678279"
+}

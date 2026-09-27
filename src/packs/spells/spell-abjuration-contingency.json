@@ -1,0 +1,57 @@
+{
+  "name": "Contingency",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Right after finishing it the caster casts a second spell that is held until a trigger condition chosen now occurs. Targets are fixed at casting but may be described loosely. Only one Contingency may be active per character.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 235
+    },
+    "school": "abjuration",
+    "level": 5,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "social",
+      "somatic",
+      "touch"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "indefinite",
+      "value": 0,
+      "perLevel": false,
+      "expendable": true,
+      "concentration": "",
+      "text": "Indefinite (E)"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Right after finishing it the caster casts a second spell that is held until a trigger condition chosen now occurs. Targets are fixed at casting but may be described loosely. Only one Contingency may be active per character.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS369a947b0c1a",
+  "_key": "!items!dtdS369a947b0c1a",
+  "folder": "dtdSFd15e7ccabb1"
+}

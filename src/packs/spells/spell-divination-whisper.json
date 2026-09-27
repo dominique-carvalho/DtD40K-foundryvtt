@@ -1,0 +1,56 @@
+{
+  "name": "Whisper",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Sends a brief (about one sentence) message to a visible target; nobody else hears it.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 239
+    },
+    "school": "divination",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "free",
+    "keywords": [
+      "comboOk",
+      "subtle"
+    ],
+    "range": "",
+    "target": "a target you can see",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Sends a brief (about one sentence) message to a visible target; nobody else hears it.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSd88e93e1e90f",
+  "_key": "!items!dtdSd88e93e1e90f",
+  "folder": "dtdSFdd1dc71d110"
+}

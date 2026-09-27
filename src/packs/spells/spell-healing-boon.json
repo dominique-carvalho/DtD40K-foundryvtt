@@ -1,0 +1,64 @@
+{
+  "name": "Boon",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Allies within 10m add +1k0 to skill tests while it lasts.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 248
+    },
+    "school": "healing",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "comboOk",
+      "verbal"
+    ],
+    "range": "",
+    "target": "",
+    "area": "allies within 10m",
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Minute"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Allies within 10m add +1k0 to skill tests while it lasts.",
+    "perRaise": "",
+    "automation": {
+      "target": "target",
+      "changes": [
+        {
+          "key": "system.modifiers.rolls.all.rolled",
+          "value": 1,
+          "perRaise": 0,
+          "capLevelMultiplier": 0,
+          "perLevel": 0
+        }
+      ],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS8261814a8ff8",
+  "_key": "!items!dtdS8261814a8ff8",
+  "folder": "dtdSFdb0e4189fd7"
+}

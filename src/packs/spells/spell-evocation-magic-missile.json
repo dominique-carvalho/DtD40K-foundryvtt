@@ -1,0 +1,57 @@
+{
+  "name": "Magic Missile",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Deals 2k1 E to one target up to 30m away; it cannot be dodged.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 245
+    },
+    "school": "evocation",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "somatic"
+    ],
+    "range": "30m",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 2,
+      "kept": 1,
+      "type": "E",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Deals 2k1 E to one target up to 30m away; it cannot be dodged.",
+    "perRaise": "Each raise makes one extra copy against the same or another target; copies capped at the caster's Level.",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS5ee96114d8a1",
+  "_key": "!items!dtdS5ee96114d8a1",
+  "folder": "dtdSFd59980be393"
+}

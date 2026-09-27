@@ -1,0 +1,59 @@
+{
+  "name": "Shield Other",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>For 24 hours, hit points the touched target would lose may be taken by the caster instead, at the caster's option.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 248
+    },
+    "school": "healing",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "focus",
+      "touch",
+      "somatic",
+      "verbal",
+      "social"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "hours",
+      "value": 24,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "24 Hours"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "For 24 hours, hit points the touched target would lose may be taken by the caster instead, at the caster's option.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS3da61e93d00f",
+  "_key": "!items!dtdS3da61e93d00f",
+  "folder": "dtdSFdb0e4189fd7"
+}

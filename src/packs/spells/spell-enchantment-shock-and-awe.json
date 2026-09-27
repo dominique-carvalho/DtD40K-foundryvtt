@@ -1,0 +1,59 @@
+{
+  "name": "Shock and Awe",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Chosen targets who see the caster drop 5 initiative. If they have already acted and the change would grant them another turn this round, that turn is skipped.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 243
+    },
+    "school": "enchantment",
+    "level": 1,
+    "tn": {
+      "value": 15,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "somatic",
+      "mindAffecting",
+      "verbal"
+    ],
+    "range": "",
+    "target": "chosen targets who observe you",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "Chosen targets who see the caster drop 5 initiative. If they have already acted and the change would grant them another turn this round, that turn is skipped.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSb1b8332e8116",
+  "_key": "!items!dtdSb1b8332e8116",
+  "folder": "dtdSFdc5d0e74c02"
+}

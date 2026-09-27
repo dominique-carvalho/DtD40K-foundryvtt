@@ -1,0 +1,16 @@
+{
+  "_id": "dtdSFdd1dc71d110",
+  "_key": "!folders!dtdSFdd1dc71d110",
+  "name": "Divination",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 30000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "spellFolder": "divination"
+    }
+  }
+}

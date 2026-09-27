@@ -153,7 +153,7 @@ describe("class and XP constants (006)", () => {
     expect(DTD.XP_COSTS).toEqual({ characteristic: 200, newSkill: 100, skill: 50, feat: 100, asset: 100, powerStat: 300 });
     expect(DTD.STARTING_XP).toBe(600);
     expect(DTD.FREE_STUDY_MULTIPLIER).toBe(2);
-    expect(DTD.XP_KINDS).toEqual(["characteristic", "skill", "feat", "asset", "powerStat"]);
+    expect(DTD.XP_KINDS).toEqual(["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo"]);
   });
 });
 
@@ -232,5 +232,25 @@ describe("combat constants (008)", () => {
     expect(DTD.ACTION_TYPES).toEqual(["half", "full", "free", "reaction", "varies"]);
     expect(DTD.ACTION_SUBTYPES).toContain("provokes");
     expect(DTD.RESOLVE_DRAIN_LIMIT).toBe(4);
+  });
+});
+
+describe("magic constants (009)", () => {
+  it("lists the nine schools with their characteristic (pp. 227–228)", () => {
+    expect(Object.fromEntries(Object.entries(DTD.MAGIC_SCHOOLS).map(([k, v]) => [k, v.characteristic]))).toEqual({
+      abjuration: "wil", conjuration: "wil", divination: "wis", enchantment: "cha", evocation: "cha", healing: "wis",
+      illusion: "int", necromancy: "int", transmutation: "wis"
+    });
+    for (const [key, def] of Object.entries(DTD.MAGIC_SCHOOLS)) expect(def.label).toBe(`DTD.Magic.School.${key}`);
+    expect(DTD.MAGIC_SCHOOLS.evocation.name).toBe("Evocation");
+  });
+
+  it("lists keywords, actions, durations, strengths, Push limits and XP", () => {
+    expect(DTD.SPELL_KEYWORDS).toHaveLength(13);
+    expect(DTD.SPELL_ACTIONS).toEqual(["half", "full", "reaction", "free", "halfOrReaction"]);
+    expect(DTD.SPELL_DURATIONS).toContain("concentration");
+    expect(DTD.CAST_STRENGTHS).toEqual(["fettered", "unfettered", "push"]);
+    expect(DTD.MAX_PUSH).toEqual({ sanctioned: 3, unsanctioned: 4 });
+    expect(DTD.MAGIC_XP).toEqual({ newSchool: 200, perRank: 100, comboPerLevel: 50 });
   });
 });

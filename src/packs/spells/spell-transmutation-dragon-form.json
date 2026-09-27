@@ -1,0 +1,79 @@
+{
+  "name": "Dragon Form",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>Caster becomes a dragon: +3 Size, -1 Dexterity, +2 Strength, a 2k3 bite, Flyer (2x Speed) and a Flamer-profile breath usable once per round; can still cast and speak.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 259
+    },
+    "school": "transmutation",
+    "level": 5,
+    "tn": {
+      "value": 35,
+      "special": ""
+    },
+    "action": "half",
+    "keywords": [
+      "focus",
+      "somatic",
+      "verbal"
+    ],
+    "range": "",
+    "target": "caster",
+    "area": "",
+    "duration": {
+      "type": "scene",
+      "value": 1,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "One Scene"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "bite 2k3; breath as Flamer",
+    "save": "",
+    "effect": "Caster becomes a dragon: +3 Size, -1 Dexterity, +2 Strength, a 2k3 bite, Flyer (2x Speed) and a Flamer-profile breath usable once per round; can still cast and speak.",
+    "perRaise": "",
+    "automation": {
+      "target": "self",
+      "changes": [
+        {
+          "key": "system.size",
+          "value": 3,
+          "perRaise": 0,
+          "capLevelMultiplier": 0,
+          "perLevel": 0
+        },
+        {
+          "key": "system.characteristics.dex.value",
+          "value": -1,
+          "perRaise": 0,
+          "capLevelMultiplier": 0,
+          "perLevel": 0
+        },
+        {
+          "key": "system.characteristics.str.value",
+          "value": 2,
+          "perRaise": 0,
+          "capLevelMultiplier": 0,
+          "perLevel": 0
+        }
+      ],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdSda9d8163b7c7",
+  "_key": "!items!dtdSda9d8163b7c7",
+  "folder": "dtdSFd2362678279"
+}

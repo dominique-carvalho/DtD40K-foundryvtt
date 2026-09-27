@@ -1,0 +1,58 @@
+{
+  "name": "Consume Soul",
+  "type": "spell",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "<p>On a creature dead under a minute: the caster devours its soul, regains a resource point, and the creature cannot be resurrected while the caster exists.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 255
+    },
+    "school": "necromancy",
+    "level": 4,
+    "tn": {
+      "value": 30,
+      "special": ""
+    },
+    "action": "full",
+    "keywords": [
+      "attack",
+      "comboOk",
+      "somatic",
+      "touch"
+    ],
+    "range": "",
+    "target": "",
+    "area": "",
+    "duration": {
+      "type": "instant",
+      "value": 0,
+      "perLevel": false,
+      "expendable": false,
+      "concentration": "",
+      "text": "Instant"
+    },
+    "damage": {
+      "rolled": 0,
+      "kept": 0,
+      "type": "",
+      "perLevelRolled": 0,
+      "perLevelKept": 0
+    },
+    "damageText": "",
+    "save": "",
+    "effect": "On a creature dead under a minute: the caster devours its soul, regains a resource point, and the creature cannot be resurrected while the caster exists.",
+    "perRaise": "",
+    "automation": {
+      "target": "",
+      "changes": [],
+      "statuses": []
+    },
+    "learnedAt": 0
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdS110d4fb9577e",
+  "_key": "!items!dtdS110d4fb9577e",
+  "folder": "dtdSFdbff4ce756f"
+}

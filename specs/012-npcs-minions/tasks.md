@@ -44,39 +44,39 @@ quickstart.md
 
 - [X] T010 [P] [US1] Em `tests/unit/packs.test.mjs`: 47 `npc` + 4 `minionSquad`, 11 pastas, Regular Troops/Rebels com os dados da spec, armas embutidas com qualidades válidas, traits válidos, perícias válidas, squads da spec
 - [X] T011 [US1] Script do scratchpad `gen-antagonists-pack.mjs`: inventário → `src/packs/antagonists/*.json` (overrides dos derivados, armas com `npcDamage`, armadura sem duplicar traits); `assign-pack-ids --pack antagonists`; 6-gramas = 0
-- [ ] T012 [US1] `module/apps/npc-sheet.mjs` (herda a ficha do personagem: abas Principal, Combate, Magia, Antagonista), `module/apps/npc-context.mjs`, `templates/actor/npc-header.hbs`, `templates/actor/parts/npc.hbs`; registrar
-- [ ] T013 [P] [US1] i18n e estilos
-- [ ] T014 [US1] `npm test` e `npm run build:packs`
+- [X] T012 [US1] `module/apps/npc-sheet.mjs` (herda a ficha do personagem: abas Principal, Combate, Magia, Antagonista), `module/apps/npc-context.mjs`, `templates/actor/npc-header.hbs`, `templates/actor/parts/npc.hbs`; registrar
+- [X] T013 [P] [US1] i18n e estilos
+- [X] T014 [US1] `npm test` e `npm run build:packs`
 
 ---
 
 ## Phase 4: User Story 2 — NPC em combate (P2)
 
-- [ ] T015 [US2] `attack-service`: NPC proficiente, Força 0 com `npcDamage`, Amorphous no corpo; `raises`/`blast` na flag de dano
-- [ ] T016 [US2] Abrir `npc` em `damage-service`, `turn-service`/`combat.mjs` (fim de turno), `social-service` (alvo; Mindless recusado), `magic-service` (aprender e conjurar), `equipment-service`, `dtd40k.mjs` (refresh do combate)
-- [ ] T017 [US2] `condition-service.toggleCondition`: imunidades de Undead/Stuff of Nightmares
-- [ ] T018 [US2] `module/documents/npc-service.mjs`: `regenerate` (chamado em `DtdCombat#_onStartTurn`), `fearCard` e `fearFromCard` (`CHAT_ACTIONS.npcFear`), `templates/chat/npc-fear.hbs`
-- [ ] T019 [P] [US2] i18n e estilos
+- [X] T015 [US2] `attack-service`: NPC proficiente, Força 0 com `npcDamage`, Amorphous no corpo; `raises`/`blast` na flag de dano
+- [X] T016 [US2] Abrir `npc` em `damage-service`, `turn-service`/`combat.mjs` (fim de turno), `social-service` (alvo; Mindless recusado), `magic-service` (aprender e conjurar), `equipment-service`, `dtd40k.mjs` (refresh do combate)
+- [X] T017 [US2] `condition-service.toggleCondition`: imunidades de Undead/Stuff of Nightmares
+- [X] T018 [US2] `module/documents/npc-service.mjs`: `regenerate` (chamado em `DtdCombat#_onStartTurn`), `fearCard` e `fearFromCard` (`CHAT_ACTIONS.npcFear`), `templates/chat/npc-fear.hbs`
+- [X] T019 [P] [US2] i18n e estilos
 - [ ] T020 [US2] Validar quickstart 1–13 e registrar
 
 ---
 
 ## Phase 5: User Story 3 — Minion Squads (P3)
 
-- [ ] T021 [US3] `module/documents/minion-service.mjs`: `attack`, `rollMinionDamage` (`CHAT_ACTIONS.minionDamage`), `removeMinions`, `setAlly`; `templates/chat/minion-attack.hbs`
-- [ ] T022 [US3] `damage-service`: dano num `minionSquad` remove as baixas (e o desfazer guarda o número)
-- [ ] T023 [US3] `actor.withRollModifiers`: bônus dos minions aliados em testes de perícia
-- [ ] T024 [US3] `module/apps/minion-sheet.mjs` + `templates/actor/minion-sheet.hbs` (TR, minions, Damage Ratings, SD/Speed/alcance, atacar, aliado); registrar
-- [ ] T025 [P] [US3] i18n e estilos
+- [X] T021 [US3] `module/documents/minion-service.mjs`: `attack`, `rollMinionDamage` (`CHAT_ACTIONS.minionDamage`), `removeMinions`, `setAlly`; `templates/chat/minion-attack.hbs`
+- [X] T022 [US3] `damage-service`: dano num `minionSquad` remove as baixas (e o desfazer guarda o número)
+- [X] T023 [US3] `actor.withRollModifiers`: bônus dos minions aliados em testes de perícia
+- [X] T024 [US3] `module/apps/minion-sheet.mjs` + `templates/actor/minion-sheet.hbs` (TR, minions, Damage Ratings, SD/Speed/alcance, atacar, aliado); registrar
+- [X] T025 [P] [US3] i18n e estilos
 - [ ] T026 [US3] Validar quickstart 14–18 e registrar
 
 ---
 
 ## Phase 6: Polish
 
-- [ ] T027 [P] Atualizar `docs/analise-dtd.md` §16 para a 7.7a e o `README.md`
-- [ ] T028 `npm run lint` e `npm test`
-- [ ] T029 `graphify update .`
+- [X] T027 [P] Atualizar `docs/analise-dtd.md` §16 para a 7.7a e o `README.md`
+- [X] T028 `npm run lint` e `npm test`
+- [X] T029 `graphify update .`
 
 ## Dependencies
 

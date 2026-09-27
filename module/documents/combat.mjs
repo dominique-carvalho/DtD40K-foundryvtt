@@ -2,6 +2,7 @@ import { compareInitiative, initiativeDie } from "../rules/combat-actions.mjs";
 import { resetForRound } from "../rules/turn.mjs";
 import { endOfTurn, startOfRound, startOfTurn } from "./turn-service.mjs";
 import { sustainTurn } from "./magic-service.mjs";
+import { regenerate } from "./npc-service.mjs";
 
 /**
  * Combat and Combatant for Dungeons the Dragoning (spec 008, research R4/R5).
@@ -42,6 +43,8 @@ export class DtdCombat extends Combat {
     await startOfTurn(this, combatant);
     // Sustained spells spend their concentration action (spec 009, FR-014).
     await sustainTurn(combatant);
+    // Regeneration of NPCs (spec 012, FR-004).
+    await regenerate(combatant);
   }
 
   /** Surprised ends after round 1. @override */
@@ -52,6 +55,15 @@ export class DtdCombat extends Combat {
 }
 
 export class DtdCombatant extends Combatant {
+  /**
+   * Minion Squads have no characteristics: 1d10 + Threat Rating (spec 012).
+   * @override
+   */
+  _getInitiativeFormula() {
+    if (this.actor?.type === "minionSquad") return "1d10 + @threatRating";
+    return super._getInitiativeFormula();
+  }
+
   /**
    * What this combatant spent in the current round (research R5).
    * @returns {import("../rules/turn.mjs").TurnState}

@@ -25,10 +25,10 @@ Antes de registrar dados: `game.packs.get("dtd40k.antagonists").index.size === 5
 | 4 | NPC rola Weaponry | (perícia + característica) k característica | US2-1 |
 | 5 | NPC ataca herói com Lasgun | TN = SD do herói; dano 3k2 E sem Força | US2-2 |
 | 6 | Herói acerta o NPC | Aplicar desconta 5 AP e divide pela Resilience | US2-3 |
-| 7 | Dano de magia no Daemon (Aura) | Aura reduz | US2-4 |
-| 8 | Regeneration no turno | +1 HP, chat | US2-5 |
-| 9 | Acerto em Amorphous | Localização corpo | US2-6 |
-| 10 | Ataque social em Mindless | Recusado | US2-7 |
+| 7 | Dano de magia no Monodrone Modron (Aura 4) | Aura reduz | US2-4 |
+| 8 | Regeneration do Modron no turno | +1 HP, chat | US2-5 |
+| 9 | Acerto no Elemental (Amorphous) | Localização corpo | US2-6 |
+| 10 | Ataque social no Walkin' Dead (Mindless) | Recusado | US2-7 |
 | 11 | Stunned em Undead | Não aplicado | US2-8 |
 | 12 | Botão de medo (Fear 2) | Cartão; herói faz o Fear Test | US2-9 |
 | 13 | NPC Caster aprende e conjura | Como na 009, sancionado | US2-10 |

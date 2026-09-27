@@ -612,6 +612,13 @@ Insanity Points 0–100. A cada 10: Trauma test (Wil vs 10 + ⌊IP/5⌋). Distú
 
 ## 16. Antagonistas, NPCs e Minions
 
+**Na 7.7a** (cap. XX pp. 520–544; implementado na feature `012-npcs-minions`): 20 traits (Amorphous só manda os
+acertos para o corpo), **47 fichas** (5 criaturas genéricas) com SD, HP, Resilience e Speed já calculados e a armadura
+natural também na linha Armor; dano impresso já inclui a Força. **Minions**: squads de até 6, Threat Rating 1–5 (Speed =
+TR, SD = 5 × TR, ataque (minions)k(TR)), Damage Rating **1–5** (dano 5 × (DR + raises)), acerto derruba 1 + raises
+(Blast derruba o valor), alcance 10 × TR (o livro também diz 5×); aliados de um herói somam o maior TR +1 por minion
+extra nos testes de perícia, até a Fellowship. O texto abaixo é o levantamento da 1.6.
+
 Fonte: 1.6 pp. 335–359.
 
 **Bloco de NPC**: nome/descrição · 9 características (podem ser "−" ou `3[6]` para forma alternativa) · perícias · Speed · Size/Resilience · Static Defense · HP · feats · armadura (nome, AP, localizações) · ataques (melee: `Nome (XkY Tipo; Pen N; qualidades)`; ranged: `Nome (alcance; RoF; XkY; Pen; Clip; Reload; qualidades)`) · habilidades · traits · equipamento · Level.

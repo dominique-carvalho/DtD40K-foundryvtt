@@ -1,0 +1,78 @@
+<header class="sheet-header">
+  <div class="identity">
+    <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}" {{#if isEdit}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if isEdit}}
+      <input class="actor-name" type="text" name="name" value="{{actor.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="actor-name">{{actor.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <label>{{localize "DTD.Sheet.Level"}}
+          {{#if isEdit}}<input type="number" name="system.level" value="{{system.level}}" min="1" max="10" step="1">{{else}}<b>{{system.level}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Sheet.Size"}}
+          {{#if isEdit}}<input type="number" name="system.size" value="{{system.size}}" min="1" max="20" step="1">{{else}}<b>{{system.size}}</b>{{/if}}
+        </label>
+        <span class="identity-race">{{npcTab.category}}</span>
+        {{#if npcTab.page}}<span class="identity-race">{{localize "DTD.Race.Page"}} <b>{{npcTab.page}}</b></span>{{/if}}
+        {{#if (and npcTab.fear @root.isGM)}}<a class="pool-button" data-action="npcFear" data-tooltip="{{localize "DTD.Npc.FearHint"}}"><i class="fa-solid fa-ghost" inert></i> {{localize "DTD.Npc.Fear"}} {{npcTab.fear}}</a>{{/if}}
+      </div>
+    </div>
+    {{#if canToggle}}
+    <div class="mode-toggle" role="group" aria-label="{{localize "DTD.Sheet.ToggleMode"}}">
+      <button type="button" class="mode-button{{#if isEdit}} active{{/if}}" data-action="toggleMode" data-mode="edit">
+        <i class="fa-solid fa-pen" aria-hidden="true"></i> {{localize "DTD.Sheet.ModeEdit"}}
+      </button>
+      <button type="button" class="mode-button{{#if (and (not isEdit) (not isAdvance))}} active{{/if}}" data-action="toggleMode" data-mode="play">
+        <i class="fa-solid fa-dice-d10" aria-hidden="true"></i> {{localize "DTD.Sheet.ModePlay"}}
+      </button>
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="vitals">
+    <div class="tracks">
+      <div class="track hp">
+        <div class="track-label">
+          <span>{{localize "DTD.Sheet.HitPoints"}}</span>
+          <span class="track-values">
+            <input type="number" name="system.hp.value" value="{{system.hp.value}}" min="0" step="1">
+            <span>/ {{system.hp.max}}</span>
+          </span>
+        </div>
+        <div class="bar"><span class="fill" style="width: {{hpPct}}%"></span></div>
+      </div>
+      <div class="track resolve">
+        <div class="track-label">
+          <span>{{localize "DTD.Sheet.Resolve"}}</span>
+          <span class="track-values">
+            <input type="number" name="system.resolve.value" value="{{system.resolve.value}}" min="0" step="1">
+            <span>/ {{system.resolve.max}}</span>
+          </span>
+        </div>
+        <div class="bar"><span class="fill" style="width: {{resolvePct}}%"></span></div>
+      </div>
+    </div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.staticDefense"}}</span><span class="stat-value">{{system.derived.staticDefense}}</span></div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.mentalDefense"}}</span><span class="stat-value">{{system.derived.mentalDefense}}</span></div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.resilience"}}</span><span class="stat-value">{{system.derived.resilience}}</span></div>
+    <div class="stat-box">
+      <span class="stat-label">{{localize "DTD.Sheet.Fatigue"}}</span>
+      <span class="stat-value pair">
+        <input type="number" name="system.fatigue.value" value="{{system.fatigue.value}}" min="0" step="1">
+        <span>/ {{system.fatigue.max}}</span>
+      </span>
+    </div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.speed"}}</span><span class="stat-value">{{system.derived.speed}}</span></div>
+    {{#if npcTab.resource}}
+    <div class="stat-box">
+      <span class="stat-label">{{npcTab.resource.type}}</span>
+      <span class="stat-value pair">
+        <input type="number" name="system.npc.resource.value" value="{{npcTab.resource.value}}" min="0" step="1">
+        <span>/ {{npcTab.resource.max}}</span>
+      </span>
+    </div>
+    {{/if}}
+  </div>
+</header>

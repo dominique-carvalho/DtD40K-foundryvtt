@@ -1,6 +1,8 @@
 import { criticalPlan, criticalTableKey } from "../rules/critical.mjs";
 import { resolveDamage } from "../rules/damage.mjs";
 import { addFatigue, rollValue, toggleCondition } from "./condition-service.mjs";
+import { removeMinions } from "./minion-service.mjs";
+import { casualties } from "../rules/minions.mjs";
 
 /**
  * Applying damage to targets and critical effects (spec 008, US1; research R1/R2).
@@ -58,9 +60,17 @@ export async function applyDamage(message, tokenUuids) {
     return;
   }
   const applied = [];
+  const squads = [];
   for (const token of tokens) {
     const actor = token?.actor;
-    if (actor?.type !== "character") {
+    // Minion Squads have no hit points: the hit removes minions (spec 012, FR-008).
+    if (actor?.type === "minionSquad") {
+      const before = actor.system.count;
+      await removeMinions(actor, casualties({ raises: damage.raises ?? 0, blast: damage.blast ?? 0 }));
+      squads.push({ actorUuid: actor.uuid, minion: true, before: { count: before } });
+      continue;
+    }
+    if (actor?.type !== "character" && actor?.type !== "npc") {
       if (token) ui.notifications.warn(game.i18n.format("DTD.Combat.NotCharacter", { name: token.name }));
       continue;
     }
@@ -71,7 +81,7 @@ export async function applyDamage(message, tokenUuids) {
   await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor: applied[0].actor }),
     content,
-    flags: { dtd40k: { applied: applied.map((a) => a.undo) } }
+    flags: { dtd40k: { applied: [...applied.map((a) => a.undo), ...squads] } }
   });
 }
 
@@ -168,6 +178,10 @@ export async function undoDamage(message) {
   for (const entry of list) {
     const actor = await foundry.utils.fromUuid(entry.actorUuid);
     if (!actor) continue;
+    if (entry.minion) {
+      await actor.update({ "system.count": entry.before.count });
+      continue;
+    }
     const added = actor.effects.filter((effect) => !entry.before.effects.includes(effect.id)).map((effect) => effect.id);
     if (added.length) await actor.deleteEmbeddedDocuments("ActiveEffect", added);
     await actor.update({ "system.hp.value": entry.before.hp, "system.critical.value": entry.before.critical, "system.fatigue.value": entry.before.fatigue });

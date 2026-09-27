@@ -4,6 +4,7 @@ import { rollAndKeep } from "../rules/dice.mjs";
 import { formatPool, normalizePool } from "../rules/pool.mjs";
 import { runTest } from "../rules/test.mjs";
 import { toggleCondition } from "./condition-service.mjs";
+import { isAmorphous } from "../rules/npc.mjs";
 import { combatFlags, situationModifiers } from "../rules/defense.mjs";
 import {
   UNARMED, attackPool, attackSkill, damagePool, effectiveQualities, fullAutoHits, hitLocation, isJammed, isProficient
@@ -70,7 +71,7 @@ export function weaponPools(actor, item) {
   const skill = attackSkill(weapon);
   const attack = attackPool({
     weapon, skill: actor.system.skills[skill].value, level: actor.system.level,
-    proficient: isProficient(weapon, proficiencyChoices(actor)), focus: item ? hasWeaponFeat(actor, "Weapon Focus", item) : false
+    proficient: actor.type === "npc" || isProficient(weapon, proficiencyChoices(actor)), focus: item ? hasWeaponFeat(actor, "Weapon Focus", item) : false
   });
   const damage = damagePool({
     weapon, str: actor.system.characteristics.str.value,
@@ -139,7 +140,8 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
 
   const thrown = options.weapon.thrown;
   const skill = attackSkill(weapon, { thrown });
-  const proficient = isProficient(weapon, proficiencyChoices(actor), { thrown });
+  // NPCs are proficient with the weapons of their stat block (spec 012).
+  const proficient = actor.type === "npc" || isProficient(weapon, proficiencyChoices(actor), { thrown });
   const pool = attackPool({
     weapon, skill: actor.system.skills[skill].value, level: actor.system.level, proficient,
     focus: item ? hasWeaponFeat(actor, "Weapon Focus", item) : false, options: options.weapon
@@ -183,7 +185,9 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   });
   const d10 = Math.floor(rng() * 10) + 1;
   const called = action.calledShot && options.situation?.calledLocation;
-  const location = called || hitLocation(d10);
+  // Every hit on an Amorphous creature goes to the body (spec 012, p. 520).
+  const amorphous = target?.type === "npc" && isAmorphous(target.system.npc.traits);
+  const location = called || (amorphous ? "body" : hitLocation(d10));
   const attack = {
     actorUuid: actor.uuid, itemId: item?.id ?? "unarmed", options: options.weapon, raises, hits, location,
     ammoId: options.ammoId, rollMode: options.rollMode, targetUuid: target?.uuid ?? "", total: testResult.total,
@@ -250,7 +254,8 @@ export async function rollDamage(message) {
   if (m?.qualities.length) weapon = { ...weapon, qualities: [...weapon.qualities, ...m.qualities.map((q) => ({ key: q.key, value: q.value ?? null }))] };
   const pool = damagePool({
     weapon,
-    str: m?.noStrength ? 0 : actor.system.characteristics.str.value,
+    // NPC weapons carry the printed damage, Strength included (spec 012).
+    str: m?.noStrength || item?.getFlag("dtd40k", "npcDamage") ? 0 : actor.system.characteristics.str.value,
     options: attack.options,
     extraHits: Math.max(0, attack.hits - 1),
     specialization: item ? hasWeaponFeat(actor, "Weapon Specialization", item) : false,
@@ -297,7 +302,9 @@ export async function rollDamage(message) {
     content,
     flags: { dtd40k: { damage: {
       total: result.total, pen: pool.pen, type: weapon.damage.type, location: attack.location,
-      tearing: Boolean(effectiveQualities(weapon).tearing), unarmed: attackSkill(weapon) === "brawl", magic: false, resolve
+      tearing: Boolean(effectiveQualities(weapon).tearing), unarmed: attackSkill(weapon) === "brawl", magic: false, resolve,
+      // Minion Squads lose one minion plus one per raise, or the Blast rating (spec 012).
+      raises: attack.raises, blast: weapon.qualities.find((q) => q.key === "blast")?.value ?? 0
     } } }
   };
   ChatMessage.applyRollMode(chatData, attack.rollMode ?? game.settings.get("core", "rollMode"));

@@ -275,7 +275,7 @@ export async function startOfRound(combat) {
  */
 export async function endOfTurn(actor) {
   if (!actor) return;
-  if (actor.type !== "character") return;
+  if (actor.type !== "character" && actor.type !== "npc") return;
   const notes = [];
   if (actor.statuses.has("onFire")) {
     await actor.update({ "system.hp.value": Math.max(0, actor.system.hp.value - 1) });

@@ -54,7 +54,7 @@ Stat) aparecem como texto, com o valor (Speed de voo, pontos do Resource Stat).
 **Why this priority**: é o uso principal dos antagonistas.
 
 **Independent Test**: Regular Troops ataca um herói com o Lasgun (Ballistics 3 + Level) e o dano 3k2 E sai sem somar
-Força; o herói acerta o NPC e o Aplicar desconta os 5 AP do Flak Suit; um Incarnate Lesser Daemon recebe dano de magia
+Força; o herói acerta o NPC e o Aplicar desconta os 5 AP do Flak Suit; um Monodrone Modron (Aura 4) recebe dano de magia
 reduzido pela Aura; Walkin' Dead não fica Stunned.
 
 **Acceptance Scenarios**:

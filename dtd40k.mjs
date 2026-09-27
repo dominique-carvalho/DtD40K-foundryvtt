@@ -5,6 +5,10 @@ import { DTD } from "./module/config.mjs";
 import { CharacterData } from "./module/data/character-data.mjs";
 import { NpcData } from "./module/data/npc-data.mjs";
 import { MinionSquadData } from "./module/data/minion-squad-data.mjs";
+import { NpcSheet } from "./module/apps/npc-sheet.mjs";
+import { MinionSheet } from "./module/apps/minion-sheet.mjs";
+import { fearFromCard } from "./module/documents/npc-service.mjs";
+import { rollMinionDamage } from "./module/documents/minion-service.mjs";
 import { RaceData } from "./module/data/race-data.mjs";
 import { ExaltationData } from "./module/data/exaltation-data.mjs";
 import { FeatData } from "./module/data/feat-data.mjs";
@@ -77,6 +81,18 @@ Hooks.once("init", () => {
     label: "DTD.Sheet.Character"
   });
 
+  // Antagonists (spec 012).
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Actor, "dtd40k", NpcSheet, {
+    types: ["npc"],
+    makeDefault: true,
+    label: "DTD.Sheet.Npc"
+  });
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Actor, "dtd40k", MinionSheet, {
+    types: ["minionSquad"],
+    makeDefault: true,
+    label: "DTD.Sheet.MinionSquad"
+  });
+
   foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", RaceSheet, {
     types: ["race"],
     makeDefault: true,
@@ -137,7 +153,7 @@ Hooks.once("init", () => {
 function refreshCombatants(combat) {
   for (const combatant of combat.combatants) {
     const actor = combatant.actor;
-    if (actor?.type !== "character") continue;
+    if (actor?.type !== "character" && actor?.type !== "npc") continue;
     // Exaltation spending depends on the round (004); the Combat tab shows the turn state (008).
     if (actor.items.some((item) => item.type === "exaltation")) actor.reset();
     if (actor.sheet?.rendered) actor.sheet.render();
@@ -165,7 +181,10 @@ const CHAT_ACTIONS = {
   spellDamage: (message) => rollSpellDamage(message),
   resistSpell: (message) => resistSpell(message),
   // Sword Schools and Gun Kata (spec 010): effects of a Special Attack on the target.
-  martialEffects: (message) => applyAttackEffects(message)
+  martialEffects: (message) => applyAttackEffects(message),
+  // Antagonists (spec 012): Fear Test from an NPC card, Minion Squad damage.
+  npcFear: (message) => fearFromCard(message),
+  minionDamage: (message) => rollMinionDamage(message)
 };
 Hooks.on("renderChatMessageHTML", (message, html) => {
   for (const button of html.querySelectorAll("[data-dtd-action]")) {

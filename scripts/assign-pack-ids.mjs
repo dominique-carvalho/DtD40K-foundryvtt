@@ -8,6 +8,7 @@
  *   node scripts/assign-pack-ids.mjs --pack equipment
  *   node scripts/assign-pack-ids.mjs --pack combat-tables
  *   node scripts/assign-pack-ids.mjs --pack spells
+ *   node scripts/assign-pack-ids.mjs --pack martial-schools
  */
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -148,6 +149,20 @@ const LAYOUTS = {
       folderOf: ({ system }) => folders[system.school],
       seed: (file) => `spell:${file}`,
       prefix: "dtdS"
+    };
+  },
+  // Sword Schools and Gun Kata of chapters IX–X (spec 010): one folder per kind.
+  "martial-schools": () => {
+    const folders = {
+      sword: folder("martial-folder:sword", "dtdMFd", "sword", "Sword Schools", null, 10000, "martialFolder"),
+      gunKata: folder("martial-folder:gunKata", "dtdMFd", "gunKata", "Gun Kata", null, 20000, "martialFolder")
+    };
+    return {
+      folders,
+      fileOf: (key) => `folder-${slug(key)}.json`,
+      folderOf: ({ system }) => folders[system.kind],
+      seed: (file) => `martial:${file}`,
+      prefix: "dtdM"
     };
   }
 };

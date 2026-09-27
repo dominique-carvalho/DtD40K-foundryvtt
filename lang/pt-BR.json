@@ -11,7 +11,8 @@
       "weapon": "Arma",
       "armor": "Armadura",
       "gear": "Equipamento",
-      "spell": "Magia"
+      "spell": "Magia",
+      "martialSchool": "Escola Marcial"
     }
   },
   "DTD": {
@@ -122,7 +123,8 @@
         "class": "Classe e XP",
         "equipment": "Equipamento",
         "combat": "Combate",
-        "magic": "Magia"
+        "magic": "Magia",
+        "martial": "Marcial"
       },
       "SocialInitiative": "Iniciativa social",
       "Fatigue": "Fatigue",
@@ -133,7 +135,8 @@
       "Class": "Ficha de Classe DtD",
       "ModeAdvance": "Evolução",
       "Equipment": "Ficha de Equipamento DtD",
-      "Spell": "Ficha de Magia DtD"
+      "Spell": "Ficha de Magia DtD",
+      "MartialSchool": "Ficha de Escola Marcial DtD"
     },
     "Roll": {
       "Success": "Sucesso",
@@ -1300,6 +1303,47 @@
       "SpellDamage": "magia: Aura no lugar da armadura",
       "Sustaining": "Sustentando {spell}: a ação de concentração foi gasta.",
       "SustainEnds": "{spell} termina: não há ação para sustentá-la."
+    },
+    "Martial": {
+      "School": {
+        "desertWind": "Desert Wind",
+        "devotedSpirit": "Devoted Spirit",
+        "diamondMind": "Diamond Mind",
+        "ironHeart": "Iron Heart",
+        "settingSun": "Setting Sun",
+        "shadowHand": "Shadow Hand",
+        "stoneDragon": "Stone Dragon",
+        "tigerClaw": "Tiger Claw",
+        "whiteRaven": "White Raven",
+        "clayPigeon": "Clay Pigeon",
+        "crisisZone": "Crisis Zone",
+        "elementalGearbolt": "Elemental Gearbolt",
+        "pointBlank": "Point Blank",
+        "silentScope": "Silent Scope",
+        "tinStar": "Tin Star"
+      },
+      "Kind": {
+        "sword": "Sword School",
+        "gunKata": "Gun Kata"
+      },
+      "EntryType": {
+        "action": "Ação",
+        "weapon": "Arma",
+        "flaw": "Falha da escola",
+        "skill": "Perícia",
+        "advantage": "Vantagem",
+        "mastery": "Mastery"
+      },
+      "Rank": {
+        "1": "Apprentice",
+        "2": "Initiate",
+        "3": "Journeyman",
+        "4": "Master",
+        "5": "Grandmaster"
+      },
+      "KeySkill": "Perícia-chave",
+      "WeaponGroup": "Grupo de arma",
+      "TextOnlyHint": "Não automatizado: aparece como texto no cartão."
     }
   }
 }

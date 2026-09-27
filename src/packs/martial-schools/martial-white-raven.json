@@ -1,0 +1,148 @@
+{
+  "name": "White Raven",
+  "type": "martialSchool",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A leadership and teamwork style that sets foes up for allies, using cavalry weapons.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 271
+    },
+    "key": "whiteRaven",
+    "kind": "sword",
+    "keySkill": "command",
+    "weaponGroup": "Cavalry",
+    "summary": "A leadership and teamwork style that sets foes up for allies, using cavalry weapons.",
+    "entries": [
+      {
+        "id": "weaponCavalry",
+        "rank": 1,
+        "type": "weapon",
+        "name": "Weapon (Cavalry)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attack must be made with a Cavalry weapon.",
+        "automation": {
+          "requires": {
+            "weaponGroup": "Cavalry"
+          }
+        }
+      },
+      {
+        "id": "actionCharge",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Charge)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attacks may use the Charge action.",
+        "automation": {
+          "unlocksAction": "charge"
+        }
+      },
+      {
+        "id": "perfectPositioning",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Perfect Positioning",
+        "cost": -2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Only usable when the target has moved after your previous turn.",
+        "automation": {
+          "requires": {
+            "reminder": true
+          },
+          "text": true
+        }
+      },
+      {
+        "id": "roadClearingTechnique",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Road-Clearing Technique",
+        "cost": 2,
+        "perPoint": true,
+        "variableCost": [],
+        "effect": "Up to your coming turn, allies attacking this foe get one free raise per purchase.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "skillCommand",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Command)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Command against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "command"
+          }
+        }
+      },
+      {
+        "id": "knightsMovementConcentration",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Knight's Movement Concentration",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Movement during or after this attack does not provoke opportunity attacks.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "masteryMarkedTarget",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Mastery (Marked Target)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Enemies in your melee reach must spend a reaction to attack your allies.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "attentionDrawingStrike",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Attention Drawing Strike",
+        "cost": 3,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Targets hit cannot Parry or Dodge until their next turn.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "wolfPackTechnique",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Wolf Pack Technique",
+        "cost": 5,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Targets hit provoke an opportunity attack.",
+        "automation": {
+          "text": true
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdM046ff4474749",
+  "_key": "!items!dtdM046ff4474749",
+  "folder": "dtdMFd04e0d91db2"
+}

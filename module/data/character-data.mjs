@@ -1,5 +1,6 @@
-import { ADDICTION_LEVELS, CHARACTERISTICS, DERIVED_KEYS, MAGIC_SCHOOLS, SKILLS, STARTING_XP, XP_KINDS } from "../config.mjs";
+import { ADDICTION_LEVELS, CHARACTERISTICS, DERIVED_KEYS, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, SKILLS, STARTING_XP, XP_KINDS } from "../config.mjs";
 import { spellSlots } from "../rules/magic.mjs";
+import { adeptLevels } from "../rules/martial.mjs";
 import { effectiveWealth } from "../rules/acquisition.mjs";
 import { characterLevel } from "../rules/class.mjs";
 import { computeDerived } from "../rules/derived.mjs";
@@ -10,7 +11,7 @@ import { computeExaltation } from "../rules/exaltation.mjs";
 import { capValue } from "../rules/race.mjs";
 import { xpTotals } from "../rules/xp.mjs";
 
-const { ArrayField, BooleanField, HTMLField, NumberField, SchemaField, StringField } = foundry.data.fields;
+const { ArrayField, BooleanField, HTMLField, NumberField, ObjectField, SchemaField, StringField } = foundry.data.fields;
 
 /**
  * Integer field helper.
@@ -139,6 +140,38 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
           effects: new ArrayField(new StringField({ required: true, blank: false }))
         }))
       }),
+      // Sword Schools and Gun Kata (spec 010, research R2/R4/R6): ranks, Special Attacks and Trick Shots.
+      martial: new SchemaField({
+        schools: new SchemaField(Object.fromEntries(Object.keys(MARTIAL_SCHOOLS).map((key) => [key, new SchemaField({
+          value: integer(0, { min: 0, max: 6 })
+        })]))),
+        attacks: new ArrayField(new SchemaField({
+          id: new StringField({ required: true, blank: false }),
+          name: new StringField({ required: true, blank: false, trim: true }),
+          kind: new StringField({ required: true, choices: ["special", "trick"], initial: "special" }),
+          action: new StringField({ required: true, blank: false, initial: "standardAttack" }),
+          advantages: new ArrayField(new SchemaField({
+            ref: new StringField({ required: true, blank: false }),
+            count: integer(1, { min: 1 }),
+            choice: integer(0, { min: 0 })
+          })),
+          restrictions: new ArrayField(new SchemaField({
+            ref: new StringField({ required: true, blank: false }),
+            count: integer(1, { min: 1 })
+          })),
+          // Style points of Advantages already paid for (edits pay only the points added).
+          paid: integer(0, { min: 0 }),
+          // Earlier definitions, restored when an edit is undone in the XP log.
+          history: new ArrayField(new ObjectField()),
+          state: new SchemaField({
+            lastRound: integer(0, { min: 0 }),
+            lastCombat: new StringField({ required: true, blank: true }),
+            usedScene: new BooleanField({ initial: false }),
+            // Prepared by Aim, Feint, Ready or Aid Another: the next attack gets the Advantages until this round.
+            readyUntil: integer(0, { min: 0 })
+          })
+        }))
+      }),
       // Acquisition (spec 007, research R9): Wealth, windfalls and the active Wealth Strain penalty.
       wealth: new SchemaField({
         value: integer(0, { min: 0, max: 5 }),
@@ -203,6 +236,8 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     this.#prepareExaltation();
     this.#prepareCombat();
     this.#prepareMagic();
+    // Martial Adept and Gunslinger Level: the highest Sword School and Gun Kata (pp. 260, 272).
+    this.martial.levels = adeptLevels(Object.fromEntries(Object.entries(this.martial.schools).map(([key, s]) => [key, s.value])));
   }
 
   /**

@@ -1,0 +1,155 @@
+{
+  "name": "Shadow Hand",
+  "type": "martialSchool",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A deceptive assassin's style of surprise and misdirection with small, concealable blades.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 268
+    },
+    "key": "shadowHand",
+    "kind": "sword",
+    "keySkill": "stealth",
+    "weaponGroup": "Parrying",
+    "summary": "A deceptive assassin's style of surprise and misdirection with small, concealable blades.",
+    "entries": [
+      {
+        "id": "weaponParrying",
+        "rank": 1,
+        "type": "weapon",
+        "name": "Weapon (Parrying)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attack must be made with a Parrying weapon.",
+        "automation": {
+          "requires": {
+            "weaponGroup": "Parrying"
+          }
+        }
+      },
+      {
+        "id": "actionReady",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Ready)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attacks may use Ready; if you ready a weapon and attack with it, advantages carry over to that next Standard Attack (which cannot be a Special Attack).",
+        "automation": {
+          "unlocksAction": "ready",
+          "prepares": true
+        }
+      },
+      {
+        "id": "deathBlow",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Death Blow",
+        "cost": -2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Usable only against an unaware or helpless target.",
+        "automation": {
+          "requires": {
+            "targetStatus": [
+              "surprised",
+              "helpless"
+            ]
+          }
+        }
+      },
+      {
+        "id": "mosquitosBite",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Mosquito's Bite",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The attack's effect can be delayed up to one minute; the target does not notice until it takes effect.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "skillStealth",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Stealth)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Stealth against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "stealth"
+          }
+        }
+      },
+      {
+        "id": "ringTheTempleBell",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Ring the Temple Bell",
+        "cost": 1,
+        "perPoint": true,
+        "variableCost": [],
+        "effect": "Each purchase adds 5 m of reach/range to the attack.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "masterySheathedBlade",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Mastery (Sheathed Blade)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Attacks with a weapon drawn this turn get +2k1.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "curvingShadowsAttack",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Curving Shadows Attack",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The attack gains Flexible.",
+        "automation": {
+          "quality": {
+            "key": "flexible"
+          }
+        }
+      },
+      {
+        "id": "cobrasVenomTechnique",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Cobra's Venom Technique",
+        "cost": 3,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The attack gains Toxic, repeating every round until the target passes the test.",
+        "automation": {
+          "quality": {
+            "key": "toxic"
+          }
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdM27a005b2c458",
+  "_key": "!items!dtdM27a005b2c458",
+  "folder": "dtdMFd04e0d91db2"
+}

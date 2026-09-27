@@ -23,29 +23,29 @@ quickstart.md
 
 ## Phase 1: Setup
 
-- [ ] T001 Em `system.json`: `documentTypes.Item.martialSchool: { "htmlFields": ["description"] }` e o pack `martial-schools` (Item, OBSERVER para jogadores)
-- [ ] T002 [P] Em `scripts/assign-pack-ids.mjs`: layout `martial-schools` (pastas Sword Schools e Gun Kata; prefixos `dtdMFd`/`dtdM`), sem mudar IDs existentes
+- [X] T001 Em `system.json`: `documentTypes.Item.martialSchool: { "htmlFields": ["description"] }` e o pack `martial-schools` (Item, OBSERVER para jogadores)
+- [X] T002 [P] Em `scripts/assign-pack-ids.mjs`: layout `martial-schools` (pastas Sword Schools e Gun Kata; prefixos `dtdMFd`/`dtdM`), sem mudar IDs existentes
 
 ---
 
 ## Phase 2: Foundational
 
-- [ ] T003 [P] Em `tests/unit/config.test.mjs`: `MARTIAL_SCHOOLS` (15; 9 `sword`, 6 `gunKata`; perícia de cada), `MARTIAL_ENTRY_TYPES`, `MARTIAL_XP.perStylePoint` = 50, `XP_KINDS` com `martial` e `specialAttack`
-- [ ] T004 Em `module/config.mjs`: as constantes de T003 com fonte; fazer T003 passar
-- [ ] T005 Criar `module/data/martial-school-data.mjs` (data-model.md, entradas com `automation`) e registrar em `dtd40k.mjs`
-- [ ] T006 Em `module/data/character-data.mjs`: `martial.schools` (15), `martial.attacks`; derivados `adeptLevel` e `gunslingerLevel`
-- [ ] T007 [P] i18n base: `TYPES.Item.martialSchool`, `DTD.Martial.School.*`, tipos de entrada, universais (rótulo e efeito próprio), níveis de maestria
-- [ ] T008 Rodar `npm test` e `npx eslint .`
+- [X] T003 [P] Em `tests/unit/config.test.mjs`: `MARTIAL_SCHOOLS` (15; 9 `sword`, 6 `gunKata`; perícia de cada), `MARTIAL_ENTRY_TYPES`, `MARTIAL_XP.perStylePoint` = 50, `XP_KINDS` com `martial` e `specialAttack`
+- [X] T004 Em `module/config.mjs`: as constantes de T003 com fonte; fazer T003 passar
+- [X] T005 Criar `module/data/martial-school-data.mjs` (data-model.md, entradas com `automation`) e registrar em `dtd40k.mjs`
+- [X] T006 Em `module/data/character-data.mjs`: `martial.schools` (15), `martial.attacks`; derivados `adeptLevel` e `gunslingerLevel`
+- [X] T007 [P] i18n base: `TYPES.Item.martialSchool`, `DTD.Martial.School.*`, tipos de entrada, universais (rótulo e efeito próprio), níveis de maestria
+- [X] T008 Rodar `npm test` e `npx eslint .`
 
 ---
 
 ## Phase 3: User Story 1 — Compêndio (P1)
 
-- [ ] T009 [P] [US1] Em `tests/unit/packs.test.mjs`: 15 escolas, 2 pastas, 9 entradas cobrindo os níveis 1–5, Desert Wind e Clay Pigeon com os campos da spec, `unlocksAction` válido em `COMBAT_ACTIONS`, qualidades válidas em `WEAPON_QUALITIES`, grupos de arma existentes na 007
-- [ ] T010 [US1] Script do scratchpad `gen-martial-pack.mjs`: inventário → `src/packs/martial-schools/*.json` (ids de entrada estáveis, automação da research R3–R5); `assign-pack-ids --pack martial-schools`; checagem de 6-gramas = 0
-- [ ] T011 [US1] `module/apps/martial-school-sheet.mjs` + `templates/item/martial-school-sheet.hbs` (entradas por nível com custo e marcação de repetível); registrar
-- [ ] T012 [P] [US1] i18n e estilos da ficha da escola
-- [ ] T013 [US1] `npm test` e `npm run build:packs`
+- [X] T009 [P] [US1] Em `tests/unit/packs.test.mjs`: 15 escolas, 2 pastas, 9 entradas cobrindo os níveis 1–5, Desert Wind e Clay Pigeon com os campos da spec, `unlocksAction` válido em `COMBAT_ACTIONS`, qualidades válidas em `WEAPON_QUALITIES`, grupos de arma existentes na 007
+- [X] T010 [US1] Script do scratchpad `gen-martial-pack.mjs`: inventário → `src/packs/martial-schools/*.json` (ids de entrada estáveis, automação da research R3–R5); `assign-pack-ids --pack martial-schools`; checagem de 6-gramas = 0
+- [X] T011 [US1] `module/apps/martial-school-sheet.mjs` + `templates/item/martial-school-sheet.hbs` (entradas por nível com custo e marcação de repetível); registrar
+- [X] T012 [P] [US1] i18n e estilos da ficha da escola
+- [X] T013 [US1] `npm test` e `npm run build:packs`
 
 ---
 

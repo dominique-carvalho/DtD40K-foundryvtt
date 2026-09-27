@@ -1,0 +1,154 @@
+{
+  "name": "Tin Star",
+  "type": "martialSchool",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A lawman's no-frills gunfighting style built on reliability and the quick draw.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 279
+    },
+    "key": "tinStar",
+    "kind": "gunKata",
+    "keySkill": "scrutiny",
+    "weaponGroup": "",
+    "summary": "A lawman's no-frills gunfighting style built on reliability and the quick draw.",
+    "entries": [
+      {
+        "id": "hairTrigger",
+        "rank": 1,
+        "type": "mastery",
+        "name": "Hair Trigger",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "+2 to all initiative rolls.",
+        "automation": {
+          "changes": [
+            {
+              "key": "system.modifiers.initiative",
+              "value": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "actionReady",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Ready)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Trick Shots may use Ready; after readying a weapon, advantages carry to the next Standard Attack made with it (not a Trick Shot).",
+        "automation": {
+          "unlocksAction": "ready",
+          "prepares": true
+        }
+      },
+      {
+        "id": "blazeOfGlory",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Blaze of Glory",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Usable only when you have lost at least half your total HP.",
+        "automation": {
+          "requires": {
+            "hpHalf": true
+          }
+        }
+      },
+      {
+        "id": "silverBullet",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Silver Bullet",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Its dice also explode on nines (the book leaves open which roll).",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "skillScrutiny",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Scrutiny)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Scrutiny against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "scrutiny"
+          }
+        }
+      },
+      {
+        "id": "justifier",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Justifier",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Ignore penalties from concealment, conditions and targets in melee.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "reloadingKata",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Reloading Kata",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Reloading any weapon takes only a Free Action.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "duelingTechnique",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Dueling Technique",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Name one Worthy Foe per combat for +2k0 on attacks against it; lost if you attack someone else or an ally attacks it.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "deadMansHand",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Dead Man's Hand",
+        "cost": 4,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Add Dexterity as rolled dice to the attack.",
+        "automation": {
+          "attack": {
+            "rolledCharacteristic": "dex"
+          },
+          "text": true
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdMedb4a6a88449",
+  "_key": "!items!dtdMedb4a6a88449",
+  "folder": "dtdMFd0aa488a7d9"
+}

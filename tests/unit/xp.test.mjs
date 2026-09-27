@@ -113,3 +113,33 @@ describe("Magic Schools and Spell Combos (spec 009, p. 16, p. 229)", () => {
     });
   });
 });
+
+describe("Sword Schools and Gun Kata (spec 010, p. 16)", () => {
+  const cls = (status, swordSchools = [], gunKata = []) => ({ system: { status, swordSchools, gunKata, magicSchools: [], characteristics: [], skills: [], feats: [], anyCharacteristic: false } });
+  it("costs like a Magic School: 200 new, then 100 × rank", () => {
+    expect(advanceCost("martial", 0)).toBe(200);
+    expect(advanceCost("martial", 1)).toBe(100);
+    expect(advanceCost("martial", 2)).toBe(200);
+  });
+
+  it("buys only schools on the class Sword School or Gun Kata list, up to the Level", () => {
+    const base = { kind: "martial", race: null, owned: [], level: 2 };
+    expect(canAdvance({ ...base, key: "ironHeart", classes: [cls("current", ["Iron Heart"])], from: 0 })).toMatchObject({ allowed: true });
+    expect(canAdvance({ ...base, key: "clayPigeon", classes: [cls("current", [], ["Clay Pigeon"])], from: 1 })).toMatchObject({ allowed: true });
+    expect(canAdvance({ ...base, key: "tigerClaw", classes: [cls("current", ["Iron Heart"])], from: 0 })).toMatchObject({ allowed: false, reason: "offList" });
+    expect(canAdvance({ ...base, key: "ironHeart", classes: [cls("current", ["Iron Heart"])], from: 2 })).toMatchObject({ allowed: false, reason: "atCap" });
+    expect(canAdvance({ ...base, key: "ironHeart", classes: [cls("completed", ["Iron Heart"])], from: 1 })).toMatchObject({ allowed: true });
+    expect(canAdvance({ ...base, key: "tinStar", classes: [cls("completed", ["Iron Heart"])], from: 0 })).toMatchObject({ allowed: false, reason: "notOnList" });
+  });
+
+  it("prices a Special Attack by the style points added", () => {
+    expect(advanceCost("specialAttack", 6)).toBe(300);
+    expect(canAdvance({ kind: "specialAttack", classes: [], race: null, owned: [] })).toMatchObject({ allowed: true });
+  });
+
+  it("undoes a school purchase", () => {
+    expect(undoPlan({ kind: "martial", key: "ironHeart", from: 1, to: 2, cost: 100 }, 2)).toEqual({
+      restore: { path: "system.martial.schools.ironHeart.value", value: 1 }, deleteItem: null, refund: 100
+    });
+  });
+});

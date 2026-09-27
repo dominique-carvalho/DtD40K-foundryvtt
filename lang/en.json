@@ -11,7 +11,8 @@
       "weapon": "Weapon",
       "armor": "Armor",
       "gear": "Gear",
-      "spell": "Spell"
+      "spell": "Spell",
+      "martialSchool": "Martial School"
     }
   },
   "DTD": {
@@ -122,7 +123,8 @@
         "class": "Class & XP",
         "equipment": "Equipment",
         "combat": "Combat",
-        "magic": "Magic"
+        "magic": "Magic",
+        "martial": "Martial"
       },
       "SocialInitiative": "Social Initiative",
       "Fatigue": "Fatigue",
@@ -133,7 +135,8 @@
       "Class": "DtD Class Sheet",
       "ModeAdvance": "Advance",
       "Equipment": "DtD Equipment Sheet",
-      "Spell": "DtD Spell Sheet"
+      "Spell": "DtD Spell Sheet",
+      "MartialSchool": "DtD Martial School Sheet"
     },
     "Roll": {
       "Success": "Success",
@@ -1300,6 +1303,47 @@
       "SpellDamage": "spell: Aura instead of armor",
       "Sustaining": "Sustaining {spell}: the concentration action is spent.",
       "SustainEnds": "{spell} ends: no action left to sustain it."
+    },
+    "Martial": {
+      "School": {
+        "desertWind": "Desert Wind",
+        "devotedSpirit": "Devoted Spirit",
+        "diamondMind": "Diamond Mind",
+        "ironHeart": "Iron Heart",
+        "settingSun": "Setting Sun",
+        "shadowHand": "Shadow Hand",
+        "stoneDragon": "Stone Dragon",
+        "tigerClaw": "Tiger Claw",
+        "whiteRaven": "White Raven",
+        "clayPigeon": "Clay Pigeon",
+        "crisisZone": "Crisis Zone",
+        "elementalGearbolt": "Elemental Gearbolt",
+        "pointBlank": "Point Blank",
+        "silentScope": "Silent Scope",
+        "tinStar": "Tin Star"
+      },
+      "Kind": {
+        "sword": "Sword School",
+        "gunKata": "Gun Kata"
+      },
+      "EntryType": {
+        "action": "Action",
+        "weapon": "Weapon",
+        "flaw": "School flaw",
+        "skill": "Skill",
+        "advantage": "Advantage",
+        "mastery": "Mastery"
+      },
+      "Rank": {
+        "1": "Apprentice",
+        "2": "Initiate",
+        "3": "Journeyman",
+        "4": "Master",
+        "5": "Grandmaster"
+      },
+      "KeySkill": "Key skill",
+      "WeaponGroup": "Weapon group",
+      "TextOnlyHint": "Not automated: shown as text on the card."
     }
   }
 }

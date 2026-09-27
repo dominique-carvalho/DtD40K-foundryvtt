@@ -1,9 +1,10 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { COMBAT_ACTIONS } from "../../module/rules/combat-actions.mjs";
 import {
   ASSET_AUTOMATION, ASSET_GROUPS, CHARACTERISTICS, EXALTATION_FORMULAS, RACE_POWER_AUTOMATION, RESOURCE_ACTIONS, SKILLS,
-  MAGIC_SCHOOLS, RARITIES, SPELL_KEYWORDS, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
+  MAGIC_SCHOOLS, MARTIAL_ENTRY_TYPES, MARTIAL_SCHOOLS, RARITIES, SPELL_KEYWORDS, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
 } from "../../module/config.mjs";
 
 /** Every JSON document of a compendium source folder. */
@@ -852,5 +853,68 @@ describe("spells compendium source (spec 009, SC-001)", () => {
     expect(phenomena.results.at(-1).flags.dtd40k.effect).toEqual({ perils: true });
     expect(perils.results).toHaveLength(18);
     expect(perils.results.at(-1)).toMatchObject({ range: [100, 100], flags: { dtd40k: { effect: { dead: true } } } });
+  });
+});
+
+const martialPack = readPack("src/packs/martial-schools");
+const martial = martialPack.filter((doc) => doc._key.startsWith("!items!"));
+const schoolNamed = (name) => martial.find((doc) => doc.name === name);
+
+describe("martial-schools compendium source (spec 010, SC-001)", () => {
+  it("has the 9 Sword Schools and 6 Gun Kata in 2 folders, 9 entries over ranks 1–5 each", () => {
+    expect(martial).toHaveLength(15);
+    expect(martial.filter((doc) => doc.system.kind === "sword")).toHaveLength(9);
+    expect(martial.filter((doc) => doc.system.kind === "gunKata")).toHaveLength(6);
+    expect(martialPack.filter((doc) => doc._key.startsWith("!folders!"))).toHaveLength(2);
+    expect(sorted(martial.map((doc) => doc.system.key))).toEqual(sorted(Object.keys(MARTIAL_SCHOOLS)));
+    for (const doc of martial) {
+      expect(doc.system.entries, doc.name).toHaveLength(9);
+      expect(sorted(new Set(doc.system.entries.map((e) => e.rank)))).toEqual([1, 2, 3, 4, 5]);
+      expect(doc.system.keySkill).toBe(MARTIAL_SCHOOLS[doc.system.key].skill);
+      expect(doc.name).toBe(MARTIAL_SCHOOLS[doc.system.key].name);
+    }
+  });
+
+  it("matches the reference schools", () => {
+    const desert = schoolNamed("Desert Wind").system;
+    expect(desert).toMatchObject({ kind: "sword", keySkill: "athletics", weaponGroup: "Syrneth", source: { page: 263 } });
+    expect(desert.entries.map((e) => [e.rank, e.type, e.name, e.cost])).toEqual([
+      [1, "weapon", "Weapon (Syrneth)", -1], [1, "action", "Action (Multiple Attacks)", null], [2, "flaw", "Empty Hand", -2],
+      [2, "advantage", "Blistering Flourish", 1], [3, "skill", "Skill (Athletics)", -1], [3, "advantage", "Burning Blade", 2],
+      [4, "mastery", "Mastery (Zephyr Dance)", null], [4, "advantage", "Leaping Flame", 1], [5, "advantage", "Holocaust Cloak", 4]
+    ]);
+    expect(desert.entries.find((e) => e.name === "Blistering Flourish").automation).toEqual({ onHit: [{ condition: "dazed", rounds: "perRaise" }] });
+    expect(desert.entries.find((e) => e.name === "Burning Blade").automation).toEqual({ quality: { key: "incendiary" } });
+    const clay = schoolNamed("Clay Pigeon").system;
+    expect(clay).toMatchObject({ kind: "gunKata", keySkill: "performer", weaponGroup: "", source: { page: 274 } });
+    expect(clay.entries.find((e) => e.name === "Ocelot's Roar").automation).toEqual({ requires: { weaponType: "pistol" } });
+    const ox = schoolNamed("Devoted Spirit").system.entries.find((e) => e.type === "mastery");
+    expect(ox.automation).toEqual({ changes: [{ key: "system.modifiers.hpMax", value: 4 }] });
+    expect(schoolNamed("Devoted Spirit").system.entries.find((e) => e.name === "Revitalizing Strike").variableCost).toEqual([1, 3]);
+    expect(schoolNamed("Setting Sun").system.entries.find((e) => e.name === "Knockout Blow")).toMatchObject({ cost: 2, perPoint: true });
+  });
+
+  it("uses valid entry types, actions, qualities, skills and weapon groups", () => {
+    const groups = new Set(readPack("src/packs/equipment").filter((doc) => doc.type === "weapon").map((doc) => doc.system.group));
+    const actions = new Set(COMBAT_ACTIONS.map((a) => a.key));
+    const folderIds = new Set(martialPack.filter((doc) => doc._key.startsWith("!folders!")).map((doc) => doc._id));
+    for (const doc of martial) {
+      expect(folderIds.has(doc.folder), doc.name).toBe(true);
+      expect(doc.system.description, doc.name).toMatch(/^<p>.+<\/p>$/s);
+      if (doc.system.weaponGroup) expect(groups.has(doc.system.weaponGroup), doc.name).toBe(true);
+      expect(new Set(doc.system.entries.map((e) => e.id)).size, doc.name).toBe(9);
+      for (const e of doc.system.entries) {
+        expect(MARTIAL_ENTRY_TYPES).toContain(e.type);
+        expect(e.effect, `${doc.name}: ${e.name}`).not.toBe("");
+        const a = e.automation;
+        if (a.unlocksAction) expect(actions.has(a.unlocksAction), e.name).toBe(true);
+        if (a.quality) expect(WEAPON_QUALITIES[a.quality.key], e.name).toBeDefined();
+        if (a.test) expect(SKILLS[a.test.skill], e.name).toBeDefined();
+        if (a.requires?.weaponGroup) expect(groups.has(a.requires.weaponGroup), e.name).toBe(true);
+        for (const hit of a.onHit ?? []) if (hit.condition) expect(STATUS_EFFECTS.map((s) => s.id), e.name).toContain(hit.condition);
+        if (e.type === "action") expect(e.cost).toBeNull();
+        if (["weapon", "flaw", "skill"].includes(e.type)) expect(e.cost, e.name).toBeLessThan(0);
+      }
+    }
   });
 });

@@ -1,0 +1,151 @@
+{
+  "name": "Clay Pigeon",
+  "type": "martialSchool",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>A showy, precise pistol art of ricochets and angles, born as a carnival act.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 274
+    },
+    "key": "clayPigeon",
+    "kind": "gunKata",
+    "keySkill": "performer",
+    "weaponGroup": "",
+    "summary": "A showy, precise pistol art of ricochets and angles, born as a carnival act.",
+    "entries": [
+      {
+        "id": "jumpingDoveConcentration",
+        "rank": 1,
+        "type": "advantage",
+        "name": "Jumping Dove Concentration",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The shot uses no ammunition.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "actionCalledShot",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Called Shot)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Trick Shots may use the Called Shot action.",
+        "automation": {
+          "unlocksAction": "calledShot"
+        }
+      },
+      {
+        "id": "ocelotsRoar",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Ocelot's Roar",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Pistols only.",
+        "automation": {
+          "requires": {
+            "weaponType": "pistol"
+          }
+        }
+      },
+      {
+        "id": "whiteHatsSlap",
+        "rank": 2,
+        "type": "advantage",
+        "name": "White Hat's Slap",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "On a hit the target drops what it holds.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "skillPerformer",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Performer)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Performer against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "performer"
+          }
+        }
+      },
+      {
+        "id": "totalRecoil",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Total Recoil",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Targets hit are knocked prone.",
+        "automation": {
+          "onHit": [
+            {
+              "condition": "prone"
+            }
+          ]
+        }
+      },
+      {
+        "id": "safeShot",
+        "rank": 4,
+        "type": "flaw",
+        "name": "Safe Shot",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The shot cannot deal Critical Damage.",
+        "automation": {
+          "resolve": {
+            "noCritical": true
+          }
+        }
+      },
+      {
+        "id": "rescueShot",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Rescue Shot",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "You can parry ranged attacks with Ballistics + Level instead of Weaponry + Level.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "manhattanTransfer",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Manhattan Transfer",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The shot ignores cover and concealment.",
+        "automation": {
+          "text": true
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdM62429fc79167",
+  "_key": "!items!dtdM62429fc79167",
+  "folder": "dtdMFd0aa488a7d9"
+}

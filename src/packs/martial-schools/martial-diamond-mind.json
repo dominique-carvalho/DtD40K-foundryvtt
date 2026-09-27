@@ -1,0 +1,158 @@
+{
+  "name": "Diamond Mind",
+  "type": "martialSchool",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "description": "<p>A style of mental speed and perception that wins the fight in the mind first, using fencing blades.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 265
+    },
+    "key": "diamondMind",
+    "kind": "sword",
+    "keySkill": "scrutiny",
+    "weaponGroup": "Fencing",
+    "summary": "A style of mental speed and perception that wins the fight in the mind first, using fencing blades.",
+    "entries": [
+      {
+        "id": "weaponFencing",
+        "rank": 1,
+        "type": "weapon",
+        "name": "Weapon (Fencing)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attack must be made with a Fencing weapon.",
+        "automation": {
+          "requires": {
+            "weaponGroup": "Fencing"
+          }
+        }
+      },
+      {
+        "id": "actionFeint",
+        "rank": 1,
+        "type": "action",
+        "name": "Action (Feint)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Special Attacks may use Feint; attack advantages apply to the ordinary attack made after the feint, which cannot itself be a Special Attack.",
+        "automation": {
+          "unlocksAction": "feint",
+          "prepares": true
+        }
+      },
+      {
+        "id": "backhandedBlade",
+        "rank": 2,
+        "type": "flaw",
+        "name": "Backhanded Blade",
+        "cost": -2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "The attack can never inflict Critical Damage.",
+        "automation": {
+          "resolve": {
+            "noCritical": true
+          }
+        }
+      },
+      {
+        "id": "dippingSwallow",
+        "rank": 2,
+        "type": "advantage",
+        "name": "Dipping Swallow",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "One extra reaction, only for Parry, lasting to your coming turn.",
+        "automation": {
+          "self": [
+            {
+              "changes": [
+                {
+                  "key": "system.modifiers.combat.reactions",
+                  "value": 1
+                }
+              ],
+              "untilNextTurn": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "skillScrutiny",
+        "rank": 3,
+        "type": "skill",
+        "name": "Skill (Scrutiny)",
+        "cost": -1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "Roll Scrutiny against the target's Static Defense as part of the attack; failure means the attack fails.",
+        "automation": {
+          "test": {
+            "skill": "scrutiny"
+          }
+        }
+      },
+      {
+        "id": "flurryOfBlows",
+        "rank": 3,
+        "type": "advantage",
+        "name": "Flurry of Blows",
+        "cost": 3,
+        "perPoint": true,
+        "variableCost": [],
+        "effect": "Each purchase adds one more weapon attack to this attack.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "masteryOpenFormMotion",
+        "rank": 4,
+        "type": "mastery",
+        "name": "Mastery (Open Form Motion)",
+        "cost": null,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "After a successful feint you may follow with any attack type, not only a Standard Attack.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "weakeningGripTechnique",
+        "rank": 4,
+        "type": "advantage",
+        "name": "Weakening Grip Technique",
+        "cost": 2,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "A target hit tests Dexterity at TN 20; on a failure it lets go of what it holds.",
+        "automation": {
+          "text": true
+        }
+      },
+      {
+        "id": "essenceDrainingStrike",
+        "rank": 5,
+        "type": "advantage",
+        "name": "Essence Draining Strike",
+        "cost": 1,
+        "perPoint": false,
+        "variableCost": [],
+        "effect": "A target hit loses 5 resource points.",
+        "automation": {
+          "text": true
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdM5464b5effade",
+  "_key": "!items!dtdM5464b5effade",
+  "folder": "dtdMFd04e0d91db2"
+}

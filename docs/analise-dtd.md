@@ -363,6 +363,19 @@ Blast.
 
 ## 9. Magia
 
+**Na 7.7a** (cap. VIII pp. 224–259; implementado na feature `009-magic`): **9 escolas** (Abjuration e Conjuration com
+Willpower; Divination, Healing e Transmutation com Wisdom; Enchantment e Evocation com Charisma; Illusion e Necromancy
+com Intelligence), **126 magias** (14 por escola, 3/3/3/3/2 por nível), 13 keywords, Psychic Phenomena (26 linhas;
+75+ → Perils) e Perils of the Warp (18 linhas; 00 = Destruction). Focus Power = (escola + característica) k
+característica contra o TN da magia; Fettered (metade dos rolados, nunca Phenomena), Unfettered (Phenomena só com dado
+explodido mantido; sem Tested +5 × nível) e Push (+1–3 com Tested, +1–4 sem; Phenomena sempre, +5/+10 por ponto). Escola
+nova 200 XP, depois 100 × valor; teto = Level; só escolas da lista da classe; cada ponto dá uma magia daquele nível ou
+abaixo. Combos: magias Combo-OK, menor escola e característica, TN maior + 5 por magia extra, 50 XP × soma dos níveis.
+Automatizados: compêndio, compra e vagas, conjuração com keywords, dano de magia contra Aura (Aplicar da 008),
+resistência, efeitos simples com duração, Phenomena/Perils, sustentadas por turno, combos e Implement Focus.
+Premissas: caster level = Level; Push +5/+10 por ponto; TNs suspeitos (Energy Bits 5, Geas 20, Energy Aura 15) como
+impressos.
+
 Fonte: 1.6 pp. 147–173; Book 2 pp. 73–82.
 
 - **9 escolas**, característica fixa: Abjuration (Wil), Conjuration (Wil), Divination (Wis), Enchantment (Cha), Evocation (Cha), Healing (Wis), Illusion (Int), Necromancy (Int), Transmutation (Wis).

@@ -84,9 +84,9 @@ quickstart.md
 
 ## Phase 7: Polish
 
-- [ ] T032 [P] Atualizar `docs/analise-dtd.md` §9 para a 7.7a e o `README.md`
+- [X] T032 [P] Atualizar `docs/analise-dtd.md` §9 para a 7.7a e o `README.md`
 - [X] T033 `npm run lint` e `npm test`
-- [ ] T034 `graphify update .`
+- [X] T034 `graphify update .`
 
 ## Dependencies
 

@@ -10,7 +10,7 @@
 | `SPELL_DURATIONS` | `instant, scene, rounds, minutes, hours, days, indefinite, concentration, special` |
 | `CAST_STRENGTHS` | `fettered, unfettered, push` |
 | `MAX_PUSH` | `{ sanctioned: 3, unsanctioned: 4 }` |
-| `XP_COSTS` | + `newSchool: 200`, `school: 100` (× valor atual), `combo: 50` (× soma dos níveis) |
+| `MAGIC_XP` | `newSchool: 200`, `perRank: 100` (× valor atual), `comboPerLevel: 50` (× soma dos níveis) |
 | `XP_KINDS` | + `school`, `combo` |
 
 ## `spell`

@@ -55,6 +55,10 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   Resilience, HP e críticos das 20 tabelas do compêndio *Combat Tables*, com Desfazer); o cartão de ataque ganha
   Dodge e Parry; iniciativa com o desempate do livro; combate social (Resolve, Jaded, Refute), testes de medo com a
   Shock Table e insanidade com Trauma Test e derangements.
+- **Magia**: compêndio *Spells* com as 126 magias do cap. VIII em 9 escolas; escolas compradas com XP no modo Evolução
+  (lista da classe, teto no Level) e cada ponto libera uma magia; aba *Magia* com Focus Power (Fettered, Unfettered,
+  Push), keywords, dano de magia contra Aura, resistência do alvo, efeitos simples, Psychic Phenomena e Perils of the
+  Warp rolados e aplicados, magias sustentadas cobradas no turno, Spell Combos e Implement Focus.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos
@@ -133,7 +137,7 @@ npm run build:packs
 - Depois do build, abra o Foundry e confira o compêndio (ex.: 16 raças).
 - Nunca edite `packs/` à mão; altere os JSON em `src/packs/` e rode o build de novo.
 - Para editar um compêndio pelo Foundry: clique com o botão direito no compêndio → "Alternar trava de edição", edite os itens, feche o Foundry e rode `npm run extract:packs` para gravar as mudanças de volta em `src/packs/` (depois revise o diff e faça o commit).
-- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) e `combat-tables` (22 tabelas do cap. XVII).
+- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) `combat-tables` (22 tabelas do cap. XVII e as 2 do Warp) e `spells` (126 magias do cap. VIII).
 
 ## Licença
 

@@ -1,0 +1,134 @@
+{
+  "name": "Critical — Impact — Body",
+  "img": "icons/svg/blood.svg",
+  "description": "<p>Critical Damage (Impact, Body), DtD 7.7a p. 440. Use the row equal to the accumulated Critical Damage.</p>",
+  "formula": "1d5",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "name": "Impact Body 1",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Off balance: limited to one Half Action next turn.</p>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "halfAction": true
+          }
+        }
+      },
+      "_id": "dtdTr47db25dbc3d",
+      "_key": "!tables.results!dtdT174fdec14925.dtdTr47db25dbc3d"
+    },
+    {
+      "type": "text",
+      "name": "Impact Body 2",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Rib broken: 2 Fatigue; Stunned 1 round.</p>",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "stunned"
+            ],
+            "rounds": 1,
+            "fatigue": 2
+          }
+        }
+      },
+      "_id": "dtdTrdce51a347a9",
+      "_key": "!tables.results!dtdT174fdec14925.dtdTrdce51a347a9"
+    },
+    {
+      "type": "text",
+      "name": "Impact Body 3",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Winded and doubled over: 1d5 Fatigue; Stunned 2 rounds.</p>",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "stunned"
+            ],
+            "rounds": 2,
+            "fatigue": "1d5"
+          }
+        }
+      },
+      "_id": "dtdTr79673c9ad51",
+      "_key": "!tables.results!dtdT174fdec14925.dtdTr79673c9ad51"
+    },
+    {
+      "type": "text",
+      "name": "Impact Body 4",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>1d5 ribs broken: lie still awaiting medical help, or keep acting and start suffering Blood Loss.</p>",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr6be962ca40e",
+      "_key": "!tables.results!dtdT174fdec14925.dtdTr6be962ca40e"
+    },
+    {
+      "type": "text",
+      "name": "Impact Body 5",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Spews blood and drops dead.</p>",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "dead": true
+          }
+        }
+      },
+      "_id": "dtdTr864a8c9b116",
+      "_key": "!tables.results!dtdT174fdec14925.dtdTr864a8c9b116"
+    }
+  ],
+  "flags": {
+    "dtd40k": {
+      "table": {
+        "kind": "critical",
+        "type": "impact",
+        "location": "body",
+        "page": 440
+      }
+    }
+  },
+  "_id": "dtdT174fdec14925",
+  "_key": "!tables!dtdT174fdec14925",
+  "folder": "dtdTFd9f007d2ba0"
+}

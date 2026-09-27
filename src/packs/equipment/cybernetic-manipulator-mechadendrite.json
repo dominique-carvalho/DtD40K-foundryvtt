@@ -1,7 +1,7 @@
 {
   "name": "Manipulator Mechadendrite",
   "type": "gear",
-  "img": "icons/svg/circuit.svg",
+  "img": "icons/svg/clockwork.svg",
   "system": {
     "description": "<p>A strong two-meter shoulder limb of hardened steel and ceramite, ending in gripping and crushing pincers. It gives +2 Strength for sustained force such as lifting or moving objects.</p><p>It can lift as a free action or be swung as a Club with the boosted Strength, but cannot handle fine tasks like typing or delicate objects. Only tech-priests can use mechadendrites, up to a number equal to their Constitution.</p>",
     "source": {

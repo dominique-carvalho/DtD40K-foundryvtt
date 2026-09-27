@@ -1,0 +1,211 @@
+{
+  "name": "Mental Traumas",
+  "img": "icons/svg/daze.svg",
+  "description": "<p>Failed Trauma Test: roll 1d10, +1 per Check (DtD 7.7a p. 452).</p>",
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "name": "Trauma 1-2",
+      "img": "icons/svg/daze.svg",
+      "description": "<p>Withdrawn: -1 Charisma for 3d10 hours.</p>",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrcc1b34cfb01",
+      "_key": "!tables.results!dtdTd562b683ba44.dtdTrcc1b34cfb01"
+    },
+    {
+      "type": "text",
+      "name": "Trauma 3-4",
+      "img": "icons/svg/daze.svg",
+      "description": "<p>Compulsive behaviour: -1k0 on Int, Fel and Cmp Tests for 3d10 hours.</p>",
+      "weight": 1,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr00075f4b422",
+      "_key": "!tables.results!dtdTd562b683ba44.dtdTr00075f4b422"
+    },
+    {
+      "type": "text",
+      "name": "Trauma 5-6",
+      "img": "icons/svg/daze.svg",
+      "description": "<p>Paranoid: +1k0 Perception Tests, -1 Willpower for 1d5 days.</p>",
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr3efcd277e09",
+      "_key": "!tables.results!dtdTd562b683ba44.dtdTr3efcd277e09"
+    },
+    {
+      "type": "text",
+      "name": "Trauma 7-8",
+      "img": "icons/svg/daze.svg",
+      "description": "<p>Severe phobia for 1d5 days.</p>",
+      "weight": 1,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr6bb06f8e25b",
+      "_key": "!tables.results!dtdTd562b683ba44.dtdTr6bb06f8e25b"
+    },
+    {
+      "type": "text",
+      "name": "Trauma 9",
+      "img": "icons/svg/daze.svg",
+      "description": "<p>Agitated: -1k0 to all Tests when stressed (e.g. combat) for 1d5 days.</p>",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrf7672352a1c",
+      "_key": "!tables.results!dtdTd562b683ba44.dtdTrf7672352a1c"
+    },
+    {
+      "type": "text",
+      "name": "Trauma 10",
+      "img": "icons/svg/daze.svg",
+      "description": "<p>Nightmares: no HP recovery from bed rest for 1d10 days.</p>",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr7a533724e9f",
+      "_key": "!tables.results!dtdTd562b683ba44.dtdTr7a533724e9f"
+    },
+    {
+      "type": "text",
+      "name": "Trauma 11",
+      "img": "icons/svg/daze.svg",
+      "description": "<p>Mute for 1d5 days.</p>",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr0c666d7787c",
+      "_key": "!tables.results!dtdTd562b683ba44.dtdTr0c666d7787c"
+    },
+    {
+      "type": "text",
+      "name": "Trauma 12",
+      "img": "icons/svg/daze.svg",
+      "description": "<p>Refuses food/drink: every characteristic -1 for 1d10 days.</p>",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr70459cc3b73",
+      "_key": "!tables.results!dtdTd562b683ba44.dtdTr70459cc3b73"
+    },
+    {
+      "type": "text",
+      "name": "Trauma 13",
+      "img": "icons/svg/daze.svg",
+      "description": "<p>Hysterical blindness or deafness for 1d10 days.</p>",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrea92a4c90fa",
+      "_key": "!tables.results!dtdTd562b683ba44.dtdTrea92a4c90fa"
+    },
+    {
+      "type": "text",
+      "name": "Trauma 14+",
+      "img": "icons/svg/daze.svg",
+      "description": "<p>Unresponsive: cannot initiate actions, can be led, for 1d10 days.</p>",
+      "weight": 1,
+      "range": [
+        14,
+        30
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr4fbcaa03f14",
+      "_key": "!tables.results!dtdTd562b683ba44.dtdTr4fbcaa03f14"
+    }
+  ],
+  "flags": {
+    "dtd40k": {
+      "table": {
+        "kind": "trauma",
+        "page": 452
+      }
+    }
+  },
+  "_id": "dtdTd562b683ba44",
+  "_key": "!tables!dtdTd562b683ba44",
+  "folder": "dtdTFdb3588ad13d"
+}

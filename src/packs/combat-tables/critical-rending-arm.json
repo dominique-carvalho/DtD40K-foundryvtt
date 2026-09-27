@@ -1,0 +1,134 @@
+{
+  "name": "Critical — Rending — Arm",
+  "img": "icons/svg/blood.svg",
+  "description": "<p>Critical Damage (Rending, Arm), DtD 7.7a p. 441. Use the row equal to the accumulated Critical Damage.</p>",
+  "formula": "1d5",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "name": "Rending Arm 1",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Whatever this arm held is torn loose.</p>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTr3e2627eae7c",
+      "_key": "!tables.results!dtdT613e394eca35.dtdTr3e2627eae7c"
+    },
+    {
+      "type": "text",
+      "name": "Rending Arm 2",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>As 1, plus 2 Fatigue.</p>",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "fatigue": 2
+          }
+        }
+      },
+      "_id": "dtdTreb3481b95c6",
+      "_key": "!tables.results!dtdT613e394eca35.dtdTreb3481b95c6"
+    },
+    {
+      "type": "text",
+      "name": "Rending Arm 3",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>1d5 fingers cut off: 3 Fatigue; Con TN 20 or lose use of the hand.</p>",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "test": {
+              "characteristic": "con",
+              "tn": 20,
+              "onFail": "lostHand"
+            },
+            "fatigue": 3
+          }
+        }
+      },
+      "_id": "dtdTr9a812269097",
+      "_key": "!tables.results!dtdT613e394eca35.dtdTr9a812269097"
+    },
+    {
+      "type": "text",
+      "name": "Rending Arm 4",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Arm cut off: missing an arm and Blood Loss.</p>",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "lostArm",
+              "bloodLoss"
+            ]
+          }
+        }
+      },
+      "_id": "dtdTr978a635afc4",
+      "_key": "!tables.results!dtdT613e394eca35.dtdTr978a635afc4"
+    },
+    {
+      "type": "text",
+      "name": "Rending Arm 5",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Cut through arm into torso; killed instantly.</p>",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "dead": true
+          }
+        }
+      },
+      "_id": "dtdTre6b5c4e72fd",
+      "_key": "!tables.results!dtdT613e394eca35.dtdTre6b5c4e72fd"
+    }
+  ],
+  "flags": {
+    "dtd40k": {
+      "table": {
+        "kind": "critical",
+        "type": "rending",
+        "location": "arm",
+        "page": 441
+      }
+    }
+  },
+  "_id": "dtdT613e394eca35",
+  "_key": "!tables!dtdT613e394eca35",
+  "folder": "dtdTFd9f007d2ba0"
+}

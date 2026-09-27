@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   ASSET_AUTOMATION, ASSET_GROUPS, CHARACTERISTICS, EXALTATION_FORMULAS, RACE_POWER_AUTOMATION, RESOURCE_ACTIONS, SKILLS,
-  RARITIES, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
+  RARITIES, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
 } from "../../module/config.mjs";
 
 /** Every JSON document of a compendium source folder. */
@@ -758,6 +758,48 @@ describe("equipment compendium source (spec 007, SC-001)", () => {
     for (const doc of equipment) {
       expect(doc._key).toBe(`!items!${doc._id}`);
       expect(folderIds.has(doc.folder), doc.name).toBe(true);
+    }
+  });
+});
+
+// ---------- Combat tables (spec 008, SC-002) ----------
+
+const tablePack = readPack("src/packs/combat-tables");
+const tables = tablePack.filter((doc) => doc._key.startsWith("!tables!"));
+const tableNamed = (name) => tables.find((doc) => doc.name === name);
+const statusIds = new Set(STATUS_EFFECTS.map((s) => s.id));
+
+describe("combat tables compendium source (spec 008, SC-002)", () => {
+  it("has 20 critical tables, the Shock Table and Mental Traumas in 2 folders", () => {
+    expect(tables).toHaveLength(22);
+    expect(tablePack.filter((doc) => doc._key.startsWith("!folders!"))).toHaveLength(2);
+    const criticals = tables.filter((doc) => doc.flags.dtd40k.table.kind === "critical");
+    expect(criticals).toHaveLength(20);
+    for (const type of ["energy", "explosive", "impact", "rending"]) {
+      for (const location of ["arm", "body", "gizzards", "head", "legs"]) {
+        const table = criticals.find((doc) => doc.flags.dtd40k.table.type === type && doc.flags.dtd40k.table.location === location);
+        expect(table, `${type}/${location}`).toBeDefined();
+        expect(table.formula).toBe("1d5");
+        expect(table.results.map((r) => r.range)).toEqual([[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]]);
+        expect(table.results[4].flags.dtd40k.effect.dead, `${type}/${location} row 5`).toBe(true);
+      }
+    }
+  });
+
+  it("matches reference results and uses valid statuses", () => {
+    const energyBody = tableNamed("Critical — Energy — Body");
+    expect(energyBody.results[2].flags.dtd40k.effect).toEqual({ statuses: ["prone", "stunned"], rounds: "1d10" });
+    expect(tableNamed("Critical — Energy — Gizzards").results[3].flags.dtd40k.effect.dead).toBe(true);
+    expect(tableNamed("Critical — Explosive — Legs").results[3].flags.dtd40k.effect.test).toEqual({ characteristic: "con", tn: 20, onFail: "dead" });
+    expect(tableNamed("Shock Table").results.map((r) => r.range)).toEqual([[1, 2], [3, 4], [5, 6], [7, 8], [9, 9], [10, 10], [11, 11], [12, 12], [13, 30]]);
+    expect(tableNamed("Mental Traumas").results.map((r) => r.range)).toEqual([[1, 2], [3, 4], [5, 6], [7, 8], [9, 9], [10, 10], [11, 11], [12, 12], [13, 13], [14, 30]]);
+    for (const table of tables) {
+      expect(table._key).toBe(`!tables!${table._id}`);
+      for (const result of table.results) {
+        expect(result._key).toBe(`!tables.results!${table._id}.${result._id}`);
+        expect(result.description).toMatch(/^<p>.+<\/p>$/s);
+        for (const id of result.flags.dtd40k.effect.statuses ?? []) expect(statusIds.has(id), id).toBe(true);
+      }
     }
   });
 });

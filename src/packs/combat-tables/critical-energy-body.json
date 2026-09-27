@@ -1,0 +1,135 @@
+{
+  "name": "Critical — Energy — Body",
+  "img": "icons/svg/blood.svg",
+  "description": "<p>Critical Damage (Energy, Body), DtD 7.7a p. 438. Use the row equal to the accumulated Critical Damage.</p>",
+  "formula": "1d5",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "name": "Energy Body 1",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Winded: limited to one Half Action next turn.</p>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "halfAction": true
+          }
+        }
+      },
+      "_id": "dtdTr8088706927a",
+      "_key": "!tables.results!dtdT99538587f3b8.dtdTr8088706927a"
+    },
+    {
+      "type": "text",
+      "name": "Energy Body 2",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Torso badly burned: 1d5 Fatigue.</p>",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "fatigue": "1d5"
+          }
+        }
+      },
+      "_id": "dtdTr226248dd2bc",
+      "_key": "!tables.results!dtdT99538587f3b8.dtdTr226248dd2bc"
+    },
+    {
+      "type": "text",
+      "name": "Energy Body 3",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Prone; Stunned 1d10 rounds.</p>",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "prone",
+              "stunned"
+            ],
+            "rounds": "1d10"
+          }
+        }
+      },
+      "_id": "dtdTr0f18d3835f1",
+      "_key": "!tables.results!dtdT99538587f3b8.dtdTr0f18d3835f1"
+    },
+    {
+      "type": "text",
+      "name": "Energy Body 4",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Skin burned away: Stunned 2d10 rounds; halve Str, Con and Dex while that Critical Damage remains.</p>",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "stunned"
+            ],
+            "rounds": "2d10"
+          }
+        }
+      },
+      "_id": "dtdTr78acbd5aa13",
+      "_key": "!tables.results!dtdT99538587f3b8.dtdTr78acbd5aa13"
+    },
+    {
+      "type": "text",
+      "name": "Energy Body 5",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Engulfed in flame; left a charred corpse.</p>",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "dead": true
+          }
+        }
+      },
+      "_id": "dtdTre21598c04e0",
+      "_key": "!tables.results!dtdT99538587f3b8.dtdTre21598c04e0"
+    }
+  ],
+  "flags": {
+    "dtd40k": {
+      "table": {
+        "kind": "critical",
+        "type": "energy",
+        "location": "body",
+        "page": 438
+      }
+    }
+  },
+  "_id": "dtdT99538587f3b8",
+  "_key": "!tables!dtdT99538587f3b8",
+  "folder": "dtdTFd9f007d2ba0"
+}

@@ -1,7 +1,7 @@
 {
   "name": "Bionic Heart",
   "type": "gear",
-  "img": "icons/svg/circuit.svg",
+  "img": "icons/svg/clockwork.svg",
   "system": {
     "description": "<p>An armored replacement heart that serves as a last line of defense; advanced versions can be pushed to beat harder, at the risk of stroke.</p><p>It gives +2 AP to the gizzards, stacking with worn armor, and grants the Hardy feat.</p>",
     "source": {

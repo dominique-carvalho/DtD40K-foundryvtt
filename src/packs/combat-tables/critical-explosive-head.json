@@ -1,0 +1,137 @@
+{
+  "name": "Critical — Explosive — Head",
+  "img": "icons/svg/blood.svg",
+  "description": "<p>Critical Damage (Explosive, Head), DtD 7.7a p. 439. Use the row equal to the accumulated Critical Damage.</p>",
+  "formula": "1d5",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "name": "Explosive Head 1",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Blinded and Deafened 1 round.</p>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "blinded",
+              "deafened"
+            ],
+            "rounds": 1
+          }
+        }
+      },
+      "_id": "dtdTrac7c6c88fd5",
+      "_key": "!tables.results!dtdT8c14cc5b0f18.dtdTrac7c6c88fd5"
+    },
+    {
+      "type": "text",
+      "name": "Explosive Head 2",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Knocked down and Stunned 1 round; 2 Fatigue.</p>",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "prone",
+              "stunned"
+            ],
+            "rounds": 1,
+            "fatigue": 2
+          }
+        }
+      },
+      "_id": "dtdTr573f7e798fe",
+      "_key": "!tables.results!dtdT8c14cc5b0f18.dtdTr573f7e798fe"
+    },
+    {
+      "type": "text",
+      "name": "Explosive Head 3",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Head blown off; killed at once (joke: -1k0 Perception for a round).</p>",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "dead": true
+          }
+        }
+      },
+      "_id": "dtdTrdd49788219f",
+      "_key": "!tables.results!dtdT8c14cc5b0f18.dtdTrdd49788219f"
+    },
+    {
+      "type": "text",
+      "name": "Explosive Head 4",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Head and torso torn apart; dead.</p>",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "dead": true
+          }
+        }
+      },
+      "_id": "dtdTrf065eb044bd",
+      "_key": "!tables.results!dtdT8c14cc5b0f18.dtdTrf065eb044bd"
+    },
+    {
+      "type": "text",
+      "name": "Explosive Head 5",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>As 4; allies within 2m must Test against Fear 1.</p>",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "dead": true
+          }
+        }
+      },
+      "_id": "dtdTre1985e74f08",
+      "_key": "!tables.results!dtdT8c14cc5b0f18.dtdTre1985e74f08"
+    }
+  ],
+  "flags": {
+    "dtd40k": {
+      "table": {
+        "kind": "critical",
+        "type": "explosive",
+        "location": "head",
+        "page": 439
+      }
+    }
+  },
+  "_id": "dtdT8c14cc5b0f18",
+  "_key": "!tables!dtdT8c14cc5b0f18",
+  "folder": "dtdTFd9f007d2ba0"
+}

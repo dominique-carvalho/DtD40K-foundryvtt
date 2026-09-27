@@ -1,0 +1,230 @@
+{
+  "name": "Shock Table",
+  "img": "icons/svg/terror.svg",
+  "description": "<p>Failed Fear Test in combat: roll 1d10, +1 per Check (DtD 7.7a p. 448).</p>",
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "name": "Shock 1-2",
+      "img": "icons/svg/terror.svg",
+      "description": "<p>Only a Half Action next turn, then normal.</p>",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "halfAction": true
+          }
+        }
+      },
+      "_id": "dtdTrcf3e498d192",
+      "_key": "!tables.results!dtdTe2168d925a12.dtdTrcf3e498d192"
+    },
+    {
+      "type": "text",
+      "name": "Shock 3-4",
+      "img": "icons/svg/terror.svg",
+      "description": "<p>Dazed until he snaps out of it.</p>",
+      "weight": 1,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "dazed"
+            ]
+          }
+        }
+      },
+      "_id": "dtdTrde17905a620",
+      "_key": "!tables.results!dtdTe2168d925a12.dtdTrde17905a620"
+    },
+    {
+      "type": "text",
+      "name": "Shock 5-6",
+      "img": "icons/svg/terror.svg",
+      "description": "<p>Cannot willingly approach the source until the encounter ends; +1 Insanity.</p>",
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "insanity": 1
+          }
+        }
+      },
+      "_id": "dtdTr1ca8a0ec90d",
+      "_key": "!tables.results!dtdTe2168d925a12.dtdTr1ca8a0ec90d"
+    },
+    {
+      "type": "text",
+      "name": "Shock 7-8",
+      "img": "icons/svg/terror.svg",
+      "description": "<p>Stunned until he snaps out of it, then -1k0 to all Tests for the encounter; +1d5 Insanity.</p>",
+      "weight": 1,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "stunned"
+            ],
+            "insanity": "1d5"
+          }
+        }
+      },
+      "_id": "dtdTr91e8a3c8507",
+      "_key": "!tables.results!dtdTe2168d925a12.dtdTr91e8a3c8507"
+    },
+    {
+      "type": "text",
+      "name": "Shock 9",
+      "img": "icons/svg/terror.svg",
+      "description": "<p>Must flee; if blocked, Half Actions only and -2k0 to all Tests; +1d5 Insanity; may try to snap out once clear.</p>",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "insanity": "1d5"
+          }
+        }
+      },
+      "_id": "dtdTr44d9b99f8c8",
+      "_key": "!tables.results!dtdTe2168d925a12.dtdTr44d9b99f8c8"
+    },
+    {
+      "type": "text",
+      "name": "Shock 10",
+      "img": "icons/svg/terror.svg",
+      "description": "<p>Unconscious 1d5 rounds, then -1k0 to all Tests for the encounter; +1d5 Insanity.</p>",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "unconscious"
+            ],
+            "rounds": "1d5",
+            "insanity": "1d5"
+          }
+        }
+      },
+      "_id": "dtdTr4c69d8bc6ce",
+      "_key": "!tables.results!dtdTe2168d925a12.dtdTr4c69d8bc6ce"
+    },
+    {
+      "type": "text",
+      "name": "Shock 11",
+      "img": "icons/svg/terror.svg",
+      "description": "<p>Helpless 1d5 rounds, then one Half Action per turn until rested; +1d5 Insanity.</p>",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "helpless"
+            ],
+            "rounds": "1d5",
+            "insanity": "1d5"
+          }
+        }
+      },
+      "_id": "dtdTrc6fa6877ab1",
+      "_key": "!tables.results!dtdTe2168d925a12.dtdTrc6fa6877ab1"
+    },
+    {
+      "type": "text",
+      "name": "Shock 12",
+      "img": "icons/svg/terror.svg",
+      "description": "<p>Can do nothing for 1d10 rounds, then -2k0 on every Test until the encounter ends; +1d10 Insanity.</p>",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "helpless"
+            ],
+            "rounds": "1d10",
+            "insanity": "1d10"
+          }
+        }
+      },
+      "_id": "dtdTr88f7a3769da",
+      "_key": "!tables.results!dtdTe2168d925a12.dtdTr88f7a3769da"
+    },
+    {
+      "type": "text",
+      "name": "Shock 13+",
+      "img": "icons/svg/terror.svg",
+      "description": "<p>Catatonic, unrousable, for 1d10 hours; +1d10 Insanity.</p>",
+      "weight": 1,
+      "range": [
+        13,
+        30
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "unconscious"
+            ],
+            "insanity": "1d10"
+          }
+        }
+      },
+      "_id": "dtdTr313456eb4f0",
+      "_key": "!tables.results!dtdTe2168d925a12.dtdTr313456eb4f0"
+    }
+  ],
+  "flags": {
+    "dtd40k": {
+      "table": {
+        "kind": "shock",
+        "page": 448
+      }
+    }
+  },
+  "_id": "dtdTe2168d925a12",
+  "_key": "!tables!dtdTe2168d925a12",
+  "folder": "dtdTFdb3588ad13d"
+}

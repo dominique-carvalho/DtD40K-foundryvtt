@@ -1,0 +1,126 @@
+{
+  "name": "Critical — Impact — Arm",
+  "img": "icons/svg/blood.svg",
+  "description": "<p>Critical Damage (Impact, Arm), DtD 7.7a p. 440. Use the row equal to the accumulated Critical Damage.</p>",
+  "formula": "1d5",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "name": "Impact Arm 1",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Limb numbed; drops what that hand holds.</p>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {}
+        }
+      },
+      "_id": "dtdTrc79bea006b1",
+      "_key": "!tables.results!dtdT01f236635413.dtdTrc79bea006b1"
+    },
+    {
+      "type": "text",
+      "name": "Impact Arm 2",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Crushing pain: 1 Fatigue.</p>",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "fatigue": 1
+          }
+        }
+      },
+      "_id": "dtdTrb7cc425f781",
+      "_key": "!tables.results!dtdT01f236635413.dtdTrb7cc425f781"
+    },
+    {
+      "type": "text",
+      "name": "Impact Arm 3",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Hand smashed, 1d5 fingers broken (thumb counts): 1 Fatigue; hand unusable until medical attention.</p>",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "fatigue": 1
+          }
+        }
+      },
+      "_id": "dtdTr001d56351e1",
+      "_key": "!tables.results!dtdT01f236635413.dtdTr001d56351e1"
+    },
+    {
+      "type": "text",
+      "name": "Impact Arm 4",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Arm broken, useless until healed; 2 Fatigue.</p>",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "fatigue": 2
+          }
+        }
+      },
+      "_id": "dtdTr090bba96fbc",
+      "_key": "!tables.results!dtdT01f236635413.dtdTr090bba96fbc"
+    },
+    {
+      "type": "text",
+      "name": "Impact Arm 5",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Arm ripped off; collapses and dies.</p>",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "dead": true
+          }
+        }
+      },
+      "_id": "dtdTr41ac480b2dc",
+      "_key": "!tables.results!dtdT01f236635413.dtdTr41ac480b2dc"
+    }
+  ],
+  "flags": {
+    "dtd40k": {
+      "table": {
+        "kind": "critical",
+        "type": "impact",
+        "location": "arm",
+        "page": 440
+      }
+    }
+  },
+  "_id": "dtdT01f236635413",
+  "_key": "!tables!dtdT01f236635413",
+  "folder": "dtdTFd9f007d2ba0"
+}

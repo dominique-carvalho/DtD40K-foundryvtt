@@ -1,0 +1,140 @@
+{
+  "name": "Critical — Impact — Head",
+  "img": "icons/svg/blood.svg",
+  "description": "<p>Critical Damage (Impact, Head), DtD 7.7a p. 440. Use the row equal to the accumulated Critical Damage.</p>",
+  "formula": "1d5",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "type": "text",
+      "name": "Impact Head 1",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Sees stars: 1 Fatigue; Dazed 1 round.</p>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "dazed"
+            ],
+            "rounds": 1,
+            "fatigue": 1
+          }
+        }
+      },
+      "_id": "dtdTrc34b6413cbf",
+      "_key": "!tables.results!dtdT604173af34c5.dtdTrc34b6413cbf"
+    },
+    {
+      "type": "text",
+      "name": "Impact Head 2",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Nose smashed: Blinded 1 round; 2 Fatigue.</p>",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "blinded"
+            ],
+            "rounds": 1,
+            "fatigue": 2
+          }
+        }
+      },
+      "_id": "dtdTrfb2cb1c4465",
+      "_key": "!tables.results!dtdT604173af34c5.dtdTrfb2cb1c4465"
+    },
+    {
+      "type": "text",
+      "name": "Impact Head 3",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Head snapped back: Stunned 1d5 rounds; 2 Fatigue.</p>",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "statuses": [
+              "stunned"
+            ],
+            "rounds": "1d5",
+            "fatigue": 2
+          }
+        }
+      },
+      "_id": "dtdTr557dc88df4f",
+      "_key": "!tables.results!dtdT604173af34c5.dtdTr557dc88df4f"
+    },
+    {
+      "type": "text",
+      "name": "Impact Head 4",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Brain pulverized; dies.</p>",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "dead": true
+          }
+        }
+      },
+      "_id": "dtdTr5158740599d",
+      "_key": "!tables.results!dtdT604173af34c5.dtdTr5158740599d"
+    },
+    {
+      "type": "text",
+      "name": "Impact Head 5",
+      "img": "icons/svg/blood.svg",
+      "description": "<p>Head bursts; dead.</p>",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "dtd40k": {
+          "effect": {
+            "dead": true
+          }
+        }
+      },
+      "_id": "dtdTr500d2c15700",
+      "_key": "!tables.results!dtdT604173af34c5.dtdTr500d2c15700"
+    }
+  ],
+  "flags": {
+    "dtd40k": {
+      "table": {
+        "kind": "critical",
+        "type": "impact",
+        "location": "head",
+        "page": 440
+      }
+    }
+  },
+  "_id": "dtdT604173af34c5",
+  "_key": "!tables!dtdT604173af34c5",
+  "folder": "dtdTFd9f007d2ba0"
+}

@@ -84,7 +84,7 @@ quickstart.md
 
 - [X] T030 [P] Atualizar `docs/analise-dtd.md` §17, `docs/pendencias.md` e o `README.md`
 - [X] T031 `npm run lint` e `npm test`
-- [ ] T032 `graphify update .`
+- [X] T032 `graphify update .`
 
 ## Dependencies
 

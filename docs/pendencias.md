@@ -1,6 +1,6 @@
 # Pendências — o que falta implementar (DtD 7.7a)
 
-Levantamento de 2026-09-27, depois da feature 012 (PRs 1–12 na `main`); atualizado com as features 013 (Veículos), 014 (Naves) e 015 (Criação de armas). Cruza os capítulos da 7.7a com o que cada
+Levantamento de 2026-09-27, depois da feature 012 (PRs 1–12 na `main`); atualizado com as features 013 (Veículos), 014 (Naves), 015 (Criação de armas) e 016 (Criação guiada). Cruza os capítulos da 7.7a com o que cada
 feature entregou e com o que as specs deixaram fora de escopo ou como texto. Atualizar a cada feature.
 
 ## 1. Capítulos sem implementação
@@ -11,8 +11,8 @@ feature entregou e com o que as specs deixaram fora de escopo ou como texto. Atu
 
 ## 2. Regras de jogo ainda não automatizadas
 
-- **Pontos iniciais da criação**: características 6/4/2 (máx. 4) e perícias 8/6/4 (máx. 3) sem controle; só
-  Backgrounds, itens iniciais e assets respeitam a criação.
+- **Exalted Assets sem custo de XP**: o exemplo da criação (p. 18) paga 100 XP pelo Exalted Asset; hoje ele entra sem
+  cobrar (spec 004/006).
 - **Queda** (curta 1 ferimento, longa 1d10, fatal 1d5 + 1d5 Critical Damage), **sufocamento**, **marcha forçada**
   (Con por hora, fadiga).
 - **Ações de combate só como texto**: Overwatch, Suppressing Fire (Pinning e zona de fogo), opções de Grapple a cada
@@ -35,6 +35,7 @@ feature entregou e com o que as specs deixaram fora de escopo ou como texto. Atu
 | 012 NPCs | traits Phasing, Flyer, Quadruped, Crawler, Auto-Stabilized, Amphibious, Dark Sight, Resource Stat; feats de NPC; Special Attacks de NPC; ações de Minion Squad no turno; forma alternativa (Zoanoid) como nota |
 | 014 Naves | efeitos da maioria dos consoles (Cloaking Device, Destiny Knot, Self Destruct, Grappler Arms, Freelance Market, Library Computer…), arco e alcance no mapa, recarga de torpedos em combate, encontros do Warp além da Crew perdida, efeitos de Chaplain, Chief Cook, Chief Medical Officer e Rogue Trader, Hail como combate social, serviços de porto sem contar tempo, hangar sem regra de capacidade |
 | 015 Criação de armas | efeitos em texto (nota na arma e no cartão): Arm Mounted, Felling, Melee Attachment I/II, Precise, Preysense Sight, Quick Draw/Combat Sheath; a rolagem de Psychic Phenomena do Orgone Array é só lembrada; Throwing usa o arremesso da 007 com 10 m fixos |
+| 016 Criação guiada | idiomas só como lembrete (sem campo na ficha); escolhas do Atlantean e do Mark of Slaanesh contadas pela quantidade de perícias em 6 (quais perícias não são guardadas); especialidades só avisam |
 | 013 Veículos | efeitos da maioria dos componentes (AI de bordo, COFFIN/SYNC, Berserker, ECM, Void Shield, Jump Jets, Afterburners por cena, Orgone Antennae, reatores), munições e modos de arma, terreno difícil e voo (queda e recuperação), Vault the Curb/Slip By/Pick Up, desvirar o veículo, compra de componentes com Wealth; Trick Shots com Mobile Trace System; pacotes de armas do Battlemecha |
 
 ## 4. Decisões em aberto (premissas das PRs)

@@ -33,8 +33,9 @@ Inventário do capítulo: `ch-creation-inventory.json` no scratchpad da sessão 
 - **Decision**: `RATING_MAX = 5`; 6 só por exceção (R5). Vale na edição (limite da etapa já é menor), nas compras de XP
   (`xp-service.advance` compara o valor final com o máximo do personagem) e no corte do valor final
   (`#capRatings` usa o máximo do personagem para cada tipo). O schema continua aceitando 6.
-- **Rationale**: p. 22; decisão do usuário. Personagens com 6 sem exceção: o corte derivado mostraria 5 — para não
-  mudar personagens em jogo, o corte usa `max(máximo, valor guardado)` e a ficha avisa (Edge Case da spec).
+- **Rationale**: p. 22; decisão do usuário. Para não mudar personagens em jogo, o corte do valor final usa o máximo do
+  personagem só com a criação ativa (e nunca abaixo do valor guardado); com a criação encerrada, volta a 6 e o máximo
+  vale só nas novas subidas (ajuste da validação).
 
 ## R5 — Exceções ao máximo
 

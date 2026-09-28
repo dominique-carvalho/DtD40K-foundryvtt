@@ -1,5 +1,5 @@
 import {
-  ADDICTION_LEVELS, CHARACTERISTICS, DERIVED_KEYS, INHERITANCE_SLOTS, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, SKILLS, STARTING_XP, XP_KINDS
+  ADDICTION_LEVELS, CHARACTERISTICS, DERIVED_KEYS, INHERITANCE_SLOTS, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, MAX_RATING, SKILLS, STARTING_XP, XP_KINDS
 } from "../config.mjs";
 import { spellSlots } from "../rules/magic.mjs";
 import { adeptLevels } from "../rules/martial.mjs";
@@ -393,8 +393,9 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
 
   /**
    * Racial Active Effects are added without schema bounds (research R2), so cap every characteristic and skill at
-   * the character's highest rating before deriving anything (spec 002, FR-015): 5, or 6 with an exception (spec 016,
-   * research R4/R5). A stored value above the cap is kept (characters already in play never lose dots).
+   * the character's highest rating before deriving anything (spec 002, FR-015): during creation 5, or 6 with an
+   * exception (spec 016, research R4/R5); afterwards 6 as before, so characters in play never lose dots (new raises
+   * are checked by canReach).
    * `capped` records which ratings lost part of a bonus, for the sheet.
    */
   #capRatings() {
@@ -408,7 +409,7 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     this.capped = {};
     for (const [group, kind] of [["characteristics", "characteristic"], ["skills", "skill"]]) {
       for (const [key, data] of Object.entries(this[group])) {
-        const max = Math.max(this.ratingCaps[kind].max, source?.[group]?.[key]?.value ?? 0);
+        const max = this.creation.active ? Math.max(this.ratingCaps[kind].max, source?.[group]?.[key]?.value ?? 0) : MAX_RATING;
         const { value, capped } = capValue(data.value, max);
         data.value = value;
         if (capped) this.capped[`${group}.${key}`] = true;

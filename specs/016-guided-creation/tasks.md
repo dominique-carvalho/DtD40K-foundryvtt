@@ -37,7 +37,7 @@ quickstart.md
 - [X] T007 [US1] `module/documents/creation-service.mjs`: `creationSummary(actor)` (grupos, gastos, orçamentos) e `setCreationDots(actor, path, value)` (`checkDots` + `canReach`, recusa `DTD.Creation.Error.<reason>` com confirmação do Mestre, padrão de `xp-service.refuse`)
 - [X] T008 [US1] `module/apps/creation-context.mjs` + `templates/actor/parts/creation.hbs`: painel com os contadores por grupo (gasto/orçamento, prioridade) só com `system.creation.active` e para dono ou Mestre; registrar a parte em `module/apps/character-sheet.mjs` e trocar `#onSetDots` por `setCreationDots`
 - [X] T009 [P] [US1] i18n (`DTD.Creation.*` dos contadores e erros `stepMax`, `budget`) e estilos do painel em `lang/*.json` e `styles/dtd40k.css`
-- [ ] T010 [US1] Validar quickstart 1–4 e registrar
+- [X] T010 [US1] Validar quickstart 1–4 e registrar
 
 ---
 
@@ -49,7 +49,7 @@ quickstart.md
 - [X] T014 [US2] `module/documents/feat-service.mjs`: terceira Hindrance → recusa `hindranceLimit`; asset/hindrance com a criação encerrada → recusa `creationOnly` (Mestre libera; substitui o aviso de `rules/feat.mjs`); `module/documents/asset-service.mjs`: Exalted Asset fora da criação → recusa (Paragon isento); `module/documents/class-service.mjs`: passar `creation`
 - [X] T015 [US2] Painel: XP da criação (total, gasto, saldo, prêmios) e especialidades pendentes/excedentes em `module/apps/creation-context.mjs` e `templates/actor/parts/creation.hbs`
 - [X] T016 [P] [US2] i18n (XP, especialidades, erros `atMax`, `sixLimit`, `hindranceLimit`, `creationOnly`, `creationLevel`)
-- [ ] T017 [US2] Validar quickstart 5–9 e 12 e registrar
+- [X] T017 [US2] Validar quickstart 5–9 e 12 e registrar
 
 ---
 
@@ -59,15 +59,15 @@ quickstart.md
 - [X] T019 [US3] `module/rules/creation.mjs`: `creationChecklist` (etapas de research R9); fazer T018 passar
 - [X] T020 [US3] `creation-service.endCreation(actor)` (Mestre; `DialogV2.confirm` com as pendências) ligado à ação `endCreation` de `module/apps/character-sheet.mjs`; checklist e botão no painel; remover o botão de `templates/actor/parts/equipment.hbs`
 - [X] T021 [P] [US3] i18n (etapas, estados, lembrete de idiomas, confirmação) e estilos
-- [ ] T022 [US3] Validar quickstart 10, 11 e 13 e registrar
+- [X] T022 [US3] Validar quickstart 10, 11 e 13 e registrar
 
 ---
 
 ## Phase 5: Polish
 
-- [ ] T023 [P] Atualizar `docs/pendencias.md` (pontos iniciais da criação feitos; o que ficou como texto) e o `README.md`
-- [ ] T024 `npm run lint` e `npm test`
-- [ ] T025 `graphify update .`
+- [X] T023 [P] Atualizar `docs/pendencias.md` (pontos iniciais da criação feitos; o que ficou como texto) e o `README.md`
+- [X] T024 `npm run lint` e `npm test`
+- [X] T025 `graphify update .`
 
 ## Dependencies
 

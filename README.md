@@ -84,6 +84,9 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
 - **Criação de armas**: montador (templates, tipos e mods do Story Master) com prévia do perfil, raridade e TN; armas
   de jogador aguardam a aprovação do Mestre e podem ser fabricadas (materiais por Wealth, depois Crafts); Red-Dot Sight,
   Motion Predictor, Breacher, Nonlethal, Unstable e Orgone Array entram no ataque.
+- **Criação guiada**: painel na ficha durante a criação com os pontos 6/4/2 e 8/6/4 (máx. 4 e 3), XP inicial,
+  especialidades e checklist das etapas; máximo 5 nas notas (6 pelas exceções do livro); classe de nível 1, Assets e
+  Hindrances só na criação; encerrar pede confirmação quando falta algo.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos

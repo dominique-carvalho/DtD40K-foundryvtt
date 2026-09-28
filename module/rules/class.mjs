@@ -72,13 +72,15 @@ export function classProgress(cls, ownedFeats) {
  * Whether a character may start a class (FR-004). Errors refuse it (the GM may confirm anyway);
  * warnings ask for confirmation.
  * @param {{cls: {name: string, system: object}, level: number, classes: {name: string, system: object}[],
- *   skills: Record<string, {value: number}>, feats: OwnedFeat[]}} params
+ *   skills: Record<string, {value: number}>, feats: OwnedFeat[], creation?: boolean}} params
+ *   creation: during character creation only a Level 1 class may start (spec 016, p. 15)
  */
-export function checkClassEntry({ cls, level, classes, skills, feats }) {
+export function checkClassEntry({ cls, level, classes, skills, feats, creation = false }) {
   const system = cls.system;
   const errors = [];
   const warnings = [];
-  if (system.level > level + 1) errors.push({ type: "levelTooHigh", level: system.level, max: level + 1 });
+  if (creation && system.level > 1) errors.push({ type: "creationLevel", level: system.level });
+  else if (system.level > level + 1) errors.push({ type: "levelTooHigh", level: system.level, max: level + 1 });
   const current = classes.find((item) => item.system.status === "current");
   if (current) errors.push({ type: "currentIncomplete", name: current.name });
   if (classes.some((item) => lower(item.name) === lower(cls.name))) errors.push({ type: "alreadyTaken" });

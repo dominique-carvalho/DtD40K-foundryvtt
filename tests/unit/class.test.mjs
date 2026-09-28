@@ -77,6 +77,12 @@ describe("checkClassEntry (FR-004)", () => {
     expect(checkClassEntry({ ...base, cls: cls("Rager", { level: 3 }) }).errors).toContainEqual({ type: "levelTooHigh", level: 3, max: 2 });
   });
 
+  it("allows only a Level 1 class during creation (spec 016)", () => {
+    expect(checkClassEntry({ ...base, cls: cls("Rager", { level: 2 }), creation: true }).errors).toContainEqual({ type: "creationLevel", level: 2 });
+    expect(checkClassEntry({ ...base, cls: cls("Rager", { level: 2 }) }).errors.map((e) => e.type)).not.toContain("creationLevel");
+    expect(checkClassEntry({ ...base, cls: swordsman, creation: true }).errors).toEqual([]);
+  });
+
   it("lists missing skills and feats", () => {
     const result = checkClassEntry({ ...base, skills: skills({ weaponry: 1, athletics: 1 }), cls: swordsman });
     expect(result.errors).toContainEqual({ type: "missingSkills", missing: [{ keys: ["weaponry"], value: 2 }] });

@@ -423,7 +423,8 @@
         "wrongExaltation": "{asset} é um asset da exaltação {exaltation}.",
         "wrongRace": "{asset} exige um Paragon da raça {race}.",
         "duplicate": "O personagem já tem {asset}.",
-        "limit": "Um personagem só pode ter um Exalted Asset (exceto os de Paragon)."
+        "limit": "Um personagem só pode ter um Exalted Asset (exceto os de Paragon).",
+        "creationOnly": "Exalted Assets só são comprados durante a criação do personagem (exceto Paragons)."
       },
       "GrantsFeats": "concede {count} feat(s)"
     },
@@ -509,7 +510,8 @@
         "characteristic": "Escolha uma das características listadas.",
         "characteristic2": "Escolha outra característica para perder 1.",
         "skill": "Escolha uma perícia.",
-        "specialty": "Digite a especialidade."
+        "specialty": "Digite a especialidade.",
+        "creationOnly": "Assets e Hindrances só são tomados durante a criação do personagem."
       },
       "GrantedByShort": "de",
       "WrongRaceHint": "Este feat racial é de outra raça. O Mestre decide se remove.",
@@ -569,7 +571,8 @@
         "missingSkills": "Perícias faltando: {list}.",
         "missingFeats": "Feats faltando: {list}.",
         "bonusChoice": "Escolha uma perícia (e escreva a especialidade, se pedida).",
-        "otherCurrent": "Remova {name}, a classe em andamento, antes de desfazer esta conclusão."
+        "otherCurrent": "Remova {name}, a classe em andamento, antes de desfazer esta conclusão.",
+        "creationLevel": "Esta classe é de nível {level}; um personagem novo começa com uma classe de nível 1."
       },
       "Warning": {
         "schools": "A classe também exige escolas que o sistema não confere: {list}. Confirme que o personagem as tem.",
@@ -607,7 +610,8 @@
         "notEnough": "XP insuficiente: custa {cost}, há {available} disponível.",
         "onlyLast": "Só o Mestre pode desfazer lançamentos que não sejam o último.",
         "atCap": "O valor da escola não pode passar do Level do personagem.",
-        "degenerated": "Esta característica está reduzida por uma Degeneration e não pode ser comprada com XP."
+        "degenerated": "Esta característica está reduzida por uma Degeneration e não pode ser comprada com XP.",
+        "sixLimit": "{label}: nenhuma outra nota deste tipo pode chegar a 6."
       },
       "UndoAwardConfirm": "Remover o prêmio {label} ({cost} XP)?"
     },
@@ -2305,6 +2309,50 @@
         "orgoneArray": "Fenômenos Psíquicos nos dados que explodem"
       },
       "Rebuild": "Abrir no montador"
+    },
+    "Creation": {
+      "Title": "Criação do personagem",
+      "Characteristics": "Características",
+      "Skills": "Perícias",
+      "XP": "Experiência",
+      "XPTotal": "Total",
+      "XPSpent": "Gasto",
+      "XPLeft": "Saldo",
+      "Hint": "Os grupos recebem 6/4/2 pontos de características e 8/6/4 de perícias; o que gasta mais fica com a maior parte. Até 4 numa característica e 3 numa perícia com esses pontos; pontos da raça e compras com XP não contam.",
+      "SpecialtyMissing": "Precisa de especialidade (4 pontos)",
+      "SpecialtyExcess": "Especialidades além do que as regras dão",
+      "Step": {
+        "race": "Raça",
+        "exaltation": "Exaltação",
+        "class": "Classe de nível 1",
+        "alignment": "Alinhamento (divindade, Devotion 6)",
+        "characteristics": "Características (6/4/2)",
+        "skills": "Perícias (8/6/4)",
+        "backgrounds": "Backgrounds (7 pontos)",
+        "xp": "Experiência",
+        "specialties": "Especialidades",
+        "equipment": "Equipamento inicial",
+        "languages": "Idiomas"
+      },
+      "Detail": {
+        "unspent": "sobram {unspent} pontos",
+        "devotion": "Devotion {devotion}",
+        "backgrounds": "{dots}/7",
+        "xp": "sobram {available} XP (pode guardar)",
+        "specialties": "{missing} faltando, {excess} a mais",
+        "equipment": "{used}/{max} escolhas",
+        "languages": "idioma da raça, Trade e mais pela Inteligência: {count} no total"
+      },
+      "Error": {
+        "stepMax": "{label}: os pontos da criação vão até 4 numa característica e 3 numa perícia; pontos da raça e XP podem passar.",
+        "budget": "{label}: este ponto não cabe nos 6/4/2 de características ou 8/6/4 de perícias.",
+        "atMax": "{label} está no máximo do personagem.",
+        "sixLimit": "{label}: nenhuma outra nota deste tipo pode chegar a 6."
+      },
+      "GMOverrideTitle": "Regras da criação de personagem",
+      "GMOverride": "Como Mestre, permitir mesmo assim?",
+      "EndTitle": "Encerrar a criação do personagem",
+      "EndPending": "Estas etapas não foram concluídas. Encerrar a criação mesmo assim?"
     }
   }
 }

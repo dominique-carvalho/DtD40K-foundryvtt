@@ -1,0 +1,40 @@
+{{#with creation as |c|}}
+<section class="creation-panel">
+  <h2 class="section-title">{{localize "DTD.Creation.Title"}}</h2>
+  <div class="creation-scores">
+    <div class="creation-score">
+      <h3>{{localize "DTD.Creation.Characteristics"}}</h3>
+      <ul>
+        {{#each c.characteristics.groups as |g|}}
+        <li class="creation-group {{g.state}}"><span>{{g.label}}</span> <b>{{g.spent}} / {{g.budget}}</b></li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="creation-score">
+      <h3>{{localize "DTD.Creation.Skills"}}</h3>
+      <ul>
+        {{#each c.skills.groups as |g|}}
+        <li class="creation-group {{g.state}}"><span>{{g.label}}</span> <b>{{g.spent}} / {{g.budget}}</b></li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="creation-score">
+      <h3>{{localize "DTD.Creation.XP"}}</h3>
+      <ul>
+        <li class="creation-group"><span>{{localize "DTD.Creation.XPTotal"}}</span> <b>{{c.xp.total}}</b></li>
+        <li class="creation-group"><span>{{localize "DTD.Creation.XPSpent"}}</span> <b>{{c.xp.spent}}</b></li>
+        <li class="creation-group"><span>{{localize "DTD.Creation.XPLeft"}}</span> <b>{{c.xp.available}}</b></li>
+      </ul>
+    </div>
+  </div>
+  <p class="hint">{{localize "DTD.Creation.Hint"}}</p>
+  {{#if c.specialties.missing.length}}<p class="creation-note warning"><i class="fa-solid fa-triangle-exclamation" inert></i> {{localize "DTD.Creation.SpecialtyMissing"}}: {{#each c.specialties.missing as |s|}}{{s}}{{#unless @last}}, {{/unless}}{{/each}}</p>{{/if}}
+  {{#if c.specialties.excess.length}}<p class="creation-note warning"><i class="fa-solid fa-triangle-exclamation" inert></i> {{localize "DTD.Creation.SpecialtyExcess"}}: {{#each c.specialties.excess as |s|}}{{s}}{{#unless @last}}, {{/unless}}{{/each}}</p>{{/if}}
+  <ol class="creation-steps">
+    {{#each c.steps as |s|}}
+    <li class="creation-step {{s.status}}"><i class="fa-solid {{s.icon}}" inert></i> {{s.label}}{{#if s.detail}} <span class="hint">{{s.detail}}</span>{{/if}}</li>
+    {{/each}}
+  </ol>
+  {{#if c.canEnd}}<button type="button" data-action="endCreation"><i class="fa-solid fa-flag-checkered" inert></i> {{localize "DTD.Equipment.EndCreation"}}</button>{{/if}}
+</section>
+{{/with}}

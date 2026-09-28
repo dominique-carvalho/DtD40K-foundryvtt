@@ -108,12 +108,13 @@ describe("validateFeatAdd (FR-008, research R3)", () => {
     expect(add(precision, sel(), [], elf).warnings).toEqual([]);
   });
 
-  it("adds the creation-only notice to assets and hindrances", () => {
-    expect(add(feat("Brave", { category: "asset" }), sel()).notices).toEqual([{ type: "creationOnly" }]);
-    expect(add(feat("Sturdy", { category: "asset", automation: "sturdy" }), sel()).notices)
-      .toEqual([{ type: "creationOnly" }, { type: "extraHindrances", count: 2 }]);
+  it("refuses assets and hindrances after creation (spec 016)", () => {
+    expect(add(feat("Brave", { category: "asset" }), sel()).errors).toEqual([]);
+    const after = validateFeatAdd({ feat: feat("Brave", { category: "asset" }), selection: sel(), owned: [], race: null, creation: false });
+    expect(after.errors).toEqual(["creationOnly"]);
+    expect(add(feat("Sturdy", { category: "asset", automation: "sturdy" }), sel()).notices).toEqual([{ type: "extraHindrances", count: 2 }]);
     expect(add(feat("Veteran o' the Wheel", { category: "asset", automation: "veteran" }), sel()).notices)
-      .toEqual([{ type: "creationOnly" }, { type: "extraHindrances", count: 1 }]);
+      .toEqual([{ type: "extraHindrances", count: 1 }]);
     expect(add(soundConstitution, sel()).notices).toEqual([]);
   });
 

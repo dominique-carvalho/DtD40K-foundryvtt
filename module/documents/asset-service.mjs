@@ -35,6 +35,10 @@ export async function addExaltedAsset(actor, assetItem, { granted = false } = {}
   const exaltation = getExaltation(actor);
   const race = getRace(actor);
   const check = validateAssetAdd({ asset: assetItem, exaltation, race, assets: getExaltedAssets(actor) });
+  // Exalted Assets are bought during character creation (p. 179), Paragons excepted (spec 016).
+  if (check.valid && !granted && !actor.system.creation.active && exaltation?.name !== "Paragon") {
+    Object.assign(check, { valid: false, error: "creationOnly" });
+  }
   if (!check.valid) {
     const message = game.i18n.format(`DTD.Asset.Error.${check.error}`, {
       asset: assetItem.name,
@@ -68,8 +72,6 @@ export async function addExaltedAsset(actor, assetItem, { granted = false } = {}
 
   const [created] = await actor.createEmbeddedDocuments("Item", [data]);
   if (!created) return null;
-  // Assets are bought at character creation (p. 179); the system has no creation mode yet (FR-023).
-  if (!granted) ui.notifications.info(localize("DTD.Asset.CreationOnly"));
   if (created.system.automation === "actionHero") {
     await actor.update({ "system.heroPoints.value": actor._source.system.heroPoints.value + 1 });
   }

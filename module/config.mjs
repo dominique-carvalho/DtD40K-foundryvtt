@@ -105,8 +105,31 @@ export const SKILLS = {
 /** Derived values that accept a manual bonus and override. */
 export const DERIVED_KEYS = ["staticDefense", "hpMax", "mentalDefense", "resolveMax", "speed", "resilience", "fatigueMax"];
 
-/** Highest characteristic or skill rating, racial bonuses included (spec 002, FR-015). */
+/** Highest characteristic or skill rating anyone can have, racial bonuses included (spec 002, FR-015). */
 export const MAX_RATING = 6;
+
+/** Usual maximum of a rating; only the exceptions below reach MAX_RATING (DtD 7.7a p. 22, spec 016). */
+export const RATING_MAX = 5;
+
+/**
+ * What lets a rating reach 6 (spec 016, research R5), matched by the item name of the packs: an exaltation from the
+ * Power Stat rank of the power, or an Exalted Asset. `characteristic`/`skill`: how many ratings may be at 6.
+ */
+export const RATING_EXCEPTIONS = [
+  { source: "exaltation", name: "Daemonhost", rank: 2, characteristic: Infinity, skill: 0, page: 76 },
+  { source: "exaltation", name: "Paragon", rank: 2, characteristic: Infinity, skill: Infinity, page: 84 },
+  { source: "exaltation", name: "Atlantean", rank: 1, characteristic: 0, skill: 3, page: 68 },
+  { source: "feat", name: "Mark of Slaanesh", characteristic: 0, skill: 6, page: 213 }
+];
+
+/**
+ * Starting scores (pp. 13–14): base value, the dots of the three priorities and the highest rating those dots may
+ * reach. Characteristic groups come from CHARACTERISTICS, skill categories from SKILLS (ranked separately).
+ */
+export const CREATION = {
+  characteristic: { base: 1, budgets: [6, 4, 2], stepMax: 4, groups: ["physical", "social", "mental"] },
+  skill: { base: 0, budgets: [8, 6, 4], stepMax: 3, groups: ["mental", "physical", "social"] }
+};
 
 /**
  * How a racial power is handled (spec 002, FR-016 to FR-018).
@@ -531,6 +554,9 @@ export const DTD = {
   SKILLS,
   DERIVED_KEYS,
   MAX_RATING,
+  RATING_MAX,
+  RATING_EXCEPTIONS,
+  CREATION,
   RACE_POWER_AUTOMATION,
   EXALTATION_FORMULAS,
   EXALTATION_POWER_AUTOMATION,

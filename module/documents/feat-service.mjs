@@ -116,7 +116,7 @@ export async function addFeat(actor, featItem, { selection } = {}) {
     return granted;
   }
 
-  const check = validateFeatAdd({ feat: featItem, selection: chosen, owned, race: getRace(actor) });
+  const check = validateFeatAdd({ feat: featItem, selection: chosen, owned, race: getRace(actor), creation: actor.system.creation.active });
   if (check.errors.length) {
     const message = check.errors.map((error) => game.i18n.format(`DTD.Feat.Error.${error}`, {
       feat: name,

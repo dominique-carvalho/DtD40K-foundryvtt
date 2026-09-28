@@ -118,10 +118,11 @@ const EXTRA_HINDRANCES = { sturdy: 2, veteran: 1 };
 /**
  * Whether a character may take a feat (FR-008, research R3).
  * Errors refuse the feat (the GM may confirm anyway); warnings ask for confirmation; notices inform.
- * @param {{feat: FeatLike, selection: FeatSelection, owned: FeatLike[], race: {name: string, system?: {power?: {name: string}}}|null}} params
+ * @param {{feat: FeatLike, selection: FeatSelection, owned: FeatLike[], race: {name: string, system?: {power?: {name: string}}}|null,
+ *   creation?: boolean}} params  creation: assets and hindrances are taken only during character creation (spec 016)
  * @returns {{errors: string[], warnings: {type: string, names: string[]}[], notices: {type: string, count?: number}[]}}
  */
-export function validateFeatAdd({ feat, selection, owned, race }) {
+export function validateFeatAdd({ feat, selection, owned, race, creation = true }) {
   const system = feat.system;
   const errors = [];
   const warnings = [];
@@ -145,7 +146,7 @@ export function validateFeatAdd({ feat, selection, owned, race }) {
     .map((requirement) => requirement.name);
   if (missing.length) warnings.push({ type: "missingDependency", names: missing });
 
-  if (["asset", "hindrance"].includes(system.category)) notices.push({ type: "creationOnly" });
+  if (["asset", "hindrance"].includes(system.category) && !creation) errors.push("creationOnly");
   if (EXTRA_HINDRANCES[system.automation]) notices.push({ type: "extraHindrances", count: EXTRA_HINDRANCES[system.automation] });
   return { errors, warnings, notices };
 }

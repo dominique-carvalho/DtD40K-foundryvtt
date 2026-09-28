@@ -1,6 +1,7 @@
 import { CHARACTERISTICS, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, MAX_RATING, SKILLS } from "../config.mjs";
 import { fullName } from "../rules/feat.mjs";
 import { advanceCost, canAdvance, undoPlan } from "../rules/xp.mjs";
+import { canReach } from "../rules/creation.mjs";
 import { getExaltation, setPowerStat } from "./exaltation-service.mjs";
 import { getRace } from "./race-service.mjs";
 import { restoreAttack, syncPassives } from "./martial-service.mjs";
@@ -103,11 +104,15 @@ export async function advance(actor, kind, key = "") {
   } else if (kind === "school" || kind === "martial") {
     from = foundry.utils.getProperty(actor._source, schoolPath);
   } else {
-    const path = `system.${kind === "characteristic" ? "characteristics" : "skills"}.${key}.value`;
+    const group = kind === "characteristic" ? "characteristics" : "skills";
+    const path = `system.${group}.${key}.value`;
     from = foundry.utils.getProperty(actor._source, path);
     const final = foundry.utils.getProperty(actor, path);
-    if (final >= MAX_RATING) {
-      ui.notifications.warn(game.i18n.format("DTD.XP.Error.atMax", { label }));
+    // Highest rating of the character: 5, or 6 with an exception (spec 016, FR-005).
+    const atSix = Object.entries(actor.system[group]).filter(([other, data]) => other !== key && data.value >= MAX_RATING).length;
+    const reach = canReach({ to: final + 1, cap: actor.system.ratingCaps[kind], atSix });
+    if (!reach.allowed) {
+      ui.notifications.warn(game.i18n.format(`DTD.XP.Error.${reach.reason}`, { label }));
       return false;
     }
   }

@@ -140,7 +140,6 @@
     <ul class="slot-list">
       {{#each eq.slots as |slot|}}<li class="{{#if (gte slot.used slot.max)}}full{{/if}}">{{slot.label}} <b>{{slot.used}} / {{slot.max}}</b></li>{{/each}}
     </ul>
-    {{#if @root.isGM}}<button type="button" data-action="endCreation"><i class="fa-solid fa-flag-checkered" inert></i> {{localize "DTD.Equipment.EndCreation"}}</button>{{/if}}
   </section>
   {{/if}}
 

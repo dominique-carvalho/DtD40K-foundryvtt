@@ -317,3 +317,27 @@ describe("vehicle constants (013)", () => {
     expect(DTD.VEHICLE_CREW_ROLES).toEqual(["pilot", "gunner", "engineer", "passenger"]);
   });
 });
+
+describe("ship constants (014)", () => {
+  it("lists categories, budgets, hull classes, consoles, departments and officer posts (pp. 386–395)", () => {
+    expect(DTD.SHIP_CATEGORIES).toEqual(["hull", "customHull", "officer", "console", "shield", "weapon", "weaponType", "torpedoTube", "torpedo"]);
+    expect(DTD.SHIP_BUDGETS).toEqual({ 1: 50, 2: 85, 3: 130, 4: 185, 5: 250 });
+    expect(DTD.HULL_CLASSES).toEqual(["escort", "destroyer", "cruiser", "battleship"]);
+    expect(DTD.CONSOLE_TYPES).toEqual(["arcana", "command", "engineering", "tactical", "universal"]);
+    expect(Object.keys(DTD.SHIP_DEPARTMENTS)).toEqual(["command", "manoeuver", "tactical", "engineering", "arcana"]);
+    expect(DTD.SHIP_DEPARTMENTS.tactical).toEqual({ post: "tacticalOfficer", skill: "ballistics" });
+    expect(Object.keys(DTD.OFFICER_POSTS)).toHaveLength(12);
+    expect(Object.values(DTD.OFFICER_POSTS).filter((o) => o.rank === "primary")).toHaveLength(5);
+    expect(DTD.SHIELD_TYPES).toHaveLength(5);
+    expect(DTD.SHIP_NPC_KEPT).toBe(4);
+  });
+
+  it("has the weapon type modifiers and the custom hull chart (pp. 393, 397)", () => {
+    expect(Object.keys(DTD.SHIP_WEAPON_TYPES)).toEqual(["las", "melta", "plasma", "orgone", "driver", "positron", "antimeson"]);
+    expect(DTD.SHIP_WEAPON_TYPES.plasma).toEqual({ dam: 2, dis: 0, acc: -5, crit: 0, range: null, cost: 5 });
+    expect(DTD.SHIP_WEAPON_TYPES.melta).toMatchObject({ range: "half", cost: -5 });
+    expect(Object.keys(DTD.CUSTOMIZATION)).toHaveLength(10);
+    expect(DTD.CUSTOMIZATION.forwardWeapon).toEqual({ stat: "forward", cp: 4, limit: 2, total: 4, step: 1 });
+    expect(DTD.CUSTOMIZATION.hullStrength).toEqual({ stat: "hullStrength", cp: 1, limit: 6, total: 110, step: 5 });
+  });
+});

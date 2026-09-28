@@ -1,0 +1,16 @@
+{
+  "_id": "dtdKFd6cb664c9cd",
+  "_key": "!folders!dtdKFd6cb664c9cd",
+  "name": "Weapons",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "shipFolder": "weapon"
+    }
+  }
+}

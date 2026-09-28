@@ -1,0 +1,93 @@
+{
+  "name": "Advanced Bridge Design",
+  "type": "shipComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Holographic, self-adjusting bridge controls. Command Action tests gain +1k1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 399
+    },
+    "category": "console",
+    "cost": 5,
+    "quantity": 1,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": "command"
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Holographic, self-adjusting bridge controls. Command Action tests gain +1k1.",
+    "automation": {
+      "key": "advancedBridgeDesign"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdKe3f55c82cf96",
+  "_key": "!items!dtdKe3f55c82cf96",
+  "folder": "dtdKFd60cf2efbbd"
+}

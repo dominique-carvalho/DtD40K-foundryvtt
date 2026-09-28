@@ -76,6 +76,11 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   tripulação ligada a personagens e NPCs; ações de veículo pelo turno de quem age (Move, Punch It com stunts, Skirmish
   e Barrage com a perícia do atirador, Evasive Maneuvers, Ramming, Jury Rig), Control Test e Out of Control, dano pelo
   Aplicar com críticos de veículo e explosão, perseguições por cartão de chat e ciclo de reparo.
+- **Naves**: compêndio *Ship Components* (cascos, bases customizáveis, oficiais, consoles, escudos, armas e torpedos do
+  cap. XVI) e *Ships* (6 naves de NPC); montador com BP por Holdings, customização, slots e avisos, oficiais ligados a
+  personagens e NPCs; combate de naves no tracker (uma manobra e uma ação por departamento, Crew comprometida por
+  rodada, dados mantidos pelo oficial), ataques e Aplicar de nave (escudo, Disruption, Hull e Crit Chart), Evasive,
+  ramming e abordagem; caças, bombardeio, viagem pelo Warp com encontros, hangar de veículos e reparos.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos
@@ -154,7 +159,7 @@ npm run build:packs
 - Depois do build, abra o Foundry e confira o compêndio (ex.: 16 raças).
 - Nunca edite `packs/` à mão; altere os JSON em `src/packs/` e rode o build de novo.
 - Para editar um compêndio pelo Foundry: clique com o botão direito no compêndio → "Alternar trava de edição", edite os itens, feche o Foundry e rode `npm run extract:packs` para gravar as mudanças de volta em `src/packs/` (depois revise o diff e faça o commit).
-- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) `combat-tables` (22 tabelas do cap. XVII e as 2 do Warp) `spells` (126 magias do cap. VIII) `martial-schools` (15 escolas dos caps. IX–X) `deities` (21 deuses do cap. XII; a tabela Degeneration fica em `combat-tables`) `antagonists` (47 NPCs e 4 Minion Squads do cap. XX, só para o Mestre), `vehicle-components` (131 componentes, armas e munições do cap. XV) e `vehicles` (16 veículos de exemplo).
+- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) `combat-tables` (22 tabelas do cap. XVII e as 2 do Warp) `spells` (126 magias do cap. VIII) `martial-schools` (15 escolas dos caps. IX–X) `deities` (21 deuses do cap. XII; a tabela Degeneration fica em `combat-tables`) `antagonists` (47 NPCs e 4 Minion Squads do cap. XX, só para o Mestre), `vehicle-components` (131 componentes, armas e munições do cap. XV), `vehicles` (16 veículos de exemplo), `ship-components` (104 peças do cap. XVI) e `ships` (6 naves de NPC).
 
 ## Licença
 

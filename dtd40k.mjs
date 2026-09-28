@@ -7,6 +7,9 @@ import { NpcData } from "./module/data/npc-data.mjs";
 import { MinionSquadData } from "./module/data/minion-squad-data.mjs";
 import { VehicleData } from "./module/data/vehicle-data.mjs";
 import { VehicleComponentData } from "./module/data/vehicle-component-data.mjs";
+import { ShipData } from "./module/data/ship-data.mjs";
+import { ShipComponentData } from "./module/data/ship-component-data.mjs";
+import { SquadronData } from "./module/data/squadron-data.mjs";
 import { NpcSheet } from "./module/apps/npc-sheet.mjs";
 import { MinionSheet } from "./module/apps/minion-sheet.mjs";
 import { fearFromCard } from "./module/documents/npc-service.mjs";
@@ -25,6 +28,12 @@ import { MartialSchoolSheet } from "./module/apps/martial-school-sheet.mjs";
 import { DeityData } from "./module/data/deity-data.mjs";
 import { DeitySheet } from "./module/apps/deity-sheet.mjs";
 import { VehicleComponentSheet } from "./module/apps/vehicle-component-sheet.mjs";
+import { ShipComponentSheet } from "./module/apps/ship-component-sheet.mjs";
+import { ShipSheet } from "./module/apps/ship-sheet.mjs";
+import { SquadronSheet } from "./module/apps/squadron-sheet.mjs";
+import { applyShipDamage, boardingRound, evasive as shipEvasive, rollShipDamage, undoShipDamage } from "./module/documents/ship-combat-service.mjs";
+import { newScene as newShipScene } from "./module/documents/ship-service.mjs";
+import { warpStep } from "./module/documents/warp-service.mjs";
 import { VehicleSheet } from "./module/apps/vehicle-sheet.mjs";
 import { allVehicles, controlTest, evasive, explode, newScene as newVehicleScene, rollOutOfControl, vehicleOfCard } from "./module/documents/vehicle-service.mjs";
 import { markObstacle, rollChaseRound, startChaseFromCanvas } from "./module/documents/chase-service.mjs";
@@ -58,6 +67,9 @@ Hooks.once("init", () => {
   // Vehicles (spec 013).
   CONFIG.Actor.dataModels.vehicle = VehicleData;
   CONFIG.Item.dataModels.vehicleComponent = VehicleComponentData;
+  CONFIG.Actor.dataModels.ship = ShipData;
+  CONFIG.Actor.dataModels.squadron = SquadronData;
+  CONFIG.Item.dataModels.shipComponent = ShipComponentData;
 
   CONFIG.Item.documentClass = DtdItem;
   CONFIG.Item.dataModels.race = RaceData;
@@ -156,6 +168,24 @@ Hooks.once("init", () => {
     label: "DTD.Sheet.Vehicle"
   });
 
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Actor, "dtd40k", ShipSheet, {
+    types: ["ship"],
+    makeDefault: true,
+    label: "DTD.Sheet.Ship"
+  });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Actor, "dtd40k", SquadronSheet, {
+    types: ["squadron"],
+    makeDefault: true,
+    label: "DTD.Sheet.Squadron"
+  });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", ShipComponentSheet, {
+    types: ["shipComponent"],
+    makeDefault: true,
+    label: "DTD.Sheet.ShipComponent"
+  });
+
   foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", VehicleComponentSheet, {
     types: ["vehicleComponent"],
     makeDefault: true,
@@ -174,6 +204,12 @@ Hooks.once("init", () => {
 function refreshCombatants(combat) {
   for (const combatant of combat.combatants) {
     const actor = combatant.actor;
+    // Ships: the Crew free this round depends on the round (spec 014).
+    if (actor?.type === "ship") {
+      actor.reset();
+      if (actor.sheet?.rendered) actor.sheet.render();
+      continue;
+    }
     if (actor?.type !== "character" && actor?.type !== "npc") continue;
     // Exaltation spending depends on the round (004); the Combat tab shows the turn state (008).
     if (actor.items.some((item) => item.type === "exaltation")) actor.reset();
@@ -185,6 +221,10 @@ Hooks.on("updateCombat", (combat, changes) => {
   if ("round" in changes || "turn" in changes) refreshCombatants(combat);
 });
 Hooks.on("combatStart", refreshCombatants);
+// Actors are prepared before the combat exists: recompute the ships' Crew of this round once the world is ready.
+Hooks.once("ready", () => {
+  if (game.combat) refreshCombatants(game.combat);
+});
 
 // Buttons of the attack and acquisition cards (spec 007, research R7/R9).
 const CHAT_ACTIONS = {
@@ -221,6 +261,13 @@ const CHAT_ACTIONS = {
     if (vehicle && game.user.isGM) await explode(vehicle);
   },
   chaseRound: (message) => rollChaseRound(message),
+  // Ships (spec 014): ship damage and its Apply, Evasive Manoeuvers, undo, boarding rounds, Warp steps.
+  shipDamage: (message) => rollShipDamage(message),
+  shipApply: (message) => applyShipDamage(message),
+  shipEvasive: (message) => shipEvasive(message),
+  shipUndo: (message) => undoShipDamage(message),
+  boardingRound: (message) => boardingRound(message),
+  warpStep: (message) => warpStep(message),
   chaseObstacle: (message, data) => markObstacle(message, data.uuid)
 };
 Hooks.on("renderChatMessageHTML", (message, html) => {
@@ -239,6 +286,7 @@ Hooks.once("ready", () => {
     if (!message) return;
     if (action === "applyDamage") await applyDamage(message, payload.tokenUuids);
     if (action === "martialEffects") await applyAttackEffects(message);
+    if (action === "shipApply") await applyShipDamage(message, payload.targetUuid);
     if (action === "markSocial") await message.setFlag("dtd40k", "social", { ...message.getFlag("dtd40k", "social"), resolved: payload.resolved });
   });
 });
@@ -249,6 +297,8 @@ Hooks.on("deleteCombat", async (combat) => {
   for (const actor of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "character"))) await newScene(actor);
   // Vehicles: wounds in the scene and round-based conditions reset (spec 013).
   for (const vehicle of allVehicles()) await newVehicleScene(vehicle);
+  // Ships: temporary Crew, committed Crew and this round's effects end (spec 014).
+  for (const ship of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "ship"))) await newShipScene(ship);
 });
 // The GM starts a chase with the controlled and targeted tokens (spec 013, FR-011).
 Hooks.on("getSceneControlButtons", (controls) => {

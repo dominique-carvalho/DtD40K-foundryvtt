@@ -1,0 +1,16 @@
+{
+  "_id": "dtdKFdc85230fc76",
+  "_key": "!folders!dtdKFdc85230fc76",
+  "name": "Universal Consoles",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 80000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "shipFolder": "universal"
+    }
+  }
+}

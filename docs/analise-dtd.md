@@ -663,6 +663,17 @@ Fonte: B2 pp. 91–113.
 
 ## 18. Naves e viagem no Warp (Book 2)
 
+**Na 7.7a** (cap. XVI pp. 386–415; implementado na feature `014-ships`): BP por Holdings (50/85/130/185/250), 14 cascos
+prontos e 4 bases customizáveis com Customization Points, 12 oficiais (5 primários com os dados mantidos dos
+departamentos), 34 consoles por tipo de slot (Universal aceita qualquer), 5 escudos × 4 marks, 5 padrões de arma × 7 tipos,
+tubo e 7 torpedos. SD = 10 + Maneuverability + Acceleration; iniciativa Sensors + Acceleration + 1d10. Não há Crew
+Quality: cada ação compromete 1–10 de Crew (dados rolados) e mantém os pontos do oficial na perícia (NPC 4). Turno: uma
+manobra obrigatória e uma ação por departamento (Command, Manoeuver, Tactical, Engineering, Arcana; 23 ações). Dano no
+escudo (colapsa em 0, excesso perdido; Disruption anula Regeneration), depois no Hull com Spelljammer Crit Chart (14
+linhas). Ramming por classe + Speed, abordagem por rodadas, caças como esquadrões, bombardeio TN 30, viagem pelo Warp em
+3 passos com encontros, reparo de campo e serviços de porto. 6 naves de NPC (custo impresso = partes + 25 BP dos oficiais).
+O texto abaixo é o levantamento do Book 2 da 1.6.
+
 Fonte: B2 pp. 115–137.
 
 **Bloco**: Hull Class (Escort/Destroyer/Cruiser/Battleship) · BP · Crew (reserva de dados) · Hull Strength (HP) · Maneuverability · Acceleration · Speed (VU) · Sensors · slots de console (Arcana/Command/Engineering/Tactical/Universal) · slots de arma (proa/popa) · Crew Quality (1–5) · Shields (capacidade/regeneração). TN para acertar = 3·CQ + Maneuverability.

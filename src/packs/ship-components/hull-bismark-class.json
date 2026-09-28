@@ -1,0 +1,91 @@
+{
+  "name": "Bismark-Class",
+  "type": "shipComponent",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Heavily armored flagship packed with coordination systems for directing whole fleets.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 390
+    },
+    "category": "hull",
+    "cost": 60,
+    "quantity": 1,
+    "hull": {
+      "class": "cruiser",
+      "crew": 22,
+      "hullStrength": 100,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 8,
+      "sensors": 10,
+      "consoles": {
+        "arcana": 2,
+        "command": 3,
+        "engineering": 1,
+        "tactical": 1,
+        "universal": 1,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 2,
+        "rear": 2
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Cruiser; Crew 22, Hull 100, Man 0, Acc 0, Speed 8, Sensors 10",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdKa840a630e755",
+  "_key": "!items!dtdKa840a630e755",
+  "folder": "dtdKFdbe8fd00c0c"
+}

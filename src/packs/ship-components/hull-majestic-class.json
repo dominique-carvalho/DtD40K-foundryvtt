@@ -1,0 +1,91 @@
+{
+  "name": "Majestic-Class",
+  "type": "shipComponent",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Command vessel with a domed forward bridge; most guns point aft since it was meant to fight while withdrawing.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 389
+    },
+    "category": "hull",
+    "cost": 30,
+    "quantity": 1,
+    "hull": {
+      "class": "destroyer",
+      "crew": 16,
+      "hullStrength": 70,
+      "maneuverability": 0,
+      "acceleration": 5,
+      "speed": 9,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 1,
+        "command": 3,
+        "engineering": 1,
+        "tactical": 1,
+        "universal": 1,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 1,
+        "rear": 4
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Destroyer; Crew 16, Hull 70, Man 0, Acc 5, Speed 9, Sensors 0",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdKfc6f63c9e87c",
+  "_key": "!items!dtdKfc6f63c9e87c",
+  "folder": "dtdKFdbe8fd00c0c"
+}

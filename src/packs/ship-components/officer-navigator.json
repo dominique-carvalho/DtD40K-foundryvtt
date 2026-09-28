@@ -1,0 +1,91 @@
+{
+  "name": "Navigator",
+  "type": "shipComponent",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "description": "<p>Most vital person aboard: without one, warp travel is hopeless and likely to throw the ship far off course. Navigators are ritually blinded against the warp's horrors. Requires Divination school rated 1 or higher (p. 411). Rolls Arcana + Wisdom for charting and leaving the warp.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 394
+    },
+    "category": "officer",
+    "cost": 5,
+    "quantity": 1,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "navigator",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Critical post",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK3103db2f8691",
+  "_key": "!items!dtdK3103db2f8691",
+  "folder": "dtdKFd622d954aed"
+}

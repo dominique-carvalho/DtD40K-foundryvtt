@@ -1,0 +1,91 @@
+{
+  "name": "Heavy Lance",
+  "type": "shipComponent",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Longest-reaching, hardest-hitting non-torpedo weapon; its limit is the crew effort needed per shot.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 397
+    },
+    "category": "weapon",
+    "cost": 15,
+    "quantity": 1,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "Heavy Lance",
+      "kind": "lance",
+      "dam": {
+        "rolled": 8,
+        "kept": 4
+      },
+      "dis": 5,
+      "acc": 0,
+      "crit": 4,
+      "range": 20,
+      "arc": "fixed",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "8k4, Dis 5, Acc 0, Crit 4, Range 20, Fixed",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdKaa637a1ebc43",
+  "_key": "!items!dtdKaa637a1ebc43",
+  "folder": "dtdKFd6cb664c9cd"
+}

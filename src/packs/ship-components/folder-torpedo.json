@@ -1,0 +1,16 @@
+{
+  "_id": "dtdKFd46124230c1",
+  "_key": "!folders!dtdKFd46124230c1",
+  "name": "Torpedoes",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 110000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "shipFolder": "torpedo"
+    }
+  }
+}

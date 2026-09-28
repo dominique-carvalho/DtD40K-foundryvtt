@@ -1,0 +1,91 @@
+{
+  "name": "Lance",
+  "type": "shipComponent",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Typical lone weapon on Escorts; easy to aim but draining on crew attention.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 397
+    },
+    "category": "weapon",
+    "cost": 10,
+    "quantity": 1,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "Lance",
+      "kind": "lance",
+      "dam": {
+        "rolled": 7,
+        "kept": 3
+      },
+      "dis": 4,
+      "acc": 5,
+      "crit": 2,
+      "range": 10,
+      "arc": "flexible",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "7k3, Dis 4, Acc 5, Crit 2, Range 10, Flexible",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdKace3dabef546",
+  "_key": "!items!dtdKace3dabef546",
+  "folder": "dtdKFd6cb664c9cd"
+}

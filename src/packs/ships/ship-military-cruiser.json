@@ -1,0 +1,1322 @@
+{
+  "name": "Military Cruiser",
+  "type": "ship",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "budget": {
+      "holdings": 4
+    },
+    "hull": {
+      "value": 95,
+      "temp": 0
+    },
+    "shield": {
+      "value": 170,
+      "disruption": 0,
+      "collapsed": false,
+      "layers": []
+    },
+    "printed": {
+      "cost": 185
+    },
+    "description": "<p>Heavily gunned and armored warship able to subdue a world or scatter pirate bands.</p><p>Every officer aboard is an NPC who keeps 4 dice.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 415
+    }
+  },
+  "items": [
+    {
+      "name": "Essex-Class",
+      "type": "shipComponent",
+      "img": "icons/svg/castle.svg",
+      "system": {
+        "description": "<p>Fleet backbone that can operate alone far from resupply on exploration or combat duty.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 390
+        },
+        "category": "hull",
+        "cost": 50,
+        "quantity": 1,
+        "hull": {
+          "class": "cruiser",
+          "crew": 20,
+          "hullStrength": 75,
+          "maneuverability": -5,
+          "acceleration": 0,
+          "speed": 6,
+          "sensors": 5,
+          "consoles": {
+            "arcana": 2,
+            "command": 1,
+            "engineering": 1,
+            "tactical": 2,
+            "universal": 2,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 3,
+            "rear": 3
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Cruiser; Crew 20, Hull 75, Man -5, Acc 0, Speed 6, Sensors 5",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNie7264da36ff",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNie7264da36ff",
+      "folder": "dtdKFdbe8fd00c0c"
+    },
+    {
+      "name": "Covariant Shield Mk. III",
+      "type": "shipComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>High Capacity, slow Regeneration; good against burst damage and highly disruptive enemies.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 395
+        },
+        "category": "shield",
+        "cost": 35,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "covariant",
+          "mark": 3,
+          "capacity": 170,
+          "regen": 5,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Capacity 170, Regeneration 5",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi83074d75808",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNi83074d75808",
+      "folder": "dtdKFd9cd6a26567"
+    },
+    {
+      "name": "Ramming Prow",
+      "type": "shipComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Massive armored prow. Rams deal +1k1, the ramming ship takes no damage and skips its crit roll, and the target's crit roll gets +2.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 402
+        },
+        "category": "console",
+        "cost": 10,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": "tactical"
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Massive armored prow. Rams deal +1k1, the ramming ship takes no damage and skips its crit roll, and the target's crit roll gets +2.",
+        "automation": {
+          "key": "rammingProw",
+          "selfDamage": false,
+          "targetCritModifier": 2
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNib3237b6b819",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNib3237b6b819",
+      "folder": "dtdKFdd5f97bf16f"
+    },
+    {
+      "name": "Hardened Armor",
+      "type": "shipComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Plain extra armor that any shipyard can fit. +10 Hull Strength; can be bought more than once.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 401
+        },
+        "category": "console",
+        "cost": 5,
+        "quantity": 2,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": "engineering"
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Plain extra armor that any shipyard can fit. +10 Hull Strength; can be bought more than once.",
+        "automation": {
+          "key": "hardenedArmor",
+          "hullStrengthBonus": 10,
+          "stackable": true
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNie23f3db21a7",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNie23f3db21a7",
+      "folder": "dtdKFd82b7233c80"
+    },
+    {
+      "name": "Array",
+      "type": "shipComponent",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Very common broadside battery; highly accurate yet low damage.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 397
+        },
+        "category": "weapon",
+        "cost": 10,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "Array",
+          "kind": "array",
+          "dam": {
+            "rolled": 3,
+            "kept": 2
+          },
+          "dis": 2,
+          "acc": 10,
+          "crit": 0,
+          "range": 10,
+          "arc": "flexible",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "3k2, Dis 2, Acc 10, Crit 0, Range 10, Flexible",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi58bfde49d67",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNi58bfde49d67",
+      "folder": "dtdKFd6cb664c9cd"
+    },
+    {
+      "name": "Array",
+      "type": "shipComponent",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Very common broadside battery; highly accurate yet low damage.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 397
+        },
+        "category": "weapon",
+        "cost": 10,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "Array",
+          "kind": "array",
+          "dam": {
+            "rolled": 3,
+            "kept": 2
+          },
+          "dis": 2,
+          "acc": 10,
+          "crit": 0,
+          "range": 10,
+          "arc": "flexible",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "3k2, Dis 2, Acc 10, Crit 0, Range 10, Flexible",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi4a32b6a254d",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNi4a32b6a254d",
+      "folder": "dtdKFd6cb664c9cd"
+    },
+    {
+      "name": "Heavy Lance",
+      "type": "shipComponent",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Longest-reaching, hardest-hitting non-torpedo weapon; its limit is the crew effort needed per shot.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 397
+        },
+        "category": "weapon",
+        "cost": 15,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "Heavy Lance",
+          "kind": "lance",
+          "dam": {
+            "rolled": 8,
+            "kept": 4
+          },
+          "dis": 5,
+          "acc": 0,
+          "crit": 4,
+          "range": 20,
+          "arc": "fixed",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "8k4, Dis 5, Acc 0, Crit 4, Range 20, Fixed",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi3cee05804ed",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNi3cee05804ed",
+      "folder": "dtdKFd6cb664c9cd"
+    },
+    {
+      "name": "Turret",
+      "type": "shipComponent",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Rotates fully, covering flanks or letting rear mounts threaten the front.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 397
+        },
+        "category": "weapon",
+        "cost": 10,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "Turret",
+          "kind": "array",
+          "dam": {
+            "rolled": 2,
+            "kept": 1
+          },
+          "dis": 1,
+          "acc": 0,
+          "crit": -1,
+          "range": 5,
+          "arc": "omni",
+          "typeKey": "las",
+          "mount": "rear"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "2k1, Dis 1, Acc 0, Crit -1, Range 5, Omni",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi4753881c0f5",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNi4753881c0f5",
+      "folder": "dtdKFd6cb664c9cd"
+    },
+    {
+      "name": "Turret",
+      "type": "shipComponent",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Rotates fully, covering flanks or letting rear mounts threaten the front.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 397
+        },
+        "category": "weapon",
+        "cost": 10,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "Turret",
+          "kind": "array",
+          "dam": {
+            "rolled": 2,
+            "kept": 1
+          },
+          "dis": 1,
+          "acc": 0,
+          "crit": -1,
+          "range": 5,
+          "arc": "omni",
+          "typeKey": "las",
+          "mount": "rear"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "2k1, Dis 1, Acc 0, Crit -1, Range 5, Omni",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi8c4800f45e3",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNi8c4800f45e3",
+      "folder": "dtdKFd6cb664c9cd"
+    },
+    {
+      "name": "Helmsman",
+      "type": "shipComponent",
+      "img": "icons/svg/mystery-man.svg",
+      "system": {
+        "description": "<p>Steers the ship toward its destination, either flying it personally or directing others. Supplies the kept dice for Manoeuver actions.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 393
+        },
+        "category": "officer",
+        "cost": 5,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "helmsman",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Critical post",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi051dd3559fe",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNi051dd3559fe",
+      "folder": "dtdKFd622d954aed"
+    },
+    {
+      "name": "Tactical Officer",
+      "type": "shipComponent",
+      "img": "icons/svg/mystery-man.svg",
+      "system": {
+        "description": "<p>Runs the guns and keeps gunners and engineers working; supplies kept dice for Tactical actions and for fightercraft squads.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 393
+        },
+        "category": "officer",
+        "cost": 5,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "tacticalOfficer",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Critical post",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi04e50992d59",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNi04e50992d59",
+      "folder": "dtdKFd622d954aed"
+    },
+    {
+      "name": "Chief Engineer",
+      "type": "shipComponent",
+      "img": "icons/svg/mystery-man.svg",
+      "system": {
+        "description": "<p>Handles power routing and emergency repairs. Without one, most repairs have to wait for a port.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 393
+        },
+        "category": "officer",
+        "cost": 5,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "chiefEngineer",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Critical post",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi4c7df23b300",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNi4c7df23b300",
+      "folder": "dtdKFd622d954aed"
+    },
+    {
+      "name": "Commanding Officer",
+      "type": "shipComponent",
+      "img": "icons/svg/mystery-man.svg",
+      "system": {
+        "description": "<p>Acts as captain of the bridge, issuing orders and collecting reports. Because the ship's true owner is usually someone else, this officer cannot represent the ship in Social Combat.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 393
+        },
+        "category": "officer",
+        "cost": 5,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "commandingOfficer",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Critical post",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi85f85fcd9f3",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNi85f85fcd9f3",
+      "folder": "dtdKFd622d954aed"
+    },
+    {
+      "name": "Chief Arcana Officer",
+      "type": "shipComponent",
+      "img": "icons/svg/mystery-man.svg",
+      "system": {
+        "description": "<p>Operates sensors and exotic systems to spot objects, assess threats and help with warp travel (opens warp portals without a relay). A hired officer in this post may not double as Navigator; PCs and other NPCs are exempt.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 393
+        },
+        "category": "officer",
+        "cost": 5,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "chiefArcanaOfficer",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Critical post",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi5b3ec8e168a",
+      "_key": "!actors.items!dtdY68c7dd361966.dtdNi5b3ec8e168a",
+      "folder": "dtdKFd622d954aed"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Military Cruiser",
+    "actorLink": true,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdY68c7dd361966",
+  "_key": "!actors!dtdY68c7dd361966",
+  "folder": "dtdYFd8e83d53e06"
+}

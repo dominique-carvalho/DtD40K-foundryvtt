@@ -1,0 +1,91 @@
+{
+  "name": "Rift Torpedo",
+  "type": "shipComponent",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Tears a warp rift via sorcery and an inverted Geller Field. A damaged ship automatically loses 1d10 crew. In bombardment the area doubles and a horde of daemons pours out; some are bound to one god and summon that god's servants.</p><p>A purchase is a set of 5 warheads.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 398
+    },
+    "category": "torpedo",
+    "cost": 25,
+    "quantity": 5,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 8,
+        "kept": 8
+      },
+      "dis": 5,
+      "acc": -5,
+      "crit": 5,
+      "range": 30,
+      "arc": "fixed"
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "8k8, Dis 5, Acc -5, Crit 5, Range 30, Fixed",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK3e2970be0624",
+  "_key": "!items!dtdK3e2970be0624",
+  "folder": "dtdKFd46124230c1"
+}

@@ -1,0 +1,17 @@
+<section class="tab ship-officers {{tabs.officers.cssClass}}" data-group="primary" data-tab="officers">
+  <p class="hint">{{localize "DTD.Ship.OfficersHint"}}</p>
+  <ol class="vehicle-rows">
+    {{#each officers as |o|}}
+    <li class="vehicle-row" data-item-id="{{o.id}}" data-officer-id="{{o.id}}">
+      <a class="row-name" data-action="openItem">{{o.post}}</a>
+      <span class="hint">{{o.rank}} · {{o.department}}</span>
+      <span>{{#if o.npc}}{{localize "DTD.Ship.NpcOfficer"}}{{else}}<a data-action="openActor" data-uuid="{{o.holderUuid}}">{{o.holder}}</a>{{/if}}</span>
+      {{#if o.kept}}<span class="row-cost" data-tooltip="{{localize "DTD.Ship.KeptHint"}}">k{{o.kept}}</span>{{/if}}
+      {{#if @root.editable}}
+      {{#unless o.npc}}<a data-action="clearOfficer" data-tooltip="{{localize "DTD.Ship.ClearOfficer"}}"><i class="fa-solid fa-user-slash" inert></i></a>{{/unless}}
+      <a class="row-delete" data-action="deleteItem"><i class="fa-solid fa-trash" inert></i></a>
+      {{/if}}
+    </li>
+    {{else}}<li class="hint">{{localize "DTD.Ship.NoOfficers"}}</li>{{/each}}
+  </ol>
+</section>

@@ -1,0 +1,30 @@
+<div class="minion-sheet-body squadron-sheet-body">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}">
+    <div class="identity-text">
+      {{#if editable}}<input class="item-name" type="text" name="name" value="{{actor.name}}">{{else}}<h1 class="item-name">{{actor.name}}</h1>{{/if}}
+      <div class="identity-line">
+        <span>{{localize "TYPES.Actor.squadron"}}</span>
+        {{#if shipName}}<a data-action="openShip">{{shipName}}</a>{{/if}}
+      </div>
+    </div>
+  </header>
+  <section class="spell-section">
+    <dl class="spell-stats">
+      <dt>{{localize "DTD.Ship.Fighters"}}</dt>
+      <dd>{{#if editable}}<input type="number" name="system.count" value="{{system.count}}" min="0" max="10">{{else}}{{system.count}}{{/if}} / 10</dd>
+      <dt>{{localize "DTD.Derived.staticDefense"}}</dt><dd>{{system.derived.staticDefense}}</dd>
+      <dt>{{localize "DTD.Ship.HullStrength"}}</dt><dd>{{system.profile.hull}} {{localize "DTD.Ship.PerCraft"}}</dd>
+      <dt>{{localize "DTD.Ship.Speed"}}</dt><dd>{{system.profile.speed}} VU</dd>
+      <dt>{{localize "DTD.Ship.Range"}}</dt><dd>{{system.profile.range}}</dd>
+      <dt>{{localize "DTD.Attack.Damage"}}</dt><dd>{{system.damage.rolled}}k{{system.damage.kept}}</dd>
+    </dl>
+    <p class="hint">{{localize "DTD.Ship.SquadronHint"}}</p>
+  </section>
+  <section class="spell-section">
+    <div class="action-buttons">
+      <a class="pool-button" data-action="squadronAttack"><i class="fa-solid fa-crosshairs" inert></i> {{localize "DTD.Ship.Attack"}}</a>
+      <a class="pool-button" data-action="dock"><i class="fa-solid fa-plane-arrival" inert></i> {{localize "DTD.Ship.Dock"}}</a>
+    </div>
+  </section>
+</div>

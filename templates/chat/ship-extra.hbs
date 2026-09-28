@@ -1,0 +1,12 @@
+<div class="dtd40k ship-card-extra">
+  {{#each lines as |line|}}
+  <p class="{{#if line.warning}}notification warning{{else}}vehicle-card-line{{/if}}">{{#if line.label}}<b>{{line.label}}:</b> {{/if}}{{line.text}}</p>
+  {{/each}}
+  {{#if buttons.length}}
+  <div class="defense-buttons">
+    {{#each buttons as |b|}}
+    <button type="button" data-dtd-action="{{b.action}}" {{#if b.gm}}class="gm-only"{{/if}}><i class="{{b.icon}}" inert></i> {{b.label}}</button>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>

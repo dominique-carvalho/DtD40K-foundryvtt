@@ -1,0 +1,91 @@
+{
+  "name": "Custom Cruiser",
+  "type": "shipComponent",
+  "img": "icons/svg/clockwork.svg",
+  "system": {
+    "description": "<p>Frame that invests heavily in auxiliary systems; very versatile.</p><p>Spend its 12 Customization Points on the chart of p. 393; its 5 non-universal console slots go to the types you choose.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 392
+    },
+    "category": "customHull",
+    "cost": 65,
+    "quantity": 1,
+    "hull": {
+      "class": "cruiser",
+      "crew": 20,
+      "hullStrength": 75,
+      "maneuverability": -5,
+      "acceleration": 0,
+      "speed": 7,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 2,
+        "nonUniversal": 5
+      },
+      "weapons": {
+        "forward": 2,
+        "rear": 2
+      },
+      "customizationPoints": 12
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Cruiser; Crew 20, Hull 75, Man -5, Acc 0, Speed 7, Sensors 0, 12 CP",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK80c89875c9cb",
+  "_key": "!items!dtdK80c89875c9cb",
+  "folder": "dtdKFd06e3772ef3"
+}

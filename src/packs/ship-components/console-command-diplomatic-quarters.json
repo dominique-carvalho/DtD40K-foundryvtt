@@ -1,0 +1,94 @@
+{
+  "name": "Diplomatic Quarters",
+  "type": "shipComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Luxurious guest suite fit for almost any social or diplomatic event. Nobody inside, crew included, can become jaded there unless they leave in anger and lose 1 Resolve.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 400
+    },
+    "category": "console",
+    "cost": 5,
+    "quantity": 1,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": "command"
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Luxurious guest suite fit for almost any social or diplomatic event. Nobody inside, crew included, can become jaded there unless they leave in anger and lose 1 Resolve.",
+    "automation": {
+      "key": "diplomaticQuarters",
+      "preventsJaded": true
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK7fab0d18ad62",
+  "_key": "!items!dtdK7fab0d18ad62",
+  "folder": "dtdKFd60cf2efbbd"
+}

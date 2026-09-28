@@ -1,0 +1,91 @@
+{
+  "name": "Thresher-Class",
+  "type": "shipComponent",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Flexible line ship between the light escorts and the big hulls; often refitted for new roles.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 389
+    },
+    "category": "hull",
+    "cost": 30,
+    "quantity": 1,
+    "hull": {
+      "class": "destroyer",
+      "crew": 16,
+      "hullStrength": 60,
+      "maneuverability": 5,
+      "acceleration": 10,
+      "speed": 10,
+      "sensors": 5,
+      "consoles": {
+        "arcana": 1,
+        "command": 1,
+        "engineering": 1,
+        "tactical": 2,
+        "universal": 1,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 3,
+        "rear": 2
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Destroyer; Crew 16, Hull 60, Man 5, Acc 10, Speed 10, Sensors 5",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK135030b5b3fc",
+  "_key": "!items!dtdK135030b5b3fc",
+  "folder": "dtdKFdbe8fd00c0c"
+}

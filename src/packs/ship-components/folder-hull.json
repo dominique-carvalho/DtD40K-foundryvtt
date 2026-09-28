@@ -1,0 +1,16 @@
+{
+  "_id": "dtdKFdbe8fd00c0c",
+  "_key": "!folders!dtdKFdbe8fd00c0c",
+  "name": "Hulls",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 10000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "shipFolder": "hull"
+    }
+  }
+}

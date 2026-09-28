@@ -1,0 +1,91 @@
+{
+  "name": "Heavy Array",
+  "type": "shipComponent",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Sequenced forward beams with more punch than a normal Array but a narrow arc, poor for broadsides.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 397
+    },
+    "category": "weapon",
+    "cost": 15,
+    "quantity": 1,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "Heavy Array",
+      "kind": "array",
+      "dam": {
+        "rolled": 4,
+        "kept": 3
+      },
+      "dis": 3,
+      "acc": -5,
+      "crit": 3,
+      "range": 15,
+      "arc": "fixed",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "4k3, Dis 3, Acc -5, Crit 3, Range 15, Fixed",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK883820733bcb",
+  "_key": "!items!dtdK883820733bcb",
+  "folder": "dtdKFd6cb664c9cd"
+}

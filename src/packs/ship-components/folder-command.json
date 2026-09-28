@@ -1,0 +1,16 @@
+{
+  "_id": "dtdKFd60cf2efbbd",
+  "_key": "!folders!dtdKFd60cf2efbbd",
+  "name": "Command Consoles",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 50000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "shipFolder": "command"
+    }
+  }
+}

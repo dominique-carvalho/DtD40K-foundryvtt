@@ -15,9 +15,9 @@ export class DtdActor extends Actor {
     const allowed = await super._preCreate(data, options, user);
     if (allowed === false) return false;
 
-    // A vehicle is one machine whose Momentum, damage and crew persist: its token is linked unless told otherwise
-    // (spec 013).
-    if (this.type === "vehicle" && data.prototypeToken?.actorLink === undefined) this.updateSource({ "prototypeToken.actorLink": true });
+    // A vehicle or ship is one machine whose state and crew persist: its token is linked unless told otherwise
+    // (specs 013, 014).
+    if ((this.type === "vehicle" || this.type === "ship") && data.prototypeToken?.actorLink === undefined) this.updateSource({ "prototypeToken.actorLink": true });
 
     if (this.type === "character" || this.type === "npc") {
       // Start fully healed and composed.

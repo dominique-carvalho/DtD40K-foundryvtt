@@ -1,0 +1,47 @@
+<section class="tab ship-combat {{tabs.combat.cssClass}}" data-group="primary" data-tab="combat">
+  <div class="equipment-section">
+    <dl class="spell-stats">
+      <dt>{{localize "DTD.Ship.Crew"}}</dt>
+      <dd>{{system.crew.available}} / {{system.crew.max}}{{#if system.crew.temp}} · {{localize "DTD.Ship.TempCrew"}} {{system.crew.temp}}{{/if}}{{#if system.crew.deployed}} · {{localize "DTD.Ship.Deployed"}} {{system.crew.deployed}}{{/if}}{{#if system.crew.lost}} · {{localize "DTD.Ship.Lost"}} {{system.crew.lost}}{{/if}}</dd>
+      <dt>{{localize "DTD.Ship.HullStrength"}}</dt>
+      <dd>{{#if editable}}<input type="number" name="system.hull.value" value="{{system.hull.value}}" min="0"> + <input type="number" name="system.hull.temp" value="{{system.hull.temp}}" min="0">{{else}}{{system.hull.value}} + {{system.hull.temp}}{{/if}} / {{system.hull.max}}</dd>
+      <dt>{{localize "DTD.Ship.Category.shield"}}</dt>
+      <dd>
+        {{#if layers}}{{#each layers as |l|}}<span class="tag">{{l.n}}: {{l.value}}/{{l.max}}{{#if l.disruption}} (Dis {{l.disruption}}){{/if}}</span>{{/each}}
+        {{else}}{{#if editable}}<input type="number" name="system.shield.value" value="{{system.shield.value}}" min="0">{{else}}{{system.shield.value}}{{/if}} / {{system.shield.max}} · Dis {{#if editable}}<input type="number" name="system.shield.disruption" value="{{system.shield.disruption}}" min="0">{{else}}{{system.shield.disruption}}{{/if}}{{/if}}
+        {{#if isGM}}<a data-action="resetShield" data-tooltip="{{localize "DTD.Ship.ResetShield"}}"><i class="fa-solid fa-rotate" inert></i></a>{{/if}}
+      </dd>
+      <dt>{{localize "DTD.Derived.staticDefense"}}</dt><dd>{{system.derived.staticDefense}}</dd>
+      {{#if turn}}<dt>{{localize "DTD.Ship.Turn"}}</dt><dd>{{#if turn.manoeuver}}✓{{else}}✗{{/if}} {{localize "DTD.Ship.Department.manoeuver"}} · {{localize "DTD.Ship.ReactionsUsed" n=turn.reactions}}</dd>{{/if}}
+    </dl>
+  </div>
+  {{#each departments as |d|}}
+  <div class="equipment-section ship-department{{#if d.used}} used{{/if}}">
+    <h3 class="section-title">{{d.label}} <span class="hint">{{#if d.officer.name}}{{d.officer.name}} · k{{d.officer.kept}}{{else}}{{localize "DTD.Ship.EmptyPost"}}{{/if}}</span>{{#if d.used}} <span class="feat-badge">{{localize "DTD.Ship.Used"}}</span>{{/if}}</h3>
+    <div class="action-buttons">
+      {{#each d.actions as |a|}}<a class="pool-button" data-action="shipAction" data-key="{{a.key}}" data-tooltip="{{a.summary}}">{{a.name}}</a>{{/each}}
+    </div>
+  </div>
+  {{/each}}
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Ship.Weapons"}}</h3>
+    <ol class="vehicle-rows">
+      {{#each weapons as |w|}}<li class="vehicle-row{{#if w.offline}} offline{{/if}}"><span class="row-name">{{w.name}}</span><span>{{w.type}} · {{w.mount}}</span><span class="row-effect hint">{{w.text}}</span></li>{{/each}}
+    </ol>
+    <p class="hint">{{localize "DTD.Ship.FireHint"}}</p>
+  </div>
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Ship.Effects"}}
+      {{#if isGM}}<a class="pool-button" data-action="rollCrit"><i class="fa-solid fa-burst" inert></i> {{localize "DTD.Ship.CritChart"}}</a> <a class="pool-button" data-action="newScene"><i class="fa-solid fa-clapperboard" inert></i> {{localize "DTD.Vehicle.NewScene"}}</a>{{/if}}
+    </h3>
+    <ol class="vehicle-rows">
+      {{#each crits as |c|}}<li class="vehicle-row"><span class="row-name">{{c.label}}</span><span class="hint">{{localize "DTD.Ship.RepairTn" tn=c.tn}}</span></li>{{else}}<li class="hint">{{localize "DTD.Ship.NoEffects"}}</li>{{/each}}
+    </ol>
+    {{#if round.picardUsed}}<p class="hint">{{localize "DTD.Ship.PicardUsed"}} {{#if isGM}}<a data-action="clearPicard"><i class="fa-solid fa-rotate-left" inert></i></a>{{/if}}</p>{{/if}}
+    <div class="profile-grid">
+      <label>{{localize "DTD.Ship.Destroyed"}}<input type="checkbox" name="system.state.destroyed" {{checked system.state.destroyed}} {{#unless isGM}}disabled{{/unless}}></label>
+      <label>{{localize "DTD.Ship.ShieldDown"}}<input type="checkbox" name="system.shield.collapsed" {{checked system.shield.collapsed}} {{#unless isGM}}disabled{{/unless}}></label>
+      <label>{{localize "DTD.Ship.Lost"}}<input type="number" name="system.crew.lost" value="{{system.crew.lost}}" min="0" {{#unless isGM}}disabled{{/unless}}></label>
+    </div>
+  </div>
+</section>

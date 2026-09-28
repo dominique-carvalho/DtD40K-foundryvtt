@@ -13,6 +13,8 @@
  *   node scripts/assign-pack-ids.mjs --pack antagonists
  *   node scripts/assign-pack-ids.mjs --pack vehicle-components
  *   node scripts/assign-pack-ids.mjs --pack vehicles
+ *   node scripts/assign-pack-ids.mjs --pack ship-components
+ *   node scripts/assign-pack-ids.mjs --pack ships
  */
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -226,6 +228,34 @@ const LAYOUTS = {
       folderOf: () => folders.vehicles,
       seed: (file) => `vehicle:${file}`,
       prefix: "dtdW",
+      collection: "actors"
+    };
+  },
+  // Ship components of chapter XVI (spec 014): hulls, officers, consoles by type, shields, weapons, torpedoes.
+  "ship-components": () => {
+    const names = { hull: "Hulls", customHull: "Custom Hulls", officer: "Officers", arcana: "Arcana Consoles",
+      command: "Command Consoles", engineering: "Engineering Consoles", tactical: "Tactical Consoles",
+      universal: "Universal Consoles", shield: "Shields", weapon: "Weapons", torpedo: "Torpedoes" };
+    const folders = Object.fromEntries(Object.entries(names).map(([key, name], index) => [key,
+      folder(`ship-folder:${key}`, "dtdKFd", key, name, null, (index + 1) * 10000, "shipFolder")]));
+    const FOLDER_OF = { weaponType: "weapon", torpedoTube: "torpedo" };
+    return {
+      folders,
+      fileOf: (key) => `folder-${slug(key)}.json`,
+      folderOf: (doc) => folders[doc.system.category === "console" ? doc.system.console.type : FOLDER_OF[doc.system.category] ?? doc.system.category],
+      seed: (file) => `scomp:${file}`,
+      prefix: "dtdK"
+    };
+  },
+  // NPC ships of chapter XVI (spec 014), components embedded.
+  ships: () => {
+    const folders = { ships: folder("ships-folder:all", "dtdYFd", "ships", "NPC Ships", null, 10000, "shipFolder", "Actor") };
+    return {
+      folders,
+      fileOf: (key) => `folder-${slug(key)}.json`,
+      folderOf: () => folders.ships,
+      seed: (file) => `ship:${file}`,
+      prefix: "dtdY",
       collection: "actors"
     };
   }

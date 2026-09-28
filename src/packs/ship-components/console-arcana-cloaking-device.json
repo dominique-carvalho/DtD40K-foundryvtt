@@ -1,0 +1,94 @@
+{
+  "name": "Cloaking Device",
+  "type": "shipComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Pricey light-bending stealth system, banned in many Spheres. +20 on Silent Running tests.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 399
+    },
+    "category": "console",
+    "cost": 15,
+    "quantity": 1,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": "arcana"
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Pricey light-bending stealth system, banned in many Spheres. +20 on Silent Running tests.",
+    "automation": {
+      "key": "cloakingDevice",
+      "silentRunningBonus": 20
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK54fa6c474588",
+  "_key": "!items!dtdK54fa6c474588",
+  "folder": "dtdKFdae80890a5b"
+}

@@ -91,7 +91,8 @@ function readState(form, previous) {
   const compatible = (k) => { const m = WEAPON_MODS[family].find((x) => x.key === k); return m && (m.compatibility.includes("any") || m.compatibility.includes(type)); };
   return {
     family, template, type,
-    damageType: form.elements.damageType?.value ?? previous.damageType ?? "",
+    // Only types with a choice keep one; a fixed type drops a leftover choice.
+    damageType: familyChanged || !Array.isArray(WEAPON_CREATION_TYPES[family][type].damageType) ? "" : form.elements.damageType?.value ?? "",
     mods: mods.filter(compatible).slice(0, limit),
     name: form.elements.name.value
   };

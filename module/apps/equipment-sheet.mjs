@@ -3,7 +3,7 @@ import {
   WEAPON_QUALITIES, WEAPON_TYPES
 } from "../config.mjs";
 import { acquire } from "../documents/acquisition-service.mjs";
-import { approveWeapon, craftWeapon, gatherMaterials } from "../documents/weapon-craft-service.mjs";
+import { approveWeapon, craftWeapon, gatherMaterials, modNames } from "../documents/weapon-craft-service.mjs";
 import { rarityStep } from "../rules/acquisition.mjs";
 import { artifactRating } from "../rules/equipment.mjs";
 import { lockedPackHint } from "./item-sheet-helpers.mjs";
@@ -22,7 +22,7 @@ function customContext(item) {
     notes: c.notes,
     crafting: c.crafting,
     tn: RARITIES[item.system.rarity]?.tn ?? 10,
-    mods: c.build.mods.join(", ") || "—",
+    mods: modNames(c.build).join(", ") || "—",
     canRebuild: game.user.isGM || (item.isOwner && c.status === "pending"),
     canApprove: game.user.isGM && c.status === "pending",
     canCraft: Boolean(item.actor?.isOwner) && c.status === "crafting"

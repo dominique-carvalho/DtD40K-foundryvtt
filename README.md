@@ -81,6 +81,9 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   personagens e NPCs; combate de naves no tracker (uma manobra e uma ação por departamento, Crew comprometida por
   rodada, dados mantidos pelo oficial), ataques e Aplicar de nave (escudo, Disruption, Hull e Crit Chart), Evasive,
   ramming e abordagem; caças, bombardeio, viagem pelo Warp com encontros, hangar de veículos e reparos.
+- **Criação de armas**: montador (templates, tipos e mods do Story Master) com prévia do perfil, raridade e TN; armas
+  de jogador aguardam a aprovação do Mestre e podem ser fabricadas (materiais por Wealth, depois Crafts); Red-Dot Sight,
+  Motion Predictor, Breacher, Nonlethal, Unstable e Orgone Array entram no ataque.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos

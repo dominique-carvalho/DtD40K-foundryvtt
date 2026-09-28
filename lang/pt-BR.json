@@ -2303,7 +2303,8 @@
         "nonlethal": "dano não explode",
         "unstable": "d10 no dano: 1 divide por 2, 10 dobra",
         "orgoneArray": "Fenômenos Psíquicos nos dados que explodem"
-      }
+      },
+      "Rebuild": "Abrir no montador"
     }
   }
 }

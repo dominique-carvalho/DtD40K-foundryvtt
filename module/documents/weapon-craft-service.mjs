@@ -1,4 +1,4 @@
-import { buildWeapon } from "../rules/weapon-creation.mjs";
+import { WEAPON_MODS, buildWeapon } from "../rules/weapon-creation.mjs";
 
 /**
  * Custom weapons (spec 015; research R2, R5, R6): create or rebuild a 007 weapon from a build, approval by the GM and
@@ -10,6 +10,12 @@ const localize = (key) => game.i18n.localize(key);
 const format = (key, data) => game.i18n.format(key, data);
 /** Warnings that break the book's rules; the rest (rate of fire replaced) only inform. */
 const BLOCKING = ["incompatible", "duplicate", "tooMany"];
+
+/**
+ * Printed names of the mods of a build.
+ * @param {object} build
+ */
+export const modNames = (build) => build.mods.map((key) => WEAPON_MODS[build.family]?.find((m) => m.key === key)?.name ?? key);
 
 /**
  * System data of a weapon made from a build.
@@ -25,7 +31,7 @@ function systemOf(build) {
   }
   const summary = `<p>${format("DTD.WeaponBuilder.Summary", {
     template: localize(`DTD.WeaponBuilder.Template.${build.template}`), type: localize(`DTD.WeaponBuilder.Type.${build.family}.${build.type}`),
-    mods: build.mods.length ? build.mods.join(", ") : "—", cost: result.cost
+    mods: build.mods.length ? modNames(build).join(", ") : "—", cost: result.cost
   })}</p>`;
   return {
     result,
@@ -91,8 +97,10 @@ export async function gatherMaterials(item) {
   if (!actor?.isOwner || item.system.custom.status !== "crafting" || item.system.custom.crafting.materials) return null;
   const { wealthTest } = await import("./acquisition-service.mjs");
   const outcome = await wealthTest(actor, { rarity: item.system.rarity, key: `craft:${item.id}`, label: format("DTD.WeaponBuilder.Materials", { name: item.name }) });
+  // No test was rolled (Wealth 0): nothing to count.
+  if (!outcome) return null;
   await item.update({
-    "system.custom.crafting.materials": Boolean(outcome?.success),
+    "system.custom.crafting.materials": outcome.success,
     "system.custom.crafting.attempts": item.system.custom.crafting.attempts + 1
   });
   return outcome;

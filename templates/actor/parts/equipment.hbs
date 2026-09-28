@@ -37,7 +37,7 @@
         {{#unless w.unarmed}}
         <input class="quantity-input" type="number" value="{{w.quantity}}" min="0" data-item-id="{{w.id}}" aria-label="{{localize "DTD.Equipment.Quantity"}}" {{disabled (not @root.canEditRace)}}>
         {{#if @root.canEditRace}}
-        <a data-action="acquireItem" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Acquire.Button"}}"><i class="fa-solid fa-coins" inert></i></a>
+        {{#unless w.unfinished}}<a data-action="acquireItem" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Acquire.Button"}}"><i class="fa-solid fa-coins" inert></i></a>{{/unless}}
         <a class="asset-remove" data-action="removeEquipment" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Equipment.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
         {{/if}}
         {{/unless}}

@@ -37,7 +37,7 @@ quickstart.md
 - [X] T007 [US1] `module/apps/weapon-builder.mjs` + `templates/apps/weapon-builder.hbs` (prévia ao vivo, mods desabilitados com motivo, avisos, notas); botão no diretório de itens (Mestre) em `dtd40k.mjs`
 - [X] T008 [US1] Ficha de arma: notas da montagem e botão Montador (reabrir) em `module/apps/equipment-sheet.mjs` e `templates/item/equipment-sheet.hbs`
 - [X] T009 [P] [US1] i18n e estilos
-- [ ] T010 [US1] Validar quickstart 1–5 e 11 e registrar
+- [X] T010 [US1] Validar quickstart 1–5 e 11 e registrar
 
 ---
 
@@ -45,7 +45,7 @@ quickstart.md
 
 - [X] T011 [US2] `module/documents/attack-service.mjs`: mods da arma no `attackPool`/`damagePool`, Unstable (d10 e dano ajustado), Orgone Array (nota quando um dado explode), notas no cartão; `templates/chat/attack-card.hbs` e `damage-card.hbs`
 - [X] T012 [P] [US2] i18n
-- [ ] T013 [US2] Validar quickstart 6–8 e registrar
+- [X] T013 [US2] Validar quickstart 6–8 e registrar
 
 ---
 
@@ -55,15 +55,15 @@ quickstart.md
 - [X] T015 [US3] `acquisition-service.wealthTest` exportado (usado por `acquire`); `approveWeapon`, `gatherMaterials`, `craftWeapon`; recusa de equipar/atacar com `pending`/`crafting` em `equipment-service` e `attack-service`
 - [X] T016 [US3] Ficha de arma: estado, Aprovar (Mestre: pronta / para fabricar), Materiais e Fabricar
 - [X] T017 [P] [US3] i18n e estilos
-- [ ] T018 [US3] Validar quickstart 9–10 e registrar
+- [X] T018 [US3] Validar quickstart 9–10 e registrar
 
 ---
 
 ## Phase 5: Polish
 
-- [ ] T019 [P] Atualizar `docs/pendencias.md` (criação de armas feita; lacunas em texto) e o `README.md`
-- [ ] T020 `npm run lint` e `npm test`
-- [ ] T021 `graphify update .`
+- [X] T019 [P] Atualizar `docs/pendencias.md` (criação de armas feita; lacunas em texto) e o `README.md`
+- [X] T020 `npm run lint` e `npm test`
+- [X] T021 `graphify update .`
 
 ## Dependencies
 

@@ -2303,7 +2303,8 @@
         "nonlethal": "damage doesn't explode",
         "unstable": "d10 on damage: 1 halves, 10 doubles",
         "orgoneArray": "Psychic Phenomena on exploding dice"
-      }
+      },
+      "Rebuild": "Open in builder"
     }
   }
 }

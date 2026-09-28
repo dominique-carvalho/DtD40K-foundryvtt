@@ -7,6 +7,9 @@ import { NpcData } from "./module/data/npc-data.mjs";
 import { MinionSquadData } from "./module/data/minion-squad-data.mjs";
 import { VehicleData } from "./module/data/vehicle-data.mjs";
 import { VehicleComponentData } from "./module/data/vehicle-component-data.mjs";
+import { ShipData } from "./module/data/ship-data.mjs";
+import { ShipComponentData } from "./module/data/ship-component-data.mjs";
+import { SquadronData } from "./module/data/squadron-data.mjs";
 import { NpcSheet } from "./module/apps/npc-sheet.mjs";
 import { MinionSheet } from "./module/apps/minion-sheet.mjs";
 import { fearFromCard } from "./module/documents/npc-service.mjs";
@@ -58,6 +61,9 @@ Hooks.once("init", () => {
   // Vehicles (spec 013).
   CONFIG.Actor.dataModels.vehicle = VehicleData;
   CONFIG.Item.dataModels.vehicleComponent = VehicleComponentData;
+  CONFIG.Actor.dataModels.ship = ShipData;
+  CONFIG.Actor.dataModels.squadron = SquadronData;
+  CONFIG.Item.dataModels.shipComponent = ShipComponentData;
 
   CONFIG.Item.documentClass = DtdItem;
   CONFIG.Item.dataModels.race = RaceData;

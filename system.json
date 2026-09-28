@@ -53,6 +53,14 @@
         "htmlFields": [
           "description"
         ]
+      },
+      "ship": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "squadron": {
+        "htmlFields": []
       }
     },
     "Item": {
@@ -116,6 +124,11 @@
         ]
       },
       "vehicleComponent": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "shipComponent": {
         "htmlFields": [
           "description"
         ]
@@ -259,6 +272,28 @@
       "name": "vehicles",
       "label": "Vehicles",
       "path": "packs/vehicles",
+      "type": "Actor",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "ship-components",
+      "label": "Ship Components",
+      "path": "packs/ship-components",
+      "type": "Item",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "ships",
+      "label": "Ships",
+      "path": "packs/ships",
       "type": "Actor",
       "system": "dtd40k",
       "ownership": {

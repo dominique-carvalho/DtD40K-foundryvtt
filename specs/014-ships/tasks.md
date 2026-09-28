@@ -23,20 +23,20 @@ quickstart.md
 
 ## Phase 1: Setup
 
-- [ ] T001 Em `system.json`: `documentTypes.Item.shipComponent`, `documentTypes.Actor.ship` e `squadron`, packs `ship-components` (Item, OBSERVER) e `ships` (Actor, OBSERVER)
-- [ ] T002 [P] Em `scripts/assign-pack-ids.mjs`: layouts `ship-components` (pastas por categoria e tipo de console; prefixos próprios) e `ships` (Actors com itens embutidos)
+- [X] T001 Em `system.json`: `documentTypes.Item.shipComponent`, `documentTypes.Actor.ship` e `squadron`, packs `ship-components` (Item, OBSERVER) e `ships` (Actor, OBSERVER)
+- [X] T002 [P] Em `scripts/assign-pack-ids.mjs`: layouts `ship-components` (pastas por categoria e tipo de console; prefixos próprios) e `ships` (Actors com itens embutidos)
 
 ---
 
 ## Phase 2: Foundational
 
-- [ ] T003 [P] Em `tests/unit/config.test.mjs`: `SHIP_CATEGORIES`, `SHIP_BUDGETS`, `HULL_CLASSES`, `CONSOLE_TYPES`, `SHIP_DEPARTMENTS`, `OFFICER_POSTS`, `SHIELD_TYPES`, `SHIP_WEAPON_TYPES`, `CUSTOMIZATION`
-- [ ] T004 Em `module/config.mjs`: as constantes de T003; fazer T003 passar
-- [ ] T005 [P] Em `tests/unit/ship.test.mjs`: os casos de [contracts/rules-api.md](contracts/rules-api.md) (BP, SD, iniciativa, customização, consoles, stats, slots, perfil de arma, pool, Crew, escudo, Multiphasic, Crit Chart, ramming, boarding, caças, Warp, bombardeio, reparos)
-- [ ] T006 Criar `module/rules/ship.mjs` com as funções e as tabelas `SHIP_ACTIONS`, `SHIP_CRIT`, `RAM_DAMAGE`, `WARP_VOYAGE`, `WARP_ENCOUNTERS`, `WARP_PERILOUS`, `BOMBARD_TORPEDOES` (texto próprio); fazer T005 passar
-- [ ] T007 Criar `module/data/ship-component-data.mjs`, `module/data/ship-data.mjs` (derivados da research R2) e `module/data/squadron-data.mjs`; registrar em `dtd40k.mjs`; token de nave vinculado por padrão em `DtdActor._preCreate`
-- [ ] T008 [P] i18n base: tipos, categorias, classes de casco, tipos de console, departamentos, postos, escudos, tipos de arma
-- [ ] T009 Rodar `npm test` e `npx eslint .`
+- [X] T003 [P] Em `tests/unit/config.test.mjs`: `SHIP_CATEGORIES`, `SHIP_BUDGETS`, `HULL_CLASSES`, `CONSOLE_TYPES`, `SHIP_DEPARTMENTS`, `OFFICER_POSTS`, `SHIELD_TYPES`, `SHIP_WEAPON_TYPES`, `CUSTOMIZATION`
+- [X] T004 Em `module/config.mjs`: as constantes de T003; fazer T003 passar
+- [X] T005 [P] Em `tests/unit/ship.test.mjs`: os casos de [contracts/rules-api.md](contracts/rules-api.md) (BP, SD, iniciativa, customização, consoles, stats, slots, perfil de arma, pool, Crew, escudo, Multiphasic, Crit Chart, ramming, boarding, caças, Warp, bombardeio, reparos)
+- [X] T006 Criar `module/rules/ship.mjs` com as funções e as tabelas `SHIP_ACTIONS`, `SHIP_CRIT`, `RAM_DAMAGE`, `WARP_VOYAGE`, `WARP_ENCOUNTERS`, `WARP_PERILOUS`, `BOMBARD_TORPEDOES` (texto próprio); fazer T005 passar
+- [X] T007 Criar `module/data/ship-component-data.mjs`, `module/data/ship-data.mjs` (derivados da research R2) e `module/data/squadron-data.mjs`; registrar em `dtd40k.mjs`; token de nave vinculado por padrão em `DtdActor._preCreate`
+- [X] T008 [P] i18n base: tipos, categorias, classes de casco, tipos de console, departamentos, postos, escudos, tipos de arma
+- [X] T009 Rodar `npm test` e `npx eslint .`
 
 ---
 

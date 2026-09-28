@@ -32,7 +32,7 @@ Antes de registrar dados: `ship-components` e `ships` carregam com as contagens 
 | 11 | Acerto sem escudo | Hull cai e rola a Crit Chart com o Crit da arma; efeito fica na nave | US3-5 |
 | 12 | Hull 0 | Destruída | US3-6 |
 | 13 | Evasive Manoeuvers | Metade do teste soma à SD contra o ataque | US3-7 |
-| 14 | Ramming Speed! (Destroyer) | 3k3 nos dois; crítico +3 | FR-011 |
+| 14 | Ramming Speed! (Destroyer) | 3k3 + Speed no alvo sem passar pelo escudo, metade no próprio; críticos +3 | FR-011 |
 | 15 | Boarding Party | Rodadas com Crew comprometida; perdedor perde ⌊c/2⌋ + checks | US3-8 |
 | 16 | Emergency Repair e Triage | Hull temporário 1d10 (+1d10 por 2 raises); Crew temporária | FR-011 |
 | 17 | Viagem pelo Warp | Requisitos; passos 1–3 com modificadores; encontro rolado | US4-1/2 |

@@ -436,7 +436,95 @@ export const VEHICLE_COSTS = {
 /** Crew roles of a vehicle. */
 export const VEHICLE_CREW_ROLES = ["pilot", "gunner", "engineer", "passenger"];
 
+/* ---------- Ships (spec 014, DtD 7.7a ch. XVI, pp. 386–415) ---------- */
+
+/** Categories of ship components (pp. 387–398). */
+export const SHIP_CATEGORIES = ["hull", "customHull", "officer", "console", "shield", "weapon", "weaponType", "torpedoTube", "torpedo"];
+
+/** Build Points by Holdings (p. 386). */
+export const SHIP_BUDGETS = { 1: 50, 2: 85, 3: 130, 4: 185, 5: 250 };
+
+/** Hull classes (p. 387); the class sets the Ramming damage. */
+export const HULL_CLASSES = ["escort", "destroyer", "cruiser", "battleship"];
+
+/** Console slot types (p. 399); Universal slots take any console. */
+export const CONSOLE_TYPES = ["arcana", "command", "engineering", "tactical", "universal"];
+
+/** Departments, their bridge officer and usual skill (pp. 403–406). Navigation's actions are the Manoeuvers. */
+export const SHIP_DEPARTMENTS = {
+  command: { post: "commandingOfficer", skill: "command" },
+  manoeuver: { post: "helmsman", skill: "pilot" },
+  tactical: { post: "tacticalOfficer", skill: "ballistics" },
+  engineering: { post: "chiefEngineer", skill: "techUse" },
+  arcana: { post: "chiefArcanaOfficer", skill: "arcana" }
+};
+
+/** The 12 officer posts (pp. 393–395): rank and department; the specialty crew help outside ship actions. */
+export const OFFICER_POSTS = {
+  helmsman: { rank: "primary", department: "manoeuver" },
+  tacticalOfficer: { rank: "primary", department: "tactical" },
+  chiefEngineer: { rank: "primary", department: "engineering" },
+  commandingOfficer: { rank: "primary", department: "command" },
+  chiefArcanaOfficer: { rank: "primary", department: "arcana" },
+  chiefMedicalOfficer: { rank: "secondary", department: "arcana" },
+  chiefCommunicationsOfficer: { rank: "secondary", department: "command" },
+  chiefOfSecurity: { rank: "secondary", department: "tactical" },
+  chaplain: { rank: "specialty", department: "" },
+  rogueTrader: { rank: "specialty", department: "" },
+  navigator: { rank: "specialty", department: "arcana" },
+  chiefCook: { rank: "specialty", department: "" }
+};
+
+/** Shield types (p. 395), each bought in Marks I–IV. */
+export const SHIELD_TYPES = ["standard", "covariant", "regenerative", "resilient", "multiphasic"];
+
+/**
+ * Weapon type modifiers (p. 397) applied to a weapon pattern: extra rolled damage dice, Disruption, Accuracy, Crit,
+ * range ("half" or "double") and BP cost.
+ */
+const weaponType = (dam = 0, dis = 0, acc = 0, crit = 0, range = null, cost = 0) => ({ dam, dis, acc, crit, range, cost });
+export const SHIP_WEAPON_TYPES = {
+  las: weaponType(),
+  melta: weaponType(1, -1, 0, 0, "half", -5),
+  plasma: weaponType(2, 0, -5, 0, null, 5),
+  orgone: weaponType(0, 2, 5, -2, null, 5),
+  driver: weaponType(0, -1, 0, 3, "half", -5),
+  positron: weaponType(-1, 2, -5, 1, "double", 5),
+  antimeson: weaponType(-1, 0, 5, -2, "double", 0)
+};
+
+/**
+ * Custom hull chart (p. 393): CP cost, times it may be bought, the highest final value and the step per purchase.
+ * `stat` is the hull value it raises.
+ */
+const upgrade = (stat, cp, limit, total, step) => ({ stat, cp, limit, total, step });
+export const CUSTOMIZATION = {
+  forwardWeapon: upgrade("forward", 4, 2, 4, 1),
+  rearWeapon: upgrade("rear", 3, 2, 4, 1),
+  crew: upgrade("crew", 1, 4, 26, 1),
+  hullStrength: upgrade("hullStrength", 1, 6, 110, 5),
+  maneuverability: upgrade("maneuverability", 1, 2, 10, 5),
+  acceleration: upgrade("acceleration", 1, 2, 10, 5),
+  speed: upgrade("speed", 1, 3, 13, 1),
+  sensors: upgrade("sensors", 1, 2, 10, 5),
+  universalConsole: upgrade("universal", 3, 1, 3, 1),
+  nonUniversalConsole: upgrade("nonUniversal", 2, 2, 4, 1)
+};
+
+/** Dice kept by an officer who is not a character (p. 414). */
+export const SHIP_NPC_KEPT = 4;
+
 export const DTD = {
+  SHIP_CATEGORIES,
+  SHIP_BUDGETS,
+  HULL_CLASSES,
+  CONSOLE_TYPES,
+  SHIP_DEPARTMENTS,
+  OFFICER_POSTS,
+  SHIELD_TYPES,
+  SHIP_WEAPON_TYPES,
+  CUSTOMIZATION,
+  SHIP_NPC_KEPT,
   GROUPS,
   CHARACTERISTICS,
   CHARACTERISTIC_GRID,

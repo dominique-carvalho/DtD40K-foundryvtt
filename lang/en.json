@@ -4,7 +4,9 @@
       "character": "Character",
       "npc": "NPC",
       "minionSquad": "Minion Squad",
-      "vehicle": "Vehicle"
+      "vehicle": "Vehicle",
+      "ship": "Ship",
+      "squadron": "Fighter Squadron"
     },
     "Item": {
       "race": "Race",
@@ -17,7 +19,8 @@
       "spell": "Spell",
       "martialSchool": "Martial School",
       "deity": "Deity",
-      "vehicleComponent": "Vehicle Component"
+      "vehicleComponent": "Vehicle Component",
+      "shipComponent": "Ship Component"
     }
   },
   "DTD": {
@@ -147,7 +150,10 @@
       "Npc": "DtD NPC Sheet",
       "MinionSquad": "DtD Minion Squad Sheet",
       "VehicleComponent": "DtD Vehicle Component Sheet",
-      "Vehicle": "DtD Vehicle Sheet"
+      "Vehicle": "DtD Vehicle Sheet",
+      "ShipComponent": "DtD Ship Component Sheet",
+      "Ship": "DtD Ship Sheet",
+      "Squadron": "DtD Fighter Squadron Sheet"
     },
     "Roll": {
       "Success": "Success",
@@ -1852,6 +1858,87 @@
       "RollRound": "Roll the round",
       "Winner": "Winner",
       "NoWinner": "Tie, nobody pulls away"
+    },
+    "Ship": {
+      "Category": {
+        "hull": "Hull",
+        "customHull": "Custom Hull",
+        "officer": "Officer",
+        "console": "Console",
+        "shield": "Shield",
+        "weapon": "Weapon",
+        "weaponType": "Weapon Type",
+        "torpedoTube": "Torpedo Tube",
+        "torpedo": "Torpedo"
+      },
+      "HullClass": {
+        "escort": "Escort",
+        "destroyer": "Destroyer",
+        "cruiser": "Cruiser",
+        "battleship": "Battleship"
+      },
+      "ConsoleType": {
+        "arcana": "Arcana",
+        "command": "Command",
+        "engineering": "Engineering",
+        "tactical": "Tactical",
+        "universal": "Universal"
+      },
+      "Department": {
+        "command": "Command",
+        "manoeuver": "Manoeuver",
+        "tactical": "Tactical",
+        "engineering": "Engineering",
+        "arcana": "Arcana"
+      },
+      "Post": {
+        "helmsman": "Helmsman",
+        "tacticalOfficer": "Tactical Officer",
+        "chiefEngineer": "Chief Engineer",
+        "commandingOfficer": "Commanding Officer",
+        "chiefArcanaOfficer": "Chief Arcana Officer",
+        "chiefMedicalOfficer": "Chief Medical Officer",
+        "chiefCommunicationsOfficer": "Chief Communications Officer",
+        "chiefOfSecurity": "Chief of Security",
+        "chaplain": "Chaplain",
+        "rogueTrader": "Rogue Trader",
+        "navigator": "Navigator",
+        "chiefCook": "Chief Cook"
+      },
+      "Rank": {
+        "primary": "Primary",
+        "secondary": "Secondary",
+        "specialty": "Specialty"
+      },
+      "ShieldType": {
+        "standard": "Standard",
+        "covariant": "Covariant",
+        "regenerative": "Regenerative",
+        "resilient": "Resilient",
+        "multiphasic": "Multiphasic"
+      },
+      "WeaponType": {
+        "las": "Las",
+        "melta": "Melta",
+        "plasma": "Plasma",
+        "orgone": "Orgone",
+        "driver": "Driver",
+        "positron": "Positron",
+        "antimeson": "Antimeson"
+      },
+      "Arc": {
+        "fixed": "Fixed",
+        "flexible": "Flexible",
+        "omni": "Omni"
+      },
+      "Mount": {
+        "forward": "Forward",
+        "rear": "Rear"
+      },
+      "Kind": {
+        "lance": "Lance",
+        "array": "Array"
+      }
     }
   }
 }

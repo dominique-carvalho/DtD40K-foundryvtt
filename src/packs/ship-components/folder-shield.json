@@ -1,0 +1,16 @@
+{
+  "_id": "dtdKFd9cd6a26567",
+  "_key": "!folders!dtdKFd9cd6a26567",
+  "name": "Shields",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 90000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "shipFolder": "shield"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "name": "Steamboat-Class",
+  "type": "shipComponent",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Cheapest and most common frame in the Wheel; a typical first command, adaptable to many loadouts.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 387
+    },
+    "category": "hull",
+    "cost": 10,
+    "quantity": 1,
+    "hull": {
+      "class": "escort",
+      "crew": 12,
+      "hullStrength": 40,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 6,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 2,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 1,
+        "rear": 1
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Escort; Crew 12, Hull 40, Man 0, Acc 0, Speed 6, Sensors 0",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK4ab33590c91a",
+  "_key": "!items!dtdK4ab33590c91a",
+  "folder": "dtdKFdbe8fd00c0c"
+}

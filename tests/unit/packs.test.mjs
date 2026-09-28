@@ -3,9 +3,10 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { COMBAT_ACTIONS } from "../../module/rules/combat-actions.mjs";
 import { baseCost, slotsUsed, vehicleCost } from "../../module/rules/vehicle.mjs";
+import { bpSpent, weaponProfile } from "../../module/rules/ship.mjs";
 import {
   ASSET_AUTOMATION, ASSET_GROUPS, CHARACTERISTICS, EXALTATION_FORMULAS, RACE_POWER_AUTOMATION, RESOURCE_ACTIONS, SKILLS,
-  MAGIC_SCHOOLS, MARTIAL_ENTRY_TYPES, VEHICLE_BUDGETS, VEHICLE_CATEGORIES, MARTIAL_SCHOOLS, NPC_CATEGORIES, NPC_TRAITS, PANTHEONS, RARITIES, SPELL_KEYWORDS, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
+  MAGIC_SCHOOLS, MARTIAL_ENTRY_TYPES, CONSOLE_TYPES, OFFICER_POSTS, SHIP_CATEGORIES, VEHICLE_BUDGETS, VEHICLE_CATEGORIES, MARTIAL_SCHOOLS, NPC_CATEGORIES, NPC_TRAITS, PANTHEONS, RARITIES, SPELL_KEYWORDS, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
 } from "../../module/config.mjs";
 
 /** Every JSON document of a compendium source folder. */
@@ -1096,5 +1097,62 @@ describe("example vehicles compendium source (spec 013, SC-001)", () => {
     expect(barge.items.find((i) => i.name === "Vulcan Mega-Bolter (Macronized)").system.vehicle).toMatchObject({ cost: 45, slots: 6, macronized: 1 });
     expect(vehicleNamed("Bio-Titan").items.find((i) => i.name === "Flawed (Hangar Queen)").system).toMatchObject({ cost: -10, automation: { key: "flawed", flaw: "hangarQueen" } });
     expect(vehicleNamed("Variable Man Machine").items.filter((i) => i.system.category === "drivetrain").map((i) => i.name)).toEqual(["Aerospace Drive", "Walker Drive"]);
+  });
+});
+
+const shipComponentPack = readPack("src/packs/ship-components");
+const shipParts = shipComponentPack.filter((doc) => doc._key.startsWith("!items!"));
+const shipPart = (name) => shipParts.find((doc) => doc.name === name);
+const shipDocs = readPack("src/packs/ships").filter((doc) => doc._key.startsWith("!actors!"));
+
+describe("ship components compendium source (spec 014, SC-001)", () => {
+  it("has every part of the chapter in 11 folders", () => {
+    const count = (category) => shipParts.filter((doc) => doc.system.category === category).length;
+    expect({ hull: count("hull"), customHull: count("customHull"), officer: count("officer"), console: count("console"), shield: count("shield"),
+      weapon: count("weapon"), weaponType: count("weaponType"), torpedoTube: count("torpedoTube"), torpedo: count("torpedo") })
+      .toEqual({ hull: 14, customHull: 4, officer: 12, console: 34, shield: 20, weapon: 5, weaponType: 7, torpedoTube: 1, torpedo: 7 });
+    const byType = (t) => shipParts.filter((doc) => doc.system.category === "console" && doc.system.console.type === t).length;
+    expect(CONSOLE_TYPES.map(byType)).toEqual([7, 6, 7, 8, 6]);
+    expect(shipComponentPack.filter((doc) => doc._key.startsWith("!folders!"))).toHaveLength(11);
+    for (const doc of shipParts) expect(SHIP_CATEGORIES).toContain(doc.system.category);
+    for (const doc of shipParts.filter((d) => d.system.category === "officer")) expect(OFFICER_POSTS[doc.system.officer.post], doc.name).toBeDefined();
+  });
+
+  it("matches the reference entries", () => {
+    expect(shipPart("Steamboat-Class").system).toMatchObject({ cost: 10, hull: { class: "escort", crew: 12, hullStrength: 40, maneuverability: 0, acceleration: 0, speed: 6, sensors: 0, consoles: { universal: 2 }, weapons: { forward: 1, rear: 1 } } });
+    expect(shipPart("Custom Destroyer").system).toMatchObject({ category: "customHull", cost: 50, hull: { hullStrength: 55, customizationPoints: 11, consoles: { universal: 2, nonUniversal: 4 } } });
+    expect(shipPart("Lance").system).toMatchObject({ cost: 10, weapon: { kind: "lance", dam: { rolled: 7, kept: 3 }, dis: 4, acc: 5, crit: 2, range: 10, arc: "flexible" } });
+    expect(shipPart("Photon Torpedo").system).toMatchObject({ cost: 10, quantity: 5, torpedo: { dam: { rolled: 7, kept: 6 }, dis: 4, acc: 5, crit: 4, range: 20 } });
+    expect(shipPart("Standard Shield Mk. I").system).toMatchObject({ cost: 5, shield: { type: "standard", mark: 1, capacity: 75, regen: 10 } });
+    expect(shipPart("Multiphasic Shield Mk. IV").system.shield).toMatchObject({ capacity: 20, layers: 7 });
+    expect(shipPart("Hardened Armor").system).toMatchObject({ console: { type: "engineering" }, automation: { hullStrengthBonus: 10 } });
+    expect(shipPart("Rogue Trader").system.cost).toBe(15);
+    for (const doc of shipParts) expect(doc.system.description, doc.name).toMatch(/^<p>.+<\/p>/s);
+  });
+});
+
+describe("NPC ships compendium source (spec 014, SC-001)", () => {
+  const parts = (doc) => doc.items.map((i) => i.system);
+
+  it("has the 6 NPC ships with a hull, a shield and the 5 primary officers, costing what the book prints", () => {
+    expect(shipDocs).toHaveLength(6);
+    for (const doc of shipDocs) {
+      const cat = (c) => doc.items.filter((i) => i.system.category === c).length;
+      expect([cat("hull"), cat("shield"), cat("officer")], doc.name).toEqual([1, 1, 5]);
+      expect(bpSpent(parts(doc)), doc.name).toBe(doc.system.printed.cost);
+      for (const item of doc.items) expect(item._key).toBe(`!actors.items!${doc._id}.${item._id}`);
+      expect(new Set(doc.items.map((i) => i._id)).size, doc.name).toBe(doc.items.length);
+    }
+  });
+
+  it("builds the Military Cruiser and the Battleship's Heavy Plasma Lance", () => {
+    const cruiser = shipDocs.find((d) => d.name === "Military Cruiser");
+    expect(cruiser.items.find((i) => i.name === "Hardened Armor").system.quantity).toBe(2);
+    expect(cruiser.items.filter((i) => i.system.category === "weapon").map((i) => `${i.name}:${i.system.weapon.mount}`).sort())
+      .toEqual(["Array:forward", "Array:forward", "Heavy Lance:forward", "Turret:rear", "Turret:rear"]);
+    const lance = shipDocs.find((d) => d.name === "Battleship").items.find((i) => i.name === "Heavy Plasma Lance");
+    expect(weaponProfile({ ...lance.system.weapon, cost: lance.system.cost }, lance.system.weapon.typeKey)).toMatchObject({ dam: { rolled: 10, kept: 4 }, acc: -5, cost: 20 });
+    const destroyer = shipDocs.find((d) => d.name === "Destroyer");
+    expect(destroyer.items.find((i) => i.name === "Photon Torpedo").system.quantity).toBe(5);
   });
 });

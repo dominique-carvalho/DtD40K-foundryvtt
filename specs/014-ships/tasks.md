@@ -42,11 +42,11 @@ quickstart.md
 
 ## Phase 3: User Story 1 — Compêndios (P1)
 
-- [ ] T010 [P] [US1] Em `tests/unit/packs.test.mjs`: contagens por categoria (14 cascos, 4 bases, 12 oficiais, 34 consoles por tipo, 20 escudos, 5 padrões, 7 tipos, tubo, 7 torpedos), Steamboat/Lance/Photon com os números da spec, 6 naves de NPC com componentes embutidos e o Military Cruiser conferido
-- [ ] T011 [US1] Script do scratchpad `gen-ships-pack.mjs`: inventário → `src/packs/ship-components/*.json` e `src/packs/ships/*.json` (Heavy Plasma Lance derivada; `printed.cost`); `assign-pack-ids`; 6-gramas = 0; ícones conferidos
-- [ ] T012 [US1] `module/apps/ship-component-sheet.mjs` + template; registrar
-- [ ] T013 [P] [US1] i18n e estilos
-- [ ] T014 [US1] `npm test` e `npm run build:packs` (Foundry fechado); conferir `.ldb` em todos os packs
+- [X] T010 [P] [US1] Em `tests/unit/packs.test.mjs`: contagens por categoria (14 cascos, 4 bases, 12 oficiais, 34 consoles por tipo, 20 escudos, 5 padrões, 7 tipos, tubo, 7 torpedos), Steamboat/Lance/Photon com os números da spec, 6 naves de NPC com componentes embutidos e o Military Cruiser conferido
+- [X] T011 [US1] Script do scratchpad `gen-ships-pack.mjs`: inventário → `src/packs/ship-components/*.json` e `src/packs/ships/*.json` (Heavy Plasma Lance derivada; `printed.cost`); `assign-pack-ids`; 6-gramas = 0; ícones conferidos
+- [X] T012 [US1] `module/apps/ship-component-sheet.mjs` + template; registrar
+- [X] T013 [P] [US1] i18n e estilos
+- [X] T014 [US1] `npm test` e `npm run build:packs` (Foundry fechado); conferir `.ldb` em todos os packs
 
 ---
 

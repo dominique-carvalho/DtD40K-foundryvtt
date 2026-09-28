@@ -28,6 +28,7 @@ import { MartialSchoolSheet } from "./module/apps/martial-school-sheet.mjs";
 import { DeityData } from "./module/data/deity-data.mjs";
 import { DeitySheet } from "./module/apps/deity-sheet.mjs";
 import { VehicleComponentSheet } from "./module/apps/vehicle-component-sheet.mjs";
+import { ShipComponentSheet } from "./module/apps/ship-component-sheet.mjs";
 import { VehicleSheet } from "./module/apps/vehicle-sheet.mjs";
 import { allVehicles, controlTest, evasive, explode, newScene as newVehicleScene, rollOutOfControl, vehicleOfCard } from "./module/documents/vehicle-service.mjs";
 import { markObstacle, rollChaseRound, startChaseFromCanvas } from "./module/documents/chase-service.mjs";
@@ -160,6 +161,12 @@ Hooks.once("init", () => {
     types: ["vehicle"],
     makeDefault: true,
     label: "DTD.Sheet.Vehicle"
+  });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", ShipComponentSheet, {
+    types: ["shipComponent"],
+    makeDefault: true,
+    label: "DTD.Sheet.ShipComponent"
   });
 
   foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", VehicleComponentSheet, {

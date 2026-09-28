@@ -1,0 +1,16 @@
+{
+  "_id": "dtdKFdd5f97bf16f",
+  "_key": "!folders!dtdKFdd5f97bf16f",
+  "name": "Tactical Consoles",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 70000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "shipFolder": "tactical"
+    }
+  }
+}

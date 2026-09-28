@@ -1,0 +1,91 @@
+{
+  "name": "Custom Destroyer",
+  "type": "shipComponent",
+  "img": "icons/svg/clockwork.svg",
+  "system": {
+    "description": "<p>Mid-sized frame that can punch above its class with the right fittings.</p><p>Spend its 11 Customization Points on the chart of p. 393; its 4 non-universal console slots go to the types you choose.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 392
+    },
+    "category": "customHull",
+    "cost": 50,
+    "quantity": 1,
+    "hull": {
+      "class": "destroyer",
+      "crew": 16,
+      "hullStrength": 55,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 8,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 2,
+        "nonUniversal": 4
+      },
+      "weapons": {
+        "forward": 2,
+        "rear": 2
+      },
+      "customizationPoints": 11
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Destroyer; Crew 16, Hull 55, Man 0, Acc 0, Speed 8, Sensors 0, 11 CP",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK6764f9865f56",
+  "_key": "!items!dtdK6764f9865f56",
+  "folder": "dtdKFd06e3772ef3"
+}

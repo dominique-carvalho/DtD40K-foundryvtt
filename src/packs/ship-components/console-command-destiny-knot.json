@@ -1,0 +1,93 @@
+{
+  "name": "Destiny Knot",
+  "type": "shipComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Rare arcane web of cords threaded through the vessel. The Captain and Bridge Officers may burn personal Hero Points for rerolls on any test by the ship or its crew, even outside their own section (e.g. the captain rerolling a missed hit or a repair).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 400
+    },
+    "category": "console",
+    "cost": 15,
+    "quantity": 1,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": "command"
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Rare arcane web of cords threaded through the vessel. The Captain and Bridge Officers may burn personal Hero Points for rerolls on any test by the ship or its crew, even outside their own section (e.g. the captain rerolling a missed hit or a repair).",
+    "automation": {
+      "key": "destinyKnot"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdKd3706c3301ab",
+  "_key": "!items!dtdKd3706c3301ab",
+  "folder": "dtdKFd60cf2efbbd"
+}

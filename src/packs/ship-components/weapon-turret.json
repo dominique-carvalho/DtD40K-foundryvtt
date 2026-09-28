@@ -1,0 +1,91 @@
+{
+  "name": "Turret",
+  "type": "shipComponent",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Rotates fully, covering flanks or letting rear mounts threaten the front.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 397
+    },
+    "category": "weapon",
+    "cost": 10,
+    "quantity": 1,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "Turret",
+      "kind": "array",
+      "dam": {
+        "rolled": 2,
+        "kept": 1
+      },
+      "dis": 1,
+      "acc": 0,
+      "crit": -1,
+      "range": 5,
+      "arc": "omni",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "2k1, Dis 1, Acc 0, Crit -1, Range 5, Omni",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK7b1c43e002be",
+  "_key": "!items!dtdK7b1c43e002be",
+  "folder": "dtdKFd6cb664c9cd"
+}

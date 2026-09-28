@@ -1,0 +1,91 @@
+{
+  "name": "Quath Torpedo",
+  "type": "shipComponent",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Automatically passes through shields to strike the hull, but its Crit drops to 0 when it does so.</p><p>A purchase is a set of 5 warheads.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 398
+    },
+    "category": "torpedo",
+    "cost": 10,
+    "quantity": 5,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 4,
+        "kept": 4
+      },
+      "dis": 0,
+      "acc": 5,
+      "crit": 8,
+      "range": 20,
+      "arc": "fixed"
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "4k4, Dis 0, Acc 5, Crit 8, Range 20, Fixed",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK824c4a6e24ea",
+  "_key": "!items!dtdK824c4a6e24ea",
+  "folder": "dtdKFd46124230c1"
+}

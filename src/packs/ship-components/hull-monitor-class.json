@@ -1,0 +1,91 @@
+{
+  "name": "Monitor-Class",
+  "type": "shipComponent",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Long-range explorer with big storage vaults and strong sensors; resold units get very different fittings.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 389
+    },
+    "category": "hull",
+    "cost": 25,
+    "quantity": 1,
+    "hull": {
+      "class": "destroyer",
+      "crew": 16,
+      "hullStrength": 60,
+      "maneuverability": 0,
+      "acceleration": 5,
+      "speed": 8,
+      "sensors": 10,
+      "consoles": {
+        "arcana": 2,
+        "command": 1,
+        "engineering": 1,
+        "tactical": 1,
+        "universal": 2,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 2,
+        "rear": 2
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Destroyer; Crew 16, Hull 60, Man 0, Acc 5, Speed 8, Sensors 10",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK53f8e84872e9",
+  "_key": "!items!dtdK53f8e84872e9",
+  "folder": "dtdKFdbe8fd00c0c"
+}

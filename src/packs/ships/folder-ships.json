@@ -1,0 +1,16 @@
+{
+  "_id": "dtdYFd8e83d53e06",
+  "_key": "!folders!dtdYFd8e83d53e06",
+  "name": "NPC Ships",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 10000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "shipFolder": "ships"
+    }
+  }
+}

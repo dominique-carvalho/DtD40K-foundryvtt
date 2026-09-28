@@ -200,7 +200,8 @@ export function weaponProfile(pattern, typeKey) {
  */
 export function bpSpent(parts) {
   return parts.reduce((sum, p) => {
-    if (p.category === "weapon") return sum + weaponProfile(p.weapon, p.weapon.typeKey).cost;
+    // The pattern cost is the item cost on a ship (or inside the profile).
+    if (p.category === "weapon") return sum + weaponProfile({ ...p.weapon, cost: p.weapon.cost ?? p.cost ?? 0 }, p.weapon.typeKey).cost;
     if (p.category === "torpedo") return sum + (p.cost ?? 0) * Math.ceil(Math.max(1, p.quantity ?? 1) / 5);
     if (p.category === "weaponType") return sum;
     return sum + (p.cost ?? 0) * Math.max(1, p.quantity ?? 1);

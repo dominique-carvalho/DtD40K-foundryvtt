@@ -1,0 +1,104 @@
+{{#*inline "num"}}<label>{{label}}{{#if @root.editable}}<input type="number" name="{{name}}" value="{{value}}">{{else}}<b>{{value}}</b>{{/if}}</label>{{/inline}}
+{{#*inline "sel"}}<label>{{label}}{{#if @root.editable}}<select name="{{name}}">{{selectOptions choices selected=value localize=true}}</select>{{else}}<b>{{#if value}}{{localize (concat prefix "." value)}}{{else}}—{{/if}}</b>{{/if}}</label>{{/inline}}
+<div class="ship-component-sheet-body">
+  {{#if lockedPackHint}}
+  <p class="notification info locked-pack-hint"><i class="fa-solid fa-lock" inert></i> {{lockedPackHint}}</p>
+  {{/if}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}" {{#if editable}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if editable}}
+      <input class="item-name" type="text" name="name" value="{{item.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="item-name">{{item.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <span>{{localize (concat "DTD.Ship.Category." system.category)}}</span>
+        {{#if rank}}<span>{{localize rank}}</span>{{/if}}
+        <label>{{localize "DTD.Race.Page"}} <b>{{system.source.page}}</b></label>
+      </div>
+    </div>
+  </header>
+
+  <section class="equipment-section">
+    <div class="profile-grid">
+      {{#if editable}}{{> sel label=(localize "DTD.Ship.CategoryLabel") name="system.category" choices=categoryOptions value=system.category prefix="DTD.Ship.Category"}}{{/if}}
+      {{> num label=(localize "DTD.Ship.Cost") name="system.cost" value=system.cost}}
+      {{#if (or is.console is.torpedo embedded)}}{{> num label=(localize "DTD.Ship.Quantity") name="system.quantity" value=system.quantity}}{{/if}}
+
+      {{#if isHullLike}}
+      {{> sel label=(localize "DTD.Ship.HullClassLabel") name="system.hull.class" choices=classOptions value=system.hull.class prefix="DTD.Ship.HullClass"}}
+      {{> num label=(localize "DTD.Ship.Crew") name="system.hull.crew" value=system.hull.crew}}
+      {{> num label=(localize "DTD.Ship.HullStrength") name="system.hull.hullStrength" value=system.hull.hullStrength}}
+      {{> num label=(localize "DTD.Ship.Maneuverability") name="system.hull.maneuverability" value=system.hull.maneuverability}}
+      {{> num label=(localize "DTD.Ship.Acceleration") name="system.hull.acceleration" value=system.hull.acceleration}}
+      {{> num label=(localize "DTD.Ship.Speed") name="system.hull.speed" value=system.hull.speed}}
+      {{> num label=(localize "DTD.Ship.Sensors") name="system.hull.sensors" value=system.hull.sensors}}
+      {{> num label=(localize "DTD.Ship.Mount.forward") name="system.hull.weapons.forward" value=system.hull.weapons.forward}}
+      {{> num label=(localize "DTD.Ship.Mount.rear") name="system.hull.weapons.rear" value=system.hull.weapons.rear}}
+      {{#if is.customHull}}
+      {{> num label=(localize "DTD.Ship.NonUniversal") name="system.hull.consoles.nonUniversal" value=system.hull.consoles.nonUniversal}}
+      {{> num label=(localize "DTD.Ship.CustomizationPoints") name="system.hull.customizationPoints" value=system.hull.customizationPoints}}
+      {{else}}
+      {{> num label=(localize "DTD.Ship.ConsoleType.arcana") name="system.hull.consoles.arcana" value=system.hull.consoles.arcana}}
+      {{> num label=(localize "DTD.Ship.ConsoleType.command") name="system.hull.consoles.command" value=system.hull.consoles.command}}
+      {{> num label=(localize "DTD.Ship.ConsoleType.engineering") name="system.hull.consoles.engineering" value=system.hull.consoles.engineering}}
+      {{> num label=(localize "DTD.Ship.ConsoleType.tactical") name="system.hull.consoles.tactical" value=system.hull.consoles.tactical}}
+      {{/if}}
+      {{> num label=(localize "DTD.Ship.ConsoleType.universal") name="system.hull.consoles.universal" value=system.hull.consoles.universal}}
+      {{/if}}
+
+      {{#if is.officer}}
+      {{> sel label=(localize "DTD.Ship.PostLabel") name="system.officer.post" choices=postOptions value=system.officer.post prefix="DTD.Ship.Post"}}
+      {{#if embedded}}<label>{{localize "DTD.Ship.Holder"}}<b>{{#if holderName}}{{holderName}}{{else}}{{localize "DTD.Ship.NpcOfficer"}}{{/if}}</b></label>{{/if}}
+      {{/if}}
+
+      {{#if is.console}}{{> sel label=(localize "DTD.Ship.ConsoleTypeLabel") name="system.console.type" choices=consoleOptions value=system.console.type prefix="DTD.Ship.ConsoleType"}}{{/if}}
+
+      {{#if is.shield}}
+      {{> sel label=(localize "DTD.Ship.ShieldTypeLabel") name="system.shield.type" choices=shieldOptions value=system.shield.type prefix="DTD.Ship.ShieldType"}}
+      {{> num label=(localize "DTD.Ship.Mark") name="system.shield.mark" value=system.shield.mark}}
+      {{> num label=(localize "DTD.Ship.Capacity") name="system.shield.capacity" value=system.shield.capacity}}
+      {{> num label=(localize "DTD.Ship.Regen") name="system.shield.regen" value=system.shield.regen}}
+      {{#if (eq system.shield.type "multiphasic")}}{{> num label=(localize "DTD.Ship.Layers") name="system.shield.layers" value=system.shield.layers}}{{/if}}
+      {{/if}}
+
+      {{#if is.weapon}}
+      {{> sel label=(localize "DTD.Ship.KindLabel") name="system.weapon.kind" choices=kindOptions value=system.weapon.kind prefix="DTD.Ship.Kind"}}
+      {{> num label=(localize "DTD.Ship.DamageRolled") name="system.weapon.dam.rolled" value=system.weapon.dam.rolled}}
+      {{> num label=(localize "DTD.Ship.DamageKept") name="system.weapon.dam.kept" value=system.weapon.dam.kept}}
+      {{> num label="Dis" name="system.weapon.dis" value=system.weapon.dis}}
+      {{> num label="Acc" name="system.weapon.acc" value=system.weapon.acc}}
+      {{> num label="Crit" name="system.weapon.crit" value=system.weapon.crit}}
+      {{> num label=(localize "DTD.Ship.Range") name="system.weapon.range" value=system.weapon.range}}
+      {{> sel label=(localize "DTD.Ship.ArcLabel") name="system.weapon.arc" choices=arcOptions value=system.weapon.arc prefix="DTD.Ship.Arc"}}
+      {{> sel label=(localize "DTD.Ship.WeaponTypeLabel") name="system.weapon.typeKey" choices=typeOptions value=system.weapon.typeKey prefix="DTD.Ship.WeaponType"}}
+      {{> sel label=(localize "DTD.Ship.MountLabel") name="system.weapon.mount" choices=mountOptions value=system.weapon.mount prefix="DTD.Ship.Mount"}}
+      {{/if}}
+
+      {{#if is.torpedo}}
+      {{> num label=(localize "DTD.Ship.DamageRolled") name="system.torpedo.dam.rolled" value=system.torpedo.dam.rolled}}
+      {{> num label=(localize "DTD.Ship.DamageKept") name="system.torpedo.dam.kept" value=system.torpedo.dam.kept}}
+      {{> num label="Dis" name="system.torpedo.dis" value=system.torpedo.dis}}
+      {{> num label="Acc" name="system.torpedo.acc" value=system.torpedo.acc}}
+      {{> num label="Crit" name="system.torpedo.crit" value=system.torpedo.crit}}
+      {{> num label=(localize "DTD.Ship.Range") name="system.torpedo.range" value=system.torpedo.range}}
+      {{> sel label=(localize "DTD.Ship.ArcLabel") name="system.torpedo.arc" choices=arcOptions value=system.torpedo.arc prefix="DTD.Ship.Arc"}}
+      {{/if}}
+
+      {{#if is.torpedoTube}}
+      {{> sel label=(localize "DTD.Ship.MountLabel") name="system.tube.mount" choices=mountOptions value=system.tube.mount prefix="DTD.Ship.Mount"}}
+      {{> num label=(localize "DTD.Ship.Capacity") name="system.tube.capacity" value=system.tube.capacity}}
+      {{/if}}
+    </div>
+    {{#if profile}}<p class="hint">{{localize "DTD.Ship.Profile" dam=(concat profile.dam.rolled "k" profile.dam.kept) dis=profile.dis acc=profile.acc crit=profile.crit range=profile.range cost=profile.cost}}</p>{{/if}}
+    {{#if system.effect}}<p class="hint">{{system.effect}}</p>{{/if}}
+  </section>
+
+  <section class="spell-section">
+    {{#if editable}}
+    <div class="form-group stacked"><label>{{localize "DTD.Ship.Effect"}}</label><input type="text" name="system.effect" value="{{system.effect}}"></div>
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.description}}}</div>{{/if}}
+  </section>
+</div>

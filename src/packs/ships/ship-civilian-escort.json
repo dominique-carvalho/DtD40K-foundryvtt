@@ -1,0 +1,771 @@
+{
+  "name": "Civilian Escort",
+  "type": "ship",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "budget": {
+      "holdings": 1
+    },
+    "hull": {
+      "value": 40,
+      "temp": 0
+    },
+    "shield": {
+      "value": 75,
+      "disruption": 0,
+      "collapsed": false,
+      "layers": []
+    },
+    "printed": {
+      "cost": 50
+    },
+    "description": "<p>Cheap dockside junker: slow, unarmed and easy pirate prey.</p><p>Every officer aboard is an NPC who keeps 4 dice.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 414
+    }
+  },
+  "items": [
+    {
+      "name": "Steamboat-Class",
+      "type": "shipComponent",
+      "img": "icons/svg/castle.svg",
+      "system": {
+        "description": "<p>Cheapest and most common frame in the Wheel; a typical first command, adaptable to many loadouts.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 387
+        },
+        "category": "hull",
+        "cost": 10,
+        "quantity": 1,
+        "hull": {
+          "class": "escort",
+          "crew": 12,
+          "hullStrength": 40,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 6,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 2,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 1,
+            "rear": 1
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Escort; Crew 12, Hull 40, Man 0, Acc 0, Speed 6, Sensors 0",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi48399fdbd7e",
+      "_key": "!actors.items!dtdYda869612cef0.dtdNi48399fdbd7e",
+      "folder": "dtdKFdbe8fd00c0c"
+    },
+    {
+      "name": "Standard Shield Mk. I",
+      "type": "shipComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Baseline bubble shield against which the others are compared.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 395
+        },
+        "category": "shield",
+        "cost": 5,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "standard",
+          "mark": 1,
+          "capacity": 75,
+          "regen": 10,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Capacity 75, Regeneration 10",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi6286093fd9c",
+      "_key": "!actors.items!dtdYda869612cef0.dtdNi6286093fd9c",
+      "folder": "dtdKFd9cd6a26567"
+    },
+    {
+      "name": "Warpsbane Hull",
+      "type": "shipComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Silver warding hexagrams over the hull bolster the Geller Field; such ships usually carry a shrine to one God. Warp Encounter rolls get -2.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 399
+        },
+        "category": "console",
+        "cost": 10,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": "arcana"
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Silver warding hexagrams over the hull bolster the Geller Field; such ships usually carry a shrine to one God. Warp Encounter rolls get -2.",
+        "automation": {
+          "key": "warpsbaneHull",
+          "warpEncounterModifier": -2
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi90b5bdae3fa",
+      "_key": "!actors.items!dtdYda869612cef0.dtdNi90b5bdae3fa",
+      "folder": "dtdKFdae80890a5b"
+    },
+    {
+      "name": "Helmsman",
+      "type": "shipComponent",
+      "img": "icons/svg/mystery-man.svg",
+      "system": {
+        "description": "<p>Steers the ship toward its destination, either flying it personally or directing others. Supplies the kept dice for Manoeuver actions.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 393
+        },
+        "category": "officer",
+        "cost": 5,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "helmsman",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Critical post",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi760bd03bae9",
+      "_key": "!actors.items!dtdYda869612cef0.dtdNi760bd03bae9",
+      "folder": "dtdKFd622d954aed"
+    },
+    {
+      "name": "Tactical Officer",
+      "type": "shipComponent",
+      "img": "icons/svg/mystery-man.svg",
+      "system": {
+        "description": "<p>Runs the guns and keeps gunners and engineers working; supplies kept dice for Tactical actions and for fightercraft squads.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 393
+        },
+        "category": "officer",
+        "cost": 5,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "tacticalOfficer",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Critical post",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNic0c1607a26a",
+      "_key": "!actors.items!dtdYda869612cef0.dtdNic0c1607a26a",
+      "folder": "dtdKFd622d954aed"
+    },
+    {
+      "name": "Chief Engineer",
+      "type": "shipComponent",
+      "img": "icons/svg/mystery-man.svg",
+      "system": {
+        "description": "<p>Handles power routing and emergency repairs. Without one, most repairs have to wait for a port.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 393
+        },
+        "category": "officer",
+        "cost": 5,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "chiefEngineer",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Critical post",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNicbb5e184ac7",
+      "_key": "!actors.items!dtdYda869612cef0.dtdNicbb5e184ac7",
+      "folder": "dtdKFd622d954aed"
+    },
+    {
+      "name": "Commanding Officer",
+      "type": "shipComponent",
+      "img": "icons/svg/mystery-man.svg",
+      "system": {
+        "description": "<p>Acts as captain of the bridge, issuing orders and collecting reports. Because the ship's true owner is usually someone else, this officer cannot represent the ship in Social Combat.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 393
+        },
+        "category": "officer",
+        "cost": 5,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "commandingOfficer",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Critical post",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi4cce7f2b2d4",
+      "_key": "!actors.items!dtdYda869612cef0.dtdNi4cce7f2b2d4",
+      "folder": "dtdKFd622d954aed"
+    },
+    {
+      "name": "Chief Arcana Officer",
+      "type": "shipComponent",
+      "img": "icons/svg/mystery-man.svg",
+      "system": {
+        "description": "<p>Operates sensors and exotic systems to spot objects, assess threats and help with warp travel (opens warp portals without a relay). A hired officer in this post may not double as Navigator; PCs and other NPCs are exempt.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 393
+        },
+        "category": "officer",
+        "cost": 5,
+        "quantity": 1,
+        "hull": {
+          "class": "",
+          "crew": 0,
+          "hullStrength": 0,
+          "maneuverability": 0,
+          "acceleration": 0,
+          "speed": 0,
+          "sensors": 0,
+          "consoles": {
+            "arcana": 0,
+            "command": 0,
+            "engineering": 0,
+            "tactical": 0,
+            "universal": 0,
+            "nonUniversal": 0
+          },
+          "weapons": {
+            "forward": 0,
+            "rear": 0
+          },
+          "customizationPoints": 0
+        },
+        "officer": {
+          "post": "chiefArcanaOfficer",
+          "actorUuid": ""
+        },
+        "console": {
+          "type": ""
+        },
+        "shield": {
+          "type": "",
+          "mark": 1,
+          "capacity": 0,
+          "regen": 0,
+          "layers": 1
+        },
+        "weapon": {
+          "pattern": "",
+          "kind": "",
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": "",
+          "typeKey": "las",
+          "mount": "forward"
+        },
+        "weaponType": {
+          "key": ""
+        },
+        "torpedo": {
+          "dam": {
+            "rolled": 0,
+            "kept": 0
+          },
+          "dis": 0,
+          "acc": 0,
+          "crit": 0,
+          "range": 0,
+          "arc": ""
+        },
+        "tube": {
+          "mount": "forward",
+          "capacity": 5
+        },
+        "effect": "Critical post",
+        "automation": {}
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi87d9ee35d6f",
+      "_key": "!actors.items!dtdYda869612cef0.dtdNi87d9ee35d6f",
+      "folder": "dtdKFd622d954aed"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Civilian Escort",
+    "actorLink": true,
+    "disposition": -1
+  },
+  "flags": {},
+  "_id": "dtdYda869612cef0",
+  "_key": "!actors!dtdYda869612cef0",
+  "folder": "dtdYFd8e83d53e06"
+}

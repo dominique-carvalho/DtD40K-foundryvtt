@@ -1,0 +1,91 @@
+{
+  "name": "Endurance-Class",
+  "type": "shipComponent",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Old, sturdy design assembled from widely available stock parts; still being produced.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 388
+    },
+    "category": "hull",
+    "cost": 20,
+    "quantity": 1,
+    "hull": {
+      "class": "escort",
+      "crew": 14,
+      "hullStrength": 65,
+      "maneuverability": 5,
+      "acceleration": 5,
+      "speed": 8,
+      "sensors": 5,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 1,
+        "tactical": 0,
+        "universal": 2,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 1,
+        "rear": 1
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Escort; Crew 14, Hull 65, Man 5, Acc 5, Speed 8, Sensors 5",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdKab8e9df3bd59",
+  "_key": "!items!dtdKab8e9df3bd59",
+  "folder": "dtdKFdbe8fd00c0c"
+}

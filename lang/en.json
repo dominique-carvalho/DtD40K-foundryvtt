@@ -1938,7 +1938,37 @@
       "Kind": {
         "lance": "Lance",
         "array": "Array"
-      }
+      },
+      "CategoryLabel": "Category",
+      "Cost": "BP cost",
+      "Quantity": "Quantity",
+      "HullClassLabel": "Hull class",
+      "Crew": "Crew",
+      "HullStrength": "Hull Strength",
+      "Maneuverability": "Maneuverability",
+      "Acceleration": "Acceleration",
+      "Speed": "Speed",
+      "Sensors": "Sensors",
+      "NonUniversal": "Non-universal slots",
+      "CustomizationPoints": "Customization Points",
+      "PostLabel": "Post",
+      "Holder": "Held by",
+      "NpcOfficer": "NPC officer (keeps 4)",
+      "ConsoleTypeLabel": "Console type",
+      "ShieldTypeLabel": "Shield type",
+      "Mark": "Mark",
+      "Capacity": "Capacity",
+      "Regen": "Regeneration",
+      "Layers": "Layers",
+      "KindLabel": "Kind",
+      "DamageRolled": "Damage rolled",
+      "DamageKept": "Damage kept",
+      "Range": "Range (VU)",
+      "ArcLabel": "Arc",
+      "WeaponTypeLabel": "Weapon type",
+      "MountLabel": "Mount",
+      "Profile": "With its type: {dam}, Dis {dis}, Acc {acc}, Crit {crit}, Range {range}, {cost} BP.",
+      "Effect": "Effect (short)"
     }
   }
 }

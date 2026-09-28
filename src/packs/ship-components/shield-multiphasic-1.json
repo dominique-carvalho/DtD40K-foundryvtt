@@ -1,0 +1,91 @@
+{
+  "name": "Multiphasic Shield Mk. I",
+  "type": "shipComponent",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Newer design of several weak overlapping layers (four to seven by Mark); attackers must knock them down one by one.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 395
+    },
+    "category": "shield",
+    "cost": 5,
+    "quantity": 1,
+    "hull": {
+      "class": "",
+      "crew": 0,
+      "hullStrength": 0,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 0,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 0,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 0,
+        "rear": 0
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "multiphasic",
+      "mark": 1,
+      "capacity": 20,
+      "regen": 5,
+      "layers": 4
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Capacity 20 × 4 layers, Regeneration 5",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdKc0fb6b80216c",
+  "_key": "!items!dtdKc0fb6b80216c",
+  "folder": "dtdKFd9cd6a26567"
+}

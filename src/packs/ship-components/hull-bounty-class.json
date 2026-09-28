@@ -1,0 +1,91 @@
+{
+  "name": "Bounty-Class",
+  "type": "shipComponent",
+  "img": "icons/svg/castle.svg",
+  "system": {
+    "description": "<p>Fewer guns than the Belle but even tougher, with a big crew and strong engineering and arcana; used as heavy scouts and first responders.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 391
+    },
+    "category": "hull",
+    "cost": 75,
+    "quantity": 1,
+    "hull": {
+      "class": "battleship",
+      "crew": 24,
+      "hullStrength": 100,
+      "maneuverability": -5,
+      "acceleration": -5,
+      "speed": 4,
+      "sensors": 5,
+      "consoles": {
+        "arcana": 3,
+        "command": 1,
+        "engineering": 3,
+        "tactical": 1,
+        "universal": 1,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 3,
+        "rear": 3
+      },
+      "customizationPoints": 0
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Battleship; Crew 24, Hull 100, Man -5, Acc -5, Speed 4, Sensors 5",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK339690a52d17",
+  "_key": "!items!dtdK339690a52d17",
+  "folder": "dtdKFdbe8fd00c0c"
+}

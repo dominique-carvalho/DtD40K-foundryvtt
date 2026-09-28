@@ -1,0 +1,16 @@
+{
+  "_id": "dtdKFd06e3772ef3",
+  "_key": "!folders!dtdKFd06e3772ef3",
+  "name": "Custom Hulls",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 20000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "shipFolder": "customHull"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "name": "Custom Escort",
+  "type": "shipComponent",
+  "img": "icons/svg/clockwork.svg",
+  "system": {
+    "description": "<p>Most commonly built custom frame; cheap and quick, easy to specialize.</p><p>Spend its 10 Customization Points on the chart of p. 393; its 0 non-universal console slots go to the types you choose.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 392
+    },
+    "category": "customHull",
+    "cost": 25,
+    "quantity": 1,
+    "hull": {
+      "class": "escort",
+      "crew": 14,
+      "hullStrength": 40,
+      "maneuverability": 0,
+      "acceleration": 0,
+      "speed": 10,
+      "sensors": 0,
+      "consoles": {
+        "arcana": 0,
+        "command": 0,
+        "engineering": 0,
+        "tactical": 0,
+        "universal": 2,
+        "nonUniversal": 0
+      },
+      "weapons": {
+        "forward": 1,
+        "rear": 1
+      },
+      "customizationPoints": 10
+    },
+    "officer": {
+      "post": "",
+      "actorUuid": ""
+    },
+    "console": {
+      "type": ""
+    },
+    "shield": {
+      "type": "",
+      "mark": 1,
+      "capacity": 0,
+      "regen": 0,
+      "layers": 1
+    },
+    "weapon": {
+      "pattern": "",
+      "kind": "",
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": "",
+      "typeKey": "las",
+      "mount": "forward"
+    },
+    "weaponType": {
+      "key": ""
+    },
+    "torpedo": {
+      "dam": {
+        "rolled": 0,
+        "kept": 0
+      },
+      "dis": 0,
+      "acc": 0,
+      "crit": 0,
+      "range": 0,
+      "arc": ""
+    },
+    "tube": {
+      "mount": "forward",
+      "capacity": 5
+    },
+    "effect": "Escort; Crew 14, Hull 40, Man 0, Acc 0, Speed 10, Sensors 0, 10 CP",
+    "automation": {}
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdK63dede808c00",
+  "_key": "!items!dtdK63dede808c00",
+  "folder": "dtdKFd06e3772ef3"
+}

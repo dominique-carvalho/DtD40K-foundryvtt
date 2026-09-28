@@ -1,0 +1,46 @@
+<section class="tab ship-components {{tabs.components.cssClass}}" data-group="primary" data-tab="components">
+  <p class="hint">{{localize "DTD.Ship.DropHint"}}</p>
+  {{#if hullItem}}
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Ship.Category.hull"}}</h3>
+    <ol class="vehicle-rows">
+      <li class="vehicle-row" data-item-id="{{hullItem.id}}">
+        <a class="row-name" data-action="openItem">{{hullItem.name}}</a>
+        <span class="row-cost">{{hullItem.system.cost}} BP</span>
+        <span class="row-effect hint">{{hullItem.system.effect}}</span>
+        {{#if editable}}<a class="row-delete" data-action="deleteItem"><i class="fa-solid fa-trash" inert></i></a>{{/if}}
+      </li>
+    </ol>
+  </div>
+  {{/if}}
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Ship.Weapons"}}</h3>
+    <ol class="vehicle-rows">
+      {{#each weapons as |w|}}
+      <li class="vehicle-row{{#if w.offline}} offline{{/if}}" data-item-id="{{w.id}}">
+        <a class="row-name" data-action="openItem">{{w.name}}</a>
+        <span>{{w.type}} · {{w.mount}}</span>
+        <span class="row-cost">{{w.cost}} BP</span>
+        <span class="row-effect hint">{{w.text}}</span>
+        {{#if @root.editable}}<a class="row-delete" data-action="deleteItem"><i class="fa-solid fa-trash" inert></i></a>{{/if}}
+      </li>
+      {{else}}<li class="hint">{{localize "DTD.Ship.NoWeapons"}}</li>{{/each}}
+    </ol>
+  </div>
+  {{#each groups as |g|}}
+  <div class="equipment-section">
+    <h3 class="section-title">{{g.label}}</h3>
+    <ol class="vehicle-rows">
+      {{#each g.rows as |c|}}
+      <li class="vehicle-row{{#if c.offline}} offline{{/if}}" data-item-id="{{c.id}}">
+        <a class="row-name" data-action="openItem">{{c.name}}</a>
+        {{#if g.quantity}}<span class="row-qty">{{#if @root.editable}}<a data-action="quantity" data-delta="-1"><i class="fa-solid fa-minus" inert></i></a>{{/if}} ×{{c.quantity}} {{#if @root.editable}}<a data-action="quantity" data-delta="1"><i class="fa-solid fa-plus" inert></i></a>{{/if}}</span>{{/if}}
+        <span class="row-cost">{{c.cost}} BP</span>
+        <span class="row-effect hint">{{c.effect}}</span>
+        {{#if @root.editable}}<a class="row-delete" data-action="deleteItem"><i class="fa-solid fa-trash" inert></i></a>{{/if}}
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+  {{/each}}
+</section>

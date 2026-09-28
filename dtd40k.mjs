@@ -29,6 +29,11 @@ import { DeityData } from "./module/data/deity-data.mjs";
 import { DeitySheet } from "./module/apps/deity-sheet.mjs";
 import { VehicleComponentSheet } from "./module/apps/vehicle-component-sheet.mjs";
 import { ShipComponentSheet } from "./module/apps/ship-component-sheet.mjs";
+import { ShipSheet } from "./module/apps/ship-sheet.mjs";
+import { SquadronSheet } from "./module/apps/squadron-sheet.mjs";
+import { applyShipDamage, boardingRound, evasive as shipEvasive, rollShipDamage, undoShipDamage } from "./module/documents/ship-combat-service.mjs";
+import { newScene as newShipScene } from "./module/documents/ship-service.mjs";
+import { warpStep } from "./module/documents/warp-service.mjs";
 import { VehicleSheet } from "./module/apps/vehicle-sheet.mjs";
 import { allVehicles, controlTest, evasive, explode, newScene as newVehicleScene, rollOutOfControl, vehicleOfCard } from "./module/documents/vehicle-service.mjs";
 import { markObstacle, rollChaseRound, startChaseFromCanvas } from "./module/documents/chase-service.mjs";
@@ -163,6 +168,18 @@ Hooks.once("init", () => {
     label: "DTD.Sheet.Vehicle"
   });
 
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Actor, "dtd40k", ShipSheet, {
+    types: ["ship"],
+    makeDefault: true,
+    label: "DTD.Sheet.Ship"
+  });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Actor, "dtd40k", SquadronSheet, {
+    types: ["squadron"],
+    makeDefault: true,
+    label: "DTD.Sheet.Squadron"
+  });
+
   foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", ShipComponentSheet, {
     types: ["shipComponent"],
     makeDefault: true,
@@ -234,6 +251,13 @@ const CHAT_ACTIONS = {
     if (vehicle && game.user.isGM) await explode(vehicle);
   },
   chaseRound: (message) => rollChaseRound(message),
+  // Ships (spec 014): ship damage and its Apply, Evasive Manoeuvers, undo, boarding rounds, Warp steps.
+  shipDamage: (message) => rollShipDamage(message),
+  shipApply: (message) => applyShipDamage(message),
+  shipEvasive: (message) => shipEvasive(message),
+  shipUndo: (message) => undoShipDamage(message),
+  boardingRound: (message) => boardingRound(message),
+  warpStep: (message) => warpStep(message),
   chaseObstacle: (message, data) => markObstacle(message, data.uuid)
 };
 Hooks.on("renderChatMessageHTML", (message, html) => {
@@ -252,6 +276,7 @@ Hooks.once("ready", () => {
     if (!message) return;
     if (action === "applyDamage") await applyDamage(message, payload.tokenUuids);
     if (action === "martialEffects") await applyAttackEffects(message);
+    if (action === "shipApply") await applyShipDamage(message, payload.targetUuid);
     if (action === "markSocial") await message.setFlag("dtd40k", "social", { ...message.getFlag("dtd40k", "social"), resolved: payload.resolved });
   });
 });
@@ -262,6 +287,8 @@ Hooks.on("deleteCombat", async (combat) => {
   for (const actor of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "character"))) await newScene(actor);
   // Vehicles: wounds in the scene and round-based conditions reset (spec 013).
   for (const vehicle of allVehicles()) await newVehicleScene(vehicle);
+  // Ships: temporary Crew, committed Crew and this round's effects end (spec 014).
+  for (const ship of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "ship"))) await newShipScene(ship);
 });
 // The GM starts a chase with the controlled and targeted tokens (spec 013, FR-011).
 Hooks.on("getSceneControlButtons", (controls) => {

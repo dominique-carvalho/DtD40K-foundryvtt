@@ -2035,31 +2035,31 @@
 
 /* ---------- Vehicles and chases (spec 013) ---------- */
 
-.dtd40k.actor.vehicle .window-content {
+.dtd40k.actor:is(.vehicle, .ship) .window-content {
   padding: 0 0.5rem 0.5rem;
   color: var(--dtd-text);
 }
 
-.dtd40k.actor.vehicle .vehicle-header {
+.dtd40k.actor:is(.vehicle, .ship) .vehicle-header {
   flex-direction: row;
   align-items: center;
   gap: 0.75rem;
 }
 
-.dtd40k.actor.vehicle .vehicle-header .identity-text {
+.dtd40k.actor:is(.vehicle, .ship) .vehicle-header .identity-text {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.dtd40k.actor.vehicle .vehicle-header .item-name {
+.dtd40k.actor:is(.vehicle, .ship) .vehicle-header .item-name {
   margin: 0;
   font-size: 1.4rem;
   height: auto;
 }
 
-.dtd40k.actor.vehicle .identity-line {
+.dtd40k.actor:is(.vehicle, .ship) .identity-line {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -2072,39 +2072,39 @@
   gap: 0.4rem;
 }
 
-.dtd40k.actor.vehicle .tab {
+.dtd40k.actor:is(.vehicle, .ship) .tab {
   display: none;
   flex-direction: column;
   gap: 0.6rem;
   padding-top: 0.5rem;
 }
 
-.dtd40k.actor.vehicle .tab.active {
+.dtd40k.actor:is(.vehicle, .ship) .tab.active {
   display: flex;
 }
 
-.dtd40k.actor.vehicle dl.spell-stats {
+.dtd40k.actor:is(.vehicle, .ship) dl.spell-stats {
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: 0.25rem 0.75rem;
   margin: 0;
 }
 
-.dtd40k.actor.vehicle dl.spell-stats dt {
+.dtd40k.actor:is(.vehicle, .ship) dl.spell-stats dt {
   font-weight: bold;
   color: var(--dtd-text-muted);
 }
 
-.dtd40k.actor.vehicle dl.spell-stats dd {
+.dtd40k.actor:is(.vehicle, .ship) dl.spell-stats dd {
   margin: 0;
 }
 
-.dtd40k.actor.vehicle dd.over {
+.dtd40k.actor:is(.vehicle, .ship) dd.over {
   color: var(--dtd-hp);
   font-weight: bold;
 }
 
-.dtd40k.actor.vehicle input[type="number"] {
+.dtd40k.actor:is(.vehicle, .ship) input[type="number"] {
   width: 3.5rem;
 }
 
@@ -2213,4 +2213,33 @@
 
 .dtd40k .chase-table button.active {
   background: var(--dtd-accent);
+}
+
+/* ---------- Ships (spec 014) ---------- */
+
+.dtd40k .ship-department.used .pool-button {
+  opacity: 0.55;
+}
+
+.dtd40k .ship-department .section-title .feat-badge {
+  margin-left: 0.4rem;
+}
+
+.dtd40k.ship-fire-dialog .ship-fire-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dtd40k.ship-fire-dialog .ship-fire-row label {
+  flex: 1;
+}
+
+.dtd40k.ship-fire-dialog .ship-fire-row input[type="number"] {
+  width: 3.5rem;
+  flex: 0 0 3.5rem;
+}
+
+.dtd40k.actor.ship .tag {
+  margin-right: 0.3rem;
 }

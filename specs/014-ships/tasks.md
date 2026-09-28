@@ -52,40 +52,40 @@ quickstart.md
 
 ## Phase 4: User Story 2 — Montador (P2)
 
-- [ ] T015 [US2] `module/documents/ship-service.mjs`: `addComponent` (casco/escudo trocam; quantidade; arma com diálogo de tipo e montagem; avisos), `assignOfficer`/`clearOfficer`, `setUpgrade`/`setNonUniversal`
-- [ ] T016 [US2] `module/apps/ship-sheet.mjs` + `templates/actor/ship/*.hbs` (Resumo com stats, BP, slots e avisos; Componentes por categoria com armas e torpedos; Oficiais com drop de atores e dados mantidos; customização quando o casco é base); registrar
-- [ ] T017 [P] [US2] i18n e estilos
+- [X] T015 [US2] `module/documents/ship-service.mjs`: `addComponent` (casco/escudo trocam; quantidade; arma com diálogo de tipo e montagem; avisos), `assignOfficer`/`clearOfficer`, `setUpgrade`/`setNonUniversal`
+- [X] T016 [US2] `module/apps/ship-sheet.mjs` + `templates/actor/ship/*.hbs` (Resumo com stats, BP, slots e avisos; Componentes por categoria com armas e torpedos; Oficiais com drop de atores e dados mantidos; customização quando o casco é base); registrar
+- [X] T017 [P] [US2] i18n e estilos
 - [ ] T018 [US2] Validar quickstart 1–6 e registrar
 
 ---
 
 ## Phase 5: User Story 3 — Combate (P3)
 
-- [ ] T019 [US3] `module/documents/combat.mjs`: iniciativa de `ship` e `squadron`; `shipTurn` no Combatant; hooks de início de turno, fim de turno e rodada; `deleteCombat` → `newScene`
-- [ ] T020 [US3] `module/documents/ship-combat-service.mjs`: `shipAction` (turno, bloqueios, Crew, pool, efeitos das ações de Command/Manoeuver/Tactical/Engineering/Arcana), `module/apps/ship-action-dialog.mjs`, `templates/dialog/ship-*.hbs`
-- [ ] T021 [US3] Ataques: `fire` (Fire Everything, Snipe, Target Subsystem), `rollShipDamage`, `applyShipDamage` (escudo, Disruption, Multiphasic, Hull temporário, Hull, Crit Chart, destruição, Desfazer), `evasive`, `rollCrit`; `templates/chat/ship-*.hbs`; `CHAT_ACTIONS`
-- [ ] T022 [US3] `ram` e boarding por cartão (`startBoarding`, `boardingRound`)
-- [ ] T023 [US3] Aba Combate da ficha: Crew da rodada, escudo, Hull, SD, ações por departamento com o estado do turno, armas e torpedos, críticos e componentes desligados
-- [ ] T024 [P] [US3] i18n e estilos
+- [X] T019 [US3] `module/documents/combat.mjs`: iniciativa de `ship` e `squadron`; `shipTurn` no Combatant; hooks de início de turno, fim de turno e rodada; `deleteCombat` → `newScene`
+- [X] T020 [US3] `module/documents/ship-combat-service.mjs`: `shipAction` (turno, bloqueios, Crew, pool, efeitos das ações de Command/Manoeuver/Tactical/Engineering/Arcana), `module/apps/ship-action-dialog.mjs`, `templates/dialog/ship-*.hbs`
+- [X] T021 [US3] Ataques: `fire` (Fire Everything, Snipe, Target Subsystem), `rollShipDamage`, `applyShipDamage` (escudo, Disruption, Multiphasic, Hull temporário, Hull, Crit Chart, destruição, Desfazer), `evasive`, `rollCrit`; `templates/chat/ship-*.hbs`; `CHAT_ACTIONS`
+- [X] T022 [US3] `ram` e boarding por cartão (`startBoarding`, `boardingRound`)
+- [X] T023 [US3] Aba Combate da ficha: Crew da rodada, escudo, Hull, SD, ações por departamento com o estado do turno, armas e torpedos, críticos e componentes desligados
+- [X] T024 [P] [US3] i18n e estilos
 - [ ] T025 [US3] Validar quickstart 7–16 e registrar
 
 ---
 
 ## Phase 6: User Story 4 — Warp, caças, bombardeio, hangar e reparo (P4)
 
-- [ ] T026 [US4] `module/documents/warp-service.mjs` + `templates/chat/warp-card.hbs`: requisitos, passos 1–3, encontros e encontros perigosos; `bombard`
-- [ ] T027 [US4] `module/documents/squadron-service.mjs` + `module/apps/squadron-sheet.mjs`: deploy, ataque, dano de acerto (1 caça), docking
-- [ ] T028 [US4] Hangar (`addToHangar`/`removeFromHangar`, drop de veículo), `fieldRepair`, `portService`; aba Viagem da ficha
-- [ ] T029 [P] [US4] i18n e estilos
+- [X] T026 [US4] `module/documents/warp-service.mjs` + `templates/chat/warp-card.hbs`: requisitos, passos 1–3, encontros e encontros perigosos; `bombard`
+- [X] T027 [US4] `module/documents/squadron-service.mjs` + `module/apps/squadron-sheet.mjs`: deploy, ataque, dano de acerto (1 caça), docking
+- [X] T028 [US4] Hangar (`addToHangar`/`removeFromHangar`, drop de veículo), `fieldRepair`, `portService`; aba Viagem da ficha
+- [X] T029 [P] [US4] i18n e estilos
 - [ ] T030 [US4] Validar quickstart 17–21 e registrar
 
 ---
 
 ## Phase 7: Polish
 
-- [ ] T031 [P] Atualizar `docs/analise-dtd.md` §18, `docs/pendencias.md` (Naves feitas; Crew Quality e demais lacunas) e o `README.md`
-- [ ] T032 `npm run lint` e `npm test`
-- [ ] T033 `graphify update .`
+- [X] T031 [P] Atualizar `docs/analise-dtd.md` §18, `docs/pendencias.md` (Naves feitas; Crew Quality e demais lacunas) e o `README.md`
+- [X] T032 `npm run lint` e `npm test`
+- [X] T033 `graphify update .`
 
 ## Dependencies
 

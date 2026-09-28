@@ -1,0 +1,22 @@
+<div class="dtd40k roll-card damage-card ship-damage-card">
+  <header class="roll-card-header">
+    <h3 class="roll-card-title">{{label}}</h3>
+    <span class="roll-card-formula">{{formula}}</span>
+  </header>
+  {{#if notes.length}}<p class="roll-card-note">{{#each notes as |note|}}{{note}}{{#unless @last}} · {{/unless}}{{/each}}</p>{{/if}}
+  <ol class="roll-card-dice">
+    {{#each dice as |die|}}
+    <li class="roll-die{{#if die.kept}} kept{{else}} dropped{{/if}}{{#if die.exploded}} exploded{{/if}}">
+      {{#if die.exploded}}<span class="chain">{{die.chainText}} =</span>{{/if}}
+      <span class="die-total">{{die.total}}</span>
+    </li>
+    {{/each}}
+  </ol>
+  <div class="roll-card-total">
+    <span>{{localize "DTD.Attack.Damage"}}</span>
+    <strong>{{total}}</strong>
+    <span class="roll-card-tn">Dis {{dis}} · Crit {{crit}}</span>
+  </div>
+  {{#if bypass}}<p class="roll-card-note">{{localize "DTD.Ship.BypassShield"}}</p>{{/if}}
+  <button type="button" data-dtd-action="shipApply" data-tooltip="{{localize "DTD.Ship.ApplyHint"}}"><i class="fa-solid fa-shuttle-space" inert></i> {{localize "DTD.Ship.Apply"}}</button>
+</div>

@@ -1,0 +1,37 @@
+<section class="tab ship-travel {{tabs.travel.cssClass}}" data-group="primary" data-tab="travel">
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Ship.WarpVoyage"}}</h3>
+    <div class="profile-grid">
+      <label>{{localize "DTD.Ship.Distance"}}<select class="warp-distance">{{#each distances as |d|}}<option value="{{d.key}}" {{#if (eq d.key "moderate")}}selected{{/if}}>{{d.label}}</option>{{/each}}</select></label>
+      <label>{{localize "DTD.Ship.PortalRelay"}}<input type="checkbox" class="warp-relay"></label>
+    </div>
+    <a class="pool-button" data-action="warp"><i class="fa-solid fa-hurricane" inert></i> {{localize "DTD.Ship.StartVoyage"}}</a>
+  </div>
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Ship.Operations"}}</h3>
+    <div class="action-buttons">
+      <a class="pool-button" data-action="bombard"><i class="fa-solid fa-meteor" inert></i> {{localize "DTD.Ship.Bombard"}}</a>
+      {{#if fighterBay}}<a class="pool-button" data-action="shipAction" data-key="deployFightercraft"><i class="fa-solid fa-jet-fighter" inert></i> {{localize "DTD.Ship.DeployFighters"}}</a>{{/if}}
+      <a class="pool-button" data-action="fieldRepair"><i class="fa-solid fa-wrench" inert></i> {{localize "DTD.Ship.FieldRepair"}}</a>
+    </div>
+    {{#if system.state.suppliesUsed}}<p class="hint">{{localize "DTD.Ship.SuppliesUsed"}}</p>{{/if}}
+    {{#if isGM}}
+    <div class="action-buttons gm">
+      <a class="pool-button" data-action="port" data-kind="fullRepair"><i class="fa-solid fa-anchor" inert></i> {{localize "DTD.Ship.Port.fullRepair"}}</a>
+      <a class="pool-button" data-action="port" data-kind="recruitCrew"><i class="fa-solid fa-users" inert></i> {{localize "DTD.Ship.Port.recruitCrew"}}</a>
+      <a class="pool-button" data-action="port" data-kind="resupply"><i class="fa-solid fa-boxes-stacked" inert></i> {{localize "DTD.Ship.Port.resupply"}}</a>
+    </div>
+    <p class="hint">{{localize "DTD.Ship.PortTime"}}</p>
+    {{/if}}
+  </div>
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Ship.Hangar"}}</h3>
+    <p class="hint">{{localize "DTD.Ship.HangarHint"}}</p>
+    <ol class="vehicle-rows">
+      {{#each hangar as |v|}}
+      <li class="vehicle-row"><img class="crew-img" src="{{v.img}}" alt="{{v.name}}"><a class="row-name" data-action="openActor" data-uuid="{{v.uuid}}">{{v.name}}</a>
+        {{#if @root.editable}}<a class="row-delete" data-action="removeVehicle" data-uuid="{{v.uuid}}"><i class="fa-solid fa-xmark" inert></i></a>{{/if}}</li>
+      {{else}}<li class="hint">{{localize "DTD.Ship.HangarEmpty"}}</li>{{/each}}
+    </ol>
+  </div>
+</section>

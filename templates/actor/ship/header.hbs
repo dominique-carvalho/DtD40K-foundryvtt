@@ -1,0 +1,18 @@
+<header class="sheet-header vehicle-header ship-header">
+  <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}" {{#if editable}}data-action="editImage"{{/if}}>
+  <div class="identity-text">
+    {{#if editable}}<input class="item-name" type="text" name="name" value="{{actor.name}}">{{else}}<h1 class="item-name">{{actor.name}}</h1>{{/if}}
+    <div class="identity-line">
+      <span>{{localize "TYPES.Actor.ship"}}</span>
+      {{#if hullItem}}<span>{{hullItem.name}}{{#if hullClass}} · {{hullClass}}{{/if}}</span>{{/if}}
+      {{#if system.state.destroyed}}<span class="feat-badge warning">{{localize "DTD.Ship.Destroyed"}}</span>{{/if}}
+      {{#if system.shield.collapsed}}<span class="feat-badge warning">{{localize "DTD.Ship.ShieldDown"}}</span>{{/if}}
+    </div>
+  </div>
+  <div class="vehicle-header-stats">
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Ship.HullStrength"}}</span><span class="stat-value">{{system.hull.value}}{{#if system.hull.temp}}+{{system.hull.temp}}{{/if}} / {{system.hull.max}}</span></div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Ship.Category.shield"}}</span><span class="stat-value">{{#if layers}}{{layers.length}}×{{else}}{{system.shield.value}} / {{system.shield.max}}{{/if}}</span></div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Ship.Crew"}}</span><span class="stat-value">{{system.crew.available}} / {{system.crew.max}}</span></div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.staticDefense"}}</span><span class="stat-value">{{system.derived.staticDefense}}</span></div>
+  </div>
+</header>

@@ -1,0 +1,53 @@
+<section class="tab ship-summary {{tabs.summary.cssClass}}" data-group="primary" data-tab="summary">
+  {{#each warnings as |w|}}<p class="notification warning">{{w}}</p>{{/each}}
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Ship.Stats"}}</h3>
+    <dl class="spell-stats">
+      <dt>{{localize "DTD.Ship.HullClassLabel"}}</dt><dd>{{#if hullClass}}{{hullClass}}{{else}}—{{/if}}</dd>
+      <dt>{{localize "DTD.Ship.Crew"}}</dt><dd>{{system.stats.crew}}{{#if system.crew.lost}} (−{{system.crew.lost}}){{/if}}</dd>
+      <dt>{{localize "DTD.Ship.HullStrength"}}</dt><dd>{{system.stats.hullStrength}}</dd>
+      <dt>{{localize "DTD.Ship.Maneuverability"}}</dt><dd>{{system.stats.maneuverability}}</dd>
+      <dt>{{localize "DTD.Ship.Acceleration"}}</dt><dd>{{system.stats.acceleration}}</dd>
+      <dt>{{localize "DTD.Ship.Speed"}}</dt><dd>{{system.stats.speed}} VU</dd>
+      <dt>{{localize "DTD.Ship.Sensors"}}</dt><dd>{{system.stats.sensors}}</dd>
+      <dt>{{localize "DTD.Derived.staticDefense"}}</dt><dd>{{system.derived.staticDefense}}</dd>
+      <dt>{{localize "DTD.Sheet.Initiative"}}</dt><dd>1d10 + {{system.initiativeBonus}}</dd>
+      <dt>{{localize "DTD.Ship.Category.shield"}}</dt><dd>{{#if system.shield.type}}{{localize (concat "DTD.Ship.ShieldType." system.shield.type)}} {{system.shield.max}}{{#if system.shield.layerCount}} × {{system.shield.layerCount}}{{/if}} / {{system.shield.regen}}{{else}}—{{/if}}</dd>
+    </dl>
+  </div>
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Ship.Build"}}</h3>
+    <div class="profile-grid">
+      <label>{{localize "DTD.Ship.Holdings"}}{{#if editable}}<select name="system.budget.holdings" data-dtype="Number">{{selectOptions budgetOptions selected=system.budget.holdings}}</select>{{else}}<b>{{system.budget.holdings}}</b>{{/if}}</label>
+    </div>
+    <dl class="spell-stats">
+      <dt>BP</dt><dd class="{{#if (gt system.bp.spent system.bp.budget)}}over{{/if}}">{{system.bp.spent}} / {{system.bp.budget}}{{#if (ne system.printed.cost null)}} <span class="hint">({{localize "DTD.Ship.PrintedCost"}} {{system.printed.cost}})</span>{{/if}}</dd>
+      {{#each consoleSlots as |s|}}<dt>{{s.label}}</dt><dd class="{{#if (gt s.used s.max)}}over{{/if}}">{{s.used}} / {{s.max}}</dd>{{/each}}
+      <dt>{{localize "DTD.Ship.Mount.forward"}}</dt><dd class="{{#if (gt system.slots.weapons.forward.used system.slots.weapons.forward.max)}}over{{/if}}">{{system.slots.weapons.forward.used}} / {{system.slots.weapons.forward.max}}</dd>
+      <dt>{{localize "DTD.Ship.Mount.rear"}}</dt><dd class="{{#if (gt system.slots.weapons.rear.used system.slots.weapons.rear.max)}}over{{/if}}">{{system.slots.weapons.rear.used}} / {{system.slots.weapons.rear.max}}</dd>
+    </dl>
+  </div>
+  {{#if custom}}
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Ship.Customization"}} <span class="hint">{{system.custom.cp.spent}} / {{system.custom.cp.max}} CP</span></h3>
+    <ol class="vehicle-rows">
+      {{#each custom as |c|}}
+      <li class="vehicle-row">
+        <span class="row-name">{{c.label}}</span>
+        <span class="row-qty">{{#if @root.editable}}<a data-action="upgrade" data-key="{{c.key}}" data-delta="-1"><i class="fa-solid fa-minus" inert></i></a>{{/if}} ×{{c.count}} {{#if @root.editable}}<a data-action="upgrade" data-key="{{c.key}}" data-delta="1"><i class="fa-solid fa-plus" inert></i></a>{{/if}}</span>
+        <span class="row-effect hint">{{localize "DTD.Ship.UpgradeLimits" cp=c.cp limit=c.limit total=c.total}}</span>
+      </li>
+      {{/each}}
+    </ol>
+    <p class="hint">{{localize "DTD.Ship.SplitHint" n=system.stats.consoles.nonUniversal}}</p>
+    <div class="profile-grid">
+      {{#each split as |s|}}<label>{{s.label}}<input type="number" class="nonuniversal-split" data-type="{{s.key}}" value="{{s.value}}" min="0" {{#unless @root.editable}}disabled{{/unless}}></label>{{/each}}
+    </div>
+  </div>
+  {{/if}}
+  <div class="spell-section">
+    {{#if editable}}
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.description}}}</div>{{/if}}
+  </div>
+</section>

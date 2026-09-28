@@ -24,6 +24,16 @@ export async function postShipCard(ship, { title, subtitle = "", lines = [], but
   return ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor: ship }), content, flags: { dtd40k: { ship: { uuid: ship.uuid }, ...flags } } });
 }
 
+/**
+ * Keep a ship at full Hull full when a purchase changes its maximum (a customization, Hardened Armor).
+ * @param {Actor} ship
+ * @param {number} oldMax
+ */
+async function keepFullHull(ship, oldMax) {
+  const { value, max } = ship.system.hull;
+  if (value === oldMax && max !== oldMax) await ship.update({ "system.hull.value": max });
+}
+
 /** Notify the build warnings of the ship (FR-004): never blocks. */
 export function warnBuild(ship) {
   for (const key of ship.system.warnings) {
@@ -47,7 +57,7 @@ export function officerActor(uuid) {
 
 /**
  * Dice kept for a department (p. 403): the dots of the officer holding its post in the skill, 4 for an NPC officer,
- * 1 when the post is empty.
+ * 1 when the post is empty — except on the book's NPC ships, which count as fully officered (p. 414).
  * @param {Actor} ship
  * @param {string} department  SHIP_DEPARTMENTS key
  * @param {string} [skill]  defaults to the department's skill
@@ -57,7 +67,7 @@ export function officerKept(ship, department, skill) {
   const post = SHIP_DEPARTMENTS[department]?.post;
   const item = components(ship, "officer").find((i) => i.system.officer.post === post);
   const key = skill ?? SHIP_DEPARTMENTS[department]?.skill;
-  if (!item) return { kept: 1, name: "", actor: null, empty: true };
+  if (!item) return ship.system.printed.cost !== null ? { kept: SHIP_NPC_KEPT, name: "", actor: null, empty: false } : { kept: 1, name: "", actor: null, empty: true };
   const actor = officerActor(item.system.officer.actorUuid);
   const kept = actor ? actor.system.skills?.[key]?.value ?? 0 : SHIP_NPC_KEPT;
   return { kept: Math.max(1, kept), name: actor?.name ?? item.name, actor, empty: false };
@@ -104,6 +114,7 @@ async function promptWeapon(data) {
 export async function addComponent(ship, data) {
   if (!ship.isOwner) return null;
   const c = data.system.category;
+  const oldMax = ship.system.hull.max;
   data = foundry.utils.deepClone(data);
   let item = null;
   if (c === "weaponType") {
@@ -138,6 +149,7 @@ export async function addComponent(ship, data) {
   if (!item) [item] = await ship.createEmbeddedDocuments("Item", [data]);
   if (c === "hull" || c === "customHull") await ship.update({ "system.hull.value": ship.system.hull.max, "system.hull.temp": 0 });
   if (c === "shield") await resetShield(ship);
+  if (c === "console") await keepFullHull(ship, oldMax);
   warnBuild(ship);
   return item;
 }
@@ -173,7 +185,9 @@ export async function assignOfficer(ship, itemId, actor) {
 export async function setUpgrade(ship, key, delta) {
   if (!CUSTOMIZATION[key] || !ship.isOwner) return;
   const n = Math.max(0, (ship.system.custom.upgrades[key] ?? 0) + delta);
+  const oldMax = ship.system.hull.max;
   await ship.update({ [`system.custom.upgrades.${key}`]: n });
+  await keepFullHull(ship, oldMax);
   warnBuild(ship);
 }
 

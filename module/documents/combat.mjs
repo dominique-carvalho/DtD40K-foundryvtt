@@ -40,7 +40,7 @@ export class DtdCombat extends Combat {
     // Vehicles this combatant pilots lose their Momentum without a Move or Punch It (spec 013, p. 360).
     await endOfPilotTurn(this, combatant.actor);
     // Ships announce a missing Manoeuver and drift when adrift (spec 014).
-    await endOfShipTurn(combatant);
+    await endOfShipTurn(combatant, context);
   }
 
   /** Action effects and expired conditions end; Surprised/Stunned are announced. @override */

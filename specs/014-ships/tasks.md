@@ -55,7 +55,7 @@ quickstart.md
 - [X] T015 [US2] `module/documents/ship-service.mjs`: `addComponent` (casco/escudo trocam; quantidade; arma com diálogo de tipo e montagem; avisos), `assignOfficer`/`clearOfficer`, `setUpgrade`/`setNonUniversal`
 - [X] T016 [US2] `module/apps/ship-sheet.mjs` + `templates/actor/ship/*.hbs` (Resumo com stats, BP, slots e avisos; Componentes por categoria com armas e torpedos; Oficiais com drop de atores e dados mantidos; customização quando o casco é base); registrar
 - [X] T017 [P] [US2] i18n e estilos
-- [ ] T018 [US2] Validar quickstart 1–6 e registrar
+- [X] T018 [US2] Validar quickstart 1–6 e registrar
 
 ---
 
@@ -67,7 +67,7 @@ quickstart.md
 - [X] T022 [US3] `ram` e boarding por cartão (`startBoarding`, `boardingRound`)
 - [X] T023 [US3] Aba Combate da ficha: Crew da rodada, escudo, Hull, SD, ações por departamento com o estado do turno, armas e torpedos, críticos e componentes desligados
 - [X] T024 [P] [US3] i18n e estilos
-- [ ] T025 [US3] Validar quickstart 7–16 e registrar
+- [X] T025 [US3] Validar quickstart 7–16 e registrar
 
 ---
 
@@ -77,7 +77,7 @@ quickstart.md
 - [X] T027 [US4] `module/documents/squadron-service.mjs` + `module/apps/squadron-sheet.mjs`: deploy, ataque, dano de acerto (1 caça), docking
 - [X] T028 [US4] Hangar (`addToHangar`/`removeFromHangar`, drop de veículo), `fieldRepair`, `portService`; aba Viagem da ficha
 - [X] T029 [P] [US4] i18n e estilos
-- [ ] T030 [US4] Validar quickstart 17–21 e registrar
+- [X] T030 [US4] Validar quickstart 17–21 e registrar
 
 ---
 

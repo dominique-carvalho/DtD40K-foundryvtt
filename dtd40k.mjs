@@ -204,6 +204,12 @@ Hooks.once("init", () => {
 function refreshCombatants(combat) {
   for (const combatant of combat.combatants) {
     const actor = combatant.actor;
+    // Ships: the Crew free this round depends on the round (spec 014).
+    if (actor?.type === "ship") {
+      actor.reset();
+      if (actor.sheet?.rendered) actor.sheet.render();
+      continue;
+    }
     if (actor?.type !== "character" && actor?.type !== "npc") continue;
     // Exaltation spending depends on the round (004); the Combat tab shows the turn state (008).
     if (actor.items.some((item) => item.type === "exaltation")) actor.reset();
@@ -215,6 +221,10 @@ Hooks.on("updateCombat", (combat, changes) => {
   if ("round" in changes || "turn" in changes) refreshCombatants(combat);
 });
 Hooks.on("combatStart", refreshCombatants);
+// Actors are prepared before the combat exists: recompute the ships' Crew of this round once the world is ready.
+Hooks.once("ready", () => {
+  if (game.combat) refreshCombatants(game.combat);
+});
 
 // Buttons of the attack and acquisition cards (spec 007, research R7/R9).
 const CHAT_ACTIONS = {

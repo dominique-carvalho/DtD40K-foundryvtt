@@ -49,9 +49,12 @@ export function shipCombatant(ship) {
   return combat.combatants.find((c) => c.actor === ship || (c.actorId === ship.id && c.token?.actorLink)) ?? null;
 }
 
-/** The ship's turn state this round. */
-export function shipTurn(combatant) {
-  const round = combatant?.combat?.round ?? 0;
+/**
+ * The ship's turn state in a round (the current one by default).
+ * @param {Combatant} combatant
+ * @param {number} [round]
+ */
+export function shipTurn(combatant, round = combatant?.combat?.round ?? 0) {
   const saved = combatant?.getFlag("dtd40k", "shipTurn");
   return saved?.round === round ? { reactions: 0, departments: [], ...saved } : { round, manoeuver: false, departments: [], reactions: 0 };
 }
@@ -78,7 +81,7 @@ export async function takeShipAction(ship, action) {
   const b = s.blocked;
   const blocked = (action.department === "command" && b.command) || (action.key.startsWith("overcharge") && b.overcharge)
     || (action.key === "adjustHeading" && b.adjustHeading) || (action.key === "evasiveManoeuvers" && b.evasiveManoeuvers)
-    || (["fireEverything", "snipe", "targetSubsystem"].includes(action.key) && b.weapons) || (action.department === "manoeuver" && b.manoeuver && action.key !== "move");
+    || (["fireEverything", "snipe", "targetSubsystem"].includes(action.key) && b.weapons) || (action.department === "manoeuver" && b.manoeuver);
   if (blocked && !(await refuse("blocked"))) return false;
   const combatant = shipCombatant(ship);
   if (!combatant) return true;
@@ -524,7 +527,8 @@ export async function rollShipDamage(message) {
     const pool = { rolled: w.profile.dam.rolled + (overcharge?.rolled ?? 0) + (capacitor && !w.torpedo ? 1 : 0), kept: w.profile.dam.kept + (overcharge?.kept ?? 0), flat: 0 };
     const notes = [overcharge && localize("DTD.Ship.OverchargeApplied"), capacitor && !w.torpedo && localize("DTD.Ship.CapacitorApplied")].filter(Boolean);
     overcharge = null;
-    await postShipDamage(ship, { label: format("DTD.Ship.DamageOf", { weapon: w.name }), pool, dis: w.profile.dis, crit: w.profile.crit, targetUuid: attack.targetUuid, subsystemId: attack.subsystemId, notes });
+    // Target Subsystem ignores the shields (p. 405).
+    await postShipDamage(ship, { label: format("DTD.Ship.DamageOf", { weapon: w.name }), pool, dis: w.profile.dis, crit: w.profile.crit, targetUuid: attack.targetUuid, subsystemId: attack.subsystemId, bypass: Boolean(attack.subsystemId), notes });
   }
 }
 
@@ -779,7 +783,8 @@ export async function boardingRound(message) {
   const defCrew = Math.min(10, defender.system.crew.max - defender.system.crew.deployed) + servitors;
   const security = officerOf(defender, "chiefOfSecurity");
   const atkKept = officerKept(attacker, "tactical", "weaponry").kept;
-  const defKept = security ? officerKept(defender, "tactical", "weaponry").kept : 1;
+  // The Chief of Security leads the defense (+2 raises); without one, the Tactical post.
+  const defKept = security?.actor ? Math.max(1, security.actor.system.skills?.weaponry?.value ?? 0) : security ? 4 : officerKept(defender, "tactical", "weaponry").kept;
   const roll = (crew, kept, flat) => runTest({ base: { rolled: Math.max(1, Math.min(10, crew)), kept, flat }, tn: null, rng }).total;
   const atk = roll(atkCrew, atkKept, 0);
   const def = roll(Math.min(10, defCrew), defKept, security ? 10 : 0);
@@ -837,11 +842,12 @@ export async function startOfShipTurn(combat, combatant) {
 /**
  * End of a ship's turn: a missing Manoeuver is announced (it is mandatory); an adrift ship drifts half its Speed.
  * @param {Combatant} combatant
+ * @param {{round?: number}} [context]  the turn that just ended (the combat may already be in the next round)
  */
-export async function endOfShipTurn(combatant) {
+export async function endOfShipTurn(combatant, context = {}) {
   const ship = combatant?.actor;
   if (ship?.type !== "ship" || ship.system.state.destroyed) return;
-  const turn = shipTurn(combatant);
+  const turn = shipTurn(combatant, context.round ?? combatant.combat?.round ?? 0);
   const lines = [];
   if (ship.system.blocked.manoeuver) lines.push({ text: format("DTD.Ship.Drifting", { n: Math.floor(ship.system.stats.speed / 2) }) });
   else if (!turn.manoeuver) lines.push({ warning: true, text: localize("DTD.Ship.NoManoeuver") });

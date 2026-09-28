@@ -112,9 +112,11 @@ const add = (pool, [rolled, kept], note) => {
  * @param {boolean} [input.focus]    Weapon Focus for this weapon (+2k0, p. 197)
  * @param {{range?: string, aim?: number, mode?: "single"|"auto", braced?: boolean, oneHanded?: boolean,
  *   thrown?: boolean}} [input.options]
+ * @param {string[]} [input.mods]  mods of a custom weapon (spec 015): Red-Dot Sight +1k0 on single shots, Motion
+ *   Predict +1k0 on full auto
  * @returns {{rolled: number, kept: number, requiredRaises: number, autoAllowed: boolean, notes: string[]}}
  */
-export function attackPool({ weapon, skill, level, proficient, focus = false, options = {} }) {
+export function attackPool({ weapon, skill, level, proficient, focus = false, options = {}, mods = [] }) {
   const { range = "normal", aim = 0, mode = "single", braced = false, oneHanded = false, thrown = false } = options;
   const qualities = effectiveQualities(weapon);
   const melee = isMeleeAttack(weapon, { thrown });
@@ -152,6 +154,8 @@ export function attackPool({ weapon, skill, level, proficient, focus = false, op
     if (qualities.accurate) add(pool, [1, 0], "accurate");
   }
   if (qualities.defensive) add(pool, [-2, 0], "defensive");
+  if (!melee && mods.includes("redDotSight") && mode !== "auto") add(pool, [1, 0], "redDotSight");
+  if (!melee && mods.includes("motionPredict") && mode === "auto" && pool.autoAllowed) add(pool, [1, 0], "motionPredict");
 
   return pool;
 }
@@ -169,7 +173,7 @@ export function attackPool({ weapon, skill, level, proficient, focus = false, op
  * @returns {{rolled: number, kept: number, flat: number, explodeOn: number, rerollBelow: number, pen: number,
  *   type: string, notes: string[]}}
  */
-export function damagePool({ weapon, str, options = {}, extraHits = 0, specialization = false, raises = 0 }) {
+export function damagePool({ weapon, str, options = {}, extraHits = 0, specialization = false, raises = 0, mods = [] }) {
   const { thrown = false, mode = "single", aim = 0, range = "normal" } = options;
   const qualities = effectiveQualities(weapon);
   const melee = isMeleeAttack(weapon, { thrown });
@@ -206,6 +210,12 @@ export function damagePool({ weapon, str, options = {}, extraHits = 0, specializ
   if (qualities.razorSharp && raises >= 2) {
     pool.pen *= 2;
     pool.notes.push("razorSharp");
+  }
+  // Custom weapon mods (spec 015): Breacher +1k0 at short range or closer; Nonlethal dice never explode.
+  if (mods.includes("breacher") && (range === "short" || range === "pointBlank")) add(pool, [1, 0], "breacher");
+  if (mods.includes("nonlethal")) {
+    pool.explodeOn = 11;
+    pool.notes.push("nonlethal");
   }
   return pool;
 }

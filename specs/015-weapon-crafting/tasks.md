@@ -23,11 +23,11 @@ quickstart.md
 
 ## Phase 1: Foundational
 
-- [ ] T001 [P] Em `tests/unit/weapon-creation.test.mjs`: os casos de [contracts/rules-api.md](contracts/rules-api.md) para `availability`, `compatibleMods`, `modLimit`, `buildWeapon`, `reloadStep`, `unstableDamage`; contagens das tabelas (5, 8 + 10, 46 + 22, 12); mapa tipo → grupo/proficiências conferido contra `src/packs/equipment`
-- [ ] T002 Script do scratchpad `gen-weapon-creation.mjs`: inventário → constantes de `module/rules/weapon-creation.mjs` (notas em texto próprio, 6-gramas = 0); escrever as funções do contrato; fazer T001 passar
-- [ ] T003 [P] Em `tests/unit/weapon.test.mjs`: `attackPool` com Red-Dot/Motion Predict e `damagePool` com Breacher/Nonlethal
-- [ ] T004 Estender `module/rules/weapon.mjs` (`mods` no attackPool/damagePool) e `module/data/weapon-data.mjs` (`system.custom`); fazer T003 passar
-- [ ] T005 Rodar `npm test` e `npx eslint .`
+- [X] T001 [P] Em `tests/unit/weapon-creation.test.mjs`: os casos de [contracts/rules-api.md](contracts/rules-api.md) para `availability`, `compatibleMods`, `modLimit`, `buildWeapon`, `reloadStep`, `unstableDamage`; contagens das tabelas (5, 8 + 10, 46 + 22, 12); mapa tipo → grupo/proficiências conferido contra `src/packs/equipment`
+- [X] T002 Script do scratchpad `gen-weapon-creation.mjs`: inventário → constantes de `module/rules/weapon-creation.mjs` (notas em texto próprio, 6-gramas = 0); escrever as funções do contrato; fazer T001 passar
+- [X] T003 [P] Em `tests/unit/weapon.test.mjs`: `attackPool` com Red-Dot/Motion Predict e `damagePool` com Breacher/Nonlethal
+- [X] T004 Estender `module/rules/weapon.mjs` (`mods` no attackPool/damagePool) e `module/data/weapon-data.mjs` (`system.custom`); fazer T003 passar
+- [X] T005 Rodar `npm test` e `npx eslint .`
 
 ---
 

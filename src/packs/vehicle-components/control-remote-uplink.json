@@ -1,7 +1,7 @@
 {
   "name": "Remote Uplink",
   "type": "vehicleComponent",
-  "img": "icons/svg/terminal.svg",
+  "img": "icons/svg/eye.svg",
   "system": {
     "description": "<p>Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.</p>",
     "source": {
@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.",
     "automation": {
       "key": "remoteUplink",

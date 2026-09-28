@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Needs Environmental Seals. Choose Subterranean (burrow through soil and rock, max Momentum 5, very hard materials may block it at SM call) or Submarine (move underwater at full top speed).",
     "automation": {
       "key": "diverDown"

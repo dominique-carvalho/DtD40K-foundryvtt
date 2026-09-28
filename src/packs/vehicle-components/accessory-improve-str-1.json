@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Adds 1 Strength to the arms, up to 10.",
     "automation": {
       "key": "improveStr",

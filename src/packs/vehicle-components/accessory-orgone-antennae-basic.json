@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "The pilot can channel spells through the vehicle; self-targeted spell bonuses apply to the vehicle where sensible.",
     "automation": {
       "key": "orgoneBasic"

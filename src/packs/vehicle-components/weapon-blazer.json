@@ -1,7 +1,7 @@
 {
   "name": "Blazer",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Binary laser made of two lascannons joined together; common on heavy tanks.</p>",
     "source": {

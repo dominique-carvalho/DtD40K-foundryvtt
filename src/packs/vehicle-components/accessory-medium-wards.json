@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Etched anti-magic runes giving Aura 10.",
     "automation": {
       "key": "mediumWards",

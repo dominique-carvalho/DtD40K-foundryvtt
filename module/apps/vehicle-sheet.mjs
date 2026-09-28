@@ -180,7 +180,7 @@ export class VehicleSheet extends HandlebarsApplicationMixin(foundry.application
       ]
     });
     if (!VEHICLE_CREW_ROLES.includes(role)) return null;
-    const inCombat = game.combat?.started && game.combat.combatants.some((c) => c.actor === actor);
+    const inCombat = game.combat?.started && game.combat.combatants.some((c) => c.actorId === actor.id);
     return inCombat ? embark(this.actor, actor, role) : setCrew(this.actor, actor, role);
   }
 

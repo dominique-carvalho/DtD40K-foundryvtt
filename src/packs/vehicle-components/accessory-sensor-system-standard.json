@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
     "automation": {
       "key": "sensorStandard",

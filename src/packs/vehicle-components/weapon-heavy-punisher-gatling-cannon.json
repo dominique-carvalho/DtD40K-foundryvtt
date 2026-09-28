@@ -1,7 +1,7 @@
 {
   "name": "Heavy Punisher Gatling Cannon",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Heavier rotary cannon with double the rate of the Light model.</p>",
     "source": {

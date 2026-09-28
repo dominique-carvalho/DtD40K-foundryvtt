@@ -1,7 +1,7 @@
 {
   "name": "AC/20",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Biggest standard calibre, carried only by the largest, most lethal units.</p>",
     "source": {

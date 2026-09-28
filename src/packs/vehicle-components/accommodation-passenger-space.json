@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
     "automation": {
       "key": "passengerSpace",

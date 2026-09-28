@@ -1,7 +1,7 @@
 {
   "name": "Type-32 RAV",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 8,
     "speed": 12,
@@ -31,7 +31,7 @@
     {
       "name": "Hover Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/wheel.svg",
+      "img": "icons/svg/direction.svg",
       "system": {
         "description": "<p>Matches wheels for pace and needs less road, but steers like someone skating on a frozen pond.</p><p><strong>Rise Above.</strong> Difficult terrain does not slow it, and it can travel across liquid surfaces as if on ground.</p><p><strong>Slide About.</strong> Handling is slippery: every Control Test needs 2 additional raises to pass.</p>",
         "source": {
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Matches wheels for pace and needs less road, but steers like someone skating on a frozen pond.",
         "automation": {
           "key": "hover",
@@ -99,7 +99,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "10 HP, Resilience 4",
         "automation": {
           "key": "lightweightgood"
@@ -139,7 +139,7 @@
         "armor": {
           "ap": 7
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 7",
         "automation": {
           "key": "armor7"
@@ -179,7 +179,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.",
         "automation": {
           "key": "afterburners",
@@ -221,7 +221,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.",
         "automation": {
           "key": "openTopped",
@@ -240,7 +240,7 @@
     {
       "name": "Multilas (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Pulsed rapid-fire laser, mainly an anti-infantry tool.</p>",
         "source": {

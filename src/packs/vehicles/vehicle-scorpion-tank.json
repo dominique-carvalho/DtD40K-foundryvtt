@@ -1,7 +1,7 @@
 {
   "name": "Scorpion Tank",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 14,
     "speed": 4,
@@ -31,7 +31,7 @@
     {
       "name": "Tracked Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/wheel.svg",
+      "img": "icons/svg/direction.svg",
       "system": {
         "description": "<p>Treads handle rough ground far better than wheels, at the price of a much slower top speed.</p><p><strong>Caterpillar.</strong> No movement penalty from difficult terrain.</p><p><strong>Tough.</strong> Crit Damage rolls happen only per 10 HP lost instead of per 5 wounds.</p>",
         "source": {
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Treads handle rough ground far better than wheels, at the price of a much slower top speed.",
         "automation": {
           "key": "tracked",
@@ -98,7 +98,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "15 HP, Resilience 11",
         "automation": {
           "key": "reinforcednormal"
@@ -138,7 +138,7 @@
         "armor": {
           "ap": 10
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 10",
         "automation": {
           "key": "armor10"
@@ -178,7 +178,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Loses 1 HP in each round with Momentum over 6 or in which Punch It is used.",
         "automation": {
           "key": "flawed",
@@ -221,7 +221,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Control tests suffer 2 checks.",
         "automation": {
           "key": "flawed",
@@ -238,7 +238,7 @@
     {
       "name": "SRM (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Short Range Missiles: direct-fire, less complex, trading reach for impact; good against troops and vehicles.</p>",
         "source": {
@@ -321,7 +321,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "SRM",
+        "forWeapon": "SRM",
         "effect": "Special",
         "automation": {
           "key": "srmTCWarhead",
@@ -342,7 +342,7 @@
     {
       "name": "Light Punisher Gatling Cannon",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Rotary-barrel autocannon deadly to lightly armoured vehicles and big living targets; banned against infantry in many Spheres.</p>",
         "source": {
@@ -400,7 +400,7 @@
     {
       "name": "Copilot Seat (Light Punisher Gatling Cannon)",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -425,7 +425,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
         "automation": {
           "key": "copilotSeat",

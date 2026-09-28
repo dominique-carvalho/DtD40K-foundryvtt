@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "Arrow IV Launcher",
+    "forWeapon": "Arrow IV Launcher",
     "effect": "Damage 6k4+10 X; Pen 0; Blast (15), Recharge",
     "automation": {
       "key": "arrowIVCluster",

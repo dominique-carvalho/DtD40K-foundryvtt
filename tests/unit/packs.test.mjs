@@ -1050,7 +1050,7 @@ describe("vehicle components compendium source (spec 013, SC-001)", () => {
     const ac2 = componentNamed("AC/2").system;
     expect(ac2).toMatchObject({ weaponType: "heavy", damage: { rolled: 4, kept: 2, bonus: 10, type: "I" }, pen: 5, rof: { single: true, auto: 2 }, range: { value: 500 }, qualities: [{ key: "proven", value: 3 }], vehicle: { scale: "Vhcl", slots: 2, cost: 10 } });
     expect(componentNamed("Wave Motion Cannon").system.vehicle.scale).toBe("Hybrid");
-    expect(componentNamed("LBX Ammo").system).toMatchObject({ category: "weaponUpgrade", parent: "Autocannon", cost: 15 });
+    expect(componentNamed("LBX Ammo").system).toMatchObject({ category: "weaponUpgrade", forWeapon: "Autocannon", cost: 15 });
     for (const doc of componentDocs) {
       expect(doc.system.description, doc.name).toMatch(/^<p>.+<\/p>/s);
       for (const q of doc.system.qualities ?? []) expect(WEAPON_QUALITIES[q.key], `${doc.name}: ${q.key}`).toBeDefined();

@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Take one design flaw per purchase (each flaw once) for a VP rebate.",
     "automation": {
       "key": "flawed"

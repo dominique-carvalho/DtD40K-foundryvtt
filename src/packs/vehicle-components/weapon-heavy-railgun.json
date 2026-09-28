@@ -1,7 +1,7 @@
 {
   "name": "Heavy Railgun",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Larger railgun that must recharge between shots.</p>",
     "source": {

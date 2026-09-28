@@ -1,7 +1,7 @@
 {
   "name": "Alt. Control",
   "type": "vehicleComponent",
-  "img": "icons/svg/terminal.svg",
+  "img": "icons/svg/eye.svg",
   "system": {
     "description": "<p>Lets one extra skill run the controls besides Pilot or Drive, chosen from the list in mechanics.extraControlSkill (via voice, warp link, motion mimicry and so on).</p>",
     "source": {
@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Lets one extra skill run the controls besides Pilot or Drive, chosen from the list in mechanics.extraControlSkill (via voice, warp link, motion mimicry and so on).",
     "automation": {
       "key": "altControl",

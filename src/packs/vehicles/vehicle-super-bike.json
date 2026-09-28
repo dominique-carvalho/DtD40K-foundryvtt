@@ -1,7 +1,7 @@
 {
   "name": "Super Bike",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 4,
     "speed": 11,
@@ -31,7 +31,7 @@
     {
       "name": "Wheeled Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/wheel.svg",
+      "img": "icons/svg/direction.svg",
       "system": {
         "description": "<p>The default ground drive; wheels are about as ancient as organised society itself.</p>",
         "source": {
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "The default ground drive; wheels are about as ancient as organised society itself.",
         "automation": {
           "key": "wheeled"
@@ -96,7 +96,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "10 HP, Resilience 4",
         "automation": {
           "key": "lightweightgood"
@@ -136,7 +136,7 @@
         "armor": {
           "ap": 2
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 2",
         "automation": {
           "key": "armor2"
@@ -151,7 +151,7 @@
     {
       "name": "Remote Uplink",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.</p>",
         "source": {
@@ -176,7 +176,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.",
         "automation": {
           "key": "remoteUplink",
@@ -218,7 +218,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
         "automation": {
           "key": "passengerSpace",
@@ -264,7 +264,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.",
         "automation": {
           "key": "afterburners",
@@ -306,7 +306,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Oversized engine adding 2 to maximum Momentum, even beyond the usual cap of 10.",
         "automation": {
           "key": "xlEngine2",
@@ -348,7 +348,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.",
         "automation": {
           "key": "openTopped",

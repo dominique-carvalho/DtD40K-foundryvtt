@@ -26,7 +26,7 @@
     "armor": {
       "ap": 16
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "AP 16",
     "automation": {
       "key": "armor16"

@@ -1,7 +1,7 @@
 {
   "name": "Bio-Titan",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 29,
     "speed": 7,
@@ -31,7 +31,7 @@
     {
       "name": "Walker Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/wheel.svg",
+      "img": "icons/svg/direction.svg",
       "system": {
         "description": "<p>Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.</p><p><strong>Leggy.</strong> Terrain that is normally impassible is treated only as difficult terrain.</p><p><strong>AMBAC.</strong> The pilot can stand the machine back up from prone with a Half Action.</p>",
         "source": {
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.",
         "automation": {
           "key": "walker",
@@ -98,7 +98,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "30 HP, Resilience 12",
         "automation": {
           "key": "standardbest"
@@ -138,7 +138,7 @@
         "armor": {
           "ap": 9
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 9",
         "automation": {
           "key": "armor9"
@@ -153,7 +153,7 @@
     {
       "name": "Berserker System",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>A usually outlawed kill-only AI override. It switches on as a Half Action or automatically when the pilot is incapacitated, then hunts and shoots every detected foe using 3 dots in all needed skills/attributes, staying on until the foes or the vehicle are gone.</p>",
         "source": {
@@ -178,7 +178,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "A usually outlawed kill-only AI override. It switches on as a Half Action or automatically when the pilot is incapacitated, then hunts and shoots every detected foe using 3 dots in all needed skills/attributes, staying on until the foes or the vehicle are gone.",
         "automation": {
           "key": "berserker",
@@ -198,7 +198,7 @@
     {
       "name": "COFFIN",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>A neural-link cockpit without windows; the pilot perceives through screens or a direct brain interface and gains 1 extra Reaction each round for vehicle use.</p>",
         "source": {
@@ -223,7 +223,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "A neural-link cockpit without windows; the pilot perceives through screens or a direct brain interface and gains 1 extra Reaction each round for vehicle use.",
         "automation": {
           "key": "coffin",
@@ -239,7 +239,7 @@
     {
       "name": "SYNC",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>COFFIN upgrade: once each round the pilot may reroll one vehicle action.</p>",
         "source": {
@@ -264,7 +264,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "COFFIN",
+        "forWeapon": "COFFIN",
         "effect": "COFFIN upgrade: once each round the pilot may reroll one vehicle action.",
         "automation": {
           "key": "sync",
@@ -305,7 +305,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
         "automation": {
           "key": "environmentalSeals",
@@ -350,7 +350,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "The vehicle mirrors the pilot's body movements (mostly on walkers or armed machines), so Trick Shots and Special Attacks become available for its mounted weapons.",
         "automation": {
           "key": "mobileTraceSystem"
@@ -390,7 +390,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Ranged attacks with Pen below the rating are fully negated unless the attacker has its own void shield; melee ignores it.",
         "automation": {
           "key": "voidShield10",
@@ -431,7 +431,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.",
         "automation": {
           "key": "manipulatorArms",
@@ -473,7 +473,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Adds 1 Strength to the arms, up to 10.",
         "automation": {
           "key": "improveStr",
@@ -515,7 +515,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
         "automation": {
           "key": "sensorStandard",
@@ -557,7 +557,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "An organic machine: regains 1 HP daily, can stand itself up from prone, and adds 1 to Drive Rating when using a Walker Drive.",
         "automation": {
           "key": "livingVehicle",
@@ -600,7 +600,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Runs on beamed or cabled power; beamed power needs line of sight to the source.",
         "automation": {
           "key": "flawed",
@@ -641,7 +641,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Each time the vehicle is damaged the pilot tests Athletics + Constitution at TN 15 or takes 1 level of fatigue.",
         "automation": {
           "key": "flawed",
@@ -685,7 +685,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "After each sortie it needs upkeep lasting the deployment time plus 8 hours.",
         "automation": {
           "key": "flawed",
@@ -726,7 +726,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Control tests suffer 2 checks.",
         "automation": {
           "key": "flawed",
@@ -743,7 +743,7 @@
     {
       "name": "Heavy Railgun",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Larger railgun that must recharge between shots.</p>",
         "source": {

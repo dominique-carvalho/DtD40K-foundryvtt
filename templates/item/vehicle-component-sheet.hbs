@@ -43,7 +43,7 @@
       <label>AP{{#if editable}}<input type="number" name="system.armor.ap" value="{{system.armor.ap}}" min="0">{{else}}<b>{{system.armor.ap}}</b>{{/if}}</label>
       {{/if}}
       {{#if isUpgrade}}
-      <label>{{localize "DTD.Vehicle.Parent"}}{{#if editable}}<input type="text" name="system.parent" value="{{system.parent}}">{{else}}<b>{{system.parent}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.Parent"}}{{#if editable}}<input type="text" name="system.forWeapon" value="{{system.forWeapon}}">{{else}}<b>{{system.forWeapon}}</b>{{/if}}</label>
       {{/if}}
     </div>
     {{#if embedded}}<p class="hint">{{localize "DTD.Vehicle.LineTotal" cost=totalCost slots=totalSlots}}</p>{{/if}}

@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Oversized engine adding 2 to maximum Momentum, even beyond the usual cap of 10.",
     "automation": {
       "key": "xlEngine2",

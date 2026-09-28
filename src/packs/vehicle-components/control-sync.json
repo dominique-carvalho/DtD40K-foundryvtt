@@ -1,7 +1,7 @@
 {
   "name": "SYNC",
   "type": "vehicleComponent",
-  "img": "icons/svg/terminal.svg",
+  "img": "icons/svg/eye.svg",
   "system": {
     "description": "<p>COFFIN upgrade: once each round the pilot may reroll one vehicle action.</p>",
     "source": {
@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "COFFIN",
+    "forWeapon": "COFFIN",
     "effect": "COFFIN upgrade: once each round the pilot may reroll one vehicle action.",
     "automation": {
       "key": "sync",

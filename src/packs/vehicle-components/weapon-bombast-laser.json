@@ -1,7 +1,7 @@
 {
   "name": "Bombast Laser",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Capacitor laser with two firing modes; the table line is its minimal mode.</p>",
     "source": {

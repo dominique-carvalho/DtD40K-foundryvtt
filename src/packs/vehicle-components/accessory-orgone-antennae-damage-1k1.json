@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "As Basic, and damaging spells channeled through it gain +1k1 damage.",
     "automation": {
       "key": "orgone1k1",

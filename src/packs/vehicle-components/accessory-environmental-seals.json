@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
     "automation": {
       "key": "environmentalSeals",

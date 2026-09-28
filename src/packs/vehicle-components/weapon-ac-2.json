@@ -1,7 +1,7 @@
 {
   "name": "AC/2",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Smallest standard autocannon calibre; long reach and able to load special ammunition.</p>",
     "source": {

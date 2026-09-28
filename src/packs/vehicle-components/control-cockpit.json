@@ -1,7 +1,7 @@
 {
   "name": "Cockpit",
   "type": "vehicleComponent",
-  "img": "icons/svg/terminal.svg",
+  "img": "icons/svg/eye.svg",
   "system": {
     "description": "<p>The standard pilot seat that controls every system; every frame comes with one at no charge.</p>",
     "source": {
@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "The standard pilot seat that controls every system; every frame comes with one at no charge.",
     "automation": {
       "key": "cockpit",

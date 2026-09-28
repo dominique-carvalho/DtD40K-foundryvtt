@@ -1,7 +1,7 @@
 {
   "name": "Battlemecha",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 13,
     "speed": 4,
@@ -31,7 +31,7 @@
     {
       "name": "Walker Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/wheel.svg",
+      "img": "icons/svg/direction.svg",
       "system": {
         "description": "<p>Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.</p><p><strong>Leggy.</strong> Terrain that is normally impassible is treated only as difficult terrain.</p><p><strong>AMBAC.</strong> The pilot can stand the machine back up from prone with a Half Action.</p>",
         "source": {
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.",
         "automation": {
           "key": "walker",
@@ -98,7 +98,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "25 HP, Resilience 12",
         "automation": {
           "key": "reinforcedgood"
@@ -138,7 +138,7 @@
         "armor": {
           "ap": 10
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 10",
         "automation": {
           "key": "armor10"
@@ -178,7 +178,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.",
         "automation": {
           "key": "ejectorSeat",
@@ -219,7 +219,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
         "automation": {
           "key": "environmentalSeals",
@@ -264,7 +264,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "A Half Action lets the vehicle move as a flyer until the pilot's next turn; needs 2 rounds of cooldown between firings.",
         "automation": {
           "key": "jumpJetsStandard",
@@ -306,7 +306,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.",
         "automation": {
           "key": "manipulatorArms",
@@ -348,7 +348,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
         "automation": {
           "key": "sensorStandard",
@@ -390,7 +390,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Loses 1 HP in each round with Momentum over 6 or in which Punch It is used.",
         "automation": {
           "key": "flawed",

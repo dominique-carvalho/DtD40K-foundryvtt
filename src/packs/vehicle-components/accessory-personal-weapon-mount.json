@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Holds one infantry-scale weapon, always braced; installing or removing it takes an hour.",
     "automation": {
       "key": "personalWeaponMount"

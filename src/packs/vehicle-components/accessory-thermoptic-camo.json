@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Active camouflage that beats the eye but not radar: the vehicle can roll Stealth + Dexterity or Intelligence under the usual Stealth rules.",
     "automation": {
       "key": "thermopticCamo"

@@ -1,7 +1,7 @@
 {
   "name": "Naval Drive",
   "type": "vehicleComponent",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "description": "<p>Boats; a technology as old as the wheel, confined to water.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p>",
     "source": {
@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Boats; a technology as old as the wheel, confined to water.",
     "automation": {
       "key": "naval",

@@ -1,7 +1,7 @@
 {
   "name": "Catapult",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Slow, crude rock-slinger still found on feudal or desperate worlds.</p>",
     "source": {

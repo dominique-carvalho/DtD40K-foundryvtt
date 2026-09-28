@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "A minor gadget (alarm, camera, lights, tow cable, radar detector...) worth at most +1k0 in fitting situations, as the SM rules; never better than a real dedicated system.",
     "automation": {
       "key": "features",

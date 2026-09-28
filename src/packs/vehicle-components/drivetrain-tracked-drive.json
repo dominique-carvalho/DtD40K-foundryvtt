@@ -1,7 +1,7 @@
 {
   "name": "Tracked Drive",
   "type": "vehicleComponent",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "description": "<p>Treads handle rough ground far better than wheels, at the price of a much slower top speed.</p><p><strong>Caterpillar.</strong> No movement penalty from difficult terrain.</p><p><strong>Tough.</strong> Crit Damage rolls happen only per 10 HP lost instead of per 5 wounds.</p>",
     "source": {
@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Treads handle rough ground far better than wheels, at the price of a much slower top speed.",
     "automation": {
       "key": "tracked",

@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "Arrow IV Launcher",
+    "forWeapon": "Arrow IV Launcher",
     "effect": "Blast (1), Homing, Recharge",
     "automation": {
       "key": "arrowIVHoming",

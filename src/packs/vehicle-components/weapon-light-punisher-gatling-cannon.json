@@ -1,7 +1,7 @@
 {
   "name": "Light Punisher Gatling Cannon",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Rotary-barrel autocannon deadly to lightly armoured vehicles and big living targets; banned against infantry in many Spheres.</p>",
     "source": {

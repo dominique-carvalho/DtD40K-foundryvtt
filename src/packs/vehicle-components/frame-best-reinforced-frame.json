@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "35 HP, Resilience 13",
     "automation": {
       "key": "reinforcedbest"

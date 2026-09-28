@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "As Standard Jump Jets but with only 1 round of cooldown.",
     "automation": {
       "key": "jumpJetsImproved",

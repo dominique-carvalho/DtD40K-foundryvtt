@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "A Half Action lets the vehicle move as a flyer until the pilot's next turn; needs 2 rounds of cooldown between firings.",
     "automation": {
       "key": "jumpJetsStandard",

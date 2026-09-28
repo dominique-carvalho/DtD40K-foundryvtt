@@ -1,7 +1,7 @@
 {
   "name": "Variable Man Machine",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 18,
     "speed": 6,
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.",
         "automation": {
           "key": "aerospace",
@@ -73,7 +73,7 @@
     {
       "name": "Walker Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/wheel.svg",
+      "img": "icons/svg/direction.svg",
       "system": {
         "description": "<p>Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.</p><p><strong>Leggy.</strong> Terrain that is normally impassible is treated only as difficult terrain.</p><p><strong>AMBAC.</strong> The pilot can stand the machine back up from prone with a Half Action.</p>",
         "source": {
@@ -98,7 +98,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.",
         "automation": {
           "key": "walker",
@@ -140,7 +140,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "20 HP, Resilience 11",
         "automation": {
           "key": "standardgood"
@@ -180,7 +180,7 @@
         "armor": {
           "ap": 9
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 9",
         "automation": {
           "key": "armor9"
@@ -220,7 +220,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.",
         "automation": {
           "key": "ejectorSeat",
@@ -261,7 +261,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
         "automation": {
           "key": "environmentalSeals",
@@ -306,7 +306,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
         "automation": {
           "key": "sensorStandard",
@@ -348,7 +348,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Etched anti-magic runes giving Aura 5.",
         "automation": {
           "key": "lightWards",
@@ -389,7 +389,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.",
         "automation": {
           "key": "manipulatorArms",
@@ -431,7 +431,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Swapping between drivetrains becomes a Reaction instead of a Half Action.",
         "automation": {
           "key": "mobileDecouplers",
@@ -447,7 +447,7 @@
     {
       "name": "AC/2",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Smallest standard autocannon calibre; long reach and able to load special ammunition.</p>",
         "source": {
@@ -505,7 +505,7 @@
     {
       "name": "SRM",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Short Range Missiles: direct-fire, less complex, trading reach for impact; good against troops and vehicles.</p>",
         "source": {

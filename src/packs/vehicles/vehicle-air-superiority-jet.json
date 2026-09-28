@@ -1,7 +1,7 @@
 {
   "name": "Air Superiority Jet",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 17,
     "speed": 12,
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.",
         "automation": {
           "key": "aerospace",
@@ -98,7 +98,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "20 HP, Resilience 6",
         "automation": {
           "key": "lightweightbest"
@@ -138,7 +138,7 @@
         "armor": {
           "ap": 4
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 4",
         "automation": {
           "key": "armor4"
@@ -178,7 +178,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.",
         "automation": {
           "key": "afterburners",
@@ -220,7 +220,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.",
         "automation": {
           "key": "ejectorSeat",
@@ -262,7 +262,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
         "automation": {
           "key": "environmentalSeals",
@@ -307,7 +307,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Oversized engine adding 4 to maximum Momentum, even beyond the usual cap of 10.",
         "automation": {
           "key": "xlEngine4",
@@ -348,7 +348,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
         "automation": {
           "key": "sensorStandard",
@@ -391,7 +391,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "After each sortie it needs upkeep lasting the deployment time plus 8 hours.",
         "automation": {
           "key": "flawed",
@@ -407,7 +407,7 @@
     {
       "name": "LRM",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Long Range Missile rack firing volleys to extreme range, with several ammo types.</p>",
         "source": {
@@ -465,7 +465,7 @@
     {
       "name": "Light Punisher Gatling Cannon",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Rotary-barrel autocannon deadly to lightly armoured vehicles and big living targets; banned against infantry in many Spheres.</p>",
         "source": {

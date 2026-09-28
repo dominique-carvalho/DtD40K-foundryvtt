@@ -1,7 +1,7 @@
 {
   "name": "RAM/4",
   "type": "vehicleComponent",
-  "img": "icons/svg/terminal.svg",
+  "img": "icons/svg/eye.svg",
   "system": {
     "description": "<p>AI gets 4 bonus Half Actions per scene (still max one per round).</p>",
     "source": {
@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "Onboard AI (RAM Array)",
+    "forWeapon": "Onboard AI (RAM Array)",
     "effect": "AI gets 4 bonus Half Actions per scene (still max one per round).",
     "automation": {
       "key": "ram4",

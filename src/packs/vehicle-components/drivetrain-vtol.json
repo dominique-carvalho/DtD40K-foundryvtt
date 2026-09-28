@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Flexible flight drive that moves in three dimensions and, unlike Aerospace or Scramjet, can go slow or hold a hover.",
     "automation": {
       "key": "vtol"

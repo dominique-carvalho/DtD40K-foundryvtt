@@ -33,8 +33,8 @@ export class VehicleComponentData extends foundry.abstract.TypeDataModel {
       }),
       frame: new SchemaField({ hp: int(0, { min: 0 }), resilience: int(0, { min: 0 }) }),
       armor: new SchemaField({ ap: int(0, { min: 0 }) }),
-      // Parent weapon of an ammunition or mode (weaponUpgrade).
-      parent: new StringField({ required: true, blank: true }),
+      // Weapon an ammunition or mode is for (weaponUpgrade); not "parent", which DataModel reserves.
+      forWeapon: new StringField({ required: true, blank: true }),
       effect: new StringField({ required: true, blank: true }),
       automation: new ObjectField()
     };

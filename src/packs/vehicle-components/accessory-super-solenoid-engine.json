@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Warp-fuelled S2 engine: as a Half Action, roll on Psychic Phenomena and set Momentum to one tenth of that roll; a Perils result means maximum Momentum.",
     "automation": {
       "key": "superSolenoidEngine",

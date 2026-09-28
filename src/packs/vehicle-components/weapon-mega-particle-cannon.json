@@ -1,7 +1,7 @@
 {
   "name": "Mega Particle Cannon",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Older, bulkier and stronger PPC whose beam ignores magnetic deflection.</p>",
     "source": {

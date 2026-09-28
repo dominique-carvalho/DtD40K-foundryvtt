@@ -1,7 +1,7 @@
 {
   "name": "HAG",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Hyper-Assault Gauss: a railgun variant spraying explosive submunitions in place of one slug.</p>",
     "source": {

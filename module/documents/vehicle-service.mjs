@@ -54,8 +54,24 @@ async function postCard(vehicle, { title, subtitle = "", lines = [], buttons = [
  * @returns {{role: string, actorUuid: string, weaponIds: string[], actor: Actor|null}[]}
  */
 export function crewOf(vehicle) {
-  return vehicle.system.crew.map((c) => ({ ...c, actor: foundry.utils.fromUuidSync(c.actorUuid) ?? null }));
+  return vehicle.system.crew.map((c) => ({ ...c, actor: crewActor(c.actorUuid) }));
 }
+
+/**
+ * The actor of a crew entry. An unlinked actor (an NPC dragged from the sidebar) plays through its token, so its only
+ * token on the current scene is used: that is the actor of the combatant and of the reaction effects.
+ * @param {string} uuid
+ * @returns {Actor|null}
+ */
+function crewActor(uuid) {
+  const actor = foundry.utils.fromUuidSync(uuid) ?? null;
+  if (!actor || actor.isToken || actor.prototypeToken?.actorLink) return actor;
+  const tokens = canvas?.scene?.tokens.filter((t) => t.actorId === actor.id && !t.actorLink) ?? [];
+  return tokens.length === 1 ? tokens[0].actor : actor;
+}
+
+/** Is this crew uuid the actor, directly or as the base of its unlinked token? */
+const isCrewActor = (uuid, actor) => uuid === actor?.uuid || (actor?.isToken && uuid === `Actor.${actor.id}`);
 
 /** The pilot's actor, if any. */
 export const pilotOf = (vehicle) => crewOf(vehicle).find((c) => c.role === "pilot")?.actor ?? null;
@@ -82,7 +98,7 @@ export function allVehicles() {
 }
 
 /** Vehicles whose pilot is this actor. */
-export const vehiclesPilotedBy = (actor) => allVehicles().filter((v) => v.system.crew.some((c) => c.role === "pilot" && c.actorUuid === actor?.uuid));
+export const vehiclesPilotedBy = (actor) => allVehicles().filter((v) => v.system.crew.some((c) => c.role === "pilot" && isCrewActor(c.actorUuid, actor)));
 
 /**
  * Check the vehicle state and spend the action from the acting crew member's turn (FR-007). Without a crew member
@@ -138,6 +154,8 @@ export async function addComponent(vehicle, data) {
     }
   }
   if (!item) [item] = await vehicle.createEmbeddedDocuments("Item", [data]);
+  // A new frame brings its HP (p. 367).
+  if (item.system.category === "frame") await vehicle.update({ "system.hp.value": item.system.frame.hp, "system.hp.temp": 0 });
   const w = vehicle.system.warnings;
   if (w.overSlots) ui.notifications.warn(format("DTD.Vehicle.Warn.overSlots", { used: vehicle.system.slots.used, max: vehicle.system.slots.max }));
   if (w.overBudget) ui.notifications.warn(format("DTD.Vehicle.Warn.overBudget", { cost: vehicle.system.vp.cost, budget: vehicle.system.vp.budget }));

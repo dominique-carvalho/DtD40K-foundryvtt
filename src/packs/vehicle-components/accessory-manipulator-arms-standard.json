@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.",
     "automation": {
       "key": "manipulatorArms",

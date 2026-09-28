@@ -1,7 +1,7 @@
 {
   "name": "AC/10",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Heavier autocannon, a cheap and effective choice for bigger units.</p>",
     "source": {

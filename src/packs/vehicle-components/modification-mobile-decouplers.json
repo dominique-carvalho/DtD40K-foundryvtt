@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Swapping between drivetrains becomes a Reaction instead of a Half Action.",
     "automation": {
       "key": "mobileDecouplers",

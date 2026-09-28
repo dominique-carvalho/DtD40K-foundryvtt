@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "The quickest way to get anywhere by air, provided the route is a straight line.",
     "automation": {
       "key": "scramjet",

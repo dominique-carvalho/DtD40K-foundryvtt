@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
     "automation": {
       "key": "cargoSpace",

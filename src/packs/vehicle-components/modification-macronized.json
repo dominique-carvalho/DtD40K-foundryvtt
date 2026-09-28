@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Applied to a component of size 1+: halve its cost (round up) and double its slots; stackable, doubling slots again each time.",
     "automation": {
       "key": "macronized",

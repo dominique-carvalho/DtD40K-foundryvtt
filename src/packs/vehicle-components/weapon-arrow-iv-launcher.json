@@ -1,7 +1,7 @@
 {
   "name": "Arrow IV Launcher",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Self-contained missile artillery; the one vehicle launcher strong enough to threaten starships.</p>",
     "source": {

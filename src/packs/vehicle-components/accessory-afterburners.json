@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.",
     "automation": {
       "key": "afterburners",

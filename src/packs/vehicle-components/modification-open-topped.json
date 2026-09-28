@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.",
     "automation": {
       "key": "openTopped",

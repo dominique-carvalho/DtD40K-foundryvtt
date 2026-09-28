@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "15 HP, Resilience 11",
     "automation": {
       "key": "reinforcednormal"

@@ -1,7 +1,7 @@
 {
   "name": "Super Scramjet",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 19,
     "speed": 15,
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "The quickest way to get anywhere by air, provided the route is a straight line.",
         "automation": {
           "key": "scramjet",
@@ -99,7 +99,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "10 HP, Resilience 4",
         "automation": {
           "key": "lightweightgood"
@@ -139,7 +139,7 @@
         "armor": {
           "ap": 3
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 3",
         "automation": {
           "key": "armor3"
@@ -179,7 +179,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
         "automation": {
           "key": "passengerSpace",
@@ -225,7 +225,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
         "automation": {
           "key": "cargoSpace",
@@ -271,7 +271,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.",
         "automation": {
           "key": "afterburners",
@@ -313,7 +313,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.",
         "automation": {
           "key": "ejectorSeat",
@@ -354,7 +354,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
         "automation": {
           "key": "environmentalSeals",
@@ -399,7 +399,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
         "automation": {
           "key": "sensorStandard",
@@ -441,7 +441,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Oversized engine adding 5 to maximum Momentum, even beyond the usual cap of 10.",
         "automation": {
           "key": "xlEngine5",
@@ -482,7 +482,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "After each sortie it needs upkeep lasting the deployment time plus 8 hours.",
         "automation": {
           "key": "flawed",
@@ -523,7 +523,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Any damage suffered triggers a roll on the crit chart.",
         "automation": {
           "key": "flawed",
@@ -565,7 +565,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Control tests suffer 2 checks.",
         "automation": {
           "key": "flawed",

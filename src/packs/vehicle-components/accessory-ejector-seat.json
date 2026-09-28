@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.",
     "automation": {
       "key": "ejectorSeat",

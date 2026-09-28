@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "An organic machine: regains 1 HP daily, can stand itself up from prone, and adds 1 to Drive Rating when using a Walker Drive.",
     "automation": {
       "key": "livingVehicle",

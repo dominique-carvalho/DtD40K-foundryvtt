@@ -1,7 +1,7 @@
 {
   "name": "Mudskipper",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 6,
     "speed": 4,
@@ -31,7 +31,7 @@
     {
       "name": "Naval Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/wheel.svg",
+      "img": "icons/svg/direction.svg",
       "system": {
         "description": "<p>Boats; a technology as old as the wheel, confined to water.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p>",
         "source": {
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Boats; a technology as old as the wheel, confined to water.",
         "automation": {
           "key": "naval",
@@ -98,7 +98,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "10 HP, Resilience 10",
         "automation": {
           "key": "standardnormal"
@@ -138,7 +138,7 @@
         "armor": {
           "ap": 2
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 2",
         "automation": {
           "key": "armor2"
@@ -178,7 +178,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
         "automation": {
           "key": "cargoSpace",
@@ -224,7 +224,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
         "automation": {
           "key": "passengerSpace",
@@ -270,7 +270,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.",
         "automation": {
           "key": "openTopped",
@@ -289,7 +289,7 @@
     {
       "name": "Multilas (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Pulsed rapid-fire laser, mainly an anti-infantry tool.</p>",
         "source": {

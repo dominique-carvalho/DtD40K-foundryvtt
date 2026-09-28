@@ -1,7 +1,7 @@
 {
   "name": "Co/4",
   "type": "vehicleComponent",
-  "img": "icons/svg/terminal.svg",
+  "img": "icons/svg/eye.svg",
   "system": {
     "description": "<p>Raises the AI's dots to 4.</p>",
     "source": {
@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "Onboard AI (Coprocessor)",
+    "forWeapon": "Onboard AI (Coprocessor)",
     "effect": "Raises the AI's dots to 4.",
     "automation": {
       "key": "co4",

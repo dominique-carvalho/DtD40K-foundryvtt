@@ -1,7 +1,7 @@
 {
   "name": "Gunbarge",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 30,
     "speed": 7,
@@ -31,7 +31,7 @@
     {
       "name": "Battleship Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/wheel.svg",
+      "img": "icons/svg/direction.svg",
       "system": {
         "description": "<p>A floating fortress rather than a true vehicle; huge masses of steel are easier to keep afloat than to walk.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p><p><strong>Metal Giant.</strong> Grants 2 Equipment Slots per point of Size instead of 1; lost if the vehicle has more than one drivetrain.</p>",
         "source": {
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "A floating fortress rather than a true vehicle; huge masses of steel are easier to keep afloat than to walk.",
         "automation": {
           "key": "battleship",
@@ -100,7 +100,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "25 HP, Resilience 12",
         "automation": {
           "key": "reinforcedgood"
@@ -140,7 +140,7 @@
         "armor": {
           "ap": 5
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 5",
         "automation": {
           "key": "armor5"
@@ -180,7 +180,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
         "automation": {
           "key": "cargoSpace",
@@ -226,7 +226,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
         "automation": {
           "key": "passengerSpace",
@@ -272,7 +272,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "A minor gadget (alarm, camera, lights, tow cable, radar detector...) worth at most +1k0 in fitting situations, as the SM rules; never better than a real dedicated system.",
         "automation": {
           "key": "features",
@@ -313,7 +313,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
         "automation": {
           "key": "sensorStandard",
@@ -355,7 +355,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Move costs a Full Action and Punch It is unavailable.",
         "automation": {
           "key": "flawed",
@@ -398,7 +398,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Control tests suffer 2 checks.",
         "automation": {
           "key": "flawed",
@@ -415,7 +415,7 @@
     {
       "name": "AC/2",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Smallest standard autocannon calibre; long reach and able to load special ammunition.</p>",
         "source": {
@@ -473,7 +473,7 @@
     {
       "name": "AC/2",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Smallest standard autocannon calibre; long reach and able to load special ammunition.</p>",
         "source": {
@@ -531,7 +531,7 @@
     {
       "name": "Copilot Seat (AC/2)",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -556,7 +556,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
         "automation": {
           "key": "copilotSeat",
@@ -572,7 +572,7 @@
     {
       "name": "AC/10",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Heavier autocannon, a cheap and effective choice for bigger units.</p>",
         "source": {
@@ -630,7 +630,7 @@
     {
       "name": "Copilot Seat (AC/10)",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -655,7 +655,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
         "automation": {
           "key": "copilotSeat",
@@ -671,7 +671,7 @@
     {
       "name": "AC/20",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Biggest standard calibre, carried only by the largest, most lethal units.</p>",
         "source": {
@@ -729,7 +729,7 @@
     {
       "name": "Copilot Seat (AC/20)",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -754,7 +754,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
         "automation": {
           "key": "copilotSeat",
@@ -770,7 +770,7 @@
     {
       "name": "Vulcan Mega-Bolter (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Heavy rotary bolt gun with a very high fire rate, for infantry, light vehicles and buildings.</p>",
         "source": {
@@ -828,7 +828,7 @@
     {
       "name": "Vulcan Mega-Bolter (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Heavy rotary bolt gun with a very high fire rate, for infantry, light vehicles and buildings.</p>",
         "source": {
@@ -886,7 +886,7 @@
     {
       "name": "Copilot Seat (Vulcan Mega-Bolter)",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -911,7 +911,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
         "automation": {
           "key": "copilotSeat",

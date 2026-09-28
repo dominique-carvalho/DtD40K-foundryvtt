@@ -1,7 +1,7 @@
 {
   "name": "PPC",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Particle Projection Cannon: near-lightspeed neutral particle beam needing strong power or stored particles.</p>",
     "source": {

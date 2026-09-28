@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "Bombast Laser",
+    "forWeapon": "Bombast Laser",
     "effect": "Damage 5k5+10 E; Pen 10; ROF S/-; Range 300m; Recharge",
     "automation": {
       "key": "maximalMode",

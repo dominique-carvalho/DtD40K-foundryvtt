@@ -1,7 +1,7 @@
 {
   "name": "Helicopter",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 15,
     "speed": 7,
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Flexible flight drive that moves in three dimensions and, unlike Aerospace or Scramjet, can go slow or hold a hover.",
         "automation": {
           "key": "vtol"
@@ -96,7 +96,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "10 HP, Resilience 10",
         "automation": {
           "key": "standardnormal"
@@ -136,7 +136,7 @@
         "armor": {
           "ap": 5
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 5",
         "automation": {
           "key": "armor5"
@@ -176,7 +176,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
         "automation": {
           "key": "passengerSpace",
@@ -222,7 +222,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
         "automation": {
           "key": "cargoSpace",
@@ -268,7 +268,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
         "automation": {
           "key": "sensorStandard",
@@ -285,7 +285,7 @@
     {
       "name": "Light Punisher Gatling Cannon (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/cannon.svg",
+      "img": "icons/svg/target.svg",
       "system": {
         "description": "<p>Rotary-barrel autocannon deadly to lightly armoured vehicles and big living targets; banned against infantry in many Spheres.</p>",
         "source": {
@@ -343,7 +343,7 @@
     {
       "name": "Copilot Seat (Light Punisher Gatling Cannon)",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -368,7 +368,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
         "automation": {
           "key": "copilotSeat",

@@ -1,7 +1,7 @@
 {
   "name": "D-Cannon",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Copied Syrneth warp weapon that opens tiny rifts inside the target, bypassing nearly any armour.</p>",
     "source": {

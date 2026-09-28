@@ -1,7 +1,7 @@
 {
   "name": "Railgun",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Magnetic slug thrower with long reach and punch; a natural sniper gun.</p>",
     "source": {

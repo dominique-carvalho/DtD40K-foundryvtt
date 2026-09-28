@@ -1,7 +1,7 @@
 {
   "name": "Jumbojet",
   "type": "vehicle",
-  "img": "icons/svg/wheel.svg",
+  "img": "icons/svg/direction.svg",
   "system": {
     "size": 24,
     "speed": 13,
@@ -56,7 +56,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.",
         "automation": {
           "key": "aerospace",
@@ -98,7 +98,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "15 HP, Resilience 11",
         "automation": {
           "key": "reinforcednormal"
@@ -138,7 +138,7 @@
         "armor": {
           "ap": 4
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "AP 4",
         "automation": {
           "key": "armor4"
@@ -178,7 +178,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
         "automation": {
           "key": "cargoSpace",
@@ -224,7 +224,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
         "automation": {
           "key": "passengerSpace",
@@ -270,7 +270,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "Passenger Space",
+        "forWeapon": "Passenger Space",
         "effect": "Makes a chosen Passenger Space plush and possibly private.",
         "automation": {
           "key": "luxuryAccommodations"
@@ -285,7 +285,7 @@
     {
       "name": "Copilot Seat",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -310,7 +310,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
         "automation": {
           "key": "copilotSeat",
@@ -351,7 +351,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "A minor gadget (alarm, camera, lights, tow cable, radar detector...) worth at most +1k0 in fitting situations, as the SM rules; never better than a real dedicated system.",
         "automation": {
           "key": "features",
@@ -367,7 +367,7 @@
     {
       "name": "Remote Uplink",
       "type": "vehicleComponent",
-      "img": "icons/svg/terminal.svg",
+      "img": "icons/svg/eye.svg",
       "system": {
         "description": "<p>Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.</p>",
         "source": {
@@ -392,7 +392,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.",
         "automation": {
           "key": "remoteUplink",
@@ -434,7 +434,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
         "automation": {
           "key": "environmentalSeals",
@@ -479,7 +479,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "Pilot gets +10 on perception tests and auto-detects vehicles or ships lacking ECM within 20 km.",
         "automation": {
           "key": "sensorAdvanced",
@@ -522,7 +522,7 @@
         "armor": {
           "ap": 0
         },
-        "parent": "",
+        "forWeapon": "",
         "effect": "After each sortie it needs upkeep lasting the deployment time plus 8 hours.",
         "automation": {
           "key": "flawed",

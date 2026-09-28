@@ -1,7 +1,7 @@
 {
   "name": "LRM",
   "type": "weapon",
-  "img": "icons/svg/cannon.svg",
+  "img": "icons/svg/target.svg",
   "system": {
     "description": "<p>Long Range Missile rack firing volleys to extreme range, with several ammo types.</p>",
     "source": {

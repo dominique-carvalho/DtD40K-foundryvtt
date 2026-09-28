@@ -1,7 +1,7 @@
 {
   "name": "COFFIN",
   "type": "vehicleComponent",
-  "img": "icons/svg/terminal.svg",
+  "img": "icons/svg/eye.svg",
   "system": {
     "description": "<p>A neural-link cockpit without windows; the pilot perceives through screens or a direct brain interface and gains 1 extra Reaction each round for vehicle use.</p>",
     "source": {
@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "A neural-link cockpit without windows; the pilot perceives through screens or a direct brain interface and gains 1 extra Reaction each round for vehicle use.",
     "automation": {
       "key": "coffin",

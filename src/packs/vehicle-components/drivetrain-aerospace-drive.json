@@ -26,7 +26,7 @@
     "armor": {
       "ap": 0
     },
-    "parent": "",
+    "forWeapon": "",
     "effect": "Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.",
     "automation": {
       "key": "aerospace",

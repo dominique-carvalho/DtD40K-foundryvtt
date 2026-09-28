@@ -106,9 +106,10 @@ export const vehiclesPilotedBy = (actor) => allVehicles().filter((v) => v.system
  * @param {Actor} vehicle
  * @param {string} key  VEHICLE_ACTIONS key
  * @param {Actor|null} actor
- * @param {{type?: string, move?: boolean}} [options]  type: override the action length; move: a movement action
+ * @param {{type?: string, move?: boolean, onVehicle?: boolean}} [options]  type: override the action length; move: a
+ *   movement action; onVehicle: work done on the vehicle (Jury Rig), not limited by its stall or lockup
  */
-async function act(vehicle, key, actor, { type, move = false } = {}) {
+async function act(vehicle, key, actor, { type, move = false, onVehicle = false } = {}) {
   const state = vehicle.system.state;
   const round = currentRound();
   const base = vehicleAction(key);
@@ -118,11 +119,11 @@ async function act(vehicle, key, actor, { type, move = false } = {}) {
     return false;
   };
   if (state.destroyed) return refuse("destroyed");
-  if (round && state.lockedUntil >= round && action.type !== "reaction") return refuse("locked");
+  if (!onVehicle && round && state.lockedUntil >= round && action.type !== "reaction") return refuse("locked");
   if (move && round && state.immobileUntil >= round) return refuse("immobile");
   if (move && state.flipped) return refuse("flipped");
   // A stalled engine allows only a Half Action (critical 2–3).
-  if (state.stalled && action.type === "full") return refuse("stalled");
+  if (!onVehicle && state.stalled && action.type === "full") return refuse("stalled");
   if (!actor) return true;
   return takeAction(actor, action);
 }
@@ -354,14 +355,15 @@ export async function endOfPilotTurn(combat, pilot) {
 // Control Tests (US3)
 
 /**
- * Roll the pilot's control skill + Maneuver (p. 359); without a pilot the GM enters the pool. Unstable: 2 checks.
+ * Roll the pilot's control skill + Maneuver (p. 359); without a pilot the GM enters the pool. The Unstable flaw costs 2
+ * checks on Control Tests only (p. 374).
  * @param {Actor} vehicle
- * @param {{tn: number|null, label: string}} options
+ * @param {{tn: number|null, label: string, control?: boolean}} options
  * @returns {Promise<ChatMessage|null>}
  */
-async function controlRoll(vehicle, { tn, label }) {
+async function controlRoll(vehicle, { tn, label, control = false }) {
   const system = vehicle.system;
-  const flat = system.maneuver - (hasFlaw(vehicle, "unstable") ? 10 : 0);
+  const flat = system.maneuver - (control && hasFlaw(vehicle, "unstable") ? 10 : 0);
   const pilot = pilotOf(vehicle);
   if (pilot) return pilot.rollSkill(system.drive.controlSkill, { fastForward: true, tn, modifiers: { flat }, label });
   const pool = await foundry.applications.api.DialogV2.wait({
@@ -387,7 +389,7 @@ export async function controlTest(vehicle, { reason = "" } = {}) {
   const system = vehicle.system;
   const tn = controlTn(system.momentum) + 5 * (Number(system.drive.automation?.controlTestExtraRaises) || 0);
   const label = `${localize("DTD.Vehicle.ControlTest")} — ${vehicle.name}${reason ? ` (${reason})` : ""}`;
-  const message = await controlRoll(vehicle, { tn, label });
+  const message = await controlRoll(vehicle, { tn, label, control: true });
   const outcome = message?.getFlag("dtd40k", "test")?.outcome;
   if (outcome && !outcome.success) await rollOutOfControl(vehicle);
   return message;
@@ -441,7 +443,7 @@ export async function evasive(message) {
   const sd = defendedSd(attack.tn ?? vehicle.system.derived.staticDefense, total);
   const hits = stillHits({ attackTotal: attack.total, sd, requiredRaises: attack.requiredRaises });
   const content = await foundry.applications.handlebars.renderTemplate(DEFENSE_TEMPLATE, {
-    name: vehicle.name, kind: localize("DTD.Vehicle.Evasive"), total, bonus: Math.floor(total / 2), sd, hits
+    name: vehicle.name, kind: localize("DTD.Vehicle.Evasive"), total, bonus: Math.floor(Math.max(0, total) / 2), sd, hits
   });
   await ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor: vehicle }), content });
   if (game.user.isGM || message.isOwner) await message.setFlag("dtd40k", "defense", { kind: "evasive", total, sd, hits });
@@ -569,7 +571,8 @@ export async function applyVehicleDamage(vehicle, token, damage) {
       name: vehicle.name, location: localize(`DTD.Location.${damage.location}`), total: damage.total, effective: result.effective,
       resilience: result.steps.find((step) => step.label === "resilience")?.value ?? Math.max(1, system.derived.resilience),
       hpLoss: result.hpLoss, criticalGain: 0, critical: 0, fatigue: 0, coverHit: false,
-      criticalText, criticalTable: crits > 0 && !after.destroyed ? localize("DTD.Vehicle.CritTable") : ""
+      // Vehicles have no Critical Damage: the card shows the destruction or the vehicle criticals rolled instead.
+      vehicleNote: criticalText ? (after.destroyed ? criticalText : `${localize("DTD.Vehicle.CritTable")}: ${criticalText}`) : ""
     },
     undo: { actorUuid: vehicle.uuid, tokenUuid: token.uuid, vehicle: true, before }
   };
@@ -681,7 +684,7 @@ export async function juryRig(vehicle, engineer) {
     ]
   });
   if (!choice || typeof choice !== "object") return;
-  if (!(await act(vehicle, "vehicleJuryRig", engineer))) return;
+  if (!(await act(vehicle, "vehicleJuryRig", engineer, { onVehicle: true }))) return;
   const message = await engineer.rollSkill(choice.skill, { fastForward: true, tn: Number(choice.tn) || 20, label: `${localize("DTD.Vehicle.JuryRig")} — ${vehicle.name}` });
   const outcome = message?.getFlag("dtd40k", "test")?.outcome;
   if (!outcome?.success) return;

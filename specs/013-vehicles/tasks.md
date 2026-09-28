@@ -55,7 +55,7 @@ quickstart.md
 - [X] T015 [US2] `module/documents/vehicle-service.mjs`: `addComponent` (drop, quantidade), `switchDrive`, `setCrew`/`embark`/`disembark`
 - [X] T016 [US2] `module/apps/vehicle-sheet.mjs` + `templates/actor/vehicle-sheet.hbs` (Resumo com stats, orçamento, VP e slots, avisos; Componentes; Tripulação por drop de atores); registrar
 - [X] T017 [P] [US2] i18n e estilos
-- [ ] T018 [US2] Validar quickstart 1–6 e registrar
+- [X] T018 [US2] Validar quickstart 1–6 e registrar
 
 ---
 
@@ -66,7 +66,7 @@ quickstart.md
 - [X] T021 [US3] `damage-service.applyTo` para veículo (sem crítico, destruído em 0, ferimentos na cena → crítico); `combat.mjs` (`_onEndTurn`: Momentum 0; `deleteCombat`: nova cena); `CHAT_ACTIONS.vehicleEvasive`
 - [X] T022 [US3] Aba Combate da ficha do veículo: Momentum, SD, alcance, ações, armas por artilheiro, estado (virado, destruído, crítico pendente)
 - [X] T023 [P] [US3] i18n e estilos
-- [ ] T024 [US3] Validar quickstart 7–16 e registrar
+- [X] T024 [US3] Validar quickstart 7–16 e registrar
 
 ---
 
@@ -76,7 +76,7 @@ quickstart.md
 - [X] T026 [US4] Stunt driving no diálogo de Move/Punch It (Barrel Roll: reação extra do piloto até o próximo turno)
 - [X] T027 [US4] `vehicle-service.repair` + `templates/dialog/vehicle-repair.hbs`
 - [X] T028 [P] [US4] i18n e estilos
-- [ ] T029 [US4] Validar quickstart 17–19 e registrar
+- [X] T029 [US4] Validar quickstart 17–19 e registrar
 
 ---
 

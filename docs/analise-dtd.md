@@ -638,6 +638,16 @@ Fonte: 1.6 pp. 335–359.
 
 ## 17. Veículos (Book 2)
 
+**Na 7.7a** (cap. XV pp. 358–385; implementado na feature `013-vehicles`): HP e Resilience vêm do **frame** (9
+frames, Lightweight Normal/Good com custo negativo), slots = Size (Battleship Drive: 2 por Size), SD = 10 − 2 × Size +
+2 × Speed + 2 × Maneuver com Momentum > 0, trações com custo (9), orçamento em VP pela raridade ou Holdings, custos de
+Maneuver/Acceleration/Speed/Size por tabela, Macronized/Miniaturized em qualquer componente, Flawed −10 por falha.
+Ações: Move (meia), Punch It Boost/Drift (completa), Skirmish (meia) e Barrage (completa) com a perícia de quem
+atira e sem feats, Evasive Maneuvers (reação, Momentum 1+), Ramming (XkY+Z em ambos: ½Size até 10, Momentum, Speed),
+Jury Rig (TN 20), Embark. Control Test TN 5 × Momentum com a tabela Out of Control; dano sem Critical Damage, crítico
+de veículo a cada 5 ferimentos na cena; reparo em ciclos de Size dias. **16 veículos de exemplo**, 9 fora do orçamento
+impresso. O texto abaixo é o levantamento do Book 2 da 1.6.
+
 Fonte: B2 pp. 91–113.
 
 **Bloco**: Acc (0–5) · **Momentum** (0–10, estado) · Size (HP, Resilience e slots = Size) · Man (−10 a +10, reduzido pelo Momentum) · Speed (1–15) · Static Defense = 10 + Man − 2·Size + bônus de Speed por Momentum · Drive Rating · perícia de controle (Drive/Pilot/alternativas) · Armor única · Aura (wards) · Void Shield.

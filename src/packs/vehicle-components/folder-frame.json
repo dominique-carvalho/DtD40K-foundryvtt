@@ -1,0 +1,16 @@
+{
+  "_id": "dtdVFdca3b9a90a8",
+  "_key": "!folders!dtdVFdca3b9a90a8",
+  "name": "Frames",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 20000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "vehicleFolder": "frame"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Void Shield (Rating 20)",
+  "type": "vehicleComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>As above with rating 20.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 373
+    },
+    "category": "accessory",
+    "cost": 60,
+    "slots": 10,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "As above with rating 20.",
+    "automation": {
+      "key": "voidShield20",
+      "rating": 20
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV1315e0b6c688",
+  "_key": "!items!dtdV1315e0b6c688",
+  "folder": "dtdVFd29d4f0998d"
+}

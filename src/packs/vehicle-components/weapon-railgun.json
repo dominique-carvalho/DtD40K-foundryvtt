@@ -1,0 +1,59 @@
+{
+  "name": "Railgun",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Magnetic slug thrower with long reach and punch; a natural sniper gun.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 376
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Ordinary / Railgun",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 3,
+      "kept": 3,
+      "type": "I",
+      "bonus": 10
+    },
+    "pen": 10,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 750,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "accurate",
+        "value": null
+      }
+    ],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Vhcl",
+      "slots": 5,
+      "cost": 30,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV4ca01626ed83",
+  "_key": "!items!dtdV4ca01626ed83",
+  "folder": "dtdVFdbe7b88e2b5"
+}

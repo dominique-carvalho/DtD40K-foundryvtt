@@ -303,3 +303,17 @@ describe("antagonist constants (012)", () => {
     expect(DTD.MINION).toEqual({ maxCount: 6, sdPerThreat: 5, damagePerRating: 5, rangePerThreat: 10 });
   });
 });
+
+describe("vehicle constants (013)", () => {
+  it("lists the component categories, budgets, stat costs and crew roles (pp. 364–380)", () => {
+    expect(DTD.VEHICLE_CATEGORIES).toEqual(["drivetrain", "frame", "armor", "control", "accommodation", "accessory", "modification", "weaponUpgrade"]);
+    expect(DTD.VEHICLE_BUDGETS).toMatchObject({ uncommon: 50, rare: 100, veryRare: 150, mythicRare: 200, holdings1: 250, holdings5: 450 });
+    expect(DTD.VEHICLE_COSTS.maneuver).toEqual([0, 5, 7, 9, 11, 13, 16, 20, 25, 30, 35]);
+    expect(DTD.VEHICLE_COSTS.acceleration).toEqual([0, 5, 10, 20, 30, 40]);
+    expect(DTD.VEHICLE_COSTS.speed[4]).toBe(11);
+    expect(DTD.VEHICLE_COSTS.speed[15]).toBe(80);
+    expect(DTD.VEHICLE_COSTS.size[8]).toBe(8);
+    expect(DTD.VEHICLE_COSTS.size[30]).toBe(60);
+    expect(DTD.VEHICLE_CREW_ROLES).toEqual(["pilot", "gunner", "engineer", "passenger"]);
+  });
+});

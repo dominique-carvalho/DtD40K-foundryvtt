@@ -1,0 +1,378 @@
+{
+  "name": "Super Bike",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "size": 4,
+    "speed": 11,
+    "acceleration": 2,
+    "maneuver": 8,
+    "momentum": 0,
+    "budget": {
+      "tier": "rare"
+    },
+    "hp": {
+      "value": 10,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "100 (Rare)",
+      "slots": "4/4"
+    },
+    "description": "<p>Stylish high-performance motorbike for fast point-to-point travel.</p><p>Carries 1 passenger.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 380
+    }
+  },
+  "items": [
+    {
+      "name": "Wheeled Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/direction.svg",
+      "system": {
+        "description": "<p>The default ground drive; wheels are about as ancient as organised society itself.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 366
+        },
+        "category": "drivetrain",
+        "cost": 5,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 5,
+          "controlSkill": "drive",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "The default ground drive; wheels are about as ancient as organised society itself.",
+        "automation": {
+          "key": "wheeled"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNif0c4708e238",
+      "_key": "!actors.items!dtdWcbe1943570fa.dtdNif0c4708e238",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Good Lightweight Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Good Lightweight frame: 10 HP and Resilience 4. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": -25,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 10,
+          "resilience": 4
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "10 HP, Resilience 4",
+        "automation": {
+          "key": "lightweightgood"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi4b9ab4affd9",
+      "_key": "!actors.items!dtdWcbe1943570fa.dtdNi4b9ab4affd9",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 2",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>2 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 3,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 2
+        },
+        "forWeapon": "",
+        "effect": "AP 2",
+        "automation": {
+          "key": "armor2"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNid5764d4d0f4",
+      "_key": "!actors.items!dtdWcbe1943570fa.dtdNid5764d4d0f4",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Remote Uplink",
+      "type": "vehicleComponent",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "description": "<p>Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 369
+        },
+        "category": "control",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.",
+        "automation": {
+          "key": "remoteUplink",
+          "remoteCost": "full",
+          "grants": "half"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi4c5f620d82b",
+      "_key": "!actors.items!dtdWcbe1943570fa.dtdNi4c5f620d82b",
+      "folder": "dtdVFd6dd3fd3e58"
+    },
+    {
+      "name": "Passenger Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
+        "automation": {
+          "key": "passengerSpace",
+          "perUnitBySize": {
+            "1-10": 1,
+            "11-20": 5,
+            "21-30": 50
+          },
+          "unit": "seats"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi5e12e26e5f8",
+      "_key": "!actors.items!dtdWcbe1943570fa.dtdNi5e12e26e5f8",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Afterburners",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.",
+        "automation": {
+          "key": "afterburners",
+          "punchItAs": "half",
+          "usesPerScenePerPurchase": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi0ecffd2d0f2",
+      "_key": "!actors.items!dtdWcbe1943570fa.dtdNi0ecffd2d0f2",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "XL Engine (Rating 2) (Miniaturized)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Oversized engine adding 2 to maximum Momentum, even beyond the usual cap of 10.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 373
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Oversized engine adding 2 to maximum Momentum, even beyond the usual cap of 10.",
+        "automation": {
+          "key": "xlEngine2",
+          "maxMomentumBonus": 2,
+          "miniaturized": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNic52f6cafb73",
+      "_key": "!actors.items!dtdWcbe1943570fa.dtdNic52f6cafb73",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Open Topped",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "category": "modification",
+        "cost": 0,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.",
+        "automation": {
+          "key": "openTopped",
+          "blocksLineOfSight": false,
+          "incompatible": [
+            "Environmental Seals"
+          ]
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNib05e802e9fc",
+      "_key": "!actors.items!dtdWcbe1943570fa.dtdNib05e802e9fc",
+      "folder": "dtdVFdc18f9abf79"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Super Bike",
+    "actorLink": true,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdWcbe1943570fa",
+  "_key": "!actors!dtdWcbe1943570fa",
+  "folder": "dtdWFd1b7181af7f"
+}

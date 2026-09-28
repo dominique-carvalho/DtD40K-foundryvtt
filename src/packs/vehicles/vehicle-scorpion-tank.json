@@ -1,0 +1,452 @@
+{
+  "name": "Scorpion Tank",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "size": 14,
+    "speed": 4,
+    "acceleration": 0,
+    "maneuver": 0,
+    "momentum": 0,
+    "budget": {
+      "tier": "veryRare"
+    },
+    "hp": {
+      "value": 15,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "150 (Very Rare)",
+      "slots": "14/14"
+    },
+    "description": "<p>Two-crew tracked tank with medium plating and a long gun; its turbine tends to run hot and it handles poorly, being built for war rather than racing.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 381
+    }
+  },
+  "items": [
+    {
+      "name": "Tracked Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/direction.svg",
+      "system": {
+        "description": "<p>Treads handle rough ground far better than wheels, at the price of a much slower top speed.</p><p><strong>Caterpillar.</strong> No movement penalty from difficult terrain.</p><p><strong>Tough.</strong> Crit Damage rolls happen only per 10 HP lost instead of per 5 wounds.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "drivetrain",
+        "cost": 15,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 3,
+          "controlSkill": "drive",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Treads handle rough ground far better than wheels, at the price of a much slower top speed.",
+        "automation": {
+          "key": "tracked",
+          "ignoreDifficultTerrainPenalty": true,
+          "critEvery": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi73c03b4b1bb",
+      "_key": "!actors.items!dtdW915e3e2ec000.dtdNi73c03b4b1bb",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Reinforced Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Normal Reinforced frame: 15 HP and Resilience 11. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 40,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 15,
+          "resilience": 11
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "15 HP, Resilience 11",
+        "automation": {
+          "key": "reinforcednormal"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi4e33d118be2",
+      "_key": "!actors.items!dtdW915e3e2ec000.dtdNi4e33d118be2",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 10",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>10 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 40,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 10
+        },
+        "forWeapon": "",
+        "effect": "AP 10",
+        "automation": {
+          "key": "armor10"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi6a18f7948f5",
+      "_key": "!actors.items!dtdW915e3e2ec000.dtdNi6a18f7948f5",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Flawed (Overheating)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Loses 1 HP in each round with Momentum over 6 or in which Punch It is used.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Loses 1 HP in each round with Momentum over 6 or in which Punch It is used.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "overheating",
+          "hpLossPerRound": 1,
+          "trigger": "momentum>6 or punchIt"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi532e72ca3b8",
+      "_key": "!actors.items!dtdW915e3e2ec000.dtdNi532e72ca3b8",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Flawed (Unstable)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Control tests suffer 2 checks.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Control tests suffer 2 checks.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "unstable",
+          "controlTestChecks": 2
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNiefbe610519c",
+      "_key": "!actors.items!dtdW915e3e2ec000.dtdNiefbe610519c",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "SRM (Macronized)",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Short Range Missiles: direct-fire, less complex, trading reach for impact; good against troops and vehicles.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 379
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Launchers",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 4,
+          "kept": 4,
+          "type": "X",
+          "bonus": 10
+        },
+        "pen": 8,
+        "rof": {
+          "single": false,
+          "auto": 2
+        },
+        "range": {
+          "value": 250,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "blast",
+            "value": 5
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 5,
+          "cost": 45,
+          "macronized": 1,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi9434f376da8",
+      "_key": "!actors.items!dtdW915e3e2ec000.dtdNi9434f376da8"
+    },
+    {
+      "name": "SRM TC Warhead",
+      "type": "vehicleComponent",
+      "img": "icons/svg/explosion.svg",
+      "system": {
+        "description": "<p>Tandem-Charge: if the hit removes at least 1 HP, the target also rolls for vehicle crit damage.</p><p>Special.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 379
+        },
+        "category": "weaponUpgrade",
+        "cost": 5,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "SRM",
+        "effect": "Special",
+        "automation": {
+          "key": "srmTCWarhead",
+          "kind": "ammo",
+          "qualities": [],
+          "damage": null,
+          "pen": null,
+          "rof": null,
+          "range": null
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi62e59859ecb",
+      "_key": "!actors.items!dtdW915e3e2ec000.dtdNi62e59859ecb",
+      "folder": "dtdVFdbe7b88e2b5"
+    },
+    {
+      "name": "Light Punisher Gatling Cannon",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Rotary-barrel autocannon deadly to lightly armoured vehicles and big living targets; banned against infantry in many Spheres.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Ordinary / Punisher Gatling Cannon",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 0,
+        "rof": {
+          "single": false,
+          "auto": 10
+        },
+        "range": {
+          "value": 150,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "storm",
+            "value": null
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 2,
+          "cost": 10,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNiac418849538",
+      "_key": "!actors.items!dtdW915e3e2ec000.dtdNiac418849538"
+    },
+    {
+      "name": "Copilot Seat (Light Punisher Gatling Cannon)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "control",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
+        "automation": {
+          "key": "copilotSeat",
+          "copilotHalfActions": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNicd7d63ce838",
+      "_key": "!actors.items!dtdW915e3e2ec000.dtdNicd7d63ce838",
+      "folder": "dtdVFd6dd3fd3e58"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Scorpion Tank",
+    "actorLink": true,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdW915e3e2ec000",
+  "_key": "!actors!dtdW915e3e2ec000",
+  "folder": "dtdWFd1b7181af7f"
+}

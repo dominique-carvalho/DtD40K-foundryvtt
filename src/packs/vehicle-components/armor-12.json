@@ -1,0 +1,40 @@
+{
+  "name": "Armor 12",
+  "type": "vehicleComponent",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "description": "<p>12 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 368
+    },
+    "category": "armor",
+    "cost": 54,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 12
+    },
+    "forWeapon": "",
+    "effect": "AP 12",
+    "automation": {
+      "key": "armor12"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV9258cf4aa0ab",
+  "_key": "!items!dtdV9258cf4aa0ab",
+  "folder": "dtdVFd0faaa33fc0"
+}

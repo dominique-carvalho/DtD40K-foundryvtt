@@ -1,0 +1,16 @@
+{
+  "_id": "dtdVFd6dd3fd3e58",
+  "_key": "!folders!dtdVFd6dd3fd3e58",
+  "name": "Control Systems",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 40000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "vehicleFolder": "control"
+    }
+  }
+}

@@ -1,0 +1,605 @@
+{
+  "name": "Ballistic Submarine",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "size": 26,
+    "speed": 2,
+    "acceleration": 0,
+    "maneuver": 0,
+    "momentum": 0,
+    "budget": {
+      "tier": "holdings1"
+    },
+    "hp": {
+      "value": 15,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "250 (Holdings 1)",
+      "slots": "26/26"
+    },
+    "description": "<p>Stealthy covert-ops sub with room for 100 crew, strong sensors and a missile launch tube for striking shore targets.</p><p>Carries 100 passengers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 382
+    }
+  },
+  "items": [
+    {
+      "name": "Naval Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/direction.svg",
+      "system": {
+        "description": "<p>Boats; a technology as old as the wheel, confined to water.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 366
+        },
+        "category": "drivetrain",
+        "cost": 5,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 3,
+          "controlSkill": "drive",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Boats; a technology as old as the wheel, confined to water.",
+        "automation": {
+          "key": "naval",
+          "waterOnly": true,
+          "leavingWater": "crash"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNiea26be7dcbf",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNiea26be7dcbf",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Reinforced Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Normal Reinforced frame: 15 HP and Resilience 11. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 40,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 15,
+          "resilience": 11
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "15 HP, Resilience 11",
+        "automation": {
+          "key": "reinforcednormal"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi4e5073fd644",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNi4e5073fd644",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 11",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>11 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 47,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 11
+        },
+        "forWeapon": "",
+        "effect": "AP 11",
+        "automation": {
+          "key": "armor11"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi90b6e0fd754",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNi90b6e0fd754",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Hidden Compartment",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>One chosen Cargo Space cannot be detected by outside scans.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 2,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "Cargo Space",
+        "effect": "One chosen Cargo Space cannot be detected by outside scans.",
+        "automation": {
+          "key": "hiddenCompartment"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNid7f2bf624eb",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNid7f2bf624eb",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Passenger Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 2,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
+        "automation": {
+          "key": "passengerSpace",
+          "perUnitBySize": {
+            "1-10": 1,
+            "11-20": 5,
+            "21-30": 50
+          },
+          "unit": "seats"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi3c9cb1897c7",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNi3c9cb1897c7",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "ECM",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Noisy sensor jamming toggled with a Half Action: long-range sensors (radar, lidar) cannot track the vehicle, though they clearly notice the interference.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Noisy sensor jamming toggled with a Half Action: long-range sensors (radar, lidar) cannot track the vehicle, though they clearly notice the interference.",
+        "automation": {
+          "key": "ecm",
+          "toggle": "half"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi940dd3c1544",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNi940dd3c1544",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Thermoptic Camo",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Active camouflage that beats the eye but not radar: the vehicle can roll Stealth + Dexterity or Intelligence under the usual Stealth rules.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 373
+        },
+        "category": "accessory",
+        "cost": 25,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Active camouflage that beats the eye but not radar: the vehicle can roll Stealth + Dexterity or Intelligence under the usual Stealth rules.",
+        "automation": {
+          "key": "thermopticCamo"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNid1736009abf",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNid1736009abf",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Environmental Seals",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 371
+        },
+        "category": "accessory",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
+        "automation": {
+          "key": "environmentalSeals",
+          "immune": [
+            "gas",
+            "water",
+            "fire"
+          ]
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi25c7c6366ff",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNi25c7c6366ff",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Sensor System (Advanced)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Pilot gets +10 on perception tests and auto-detects vehicles or ships lacking ECM within 20 km.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 20,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Pilot gets +10 on perception tests and auto-detects vehicles or ships lacking ECM within 20 km.",
+        "automation": {
+          "key": "sensorAdvanced",
+          "perception": 10,
+          "detectKm": 20
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi1e05629d3fd",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNi1e05629d3fd",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Diver Down (Submarine)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Needs Environmental Seals. Choose Subterranean (burrow through soil and rock, max Momentum 5, very hard materials may block it at SM call) or Submarine (move underwater at full top speed).</p><p>Options: Subterranean, Submarine.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": 20,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Needs Environmental Seals. Choose Subterranean (burrow through soil and rock, max Momentum 5, very hard materials may block it at SM call) or Submarine (move underwater at full top speed).",
+        "automation": {
+          "key": "diverDown"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi16c72ee788d",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNi16c72ee788d",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Flawed (Inefficient Controls)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Move costs a Full Action and Punch It is unavailable.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Move costs a Full Action and Punch It is unavailable.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "inefficientControls",
+          "moveAction": "full",
+          "punchIt": false
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi73e2f7ff762",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNi73e2f7ff762",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Flawed (Unstable)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Control tests suffer 2 checks.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Control tests suffer 2 checks.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "unstable",
+          "controlTestChecks": 2
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi73ca6e5afb3",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNi73ca6e5afb3",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Arrow IV Launcher (Macronized)",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Self-contained missile artillery; the one vehicle launcher strong enough to threaten starships.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 379
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Launchers",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 3,
+          "kept": 3,
+          "type": "X",
+          "bonus": 30
+        },
+        "pen": 10,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 1000,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "blast",
+            "value": 5
+          },
+          {
+            "key": "recharge",
+            "value": null
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Hybrid",
+          "slots": 8,
+          "cost": 100,
+          "macronized": 1,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi78370f49edc",
+      "_key": "!actors.items!dtdWf815ba76983e.dtdNi78370f49edc"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Ballistic Submarine",
+    "actorLink": true,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdWf815ba76983e",
+  "_key": "!actors!dtdWf815ba76983e",
+  "folder": "dtdWFd1b7181af7f"
+}

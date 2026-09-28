@@ -1,0 +1,42 @@
+{
+  "name": "Walker Drive",
+  "type": "vehicleComponent",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "description": "<p>Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.</p><p><strong>Leggy.</strong> Terrain that is normally impassible is treated only as difficult terrain.</p><p><strong>AMBAC.</strong> The pilot can stand the machine back up from prone with a Half Action.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 366
+    },
+    "category": "drivetrain",
+    "cost": 10,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 4,
+      "controlSkill": "drive",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.",
+    "automation": {
+      "key": "walker",
+      "impassibleAsDifficult": true,
+      "selfRight": "half"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVa72e7ad8a2ca",
+  "_key": "!items!dtdVa72e7ad8a2ca",
+  "folder": "dtdVFd7fd7f37f92"
+}

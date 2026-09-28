@@ -1,0 +1,40 @@
+{
+  "name": "Best Reinforced Frame",
+  "type": "vehicleComponent",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Best Reinforced frame: 35 HP and Resilience 13. Comes with a Cockpit.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 367
+    },
+    "category": "frame",
+    "cost": 250,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 35,
+      "resilience": 13
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "35 HP, Resilience 13",
+    "automation": {
+      "key": "reinforcedbest"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVe1b8aef7eb4b",
+  "_key": "!items!dtdVe1b8aef7eb4b",
+  "folder": "dtdVFdca3b9a90a8"
+}

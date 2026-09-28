@@ -1,0 +1,41 @@
+{
+  "name": "COFFIN",
+  "type": "vehicleComponent",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>A neural-link cockpit without windows; the pilot perceives through screens or a direct brain interface and gains 1 extra Reaction each round for vehicle use.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 369
+    },
+    "category": "control",
+    "cost": 15,
+    "slots": 1,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "A neural-link cockpit without windows; the pilot perceives through screens or a direct brain interface and gains 1 extra Reaction each round for vehicle use.",
+    "automation": {
+      "key": "coffin",
+      "extraReactions": 1
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV78b6c75cf426",
+  "_key": "!items!dtdV78b6c75cf426",
+  "folder": "dtdVFd6dd3fd3e58"
+}

@@ -1,0 +1,15 @@
+<div class="dtd40k vehicle-repair-dialog">
+  <p class="hint">{{localize "DTD.Vehicle.RepairHint" size=size hpLost=hpLost tn=tn}}</p>
+  <div class="form-group">
+    <label>{{localize "DTD.Vehicle.ChiefEngineer"}}</label>
+    <select name="engineer">
+      <option value="">—</option>
+      {{#each engineers as |e|}}<option value="{{e.uuid}}" {{#if e.selected}}selected{{/if}}>{{e.name}} (Crafts {{e.crafts}})</option>{{/each}}
+    </select>
+  </div>
+  <div class="form-group">
+    <label>{{localize "DTD.Vehicle.RepairDots"}}</label>
+    <input type="number" name="dots" value="0" min="0">
+  </div>
+  <p class="hint">{{localize "DTD.Vehicle.RepairDotsHint"}}</p>
+</div>

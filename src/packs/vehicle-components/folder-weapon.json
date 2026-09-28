@@ -1,0 +1,16 @@
+{
+  "_id": "dtdVFdbe7b88e2b5",
+  "_key": "!folders!dtdVFdbe7b88e2b5",
+  "name": "Weapons",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 80000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "vehicleFolder": "weapon"
+    }
+  }
+}

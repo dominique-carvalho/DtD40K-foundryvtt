@@ -1,0 +1,632 @@
+{
+  "name": "Variable Man Machine",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "size": 18,
+    "speed": 6,
+    "acceleration": 1,
+    "maneuver": 5,
+    "momentum": 0,
+    "budget": {
+      "tier": "holdings2"
+    },
+    "hp": {
+      "value": 20,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "300 (Holdings 2)",
+      "slots": "18/18"
+    },
+    "description": "<p>Transforming mecha/aircraft hybrid usable in almost any theatre; favoured by aces for its mix of speed and guns.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 382
+    }
+  },
+  "items": [
+    {
+      "name": "Aerospace Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/wing.svg",
+      "system": {
+        "description": "<p>Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.</p><p><strong>Stalin.</strong> Must keep moving or start to fall: it needs Momentum 3 to take off and must cover at least 30 x base Speed meters per round to stay up.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "drivetrain",
+        "cost": 30,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 10,
+          "controlSkill": "pilot",
+          "minMomentum": 3,
+          "flying": true
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.",
+        "automation": {
+          "key": "aerospace",
+          "takeoffMomentum": 3,
+          "minMetersPerRound": "30 x Speed"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNicf207116610",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNicf207116610",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Walker Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/direction.svg",
+      "system": {
+        "description": "<p>Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.</p><p><strong>Leggy.</strong> Terrain that is normally impassible is treated only as difficult terrain.</p><p><strong>AMBAC.</strong> The pilot can stand the machine back up from prone with a Half Action.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 366
+        },
+        "category": "drivetrain",
+        "cost": 10,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 4,
+          "controlSkill": "drive",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.",
+        "automation": {
+          "key": "walker",
+          "impassibleAsDifficult": true,
+          "selfRight": "half"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi515311b2deb",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNi515311b2deb",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Good Standard Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Good Standard frame: 20 HP and Resilience 11. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 60,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 20,
+          "resilience": 11
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "20 HP, Resilience 11",
+        "automation": {
+          "key": "standardgood"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi4e3e8158f1a",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNi4e3e8158f1a",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 9",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>9 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 35,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 9
+        },
+        "forWeapon": "",
+        "effect": "AP 9",
+        "automation": {
+          "key": "armor9"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNibc67613856a",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNibc67613856a",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Ejector Seat",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.",
+        "automation": {
+          "key": "ejectorSeat",
+          "ejectDistance": 100
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi3a21f19550b",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNi3a21f19550b",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Environmental Seals",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 371
+        },
+        "category": "accessory",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
+        "automation": {
+          "key": "environmentalSeals",
+          "immune": [
+            "gas",
+            "water",
+            "fire"
+          ]
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi0b3ddd8325d",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNi0b3ddd8325d",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Sensor System (Standard)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
+        "automation": {
+          "key": "sensorStandard",
+          "perception": 5,
+          "detectKm": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi997f74def73",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNi997f74def73",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Light Wards",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Etched anti-magic runes giving Aura 5.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 371
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Etched anti-magic runes giving Aura 5.",
+        "automation": {
+          "key": "lightWards",
+          "aura": 5
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNic701e7cd88e",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNic701e7cd88e",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Manipulator Arms (Standard)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 15,
+        "slots": 3,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.",
+        "automation": {
+          "key": "manipulatorArms",
+          "strength": 6,
+          "maxStrength": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi43865a0f183",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNi43865a0f183",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Mobile Decouplers",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Swapping between drivetrains becomes a Reaction instead of a Half Action.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "category": "modification",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Swapping between drivetrains becomes a Reaction instead of a Half Action.",
+        "automation": {
+          "key": "mobileDecouplers",
+          "swapDrivetrain": "reaction"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi75348c8f882",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNi75348c8f882",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "AC/2",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Smallest standard autocannon calibre; long reach and able to load special ammunition.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Ordinary / Autocannon",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 5,
+        "rof": {
+          "single": true,
+          "auto": 2
+        },
+        "range": {
+          "value": 500,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "proven",
+            "value": 3
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 2,
+          "cost": 10,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi104d7dca8da",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNi104d7dca8da"
+    },
+    {
+      "name": "SRM",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Short Range Missiles: direct-fire, less complex, trading reach for impact; good against troops and vehicles.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 379
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Launchers",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 4,
+          "kept": 4,
+          "type": "X",
+          "bonus": 10
+        },
+        "pen": 8,
+        "rof": {
+          "single": false,
+          "auto": 2
+        },
+        "range": {
+          "value": 250,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "blast",
+            "value": 5
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 5,
+          "cost": 45,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNid22a5b358ef",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNid22a5b358ef"
+    },
+    {
+      "name": "Ordinary Vehicle CQC Weapon",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "<p>Vehicle melee weapon (mostly on mecha); pick one category for its quality and add the vehicle's Strength to damage.</p><p>Choose a category, which sets the quality: Proven 4 for Ordinary, Thrown 10m for Parrying, Reach 5m for Cavalry, Flexible for Flail, Balanced for Fencing, Volatile, Unwieldy for Two Handed, Power Field for Syrneth, Tearing for Chain, Defensive for Shields, Brawling, Arm Mounted for Unarmed. Damage is Impact or Rending by category; adds the vehicle's Strength to damage, like any melee weapon.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 379
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Melee",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 0,
+          "kept": 5,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 5,
+        "rof": {
+          "single": false,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "proven",
+            "value": 4
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 2,
+          "cost": 15,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi3f5f2c338cd",
+      "_key": "!actors.items!dtdWaa088e9fcfec.dtdNi3f5f2c338cd"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Variable Man Machine",
+    "actorLink": true,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdWaa088e9fcfec",
+  "_key": "!actors!dtdWaa088e9fcfec",
+  "folder": "dtdWFd1b7181af7f"
+}

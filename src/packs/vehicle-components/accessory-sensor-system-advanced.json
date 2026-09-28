@@ -1,0 +1,42 @@
+{
+  "name": "Sensor System (Advanced)",
+  "type": "vehicleComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Pilot gets +10 on perception tests and auto-detects vehicles or ships lacking ECM within 20 km.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 372
+    },
+    "category": "accessory",
+    "cost": 20,
+    "slots": 2,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "Pilot gets +10 on perception tests and auto-detects vehicles or ships lacking ECM within 20 km.",
+    "automation": {
+      "key": "sensorAdvanced",
+      "perception": 10,
+      "detectKm": 20
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV43c592af204a",
+  "_key": "!items!dtdV43c592af204a",
+  "folder": "dtdVFd29d4f0998d"
+}

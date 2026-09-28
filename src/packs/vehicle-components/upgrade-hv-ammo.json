@@ -1,0 +1,46 @@
+{
+  "name": "HV Ammo",
+  "type": "vehicleComponent",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>High-velocity rounds that double the gun's range.</p><p>Range Double.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 375
+    },
+    "category": "weaponUpgrade",
+    "cost": 10,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "Autocannon",
+    "effect": "Range Double",
+    "automation": {
+      "key": "hvAmmo",
+      "kind": "ammo",
+      "qualities": [],
+      "damage": null,
+      "pen": null,
+      "rof": null,
+      "range": "Double"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV0c226224049c",
+  "_key": "!items!dtdV0c226224049c",
+  "folder": "dtdVFdbe7b88e2b5"
+}

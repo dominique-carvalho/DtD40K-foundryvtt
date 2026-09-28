@@ -1,0 +1,42 @@
+{
+  "name": "Tracked Drive",
+  "type": "vehicleComponent",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "description": "<p>Treads handle rough ground far better than wheels, at the price of a much slower top speed.</p><p><strong>Caterpillar.</strong> No movement penalty from difficult terrain.</p><p><strong>Tough.</strong> Crit Damage rolls happen only per 10 HP lost instead of per 5 wounds.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 367
+    },
+    "category": "drivetrain",
+    "cost": 15,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 3,
+      "controlSkill": "drive",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "Treads handle rough ground far better than wheels, at the price of a much slower top speed.",
+    "automation": {
+      "key": "tracked",
+      "ignoreDifficultTerrainPenalty": true,
+      "critEvery": 10
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVb0c237fd85dd",
+  "_key": "!items!dtdVb0c237fd85dd",
+  "folder": "dtdVFd7fd7f37f92"
+}

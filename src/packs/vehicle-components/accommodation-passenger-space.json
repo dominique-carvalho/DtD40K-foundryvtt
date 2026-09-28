@@ -1,0 +1,46 @@
+{
+  "name": "Passenger Space",
+  "type": "vehicleComponent",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 370
+    },
+    "category": "accommodation",
+    "cost": 0,
+    "slots": 1,
+    "perPurchase": true,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
+    "automation": {
+      "key": "passengerSpace",
+      "perUnitBySize": {
+        "1-10": 1,
+        "11-20": 5,
+        "21-30": 50
+      },
+      "unit": "seats"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV0b60282fbf74",
+  "_key": "!items!dtdV0b60282fbf74",
+  "folder": "dtdVFd30af0a9aef"
+}

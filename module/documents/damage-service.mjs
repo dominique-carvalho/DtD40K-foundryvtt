@@ -3,6 +3,7 @@ import { resolveDamage } from "../rules/damage.mjs";
 import { addFatigue, rollValue, toggleCondition } from "./condition-service.mjs";
 import { removeMinions } from "./minion-service.mjs";
 import { casualties } from "../rules/minions.mjs";
+import { applyVehicleDamage } from "./vehicle-service.mjs";
 
 /**
  * Applying damage to targets and critical effects (spec 008, US1; research R1/R2).
@@ -68,6 +69,11 @@ export async function applyDamage(message, tokenUuids) {
       const before = actor.system.count;
       await removeMinions(actor, casualties({ raises: damage.raises ?? 0, blast: damage.blast ?? 0 }));
       squads.push({ actorUuid: actor.uuid, minion: true, before: { count: before } });
+      continue;
+    }
+    // Vehicles: their AP and Resilience, no Critical Damage, vehicle criticals by scene wounds (spec 013, FR-010).
+    if (actor?.type === "vehicle") {
+      applied.push(await applyVehicleDamage(actor, token, damage));
       continue;
     }
     if (actor?.type !== "character" && actor?.type !== "npc") {
@@ -180,6 +186,10 @@ export async function undoDamage(message) {
     if (!actor) continue;
     if (entry.minion) {
       await actor.update({ "system.count": entry.before.count });
+      continue;
+    }
+    if (entry.vehicle) {
+      await actor.update({ "system.hp.value": entry.before.hp, "system.hp.temp": entry.before.temp, "system.momentum": entry.before.momentum, "system.state": entry.before.state });
       continue;
     }
     const added = actor.effects.filter((effect) => !entry.before.effects.includes(effect.id)).map((effect) => effect.id);

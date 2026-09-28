@@ -1,0 +1,40 @@
+{
+  "name": "Luxury Accommodations",
+  "type": "vehicleComponent",
+  "img": "icons/svg/chest.svg",
+  "system": {
+    "description": "<p>Makes a chosen Passenger Space plush and possibly private.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 370
+    },
+    "category": "accommodation",
+    "cost": 5,
+    "slots": 0,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "Passenger Space",
+    "effect": "Makes a chosen Passenger Space plush and possibly private.",
+    "automation": {
+      "key": "luxuryAccommodations"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVfefbcf516459",
+  "_key": "!items!dtdVfefbcf516459",
+  "folder": "dtdVFd30af0a9aef"
+}

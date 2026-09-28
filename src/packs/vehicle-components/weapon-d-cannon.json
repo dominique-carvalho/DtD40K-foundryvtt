@@ -1,0 +1,59 @@
+{
+  "name": "D-Cannon",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Copied Syrneth warp weapon that opens tiny rifts inside the target, bypassing nearly any armour.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 378
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Syrneth",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 10,
+      "kept": 4,
+      "type": "E",
+      "bonus": 10
+    },
+    "pen": 25,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 50,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "volatile",
+        "value": null
+      }
+    ],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Vhcl",
+      "slots": 5,
+      "cost": 55,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV5358b0c13083",
+  "_key": "!items!dtdV5358b0c13083",
+  "folder": "dtdVFdbe7b88e2b5"
+}

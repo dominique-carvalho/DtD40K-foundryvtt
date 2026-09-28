@@ -1,0 +1,40 @@
+{
+  "name": "Personal Weapon Mount",
+  "type": "vehicleComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Holds one infantry-scale weapon, always braced; installing or removing it takes an hour.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 372
+    },
+    "category": "accessory",
+    "cost": 5,
+    "slots": 1,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "Holds one infantry-scale weapon, always braced; installing or removing it takes an hour.",
+    "automation": {
+      "key": "personalWeaponMount"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV771472eb69a5",
+  "_key": "!items!dtdV771472eb69a5",
+  "folder": "dtdVFd29d4f0998d"
+}

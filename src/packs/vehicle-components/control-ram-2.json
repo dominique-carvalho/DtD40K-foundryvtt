@@ -1,0 +1,41 @@
+{
+  "name": "RAM/2",
+  "type": "vehicleComponent",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>AI gets 2 bonus Half Actions per scene (still max one per round).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 369
+    },
+    "category": "control",
+    "cost": 10,
+    "slots": 0,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "Onboard AI (RAM Array)",
+    "effect": "AI gets 2 bonus Half Actions per scene (still max one per round).",
+    "automation": {
+      "key": "ram2",
+      "bonusHalfActionsPerScene": 2
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVf2bc37f93fbe",
+  "_key": "!items!dtdVf2bc37f93fbe",
+  "folder": "dtdVFd6dd3fd3e58"
+}

@@ -1,0 +1,339 @@
+{
+  "name": "Megatruck",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "size": 18,
+    "speed": 3,
+    "acceleration": 0,
+    "maneuver": 0,
+    "momentum": 0,
+    "budget": {
+      "tier": "uncommon"
+    },
+    "hp": {
+      "value": 10,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "50 (Uncommon)",
+      "slots": "18/18"
+    },
+    "description": "<p>Lumbering freight hauler that shuttles goods between starports and markets across the Spheres.</p><p>Carries 5 passengers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 380
+    }
+  },
+  "items": [
+    {
+      "name": "Wheeled Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/direction.svg",
+      "system": {
+        "description": "<p>The default ground drive; wheels are about as ancient as organised society itself.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 366
+        },
+        "category": "drivetrain",
+        "cost": 5,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 5,
+          "controlSkill": "drive",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "The default ground drive; wheels are about as ancient as organised society itself.",
+        "automation": {
+          "key": "wheeled"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi55cb37c6d24",
+      "_key": "!actors.items!dtdW7941886f01c0.dtdNi55cb37c6d24",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Standard Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Normal Standard frame: 10 HP and Resilience 10. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 15,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 10,
+          "resilience": 10
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "10 HP, Resilience 10",
+        "automation": {
+          "key": "standardnormal"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNiec069eae10b",
+      "_key": "!actors.items!dtdW7941886f01c0.dtdNiec069eae10b",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 5",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>5 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 15,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 5
+        },
+        "forWeapon": "",
+        "effect": "AP 5",
+        "automation": {
+          "key": "armor5"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi3a1e9f351f5",
+      "_key": "!actors.items!dtdW7941886f01c0.dtdNi3a1e9f351f5",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Cargo Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 17,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
+        "automation": {
+          "key": "cargoSpace",
+          "perUnitBySize": {
+            "1-10": 0.5,
+            "11-20": 2,
+            "21-30": 10
+          },
+          "unit": "m3"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNif0aa44cd0a6",
+      "_key": "!actors.items!dtdW7941886f01c0.dtdNif0aa44cd0a6",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Passenger Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
+        "automation": {
+          "key": "passengerSpace",
+          "perUnitBySize": {
+            "1-10": 1,
+            "11-20": 5,
+            "21-30": 50
+          },
+          "unit": "seats"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNie25c626ffe2",
+      "_key": "!actors.items!dtdW7941886f01c0.dtdNie25c626ffe2",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Flawed (Inefficient Controls)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Move costs a Full Action and Punch It is unavailable.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Move costs a Full Action and Punch It is unavailable.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "inefficientControls",
+          "moveAction": "full",
+          "punchIt": false
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNibcb7328014f",
+      "_key": "!actors.items!dtdW7941886f01c0.dtdNibcb7328014f",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Flawed (Unstable)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Control tests suffer 2 checks.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Control tests suffer 2 checks.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "unstable",
+          "controlTestChecks": 2
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNidad36b92853",
+      "_key": "!actors.items!dtdW7941886f01c0.dtdNidad36b92853",
+      "folder": "dtdVFdc18f9abf79"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Megatruck",
+    "actorLink": true,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdW7941886f01c0",
+  "_key": "!actors!dtdW7941886f01c0",
+  "folder": "dtdWFd1b7181af7f"
+}

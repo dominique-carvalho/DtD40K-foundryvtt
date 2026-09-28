@@ -1,0 +1,40 @@
+{
+  "name": "Best Standard Frame",
+  "type": "vehicleComponent",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Best Standard frame: 30 HP and Resilience 12. Comes with a Cockpit.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 367
+    },
+    "category": "frame",
+    "cost": 180,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 30,
+      "resilience": 12
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "30 HP, Resilience 12",
+    "automation": {
+      "key": "standardbest"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV0147ef3509e3",
+  "_key": "!items!dtdV0147ef3509e3",
+  "folder": "dtdVFdca3b9a90a8"
+}

@@ -1,0 +1,304 @@
+{
+  "name": "Type-32 RAV",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "size": 8,
+    "speed": 12,
+    "acceleration": 4,
+    "maneuver": 8,
+    "momentum": 0,
+    "budget": {
+      "tier": "veryRare"
+    },
+    "hp": {
+      "value": 10,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "150 (Very Rare)",
+      "slots": "8/8"
+    },
+    "description": "<p>Single-rider Tau scout hoverbike (Rapid Assault Vehicle) with a fixed forward multilas.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 380
+    }
+  },
+  "items": [
+    {
+      "name": "Hover Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/direction.svg",
+      "system": {
+        "description": "<p>Matches wheels for pace and needs less road, but steers like someone skating on a frozen pond.</p><p><strong>Rise Above.</strong> Difficult terrain does not slow it, and it can travel across liquid surfaces as if on ground.</p><p><strong>Slide About.</strong> Handling is slippery: every Control Test needs 2 additional raises to pass.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 366
+        },
+        "category": "drivetrain",
+        "cost": 10,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 5,
+          "controlSkill": "drive",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Matches wheels for pace and needs less road, but steers like someone skating on a frozen pond.",
+        "automation": {
+          "key": "hover",
+          "ignoreDifficultTerrainSlow": true,
+          "crossLiquid": true,
+          "controlTestExtraRaises": 2
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi324df0a4c1e",
+      "_key": "!actors.items!dtdWd53366f0db75.dtdNi324df0a4c1e",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Good Lightweight Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Good Lightweight frame: 10 HP and Resilience 4. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": -25,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 10,
+          "resilience": 4
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "10 HP, Resilience 4",
+        "automation": {
+          "key": "lightweightgood"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNiba664f4db6c",
+      "_key": "!actors.items!dtdWd53366f0db75.dtdNiba664f4db6c",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 7",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>7 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 25,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 7
+        },
+        "forWeapon": "",
+        "effect": "AP 7",
+        "automation": {
+          "key": "armor7"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi82cabc2e978",
+      "_key": "!actors.items!dtdWd53366f0db75.dtdNi82cabc2e978",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Afterburners",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 2,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.",
+        "automation": {
+          "key": "afterburners",
+          "punchItAs": "half",
+          "usesPerScenePerPurchase": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi15f53875927",
+      "_key": "!actors.items!dtdWd53366f0db75.dtdNi15f53875927",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Open Topped",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "category": "modification",
+        "cost": 0,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.",
+        "automation": {
+          "key": "openTopped",
+          "blocksLineOfSight": false,
+          "incompatible": [
+            "Environmental Seals"
+          ]
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi2600d0bd705",
+      "_key": "!actors.items!dtdWd53366f0db75.dtdNi2600d0bd705",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Multilas (Macronized)",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Pulsed rapid-fire laser, mainly an anti-infantry tool.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 376
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Las",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 3,
+          "kept": 3,
+          "type": "E",
+          "bonus": 10
+        },
+        "pen": 0,
+        "rof": {
+          "single": false,
+          "auto": 10
+        },
+        "range": {
+          "value": 500,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 2,
+          "cost": 10,
+          "macronized": 1,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi52206b6fb52",
+      "_key": "!actors.items!dtdWd53366f0db75.dtdNi52206b6fb52"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Type-32 RAV",
+    "actorLink": true,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdWd53366f0db75",
+  "_key": "!actors!dtdWd53366f0db75",
+  "folder": "dtdWFd1b7181af7f"
+}

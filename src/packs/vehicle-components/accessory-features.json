@@ -1,0 +1,41 @@
+{
+  "name": "Features",
+  "type": "vehicleComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>A minor gadget (alarm, camera, lights, tow cable, radar detector...) worth at most +1k0 in fitting situations, as the SM rules; never better than a real dedicated system.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 371
+    },
+    "category": "accessory",
+    "cost": 5,
+    "slots": 0,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "A minor gadget (alarm, camera, lights, tow cable, radar detector...) worth at most +1k0 in fitting situations, as the SM rules; never better than a real dedicated system.",
+    "automation": {
+      "key": "features",
+      "bonus": "+1k0"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV9c83cb5a7d93",
+  "_key": "!items!dtdV9c83cb5a7d93",
+  "folder": "dtdVFd29d4f0998d"
+}

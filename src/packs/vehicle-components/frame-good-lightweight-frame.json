@@ -1,0 +1,40 @@
+{
+  "name": "Good Lightweight Frame",
+  "type": "vehicleComponent",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Good Lightweight frame: 10 HP and Resilience 4. Comes with a Cockpit.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 367
+    },
+    "category": "frame",
+    "cost": -25,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 10,
+      "resilience": 4
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "10 HP, Resilience 4",
+    "automation": {
+      "key": "lightweightgood"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVab06305a7f72",
+  "_key": "!items!dtdVab06305a7f72",
+  "folder": "dtdVFdca3b9a90a8"
+}

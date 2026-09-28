@@ -1,0 +1,41 @@
+{
+  "name": "Cockpit",
+  "type": "vehicleComponent",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>The standard pilot seat that controls every system; every frame comes with one at no charge.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 368
+    },
+    "category": "control",
+    "cost": null,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "The standard pilot seat that controls every system; every frame comes with one at no charge.",
+    "automation": {
+      "key": "cockpit",
+      "includedWithFrame": true
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVaca198e06d59",
+  "_key": "!items!dtdVaca198e06d59",
+  "folder": "dtdVFd6dd3fd3e58"
+}

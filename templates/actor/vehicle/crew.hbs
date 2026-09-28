@@ -1,0 +1,34 @@
+<section class="tab vehicle-crew {{tabs.crew.cssClass}}" data-group="primary" data-tab="crew">
+  <p class="hint">{{localize "DTD.Vehicle.CrewHint"}}</p>
+  <ol class="vehicle-rows">
+    {{#each crew as |c|}}
+    <li class="vehicle-row crew-row" data-uuid="{{c.uuid}}">
+      <img class="crew-img" src="{{c.img}}" alt="{{c.name}}">
+      <a class="row-name" data-action="openCrew">{{c.name}}</a>
+      <select class="crew-role" data-uuid="{{c.uuid}}" {{#unless @root.editable}}disabled{{/unless}}>
+        {{#each c.roleOptions as |r|}}<option value="{{r.value}}" {{#if r.selected}}selected{{/if}}>{{r.label}}</option>{{/each}}
+      </select>
+      <span class="row-effect hint">{{c.weapons}}</span>
+      {{#if @root.editable}}<a class="row-delete" data-action="removeCrew" data-tooltip="{{localize "DTD.Vehicle.Disembark"}}"><i class="fa-solid fa-person-walking-arrow-right" inert></i></a>{{/if}}
+    </li>
+    {{else}}
+    <li class="hint">{{localize "DTD.Vehicle.NoCrew"}}</li>
+    {{/each}}
+  </ol>
+  {{#if weapons.length}}
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Vehicle.Gunners"}}</h3>
+    <ol class="vehicle-rows">
+      {{#each weapons as |w|}}
+      <li class="vehicle-row">
+        <span class="row-name">{{w.name}}</span>
+        <select class="weapon-gunner" data-item-id="{{w.id}}" {{#unless @root.editable}}disabled{{/unless}}>
+          <option value="">{{localize "DTD.Vehicle.Role.pilot"}}</option>
+          {{#each @root.crewChoices as |c|}}<option value="{{c.uuid}}" {{#if (eq c.uuid w.gunner)}}selected{{/if}}>{{c.name}}</option>{{/each}}
+        </select>
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+  {{/if}}
+</section>

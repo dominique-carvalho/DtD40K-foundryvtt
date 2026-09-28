@@ -1,0 +1,16 @@
+{
+  "_id": "dtdWFd1b7181af7f",
+  "_key": "!folders!dtdWFd1b7181af7f",
+  "name": "Example Vehicles",
+  "type": "Actor",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 10000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "vehicleFolder": "vehicles"
+    }
+  }
+}

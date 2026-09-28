@@ -1,0 +1,41 @@
+{
+  "name": "SYNC",
+  "type": "vehicleComponent",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "description": "<p>COFFIN upgrade: once each round the pilot may reroll one vehicle action.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 369
+    },
+    "category": "control",
+    "cost": 15,
+    "slots": 1,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "COFFIN",
+    "effect": "COFFIN upgrade: once each round the pilot may reroll one vehicle action.",
+    "automation": {
+      "key": "sync",
+      "rerollsPerRound": 1
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVd2f32495113e",
+  "_key": "!items!dtdVd2f32495113e",
+  "folder": "dtdVFd6dd3fd3e58"
+}

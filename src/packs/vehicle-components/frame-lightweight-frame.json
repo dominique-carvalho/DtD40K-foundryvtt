@@ -1,0 +1,40 @@
+{
+  "name": "Lightweight Frame",
+  "type": "vehicleComponent",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Normal Lightweight frame: 5 HP and Resilience 2. Comes with a Cockpit.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 367
+    },
+    "category": "frame",
+    "cost": -75,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 5,
+      "resilience": 2
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "5 HP, Resilience 2",
+    "automation": {
+      "key": "lightweightnormal"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV957449dc055d",
+  "_key": "!items!dtdV957449dc055d",
+  "folder": "dtdVFdca3b9a90a8"
+}

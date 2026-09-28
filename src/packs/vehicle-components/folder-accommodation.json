@@ -1,0 +1,16 @@
+{
+  "_id": "dtdVFd30af0a9aef",
+  "_key": "!folders!dtdVFd30af0a9aef",
+  "name": "Accommodations",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 50000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "vehicleFolder": "accommodation"
+    }
+  }
+}

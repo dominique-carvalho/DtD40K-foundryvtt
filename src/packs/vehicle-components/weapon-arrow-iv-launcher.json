@@ -1,0 +1,63 @@
+{
+  "name": "Arrow IV Launcher",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Self-contained missile artillery; the one vehicle launcher strong enough to threaten starships.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 379
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Launchers",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 3,
+      "kept": 3,
+      "type": "X",
+      "bonus": 30
+    },
+    "pen": 10,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 1000,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "blast",
+        "value": 5
+      },
+      {
+        "key": "recharge",
+        "value": null
+      }
+    ],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Hybrid",
+      "slots": 8,
+      "cost": 100,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV46a93b8f9c54",
+  "_key": "!items!dtdV46a93b8f9c54",
+  "folder": "dtdVFdbe7b88e2b5"
+}

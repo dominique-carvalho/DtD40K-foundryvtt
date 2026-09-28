@@ -1,0 +1,42 @@
+{
+  "name": "Afterburners",
+  "type": "vehicleComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 370
+    },
+    "category": "accessory",
+    "cost": 10,
+    "slots": 2,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.",
+    "automation": {
+      "key": "afterburners",
+      "punchItAs": "half",
+      "usesPerScenePerPurchase": 1
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV6a7bb6a2a085",
+  "_key": "!items!dtdV6a7bb6a2a085",
+  "folder": "dtdVFd29d4f0998d"
+}

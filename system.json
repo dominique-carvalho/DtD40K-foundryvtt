@@ -48,6 +48,11 @@
         "htmlFields": [
           "description"
         ]
+      },
+      "vehicle": {
+        "htmlFields": [
+          "description"
+        ]
       }
     },
     "Item": {
@@ -106,6 +111,11 @@
         ]
       },
       "deity": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "vehicleComponent": {
         "htmlFields": [
           "description"
         ]
@@ -231,6 +241,28 @@
       "system": "dtd40k",
       "ownership": {
         "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "vehicle-components",
+      "label": "Vehicle Components",
+      "path": "packs/vehicle-components",
+      "type": "Item",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "vehicles",
+      "label": "Vehicles",
+      "path": "packs/vehicles",
+      "type": "Actor",
+      "system": "dtd40k",
+      "ownership": {
+        "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
     }

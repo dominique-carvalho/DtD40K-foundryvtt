@@ -1,0 +1,40 @@
+{
+  "name": "Armor 3",
+  "type": "vehicleComponent",
+  "img": "icons/svg/statue.svg",
+  "system": {
+    "description": "<p>3 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 368
+    },
+    "category": "armor",
+    "cost": 6,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 3
+    },
+    "forWeapon": "",
+    "effect": "AP 3",
+    "automation": {
+      "key": "armor3"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVe5a0908f1959",
+  "_key": "!items!dtdVe5a0908f1959",
+  "folder": "dtdVFd0faaa33fc0"
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdVFdc18f9abf79",
+  "_key": "!folders!dtdVFdc18f9abf79",
+  "name": "Modifications",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 70000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "vehicleFolder": "modification"
+    }
+  }
+}

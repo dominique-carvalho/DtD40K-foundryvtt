@@ -1,0 +1,42 @@
+{
+  "name": "Jump Jets (Improved)",
+  "type": "vehicleComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>As Standard Jump Jets but with only 1 round of cooldown.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 372
+    },
+    "category": "accessory",
+    "cost": 10,
+    "slots": 4,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "As Standard Jump Jets but with only 1 round of cooldown.",
+    "automation": {
+      "key": "jumpJetsImproved",
+      "activation": "half",
+      "cooldownRounds": 1
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV22c6643aaceb",
+  "_key": "!items!dtdV22c6643aaceb",
+  "folder": "dtdVFd29d4f0998d"
+}

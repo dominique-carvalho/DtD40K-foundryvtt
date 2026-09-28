@@ -1,0 +1,16 @@
+{
+  "_id": "dtdVFd0faaa33fc0",
+  "_key": "!folders!dtdVFd0faaa33fc0",
+  "name": "Armor",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 30000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "vehicleFolder": "armor"
+    }
+  }
+}

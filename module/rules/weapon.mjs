@@ -166,8 +166,8 @@ export function attackPool({ weapon, skill, level, proficient, focus = false, op
  * @param {number} [input.extraHits]      full auto hits beyond the first
  * @param {boolean} [input.specialization] Weapon Specialization for this weapon (+2k0, p. 197)
  * @param {number} [input.raises]         raises of the attack
- * @returns {{rolled: number, kept: number, explodeOn: number, rerollBelow: number, pen: number, type: string,
- *   notes: string[]}}
+ * @returns {{rolled: number, kept: number, flat: number, explodeOn: number, rerollBelow: number, pen: number,
+ *   type: string, notes: string[]}}
  */
 export function damagePool({ weapon, str, options = {}, extraHits = 0, specialization = false, raises = 0 }) {
   const { thrown = false, mode = "single", aim = 0, range = "normal" } = options;
@@ -177,6 +177,8 @@ export function damagePool({ weapon, str, options = {}, extraHits = 0, specializ
   const pool = {
     rolled: weapon.damage.rolled,
     kept: weapon.damage.kept,
+    // Flat bonus of vehicle weapons, e.g. AC/2 4k2+10 (spec 013, p. 377).
+    flat: weapon.damage.bonus ?? 0,
     explodeOn: qualities.volatile ? 9 : 10,
     rerollBelow: typeof qualities.proven === "number" ? qualities.proven : 0,
     pen: weapon.pen,

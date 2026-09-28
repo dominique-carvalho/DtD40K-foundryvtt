@@ -1,0 +1,549 @@
+{
+  "name": "Jumbojet",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "size": 24,
+    "speed": 13,
+    "acceleration": 1,
+    "maneuver": 5,
+    "momentum": 0,
+    "budget": {
+      "tier": "mythicRare"
+    },
+    "hp": {
+      "value": 15,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "200 (Mythic Rare)",
+      "slots": "24/24"
+    },
+    "description": "<p>Huge airliner seen only on highly developed worlds, flying more than 350 people very fast.</p><p>Carries 300 passengers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 381
+    }
+  },
+  "items": [
+    {
+      "name": "Aerospace Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/wing.svg",
+      "system": {
+        "description": "<p>Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.</p><p><strong>Stalin.</strong> Must keep moving or start to fall: it needs Momentum 3 to take off and must cover at least 30 x base Speed meters per round to stay up.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "drivetrain",
+        "cost": 30,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 10,
+          "controlSkill": "pilot",
+          "minMomentum": 3,
+          "flying": true
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.",
+        "automation": {
+          "key": "aerospace",
+          "takeoffMomentum": 3,
+          "minMetersPerRound": "30 x Speed"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNia21ea2e7e9e",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNia21ea2e7e9e",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Reinforced Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Normal Reinforced frame: 15 HP and Resilience 11. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 40,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 15,
+          "resilience": 11
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "15 HP, Resilience 11",
+        "automation": {
+          "key": "reinforcednormal"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi8ea043bf000",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNi8ea043bf000",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 4",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>4 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 10,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 4
+        },
+        "forWeapon": "",
+        "effect": "AP 4",
+        "automation": {
+          "key": "armor4"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi0cf2c473e1f",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNi0cf2c473e1f",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Cargo Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 8,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
+        "automation": {
+          "key": "cargoSpace",
+          "perUnitBySize": {
+            "1-10": 0.5,
+            "11-20": 2,
+            "21-30": 10
+          },
+          "unit": "m3"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNif74fa4a3f44",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNif74fa4a3f44",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Passenger Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 6,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
+        "automation": {
+          "key": "passengerSpace",
+          "perUnitBySize": {
+            "1-10": 1,
+            "11-20": 5,
+            "21-30": 50
+          },
+          "unit": "seats"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi7925205367d",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNi7925205367d",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Luxury Accommodations",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Makes a chosen Passenger Space plush and possibly private.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 2,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "Passenger Space",
+        "effect": "Makes a chosen Passenger Space plush and possibly private.",
+        "automation": {
+          "key": "luxuryAccommodations"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNiae8a4bfb710",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNiae8a4bfb710",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Copilot Seat",
+      "type": "vehicleComponent",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "control",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
+        "automation": {
+          "key": "copilotSeat",
+          "copilotHalfActions": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi72f4d019d74",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNi72f4d019d74",
+      "folder": "dtdVFd6dd3fd3e58"
+    },
+    {
+      "name": "Features (Copilot Override)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>A minor gadget (alarm, camera, lights, tow cable, radar detector...) worth at most +1k0 in fitting situations, as the SM rules; never better than a real dedicated system.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 371
+        },
+        "category": "accessory",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "A minor gadget (alarm, camera, lights, tow cable, radar detector...) worth at most +1k0 in fitting situations, as the SM rules; never better than a real dedicated system.",
+        "automation": {
+          "key": "features",
+          "bonus": "+1k0"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi10fff383cbf",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNi10fff383cbf",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Remote Uplink",
+      "type": "vehicleComponent",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "description": "<p>Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 369
+        },
+        "category": "control",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.",
+        "automation": {
+          "key": "remoteUplink",
+          "remoteCost": "full",
+          "grants": "half"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNib40faaa9ae1",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNib40faaa9ae1",
+      "folder": "dtdVFd6dd3fd3e58"
+    },
+    {
+      "name": "Environmental Seals",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 371
+        },
+        "category": "accessory",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
+        "automation": {
+          "key": "environmentalSeals",
+          "immune": [
+            "gas",
+            "water",
+            "fire"
+          ]
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNie80f1d9ae4c",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNie80f1d9ae4c",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Sensor System (Advanced) (Macronized)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Pilot gets +10 on perception tests and auto-detects vehicles or ships lacking ECM within 20 km.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 20,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Pilot gets +10 on perception tests and auto-detects vehicles or ships lacking ECM within 20 km.",
+        "automation": {
+          "key": "sensorAdvanced",
+          "perception": 10,
+          "detectKm": 20,
+          "macronized": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi2b7b18ea176",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNi2b7b18ea176",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Flawed (Hangar Queen)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>After each sortie it needs upkeep lasting the deployment time plus 8 hours.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "After each sortie it needs upkeep lasting the deployment time plus 8 hours.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "hangarQueen"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNid181e540f78",
+      "_key": "!actors.items!dtdW546097a6543c.dtdNid181e540f78",
+      "folder": "dtdVFdc18f9abf79"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Jumbojet",
+    "actorLink": true,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdW546097a6543c",
+  "_key": "!actors!dtdW546097a6543c",
+  "folder": "dtdWFd1b7181af7f"
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Ultra",
+  "type": "vehicleComponent",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Rapid-firing upgrade; the autocannon gains Storm.</p><p>Storm.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 375
+    },
+    "category": "weaponUpgrade",
+    "cost": 25,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "Autocannon",
+    "effect": "Storm",
+    "automation": {
+      "key": "ultra",
+      "kind": "upgrade",
+      "qualities": [
+        {
+          "key": "storm",
+          "value": null
+        }
+      ],
+      "damage": null,
+      "pen": null,
+      "rof": null,
+      "range": null
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVc7d6aebd7a0f",
+  "_key": "!items!dtdVc7d6aebd7a0f",
+  "folder": "dtdVFdbe7b88e2b5"
+}

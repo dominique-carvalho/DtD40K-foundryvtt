@@ -1,0 +1,254 @@
+{
+  "name": "Basic Ground Vehicle",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "size": 8,
+    "speed": 4,
+    "acceleration": 1,
+    "maneuver": 0,
+    "momentum": 0,
+    "budget": {
+      "tier": "uncommon"
+    },
+    "hp": {
+      "value": 10,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "50 (Uncommon)",
+      "slots": "8/8"
+    },
+    "description": "<p>Cheap factory-made template for a car or small truck.</p><p>Carries 4 passengers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 380
+    }
+  },
+  "items": [
+    {
+      "name": "Wheeled Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/direction.svg",
+      "system": {
+        "description": "<p>The default ground drive; wheels are about as ancient as organised society itself.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 366
+        },
+        "category": "drivetrain",
+        "cost": 5,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 5,
+          "controlSkill": "drive",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "The default ground drive; wheels are about as ancient as organised society itself.",
+        "automation": {
+          "key": "wheeled"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNia62dff6a5b2",
+      "_key": "!actors.items!dtdW14ddc73d8971.dtdNia62dff6a5b2",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Standard Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Normal Standard frame: 10 HP and Resilience 10. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 15,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 10,
+          "resilience": 10
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "10 HP, Resilience 10",
+        "automation": {
+          "key": "standardnormal"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi0f81233f020",
+      "_key": "!actors.items!dtdW14ddc73d8971.dtdNi0f81233f020",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 3",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>3 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 6,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 3
+        },
+        "forWeapon": "",
+        "effect": "AP 3",
+        "automation": {
+          "key": "armor3"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNiac1892e202d",
+      "_key": "!actors.items!dtdW14ddc73d8971.dtdNiac1892e202d",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Cargo Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 4,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
+        "automation": {
+          "key": "cargoSpace",
+          "perUnitBySize": {
+            "1-10": 0.5,
+            "11-20": 2,
+            "21-30": 10
+          },
+          "unit": "m3"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNidaa92dc50ad",
+      "_key": "!actors.items!dtdW14ddc73d8971.dtdNidaa92dc50ad",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Passenger Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 4,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
+        "automation": {
+          "key": "passengerSpace",
+          "perUnitBySize": {
+            "1-10": 1,
+            "11-20": 5,
+            "21-30": 50
+          },
+          "unit": "seats"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNia806c8a7c92",
+      "_key": "!actors.items!dtdW14ddc73d8971.dtdNia806c8a7c92",
+      "folder": "dtdVFd30af0a9aef"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Basic Ground Vehicle",
+    "actorLink": true,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdW14ddc73d8971",
+  "_key": "!actors!dtdW14ddc73d8971",
+  "folder": "dtdWFd1b7181af7f"
+}

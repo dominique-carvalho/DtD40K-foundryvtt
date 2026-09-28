@@ -1,0 +1,54 @@
+{
+  "name": "Bombast Laser",
+  "type": "weapon",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "description": "<p>Capacitor laser with two firing modes; the table line is its minimal mode.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 376
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Las",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "E",
+      "bonus": 10
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 300,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Vhcl",
+      "slots": 6,
+      "cost": 40,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVeb57e04a80ac",
+  "_key": "!items!dtdVeb57e04a80ac",
+  "folder": "dtdVFdbe7b88e2b5"
+}

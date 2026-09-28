@@ -1,0 +1,35 @@
+<div class="dtd40k vehicle-move-dialog">
+  <p class="hint">{{localize "DTD.Vehicle.MomentumNow" momentum=momentum max=maxMomentum}}</p>
+  {{#if punchIt}}
+  <div class="form-group">
+    <label>{{localize "DTD.Vehicle.PunchItMode"}}</label>
+    <select name="mode">
+      <option value="boost">{{localize "DTD.Vehicle.Boost" gain=boostGain}}</option>
+      <option value="drift">{{localize "DTD.Vehicle.Drift"}}</option>
+    </select>
+  </div>
+  {{/if}}
+  <div class="form-group">
+    <label>{{localize "DTD.Vehicle.MomentumChange"}}</label>
+    <select name="delta">
+      <option value="1">+1</option>
+      <option value="0" selected>0</option>
+      <option value="-1">−1</option>
+    </select>
+  </div>
+  {{#if punchIt}}<p class="hint">{{localize "DTD.Vehicle.DeltaDriftOnly"}}</p>{{/if}}
+  <div class="form-group">
+    <label>{{localize "DTD.Vehicle.StuntDice"}}</label>
+    <select name="stunt">
+      <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>{{localize "DTD.Vehicle.StuntOption"}}</label>
+    <select name="option">
+      <option value="">—</option>
+      {{#each stunts as |s|}}<option value="{{s.key}}" data-tooltip="{{s.hint}}">{{s.label}}</option>{{/each}}
+    </select>
+  </div>
+  <p class="hint">{{localize "DTD.Vehicle.StuntHint"}}</p>
+</div>

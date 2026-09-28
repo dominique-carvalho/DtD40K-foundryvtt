@@ -1,0 +1,42 @@
+{
+  "name": "Naval Drive",
+  "type": "vehicleComponent",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "description": "<p>Boats; a technology as old as the wheel, confined to water.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 366
+    },
+    "category": "drivetrain",
+    "cost": 5,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 3,
+      "controlSkill": "drive",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "Boats; a technology as old as the wheel, confined to water.",
+    "automation": {
+      "key": "naval",
+      "waterOnly": true,
+      "leavingWater": "crash"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV6b014611c306",
+  "_key": "!items!dtdV6b014611c306",
+  "folder": "dtdVFd7fd7f37f92"
+}

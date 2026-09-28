@@ -1,0 +1,42 @@
+{
+  "name": "Manipulator Arms (Standard)",
+  "type": "vehicleComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 372
+    },
+    "category": "accessory",
+    "cost": 15,
+    "slots": 3,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.",
+    "automation": {
+      "key": "manipulatorArms",
+      "strength": 6,
+      "maxStrength": 10
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV8dd1ca8c973a",
+  "_key": "!items!dtdV8dd1ca8c973a",
+  "folder": "dtdVFd29d4f0998d"
+}

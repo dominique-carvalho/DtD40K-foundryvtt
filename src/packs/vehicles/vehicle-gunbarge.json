@@ -1,0 +1,938 @@
+{
+  "name": "Gunbarge",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "system": {
+    "size": 30,
+    "speed": 7,
+    "acceleration": 0,
+    "maneuver": 0,
+    "momentum": 0,
+    "budget": {
+      "tier": "holdings4"
+    },
+    "hp": {
+      "value": 25,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "400 (Holdings 4)",
+      "slots": "60/60"
+    },
+    "description": "<p>Gun-covered floating platform needing a full crew; only a Spelljammer outguns it.</p><p>Carries 100 passengers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 383
+    }
+  },
+  "items": [
+    {
+      "name": "Battleship Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/direction.svg",
+      "system": {
+        "description": "<p>A floating fortress rather than a true vehicle; huge masses of steel are easier to keep afloat than to walk.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p><p><strong>Metal Giant.</strong> Grants 2 Equipment Slots per point of Size instead of 1; lost if the vehicle has more than one drivetrain.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 366
+        },
+        "category": "drivetrain",
+        "cost": 5,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 1,
+          "controlSkill": "drive",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "A floating fortress rather than a true vehicle; huge masses of steel are easier to keep afloat than to walk.",
+        "automation": {
+          "key": "battleship",
+          "waterOnly": true,
+          "leavingWater": "crash",
+          "slotsPerSize": 2,
+          "lostWithMultipleDrives": true
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNia3531dc956b",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNia3531dc956b",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Good Reinforced Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Good Reinforced frame: 25 HP and Resilience 12. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 125,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 25,
+          "resilience": 12
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "25 HP, Resilience 12",
+        "automation": {
+          "key": "reinforcedgood"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi7b456f9f1a9",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi7b456f9f1a9",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 5",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>5 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 15,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 5
+        },
+        "forWeapon": "",
+        "effect": "AP 5",
+        "automation": {
+          "key": "armor5"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNid31c8f72e2b",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNid31c8f72e2b",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Cargo Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 2,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
+        "automation": {
+          "key": "cargoSpace",
+          "perUnitBySize": {
+            "1-10": 0.5,
+            "11-20": 2,
+            "21-30": 10
+          },
+          "unit": "m3"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi8b0d2a4dfc1",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi8b0d2a4dfc1",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Passenger Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 2,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
+        "automation": {
+          "key": "passengerSpace",
+          "perUnitBySize": {
+            "1-10": 1,
+            "11-20": 5,
+            "21-30": 50
+          },
+          "unit": "seats"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi84ed4e647cd",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi84ed4e647cd",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Features (Open Topped Deck)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>A minor gadget (alarm, camera, lights, tow cable, radar detector...) worth at most +1k0 in fitting situations, as the SM rules; never better than a real dedicated system.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 371
+        },
+        "category": "accessory",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "A minor gadget (alarm, camera, lights, tow cable, radar detector...) worth at most +1k0 in fitting situations, as the SM rules; never better than a real dedicated system.",
+        "automation": {
+          "key": "features",
+          "bonus": "+1k0"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi72261195fe3",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi72261195fe3",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Sensor System (Standard)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
+        "automation": {
+          "key": "sensorStandard",
+          "perception": 5,
+          "detectKm": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi2bb41f71b43",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi2bb41f71b43",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Flawed (Inefficient Controls)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Move costs a Full Action and Punch It is unavailable.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Move costs a Full Action and Punch It is unavailable.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "inefficientControls",
+          "moveAction": "full",
+          "punchIt": false
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi3c187852943",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi3c187852943",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Flawed (Unstable)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Control tests suffer 2 checks.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Control tests suffer 2 checks.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "unstable",
+          "controlTestChecks": 2
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi8ed92772684",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi8ed92772684",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "AC/2",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Smallest standard autocannon calibre; long reach and able to load special ammunition.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Ordinary / Autocannon",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 5,
+        "rof": {
+          "single": true,
+          "auto": 2
+        },
+        "range": {
+          "value": 500,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "proven",
+            "value": 3
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 2,
+          "cost": 10,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi44056e179ec",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi44056e179ec"
+    },
+    {
+      "name": "AC/2",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Smallest standard autocannon calibre; long reach and able to load special ammunition.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Ordinary / Autocannon",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 4,
+          "kept": 2,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 5,
+        "rof": {
+          "single": true,
+          "auto": 2
+        },
+        "range": {
+          "value": 500,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "proven",
+            "value": 3
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 2,
+          "cost": 10,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNid030db4d533",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNid030db4d533"
+    },
+    {
+      "name": "Copilot Seat (AC/2)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "control",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 2,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
+        "automation": {
+          "key": "copilotSeat",
+          "copilotHalfActions": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi760df2b371e",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi760df2b371e",
+      "folder": "dtdVFd6dd3fd3e58"
+    },
+    {
+      "name": "AC/10",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Heavier autocannon, a cheap and effective choice for bigger units.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Ordinary / Autocannon",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 4,
+          "kept": 3,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 5,
+        "rof": {
+          "single": true,
+          "auto": 10
+        },
+        "range": {
+          "value": 150,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "proven",
+            "value": 3
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 4,
+          "cost": 20,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi6a12d298f6d",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi6a12d298f6d"
+    },
+    {
+      "name": "Copilot Seat (AC/10)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "control",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
+        "automation": {
+          "key": "copilotSeat",
+          "copilotHalfActions": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNia64b6938d54",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNia64b6938d54",
+      "folder": "dtdVFd6dd3fd3e58"
+    },
+    {
+      "name": "AC/20",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Biggest standard calibre, carried only by the largest, most lethal units.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Ordinary / Autocannon",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 5,
+          "kept": 3,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 5,
+        "rof": {
+          "single": true,
+          "auto": 20
+        },
+        "range": {
+          "value": 100,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "proven",
+            "value": 3
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 5,
+          "cost": 30,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi24b1912a69a",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi24b1912a69a"
+    },
+    {
+      "name": "Copilot Seat (AC/20)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "control",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
+        "automation": {
+          "key": "copilotSeat",
+          "copilotHalfActions": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi81c0604e134",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi81c0604e134",
+      "folder": "dtdVFd6dd3fd3e58"
+    },
+    {
+      "name": "Vulcan Mega-Bolter (Macronized)",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Heavy rotary bolt gun with a very high fire rate, for infantry, light vehicles and buildings.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 378
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Bolter",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 8,
+          "kept": 3,
+          "type": "X",
+          "bonus": 10
+        },
+        "pen": 12,
+        "rof": {
+          "single": true,
+          "auto": 8
+        },
+        "range": {
+          "value": 160,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 6,
+          "cost": 45,
+          "macronized": 1,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi0fffb79c3a2",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi0fffb79c3a2"
+    },
+    {
+      "name": "Vulcan Mega-Bolter (Macronized)",
+      "type": "weapon",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "description": "<p>Heavy rotary bolt gun with a very high fire rate, for infantry, light vehicles and buildings.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 378
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Bolter",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 8,
+          "kept": 3,
+          "type": "X",
+          "bonus": 10
+        },
+        "pen": 12,
+        "rof": {
+          "single": true,
+          "auto": 8
+        },
+        "range": {
+          "value": 160,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "tearing",
+            "value": null
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 6,
+          "cost": 45,
+          "macronized": 1,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi4c61cbbc560",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi4c61cbbc560"
+    },
+    {
+      "name": "Copilot Seat (Vulcan Mega-Bolter)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "control",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 2,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "forWeapon": "",
+        "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
+        "automation": {
+          "key": "copilotSeat",
+          "copilotHalfActions": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi3281e03e7b4",
+      "_key": "!actors.items!dtdW9ba2ce4fe7da.dtdNi3281e03e7b4",
+      "folder": "dtdVFd6dd3fd3e58"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Gunbarge",
+    "actorLink": true,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdW9ba2ce4fe7da",
+  "_key": "!actors!dtdW9ba2ce4fe7da",
+  "folder": "dtdWFd1b7181af7f"
+}

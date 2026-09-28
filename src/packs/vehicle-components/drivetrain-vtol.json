@@ -1,0 +1,40 @@
+{
+  "name": "VTOL",
+  "type": "vehicleComponent",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "description": "<p>Flexible flight drive that moves in three dimensions and, unlike Aerospace or Scramjet, can go slow or hold a hover.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 367
+    },
+    "category": "drivetrain",
+    "cost": 30,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 6,
+      "controlSkill": "pilot",
+      "minMomentum": 1,
+      "flying": true
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "",
+    "effect": "Flexible flight drive that moves in three dimensions and, unlike Aerospace or Scramjet, can go slow or hold a hover.",
+    "automation": {
+      "key": "vtol"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV73d84734da9c",
+  "_key": "!items!dtdV73d84734da9c",
+  "folder": "dtdVFd7fd7f37f92"
+}

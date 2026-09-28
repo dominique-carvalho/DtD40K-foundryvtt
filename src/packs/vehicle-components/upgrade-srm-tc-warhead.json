@@ -1,0 +1,46 @@
+{
+  "name": "SRM TC Warhead",
+  "type": "vehicleComponent",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Tandem-Charge: if the hit removes at least 1 HP, the target also rolls for vehicle crit damage.</p><p>Special.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 379
+    },
+    "category": "weaponUpgrade",
+    "cost": 5,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "forWeapon": "SRM",
+    "effect": "Special",
+    "automation": {
+      "key": "srmTCWarhead",
+      "kind": "ammo",
+      "qualities": [],
+      "damage": null,
+      "pen": null,
+      "rof": null,
+      "range": null
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV3737959bbb30",
+  "_key": "!items!dtdV3737959bbb30",
+  "folder": "dtdVFdbe7b88e2b5"
+}

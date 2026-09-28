@@ -368,7 +368,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Super Bike",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

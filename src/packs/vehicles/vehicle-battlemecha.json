@@ -462,7 +462,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Battlemecha",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

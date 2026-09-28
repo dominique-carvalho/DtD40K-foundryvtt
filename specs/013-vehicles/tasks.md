@@ -52,38 +52,38 @@ quickstart.md
 
 ## Phase 4: User Story 2 — Montador (P2)
 
-- [ ] T015 [US2] `module/documents/vehicle-service.mjs`: `addComponent` (drop, quantidade), `switchDrive`, `setCrew`/`embark`/`disembark`
-- [ ] T016 [US2] `module/apps/vehicle-sheet.mjs` + `templates/actor/vehicle-sheet.hbs` (Resumo com stats, orçamento, VP e slots, avisos; Componentes; Tripulação por drop de atores); registrar
-- [ ] T017 [P] [US2] i18n e estilos
+- [X] T015 [US2] `module/documents/vehicle-service.mjs`: `addComponent` (drop, quantidade), `switchDrive`, `setCrew`/`embark`/`disembark`
+- [X] T016 [US2] `module/apps/vehicle-sheet.mjs` + `templates/actor/vehicle-sheet.hbs` (Resumo com stats, orçamento, VP e slots, avisos; Componentes; Tripulação por drop de atores); registrar
+- [X] T017 [P] [US2] i18n e estilos
 - [ ] T018 [US2] Validar quickstart 1–6 e registrar
 
 ---
 
 ## Phase 5: User Story 3 — Combate (P3)
 
-- [ ] T019 [US3] `attack-service`: `rollAttack(..., { weaponOwner, vehicle })` (sem proficiência, feats e bônus do atirador), `rollDamage` sem Força para armas de veículo e com `damage.bonus`; botão Evasive no cartão quando o alvo é veículo
-- [ ] T020 [US3] `vehicle-service`: `move`, `punchIt`, `fire` (Skirmish/Barrage), `evasive`, `controlTest` (Out of Control), `ram`, `juryRig`, `vehicleCritical`, `newScene`; `templates/dialog/vehicle-move.hbs`, `templates/chat/vehicle-*.hbs`
-- [ ] T021 [US3] `damage-service.applyTo` para veículo (sem crítico, destruído em 0, ferimentos na cena → crítico); `combat.mjs` (`_onEndTurn`: Momentum 0; `deleteCombat`: nova cena); `CHAT_ACTIONS.vehicleEvasive`
-- [ ] T022 [US3] Aba Combate da ficha do veículo: Momentum, SD, alcance, ações, armas por artilheiro, estado (virado, destruído, crítico pendente)
-- [ ] T023 [P] [US3] i18n e estilos
+- [X] T019 [US3] `attack-service`: `rollAttack(..., { weaponOwner, vehicle })` (sem proficiência, feats e bônus do atirador), `rollDamage` sem Força para armas de veículo e com `damage.bonus`; botão Evasive no cartão quando o alvo é veículo
+- [X] T020 [US3] `vehicle-service`: `move`, `punchIt`, `fire` (Skirmish/Barrage), `evasive`, `controlTest` (Out of Control), `ram`, `juryRig`, `vehicleCritical`, `newScene`; `templates/dialog/vehicle-move.hbs`, `templates/chat/vehicle-*.hbs`
+- [X] T021 [US3] `damage-service.applyTo` para veículo (sem crítico, destruído em 0, ferimentos na cena → crítico); `combat.mjs` (`_onEndTurn`: Momentum 0; `deleteCombat`: nova cena); `CHAT_ACTIONS.vehicleEvasive`
+- [X] T022 [US3] Aba Combate da ficha do veículo: Momentum, SD, alcance, ações, armas por artilheiro, estado (virado, destruído, crítico pendente)
+- [X] T023 [P] [US3] i18n e estilos
 - [ ] T024 [US3] Validar quickstart 7–16 e registrar
 
 ---
 
 ## Phase 6: User Story 4 — Perseguição, stunts, reparo (P4)
 
-- [ ] T025 [US4] `module/documents/chase-service.mjs` + `templates/chat/chase-card.hbs` (`CHAT_ACTIONS.chaseRound`, `chaseObstacle`); botão de perseguição na ficha do veículo e na barra de ferramentas do Mestre
-- [ ] T026 [US4] Stunt driving no diálogo de Move/Punch It (Barrel Roll: reação extra do piloto até o próximo turno)
-- [ ] T027 [US4] `vehicle-service.repair` + `templates/dialog/vehicle-repair.hbs`
-- [ ] T028 [P] [US4] i18n e estilos
+- [X] T025 [US4] `module/documents/chase-service.mjs` + `templates/chat/chase-card.hbs` (`CHAT_ACTIONS.chaseRound`, `chaseObstacle`); botão de perseguição na ficha do veículo e na barra de ferramentas do Mestre
+- [X] T026 [US4] Stunt driving no diálogo de Move/Punch It (Barrel Roll: reação extra do piloto até o próximo turno)
+- [X] T027 [US4] `vehicle-service.repair` + `templates/dialog/vehicle-repair.hbs`
+- [X] T028 [P] [US4] i18n e estilos
 - [ ] T029 [US4] Validar quickstart 17–19 e registrar
 
 ---
 
 ## Phase 7: Polish
 
-- [ ] T030 [P] Atualizar `docs/analise-dtd.md` §17, `docs/pendencias.md` e o `README.md`
-- [ ] T031 `npm run lint` e `npm test`
+- [X] T030 [P] Atualizar `docs/analise-dtd.md` §17, `docs/pendencias.md` e o `README.md`
+- [X] T031 `npm run lint` e `npm test`
 - [ ] T032 `graphify update .`
 
 ## Dependencies

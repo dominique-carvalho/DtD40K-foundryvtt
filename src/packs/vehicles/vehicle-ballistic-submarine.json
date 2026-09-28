@@ -595,7 +595,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Ballistic Submarine",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

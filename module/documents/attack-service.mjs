@@ -91,11 +91,14 @@ export function weaponPools(actor, item) {
  * @param {{fastForward?: boolean, action?: object, preset?: object, penalty?: number}} [options]
  *   action: attack options of a combat action (spec 008: allOut, charge, calledShot, defensive, mode, aim);
  *   preset: options of an earlier attack to reuse without the dialog (Multiple Attacks); penalty: rolled dice to
- *   subtract (two weapons); special: a Special Attack or Trick Shot (spec 010: `martial-service`, `attackModifiers`)
+ *   subtract (two weapons); special: a Special Attack or Trick Shot (spec 010: `martial-service`, `attackModifiers`);
+ *   weaponOwner + vehicle: a weapon mounted on a vehicle, fired by this crew member with their own skill but without
+ *   proficiency, weapon feats or effect bonuses, always braced; full auto costs a Reaction (spec 013, p. 360)
  * @returns {Promise<ChatMessage|null>}
  */
-export async function rollAttack(actor, itemId, { fastForward = false, action = {}, preset = null, penalty = 0, special = null } = {}) {
-  const item = itemId === "unarmed" ? null : actor.items.get(itemId);
+export async function rollAttack(actor, itemId, { fastForward = false, action = {}, preset = null, penalty = 0, special = null, weaponOwner = null, vehicle = false } = {}) {
+  const owner = weaponOwner ?? actor;
+  const item = itemId === "unarmed" ? null : owner.items.get(itemId);
   if (itemId !== "unarmed" && !item) return null;
   const weapon = profileOf(item);
   const targetToken = [...game.user.targets][0];
@@ -137,14 +140,22 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
     if (!chosen) return null;
     options = chosen;
   }
+  if (vehicle) {
+    options = { ...options, weapon: { ...options.weapon, braced: true, oneHanded: false } };
+    if (options.weapon.mode === "auto" && (weapon.rof?.auto ?? 0) > 0) {
+      const { takeAction } = await import("./turn-service.mjs");
+      const { VEHICLE_ACTIONS } = await import("../rules/vehicle.mjs");
+      if (!(await takeAction(actor, VEHICLE_ACTIONS.find((a) => a.key === "vehicleFullAuto")))) return null;
+    }
+  }
 
   const thrown = options.weapon.thrown;
   const skill = attackSkill(weapon, { thrown });
   // NPCs are proficient with the weapons of their stat block (spec 012).
-  const proficient = actor.type === "npc" || isProficient(weapon, proficiencyChoices(actor), { thrown });
+  const proficient = !vehicle && (actor.type === "npc" || isProficient(weapon, proficiencyChoices(actor), { thrown }));
   const pool = attackPool({
     weapon, skill: actor.system.skills[skill].value, level: actor.system.level, proficient,
-    focus: item ? hasWeaponFeat(actor, "Weapon Focus", item) : false, options: options.weapon
+    focus: item && !vehicle ? hasWeaponFeat(actor, "Weapon Focus", item) : false, options: options.weapon
   });
   const melee = shape.melee && !thrown;
   const sit = situationModifiers({
@@ -164,7 +175,10 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
     tn: options.tn,
     specialty: options.specialty,
     rng,
-    ...actor.withRollModifiers({ ...options.modifiers, freeRaises: (Number(options.modifiers.freeRaises) || 0) + sit.freeRaises }, skill)
+    // Vehicle weapons ignore the shooter's effect bonuses (p. 360).
+    ...(vehicle
+      ? { modifiers: { ...options.modifiers, freeRaises: (Number(options.modifiers.freeRaises) || 0) + sit.freeRaises } }
+      : actor.withRollModifiers({ ...options.modifiers, freeRaises: (Number(options.modifiers.freeRaises) || 0) + sit.freeRaises }, skill))
   });
 
   const qualities = effectiveQualities(weapon);
@@ -189,7 +203,7 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   const amorphous = target?.type === "npc" && isAmorphous(target.system.npc.traits);
   const location = called || (amorphous ? "body" : hitLocation(d10));
   const attack = {
-    actorUuid: actor.uuid, itemId: item?.id ?? "unarmed", options: options.weapon, raises, hits, location,
+    actorUuid: actor.uuid, ownerUuid: owner === actor ? "" : owner.uuid, vehicle, itemId: item?.id ?? "unarmed", options: options.weapon, raises, hits, location,
     ammoId: options.ammoId, rollMode: options.rollMode, targetUuid: target?.uuid ?? "", total: testResult.total,
     tn: testResult.tn, requiredRaises: pool.requiredRaises, helpless, melee, preset: options, special
   };
@@ -201,6 +215,9 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
 
   const extraContent = await foundry.applications.handlebars.renderTemplate(EXTRA_TEMPLATE, {
     proficient,
+    vehicleWeapon: vehicle,
+    // A vehicle target answers with Evasive Maneuvers instead of Dodge or Parry (spec 013).
+    vehicleTarget: target?.type === "vehicle",
     notes: pool.notes.map((note) => localize(`DTD.Attack.Note.${note}`)),
     requiredRaises: pool.requiredRaises,
     hits: auto ? hits : 0,
@@ -224,7 +241,7 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
     } : null,
     canApplyEffects: Boolean(special?.modifiers.onHit.length) && Boolean(target) && hit !== false
   });
-  const label = `${special ? `${special.name} · ` : ""}${weapon.name} — ${localize(CONFIG.DTD.SKILLS[skill].label)}`;
+  const label = `${special ? `${special.name} · ` : ""}${weapon.name}${owner === actor ? "" : ` (${owner.name})`} — ${localize(CONFIG.DTD.SKILLS[skill].label)}`;
   return postTest({ actor, label, testResult, rollMode: options.rollMode, extraContent, flags: { attack } });
 }
 
@@ -238,7 +255,8 @@ export async function rollDamage(message) {
   if (!attack) return null;
   const actor = await foundry.utils.fromUuid(attack.actorUuid);
   if (!actor?.isOwner) return null;
-  const item = attack.itemId === "unarmed" ? null : actor.items.get(attack.itemId);
+  const owner = attack.ownerUuid ? await foundry.utils.fromUuid(attack.ownerUuid) : actor;
+  const item = attack.itemId === "unarmed" ? null : owner?.items.get(attack.itemId);
   let weapon = profileOf(item);
   // Launchers deal the damage of the grenade or missile fired.
   if (weapon.ammoGroup) {
@@ -252,13 +270,16 @@ export async function rollDamage(message) {
   // Special Attack / Trick Shot (spec 010): qualities the Advantages add count as the weapon's.
   const m = attack.special?.modifiers ?? null;
   if (m?.qualities.length) weapon = { ...weapon, qualities: [...weapon.qualities, ...m.qualities.map((q) => ({ key: q.key, value: q.value ?? null }))] };
+  // NPC weapons carry the printed damage, Strength included (spec 012); vehicle melee weapons add the Manipulator Arms'
+  // Strength, never the crew member's (spec 013, p. 379).
+  const str = attack.vehicle ? owner.system.strength ?? 0
+    : m?.noStrength || item?.getFlag("dtd40k", "npcDamage") ? 0 : actor.system.characteristics.str.value;
   const pool = damagePool({
     weapon,
-    // NPC weapons carry the printed damage, Strength included (spec 012).
-    str: m?.noStrength || item?.getFlag("dtd40k", "npcDamage") ? 0 : actor.system.characteristics.str.value,
+    str,
     options: attack.options,
     extraHits: Math.max(0, attack.hits - 1),
-    specialization: item ? hasWeaponFeat(actor, "Weapon Specialization", item) : false,
+    specialization: item && !attack.vehicle ? hasWeaponFeat(actor, "Weapon Specialization", item) : false,
     raises: attack.raises
   });
   let resolve = {};

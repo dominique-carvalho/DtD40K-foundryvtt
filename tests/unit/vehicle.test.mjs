@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
-  OUT_OF_CONTROL, VEHICLE_CRIT, baseCost, componentCost, componentSlots, budgetVp, chaseLeader, chaseModifiers, controlTn, critCount, evasiveBonus,
+  OUT_OF_CONTROL, STUNT_OPTIONS, VEHICLE_ACTIONS, stuntOption, VEHICLE_CRIT, armStrength, juryRigTemp, vehicleHpAfter, baseCost, componentCost, componentSlots, budgetVp, chaseLeader, chaseModifiers, controlTn, critCount, evasiveBonus,
   juryRigHp, moveMomentum, moveRange, outOfControl, punchIt, ramming, repairDays, repairDice, repairTn, slotsUsed,
   staticDefense, vehicleCost, vehicleCrit
 } from "../../module/rules/vehicle.mjs";
@@ -125,5 +125,47 @@ describe("Macronized and Miniaturized components (p. 375)", () => {
     expect(componentCost({ cost: 5, slots: 1, quantity: 3 })).toBe(15);
     expect(slotsUsed([xl, sensors])).toBe(5);
     expect(vehicleCost({ maneuver: 0, acceleration: 0, speed: 1, size: 1 }, [xl, sensors])).toBe(6 + 28);
+  });
+});
+
+describe("vehicle damage, arms and actions", () => {
+  it("rolls a critical per 10 wounds with a Tracked Drive", () => {
+    expect(critCount(4, 1)).toBe(1);
+    expect(critCount(4, 5, 10)).toBe(0);
+    expect(critCount(8, 5, 10)).toBe(1);
+  });
+
+  it("spends temporary HP first and is destroyed at 0", () => {
+    expect(vehicleHpAfter({ hpLoss: 2, hp: 10, temp: 3 })).toEqual({ hp: 10, temp: 1, destroyed: false });
+    expect(vehicleHpAfter({ hpLoss: 5, hp: 10, temp: 3 })).toEqual({ hp: 8, temp: 0, destroyed: false });
+    expect(vehicleHpAfter({ hpLoss: 12, hp: 10, temp: 0 })).toEqual({ hp: 0, temp: 0, destroyed: true });
+  });
+
+  it("caps the Jury Rig temporary HP at the normal maximum", () => {
+    expect(juryRigTemp({ raises: 2, hp: 5, temp: 0, max: 10 })).toBe(3);
+    expect(juryRigTemp({ raises: 2, hp: 9, temp: 0, max: 10 })).toBe(1);
+    expect(juryRigTemp({ raises: 0, hp: 10, temp: 0, max: 10 })).toBe(0);
+  });
+
+  it("adds Improve Str to the Manipulator Arms, up to 10", () => {
+    const arms = { automation: { strength: 6, maxStrength: 10 } };
+    expect(armStrength([])).toBe(0);
+    expect(armStrength([arms])).toBe(6);
+    expect(armStrength([arms, { automation: { strength: "+1" }, quantity: 4 }])).toBe(10);
+    expect(armStrength([arms, { automation: { strength: "+1" }, quantity: 6 }])).toBe(10);
+  });
+
+  it("lists the vehicle actions with their turn cost", () => {
+    const type = Object.fromEntries(VEHICLE_ACTIONS.map((a) => [a.key, a.type]));
+    expect(type).toMatchObject({ vehicleMove: "half", vehiclePunchIt: "full", vehicleSkirmish: "half", vehicleBarrage: "full", vehicleEvasive: "reaction", vehicleJuryRig: "full", vehicleEmbark: "half" });
+  });
+});
+
+describe("stunt driving (p. 362)", () => {
+  it("buys an option only with 2 or more stunt dice", () => {
+    expect(STUNT_OPTIONS).toEqual(["vaultTheCurb", "slipBy", "pickUp", "barrelRoll"]);
+    expect(stuntOption(2, "barrelRoll")).toBe("barrelRoll");
+    expect(stuntOption(1, "barrelRoll")).toBe("");
+    expect(stuntOption(3, "nitro")).toBe("");
   });
 });

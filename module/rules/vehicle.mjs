@@ -29,6 +29,23 @@ export const VEHICLE_CRIT = [
   row(10, 10, "explosion", "Core, fuel or ammunition is hit: after one round it explodes (10k5+30 X, Blast 10), killing everyone inside, unless a Jury Rig stops it.", { explodeRounds: 1, damage: { rolled: 10, kept: 5, flat: 30, type: "X" }, blast: 10 })
 ];
 
+/**
+ * Vehicle actions (pp. 360–361), taken with the turn of the crew member who acts (spec 008 turn limits). Summaries in
+ * our own words.
+ */
+const action = (key, name, type, summary) => ({ key, name, type, subtypes: ["vehicle"], summary });
+export const VEHICLE_ACTIONS = [
+  action("vehicleMove", "Move (vehicle)", "half", "Momentum up or down by 1, then drive within the front 180°."),
+  action("vehiclePunchIt", "Punch It", "full", "Boost: Momentum +1 + Acceleration, front 180°; Drift: Momentum ±1, any direction."),
+  action("vehicleSkirmish", "Skirmish", "half", "Fire or swing one mounted weapon with the crew member's own skill, without personal feats or bonuses."),
+  action("vehicleBarrage", "Barrage", "full", "As Skirmish with two mounted weapons, each at its own target."),
+  action("vehicleEvasive", "Evasive Maneuvers", "reaction", "With Momentum 1+, the control test adds half its total to the vehicle's Static Defense against one attack."),
+  action("vehicleFullAuto", "Full Auto (vehicle)", "reaction", "A mounted weapon fired on full auto costs an extra Reaction."),
+  action("vehicleJuryRig", "Jury Rig", "full", "Tech-Use or Crafts at TN 20: end a condition or gain 1 temporary HP plus 1 per raise."),
+  action("vehicleEmbark", "Embark/Disembark", "half", "Get in or out of the vehicle."),
+  action("vehicleSwitchDrive", "Switch Drivetrain", "half", "Change the active drivetrain.")
+];
+
 const lookup = (table, d10) => table.find((r) => d10 >= r.range[0] && d10 <= r.range[1]) ?? table.at(-1);
 
 /**
@@ -128,12 +145,43 @@ export function ramming({ size, momentum, speed }) {
 export const evasiveBonus = (total) => Math.floor(total / 2);
 
 /**
- * Critical rolls for wounds taken in a scene: one per 5 wounds (p. 363).
+ * Critical rolls for wounds taken in a scene: one per 5 wounds (p. 363); a Tracked Drive rolls per 10 (Tough, p. 367).
  * @param {number} before  wounds already taken in the scene
  * @param {number} added
+ * @param {number} [every=5]
  */
-export function critCount(before, added) {
-  return Math.floor((before + Math.max(0, added)) / 5) - Math.floor(before / 5);
+export function critCount(before, added, every = 5) {
+  return Math.floor((before + Math.max(0, added)) / every) - Math.floor(before / every);
+}
+
+/**
+ * Strength of the Manipulator Arms (p. 372): the arms' base plus each Improve Str +1, at most 10; 0 without arms.
+ * @param {{automation?: object, quantity?: number}[]} components
+ */
+export function armStrength(components) {
+  const arms = components.find((c) => typeof c.automation?.strength === "number");
+  if (!arms) return 0;
+  const bonus = components.filter((c) => c.automation?.strength === "+1").reduce((n, c) => n + Math.max(1, c.quantity ?? 1), 0);
+  return Math.min(arms.automation.maxStrength ?? 10, arms.automation.strength + bonus);
+}
+
+/**
+ * Temporary HP a Jury Rig may add (p. 361): 1 plus 1 per raise, never above the normal maximum HP.
+ * @param {{raises: number, hp: number, temp: number, max: number}} input
+ */
+export function juryRigTemp({ raises, hp, temp, max }) {
+  return Math.max(0, Math.min(juryRigHp(raises), max - hp - temp));
+}
+
+/**
+ * Damage to a vehicle: temporary HP go first (p. 361), then HP; at 0 HP it is destroyed (p. 363).
+ * @param {{hpLoss: number, hp: number, temp: number}} input
+ * @returns {{hp: number, temp: number, destroyed: boolean}}
+ */
+export function vehicleHpAfter({ hpLoss, hp, temp }) {
+  const fromTemp = Math.min(temp, hpLoss);
+  const value = Math.max(0, hp - (hpLoss - fromTemp));
+  return { hp: value, temp: temp - fromTemp, destroyed: value <= 0 };
 }
 
 /** Row of the vehicle critical table. */
@@ -162,6 +210,19 @@ export function repairDays({ size, success, raises }) {
 export function repairDice({ dots, crafts }) {
   const n = Math.max(0, dots) + Math.max(0, crafts);
   return { rolled: n, kept: n };
+}
+
+/** Stunt driving options (p. 362), bought with a stunt of 2 dice or more during Move or Punch It. */
+export const STUNT_OPTIONS = ["vaultTheCurb", "slipBy", "pickUp", "barrelRoll"];
+
+/**
+ * The stunt option taken: only with 2+ stunt dice, and then instead of the dice bonus.
+ * @param {number} dice
+ * @param {string} option
+ * @returns {string} the option key, or ""
+ */
+export function stuntOption(dice, option) {
+  return dice >= 2 && STUNT_OPTIONS.includes(option) ? option : "";
 }
 
 /**

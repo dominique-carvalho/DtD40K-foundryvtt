@@ -244,7 +244,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Basic Ground Vehicle",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

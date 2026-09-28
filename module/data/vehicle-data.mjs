@@ -1,6 +1,6 @@
 import { VEHICLE_BUDGETS, VEHICLE_CREW_ROLES } from "../config.mjs";
 import { ARMOR_LOCATIONS } from "../rules/equipment.mjs";
-import { budgetVp, moveRange, slotsUsed, staticDefense, vehicleCost } from "../rules/vehicle.mjs";
+import { armStrength, budgetVp, moveRange, slotsUsed, staticDefense, vehicleCost } from "../rules/vehicle.mjs";
 
 const { ArrayField, BooleanField, HTMLField, NumberField, SchemaField, StringField } = foundry.data.fields;
 
@@ -36,10 +36,14 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
         sceneWounds: int(0, 0),
         juryRigUsed: new BooleanField({ initial: false }),
         stalled: new BooleanField({ initial: false }),
-        lockedRounds: int(0, 0),
-        immobileRounds: int(0, 0),
+        // Combat round through which the vehicle takes no actions / cannot move (critical 8 and 6–7); 0 = none.
+        lockedUntil: int(0, 0),
+        immobileUntil: int(0, 0),
+        // Ids of components or weapons knocked offline (critical 4–5).
         disabled: new ArrayField(new StringField({ required: true, blank: false })),
+        // Round in which a hit core explodes unless Jury Rigged (critical 10); 0 = none.
         explodeRound: int(0, 0),
+        // Combat round of the last Move or Punch It (Momentum drops to 0 without one).
         lastMoveRound: int(0, 0)
       }),
       // Values printed for the example vehicles (the book's VP and slots do not always add up).
@@ -81,8 +85,10 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       speed: this.speed,
       mentalDefense: 0
     };
-    // The Apply damage of spec 008 reads Aura here; vehicle armor gives no protection against spells (p. 366).
-    this.modifiers = { combat: { aura: 0, sd: 0 } };
+    // The Apply damage of spec 008 reads Aura here; vehicle armor gives no protection against spells, only the
+    // Hexagrammatic Wards do (pp. 366, 371).
+    this.modifiers = { combat: { aura: Math.max(0, ...components.map((c) => Number(c.automation?.aura) || 0)), sd: 0 } };
+    this.strength = armStrength(components);
     this.critical = { value: 0 };
     this.move = moveRange({ speed: this.speed, driveRating: this.drive.rating, momentum: this.momentum });
     const stats = { maneuver: this.maneuver, acceleration: this.acceleration, speed: this.speed, size: this.size };

@@ -3,6 +3,7 @@ import { resetForRound } from "../rules/turn.mjs";
 import { endOfTurn, startOfRound, startOfTurn } from "./turn-service.mjs";
 import { sustainTurn } from "./magic-service.mjs";
 import { regenerate } from "./npc-service.mjs";
+import { endOfPilotTurn, explodeDue } from "./vehicle-service.mjs";
 
 /**
  * Combat and Combatant for Dungeons the Dragoning (spec 008, research R4/R5).
@@ -35,6 +36,8 @@ export class DtdCombat extends Combat {
   async _onEndTurn(combatant, context) {
     await super._onEndTurn(combatant, context);
     await endOfTurn(combatant.actor);
+    // Vehicles this combatant pilots lose their Momentum without a Move or Punch It (spec 013, p. 360).
+    await endOfPilotTurn(this, combatant.actor);
   }
 
   /** Action effects and expired conditions end; Surprised/Stunned are announced. @override */
@@ -51,6 +54,8 @@ export class DtdCombat extends Combat {
   async _onStartRound(context) {
     await super._onStartRound(context);
     await startOfRound(this);
+    // Hit vehicle cores explode a round later unless Jury Rigged (spec 013, p. 363).
+    await explodeDue(this);
   }
 }
 
@@ -61,6 +66,8 @@ export class DtdCombatant extends Combatant {
    */
   _getInitiativeFormula() {
     if (this.actor?.type === "minionSquad") return "1d10 + @threatRating";
+    // Vehicles act through their crew's turns (spec 013); a vehicle token in the tracker just rolls 1d10.
+    if (this.actor?.type === "vehicle") return "1d10";
     return super._getInitiativeFormula();
   }
 

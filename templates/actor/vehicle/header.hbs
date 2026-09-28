@@ -1,0 +1,16 @@
+<header class="sheet-header vehicle-header">
+  <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}" {{#if editable}}data-action="editImage"{{/if}}>
+  <div class="identity-text">
+    {{#if editable}}<input class="item-name" type="text" name="name" value="{{actor.name}}">{{else}}<h1 class="item-name">{{actor.name}}</h1>{{/if}}
+    <div class="identity-line">
+      <span>{{localize "TYPES.Actor.vehicle"}}</span>
+      {{#if system.drive.name}}<span>{{system.drive.name}} · DR {{system.drive.rating}} · {{controlSkill}}</span>{{/if}}
+      {{#each stateBadges as |b|}}<span class="feat-badge warning">{{b}}</span>{{/each}}
+    </div>
+  </div>
+  <div class="vehicle-header-stats">
+    <div class="stat-box"><span class="stat-label">HP</span><span class="stat-value">{{system.hp.value}}{{#if system.hp.temp}}+{{system.hp.temp}}{{/if}} / {{system.hp.max}}</span></div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.staticDefense"}}</span><span class="stat-value">{{system.derived.staticDefense}}</span></div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Vehicle.Momentum"}}</span><span class="stat-value">{{system.momentum}} / {{system.maxMomentum}}</span></div>
+  </div>
+</header>

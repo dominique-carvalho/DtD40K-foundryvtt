@@ -524,7 +524,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Air Superiority Jet",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

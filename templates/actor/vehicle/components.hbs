@@ -1,0 +1,53 @@
+<section class="tab vehicle-components {{tabs.components.cssClass}}" data-group="primary" data-tab="components">
+  <p class="hint">{{localize "DTD.Vehicle.DropHint"}}</p>
+  {{#each groups as |g|}}
+  <div class="equipment-section">
+    <h3 class="section-title">{{g.label}}</h3>
+    <ol class="vehicle-rows">
+      {{#each g.rows as |c|}}
+      <li class="vehicle-row{{#if c.offline}} offline{{/if}}" data-item-id="{{c.id}}">
+        <a class="row-name" data-action="openItem">{{c.name}}</a>
+        {{#if c.repeatable}}
+        <span class="row-qty">{{#if @root.editable}}<a data-action="quantity" data-delta="-1"><i class="fa-solid fa-minus" inert></i></a>{{/if}} ×{{c.quantity}} {{#if @root.editable}}<a data-action="quantity" data-delta="1"><i class="fa-solid fa-plus" inert></i></a>{{/if}}</span>
+        {{else}}<span class="row-qty"></span>{{/if}}
+        <span class="row-cost" data-tooltip="{{localize "DTD.Vehicle.Cost"}}">{{c.cost}} VP</span>
+        <span class="row-slots" data-tooltip="{{localize "DTD.Vehicle.Slots"}}">{{c.slots}}</span>
+        <span class="row-effect hint">{{c.effect}}</span>
+        {{#if @root.editable}}<a class="row-delete" data-action="deleteItem" data-tooltip="{{localize "DTD.Vehicle.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>{{/if}}
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+  {{/each}}
+  {{#if drives.length}}
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Vehicle.ActiveDrive"}}</h3>
+    <ol class="vehicle-rows">
+      {{#each drives as |d|}}
+      <li class="vehicle-row">
+        <span class="row-name">{{#if d.active}}<i class="fa-solid fa-circle-dot" inert></i>{{else}}<i class="fa-regular fa-circle" inert></i>{{/if}} {{d.name}}</span>
+        <span>DR {{d.rating}} · {{d.skill}}</span>
+        {{#unless d.active}}{{#if @root.editable}}<a class="pool-button" data-action="switchDrive" data-item-id="{{d.id}}">{{localize "DTD.Vehicle.SwitchDrive"}}</a>{{/if}}{{/unless}}
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+  {{/if}}
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Vehicle.Weapons"}}</h3>
+    <ol class="vehicle-rows">
+      {{#each weapons as |w|}}
+      <li class="vehicle-row{{#if w.offline}} offline{{/if}}" data-item-id="{{w.id}}">
+        <a class="row-name" data-action="openItem">{{w.name}}</a>
+        <span>{{w.damage}} · Pen {{w.pen}} · {{w.range}} · {{w.rof}}</span>
+        <span class="row-cost">{{w.cost}} VP</span>
+        <span class="row-slots">{{w.slots}}</span>
+        <span class="row-effect hint">{{w.qualities}}</span>
+        {{#if @root.editable}}<a class="row-delete" data-action="deleteItem" data-tooltip="{{localize "DTD.Vehicle.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>{{/if}}
+      </li>
+      {{else}}
+      <li class="hint">{{localize "DTD.Vehicle.NoWeapons"}}</li>
+      {{/each}}
+    </ol>
+  </div>
+</section>

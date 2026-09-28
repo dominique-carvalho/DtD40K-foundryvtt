@@ -343,7 +343,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Mudskipper",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

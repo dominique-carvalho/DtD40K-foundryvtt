@@ -1,0 +1,28 @@
+<div class="dtd40k chase-card">
+  <header class="roll-card-header">
+    <h3 class="roll-card-title"><i class="fa-solid fa-flag-checkered" inert></i> {{localize "DTD.Chase.Title"}}</h3>
+    <span class="roll-card-formula">{{#if done}}{{localize "DTD.Chase.Finished"}}{{else}}{{roundText}}{{/if}}</span>
+  </header>
+  <table class="chase-table">
+    <thead><tr><th></th><th>{{localize "DTD.Chase.Legs"}}</th><th>{{localize "DTD.Chase.LastSkill"}}</th><th>{{localize "DTD.Chase.LastTotal"}}</th><th></th></tr></thead>
+    <tbody>
+      {{#each participants as |p|}}
+      <tr>
+        <td>{{p.name}}</td>
+        <td><b>{{p.legs}}</b></td>
+        <td>{{p.skillLabel}}</td>
+        <td>{{#if (eq p.lastTotal null)}}—{{else}}{{p.lastTotal}}{{/if}}</td>
+        <td>{{#unless @root.done}}<button type="button" class="gm-only chase-obstacle{{#if p.obstacle}} active{{/if}}" data-dtd-action="chaseObstacle" data-uuid="{{p.uuid}}" data-tooltip="{{localize "DTD.Chase.ObstacleHint"}}"><i class="fa-solid fa-person-falling-burst" inert></i></button>{{/unless}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{#if last.length}}
+  <p class="roll-card-note">{{#each last as |l|}}{{l.name}} {{l.total}}{{#if l.ahead}} ▲{{/if}}{{#unless @last}} · {{/unless}}{{/each}}</p>
+  {{/if}}
+  {{#if done}}
+  <p class="notification info">{{localize "DTD.Chase.Winner"}}: <b>{{winner}}</b></p>
+  {{else}}
+  <button type="button" class="gm-only" data-dtd-action="chaseRound"><i class="fa-solid fa-flag-checkered" inert></i> {{localize "DTD.Chase.RollRound"}}</button>
+  {{/if}}
+</div>

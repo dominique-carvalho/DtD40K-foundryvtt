@@ -25,6 +25,9 @@ import { MartialSchoolSheet } from "./module/apps/martial-school-sheet.mjs";
 import { DeityData } from "./module/data/deity-data.mjs";
 import { DeitySheet } from "./module/apps/deity-sheet.mjs";
 import { VehicleComponentSheet } from "./module/apps/vehicle-component-sheet.mjs";
+import { VehicleSheet } from "./module/apps/vehicle-sheet.mjs";
+import { allVehicles, controlTest, evasive, explode, newScene as newVehicleScene, rollOutOfControl, vehicleOfCard } from "./module/documents/vehicle-service.mjs";
+import { markObstacle, rollChaseRound, startChaseFromCanvas } from "./module/documents/chase-service.mjs";
 import { DtdActiveEffect } from "./module/documents/active-effect.mjs";
 import { rollDamage } from "./module/documents/attack-service.mjs";
 import { spendLiquid } from "./module/documents/acquisition-service.mjs";
@@ -147,6 +150,12 @@ Hooks.once("init", () => {
     label: "DTD.Sheet.Deity"
   });
 
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Actor, "dtd40k", VehicleSheet, {
+    types: ["vehicle"],
+    makeDefault: true,
+    label: "DTD.Sheet.Vehicle"
+  });
+
   foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", VehicleComponentSheet, {
     types: ["vehicleComponent"],
     makeDefault: true,
@@ -196,13 +205,29 @@ const CHAT_ACTIONS = {
   martialEffects: (message) => applyAttackEffects(message),
   // Antagonists (spec 012): Fear Test from an NPC card, Minion Squad damage.
   npcFear: (message) => fearFromCard(message),
-  minionDamage: (message) => rollMinionDamage(message)
+  minionDamage: (message) => rollMinionDamage(message),
+  // Vehicles (spec 013): Evasive Maneuvers, Control Test and Out of Control after a ram, explosion, chases.
+  vehicleEvasive: (message) => evasive(message),
+  vehicleControl: async (message) => {
+    const vehicle = await vehicleOfCard(message);
+    if (vehicle) await controlTest(vehicle, { reason: game.i18n.localize("DTD.Vehicle.Ram") });
+  },
+  vehicleOutOfControl: async (message) => {
+    const vehicle = await vehicleOfCard(message);
+    if (vehicle) await rollOutOfControl(vehicle);
+  },
+  vehicleExplode: async (message) => {
+    const vehicle = await vehicleOfCard(message);
+    if (vehicle && game.user.isGM) await explode(vehicle);
+  },
+  chaseRound: (message) => rollChaseRound(message),
+  chaseObstacle: (message, data) => markObstacle(message, data.uuid)
 };
 Hooks.on("renderChatMessageHTML", (message, html) => {
   for (const button of html.querySelectorAll("[data-dtd-action]")) {
     const handler = CHAT_ACTIONS[button.dataset.dtdAction];
     if (button.classList.contains("gm-only") && !game.user.isGM) button.remove();
-    else if (handler) button.addEventListener("click", () => handler(message));
+    else if (handler) button.addEventListener("click", () => handler(message, button.dataset));
   }
 });
 
@@ -222,6 +247,17 @@ Hooks.on("deleteCombat", refreshCombatants);
 Hooks.on("deleteCombat", async (combat) => {
   if (game.users.activeGM !== game.user) return;
   for (const actor of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "character"))) await newScene(actor);
+  // Vehicles: wounds in the scene and round-based conditions reset (spec 013).
+  for (const vehicle of allVehicles()) await newVehicleScene(vehicle);
+});
+// The GM starts a chase with the controlled and targeted tokens (spec 013, FR-011).
+Hooks.on("getSceneControlButtons", (controls) => {
+  const tokens = controls.tokens;
+  if (!tokens?.tools || !game.user.isGM) return;
+  tokens.tools.dtdChase = {
+    name: "dtdChase", title: "DTD.Chase.Start", icon: "fa-solid fa-flag-checkered", button: true,
+    order: Object.keys(tokens.tools).length + 1, visible: true, onChange: () => startChaseFromCanvas()
+  };
 });
 // The turn state lives on the Combatant (spec 008): refresh the open sheet when it changes.
 Hooks.on("updateCombatant", (combatant) => {

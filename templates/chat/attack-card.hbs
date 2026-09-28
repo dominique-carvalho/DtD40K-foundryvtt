@@ -1,5 +1,5 @@
 <div class="dtd40k attack-card-extra">
-  <p class="roll-card-note">{{#if proficient}}{{localize "DTD.Attack.Proficient"}}{{else}}{{localize "DTD.Attack.NotProficient"}}{{/if}}{{#each notes as |note|}} · {{note}}{{/each}}</p>
+  <p class="roll-card-note">{{#if vehicleWeapon}}{{localize "DTD.Vehicle.WeaponNote"}}{{else if proficient}}{{localize "DTD.Attack.Proficient"}}{{else}}{{localize "DTD.Attack.NotProficient"}}{{/if}}{{#each notes as |note|}} · {{note}}{{/each}}</p>
   {{#if requiredRaises}}<p class="roll-card-note">{{localize "DTD.Attack.RequiredRaises" raises=requiredRaises}}</p>{{/if}}
   <p class="attack-location"><i class="fa-solid fa-location-crosshairs" inert></i> {{localize "DTD.Attack.Location"}}: <b>{{location}}</b> <span class="hint">{{#if called}}({{localize "DTD.Attack.Called"}}){{else}}(d10 {{d10}}){{/if}}</span></p>
   {{#if hits}}<p class="attack-hits">{{localize "DTD.Attack.Hits" hits=hits}}</p>{{/if}}
@@ -17,8 +17,12 @@
   {{/if}}
   {{#if canDefend}}
   <div class="defense-buttons">
+    {{#if vehicleTarget}}
+    <button type="button" data-dtd-action="vehicleEvasive"><i class="fa-solid fa-route" inert></i> {{localize "DTD.Vehicle.Evasive"}}</button>
+    {{else}}
     <button type="button" data-dtd-action="dodge"><i class="fa-solid fa-person-running" inert></i> {{localize "DTD.Combat.Dodge"}}</button>
     {{#if melee}}<button type="button" data-dtd-action="parry"><i class="fa-solid fa-shield-halved" inert></i> {{localize "DTD.Combat.Parry"}}</button>{{/if}}
+    {{/if}}
   </div>
   {{/if}}
   {{#if canApplyEffects}}

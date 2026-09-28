@@ -1,0 +1,32 @@
+<section class="tab vehicle-summary {{tabs.summary.cssClass}}" data-group="primary" data-tab="summary">
+  {{#each warnings as |w|}}<p class="notification warning">{{w}}</p>{{/each}}
+  {{#if printed}}<p class="hint">{{localize "DTD.Vehicle.Printed" vp=system.printed.vp slots=system.printed.slots}}</p>{{/if}}
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Vehicle.Stats"}}</h3>
+    <div class="profile-grid">
+      <label>{{localize "DTD.Vehicle.Size"}}{{#if editable}}<input type="number" name="system.size" value="{{system.size}}" min="1" max="30">{{else}}<b>{{system.size}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Derived.speed"}}{{#if editable}}<input type="number" name="system.speed" value="{{system.speed}}" min="1" max="15">{{else}}<b>{{system.speed}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.Acceleration"}}{{#if editable}}<input type="number" name="system.acceleration" value="{{system.acceleration}}" min="0" max="5">{{else}}<b>{{system.acceleration}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.Maneuver"}}{{#if editable}}<input type="number" name="system.maneuver" value="{{system.maneuver}}" min="0" max="10">{{else}}<b>{{system.maneuver}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.BudgetLabel"}}{{#if editable}}<select name="system.budget.tier">{{selectOptions budgetOptions selected=system.budget.tier localize=true}}</select>{{else}}<b>{{localize (concat "DTD.Vehicle.Budget." system.budget.tier)}}</b>{{/if}}</label>
+    </div>
+  </div>
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Vehicle.Derived"}}</h3>
+    <dl class="spell-stats">
+      <dt>{{localize "DTD.Vehicle.Cost"}}</dt><dd class="{{#if system.warnings.overBudget}}over{{/if}}">{{system.vp.cost}} / {{system.vp.budget}} <span class="hint">({{localize "DTD.Vehicle.BaseCost" cost=baseCost}})</span></dd>
+      <dt>{{localize "DTD.Vehicle.Slots"}}</dt><dd class="{{#if system.warnings.overSlots}}over{{/if}}">{{system.slots.used}} / {{system.slots.max}}</dd>
+      <dt>HP</dt><dd>{{system.hp.max}}</dd>
+      <dt>{{localize "DTD.Derived.resilience"}}</dt><dd>{{system.derived.resilience}}</dd>
+      <dt>AP</dt><dd>{{system.armor.ap}}</dd>
+      <dt>{{localize "DTD.Derived.staticDefense"}}</dt><dd>{{sdStopped}} / {{sdMoving}} <span class="hint">{{localize "DTD.Vehicle.SdHint"}}</span></dd>
+      {{#if system.modifiers.combat.aura}}<dt>Aura</dt><dd>{{system.modifiers.combat.aura}}</dd>{{/if}}
+      {{#if system.strength}}<dt>{{localize "DTD.Vehicle.ArmStrength"}}</dt><dd>{{system.strength}}</dd>{{/if}}
+    </dl>
+  </div>
+  <div class="spell-section">
+    {{#if editable}}
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.description}}}</div>{{/if}}
+  </div>
+</section>

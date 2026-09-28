@@ -928,7 +928,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Gunbarge",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

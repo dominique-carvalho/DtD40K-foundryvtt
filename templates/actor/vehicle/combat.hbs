@@ -1,0 +1,60 @@
+<section class="tab vehicle-combat {{tabs.combat.cssClass}}" data-group="primary" data-tab="combat">
+  <div class="equipment-section">
+    <dl class="spell-stats">
+      <dt>{{localize "DTD.Vehicle.Momentum"}}</dt>
+      <dd>{{#if editable}}<input type="number" name="system.momentum" value="{{system.momentum}}" min="0" max="{{system.maxMomentum}}">{{else}}{{system.momentum}}{{/if}} / {{system.maxMomentum}}</dd>
+      <dt>{{localize "DTD.Derived.staticDefense"}}</dt><dd>{{system.derived.staticDefense}}</dd>
+      <dt>{{localize "DTD.Vehicle.Reach"}}</dt><dd>{{system.move}} m</dd>
+      <dt>HP</dt>
+      <dd>{{#if editable}}<input type="number" name="system.hp.value" value="{{system.hp.value}}" min="0"> + <input type="number" name="system.hp.temp" value="{{system.hp.temp}}" min="0">{{else}}{{system.hp.value}} + {{system.hp.temp}}{{/if}} / {{system.hp.max}}</dd>
+      <dt>{{localize "DTD.Vehicle.SceneWounds"}}</dt><dd>{{system.state.sceneWounds}}</dd>
+    </dl>
+  </div>
+  <div class="equipment-section vehicle-actions">
+    <h3 class="section-title">{{localize "DTD.Vehicle.Actions"}}</h3>
+    <div class="action-buttons">
+      <a class="pool-button" data-action="vehicleMove" data-tooltip="{{localize "DTD.Vehicle.MoveHint"}}"><i class="fa-solid fa-gauge" inert></i> {{localize "DTD.Vehicle.Move"}}</a>
+      <a class="pool-button" data-action="vehiclePunchIt" data-tooltip="{{localize "DTD.Vehicle.PunchItHint"}}"><i class="fa-solid fa-gauge-high" inert></i> {{localize "DTD.Vehicle.PunchIt"}}</a>
+      <a class="pool-button" data-action="vehicleControl"><i class="fa-solid fa-dharmachakra" inert></i> {{localize "DTD.Vehicle.ControlTest"}}</a>
+      <a class="pool-button" data-action="vehicleRam" data-tooltip="{{localize "DTD.Vehicle.RamRule"}}"><i class="fa-solid fa-car-burst" inert></i> {{localize "DTD.Vehicle.Ram"}}</a>
+      <a class="pool-button" data-action="vehicleJuryRig"><i class="fa-solid fa-screwdriver-wrench" inert></i> {{localize "DTD.Vehicle.JuryRig"}}</a>
+      <a class="pool-button" data-action="vehicleRepair"><i class="fa-solid fa-wrench" inert></i> {{localize "DTD.Vehicle.Repair"}}</a>
+    </div>
+    {{#if isGM}}
+    <div class="action-buttons gm">
+      <a class="pool-button" data-action="vehicleOutOfControl"><i class="fa-solid fa-car-burst" inert></i> {{localize "DTD.Vehicle.OutOfControl"}}</a>
+      <a class="pool-button" data-action="vehicleCritical"><i class="fa-solid fa-burst" inert></i> {{localize "DTD.Vehicle.CritTable"}}</a>
+      <a class="pool-button" data-action="vehicleNewScene"><i class="fa-solid fa-clapperboard" inert></i> {{localize "DTD.Vehicle.NewScene"}}</a>
+      <a class="pool-button" data-action="vehicleChase" data-tooltip="{{localize "DTD.Chase.StartHint"}}"><i class="fa-solid fa-flag-checkered" inert></i> {{localize "DTD.Chase.Start"}}</a>
+    </div>
+    {{/if}}
+  </div>
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Vehicle.Weapons"}}
+      {{#if weapons.length}}<a class="pool-button" data-action="vehicleBarrage" data-tooltip="{{localize "DTD.Vehicle.BarrageHint"}}"><i class="fa-solid fa-crosshairs" inert></i> {{localize "DTD.Vehicle.Barrage"}}</a>{{/if}}
+    </h3>
+    <ol class="vehicle-rows">
+      {{#each weapons as |w|}}
+      <li class="vehicle-row{{#if w.offline}} offline{{/if}}" data-item-id="{{w.id}}">
+        <input type="checkbox" class="barrage-pick" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Vehicle.Barrage"}}">
+        <span class="row-name">{{w.name}}</span>
+        <span>{{w.damage}} · Pen {{w.pen}} · {{w.range}} · {{w.rof}}</span>
+        <a class="pool-button" data-action="vehicleFire" data-tooltip="{{localize "DTD.Vehicle.SkirmishHint"}}"><i class="fa-solid fa-dice-d10" inert></i> {{localize "DTD.Vehicle.Skirmish"}}</a>
+      </li>
+      {{else}}
+      <li class="hint">{{localize "DTD.Vehicle.NoWeapons"}}</li>
+      {{/each}}
+    </ol>
+  </div>
+  <div class="equipment-section">
+    <h3 class="section-title">{{localize "DTD.Vehicle.State"}}</h3>
+    <div class="profile-grid">
+      <label>{{localize "DTD.Vehicle.Flipped"}}<input type="checkbox" name="system.state.flipped" {{checked system.state.flipped}} {{#unless isGM}}disabled{{/unless}}></label>
+      <label>{{localize "DTD.Vehicle.Destroyed"}}<input type="checkbox" name="system.state.destroyed" {{checked system.state.destroyed}} {{#unless isGM}}disabled{{/unless}}></label>
+      <label>{{localize "DTD.Vehicle.CritRow.stall"}}<input type="checkbox" name="system.state.stalled" {{checked system.state.stalled}} {{#unless isGM}}disabled{{/unless}}></label>
+      <label>{{localize "DTD.Vehicle.JuryRigUsed"}}<input type="checkbox" name="system.state.juryRigUsed" {{checked system.state.juryRigUsed}} {{#unless isGM}}disabled{{/unless}}></label>
+    </div>
+    {{#if offline.length}}<p class="notification warning">{{localize "DTD.Vehicle.OfflineList"}}: {{#each offline as |o|}}{{o}}{{#unless @last}}, {{/unless}}{{/each}} {{#if isGM}}<a data-action="clearOffline"><i class="fa-solid fa-rotate-left" inert></i></a>{{/if}}</p>{{/if}}
+    <p class="hint">{{localize "DTD.Vehicle.FlippedHint" tn=flipTn}}</p>
+  </div>
+</section>

@@ -329,7 +329,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Megatruck",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

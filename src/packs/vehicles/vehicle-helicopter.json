@@ -385,7 +385,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Helicopter",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

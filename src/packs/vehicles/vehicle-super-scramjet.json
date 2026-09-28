@@ -583,7 +583,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Super Scramjet",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

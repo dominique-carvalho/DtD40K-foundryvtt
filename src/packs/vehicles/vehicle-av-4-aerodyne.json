@@ -401,7 +401,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "AV-4 Aerodyne",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

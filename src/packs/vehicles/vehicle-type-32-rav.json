@@ -294,7 +294,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Type-32 RAV",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

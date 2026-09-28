@@ -2032,3 +2032,180 @@
   padding: 0.2rem 0;
   border-bottom: 1px dotted var(--dtd-border);
 }
+
+/* ---------- Vehicles and chases (spec 013) ---------- */
+
+.dtd40k.actor.vehicle .window-content {
+  padding: 0 0.5rem 0.5rem;
+  color: var(--dtd-text);
+}
+
+.dtd40k.actor.vehicle .vehicle-header {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dtd40k.actor.vehicle .vehicle-header .identity-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dtd40k.actor.vehicle .vehicle-header .item-name {
+  margin: 0;
+  font-size: 1.4rem;
+  height: auto;
+}
+
+.dtd40k.actor.vehicle .identity-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k .vehicle-header-stats {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.dtd40k.actor.vehicle .tab {
+  display: none;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-top: 0.5rem;
+}
+
+.dtd40k.actor.vehicle .tab.active {
+  display: flex;
+}
+
+.dtd40k.actor.vehicle dl.spell-stats {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 0.75rem;
+  margin: 0;
+}
+
+.dtd40k.actor.vehicle dl.spell-stats dt {
+  font-weight: bold;
+  color: var(--dtd-text-muted);
+}
+
+.dtd40k.actor.vehicle dl.spell-stats dd {
+  margin: 0;
+}
+
+.dtd40k.actor.vehicle dd.over {
+  color: var(--dtd-hp);
+  font-weight: bold;
+}
+
+.dtd40k.actor.vehicle input[type="number"] {
+  width: 3.5rem;
+}
+
+.dtd40k .vehicle-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dtd40k .vehicle-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0;
+  border-bottom: 1px dotted var(--dtd-border);
+}
+
+.dtd40k .vehicle-row .row-name {
+  flex: 0 0 12rem;
+  font-weight: bold;
+}
+
+.dtd40k .vehicle-row .row-qty {
+  flex: 0 0 4.5rem;
+  white-space: nowrap;
+}
+
+.dtd40k .vehicle-row :is(.row-cost, .row-slots) {
+  flex: 0 0 3.5rem;
+  text-align: right;
+}
+
+.dtd40k .vehicle-row .row-effect {
+  flex: 1 1 10rem;
+}
+
+.dtd40k .vehicle-row .row-delete {
+  margin-left: auto;
+}
+
+.dtd40k .vehicle-row.offline .row-name {
+  text-decoration: line-through;
+  color: var(--dtd-text-subtle);
+}
+
+.dtd40k .vehicle-row .crew-img {
+  width: 28px;
+  height: 28px;
+  border: none;
+  object-fit: cover;
+}
+
+.dtd40k .vehicle-row select {
+  width: auto;
+}
+
+.dtd40k .vehicle-actions .action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.dtd40k .vehicle-actions .action-buttons.gm {
+  border-top: 1px dotted var(--dtd-border);
+  padding-top: 0.4rem;
+}
+
+.dtd40k .section-title .pool-button {
+  margin-left: 0.5rem;
+  font-size: 0.85em;
+}
+
+.dtd40k .profile-grid.vehicle-weapon {
+  margin-top: 0.4rem;
+}
+
+.dtd40k.vehicle-card .vehicle-card-line,
+.dtd40k.chase-card p {
+  margin: 0.2rem 0;
+}
+
+.dtd40k .chase-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.3rem 0;
+}
+
+.dtd40k .chase-table :is(th, td) {
+  padding: 0.1rem 0.25rem;
+  text-align: left;
+  border-bottom: 1px dotted var(--dtd-border);
+}
+
+.dtd40k .chase-table button {
+  width: auto;
+  line-height: 1.2;
+  padding: 0 0.3rem;
+}
+
+.dtd40k .chase-table button.active {
+  background: var(--dtd-accent);
+}

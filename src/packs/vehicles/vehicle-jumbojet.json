@@ -539,7 +539,7 @@
   "effects": [],
   "prototypeToken": {
     "name": "Jumbojet",
-    "actorLink": false,
+    "actorLink": true,
     "disposition": 0
   },
   "flags": {},

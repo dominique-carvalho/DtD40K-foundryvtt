@@ -159,3 +159,11 @@ describe("fullAutoHits, isJammed and hitLocation (pp. 427, 431, 435)", () => {
     expect([1, 2, 3, 6, 7, 8, 9, 10].map(hitLocation)).toEqual(["leftLeg", "rightLeg", "body", "body", "gizzards", "leftArm", "rightArm", "head"]);
   });
 });
+
+describe("damagePool with a flat bonus (spec 013, p. 377)", () => {
+  it("carries the flat damage bonus of vehicle weapons", () => {
+    const ac2 = weapon({ weaponType: "heavy", damage: { rolled: 4, kept: 2, type: "I", bonus: 10 }, pen: 5 });
+    expect(damagePool({ weapon: ac2, str: 0 })).toMatchObject({ rolled: 4, kept: 2, flat: 10, pen: 5 });
+    expect(damagePool({ weapon: autopistol, str: 3 }).flat).toBe(0);
+  });
+});

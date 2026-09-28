@@ -1,0 +1,40 @@
+{
+  "name": "Good Standard Frame",
+  "type": "vehicleComponent",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Good Standard frame: 20 HP and Resilience 11. Comes with a Cockpit.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 367
+    },
+    "category": "frame",
+    "cost": 60,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 20,
+      "resilience": 11
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "20 HP, Resilience 11",
+    "automation": {
+      "key": "standardgood"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV6de7c695d1fd",
+  "_key": "!items!dtdV6de7c695d1fd",
+  "folder": "dtdVFdca3b9a90a8"
+}

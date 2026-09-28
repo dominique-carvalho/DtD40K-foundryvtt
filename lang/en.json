@@ -3,7 +3,8 @@
     "Actor": {
       "character": "Character",
       "npc": "NPC",
-      "minionSquad": "Minion Squad"
+      "minionSquad": "Minion Squad",
+      "vehicle": "Vehicle"
     },
     "Item": {
       "race": "Race",
@@ -15,7 +16,8 @@
       "gear": "Gear",
       "spell": "Spell",
       "martialSchool": "Martial School",
-      "deity": "Deity"
+      "deity": "Deity",
+      "vehicleComponent": "Vehicle Component"
     }
   },
   "DTD": {
@@ -143,7 +145,9 @@
       "MartialSchool": "DtD Martial School Sheet",
       "Deity": "DtD Deity Sheet",
       "Npc": "DtD NPC Sheet",
-      "MinionSquad": "DtD Minion Squad Sheet"
+      "MinionSquad": "DtD Minion Squad Sheet",
+      "VehicleComponent": "DtD Vehicle Component Sheet",
+      "Vehicle": "DtD Vehicle Sheet"
     },
     "Roll": {
       "Success": "Success",
@@ -1625,6 +1629,53 @@
       "NoRoll": "Minion damage: no roll",
       "Removed": "{name}: {n} minion(s) down, {left} left.",
       "AllDown": "{name}: {n} minion(s) down, the squad is defeated."
+    },
+    "Vehicle": {
+      "Category": {
+        "drivetrain": "Drivetrain",
+        "frame": "Frame",
+        "armor": "Armor",
+        "control": "Control System",
+        "accommodation": "Accommodation",
+        "accessory": "Accessory",
+        "modification": "Modification",
+        "weaponUpgrade": "Ammunition / Mode"
+      },
+      "Budget": {
+        "uncommon": "Uncommon (50 VP)",
+        "rare": "Rare (100 VP)",
+        "veryRare": "Very Rare (150 VP)",
+        "mythicRare": "Mythic Rare (200 VP)",
+        "holdings1": "Holdings 1 (250 VP)",
+        "holdings2": "Holdings 2 (300 VP)",
+        "holdings3": "Holdings 3 (350 VP)",
+        "holdings4": "Holdings 4 (400 VP)",
+        "holdings5": "Holdings 5 (450 VP)"
+      },
+      "Role": {
+        "pilot": "Pilot",
+        "gunner": "Gunner",
+        "engineer": "Engineer",
+        "passenger": "Passenger"
+      },
+      "CategoryLabel": "Category",
+      "Cost": "VP cost",
+      "Slots": "Slots",
+      "Quantity": "Quantity",
+      "Macronized": "Macronized",
+      "Miniaturized": "Miniaturized",
+      "DriveRating": "Drive Rating",
+      "ControlSkill": "Control skill",
+      "MinMomentum": "Minimum Momentum",
+      "Flying": "Flies",
+      "Parent": "For weapon",
+      "Effect": "Effect (short)",
+      "LineTotal": "This line: {cost} VP, {slots} slots.",
+      "PerPurchaseHint": "Capacity per purchase depends on the vehicle Size.",
+      "Scale": "Vehicle scale",
+      "PersonalScale": "Personal",
+      "ScaleVhcl": "Vehicle (Vhcl)",
+      "ScaleHybrid": "Hybrid"
     }
   }
 }

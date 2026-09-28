@@ -1,0 +1,59 @@
+{
+  "name": "LRM",
+  "type": "weapon",
+  "img": "icons/svg/cannon.svg",
+  "system": {
+    "description": "<p>Long Range Missile rack firing volleys to extreme range, with several ammo types.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 379
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Launchers",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 3,
+      "kept": 3,
+      "type": "X",
+      "bonus": 10
+    },
+    "pen": 6,
+    "rof": {
+      "single": false,
+      "auto": 5
+    },
+    "range": {
+      "value": 750,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "blast",
+        "value": 5
+      }
+    ],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Vhcl",
+      "slots": 6,
+      "cost": 35,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV5e48679cc535",
+  "_key": "!items!dtdV5e48679cc535",
+  "folder": "dtdVFdbe7b88e2b5"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Hover Drive",
+  "type": "vehicleComponent",
+  "img": "icons/svg/wheel.svg",
+  "system": {
+    "description": "<p>Matches wheels for pace and needs less road, but steers like someone skating on a frozen pond.</p><p><strong>Rise Above.</strong> Difficult terrain does not slow it, and it can travel across liquid surfaces as if on ground.</p><p><strong>Slide About.</strong> Handling is slippery: every Control Test needs 2 additional raises to pass.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 366
+    },
+    "category": "drivetrain",
+    "cost": 10,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 5,
+      "controlSkill": "drive",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "Matches wheels for pace and needs less road, but steers like someone skating on a frozen pond.",
+    "automation": {
+      "key": "hover",
+      "ignoreDifficultTerrainSlow": true,
+      "crossLiquid": true,
+      "controlTestExtraRaises": 2
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVcc8bb1724f59",
+  "_key": "!items!dtdVcc8bb1724f59",
+  "folder": "dtdVFd7fd7f37f92"
+}

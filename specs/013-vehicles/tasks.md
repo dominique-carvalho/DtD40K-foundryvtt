@@ -23,30 +23,30 @@ quickstart.md
 
 ## Phase 1: Setup
 
-- [ ] T001 Em `system.json`: `documentTypes.Item.vehicleComponent`, `documentTypes.Actor.vehicle` e os packs `vehicle-components` (Item, OBSERVER) e `vehicles` (Actor, OBSERVER)
-- [ ] T002 [P] Em `scripts/assign-pack-ids.mjs`: layouts `vehicle-components` (8 pastas; prefixos `dtdVFd`/`dtdV`) e `vehicles` (Actors com itens embutidos; `dtdWFd`/`dtdW`)
+- [X] T001 Em `system.json`: `documentTypes.Item.vehicleComponent`, `documentTypes.Actor.vehicle` e os packs `vehicle-components` (Item, OBSERVER) e `vehicles` (Actor, OBSERVER)
+- [X] T002 [P] Em `scripts/assign-pack-ids.mjs`: layouts `vehicle-components` (8 pastas; prefixos `dtdVFd`/`dtdV`) e `vehicles` (Actors com itens embutidos; `dtdWFd`/`dtdW`)
 
 ---
 
 ## Phase 2: Foundational
 
-- [ ] T003 [P] Em `tests/unit/config.test.mjs`: `VEHICLE_CATEGORIES`, `VEHICLE_BUDGETS`, `VEHICLE_COSTS`, `VEHICLE_CREW_ROLES`
-- [ ] T004 Em `module/config.mjs`: as constantes de T003; fazer T003 passar
-- [ ] T005 [P] Em `tests/unit/vehicle.test.mjs` e `weapon.test.mjs`: funções do contrato; `damagePool` com `damage.bonus`
-- [ ] T006 Criar `module/rules/vehicle.mjs` (tabelas Out of Control e crítico em texto próprio) e estender `module/rules/weapon.mjs`; fazer T005 passar
-- [ ] T007 Criar `module/data/vehicle-component-data.mjs` e `module/data/vehicle-data.mjs` (derivados pela research R2); estender `module/data/weapon-data.mjs` (`damage.bonus`, `vehicle`); registrar em `dtd40k.mjs`
-- [ ] T008 [P] i18n base: tipos, categorias, orçamentos, papéis da tripulação, rótulos do veículo
-- [ ] T009 Rodar `npm test` e `npx eslint .`
+- [X] T003 [P] Em `tests/unit/config.test.mjs`: `VEHICLE_CATEGORIES`, `VEHICLE_BUDGETS`, `VEHICLE_COSTS`, `VEHICLE_CREW_ROLES`
+- [X] T004 Em `module/config.mjs`: as constantes de T003; fazer T003 passar
+- [X] T005 [P] Em `tests/unit/vehicle.test.mjs` e `weapon.test.mjs`: funções do contrato; `damagePool` com `damage.bonus`
+- [X] T006 Criar `module/rules/vehicle.mjs` (tabelas Out of Control e crítico em texto próprio) e estender `module/rules/weapon.mjs`; fazer T005 passar
+- [X] T007 Criar `module/data/vehicle-component-data.mjs` e `module/data/vehicle-data.mjs` (derivados pela research R2); estender `module/data/weapon-data.mjs` (`damage.bonus`, `vehicle`); registrar em `dtd40k.mjs`
+- [X] T008 [P] i18n base: tipos, categorias, orçamentos, papéis da tripulação, rótulos do veículo
+- [X] T009 Rodar `npm test` e `npx eslint .`
 
 ---
 
 ## Phase 3: User Story 1 — Compêndios (P1)
 
-- [ ] T010 [P] [US1] Em `tests/unit/packs.test.mjs`: contagens por categoria, Wheeled/Standard Frame/AC/2 com os dados da spec, armas com qualidades válidas, 16 veículos com stats, componentes e armas embutidos
-- [ ] T011 [US1] Script do scratchpad `gen-vehicles-pack.mjs`: inventário → `src/packs/vehicle-components/*.json` e `src/packs/vehicles/*.json`; `assign-pack-ids`; 6-gramas = 0
-- [ ] T012 [US1] `module/apps/vehicle-component-sheet.mjs` + template; registrar
-- [ ] T013 [P] [US1] i18n e estilos
-- [ ] T014 [US1] `npm test` e `npm run build:packs`
+- [X] T010 [P] [US1] Em `tests/unit/packs.test.mjs`: contagens por categoria, Wheeled/Standard Frame/AC/2 com os dados da spec, armas com qualidades válidas, 16 veículos com stats, componentes e armas embutidos
+- [X] T011 [US1] Script do scratchpad `gen-vehicles-pack.mjs`: inventário → `src/packs/vehicle-components/*.json` e `src/packs/vehicles/*.json`; `assign-pack-ids`; 6-gramas = 0
+- [X] T012 [US1] `module/apps/vehicle-component-sheet.mjs` + template; registrar
+- [X] T013 [P] [US1] i18n e estilos
+- [X] T014 [US1] `npm test` e `npm run build:packs`
 
 ---
 

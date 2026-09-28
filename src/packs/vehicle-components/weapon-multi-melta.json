@@ -1,0 +1,59 @@
+{
+  "name": "Multi-Melta",
+  "type": "weapon",
+  "img": "icons/svg/cannon.svg",
+  "system": {
+    "description": "<p>Bank of meltas acting as one heat cannon; enormous power, very short reach, no personal armour helps.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 378
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Melta",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 10,
+      "kept": 4,
+      "type": "E",
+      "bonus": 10
+    },
+    "pen": 20,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 30,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "twinLinked",
+        "value": null
+      }
+    ],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Vhcl",
+      "slots": 5,
+      "cost": 45,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV4c3581dcbd38",
+  "_key": "!items!dtdV4c3581dcbd38",
+  "folder": "dtdVFdbe7b88e2b5"
+}

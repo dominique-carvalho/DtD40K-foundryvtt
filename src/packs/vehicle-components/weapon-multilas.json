@@ -1,0 +1,54 @@
+{
+  "name": "Multilas",
+  "type": "weapon",
+  "img": "icons/svg/cannon.svg",
+  "system": {
+    "description": "<p>Pulsed rapid-fire laser, mainly an anti-infantry tool.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 376
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Las",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 3,
+      "kept": 3,
+      "type": "E",
+      "bonus": 10
+    },
+    "pen": 0,
+    "rof": {
+      "single": false,
+      "auto": 10
+    },
+    "range": {
+      "value": 500,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Vhcl",
+      "slots": 2,
+      "cost": 10,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV89f4563dcb71",
+  "_key": "!items!dtdV89f4563dcb71",
+  "folder": "dtdVFdbe7b88e2b5"
+}

@@ -1,0 +1,874 @@
+{
+  "name": "Bio-Titan",
+  "type": "vehicle",
+  "img": "icons/svg/wheel.svg",
+  "system": {
+    "size": 29,
+    "speed": 7,
+    "acceleration": 1,
+    "maneuver": 0,
+    "momentum": 0,
+    "budget": {
+      "tier": "holdings5"
+    },
+    "hp": {
+      "value": 30,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "450 (Holdings 5)",
+      "slots": "29/29"
+    },
+    "description": "<p>Ultimate war engine letting one pilot battle whole armies; void shields make it nearly unkillable and one can take an unready world.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 384
+    }
+  },
+  "items": [
+    {
+      "name": "Walker Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/wheel.svg",
+      "system": {
+        "description": "<p>Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.</p><p><strong>Leggy.</strong> Terrain that is normally impassible is treated only as difficult terrain.</p><p><strong>AMBAC.</strong> The pilot can stand the machine back up from prone with a Half Action.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 366
+        },
+        "category": "drivetrain",
+        "cost": 10,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 4,
+          "controlSkill": "drive",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.",
+        "automation": {
+          "key": "walker",
+          "impassibleAsDifficult": true,
+          "selfRight": "half"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi58c65be15de",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi58c65be15de",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Best Standard Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Best Standard frame: 30 HP and Resilience 12. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 180,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 30,
+          "resilience": 12
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "30 HP, Resilience 12",
+        "automation": {
+          "key": "standardbest"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNid4ea843d32e",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNid4ea843d32e",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 9",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>9 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 35,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 9
+        },
+        "parent": "",
+        "effect": "AP 9",
+        "automation": {
+          "key": "armor9"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi0f3f96841e1",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi0f3f96841e1",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Berserker System",
+      "type": "vehicleComponent",
+      "img": "icons/svg/terminal.svg",
+      "system": {
+        "description": "<p>A usually outlawed kill-only AI override. It switches on as a Half Action or automatically when the pilot is incapacitated, then hunts and shoots every detected foe using 3 dots in all needed skills/attributes, staying on until the foes or the vehicle are gone.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "control",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "A usually outlawed kill-only AI override. It switches on as a Half Action or automatically when the pilot is incapacitated, then hunts and shoots every detected foe using 3 dots in all needed skills/attributes, staying on until the foes or the vehicle are gone.",
+        "automation": {
+          "key": "berserker",
+          "activation": [
+            "half",
+            "pilotDisabled"
+          ],
+          "dots": 3
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi1d5ca1f14d1",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi1d5ca1f14d1",
+      "folder": "dtdVFd6dd3fd3e58"
+    },
+    {
+      "name": "COFFIN",
+      "type": "vehicleComponent",
+      "img": "icons/svg/terminal.svg",
+      "system": {
+        "description": "<p>A neural-link cockpit without windows; the pilot perceives through screens or a direct brain interface and gains 1 extra Reaction each round for vehicle use.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 369
+        },
+        "category": "control",
+        "cost": 15,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "A neural-link cockpit without windows; the pilot perceives through screens or a direct brain interface and gains 1 extra Reaction each round for vehicle use.",
+        "automation": {
+          "key": "coffin",
+          "extraReactions": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNia8aec86b4f3",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNia8aec86b4f3",
+      "folder": "dtdVFd6dd3fd3e58"
+    },
+    {
+      "name": "SYNC",
+      "type": "vehicleComponent",
+      "img": "icons/svg/terminal.svg",
+      "system": {
+        "description": "<p>COFFIN upgrade: once each round the pilot may reroll one vehicle action.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 369
+        },
+        "category": "control",
+        "cost": 15,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "COFFIN",
+        "effect": "COFFIN upgrade: once each round the pilot may reroll one vehicle action.",
+        "automation": {
+          "key": "sync",
+          "rerollsPerRound": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNib5ad57141d8",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNib5ad57141d8",
+      "folder": "dtdVFd6dd3fd3e58"
+    },
+    {
+      "name": "Environmental Seals",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 371
+        },
+        "category": "accessory",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
+        "automation": {
+          "key": "environmentalSeals",
+          "immune": [
+            "gas",
+            "water",
+            "fire"
+          ]
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi315b9b80c8c",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi315b9b80c8c",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Mobile Trace System",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>The vehicle mirrors the pilot's body movements (mostly on walkers or armed machines), so Trick Shots and Special Attacks become available for its mounted weapons.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 20,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "The vehicle mirrors the pilot's body movements (mostly on walkers or armed machines), so Trick Shots and Special Attacks become available for its mounted weapons.",
+        "automation": {
+          "key": "mobileTraceSystem"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi125a2a7370d",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi125a2a7370d",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Void Shield (Rating 10)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Ranged attacks with Pen below the rating are fully negated unless the attacker has its own void shield; melee ignores it.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 373
+        },
+        "category": "accessory",
+        "cost": 15,
+        "slots": 4,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Ranged attacks with Pen below the rating are fully negated unless the attacker has its own void shield; melee ignores it.",
+        "automation": {
+          "key": "voidShield10",
+          "rating": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNic4de50121d0",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNic4de50121d0",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Manipulator Arms (Standard)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 15,
+        "slots": 3,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.",
+        "automation": {
+          "key": "manipulatorArms",
+          "strength": 6,
+          "maxStrength": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi1c253f1d66a",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi1c253f1d66a",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Improve Str +1",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Adds 1 Strength to the arms, up to 10.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 5,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 4,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Adds 1 Strength to the arms, up to 10.",
+        "automation": {
+          "key": "improveStr",
+          "strength": "+1",
+          "maxStrength": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi3d1d6755f83",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi3d1d6755f83",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Sensor System (Standard)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
+        "automation": {
+          "key": "sensorStandard",
+          "perception": 5,
+          "detectKm": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi819500865ff",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi819500865ff",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Living Vehicle",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>An organic machine: regains 1 HP daily, can stand itself up from prone, and adds 1 to Drive Rating when using a Walker Drive.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": 5,
+        "slots": 3,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "An organic machine: regains 1 HP daily, can stand itself up from prone, and adds 1 to Drive Rating when using a Walker Drive.",
+        "automation": {
+          "key": "livingVehicle",
+          "healPerDay": 1,
+          "selfRight": true,
+          "walkerDriveRatingBonus": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi1b711104ffc",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi1b711104ffc",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Flawed (External Power: Cable)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Runs on beamed or cabled power; beamed power needs line of sight to the source.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Runs on beamed or cabled power; beamed power needs line of sight to the source.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "externalPower"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNif60fc279e93",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNif60fc279e93",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Flawed (Feedback)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Each time the vehicle is damaged the pilot tests Athletics + Constitution at TN 15 or takes 1 level of fatigue.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Each time the vehicle is damaged the pilot tests Athletics + Constitution at TN 15 or takes 1 level of fatigue.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "feedback",
+          "test": "Athletics + Constitution",
+          "tn": 15,
+          "onFail": "fatigue+1"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNie41420b41bb",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNie41420b41bb",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Flawed (Hangar Queen)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>After each sortie it needs upkeep lasting the deployment time plus 8 hours.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "After each sortie it needs upkeep lasting the deployment time plus 8 hours.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "hangarQueen"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi5ce2204e901",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi5ce2204e901",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Flawed (Unstable)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Control tests suffer 2 checks.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Control tests suffer 2 checks.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "unstable",
+          "controlTestChecks": 2
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi358c8ee8605",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi358c8ee8605",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Heavy Railgun",
+      "type": "weapon",
+      "img": "icons/svg/cannon.svg",
+      "system": {
+        "description": "<p>Larger railgun that must recharge between shots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 376
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Ordinary / Railgun",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 4,
+          "kept": 4,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 15,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 500,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "accurate",
+            "value": null
+          },
+          {
+            "key": "recharge",
+            "value": null
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 7,
+          "cost": 35,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi5ee16904a4f",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi5ee16904a4f"
+    },
+    {
+      "name": "Syrneth Vehicle CQC Weapon",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "<p>Vehicle melee weapon (mostly on mecha); pick one category for its quality and add the vehicle's Strength to damage.</p><p>Choose a category, which sets the quality: Proven 4 for Ordinary, Thrown 10m for Parrying, Reach 5m for Cavalry, Flexible for Flail, Balanced for Fencing, Volatile, Unwieldy for Two Handed, Power Field for Syrneth, Tearing for Chain, Defensive for Shields, Brawling, Arm Mounted for Unarmed. Damage is Impact or Rending by category; adds the vehicle's Strength to damage, like any melee weapon.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 379
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Melee",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 0,
+          "kept": 5,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 5,
+        "rof": {
+          "single": false,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "powerField",
+            "value": null
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 2,
+          "cost": 15,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi73e0239e465",
+      "_key": "!actors.items!dtdWdbc15d8367e9.dtdNi73e0239e465"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Bio-Titan",
+    "actorLink": false,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdWdbc15d8367e9",
+  "_key": "!actors!dtdWdbc15d8367e9",
+  "folder": "dtdWFd1b7181af7f"
+}

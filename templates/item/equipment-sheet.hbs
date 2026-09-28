@@ -29,8 +29,8 @@
       <label>{{localize "DTD.Equipment.Type"}}{{#if editable}}<select name="system.weaponType">{{selectOptions weaponTypeOptions selected=system.weaponType localize=true}}</select>{{else}}<b>{{localize (concat "DTD.WeaponType." system.weaponType)}}{{#if system.thrown}}, {{localize "DTD.WeaponType.thrown"}}{{/if}}</b>{{/if}}</label>
       <label>{{localize "DTD.Equipment.Group"}}{{#if editable}}<input type="text" name="system.group" value="{{system.group}}">{{else}}<b>{{system.group}}</b>{{/if}}</label>
       <label>{{localize "DTD.Equipment.Damage"}}
-        {{#if editable}}<span class="pool-inputs"><input type="number" name="system.damage.rolled" value="{{system.damage.rolled}}" min="0">k<input type="number" name="system.damage.kept" value="{{system.damage.kept}}" min="0"><select name="system.damage.type">{{selectOptions damageTypeOptions selected=system.damage.type localize=true}}</select></span>
-        {{else}}<b>{{#if system.damage.kept}}{{system.damage.rolled}}k{{system.damage.kept}} {{system.damage.type}}{{else}}—{{/if}}</b>{{/if}}</label>
+        {{#if editable}}<span class="pool-inputs"><input type="number" name="system.damage.rolled" value="{{system.damage.rolled}}" min="0">k<input type="number" name="system.damage.kept" value="{{system.damage.kept}}" min="0">+<input type="number" name="system.damage.bonus" value="{{system.damage.bonus}}"><select name="system.damage.type">{{selectOptions damageTypeOptions selected=system.damage.type localize=true}}</select></span>
+        {{else}}<b>{{#if system.damage.kept}}{{system.damage.rolled}}k{{system.damage.kept}}{{#if system.damage.bonus}}+{{system.damage.bonus}}{{/if}} {{system.damage.type}}{{else}}—{{/if}}</b>{{/if}}</label>
       <label>{{localize "DTD.Equipment.Pen"}}{{#if editable}}<input type="number" name="system.pen" value="{{system.pen}}" min="0">{{else}}<b>{{system.pen}}</b>{{/if}}</label>
       {{#unless (eq system.weaponType "melee")}}
       <label>{{localize "DTD.Equipment.Rof"}}{{#if editable}}<span class="pool-inputs"><input type="checkbox" name="system.rof.single" {{checked system.rof.single}}>S/<input type="number" name="system.rof.auto" value="{{system.rof.auto}}" min="0"></span>{{else}}<b>{{#if system.rof.single}}S{{else}}-{{/if}}/{{#if system.rof.auto}}{{system.rof.auto}}{{else}}-{{/if}}</b>{{/if}}</label>
@@ -39,7 +39,18 @@
       <label>{{localize "DTD.Equipment.Reload"}}{{#if editable}}<input type="text" name="system.reload" value="{{system.reload}}">{{else}}<b>{{system.reload}}</b>{{/if}}</label>
       {{/unless}}
     </div>
-    <p class="hint">{{localize "DTD.Equipment.Proficiencies"}}: <b>{{proficienciesText}}</b></p>
+    {{#if (or editable system.vehicle.scale)}}
+    <div class="profile-grid vehicle-weapon">
+      <label>{{localize "DTD.Vehicle.Scale"}}{{#if editable}}<select name="system.vehicle.scale">{{selectOptions vehicleScaleOptions selected=system.vehicle.scale localize=true}}</select>{{else}}<b>{{system.vehicle.scale}}</b>{{/if}}</label>
+      {{#if system.vehicle.scale}}
+      <label>{{localize "DTD.Vehicle.Slots"}}{{#if editable}}<input type="number" name="system.vehicle.slots" value="{{system.vehicle.slots}}" min="0">{{else}}<b>{{system.vehicle.slots}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.Cost"}}{{#if editable}}<input type="number" name="system.vehicle.cost" value="{{system.vehicle.cost}}">{{else}}<b>{{system.vehicle.cost}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.Macronized"}}{{#if editable}}<input type="number" name="system.vehicle.macronized" value="{{system.vehicle.macronized}}" min="0">{{else}}<b>{{system.vehicle.macronized}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.Miniaturized"}}{{#if editable}}<input type="number" name="system.vehicle.miniaturized" value="{{system.vehicle.miniaturized}}" min="0">{{else}}<b>{{system.vehicle.miniaturized}}</b>{{/if}}</label>
+      {{/if}}
+    </div>
+    {{/if}}
+    {{#unless system.vehicle.scale}}<p class="hint">{{localize "DTD.Equipment.Proficiencies"}}: <b>{{proficienciesText}}</b></p>{{/unless}}
     {{#if editable}}
     <div class="form-group stacked"><label>{{localize "DTD.Equipment.Qualities"}}</label><input type="text" name="qualitiesText" value="{{qualitiesText}}"></div>
     {{else if qualities.length}}

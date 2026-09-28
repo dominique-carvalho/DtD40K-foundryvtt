@@ -1,0 +1,41 @@
+{
+  "name": "Mobile Decouplers",
+  "type": "vehicleComponent",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "<p>Swapping between drivetrains becomes a Reaction instead of a Half Action.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 375
+    },
+    "category": "modification",
+    "cost": 5,
+    "slots": 0,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "Swapping between drivetrains becomes a Reaction instead of a Half Action.",
+    "automation": {
+      "key": "mobileDecouplers",
+      "swapDrivetrain": "reaction"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV03988aa073fd",
+  "_key": "!items!dtdV03988aa073fd",
+  "folder": "dtdVFdc18f9abf79"
+}

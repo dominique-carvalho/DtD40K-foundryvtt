@@ -1,0 +1,63 @@
+{
+  "name": "Plasma Destroyer",
+  "type": "weapon",
+  "img": "icons/svg/cannon.svg",
+  "system": {
+    "description": "<p>Rare vehicle plasma gun hurling globs of fusion plasma that melt armour.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 376
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Plasma",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 8,
+      "kept": 4,
+      "type": "E",
+      "bonus": 10
+    },
+    "pen": 16,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 180,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "recharge",
+        "value": null
+      },
+      {
+        "key": "overheats",
+        "value": null
+      }
+    ],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Vhcl",
+      "slots": 6,
+      "cost": 45,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV8360ee341039",
+  "_key": "!items!dtdV8360ee341039",
+  "folder": "dtdVFdbe7b88e2b5"
+}

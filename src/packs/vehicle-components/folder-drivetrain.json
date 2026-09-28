@@ -1,0 +1,16 @@
+{
+  "_id": "dtdVFd7fd7f37f92",
+  "_key": "!folders!dtdVFd7fd7f37f92",
+  "name": "Drivetrains",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 10000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "vehicleFolder": "drivetrain"
+    }
+  }
+}

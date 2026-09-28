@@ -1,0 +1,41 @@
+{
+  "name": "Copilot Seat",
+  "type": "vehicleComponent",
+  "img": "icons/svg/terminal.svg",
+  "system": {
+    "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 368
+    },
+    "category": "control",
+    "cost": 10,
+    "slots": 2,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
+    "automation": {
+      "key": "copilotSeat",
+      "copilotHalfActions": 1
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV3be6ca2c2c2f",
+  "_key": "!items!dtdV3be6ca2c2c2f",
+  "folder": "dtdVFd6dd3fd3e58"
+}

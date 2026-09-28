@@ -1,0 +1,59 @@
+{
+  "name": "AC/5",
+  "type": "weapon",
+  "img": "icons/svg/cannon.svg",
+  "system": {
+    "description": "<p>Mid calibre that fits most chassis; a light anti-vehicle gun.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 375
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Ordinary / Autocannon",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 5,
+      "kept": 2,
+      "type": "I",
+      "bonus": 10
+    },
+    "pen": 5,
+    "rof": {
+      "single": true,
+      "auto": 5
+    },
+    "range": {
+      "value": 300,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "proven",
+        "value": 3
+      }
+    ],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Vhcl",
+      "slots": 3,
+      "cost": 15,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV028fb2530f66",
+  "_key": "!items!dtdV028fb2530f66",
+  "folder": "dtdVFdbe7b88e2b5"
+}

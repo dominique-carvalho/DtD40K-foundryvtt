@@ -1,0 +1,61 @@
+{
+  "name": "Arrow IV Cluster",
+  "type": "vehicleComponent",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Area-saturation submunitions: damage drops to 6k4+10 but Blast grows to 15.</p><p>Damage 6k4+10 X; Pen 0; Blast (15), Recharge.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 379
+    },
+    "category": "weaponUpgrade",
+    "cost": 5,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "Arrow IV Launcher",
+    "effect": "Damage 6k4+10 X; Pen 0; Blast (15), Recharge",
+    "automation": {
+      "key": "arrowIVCluster",
+      "kind": "ammo",
+      "qualities": [
+        {
+          "key": "blast",
+          "value": 15
+        },
+        {
+          "key": "recharge",
+          "value": null
+        }
+      ],
+      "damage": {
+        "rolled": 6,
+        "kept": 4,
+        "bonus": 10,
+        "type": "X",
+        "printed": "6k4+10 X"
+      },
+      "pen": 0,
+      "rof": null,
+      "range": null
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVf459bd0219de",
+  "_key": "!items!dtdVf459bd0219de",
+  "folder": "dtdVFdbe7b88e2b5"
+}

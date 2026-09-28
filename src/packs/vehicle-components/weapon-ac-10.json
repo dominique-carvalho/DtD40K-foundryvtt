@@ -1,0 +1,59 @@
+{
+  "name": "AC/10",
+  "type": "weapon",
+  "img": "icons/svg/cannon.svg",
+  "system": {
+    "description": "<p>Heavier autocannon, a cheap and effective choice for bigger units.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 375
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Ordinary / Autocannon",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 4,
+      "kept": 3,
+      "type": "I",
+      "bonus": 10
+    },
+    "pen": 5,
+    "rof": {
+      "single": true,
+      "auto": 10
+    },
+    "range": {
+      "value": 150,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "proven",
+        "value": 3
+      }
+    ],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Vhcl",
+      "slots": 4,
+      "cost": 20,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV297ed97e867a",
+  "_key": "!items!dtdV297ed97e867a",
+  "folder": "dtdVFdbe7b88e2b5"
+}

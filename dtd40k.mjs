@@ -5,6 +5,8 @@ import { DTD } from "./module/config.mjs";
 import { CharacterData } from "./module/data/character-data.mjs";
 import { NpcData } from "./module/data/npc-data.mjs";
 import { MinionSquadData } from "./module/data/minion-squad-data.mjs";
+import { VehicleData } from "./module/data/vehicle-data.mjs";
+import { VehicleComponentData } from "./module/data/vehicle-component-data.mjs";
 import { NpcSheet } from "./module/apps/npc-sheet.mjs";
 import { MinionSheet } from "./module/apps/minion-sheet.mjs";
 import { fearFromCard } from "./module/documents/npc-service.mjs";
@@ -22,6 +24,7 @@ import { MartialSchoolData } from "./module/data/martial-school-data.mjs";
 import { MartialSchoolSheet } from "./module/apps/martial-school-sheet.mjs";
 import { DeityData } from "./module/data/deity-data.mjs";
 import { DeitySheet } from "./module/apps/deity-sheet.mjs";
+import { VehicleComponentSheet } from "./module/apps/vehicle-component-sheet.mjs";
 import { DtdActiveEffect } from "./module/documents/active-effect.mjs";
 import { rollDamage } from "./module/documents/attack-service.mjs";
 import { spendLiquid } from "./module/documents/acquisition-service.mjs";
@@ -49,6 +52,9 @@ Hooks.once("init", () => {
   // Antagonists (spec 012): NPCs share the character model; Minion Squads have their own.
   CONFIG.Actor.dataModels.npc = NpcData;
   CONFIG.Actor.dataModels.minionSquad = MinionSquadData;
+  // Vehicles (spec 013).
+  CONFIG.Actor.dataModels.vehicle = VehicleData;
+  CONFIG.Item.dataModels.vehicleComponent = VehicleComponentData;
 
   CONFIG.Item.documentClass = DtdItem;
   CONFIG.Item.dataModels.race = RaceData;
@@ -139,6 +145,12 @@ Hooks.once("init", () => {
     types: ["deity"],
     makeDefault: true,
     label: "DTD.Sheet.Deity"
+  });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Item, "dtd40k", VehicleComponentSheet, {
+    types: ["vehicleComponent"],
+    makeDefault: true,
+    label: "DTD.Sheet.VehicleComponent"
   });
 
   foundry.applications.handlebars.loadTemplates(CharacterSheet.PARTIALS);

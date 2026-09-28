@@ -1,0 +1,43 @@
+{
+  "name": "Overcharged Reactor",
+  "type": "vehicleComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Safety-free engine: as a Half Action the vehicle drops by one quarter of its maximum HP (round up) and its Momentum jumps to 10.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 373
+    },
+    "category": "accessory",
+    "cost": 10,
+    "slots": 1,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "Safety-free engine: as a Half Action the vehicle drops by one quarter of its maximum HP (round up) and its Momentum jumps to 10.",
+    "automation": {
+      "key": "overchargedReactor",
+      "activation": "half",
+      "hpLoss": "ceil(maxHp/4)",
+      "setMomentum": 10
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV32b82d5ec83b",
+  "_key": "!items!dtdV32b82d5ec83b",
+  "folder": "dtdVFd29d4f0998d"
+}

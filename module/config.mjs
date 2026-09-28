@@ -414,6 +414,28 @@ export const NPC_TRAITS = Object.fromEntries([
  */
 export const MINION = { maxCount: 6, sdPerThreat: 5, damagePerRating: 5, rangePerThreat: 10 };
 
+/* ---------- Vehicles (spec 013, DtD 7.7a ch. XV, pp. 358–385) ---------- */
+
+/** Categories of vehicle components (pp. 366–380); weapons are `weapon` Items. */
+export const VEHICLE_CATEGORIES = ["drivetrain", "frame", "armor", "control", "accommodation", "accessory", "modification", "weaponUpgrade"];
+
+/** Vehicle budgets in VP (p. 364): by rarity, and by Holdings for the top tier. */
+export const VEHICLE_BUDGETS = { uncommon: 50, rare: 100, veryRare: 150, mythicRare: 200, holdings1: 250, holdings2: 300, holdings3: 350, holdings4: 400, holdings5: 450 };
+
+/**
+ * VP cost of the base stats by rating (p. 364). Index = rating; Speed and Size start at 1 (index 0 unused).
+ * Size costs 1 per point to 10, 2 per point 11–20, 3 per point 21–30.
+ */
+export const VEHICLE_COSTS = {
+  maneuver: [0, 5, 7, 9, 11, 13, 16, 20, 25, 30, 35],
+  acceleration: [0, 5, 10, 20, 30, 40],
+  speed: [0, 5, 7, 9, 11, 13, 18, 23, 28, 33, 38, 44, 51, 59, 68, 80],
+  size: [0, ...Array.from({ length: 30 }, (_, i) => { const n = i + 1; return n <= 10 ? n : n <= 20 ? 10 + 2 * (n - 10) : 30 + 3 * (n - 20); })]
+};
+
+/** Crew roles of a vehicle. */
+export const VEHICLE_CREW_ROLES = ["pilot", "gunner", "engineer", "passenger"];
+
 export const DTD = {
   GROUPS,
   CHARACTERISTICS,
@@ -480,5 +502,9 @@ export const DTD = {
   INHERITANCE_SLOTS,
   NPC_CATEGORIES,
   NPC_TRAITS,
-  MINION
+  MINION,
+  VEHICLE_CATEGORIES,
+  VEHICLE_BUDGETS,
+  VEHICLE_COSTS,
+  VEHICLE_CREW_ROLES
 };

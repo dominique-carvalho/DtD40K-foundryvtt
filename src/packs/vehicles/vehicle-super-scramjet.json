@@ -1,0 +1,593 @@
+{
+  "name": "Super Scramjet",
+  "type": "vehicle",
+  "img": "icons/svg/wheel.svg",
+  "system": {
+    "size": 19,
+    "speed": 15,
+    "acceleration": 5,
+    "maneuver": 0,
+    "momentum": 0,
+    "budget": {
+      "tier": "mythicRare"
+    },
+    "hp": {
+      "value": 10,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "200 (Mythic Rare)",
+      "slots": "19/19"
+    },
+    "description": "<p>Hypersonic transport (XL-5 engine, twin afterburners, light frame); barely controllable and hard to land, but only a Spelljammer is quicker.</p><p>Carries 30 passengers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 381
+    }
+  },
+  "items": [
+    {
+      "name": "Scramjet Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/wing.svg",
+      "system": {
+        "description": "<p>The quickest way to get anywhere by air, provided the route is a straight line.</p><p><strong>Super Stalin.</strong> Must keep moving or start to fall: it needs Momentum 5 to take off and must cover at least 100 x base Speed meters per round to stay up.</p><p><strong>Flying Crowbar.</strong> Cannot turn during an ordinary Move action.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "drivetrain",
+        "cost": 30,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 20,
+          "controlSkill": "pilot",
+          "minMomentum": 5,
+          "flying": true
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "The quickest way to get anywhere by air, provided the route is a straight line.",
+        "automation": {
+          "key": "scramjet",
+          "takeoffMomentum": 5,
+          "minMetersPerRound": "100 x Speed",
+          "noTurnOnMove": true
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi457bd5bcf29",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNi457bd5bcf29",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Good Lightweight Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Good Lightweight frame: 10 HP and Resilience 4. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": -25,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 10,
+          "resilience": 4
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "10 HP, Resilience 4",
+        "automation": {
+          "key": "lightweightgood"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNida8dd313438",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNida8dd313438",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 3",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>3 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 6,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 3
+        },
+        "parent": "",
+        "effect": "AP 3",
+        "automation": {
+          "key": "armor3"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi304ff3ff654",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNi304ff3ff654",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Passenger Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 6,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
+        "automation": {
+          "key": "passengerSpace",
+          "perUnitBySize": {
+            "1-10": 1,
+            "11-20": 5,
+            "21-30": 50
+          },
+          "unit": "seats"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi9c72c4b7866",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNi9c72c4b7866",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Cargo Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 2,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
+        "automation": {
+          "key": "cargoSpace",
+          "perUnitBySize": {
+            "1-10": 0.5,
+            "11-20": 2,
+            "21-30": 10
+          },
+          "unit": "m3"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi66a837dfbb1",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNi66a837dfbb1",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Afterburners",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 2,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.",
+        "automation": {
+          "key": "afterburners",
+          "punchItAs": "half",
+          "usesPerScenePerPurchase": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNibf57681d7b0",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNibf57681d7b0",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Ejector Seat",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.",
+        "automation": {
+          "key": "ejectorSeat",
+          "ejectDistance": 100
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNid0f80ce1e66",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNid0f80ce1e66",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Environmental Seals",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 371
+        },
+        "category": "accessory",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
+        "automation": {
+          "key": "environmentalSeals",
+          "immune": [
+            "gas",
+            "water",
+            "fire"
+          ]
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNid5da642136a",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNid5da642136a",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Sensor System (Standard)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
+        "automation": {
+          "key": "sensorStandard",
+          "perception": 5,
+          "detectKm": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi08b31469cdd",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNi08b31469cdd",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "XL Engine (Rating 5)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Oversized engine adding 5 to maximum Momentum, even beyond the usual cap of 10.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 373
+        },
+        "category": "accessory",
+        "cost": 25,
+        "slots": 5,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Oversized engine adding 5 to maximum Momentum, even beyond the usual cap of 10.",
+        "automation": {
+          "key": "xlEngine5",
+          "maxMomentumBonus": 5
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi790d529895c",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNi790d529895c",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Flawed (Hangar Queen)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>After each sortie it needs upkeep lasting the deployment time plus 8 hours.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "After each sortie it needs upkeep lasting the deployment time plus 8 hours.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "hangarQueen"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi2d5ca45f1e4",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNi2d5ca45f1e4",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Flawed (Junker)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Any damage suffered triggers a roll on the crit chart.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Any damage suffered triggers a roll on the crit chart.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "junker",
+          "critOnAnyDamage": true
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi9644e20ee3e",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNi9644e20ee3e",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Flawed (Unstable)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Control tests suffer 2 checks.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Control tests suffer 2 checks.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "unstable",
+          "controlTestChecks": 2
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi0950964bcf8",
+      "_key": "!actors.items!dtdWb0053eb5f902.dtdNi0950964bcf8",
+      "folder": "dtdVFdc18f9abf79"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Super Scramjet",
+    "actorLink": false,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdWb0053eb5f902",
+  "_key": "!actors!dtdWb0053eb5f902",
+  "folder": "dtdWFd1b7181af7f"
+}

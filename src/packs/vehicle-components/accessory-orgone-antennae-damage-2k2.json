@@ -1,0 +1,41 @@
+{
+  "name": "Orgone Antennae (Damage +2k2)",
+  "type": "vehicleComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>As Basic, and damaging spells channeled through it gain +2k2 damage.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 372
+    },
+    "category": "accessory",
+    "cost": 40,
+    "slots": 6,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "As Basic, and damaging spells channeled through it gain +2k2 damage.",
+    "automation": {
+      "key": "orgone2k2",
+      "spellDamage": "+2k2"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV57879d87893e",
+  "_key": "!items!dtdV57879d87893e",
+  "folder": "dtdVFd29d4f0998d"
+}

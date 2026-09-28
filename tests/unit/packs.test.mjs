@@ -2,9 +2,10 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { COMBAT_ACTIONS } from "../../module/rules/combat-actions.mjs";
+import { baseCost, slotsUsed, vehicleCost } from "../../module/rules/vehicle.mjs";
 import {
   ASSET_AUTOMATION, ASSET_GROUPS, CHARACTERISTICS, EXALTATION_FORMULAS, RACE_POWER_AUTOMATION, RESOURCE_ACTIONS, SKILLS,
-  MAGIC_SCHOOLS, MARTIAL_ENTRY_TYPES, MARTIAL_SCHOOLS, NPC_CATEGORIES, NPC_TRAITS, PANTHEONS, RARITIES, SPELL_KEYWORDS, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
+  MAGIC_SCHOOLS, MARTIAL_ENTRY_TYPES, VEHICLE_BUDGETS, VEHICLE_CATEGORIES, MARTIAL_SCHOOLS, NPC_CATEGORIES, NPC_TRAITS, PANTHEONS, RARITIES, SPELL_KEYWORDS, STATUS_EFFECTS, WEAPON_PROFICIENCIES, WEAPON_QUALITIES
 } from "../../module/config.mjs";
 
 /** Every JSON document of a compendium source folder. */
@@ -1017,5 +1018,83 @@ describe("antagonists compendium source (spec 012, SC-001)", () => {
     const pirates = squads.find((s) => s.name === "Space Pirate Crew").system;
     expect(pirates).toMatchObject({ threatRating: 3, count: 6, melee: { rating: 3, type: "R" }, ranged: { rating: 3, type: "I" } });
     expect(squads.find((s) => s.name === "Fluffy Bunnies").system).toMatchObject({ threatRating: 1, melee: { rating: 5, type: "R" }, ranged: { rating: 0 } });
+  });
+});
+
+const componentPack = readPack("src/packs/vehicle-components");
+const componentDocs = componentPack.filter((doc) => doc._key.startsWith("!items!"));
+const componentNamed = (name) => componentDocs.find((doc) => doc.name === name);
+const vehiclePack = readPack("src/packs/vehicles");
+const vehicleDocs = vehiclePack.filter((doc) => doc._key.startsWith("!actors!"));
+const vehicleNamed = (name) => vehicleDocs.find((doc) => doc.name === name);
+
+describe("vehicle components compendium source (spec 013, SC-001)", () => {
+  it("has the components of every category, 27 weapons and 10 ammunition/modes in 8 folders", () => {
+    const count = (category) => componentDocs.filter((doc) => doc.type === "vehicleComponent" && doc.system.category === category).length;
+    expect({
+      drivetrain: count("drivetrain"), frame: count("frame"), armor: count("armor"), control: count("control"),
+      accommodation: count("accommodation"), accessory: count("accessory"), modification: count("modification"), weaponUpgrade: count("weaponUpgrade")
+    }).toEqual({ drivetrain: 9, frame: 9, armor: 21, control: 14, accommodation: 4, accessory: 30, modification: 7, weaponUpgrade: 10 });
+    expect(componentDocs.filter((doc) => doc.type === "weapon")).toHaveLength(27);
+    expect(componentPack.filter((doc) => doc._key.startsWith("!folders!"))).toHaveLength(8);
+    for (const doc of componentDocs) if (doc.type === "vehicleComponent") expect(VEHICLE_CATEGORIES).toContain(doc.system.category);
+  });
+
+  it("matches the reference entries", () => {
+    expect(componentNamed("Wheeled Drive").system).toMatchObject({ category: "drivetrain", cost: 5, slots: null, drive: { rating: 5, controlSkill: "drive", flying: false } });
+    expect(componentNamed("VTOL").system.drive).toEqual({ rating: 6, controlSkill: "pilot", minMomentum: 1, flying: true });
+    expect(componentNamed("Standard Frame").system).toMatchObject({ category: "frame", cost: 15, frame: { hp: 10, resilience: 10 } });
+    expect(componentNamed("Lightweight Frame").system.cost).toBe(-75);
+    expect(componentNamed("Cockpit").system).toMatchObject({ cost: null, slots: null });
+    expect(componentNamed("Cargo Space").system).toMatchObject({ category: "accommodation", perPurchase: true, slots: 1, cost: 0 });
+    const ac2 = componentNamed("AC/2").system;
+    expect(ac2).toMatchObject({ weaponType: "heavy", damage: { rolled: 4, kept: 2, bonus: 10, type: "I" }, pen: 5, rof: { single: true, auto: 2 }, range: { value: 500 }, qualities: [{ key: "proven", value: 3 }], vehicle: { scale: "Vhcl", slots: 2, cost: 10 } });
+    expect(componentNamed("Wave Motion Cannon").system.vehicle.scale).toBe("Hybrid");
+    expect(componentNamed("LBX Ammo").system).toMatchObject({ category: "weaponUpgrade", parent: "Autocannon", cost: 15 });
+    for (const doc of componentDocs) {
+      expect(doc.system.description, doc.name).toMatch(/^<p>.+<\/p>/s);
+      for (const q of doc.system.qualities ?? []) expect(WEAPON_QUALITIES[q.key], `${doc.name}: ${q.key}`).toBeDefined();
+    }
+  });
+});
+
+describe("example vehicles compendium source (spec 013, SC-001)", () => {
+  const derived = (doc) => {
+    const comps = doc.items.filter((i) => i.type === "vehicleComponent").map((i) => i.system);
+    const weapons = doc.items.filter((i) => i.type === "weapon").map((i) => ({ cost: i.system.vehicle.cost, slots: i.system.vehicle.slots, automation: i.system.vehicle }));
+    const s = doc.system;
+    return { vp: vehicleCost(s, [...comps, ...weapons]), slots: slotsUsed([...comps, ...weapons]) };
+  };
+
+  it("has the 16 example vehicles with a drivetrain, a frame and armor", () => {
+    expect(vehicleDocs).toHaveLength(16);
+    for (const doc of vehicleDocs) {
+      const cat = (c) => doc.items.filter((i) => i.system.category === c).length;
+      expect(cat("drivetrain"), doc.name).toBeGreaterThanOrEqual(1);
+      expect([cat("frame"), cat("armor")], doc.name).toEqual([1, 1]);
+      expect(Object.keys(VEHICLE_BUDGETS)).toContain(doc.system.budget.tier);
+      for (const item of doc.items) expect(item._key).toBe(`!actors.items!${doc._id}.${item._id}`);
+      expect(new Set(doc.items.map((i) => i._id)).size, doc.name).toBe(doc.items.length);
+    }
+  });
+
+  it("builds the Basic Ground Vehicle within its budget", () => {
+    const car = vehicleNamed("Basic Ground Vehicle");
+    expect(car.system).toMatchObject({ size: 8, speed: 4, acceleration: 1, maneuver: 0, hp: { value: 10 }, budget: { tier: "uncommon" }, printed: { vp: "50 (Uncommon)", slots: "8/8" } });
+    expect(car.items.map((i) => i.name)).toEqual(["Wheeled Drive", "Standard Frame", "Armor 3", "Cargo Space", "Passenger Space"]);
+    expect(baseCost(car.system)).toBe(24);
+    expect(derived(car)).toEqual({ vp: 50, slots: 8 });
+  });
+
+  it("keeps the recalculated costs of the book's vehicles, Macronized weapons and Copilot Seats included", () => {
+    expect(derived(vehicleNamed("Mudskipper"))).toEqual({ vp: 50, slots: 6 });
+    expect(derived(vehicleNamed("Scorpion Tank"))).toEqual({ vp: 152, slots: 14 });
+    expect(derived(vehicleNamed("Gunbarge"))).toEqual({ vp: 399, slots: 54 });
+    expect(derived(vehicleNamed("Bio-Titan"))).toEqual({ vp: 450, slots: 29 });
+    const barge = vehicleNamed("Gunbarge");
+    expect(barge.items.filter((i) => i.name === "AC/2")).toHaveLength(2);
+    expect(barge.items.find((i) => i.name === "Vulcan Mega-Bolter (Macronized)").system.vehicle).toMatchObject({ cost: 45, slots: 6, macronized: 1 });
+    expect(vehicleNamed("Bio-Titan").items.find((i) => i.name === "Flawed (Hangar Queen)").system).toMatchObject({ cost: -10, automation: { key: "flawed", flaw: "hangarQueen" } });
+    expect(vehicleNamed("Variable Man Machine").items.filter((i) => i.system.category === "drivetrain").map((i) => i.name)).toEqual(["Aerospace Drive", "Walker Drive"]);
   });
 });

@@ -1,0 +1,16 @@
+{
+  "_id": "dtdVFd29d4f0998d",
+  "_key": "!folders!dtdVFd29d4f0998d",
+  "name": "Accessories",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "sorting": "a",
+  "sort": 60000,
+  "color": null,
+  "flags": {
+    "dtd40k": {
+      "vehicleFolder": "accessory"
+    }
+  }
+}

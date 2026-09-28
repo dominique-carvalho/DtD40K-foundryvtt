@@ -1,0 +1,534 @@
+{
+  "name": "Air Superiority Jet",
+  "type": "vehicle",
+  "img": "icons/svg/wheel.svg",
+  "system": {
+    "size": 17,
+    "speed": 12,
+    "acceleration": 2,
+    "maneuver": 9,
+    "momentum": 0,
+    "budget": {
+      "tier": "holdings1"
+    },
+    "hp": {
+      "value": 20,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "250 (Holdings 1)",
+      "slots": "17/17"
+    },
+    "description": "<p>Fighter built purely for speed and agility; a key asset that most advanced Spheres field in numbers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 382
+    }
+  },
+  "items": [
+    {
+      "name": "Aerospace Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/wing.svg",
+      "system": {
+        "description": "<p>Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.</p><p><strong>Stalin.</strong> Must keep moving or start to fall: it needs Momentum 3 to take off and must cover at least 30 x base Speed meters per round to stay up.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "drivetrain",
+        "cost": 30,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 10,
+          "controlSkill": "pilot",
+          "minMomentum": 3,
+          "flying": true
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.",
+        "automation": {
+          "key": "aerospace",
+          "takeoffMomentum": 3,
+          "minMetersPerRound": "30 x Speed"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi9218f8adffe",
+      "_key": "!actors.items!dtdW0d04b6bd0efb.dtdNi9218f8adffe",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Best Lightweight Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Best Lightweight frame: 20 HP and Resilience 6. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 20,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 20,
+          "resilience": 6
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "20 HP, Resilience 6",
+        "automation": {
+          "key": "lightweightbest"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNia250602ff4c",
+      "_key": "!actors.items!dtdW0d04b6bd0efb.dtdNia250602ff4c",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 4",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>4 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 10,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 4
+        },
+        "parent": "",
+        "effect": "AP 4",
+        "automation": {
+          "key": "armor4"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNia3feb150658",
+      "_key": "!actors.items!dtdW0d04b6bd0efb.dtdNia3feb150658",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Afterburners",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.",
+        "automation": {
+          "key": "afterburners",
+          "punchItAs": "half",
+          "usesPerScenePerPurchase": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi2320d835e76",
+      "_key": "!actors.items!dtdW0d04b6bd0efb.dtdNi2320d835e76",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Ejector Seat (Macronized)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.",
+        "automation": {
+          "key": "ejectorSeat",
+          "ejectDistance": 100,
+          "macronized": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi06a829718ba",
+      "_key": "!actors.items!dtdW0d04b6bd0efb.dtdNi06a829718ba",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Environmental Seals",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 371
+        },
+        "category": "accessory",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
+        "automation": {
+          "key": "environmentalSeals",
+          "immune": [
+            "gas",
+            "water",
+            "fire"
+          ]
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi71c3156ea61",
+      "_key": "!actors.items!dtdW0d04b6bd0efb.dtdNi71c3156ea61",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "XL Engine (Rating 4)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Oversized engine adding 4 to maximum Momentum, even beyond the usual cap of 10.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 373
+        },
+        "category": "accessory",
+        "cost": 20,
+        "slots": 4,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Oversized engine adding 4 to maximum Momentum, even beyond the usual cap of 10.",
+        "automation": {
+          "key": "xlEngine4",
+          "maxMomentumBonus": 4
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi08dcc0f72c4",
+      "_key": "!actors.items!dtdW0d04b6bd0efb.dtdNi08dcc0f72c4",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Sensor System (Standard) (Macronized)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
+        "automation": {
+          "key": "sensorStandard",
+          "perception": 5,
+          "detectKm": 10,
+          "macronized": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi02adbd64ce5",
+      "_key": "!actors.items!dtdW0d04b6bd0efb.dtdNi02adbd64ce5",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Flawed (Hangar Queen)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>After each sortie it needs upkeep lasting the deployment time plus 8 hours.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "After each sortie it needs upkeep lasting the deployment time plus 8 hours.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "hangarQueen"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi4add2cdd660",
+      "_key": "!actors.items!dtdW0d04b6bd0efb.dtdNi4add2cdd660",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "LRM",
+      "type": "weapon",
+      "img": "icons/svg/cannon.svg",
+      "system": {
+        "description": "<p>Long Range Missile rack firing volleys to extreme range, with several ammo types.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 379
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Launchers",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 3,
+          "kept": 3,
+          "type": "X",
+          "bonus": 10
+        },
+        "pen": 6,
+        "rof": {
+          "single": false,
+          "auto": 5
+        },
+        "range": {
+          "value": 750,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "blast",
+            "value": 5
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 6,
+          "cost": 35,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNifa3d3f754fd",
+      "_key": "!actors.items!dtdW0d04b6bd0efb.dtdNifa3d3f754fd"
+    },
+    {
+      "name": "Light Punisher Gatling Cannon",
+      "type": "weapon",
+      "img": "icons/svg/cannon.svg",
+      "system": {
+        "description": "<p>Rotary-barrel autocannon deadly to lightly armoured vehicles and big living targets; banned against infantry in many Spheres.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Ordinary / Punisher Gatling Cannon",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 0,
+        "rof": {
+          "single": false,
+          "auto": 10
+        },
+        "range": {
+          "value": 150,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "storm",
+            "value": null
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 2,
+          "cost": 10,
+          "macronized": 0,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi17ee34e69fc",
+      "_key": "!actors.items!dtdW0d04b6bd0efb.dtdNi17ee34e69fc"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Air Superiority Jet",
+    "actorLink": false,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdW0d04b6bd0efb",
+  "_key": "!actors!dtdW0d04b6bd0efb",
+  "folder": "dtdWFd1b7181af7f"
+}

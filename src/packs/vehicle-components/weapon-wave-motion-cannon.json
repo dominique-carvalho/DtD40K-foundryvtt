@@ -1,0 +1,59 @@
+{
+  "name": "Wave Motion Cannon",
+  "type": "weapon",
+  "img": "icons/svg/cannon.svg",
+  "system": {
+    "description": "<p>Shrunken lance battery; the strongest vehicle weapon and able to hurt starships.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 378
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Syrneth",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 10,
+      "kept": 3,
+      "type": "E",
+      "bonus": 30
+    },
+    "pen": 20,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 500,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "recharge",
+        "value": null
+      }
+    ],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Hybrid",
+      "slots": 10,
+      "cost": 110,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV112df85780af",
+  "_key": "!items!dtdV112df85780af",
+  "folder": "dtdVFdbe7b88e2b5"
+}

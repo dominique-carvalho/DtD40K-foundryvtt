@@ -1,0 +1,472 @@
+{
+  "name": "Battlemecha",
+  "type": "vehicle",
+  "img": "icons/svg/wheel.svg",
+  "system": {
+    "size": 13,
+    "speed": 4,
+    "acceleration": 1,
+    "maneuver": 5,
+    "momentum": 0,
+    "budget": {
+      "tier": "holdings3"
+    },
+    "hp": {
+      "value": 25,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "350 (Holdings 3)",
+      "slots": "13/13"
+    },
+    "description": "<p>The most adaptable war machine, ruling ground combat since the War in Heaven; each Sphere has its own storied models.</p><p>Weapon packages (pick one; SD and AP vary with it): an AC/20 loaded with HV Ammo plus a Miniaturized Multilas; an Inferno Cannon plus a Miniaturized Blazer; a PPC and 2 extra AP; a Railgun, an Advanced Sensor System and 2 extra AP; a HAG, an Advanced Sensor System and 2 extra AP; a Vulcan Mega-Bolter and 2 extra AP; an LRM firing Inferno missiles and 1 extra AP; an SRM firing Inferno missiles and one Cargo Space; a Vehicle CQC Weapon of any category with four Improve Str +1, Speed +5 and Maneuver +1.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 383
+    }
+  },
+  "items": [
+    {
+      "name": "Walker Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/wheel.svg",
+      "system": {
+        "description": "<p>Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.</p><p><strong>Leggy.</strong> Terrain that is normally impassible is treated only as difficult terrain.</p><p><strong>AMBAC.</strong> The pilot can stand the machine back up from prone with a Half Action.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 366
+        },
+        "category": "drivetrain",
+        "cost": 10,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 4,
+          "controlSkill": "drive",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.",
+        "automation": {
+          "key": "walker",
+          "impassibleAsDifficult": true,
+          "selfRight": "half"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNid61ebfb83bc",
+      "_key": "!actors.items!dtdW1f8336d266ad.dtdNid61ebfb83bc",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Good Reinforced Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Good Reinforced frame: 25 HP and Resilience 12. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 125,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 25,
+          "resilience": 12
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "25 HP, Resilience 12",
+        "automation": {
+          "key": "reinforcedgood"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi16cb37477ee",
+      "_key": "!actors.items!dtdW1f8336d266ad.dtdNi16cb37477ee",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 10",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>10 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 40,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 10
+        },
+        "parent": "",
+        "effect": "AP 10",
+        "automation": {
+          "key": "armor10"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi5d3547c38f2",
+      "_key": "!actors.items!dtdW1f8336d266ad.dtdNi5d3547c38f2",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Ejector Seat",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.",
+        "automation": {
+          "key": "ejectorSeat",
+          "ejectDistance": 100
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNie4d7e3929f0",
+      "_key": "!actors.items!dtdW1f8336d266ad.dtdNie4d7e3929f0",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Environmental Seals",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 371
+        },
+        "category": "accessory",
+        "cost": 5,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.",
+        "automation": {
+          "key": "environmentalSeals",
+          "immune": [
+            "gas",
+            "water",
+            "fire"
+          ]
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi28750db5808",
+      "_key": "!actors.items!dtdW1f8336d266ad.dtdNi28750db5808",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Jump Jets (Standard)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>A Half Action lets the vehicle move as a flyer until the pilot's next turn; needs 2 rounds of cooldown between firings.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 5,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "A Half Action lets the vehicle move as a flyer until the pilot's next turn; needs 2 rounds of cooldown between firings.",
+        "automation": {
+          "key": "jumpJetsStandard",
+          "activation": "half",
+          "cooldownRounds": 2
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi45a4ccece21",
+      "_key": "!actors.items!dtdW1f8336d266ad.dtdNi45a4ccece21",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Manipulator Arms (Standard)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 15,
+        "slots": 3,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.",
+        "automation": {
+          "key": "manipulatorArms",
+          "strength": 6,
+          "maxStrength": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi700a015c022",
+      "_key": "!actors.items!dtdW1f8336d266ad.dtdNi700a015c022",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Sensor System (Standard)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
+        "automation": {
+          "key": "sensorStandard",
+          "perception": 5,
+          "detectKm": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi46847e57ad4",
+      "_key": "!actors.items!dtdW1f8336d266ad.dtdNi46847e57ad4",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Flawed (Overheating)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Loses 1 HP in each round with Momentum over 6 or in which Punch It is used.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 374
+        },
+        "category": "modification",
+        "cost": -10,
+        "slots": 0,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Loses 1 HP in each round with Momentum over 6 or in which Punch It is used.",
+        "automation": {
+          "key": "flawed",
+          "flaw": "overheating",
+          "hpLossPerRound": 1,
+          "trigger": "momentum>6 or punchIt"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi88086a1b368",
+      "_key": "!actors.items!dtdW1f8336d266ad.dtdNi88086a1b368",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Vehicle CQC Weapon (Miniaturized)",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "<p>Vehicle melee weapon (mostly on mecha); pick one category for its quality and add the vehicle's Strength to damage.</p><p>Choose a category, which sets the quality: Proven 4 for Ordinary, Thrown 10m for Parrying, Reach 5m for Cavalry, Flexible for Flail, Balanced for Fencing, Volatile, Unwieldy for Two Handed, Power Field for Syrneth, Tearing for Chain, Defensive for Shields, Brawling, Arm Mounted for Unarmed. Damage is Impact or Rending by category; adds the vehicle's Strength to damage, like any melee weapon.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 379
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Melee",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 0,
+          "kept": 5,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 5,
+        "rof": {
+          "single": false,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 2,
+          "cost": 15,
+          "macronized": 0,
+          "miniaturized": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi3939159b1ed",
+      "_key": "!actors.items!dtdW1f8336d266ad.dtdNi3939159b1ed"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Battlemecha",
+    "actorLink": false,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdW1f8336d266ad",
+  "_key": "!actors!dtdW1f8336d266ad",
+  "folder": "dtdWFd1b7181af7f"
+}

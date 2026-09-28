@@ -1,0 +1,44 @@
+{
+  "name": "Onboard AI",
+  "type": "vehicleComponent",
+  "img": "icons/svg/terminal.svg",
+  "system": {
+    "description": "<p>A virtual crew member with 3 dots in relevant piloting/technical skills and traits. Each round it has 1 Half Action (Aid Another, or a vehicle action when nobody is piloting) and 1 Reaction; once per scene it may add a Half Action or swap its Half for a Full Action.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 369
+    },
+    "category": "control",
+    "cost": 40,
+    "slots": 2,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "A virtual crew member with 3 dots in relevant piloting/technical skills and traits. Each round it has 1 Half Action (Aid Another, or a vehicle action when nobody is piloting) and 1 Reaction; once per scene it may add a Half Action or swap its Half for a Full Action.",
+    "automation": {
+      "key": "onboardAi",
+      "dots": 3,
+      "halfActionsPerRound": 1,
+      "reactionsPerRound": 1,
+      "bonusHalfActionsPerScene": 1
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV5a5e7f92c989",
+  "_key": "!items!dtdV5a5e7f92c989",
+  "folder": "dtdVFd6dd3fd3e58"
+}

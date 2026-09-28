@@ -1,0 +1,41 @@
+{
+  "name": "Medium Wards",
+  "type": "vehicleComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Etched anti-magic runes giving Aura 10.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 371
+    },
+    "category": "accessory",
+    "cost": 15,
+    "slots": 2,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "Etched anti-magic runes giving Aura 10.",
+    "automation": {
+      "key": "mediumWards",
+      "aura": 10
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVb8a72cdd75bc",
+  "_key": "!items!dtdVb8a72cdd75bc",
+  "folder": "dtdVFd29d4f0998d"
+}

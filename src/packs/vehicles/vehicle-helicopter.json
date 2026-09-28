@@ -1,0 +1,395 @@
+{
+  "name": "Helicopter",
+  "type": "vehicle",
+  "img": "icons/svg/wheel.svg",
+  "system": {
+    "size": 15,
+    "speed": 7,
+    "acceleration": 2,
+    "maneuver": 6,
+    "momentum": 0,
+    "budget": {
+      "tier": "veryRare"
+    },
+    "hp": {
+      "value": 10,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "150 (Very Rare)",
+      "slots": "15/15"
+    },
+    "description": "<p>Ordinary troop-carrying chopper with an anti-personnel gun in the doorway.</p><p>Carries 10 passengers.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 381
+    }
+  },
+  "items": [
+    {
+      "name": "VTOL",
+      "type": "vehicleComponent",
+      "img": "icons/svg/wing.svg",
+      "system": {
+        "description": "<p>Flexible flight drive that moves in three dimensions and, unlike Aerospace or Scramjet, can go slow or hold a hover.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "drivetrain",
+        "cost": 30,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 6,
+          "controlSkill": "pilot",
+          "minMomentum": 1,
+          "flying": true
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Flexible flight drive that moves in three dimensions and, unlike Aerospace or Scramjet, can go slow or hold a hover.",
+        "automation": {
+          "key": "vtol"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNib15d22c4e52",
+      "_key": "!actors.items!dtdW011041eb0084.dtdNib15d22c4e52",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Standard Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Normal Standard frame: 10 HP and Resilience 10. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 15,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 10,
+          "resilience": 10
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "10 HP, Resilience 10",
+        "automation": {
+          "key": "standardnormal"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi00b95b6171b",
+      "_key": "!actors.items!dtdW011041eb0084.dtdNi00b95b6171b",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 5",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>5 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 15,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 5
+        },
+        "parent": "",
+        "effect": "AP 5",
+        "automation": {
+          "key": "armor5"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNic20b591f6b2",
+      "_key": "!actors.items!dtdW011041eb0084.dtdNic20b591f6b2",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Passenger Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 2,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
+        "automation": {
+          "key": "passengerSpace",
+          "perUnitBySize": {
+            "1-10": 1,
+            "11-20": 5,
+            "21-30": 50
+          },
+          "unit": "seats"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi53856b5dbac",
+      "_key": "!actors.items!dtdW011041eb0084.dtdNi53856b5dbac",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Cargo Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 3,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
+        "automation": {
+          "key": "cargoSpace",
+          "perUnitBySize": {
+            "1-10": 0.5,
+            "11-20": 2,
+            "21-30": 10
+          },
+          "unit": "m3"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNia1a3a263354",
+      "_key": "!actors.items!dtdW011041eb0084.dtdNia1a3a263354",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Sensor System (Standard)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": "<p>Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 372
+        },
+        "category": "accessory",
+        "cost": 10,
+        "slots": 1,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.",
+        "automation": {
+          "key": "sensorStandard",
+          "perception": 5,
+          "detectKm": 10
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi2ecea169153",
+      "_key": "!actors.items!dtdW011041eb0084.dtdNi2ecea169153",
+      "folder": "dtdVFd29d4f0998d"
+    },
+    {
+      "name": "Light Punisher Gatling Cannon (Macronized)",
+      "type": "weapon",
+      "img": "icons/svg/cannon.svg",
+      "system": {
+        "description": "<p>Rotary-barrel autocannon deadly to lightly armoured vehicles and big living targets; banned against infantry in many Spheres.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Ordinary / Punisher Gatling Cannon",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 2,
+          "kept": 2,
+          "type": "I",
+          "bonus": 10
+        },
+        "pen": 0,
+        "rof": {
+          "single": false,
+          "auto": 10
+        },
+        "range": {
+          "value": 150,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "storm",
+            "value": null
+          }
+        ],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 2,
+          "cost": 10,
+          "macronized": 1,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNiafab6c3e07a",
+      "_key": "!actors.items!dtdW011041eb0084.dtdNiafab6c3e07a"
+    },
+    {
+      "name": "Copilot Seat (Light Punisher Gatling Cannon)",
+      "type": "vehicleComponent",
+      "img": "icons/svg/terminal.svg",
+      "system": {
+        "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "control",
+        "cost": 10,
+        "slots": 2,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.",
+        "automation": {
+          "key": "copilotSeat",
+          "copilotHalfActions": 1
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNie4f9447397b",
+      "_key": "!actors.items!dtdW011041eb0084.dtdNie4f9447397b",
+      "folder": "dtdVFd6dd3fd3e58"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Helicopter",
+    "actorLink": false,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdW011041eb0084",
+  "_key": "!actors!dtdW011041eb0084",
+  "folder": "dtdWFd1b7181af7f"
+}

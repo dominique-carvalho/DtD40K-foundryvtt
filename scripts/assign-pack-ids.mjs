@@ -11,6 +11,8 @@
  *   node scripts/assign-pack-ids.mjs --pack martial-schools
  *   node scripts/assign-pack-ids.mjs --pack deities
  *   node scripts/assign-pack-ids.mjs --pack antagonists
+ *   node scripts/assign-pack-ids.mjs --pack vehicle-components
+ *   node scripts/assign-pack-ids.mjs --pack vehicles
  */
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -197,6 +199,33 @@ const LAYOUTS = {
       folderOf: (doc) => folders[doc.type === "minionSquad" ? "minions" : doc.system.npc.category],
       seed: (file) => `npc:${file}`,
       prefix: "dtdN",
+      collection: "actors"
+    };
+  },
+  // Vehicle components and weapons of chapter XV (spec 013): one folder per category.
+  "vehicle-components": () => {
+    const names = { drivetrain: "Drivetrains", frame: "Frames", armor: "Armor", control: "Control Systems",
+      accommodation: "Accommodations", accessory: "Accessories", modification: "Modifications", weapon: "Weapons" };
+    const folders = Object.fromEntries(Object.entries(names).map(([key, name], index) => [key,
+      folder(`vehicle-folder:${key}`, "dtdVFd", key, name, null, (index + 1) * 10000, "vehicleFolder")]));
+    return {
+      folders,
+      fileOf: (key) => `folder-${slug(key)}.json`,
+      // Weapons and their ammunition/modes go to the Weapons folder.
+      folderOf: (doc) => folders[doc.type === "weapon" || doc.system.category === "weaponUpgrade" ? "weapon" : doc.system.category],
+      seed: (file) => `vcomp:${file}`,
+      prefix: "dtdV"
+    };
+  },
+  // Example vehicles of chapter XV (spec 013), components and weapons embedded.
+  vehicles: () => {
+    const folders = { vehicles: folder("vehicles-folder:all", "dtdWFd", "vehicles", "Example Vehicles", null, 10000, "vehicleFolder", "Actor") };
+    return {
+      folders,
+      fileOf: (key) => `folder-${slug(key)}.json`,
+      folderOf: () => folders.vehicles,
+      seed: (file) => `vehicle:${file}`,
+      prefix: "dtdW",
       collection: "actors"
     };
   }

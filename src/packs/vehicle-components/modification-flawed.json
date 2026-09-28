@@ -1,0 +1,40 @@
+{
+  "name": "Flawed",
+  "type": "vehicleComponent",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "<p>Take one design flaw per purchase (each flaw once) for a VP rebate.</p><ul><li><strong>External Power.</strong> Runs on beamed or cabled power; beamed power needs line of sight to the source.</li><li><strong>Feedback.</strong> Each time the vehicle is damaged the pilot tests Athletics + Constitution at TN 15 or takes 1 level of fatigue.</li><li><strong>Hangar Queen.</strong> After each sortie it needs upkeep lasting the deployment time plus 8 hours.</li><li><strong>Inefficient Controls.</strong> Move costs a Full Action and Punch It is unavailable.</li><li><strong>Junker.</strong> Any damage suffered triggers a roll on the crit chart.</li><li><strong>Overheating.</strong> Loses 1 HP in each round with Momentum over 6 or in which Punch It is used.</li><li><strong>Unstable.</strong> Control tests suffer 2 checks.</li></ul>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 374
+    },
+    "category": "modification",
+    "cost": -10,
+    "slots": 0,
+    "perPurchase": true,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "Take one design flaw per purchase (each flaw once) for a VP rebate.",
+    "automation": {
+      "key": "flawed"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV0b224ff52db9",
+  "_key": "!items!dtdV0b224ff52db9",
+  "folder": "dtdVFdc18f9abf79"
+}

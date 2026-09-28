@@ -1,0 +1,59 @@
+{
+  "name": "PPC",
+  "type": "weapon",
+  "img": "icons/svg/cannon.svg",
+  "system": {
+    "description": "<p>Particle Projection Cannon: near-lightspeed neutral particle beam needing strong power or stored particles.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 378
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Exotic",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 6,
+      "kept": 3,
+      "type": "E",
+      "bonus": 10
+    },
+    "pen": 5,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 500,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "shocking",
+        "value": null
+      }
+    ],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Vhcl",
+      "slots": 6,
+      "cost": 45,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVf599847b2114",
+  "_key": "!items!dtdVf599847b2114",
+  "folder": "dtdVFdbe7b88e2b5"
+}

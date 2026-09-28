@@ -1,0 +1,51 @@
+{
+  "name": "LRM Swarm",
+  "type": "vehicleComponent",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>ROF changes to S/- and the LRM gains Blast (10).</p><p>ROF S/-; Blast (10).</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 379
+    },
+    "category": "weaponUpgrade",
+    "cost": 15,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "LRM",
+    "effect": "ROF S/-; Blast (10)",
+    "automation": {
+      "key": "lrmSwarm",
+      "kind": "ammo",
+      "qualities": [
+        {
+          "key": "blast",
+          "value": 10
+        }
+      ],
+      "damage": null,
+      "pen": null,
+      "rof": "S/-",
+      "range": null
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV4120d75b3c95",
+  "_key": "!items!dtdV4120d75b3c95",
+  "folder": "dtdVFdbe7b88e2b5"
+}

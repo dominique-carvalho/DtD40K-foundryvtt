@@ -1,0 +1,353 @@
+{
+  "name": "Mudskipper",
+  "type": "vehicle",
+  "img": "icons/svg/wheel.svg",
+  "system": {
+    "size": 6,
+    "speed": 4,
+    "acceleration": 1,
+    "maneuver": 0,
+    "momentum": 0,
+    "budget": {
+      "tier": "uncommon"
+    },
+    "hp": {
+      "value": 10,
+      "temp": 0
+    },
+    "activeDrive": "",
+    "crew": [],
+    "printed": {
+      "vp": "50 (Uncommon)",
+      "slots": "6/6"
+    },
+    "description": "<p>Bargain-bin two-seat boat with a little trunk and a multilas bolted to the side.</p><p>Carries 1 passenger.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 380
+    }
+  },
+  "items": [
+    {
+      "name": "Naval Drive",
+      "type": "vehicleComponent",
+      "img": "icons/svg/wheel.svg",
+      "system": {
+        "description": "<p>Boats; a technology as old as the wheel, confined to water.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 366
+        },
+        "category": "drivetrain",
+        "cost": 5,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 3,
+          "controlSkill": "drive",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Boats; a technology as old as the wheel, confined to water.",
+        "automation": {
+          "key": "naval",
+          "waterOnly": true,
+          "leavingWater": "crash"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi965b7da03e0",
+      "_key": "!actors.items!dtdWaae35eee1363.dtdNi965b7da03e0",
+      "folder": "dtdVFd7fd7f37f92"
+    },
+    {
+      "name": "Standard Frame",
+      "type": "vehicleComponent",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "description": "<p>Normal Standard frame: 10 HP and Resilience 10. Comes with a Cockpit.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 367
+        },
+        "category": "frame",
+        "cost": 15,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 10,
+          "resilience": 10
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "10 HP, Resilience 10",
+        "automation": {
+          "key": "standardnormal"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNibf95d2ad1fd",
+      "_key": "!actors.items!dtdWaae35eee1363.dtdNibf95d2ad1fd",
+      "folder": "dtdVFdca3b9a90a8"
+    },
+    {
+      "name": "Armor 2",
+      "type": "vehicleComponent",
+      "img": "icons/svg/statue.svg",
+      "system": {
+        "description": "<p>2 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 368
+        },
+        "category": "armor",
+        "cost": 3,
+        "slots": null,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 2
+        },
+        "parent": "",
+        "effect": "AP 2",
+        "automation": {
+          "key": "armor2"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi85dbed61937",
+      "_key": "!actors.items!dtdWaae35eee1363.dtdNi85dbed61937",
+      "folder": "dtdVFd0faaa33fc0"
+    },
+    {
+      "name": "Cargo Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).",
+        "automation": {
+          "key": "cargoSpace",
+          "perUnitBySize": {
+            "1-10": 0.5,
+            "11-20": 2,
+            "21-30": 10
+          },
+          "unit": "m3"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNi5347f276548",
+      "_key": "!actors.items!dtdWaae35eee1363.dtdNi5347f276548",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Passenger Space",
+      "type": "vehicleComponent",
+      "img": "icons/svg/chest.svg",
+      "system": {
+        "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 370
+        },
+        "category": "accommodation",
+        "cost": 0,
+        "slots": 1,
+        "perPurchase": true,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).",
+        "automation": {
+          "key": "passengerSpace",
+          "perUnitBySize": {
+            "1-10": 1,
+            "11-20": 5,
+            "21-30": 50
+          },
+          "unit": "seats"
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNia1cd8e8bc66",
+      "_key": "!actors.items!dtdWaae35eee1363.dtdNia1cd8e8bc66",
+      "folder": "dtdVFd30af0a9aef"
+    },
+    {
+      "name": "Open Topped",
+      "type": "vehicleComponent",
+      "img": "icons/svg/hazard.svg",
+      "system": {
+        "description": "<p>Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 375
+        },
+        "category": "modification",
+        "cost": 0,
+        "slots": 0,
+        "perPurchase": false,
+        "quantity": 1,
+        "drive": {
+          "rating": 0,
+          "controlSkill": "",
+          "minMomentum": 0,
+          "flying": false
+        },
+        "frame": {
+          "hp": 0,
+          "resilience": 0
+        },
+        "armor": {
+          "ap": 0
+        },
+        "parent": "",
+        "effect": "Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.",
+        "automation": {
+          "key": "openTopped",
+          "blocksLineOfSight": false,
+          "incompatible": [
+            "Environmental Seals"
+          ]
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNif7efbc4b5d1",
+      "_key": "!actors.items!dtdWaae35eee1363.dtdNif7efbc4b5d1",
+      "folder": "dtdVFdc18f9abf79"
+    },
+    {
+      "name": "Multilas (Macronized)",
+      "type": "weapon",
+      "img": "icons/svg/cannon.svg",
+      "system": {
+        "description": "<p>Pulsed rapid-fire laser, mainly an anti-infantry tool.</p>",
+        "source": {
+          "book": "DtD 7.7a",
+          "page": 376
+        },
+        "rarity": "common",
+        "quantity": 1,
+        "craftsmanship": "common",
+        "equipped": false,
+        "material": "",
+        "startingSlot": "",
+        "names": [],
+        "weaponType": "heavy",
+        "thrown": false,
+        "group": "Las",
+        "proficiencies": [],
+        "damage": {
+          "rolled": 3,
+          "kept": 3,
+          "type": "E",
+          "bonus": 10
+        },
+        "pen": 0,
+        "rof": {
+          "single": false,
+          "auto": 10
+        },
+        "range": {
+          "value": 500,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [],
+        "ammoGroup": "",
+        "vehicle": {
+          "scale": "Vhcl",
+          "slots": 2,
+          "cost": 10,
+          "macronized": 1,
+          "miniaturized": 0
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "_id": "dtdNia6f84a87d5f",
+      "_key": "!actors.items!dtdWaae35eee1363.dtdNia6f84a87d5f"
+    }
+  ],
+  "effects": [],
+  "prototypeToken": {
+    "name": "Mudskipper",
+    "actorLink": false,
+    "disposition": 0
+  },
+  "flags": {},
+  "_id": "dtdWaae35eee1363",
+  "_key": "!actors!dtdWaae35eee1363",
+  "folder": "dtdWFd1b7181af7f"
+}

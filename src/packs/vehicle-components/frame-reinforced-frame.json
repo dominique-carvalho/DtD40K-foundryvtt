@@ -1,0 +1,40 @@
+{
+  "name": "Reinforced Frame",
+  "type": "vehicleComponent",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>Normal Reinforced frame: 15 HP and Resilience 11. Comes with a Cockpit.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 367
+    },
+    "category": "frame",
+    "cost": 40,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 15,
+      "resilience": 11
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "15 HP, Resilience 11",
+    "automation": {
+      "key": "reinforcednormal"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV0ba533ccba09",
+  "_key": "!items!dtdV0ba533ccba09",
+  "folder": "dtdVFdca3b9a90a8"
+}

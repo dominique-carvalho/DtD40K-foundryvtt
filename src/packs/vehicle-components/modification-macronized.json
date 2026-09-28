@@ -1,0 +1,43 @@
+{
+  "name": "Macronized",
+  "type": "vehicleComponent",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "<p>Applied to a component of size 1+: halve its cost (round up) and double its slots; stackable, doubling slots again each time.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 375
+    },
+    "category": "modification",
+    "cost": null,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "Applied to a component of size 1+: halve its cost (round up) and double its slots; stackable, doubling slots again each time.",
+    "automation": {
+      "key": "macronized",
+      "costMult": 0.5,
+      "costRound": "up",
+      "slotsMult": 2
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVb7c4fa2e4550",
+  "_key": "!items!dtdVb7c4fa2e4550",
+  "folder": "dtdVFdc18f9abf79"
+}

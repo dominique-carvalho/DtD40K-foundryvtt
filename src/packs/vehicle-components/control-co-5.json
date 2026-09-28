@@ -1,0 +1,41 @@
+{
+  "name": "Co/5",
+  "type": "vehicleComponent",
+  "img": "icons/svg/terminal.svg",
+  "system": {
+    "description": "<p>Raises the AI's dots to 5.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 369
+    },
+    "category": "control",
+    "cost": 30,
+    "slots": 0,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "Onboard AI (Coprocessor)",
+    "effect": "Raises the AI's dots to 5.",
+    "automation": {
+      "key": "co5",
+      "dots": 5
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV4e8fad75421d",
+  "_key": "!items!dtdV4e8fad75421d",
+  "folder": "dtdVFd6dd3fd3e58"
+}

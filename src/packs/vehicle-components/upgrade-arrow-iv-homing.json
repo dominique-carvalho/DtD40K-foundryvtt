@@ -1,0 +1,59 @@
+{
+  "name": "Arrow IV Homing",
+  "type": "vehicleComponent",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Guided cruise missile: smaller blast but gains Homing so it cannot be dodged.</p><p>Blast (1), Homing, Recharge.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 379
+    },
+    "category": "weaponUpgrade",
+    "cost": 5,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "Arrow IV Launcher",
+    "effect": "Blast (1), Homing, Recharge",
+    "automation": {
+      "key": "arrowIVHoming",
+      "kind": "ammo",
+      "qualities": [
+        {
+          "key": "blast",
+          "value": 1
+        },
+        {
+          "key": "homing",
+          "value": null
+        },
+        {
+          "key": "recharge",
+          "value": null
+        }
+      ],
+      "damage": null,
+      "pen": null,
+      "rof": null,
+      "range": null
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV18ea318a4572",
+  "_key": "!items!dtdV18ea318a4572",
+  "folder": "dtdVFdbe7b88e2b5"
+}

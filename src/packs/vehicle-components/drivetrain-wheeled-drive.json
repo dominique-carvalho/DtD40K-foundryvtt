@@ -1,0 +1,40 @@
+{
+  "name": "Wheeled Drive",
+  "type": "vehicleComponent",
+  "img": "icons/svg/wheel.svg",
+  "system": {
+    "description": "<p>The default ground drive; wheels are about as ancient as organised society itself.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 366
+    },
+    "category": "drivetrain",
+    "cost": 5,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 5,
+      "controlSkill": "drive",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "The default ground drive; wheels are about as ancient as organised society itself.",
+    "automation": {
+      "key": "wheeled"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdVb50fc06840f1",
+  "_key": "!items!dtdVb50fc06840f1",
+  "folder": "dtdVFd7fd7f37f92"
+}

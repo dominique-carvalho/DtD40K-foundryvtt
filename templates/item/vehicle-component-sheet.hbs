@@ -1,0 +1,59 @@
+<div class="vehicle-component-sheet-body">
+  {{#if lockedPackHint}}
+  <p class="notification info locked-pack-hint"><i class="fa-solid fa-lock" inert></i> {{lockedPackHint}}</p>
+  {{/if}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}" {{#if editable}}data-action="editImage" data-edit="img"{{/if}}>
+    <div class="identity-text">
+      {{#if editable}}
+      <input class="item-name" type="text" name="name" value="{{item.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="item-name">{{item.name}}</h1>
+      {{/if}}
+      <div class="identity-line">
+        <span>{{localize (concat "DTD.Vehicle.Category." system.category)}}</span>
+        <label>{{localize "DTD.Race.Page"}} <b>{{system.source.page}}</b></label>
+      </div>
+    </div>
+  </header>
+
+  <section class="equipment-section">
+    <div class="profile-grid">
+      {{#if editable}}
+      <label>{{localize "DTD.Vehicle.CategoryLabel"}}<select name="system.category">{{selectOptions categoryOptions selected=system.category localize=true}}</select></label>
+      {{/if}}
+      <label>{{localize "DTD.Vehicle.Cost"}}{{#if editable}}<input type="number" name="system.cost" value="{{system.cost}}" placeholder="—">{{else}}<b>{{#if (eq system.cost null)}}—{{else}}{{system.cost}}{{/if}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.Slots"}}{{#if editable}}<input type="number" name="system.slots" value="{{system.slots}}" min="0" placeholder="—">{{else}}<b>{{#if (eq system.slots null)}}—{{else}}{{system.slots}}{{/if}}</b>{{/if}}</label>
+      {{#if embedded}}
+      <label>{{localize "DTD.Vehicle.Quantity"}}{{#if editable}}<input type="number" name="system.quantity" value="{{system.quantity}}" min="1">{{else}}<b>{{system.quantity}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.Macronized"}}{{#if editable}}<input type="number" name="system.automation.macronized" value="{{macronized}}" min="0">{{else}}<b>{{macronized}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.Miniaturized"}}{{#if editable}}<input type="number" name="system.automation.miniaturized" value="{{miniaturized}}" min="0">{{else}}<b>{{miniaturized}}</b>{{/if}}</label>
+      {{/if}}
+      {{#if isDrive}}
+      <label>{{localize "DTD.Vehicle.DriveRating"}}{{#if editable}}<input type="number" name="system.drive.rating" value="{{system.drive.rating}}" min="0">{{else}}<b>{{system.drive.rating}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.ControlSkill"}}{{#if editable}}<select name="system.drive.controlSkill">{{selectOptions skillOptions selected=system.drive.controlSkill localize=true}}</select>{{else}}<b>{{localize (concat "DTD.Skill." system.drive.controlSkill)}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.MinMomentum"}}{{#if editable}}<input type="number" name="system.drive.minMomentum" value="{{system.drive.minMomentum}}" min="0">{{else}}<b>{{system.drive.minMomentum}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Vehicle.Flying"}}{{#if editable}}<input type="checkbox" name="system.drive.flying" {{checked system.drive.flying}}>{{else}}<b>{{#if system.drive.flying}}✓{{else}}—{{/if}}</b>{{/if}}</label>
+      {{/if}}
+      {{#if isFrame}}
+      <label>HP{{#if editable}}<input type="number" name="system.frame.hp" value="{{system.frame.hp}}" min="0">{{else}}<b>{{system.frame.hp}}</b>{{/if}}</label>
+      <label>{{localize "DTD.Derived.resilience"}}{{#if editable}}<input type="number" name="system.frame.resilience" value="{{system.frame.resilience}}" min="0">{{else}}<b>{{system.frame.resilience}}</b>{{/if}}</label>
+      {{/if}}
+      {{#if isArmor}}
+      <label>AP{{#if editable}}<input type="number" name="system.armor.ap" value="{{system.armor.ap}}" min="0">{{else}}<b>{{system.armor.ap}}</b>{{/if}}</label>
+      {{/if}}
+      {{#if isUpgrade}}
+      <label>{{localize "DTD.Vehicle.Parent"}}{{#if editable}}<input type="text" name="system.parent" value="{{system.parent}}">{{else}}<b>{{system.parent}}</b>{{/if}}</label>
+      {{/if}}
+    </div>
+    {{#if embedded}}<p class="hint">{{localize "DTD.Vehicle.LineTotal" cost=totalCost slots=totalSlots}}</p>{{/if}}
+    {{#if system.perPurchase}}<p class="hint">{{localize "DTD.Vehicle.PerPurchaseHint"}}</p>{{/if}}
+  </section>
+
+  <section class="spell-section">
+    {{#if editable}}
+    <div class="form-group stacked"><label>{{localize "DTD.Vehicle.Effect"}}</label><input type="text" name="system.effect" value="{{system.effect}}"></div>
+    <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{enriched.description}}}</prose-mirror>
+    {{else}}<div class="enriched">{{{enriched.description}}}</div>{{/if}}
+  </section>
+</div>

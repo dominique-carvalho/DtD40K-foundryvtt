@@ -1,0 +1,63 @@
+{
+  "name": "Catapult",
+  "type": "weapon",
+  "img": "icons/svg/cannon.svg",
+  "system": {
+    "description": "<p>Slow, crude rock-slinger still found on feudal or desperate worlds.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 378
+    },
+    "rarity": "common",
+    "quantity": 1,
+    "craftsmanship": "common",
+    "equipped": false,
+    "material": "",
+    "startingSlot": "",
+    "names": [],
+    "weaponType": "heavy",
+    "thrown": false,
+    "group": "Primitive",
+    "proficiencies": [],
+    "damage": {
+      "rolled": 3,
+      "kept": 2,
+      "type": "I",
+      "bonus": 10
+    },
+    "pen": 0,
+    "rof": {
+      "single": true,
+      "auto": 0
+    },
+    "range": {
+      "value": 90,
+      "strMultiplier": 0
+    },
+    "clip": 0,
+    "reload": "",
+    "qualities": [
+      {
+        "key": "inaccurate",
+        "value": null
+      },
+      {
+        "key": "blast",
+        "value": 1
+      }
+    ],
+    "ammoGroup": "",
+    "vehicle": {
+      "scale": "Vhcl",
+      "slots": 5,
+      "cost": 5,
+      "macronized": 0,
+      "miniaturized": 0
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV20e0f392315f",
+  "_key": "!items!dtdV20e0f392315f",
+  "folder": "dtdVFdbe7b88e2b5"
+}

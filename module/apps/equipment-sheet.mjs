@@ -95,6 +95,7 @@ export class EquipmentSheet extends HandlebarsApplicationMixin(foundry.applicati
       weaponTypeOptions: options(WEAPON_TYPES, "DTD.WeaponType"),
       damageTypeOptions: { "": "—", ...Object.fromEntries(DAMAGE_TYPES.map((key) => [key, `DTD.DamageType.${key}`])) },
       armorTypeOptions: options(ARMOR_TYPES, "DTD.ArmorType"),
+      vehicleScaleOptions: { "": "DTD.Vehicle.PersonalScale", Vhcl: "DTD.Vehicle.ScaleVhcl", Hybrid: "DTD.Vehicle.ScaleHybrid" },
       pieceOptions: { "": "DTD.Equipment.Suit", ...options(ARMOR_PIECES, "DTD.Location") },
       categoryOptions: options(GEAR_CATEGORIES, "DTD.GearCategory"),
       addictivityOptions: options(Object.keys(ADDICTIVITY), "DTD.Addictivity"),

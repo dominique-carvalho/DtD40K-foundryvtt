@@ -1,0 +1,41 @@
+{
+  "name": "XL Engine (Rating 4)",
+  "type": "vehicleComponent",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "description": "<p>Oversized engine adding 4 to maximum Momentum, even beyond the usual cap of 10.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 373
+    },
+    "category": "accessory",
+    "cost": 20,
+    "slots": 4,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "Oversized engine adding 4 to maximum Momentum, even beyond the usual cap of 10.",
+    "automation": {
+      "key": "xlEngine4",
+      "maxMomentumBonus": 4
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV970c1bd9b06e",
+  "_key": "!items!dtdV970c1bd9b06e",
+  "folder": "dtdVFd29d4f0998d"
+}

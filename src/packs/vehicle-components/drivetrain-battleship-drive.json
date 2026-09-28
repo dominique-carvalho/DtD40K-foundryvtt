@@ -1,0 +1,44 @@
+{
+  "name": "Battleship Drive",
+  "type": "vehicleComponent",
+  "img": "icons/svg/wheel.svg",
+  "system": {
+    "description": "<p>A floating fortress rather than a true vehicle; huge masses of steel are easier to keep afloat than to walk.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p><p><strong>Metal Giant.</strong> Grants 2 Equipment Slots per point of Size instead of 1; lost if the vehicle has more than one drivetrain.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 366
+    },
+    "category": "drivetrain",
+    "cost": 5,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 1,
+      "controlSkill": "drive",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "A floating fortress rather than a true vehicle; huge masses of steel are easier to keep afloat than to walk.",
+    "automation": {
+      "key": "battleship",
+      "waterOnly": true,
+      "leavingWater": "crash",
+      "slotsPerSize": 2,
+      "lostWithMultipleDrives": true
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV768d95adf316",
+  "_key": "!items!dtdV768d95adf316",
+  "folder": "dtdVFd7fd7f37f92"
+}

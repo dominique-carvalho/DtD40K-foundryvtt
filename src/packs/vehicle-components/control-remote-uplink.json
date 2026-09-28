@@ -1,0 +1,42 @@
+{
+  "name": "Remote Uplink",
+  "type": "vehicleComponent",
+  "img": "icons/svg/terminal.svg",
+  "system": {
+    "description": "<p>Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 369
+    },
+    "category": "control",
+    "cost": 5,
+    "slots": 0,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.",
+    "automation": {
+      "key": "remoteUplink",
+      "remoteCost": "full",
+      "grants": "half"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV9d1d5db5f911",
+  "_key": "!items!dtdV9d1d5db5f911",
+  "folder": "dtdVFd6dd3fd3e58"
+}

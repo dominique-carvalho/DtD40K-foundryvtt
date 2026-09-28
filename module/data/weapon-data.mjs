@@ -20,7 +20,9 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
       damage: new SchemaField({
         rolled: count(0),
         kept: count(0),
-        type: new StringField({ required: true, blank: true, initial: "", choices: ["", ...DAMAGE_TYPES] })
+        type: new StringField({ required: true, blank: true, initial: "", choices: ["", ...DAMAGE_TYPES] }),
+        // Flat bonus of vehicle weapons, e.g. 4k2+10 (spec 013).
+        bonus: new NumberField({ required: true, nullable: false, integer: true, initial: 0 })
       }),
       pen: count(0),
       rof: new SchemaField({
@@ -39,7 +41,16 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
         value: new NumberField({ required: true, nullable: true, integer: true, initial: null, min: 0 })
       })),
       // Launchers: damage comes from a grenade or missile carried by the character.
-      ammoGroup: new StringField({ required: true, blank: true })
+      ammoGroup: new StringField({ required: true, blank: true }),
+      // Vehicle-mounted weapons (spec 013, p. 377): scale, slots and VP cost.
+      vehicle: new SchemaField({
+        scale: new StringField({ required: true, blank: true, initial: "", choices: ["", "Vhcl", "Hybrid"] }),
+        slots: count(0),
+        cost: new NumberField({ required: true, nullable: false, integer: true, initial: 0 }),
+        // Times Macronized / Miniaturized (p. 375), applied to cost and slots by rules/vehicle.mjs.
+        macronized: count(0),
+        miniaturized: count(0)
+      })
     };
   }
 }

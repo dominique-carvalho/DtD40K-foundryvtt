@@ -1,0 +1,45 @@
+{
+  "name": "Berserker System",
+  "type": "vehicleComponent",
+  "img": "icons/svg/terminal.svg",
+  "system": {
+    "description": "<p>A usually outlawed kill-only AI override. It switches on as a Half Action or automatically when the pilot is incapacitated, then hunts and shoots every detected foe using 3 dots in all needed skills/attributes, staying on until the foes or the vehicle are gone.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 368
+    },
+    "category": "control",
+    "cost": 10,
+    "slots": 1,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "",
+    "effect": "A usually outlawed kill-only AI override. It switches on as a Half Action or automatically when the pilot is incapacitated, then hunts and shoots every detected foe using 3 dots in all needed skills/attributes, staying on until the foes or the vehicle are gone.",
+    "automation": {
+      "key": "berserker",
+      "activation": [
+        "half",
+        "pilotDisabled"
+      ],
+      "dots": 3
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV86c74c175faf",
+  "_key": "!items!dtdV86c74c175faf",
+  "folder": "dtdVFd6dd3fd3e58"
+}

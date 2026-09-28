@@ -1,0 +1,57 @@
+{
+  "name": "Maximal Mode",
+  "type": "vehicleComponent",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "description": "<p>Bombast maximal shot: much harder hit, then the capacitor must recharge.</p><p>Damage 5k5+10 E; Pen 10; ROF S/-; Range 300m; Recharge.</p>",
+    "source": {
+      "book": "DtD 7.7a",
+      "page": 376
+    },
+    "category": "weaponUpgrade",
+    "cost": null,
+    "slots": null,
+    "perPurchase": false,
+    "quantity": 1,
+    "drive": {
+      "rating": 0,
+      "controlSkill": "",
+      "minMomentum": 0,
+      "flying": false
+    },
+    "frame": {
+      "hp": 0,
+      "resilience": 0
+    },
+    "armor": {
+      "ap": 0
+    },
+    "parent": "Bombast Laser",
+    "effect": "Damage 5k5+10 E; Pen 10; ROF S/-; Range 300m; Recharge",
+    "automation": {
+      "key": "maximalMode",
+      "kind": "mode",
+      "qualities": [
+        {
+          "key": "recharge",
+          "value": null
+        }
+      ],
+      "damage": {
+        "rolled": 5,
+        "kept": 5,
+        "bonus": 10,
+        "type": "E",
+        "printed": "5k5+10 E"
+      },
+      "pen": 10,
+      "rof": "S/-",
+      "range": "300m"
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_id": "dtdV36dacc2ae7de",
+  "_key": "!items!dtdV36dacc2ae7de",
+  "folder": "dtdVFdbe7b88e2b5"
+}

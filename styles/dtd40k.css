@@ -991,23 +991,23 @@
   color: var(--dtd-text);
 }
 
-.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body, .class-sheet-body, .equipment-sheet-body, .spell-sheet-body, .martial-school-body, .deity-sheet-body) {
+.dtd40k.item :is(.exaltation-sheet-body, .feat-sheet-body, .class-sheet-body, .equipment-sheet-body, .spell-sheet-body, .martial-school-body, .deity-sheet-body, .vehicle-component-sheet-body) {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) .sheet-header {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .sheet-header {
   flex-direction: row;
   align-items: center;
   gap: 0.75rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) .profile-img[data-action] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .profile-img[data-action] {
   cursor: pointer;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) .item-name {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .item-name {
   margin: 0;
   font-size: 1.4rem;
   height: auto;
@@ -1015,54 +1015,54 @@
   color: var(--dtd-text);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) input.item-name {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) input.item-name {
   width: 100%;
   border-bottom: 1px solid var(--dtd-border);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) .identity-line input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .identity-line input[type="text"] {
   width: 6rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) :is(.exaltation-section, .feat-section, .class-section, .equipment-section, .spell-section) {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) :is(.exaltation-section, .feat-section, .class-section, .equipment-section, .spell-section) {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) .form-group {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .form-group {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) .form-group > label:first-child {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .form-group > label:first-child {
   flex: 0 0 11rem;
   font-weight: bold;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) .form-group.stacked {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .form-group.stacked {
   flex-direction: column;
   align-items: stretch;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) :is(dl.exaltation-stats-list, dl.feat-stats, dl.class-stats, dl.spell-stats) {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) :is(dl.exaltation-stats-list, dl.feat-stats, dl.class-stats, dl.spell-stats) {
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: 0.25rem 0.75rem;
   margin: 0;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) dt {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) dt {
   font-weight: bold;
   color: var(--dtd-text-muted);
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) dd {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) dd {
   margin: 0;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) .automation-tag {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .automation-tag {
   font-size: 0.8rem;
   font-weight: normal;
   color: var(--dtd-text-subtle);
@@ -1070,7 +1070,7 @@
   letter-spacing: 0.04em;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) prose-mirror {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) prose-mirror {
   min-height: 5rem;
 }
 
@@ -1079,13 +1079,13 @@
   padding-left: 1.25rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) .list-row {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .list-row {
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) .list-row input[type="text"] {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .list-row input[type="text"] {
   flex: 1;
 }
 
@@ -1093,7 +1093,7 @@
   width: 3.5rem;
 }
 
-.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity) .list-control {
+.dtd40k.item:is(.exaltation, .feat, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .list-control {
   cursor: pointer;
   margin-left: 0.3rem;
   font-size: 0.85rem;
@@ -1105,7 +1105,7 @@
   font-size: 1rem;
 }
 
-.dtd40k.item:is(.exaltation, .class, .equipment, .spell, .martial-school, .deity) .tag,
+.dtd40k.item:is(.exaltation, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component) .tag,
 .dtd40k .equipment-tab .tag,
 .dtd40k .attack-card-extra .tag {
   display: inline-block;

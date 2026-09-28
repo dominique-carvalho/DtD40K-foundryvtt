@@ -120,6 +120,11 @@ describe("capValue (FR-015)", () => {
     expect(capValue(5)).toEqual({ value: 5, capped: false });
     expect(capValue(6)).toEqual({ value: 6, capped: false });
   });
+
+  it("caps at the character's maximum (spec 016)", () => {
+    expect(capValue(6, 5)).toEqual({ value: 5, capped: true });
+    expect(capValue(5, 5)).toEqual({ value: 5, capped: false });
+  });
 });
 
 describe("usesPerScene (FR-003, research R5)", () => {

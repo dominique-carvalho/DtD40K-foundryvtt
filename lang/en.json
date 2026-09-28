@@ -423,7 +423,8 @@
         "wrongExaltation": "{asset} is an asset of the {exaltation} exaltation.",
         "wrongRace": "{asset} requires a Paragon of the {race} race.",
         "duplicate": "The character already has {asset}.",
-        "limit": "A character can have only one Exalted Asset (Paragon assets excepted)."
+        "limit": "A character can have only one Exalted Asset (Paragon assets excepted).",
+        "creationOnly": "Exalted Assets are bought only during character creation (Paragons excepted)."
       },
       "GrantsFeats": "grants {count} feat(s)"
     },
@@ -509,7 +510,8 @@
         "characteristic": "Pick one of the listed characteristics.",
         "characteristic2": "Pick a different characteristic to lose 1.",
         "skill": "Pick a skill.",
-        "specialty": "Type the specialty."
+        "specialty": "Type the specialty.",
+        "creationOnly": "Assets and hindrances are taken only during character creation."
       },
       "GrantedByShort": "from",
       "WrongRaceHint": "This racial feat belongs to another race. The GM decides whether to remove it.",
@@ -569,7 +571,8 @@
         "missingSkills": "Missing skills: {list}.",
         "missingFeats": "Missing feats: {list}.",
         "bonusChoice": "Choose a skill (and write the specialty, if asked).",
-        "otherCurrent": "Remove {name}, the class in progress, before undoing this completion."
+        "otherCurrent": "Remove {name}, the class in progress, before undoing this completion.",
+        "creationLevel": "This class is Level {level}; a new character starts with a Level 1 class."
       },
       "Warning": {
         "schools": "The class also requires schools the system does not check: {list}. Confirm the character has them.",
@@ -607,7 +610,8 @@
         "notEnough": "Not enough XP: costs {cost}, {available} available.",
         "onlyLast": "Only the GM can undo entries other than the last one.",
         "atCap": "School ranks cannot exceed the character's Level.",
-        "degenerated": "This characteristic is reduced by a Degeneration and cannot be raised with XP."
+        "degenerated": "This characteristic is reduced by a Degeneration and cannot be raised with XP.",
+        "sixLimit": "{label}: no more ratings of this kind can reach 6."
       },
       "UndoAwardConfirm": "Remove the award {label} ({cost} XP)?"
     },
@@ -2305,6 +2309,50 @@
         "orgoneArray": "Psychic Phenomena on exploding dice"
       },
       "Rebuild": "Open in builder"
+    },
+    "Creation": {
+      "Title": "Character creation",
+      "Characteristics": "Characteristics",
+      "Skills": "Skills",
+      "XP": "Experience",
+      "XPTotal": "Total",
+      "XPSpent": "Spent",
+      "XPLeft": "Left",
+      "Hint": "Groups take 6/4/2 characteristic dots and 8/6/4 skill dots, the one that spends most taking the largest share. Up to 4 in a characteristic and 3 in a skill from these dots; racial dots and XP purchases do not count.",
+      "SpecialtyMissing": "Needs a specialty (4 dots)",
+      "SpecialtyExcess": "Specialties beyond what the rules give",
+      "Step": {
+        "race": "Race",
+        "exaltation": "Exaltation",
+        "class": "Level 1 class",
+        "alignment": "Alignment (deity, Devotion 6)",
+        "characteristics": "Characteristics (6/4/2)",
+        "skills": "Skills (8/6/4)",
+        "backgrounds": "Backgrounds (7 dots)",
+        "xp": "Experience",
+        "specialties": "Specialties",
+        "equipment": "Starting equipment",
+        "languages": "Languages"
+      },
+      "Detail": {
+        "unspent": "{unspent} dots left",
+        "devotion": "Devotion {devotion}",
+        "backgrounds": "{dots}/7",
+        "xp": "{available} XP left (may be kept)",
+        "specialties": "{missing} missing, {excess} extra",
+        "equipment": "{used}/{max} picks",
+        "languages": "racial language, Trade and more by Intelligence: {count} in all"
+      },
+      "Error": {
+        "stepMax": "{label}: creation dots stop at 4 for a characteristic and 3 for a skill; racial dots and XP can go further.",
+        "budget": "{label}: this dot does not fit the 6/4/2 characteristic or 8/6/4 skill dots.",
+        "atMax": "{label} is at the character's highest rating.",
+        "sixLimit": "{label}: no more ratings of this kind can reach 6."
+      },
+      "GMOverrideTitle": "Character creation rules",
+      "GMOverride": "As GM, allow it anyway?",
+      "EndTitle": "End character creation",
+      "EndPending": "These steps are not finished. End creation anyway?"
     }
   }
 }

@@ -80,7 +80,8 @@ export async function startClass(actor, classItem) {
     level: actor.system.level,
     classes,
     skills: actor.system.skills,
-    feats: ownedFeats(actor)
+    feats: ownedFeats(actor),
+    creation: actor.system.creation.active
   });
   if (check.errors.length) {
     const message = check.errors.map(describe).join(" ");

@@ -1,5 +1,5 @@
 import {
-  ADDICTION_LEVELS, CHARACTERISTICS, DERIVED_KEYS, INHERITANCE_SLOTS, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, SKILLS, STARTING_XP, XP_KINDS
+  ADDICTION_LEVELS, CHARACTERISTICS, DERIVED_KEYS, INHERITANCE_SLOTS, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, MAX_RATING, SKILLS, STARTING_XP, XP_KINDS
 } from "../config.mjs";
 import { spellSlots } from "../rules/magic.mjs";
 import { adeptLevels } from "../rules/martial.mjs";
@@ -12,6 +12,7 @@ import { reactionsMax } from "../rules/defense.mjs";
 import { woundState } from "../rules/healing.mjs";
 import { computeExaltation } from "../rules/exaltation.mjs";
 import { capValue } from "../rules/race.mjs";
+import { ratingCaps } from "../rules/creation.mjs";
 import { xpTotals } from "../rules/xp.mjs";
 
 const { ArrayField, BooleanField, HTMLField, NumberField, ObjectField, SchemaField, StringField } = foundry.data.fields;
@@ -391,15 +392,25 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
   }
 
   /**
-   * Racial Active Effects are added without schema bounds (research R2), so cap
-   * every characteristic and skill at 6 before deriving anything (spec 002, FR-015).
+   * Racial Active Effects are added without schema bounds (research R2), so cap every characteristic and skill at
+   * the character's highest rating before deriving anything (spec 002, FR-015): during creation 5, or 6 with an
+   * exception (spec 016, research R4/R5); afterwards 6 as before, so characters in play never lose dots (new raises
+   * are checked by canReach).
    * `capped` records which ratings lost part of a bonus, for the sheet.
    */
   #capRatings() {
+    const items = this.parent?.items ?? [];
+    const exaltation = items.find((item) => item.type === "exaltation");
+    this.ratingCaps = ratingCaps({
+      exaltation: exaltation ? { name: exaltation.name, powerStat: exaltation.system.powerStat.value } : null,
+      feats: items.filter((item) => item.type === "feat").map((item) => item.name)
+    });
+    const source = this.parent?._source?.system;
     this.capped = {};
-    for (const group of ["characteristics", "skills"]) {
+    for (const [group, kind] of [["characteristics", "characteristic"], ["skills", "skill"]]) {
       for (const [key, data] of Object.entries(this[group])) {
-        const { value, capped } = capValue(data.value);
+        const max = this.creation.active ? Math.max(this.ratingCaps[kind].max, source?.[group]?.[key]?.value ?? 0) : MAX_RATING;
+        const { value, capped } = capValue(data.value, max);
         data.value = value;
         if (capped) this.capped[`${group}.${key}`] = true;
       }

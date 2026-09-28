@@ -27,6 +27,8 @@ import { prepareMagicContext } from "./magic-context.mjs";
 import { castSpell, endSustained, learnCombo, learnSpell } from "../documents/magic-service.mjs";
 import { prepareMartialContext } from "./martial-context.mjs";
 import { prepareAlignmentContext, prepareBackgroundContext } from "./background-context.mjs";
+import { prepareCreationContext } from "./creation-context.mjs";
+import { endCreation, setCreationDots } from "../documents/creation-service.mjs";
 import { addInstance, raiseBackground, rollContacts, setInheritancePicks } from "../documents/background-service.mjs";
 import { cureDegeneration, rollAlignmentCheck, setAlignment } from "../documents/alignment-service.mjs";
 import { buildAttack, deleteAttack, newScene as newMartialScene, useAttack } from "../documents/martial-service.mjs";
@@ -189,7 +191,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     `${TEMPLATE_ROOT}/advance-button.hbs`,
     "systems/dtd40k/templates/dialog/martial-builder-row.hbs",
     `${TEMPLATE_ROOT}/alignment.hbs`,
-    `${TEMPLATE_ROOT}/backgrounds.hbs`
+    `${TEMPLATE_ROOT}/backgrounds.hbs`,
+    `${TEMPLATE_ROOT}/creation.hbs`
   ];
 
   /** Skill search state, kept across re-renders. */
@@ -277,6 +280,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       magic: prepareMagicContext(actor, { isAdvance }),
       martial: await prepareMartialContext(actor, { isAdvance }),
       backgroundsTab: prepareBackgroundContext(actor, { isEdit }),
+      // Creation panel (spec 016): only while the character is being created.
+      creation: prepareCreationContext(actor),
       alignmentTab: prepareAlignmentContext(actor),
       addictionOptions: ADDICTION_LEVELS.map((key, value) => ({ value, label: game.i18n.localize(`DTD.Addiction.${key}`) })),
       currentClass: getCurrentClass(actor)?.name ?? "",
@@ -560,7 +565,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
     const base = Number(foundry.utils.getProperty(this.document._source, path)) || 0;
     const final = Number(foundry.utils.getProperty(this.document, path)) || 0;
     const value = nextBaseValue({ base, final, clicked: Number(target.dataset.value) });
-    if (value !== base) await this.document.update({ [path]: value });
+    // Budgets, caps of the step and the highest rating (spec 016).
+    if (value !== base) await setCreationDots(this.document, path, value);
   }
 
   /**
@@ -1116,11 +1122,12 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
   }
 
   /**
-   * End character creation: starting picks are no longer asked — GM only (spec 007, FR-024).
+   * End character creation: starting picks are no longer asked — GM only (spec 007, FR-024); open steps are listed
+   * for confirmation (spec 016, FR-012).
    * @this {CharacterSheet}
    */
   static async #onEndCreation() {
-    if (game.user.isGM) await this.document.update({ "system.creation.active": false });
+    await endCreation(this.document);
   }
 
   /**

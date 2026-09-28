@@ -1,6 +1,7 @@
 import { promptAttackOptions } from "../apps/attack-dialog.mjs";
 import { postTest, rng } from "../dice/roll-service.mjs";
 import { rollAndKeep } from "../rules/dice.mjs";
+import { unstableDamage } from "../rules/weapon-creation.mjs";
 import { formatPool, normalizePool } from "../rules/pool.mjs";
 import { runTest } from "../rules/test.mjs";
 import { toggleCondition } from "./condition-service.mjs";
@@ -60,6 +61,9 @@ function ammoFor(actor, ammoGroup) {
     .map((item) => ({ id: item.id, name: item.name, quantity: item.system.quantity }));
 }
 
+/** Mods of a custom weapon (spec 015): their attack conditions (Red-Dot Sight, Breacher…) apply on the roll. */
+const modsOf = (item) => item?.system.custom?.build?.mods ?? [];
+
 /**
  * Pools shown on the sheet for a weapon (no options).
  * @param {Actor} actor
@@ -68,14 +72,15 @@ function ammoFor(actor, ammoGroup) {
  */
 export function weaponPools(actor, item) {
   const weapon = profileOf(item);
+  const mods = modsOf(item);
   const skill = attackSkill(weapon);
   const attack = attackPool({
     weapon, skill: actor.system.skills[skill].value, level: actor.system.level,
-    proficient: actor.type === "npc" || isProficient(weapon, proficiencyChoices(actor)), focus: item ? hasWeaponFeat(actor, "Weapon Focus", item) : false
+    proficient: actor.type === "npc" || isProficient(weapon, proficiencyChoices(actor)), focus: item ? hasWeaponFeat(actor, "Weapon Focus", item) : false, mods
   });
   const damage = damagePool({
     weapon, str: actor.system.characteristics.str.value,
-    specialization: item ? hasWeaponFeat(actor, "Weapon Specialization", item) : false
+    specialization: item ? hasWeaponFeat(actor, "Weapon Specialization", item) : false, mods
   });
   return {
     attack: formatPool(normalizePool(attack)),
@@ -100,6 +105,10 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   const owner = weaponOwner ?? actor;
   const item = itemId === "unarmed" ? null : owner.items.get(itemId);
   if (itemId !== "unarmed" && !item) return null;
+  if (item?.system.custom?.status) {
+    ui.notifications.warn(game.i18n.format(`DTD.WeaponBuilder.Unfinished.${item.system.custom.status}`, { name: item.name }));
+    return null;
+  }
   const weapon = profileOf(item);
   const targetToken = [...game.user.targets][0];
   const target = targetToken?.actor;
@@ -155,7 +164,7 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   const proficient = !vehicle && (actor.type === "npc" || isProficient(weapon, proficiencyChoices(actor), { thrown }));
   const pool = attackPool({
     weapon, skill: actor.system.skills[skill].value, level: actor.system.level, proficient,
-    focus: item && !vehicle ? hasWeaponFeat(actor, "Weapon Focus", item) : false, options: options.weapon
+    focus: item && !vehicle ? hasWeaponFeat(actor, "Weapon Focus", item) : false, options: options.weapon, mods: modsOf(item)
   });
   const melee = shape.melee && !thrown;
   const sit = situationModifiers({
@@ -218,7 +227,7 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
     vehicleWeapon: vehicle,
     // A vehicle target answers with Evasive Maneuvers instead of Dodge or Parry (spec 013).
     vehicleTarget: target?.type === "vehicle",
-    notes: pool.notes.map((note) => localize(`DTD.Attack.Note.${note}`)),
+    notes: [...pool.notes.map((note) => localize(`DTD.Attack.Note.${note}`)), ...(item?.system.custom?.notes ?? [])],
     requiredRaises: pool.requiredRaises,
     hits: auto ? hits : 0,
     location: localize(`DTD.Location.${location}`),
@@ -280,7 +289,9 @@ export async function rollDamage(message) {
     options: attack.options,
     extraHits: Math.max(0, attack.hits - 1),
     specialization: item && !attack.vehicle ? hasWeaponFeat(actor, "Weapon Specialization", item) : false,
-    raises: attack.raises
+    raises: attack.raises,
+    // Launchers use the ammunition's profile, not the launcher's mods.
+    mods: item?.system.ammoGroup ? [] : modsOf(item)
   });
   let resolve = {};
   if (m) {
@@ -302,6 +313,16 @@ export async function rollDamage(message) {
     result.total += second.total;
     pool.notes.push("helpless");
   }
+  // Custom weapons (spec 015): Unstable halves or doubles the damage on a d10; Orgone Array warns on an exploding die.
+  const mods = modsOf(item);
+  const extraNotes = [];
+  if (mods.includes("unstable")) {
+    const d10 = Math.floor(rng() * 10) + 1;
+    const adjusted = unstableDamage(result.total, d10);
+    extraNotes.push(game.i18n.format("DTD.Attack.Unstable", { d10, before: result.total, after: adjusted }));
+    result.total = adjusted;
+  }
+  if (mods.includes("orgoneArray") && result.dice.some((die) => die.chain.length > 1)) extraNotes.push(localize("DTD.Attack.OrgoneExploded"));
   const dice = result.dice.map((die) => ({
     total: die.total, kept: die.kept, exploded: die.chain.length > 1, chainText: die.chain.join(" + "), rerolled: die.rerolled?.join(", ")
   }));
@@ -314,7 +335,7 @@ export async function rollDamage(message) {
     pen: pool.pen,
     location: localize(`DTD.Location.${attack.location}`),
     hits: attack.hits > 1 ? attack.hits : 0,
-    notes: [...pool.notes.map((note) => localize(`DTD.Attack.Note.${note}`)), ...(m ? [attack.special.name, ...m.qualities.map((q) => localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].label) + (q.value ? ` (${q.value})` : ""))] : [])],
+    notes: [...pool.notes.map((note) => localize(`DTD.Attack.Note.${note}`)), ...extraNotes, ...(m ? [attack.special.name, ...m.qualities.map((q) => localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].label) + (q.value ? ` (${q.value})` : ""))] : [])],
     proven: pool.rerollBelow,
     volatile: pool.explodeOn === 9
   });

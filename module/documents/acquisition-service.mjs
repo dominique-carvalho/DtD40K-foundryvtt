@@ -110,6 +110,33 @@ export async function acquire(actor, item) {
 }
 
 /**
+ * A Wealth Test with no item to gain (spec 015: the materials of a custom weapon): the TN of a rarity with the +5 of
+ * each earlier try, Wealth Strain on a success, the try counted on a failure.
+ * @param {Actor} actor
+ * @param {{rarity: string, key: string, label: string}} options
+ * @returns {Promise<{success: boolean, raises: number}|null>}
+ */
+export async function wealthTest(actor, { rarity, key, label }) {
+  if (actor.type !== "character") return null;
+  const wealth = actor.system.wealth.effective;
+  if (wealth <= 0 && rarity !== "worthless") {
+    ui.notifications.warn(localize("DTD.Acquire.NoWealth"));
+    return null;
+  }
+  const { tn } = acquisitionTn({ rarity, piece: false, craftsmanship: "common", attempts: attemptsOf(actor, key) });
+  const testResult = runTest({ base: { rolled: wealth, kept: wealth }, tn, rng });
+  const success = Boolean(testResult.outcome?.success);
+  if (success) {
+    const strain = strainRoll({ tn, wealth, raises: testResult.outcome.raises, d10: Math.floor(rng() * 10) + 1 });
+    if (strain.penalty > actor.system.wealth.strain) await actor.update({ "system.wealth.strain": strain.penalty });
+  } else {
+    await recordAttempt(actor, key);
+  }
+  await postTest({ actor, label, testResult });
+  return { success, raises: testResult.outcome?.raises ?? 0 };
+}
+
+/**
  * The item joins the inventory; a strain penalty is kept until the GM ends it (the largest one counts).
  * @param {Actor} actor
  * @param {Item} item

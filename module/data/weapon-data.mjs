@@ -42,6 +42,24 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
       })),
       // Launchers: damage comes from a grenade or missile carried by the character.
       ammoGroup: new StringField({ required: true, blank: true }),
+      // Custom weapons (spec 015): the build that made the profile, the approval/crafting state and the notes of the
+      // effects kept as text. An empty status is an ordinary or finished weapon.
+      custom: new SchemaField({
+        build: new SchemaField({
+          family: new StringField({ required: true, blank: true, initial: "", choices: ["", "ranged", "melee"] }),
+          template: new StringField({ required: true, blank: true }),
+          type: new StringField({ required: true, blank: true }),
+          damageType: new StringField({ required: true, blank: true }),
+          mods: new ArrayField(new StringField({ required: true, blank: false }))
+        }),
+        status: new StringField({ required: true, blank: true, initial: "", choices: ["", "pending", "crafting"] }),
+        crafting: new SchemaField({
+          materials: new BooleanField({ initial: false }),
+          crafted: new BooleanField({ initial: false }),
+          attempts: count(0)
+        }),
+        notes: new ArrayField(new StringField({ required: true, blank: false }))
+      }),
       // Vehicle-mounted weapons (spec 013, p. 377): scale, slots and VP cost.
       vehicle: new SchemaField({
         scale: new StringField({ required: true, blank: true, initial: "", choices: ["", "Vhcl", "Hybrid"] }),

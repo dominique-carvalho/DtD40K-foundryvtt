@@ -14,7 +14,7 @@
   </section>
 
   <section class="equipment-weapons">
-    <h2 class="section-title">{{localize "DTD.Equipment.Weapons"}}</h2>
+    <h2 class="section-title">{{localize "DTD.Equipment.Weapons"}}{{#if @root.canEditRace}} <a class="pool-button weapon-builder-open" data-action="openWeaponBuilder" data-tooltip="{{localize "DTD.WeaponBuilder.OpenHint"}}"><i class="fa-solid fa-hammer" inert></i> {{localize "DTD.WeaponBuilder.Open"}}</a>{{/if}}</h2>
     <ul class="equipment-list">
       {{#each eq.weapons as |w|}}
       <li class="equipment-row{{#if w.equipped}} equipped{{/if}}">
@@ -26,6 +26,7 @@
           {{#if w.craftsmanship}}<span class="feat-badge">{{w.craftsmanship}}</span>{{/if}}
           {{#if w.material}}<span class="feat-badge granted">{{w.material}} · {{localize "DTD.Equipment.ArtifactRating" rating=w.rating}}</span>{{/if}}
           {{#if w.starting}}<span class="feat-badge">{{localize "DTD.Equipment.StartingBadge"}}</span>{{/if}}
+          {{#if w.unfinished}}<span class="feat-badge warning">{{w.unfinished}}</span>{{/if}}
           <span class="hint">{{w.profile}}</span>
           {{#each w.qualities as |q|}}<span class="tag" data-tooltip="{{q.hint}}">{{q.label}}</span>{{/each}}
         </span>
@@ -36,7 +37,7 @@
         {{#unless w.unarmed}}
         <input class="quantity-input" type="number" value="{{w.quantity}}" min="0" data-item-id="{{w.id}}" aria-label="{{localize "DTD.Equipment.Quantity"}}" {{disabled (not @root.canEditRace)}}>
         {{#if @root.canEditRace}}
-        <a data-action="acquireItem" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Acquire.Button"}}"><i class="fa-solid fa-coins" inert></i></a>
+        {{#unless w.unfinished}}<a data-action="acquireItem" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Acquire.Button"}}"><i class="fa-solid fa-coins" inert></i></a>{{/unless}}
         <a class="asset-remove" data-action="removeEquipment" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Equipment.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
         {{/if}}
         {{/unless}}

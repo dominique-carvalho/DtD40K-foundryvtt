@@ -3,11 +3,31 @@ import {
   WEAPON_QUALITIES, WEAPON_TYPES
 } from "../config.mjs";
 import { acquire } from "../documents/acquisition-service.mjs";
+import { approveWeapon, craftWeapon, gatherMaterials, modNames } from "../documents/weapon-craft-service.mjs";
 import { rarityStep } from "../rules/acquisition.mjs";
 import { artifactRating } from "../rules/equipment.mjs";
 import { lockedPackHint } from "./item-sheet-helpers.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
+
+/**
+ * Custom weapon block of the sheet (spec 015): build, notes, state and the approval and crafting buttons.
+ * @param {Item} item
+ */
+function customContext(item) {
+  const c = item.system.custom;
+  return {
+    status: c.status,
+    statusLabel: c.status ? game.i18n.localize(`DTD.WeaponBuilder.Status.${c.status}`) : "",
+    notes: c.notes,
+    crafting: c.crafting,
+    tn: RARITIES[item.system.rarity]?.tn ?? 10,
+    mods: modNames(c.build).join(", ") || "—",
+    canRebuild: game.user.isGM || (item.isOwner && c.status === "pending"),
+    canApprove: game.user.isGM && c.status === "pending",
+    canCraft: Boolean(item.actor?.isOwner) && c.status === "crafting"
+  };
+}
 
 /**
  * Localized options object for a `selectOptions` helper.
@@ -54,7 +74,14 @@ export class EquipmentSheet extends HandlebarsApplicationMixin(foundry.applicati
     position: { width: 560, height: 640 },
     window: { resizable: true },
     form: { submitOnChange: true },
-    actions: { acquire: EquipmentSheet.#onAcquire }
+    actions: {
+      acquire: EquipmentSheet.#onAcquire,
+      openWeaponBuilder: EquipmentSheet.#onOpenBuilder,
+      approveReady: EquipmentSheet.#onApprove,
+      approveCraft: EquipmentSheet.#onApprove,
+      gatherMaterials: EquipmentSheet.#onMaterials,
+      craftWeapon: EquipmentSheet.#onCraft
+    }
   };
 
   /** @override */
@@ -110,7 +137,8 @@ export class EquipmentSheet extends HandlebarsApplicationMixin(foundry.applicati
       rating,
       // A single armor piece is one rarity step cheaper (p. 332).
       pieceRarity: isArmor && !system.suitOnly ? `DTD.Rarity.${rarityStep(system.rarity, -1)}` : "",
-      canAcquire: Boolean(this.buyer?.isOwner),
+      canAcquire: Boolean(this.buyer?.isOwner) && !system.custom?.status,
+      custom: isWeapon && system.custom?.build?.family ? customContext(item) : null,
       buyerName: this.buyer?.name ?? "",
       enriched: {
         description: await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.description, {
@@ -139,5 +167,38 @@ export class EquipmentSheet extends HandlebarsApplicationMixin(foundry.applicati
   static async #onAcquire() {
     const buyer = this.buyer;
     if (buyer?.isOwner) await acquire(buyer, this.document);
+  }
+
+  /**
+   * Reopen the custom weapon in the builder (spec 015).
+   * @this {EquipmentSheet}
+   */
+  static async #onOpenBuilder() {
+    const { openWeaponBuilder } = await import("./weapon-builder.mjs");
+    await openWeaponBuilder({ item: this.document });
+  }
+
+  /**
+   * GM: approve a player's weapon, ready or to be crafted.
+   * @this {EquipmentSheet}
+   */
+  static async #onApprove(event, target) {
+    await approveWeapon(this.document, { craft: target.dataset.action === "approveCraft" });
+  }
+
+  /**
+   * Crafting, step 1: the materials by the Wealth test.
+   * @this {EquipmentSheet}
+   */
+  static async #onMaterials() {
+    await gatherMaterials(this.document);
+  }
+
+  /**
+   * Crafting, step 2: Crafts.
+   * @this {EquipmentSheet}
+   */
+  static async #onCraft() {
+    await craftWeapon(this.document);
   }
 }

@@ -82,6 +82,11 @@ export async function toggleEquipped(actor, itemId) {
   const item = actor.items.get(itemId);
   if (!item || !actor.isOwner) return;
   const equipping = !item.system.equipped;
+  // Custom weapons wait for the GM's approval or their crafting (spec 015).
+  if (equipping && item.system.custom?.status) {
+    ui.notifications.warn(game.i18n.format(`DTD.WeaponBuilder.Unfinished.${item.system.custom.status}`, { name: item.name }));
+    return;
+  }
   if (equipping && item.type === "gear" && item.system.mechadendrite) {
     const installed = actor.items.filter((entry) => entry.type === "gear" && entry.system.mechadendrite && entry.system.equipped).length + 1;
     const check = mechadendriteCheck({ installed, con: actor.system.characteristics.con.value });

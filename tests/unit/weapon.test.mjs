@@ -167,3 +167,28 @@ describe("damagePool with a flat bonus (spec 013, p. 377)", () => {
     expect(damagePool({ weapon: autopistol, str: 3 }).flat).toBe(0);
   });
 });
+
+describe("custom weapon mods at roll time (spec 015, p. 518)", () => {
+  const rifle = weapon({ weaponType: "basic", rof: { single: true, auto: 3 } });
+  const base = { skill: 3, level: 1, proficient: true };
+
+  it("adds Red-Dot Sight on single shots and Motion Predict on full auto", () => {
+    const single = attackPool({ ...base, weapon: rifle, mods: ["redDotSight", "motionPredict"], options: { mode: "single" } });
+    const plain = attackPool({ ...base, weapon: rifle, options: { mode: "single" } });
+    expect(single.rolled - plain.rolled).toBe(1);
+    expect(single.notes).toContain("redDotSight");
+    const auto = attackPool({ ...base, weapon: rifle, mods: ["redDotSight", "motionPredict"], options: { mode: "auto" } });
+    const autoPlain = attackPool({ ...base, weapon: rifle, options: { mode: "auto" } });
+    expect(auto.rolled - autoPlain.rolled).toBe(1);
+    expect(auto.notes).toContain("motionPredict");
+    expect(auto.notes).not.toContain("redDotSight");
+  });
+
+  it("adds Breacher at short range or closer and stops explosions with Nonlethal", () => {
+    const melta = weapon({ weaponType: "basic", damage: { rolled: 2, kept: 2, type: "E" } });
+    expect(damagePool({ weapon: melta, str: 0, mods: ["breacher"], options: { range: "short" } }).rolled).toBe(3);
+    expect(damagePool({ weapon: melta, str: 0, mods: ["breacher"], options: { range: "pointBlank" } }).rolled).toBe(3);
+    expect(damagePool({ weapon: melta, str: 0, mods: ["breacher"], options: { range: "normal" } }).rolled).toBe(2);
+    expect(damagePool({ weapon: melta, str: 0, mods: ["nonlethal"] }).explodeOn).toBe(11);
+  });
+});

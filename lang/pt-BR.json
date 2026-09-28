@@ -988,7 +988,11 @@
         "targetProneRanged": "alvo caído +1 raise",
         "twoWeapons": "duas armas",
         "blinded": "cego: Ballistics falha",
-        "helpless": "alvo indefeso"
+        "helpless": "alvo indefeso",
+        "redDotSight": "Red-Dot Sight +1k0",
+        "motionPredict": "Motion Predictor +1k0",
+        "breacher": "Breacher +1k0",
+        "nonlethal": "não letal (sem explosões)"
       },
       "Situation": "Situação",
       "Advantage": "Combat Advantage (+1 free raise)",
@@ -1000,7 +1004,9 @@
       "Difficult": "Difícil",
       "Arduous": "Árduo",
       "CalledLocation": "Localização escolhida",
-      "Called": "tiro mirado"
+      "Called": "tiro mirado",
+      "Unstable": "Unstable: d10 = {d10}, dano {before} → {after}",
+      "OrgoneExploded": "Orgone Array: um dado explodiu — role Fenômenos Psíquicos para o alvo."
     },
     "Acquire": {
       "Button": "Adquirir",
@@ -2196,6 +2202,109 @@
       "WarpVoyage": "Viagem pelo Warp",
       "Weapons": "Armas",
       "WeaponsOvercharged": "O próximo ataque causa +{dice} de dano."
+    },
+    "WeaponBuilder": {
+      "Open": "Montar arma",
+      "OpenHint": "Monte uma arma personalizada a partir de um modelo, um tipo e modificações (pp. 516–519).",
+      "Title": "Montador de armas",
+      "TitleEdit": "Montador de armas: {name}",
+      "Name": "Nome",
+      "DefaultName": "Arma personalizada",
+      "FamilyLabel": "Família",
+      "Family": {
+        "ranged": "À distância",
+        "melee": "Corpo a corpo"
+      },
+      "TemplateLabel": "Modelo",
+      "Template": {
+        "pistol": "Pistola",
+        "basic": "Básica",
+        "cannon": "Canhão",
+        "heavyRifle": "Rifle pesado",
+        "melee": "Corpo a corpo"
+      },
+      "TypeLabel": "Tipo",
+      "Type": {
+        "ranged": {
+          "O": "Comum",
+          "L": "Las",
+          "P": "Plasma",
+          "M": "Melta",
+          "B": "Bolter",
+          "S": "Syrneth",
+          "E": "Exótica",
+          "F": "Lança-chamas"
+        },
+        "melee": {
+          "O": "Comum",
+          "P": "Aparar",
+          "C": "Cavalaria",
+          "F": "Mangual",
+          "N": "Esgrima",
+          "T": "Duas mãos",
+          "S": "Syrneth",
+          "A": "Chain",
+          "H": "Escudo",
+          "U": "Desarmado"
+        }
+      },
+      "DamageType": "Tipo de dano",
+      "Mods": "Modificações",
+      "Preview": "Perfil",
+      "Rarity": "Raridade",
+      "Create": "Criar",
+      "Update": "Atualizar",
+      "Custom": "Arma personalizada",
+      "Summary": "Arma personalizada: {template}, {type}. Modificações: {mods}. Total de raridade {cost}.",
+      "Pending": "{name} aguarda a aprovação do Mestre.",
+      "Status": {
+        "pending": "Aguardando aprovação",
+        "crafting": "Em fabricação"
+      },
+      "Unfinished": {
+        "pending": "{name} não pode ser usada antes da aprovação do Mestre.",
+        "crafting": "{name} não pode ser usada antes de ser fabricada."
+      },
+      "ApproveReady": "Aprovar (pronta)",
+      "ApproveCraft": "Aprovar (para fabricar)",
+      "MaterialsLabel": "Materiais",
+      "Attempts": "Tentativas",
+      "MaterialsButton": "Obter materiais (Wealth)",
+      "CraftButton": "Fabricar (Crafts)",
+      "Materials": "Materiais para {name}",
+      "Craft": "Fabricando {name}",
+      "Crafted": "{name} está pronta.",
+      "NeedMaterials": "Obtenha os materiais primeiro.",
+      "Warn": {
+        "incompatible": "Uma modificação não serve para este tipo de arma.",
+        "duplicate": "Uma modificação foi escolhida duas vezes.",
+        "tooMany": "Limite de modificações atingido.",
+        "rofOverride": "Mais de uma modificação define a cadência; vale a última escolhida."
+      },
+      "AutoPlus": "+{n} automático",
+      "Range": {
+        "double": "alcance ×2",
+        "half": "alcance ÷2"
+      },
+      "Clip": {
+        "double": "pente ×2",
+        "half": "pente ÷2"
+      },
+      "Reload": {
+        "half": "recarga pela metade",
+        "double": "recarga dobrada"
+      },
+      "Explode9": "dano explode em 9+",
+      "NoExplode": "dano não explode",
+      "Condition": {
+        "redDotSight": "+1k0 para acertar em tiro único",
+        "motionPredict": "+1k0 para acertar em automático",
+        "breacher": "+1k0 de dano a curta distância ou menos",
+        "nonlethal": "dano não explode",
+        "unstable": "d10 no dano: 1 divide por 2, 10 dobra",
+        "orgoneArray": "Fenômenos Psíquicos nos dados que explodem"
+      },
+      "Rebuild": "Abrir no montador"
     }
   }
 }

@@ -988,7 +988,11 @@
         "targetProneRanged": "prone target +1 raise",
         "twoWeapons": "two weapons",
         "blinded": "blinded: Ballistics fails",
-        "helpless": "helpless target"
+        "helpless": "helpless target",
+        "redDotSight": "Red-Dot Sight +1k0",
+        "motionPredict": "Motion Predictor +1k0",
+        "breacher": "Breacher +1k0",
+        "nonlethal": "nonlethal (no explosions)"
       },
       "Situation": "Situation",
       "Advantage": "Combat Advantage (+1 free raise)",
@@ -1000,7 +1004,9 @@
       "Difficult": "Difficult",
       "Arduous": "Arduous",
       "CalledLocation": "Called location",
-      "Called": "called shot"
+      "Called": "called shot",
+      "Unstable": "Unstable: d10 = {d10}, damage {before} → {after}",
+      "OrgoneExploded": "Orgone Array: a die exploded — roll Psychic Phenomena for the target."
     },
     "Acquire": {
       "Button": "Acquire",
@@ -2196,6 +2202,108 @@
       "WarpVoyage": "Warp voyage",
       "Weapons": "Weapons",
       "WeaponsOvercharged": "The next attack deals +{dice} damage."
+    },
+    "WeaponBuilder": {
+      "Open": "Build a weapon",
+      "OpenHint": "Build a custom weapon from a template, a type and mods (pp. 516–519).",
+      "Title": "Weapon Builder",
+      "TitleEdit": "Weapon Builder: {name}",
+      "Name": "Name",
+      "DefaultName": "Custom Weapon",
+      "FamilyLabel": "Family",
+      "Family": {
+        "ranged": "Ranged",
+        "melee": "Melee"
+      },
+      "TemplateLabel": "Template",
+      "Template": {
+        "pistol": "Pistol",
+        "basic": "Basic",
+        "cannon": "Cannon",
+        "heavyRifle": "Heavy Rifle",
+        "melee": "Melee"
+      },
+      "TypeLabel": "Type",
+      "Type": {
+        "ranged": {
+          "O": "Ordinary",
+          "L": "Las",
+          "P": "Plasma",
+          "M": "Melta",
+          "B": "Bolter",
+          "S": "Syrneth",
+          "E": "Exotic",
+          "F": "Flamer"
+        },
+        "melee": {
+          "O": "Ordinary",
+          "P": "Parrying",
+          "C": "Cavalry",
+          "F": "Flail",
+          "N": "Fencing",
+          "T": "Two Handed",
+          "S": "Syrneth",
+          "A": "Chain",
+          "H": "Shield",
+          "U": "Unarmed"
+        }
+      },
+      "DamageType": "Damage type",
+      "Mods": "Mods",
+      "Preview": "Profile",
+      "Rarity": "Rarity",
+      "Create": "Create",
+      "Update": "Update",
+      "Custom": "Custom weapon",
+      "Summary": "Custom weapon: {template}, {type}. Mods: {mods}. Rarity total {cost}.",
+      "Pending": "{name} is waiting for the GM's approval.",
+      "Status": {
+        "pending": "Awaiting approval",
+        "crafting": "Being crafted"
+      },
+      "Unfinished": {
+        "pending": "{name} can't be used before the GM approves it.",
+        "crafting": "{name} can't be used before it is crafted."
+      },
+      "ApproveReady": "Approve (ready)",
+      "ApproveCraft": "Approve (to craft)",
+      "MaterialsLabel": "Materials",
+      "Attempts": "Attempts",
+      "MaterialsButton": "Gather materials (Wealth)",
+      "CraftButton": "Craft (Crafts)",
+      "Materials": "Materials for {name}",
+      "Craft": "Crafting {name}",
+      "Crafted": "{name} is finished.",
+      "NeedMaterials": "Gather the materials first.",
+      "Warn": {
+        "incompatible": "A mod doesn't fit this weapon type.",
+        "duplicate": "A mod was picked twice.",
+        "tooMany": "Mod limit reached.",
+        "rofOverride": "More than one mod sets the rate of fire; the last one picked wins."
+      },
+      "AutoPlus": "+{n} auto",
+      "Range": {
+        "double": "range ×2",
+        "half": "range ÷2"
+      },
+      "Clip": {
+        "double": "clip ×2",
+        "half": "clip ÷2"
+      },
+      "Reload": {
+        "half": "reload halved",
+        "double": "reload doubled"
+      },
+      "Explode9": "damage explodes on 9+",
+      "NoExplode": "damage doesn't explode",
+      "Condition": {
+        "redDotSight": "+1k0 to hit on single shots",
+        "motionPredict": "+1k0 to hit on full auto",
+        "breacher": "+1k0 damage at short range or closer",
+        "nonlethal": "damage doesn't explode",
+        "unstable": "d10 on damage: 1 halves, 10 doubles",
+        "orgoneArray": "Psychic Phenomena on exploding dice"
+      }
     }
   }
 }

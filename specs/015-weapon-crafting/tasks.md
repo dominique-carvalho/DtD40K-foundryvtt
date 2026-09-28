@@ -33,28 +33,28 @@ quickstart.md
 
 ## Phase 2: User Story 1 — Montador (P1)
 
-- [ ] T006 [US1] `module/documents/weapon-craft-service.mjs`: `createCustomWeapon`, `updateCustomWeapon`
-- [ ] T007 [US1] `module/apps/weapon-builder.mjs` + `templates/apps/weapon-builder.hbs` (prévia ao vivo, mods desabilitados com motivo, avisos, notas); botão no diretório de itens (Mestre) em `dtd40k.mjs`
-- [ ] T008 [US1] Ficha de arma: notas da montagem e botão Montador (reabrir) em `module/apps/equipment-sheet.mjs` e `templates/item/equipment-sheet.hbs`
-- [ ] T009 [P] [US1] i18n e estilos
+- [X] T006 [US1] `module/documents/weapon-craft-service.mjs`: `createCustomWeapon`, `updateCustomWeapon`
+- [X] T007 [US1] `module/apps/weapon-builder.mjs` + `templates/apps/weapon-builder.hbs` (prévia ao vivo, mods desabilitados com motivo, avisos, notas); botão no diretório de itens (Mestre) em `dtd40k.mjs`
+- [X] T008 [US1] Ficha de arma: notas da montagem e botão Montador (reabrir) em `module/apps/equipment-sheet.mjs` e `templates/item/equipment-sheet.hbs`
+- [X] T009 [P] [US1] i18n e estilos
 - [ ] T010 [US1] Validar quickstart 1–5 e 11 e registrar
 
 ---
 
 ## Phase 3: User Story 2 — Condicionais no ataque (P2)
 
-- [ ] T011 [US2] `module/documents/attack-service.mjs`: mods da arma no `attackPool`/`damagePool`, Unstable (d10 e dano ajustado), Orgone Array (nota quando um dado explode), notas no cartão; `templates/chat/attack-card.hbs` e `damage-card.hbs`
-- [ ] T012 [P] [US2] i18n
+- [X] T011 [US2] `module/documents/attack-service.mjs`: mods da arma no `attackPool`/`damagePool`, Unstable (d10 e dano ajustado), Orgone Array (nota quando um dado explode), notas no cartão; `templates/chat/attack-card.hbs` e `damage-card.hbs`
+- [X] T012 [P] [US2] i18n
 - [ ] T013 [US2] Validar quickstart 6–8 e registrar
 
 ---
 
 ## Phase 4: User Story 3 — Jogadores, aprovação e fabricação (P3)
 
-- [ ] T014 [US3] Botão do montador na aba Equipamento (dono); arma do jogador `pending`
-- [ ] T015 [US3] `acquisition-service.wealthTest` exportado (usado por `acquire`); `approveWeapon`, `gatherMaterials`, `craftWeapon`; recusa de equipar/atacar com `pending`/`crafting` em `equipment-service` e `attack-service`
-- [ ] T016 [US3] Ficha de arma: estado, Aprovar (Mestre: pronta / para fabricar), Materiais e Fabricar
-- [ ] T017 [P] [US3] i18n e estilos
+- [X] T014 [US3] Botão do montador na aba Equipamento (dono); arma do jogador `pending`
+- [X] T015 [US3] `acquisition-service.wealthTest` exportado (usado por `acquire`); `approveWeapon`, `gatherMaterials`, `craftWeapon`; recusa de equipar/atacar com `pending`/`crafting` em `equipment-service` e `attack-service`
+- [X] T016 [US3] Ficha de arma: estado, Aprovar (Mestre: pronta / para fabricar), Materiais e Fabricar
+- [X] T017 [P] [US3] i18n e estilos
 - [ ] T018 [US3] Validar quickstart 9–10 e registrar
 
 ---

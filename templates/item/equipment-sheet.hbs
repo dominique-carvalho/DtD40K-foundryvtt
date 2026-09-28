@@ -59,6 +59,28 @@
   </section>
   {{/if}}
 
+  {{#if custom}}
+  <section class="equipment-section custom-weapon">
+    <h2 class="section-title">{{localize "DTD.WeaponBuilder.Custom"}}{{#if custom.statusLabel}} <span class="feat-badge warning">{{custom.statusLabel}}</span>{{/if}}</h2>
+    <p class="hint">{{localize "DTD.WeaponBuilder.Mods"}}: {{custom.mods}} · TN {{custom.tn}}</p>
+    {{#if custom.notes.length}}<ul class="weapon-builder-notes">{{#each custom.notes as |n|}}<li>{{n}}</li>{{/each}}</ul>{{/if}}
+    {{#if (eq custom.status "crafting")}}
+    <p>{{localize "DTD.WeaponBuilder.MaterialsLabel"}}: <b>{{#if custom.crafting.materials}}✓{{else}}✗{{/if}}</b> · {{localize "DTD.WeaponBuilder.Attempts"}}: {{custom.crafting.attempts}}</p>
+    {{/if}}
+    <div class="action-buttons">
+      {{#if custom.canRebuild}}<button type="button" data-action="openWeaponBuilder"><i class="fa-solid fa-hammer" inert></i> {{localize "DTD.WeaponBuilder.Open"}}</button>{{/if}}
+      {{#if custom.canApprove}}
+      <button type="button" data-action="approveReady"><i class="fa-solid fa-check" inert></i> {{localize "DTD.WeaponBuilder.ApproveReady"}}</button>
+      <button type="button" data-action="approveCraft"><i class="fa-solid fa-screwdriver-wrench" inert></i> {{localize "DTD.WeaponBuilder.ApproveCraft"}}</button>
+      {{/if}}
+      {{#if custom.canCraft}}
+      {{#if custom.crafting.materials}}<button type="button" data-action="craftWeapon"><i class="fa-solid fa-hammer" inert></i> {{localize "DTD.WeaponBuilder.CraftButton"}}</button>
+      {{else}}<button type="button" data-action="gatherMaterials"><i class="fa-solid fa-coins" inert></i> {{localize "DTD.WeaponBuilder.MaterialsButton"}}</button>{{/if}}
+      {{/if}}
+    </div>
+  </section>
+  {{/if}}
+
   {{#if isArmor}}
   <section class="equipment-section">
     <h2 class="section-title">{{localize "DTD.Equipment.Profile"}}</h2>

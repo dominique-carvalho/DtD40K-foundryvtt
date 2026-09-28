@@ -111,6 +111,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       toggleEquipped: CharacterSheet.#onToggleEquipped,
       removeEquipment: CharacterSheet.#onRemoveEquipment,
       rollAttack: CharacterSheet.#onRollAttack,
+      openWeaponBuilder: CharacterSheet.#onOpenWeaponBuilder,
       acquireItem: CharacterSheet.#onAcquireItem,
       useDose: CharacterSheet.#onUseDose,
       endDose: CharacterSheet.#onEndDose,
@@ -414,6 +415,16 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       if (apply) return this.actor.isOwner ? apply() : null;
     }
     return super._onDropItem(event, item);
+  }
+
+  /**
+   * Build a custom weapon on this sheet (spec 015); a player's weapon waits for the GM.
+   * @this {CharacterSheet}
+   */
+  static async #onOpenWeaponBuilder() {
+    if (!this.document.isOwner) return;
+    const { openWeaponBuilder } = await import("./weapon-builder.mjs");
+    await openWeaponBuilder({ actor: this.document });
   }
 
   /**

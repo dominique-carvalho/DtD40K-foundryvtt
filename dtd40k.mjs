@@ -300,6 +300,23 @@ Hooks.on("deleteCombat", async (combat) => {
   // Ships: temporary Crew, committed Crew and this round's effects end (spec 014).
   for (const ship of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "ship"))) await newShipScene(ship);
 });
+// The GM opens the custom weapon builder from the Items directory (spec 015).
+Hooks.on("renderItemDirectory", (app, html) => {
+  if (!game.user.isGM) return;
+  const root = html instanceof HTMLElement ? html : html[0];
+  const actions = root?.querySelector(".header-actions");
+  if (!actions || actions.querySelector(".dtd-weapon-builder")) return;
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "dtd-weapon-builder";
+  button.innerHTML = `<i class="fa-solid fa-hammer" inert></i> ${game.i18n.localize("DTD.WeaponBuilder.Open")}`;
+  button.addEventListener("click", async () => {
+    const { openWeaponBuilder } = await import("./module/apps/weapon-builder.mjs");
+    await openWeaponBuilder();
+  });
+  actions.append(button);
+});
+
 // The GM starts a chase with the controlled and targeted tokens (spec 013, FR-011).
 Hooks.on("getSceneControlButtons", (controls) => {
   const tokens = controls.tokens;

@@ -2243,3 +2243,45 @@
 .dtd40k.actor.ship .tag {
   margin-right: 0.3rem;
 }
+
+/* Weapon builder (spec 015) */
+.dtd40k.weapon-builder .weapon-builder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.dtd40k .weapon-builder-mods {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 22rem;
+  overflow-y: auto;
+}
+
+.dtd40k .weapon-builder-mods li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.15rem 0;
+  border-bottom: 1px solid var(--color-border-light-tertiary, #0002);
+}
+
+.dtd40k .weapon-builder-mods li.disabled {
+  opacity: 0.5;
+}
+
+.dtd40k .weapon-builder-mods .mod-cost {
+  float: right;
+  font-family: var(--font-mono, monospace);
+}
+
+.dtd40k .weapon-builder-notes {
+  margin: 0.25rem 0;
+  padding-left: 1.2rem;
+  font-size: var(--font-size-12, 0.85rem);
+}
+
+.dtd40k .weapon-builder-open {
+  font-size: var(--font-size-12, 0.8rem);
+  margin-left: 0.5rem;
+}

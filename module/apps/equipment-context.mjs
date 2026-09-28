@@ -48,7 +48,9 @@ export function prepareEquipmentContext(actor) {
         ...row(item),
         ...pools,
         skillLabel: localize(CONFIG.DTD.SKILLS[pools.skill].label),
-        canAttack: item.system.rof.single || item.system.rof.auto > 0 || item.system.weaponType === "melee" || item.system.weaponType === "thrown",
+        // Custom weapons waiting for the GM or being crafted cannot be used yet (spec 015).
+        unfinished: item.system.custom?.status ? localize(`DTD.WeaponBuilder.Status.${item.system.custom.status}`) : "",
+        canAttack: !item.system.custom?.status && (item.system.rof.single || item.system.rof.auto > 0 || item.system.weaponType === "melee" || item.system.weaponType === "thrown"),
         profile: `${item.system.damage.kept ? `${item.system.damage.rolled}k${item.system.damage.kept} ${item.system.damage.type}` : "—"} · Pen ${item.system.pen}`,
         qualities: item.system.qualities.map((q) => ({
           label: `${localize(WEAPON_QUALITIES[q.key].label)}${q.value !== null ? ` (${q.value})` : ""}`,

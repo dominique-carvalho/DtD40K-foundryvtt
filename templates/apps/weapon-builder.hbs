@@ -1,0 +1,37 @@
+<div class="weapon-builder-grid">
+  <section class="weapon-builder-choices">
+    <div class="form-group"><label>{{localize "DTD.WeaponBuilder.Name"}}</label><input type="text" name="name" value="{{state.name}}" placeholder="{{localize "DTD.WeaponBuilder.DefaultName"}}"></div>
+    <div class="form-group"><label>{{localize "DTD.WeaponBuilder.FamilyLabel"}}</label><select name="family">{{#each families as |f|}}<option value="{{f.key}}" {{#if f.selected}}selected{{/if}}>{{f.label}}</option>{{/each}}</select></div>
+    <div class="form-group"><label>{{localize "DTD.WeaponBuilder.TemplateLabel"}}</label><select name="template">{{#each templates as |t|}}<option value="{{t.key}}" {{#if t.selected}}selected{{/if}}>{{t.label}}</option>{{/each}}</select></div>
+    <div class="form-group"><label>{{localize "DTD.WeaponBuilder.TypeLabel"}}</label><select name="type">{{#each types as |t|}}<option value="{{t.key}}" {{#if t.selected}}selected{{/if}}>{{t.label}}</option>{{/each}}</select></div>
+    {{#if damageChoices}}
+    <div class="form-group"><label>{{localize "DTD.WeaponBuilder.DamageType"}}</label><select name="damageType">{{#each damageChoices as |d|}}<option value="{{d.key}}" {{#if d.selected}}selected{{/if}}>{{d.label}}</option>{{/each}}</select></div>
+    {{/if}}
+    <h3 class="section-title">{{localize "DTD.WeaponBuilder.Mods"}} <span class="hint">{{state.mods.length}} / {{limit}}</span></h3>
+    <ol class="weapon-builder-mods">
+      {{#each mods as |m|}}
+      <li class="{{#if m.disabled}}disabled{{/if}}" {{#if m.reason}}data-tooltip="{{m.reason}}"{{/if}}>
+        <label><input type="checkbox" name="mod-{{m.key}}" {{checked m.checked}} {{#if m.disabled}}disabled{{/if}}> <b>{{m.name}}</b> <span class="mod-cost">{{m.cost}}</span></label>
+        <span class="hint">{{m.effect}}</span>
+      </li>
+      {{/each}}
+    </ol>
+  </section>
+  <section class="weapon-builder-preview">
+    <h3 class="section-title">{{localize "DTD.WeaponBuilder.Preview"}}</h3>
+    <dl class="spell-stats">
+      <dt>{{localize "DTD.Equipment.Damage"}}</dt><dd>{{preview.damage}}</dd>
+      <dt>{{localize "DTD.Equipment.Pen"}}</dt><dd>{{preview.pen}}</dd>
+      <dt>{{localize "DTD.Equipment.Rof"}}</dt><dd>{{preview.rof}}</dd>
+      <dt>{{localize "DTD.Equipment.Range"}}</dt><dd>{{preview.range}}</dd>
+      <dt>{{localize "DTD.Equipment.Clip"}}</dt><dd>{{preview.clip}}</dd>
+      <dt>{{localize "DTD.Equipment.Reload"}}</dt><dd>{{preview.reload}}</dd>
+      <dt>{{localize "DTD.Equipment.Qualities"}}</dt><dd>{{preview.qualities}}</dd>
+      <dt>{{localize "DTD.Equipment.Group"}}</dt><dd>{{preview.group}}</dd>
+      <dt>{{localize "DTD.Equipment.Proficiencies"}}</dt><dd>{{preview.proficiencies}}</dd>
+      <dt>{{localize "DTD.WeaponBuilder.Rarity"}}</dt><dd><b>{{preview.rarity}}</b> ({{preview.cost}}) · TN {{preview.tn}}</dd>
+    </dl>
+    {{#each warnings as |w|}}<p class="notification warning">{{w}}</p>{{/each}}
+    {{#if notes.length}}<ul class="weapon-builder-notes">{{#each notes as |n|}}<li>{{n}}</li>{{/each}}</ul>{{/if}}
+  </section>
+</div>

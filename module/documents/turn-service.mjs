@@ -2,10 +2,13 @@ import { postTest, rng } from "../dice/roll-service.mjs";
 import { COMBAT_ACTIONS } from "../rules/combat-actions.mjs";
 import { combatFlags, defendedSd, dodgeModifiers, multipleAttackPenalty, parryPool, stillHits } from "../rules/defense.mjs";
 import { runTest } from "../rules/test.mjs";
-import { canUse, spend } from "../rules/turn.mjs";
+import { canUse, spend, usesDelay } from "../rules/turn.mjs";
+import { restriction } from "../rules/maneuvers.mjs";
 import { isProficient } from "../rules/weapon.mjs";
 import { rollAttack } from "./attack-service.mjs";
 import { addFatigue, toggleCondition } from "./condition-service.mjs";
+import { checkZoneWeapon, endOverwatch, placeZone, postPinningEscape, zonesAtTurnStart } from "./zone-service.mjs";
+import { controlGrapple, endGrapple, escapeGrapple, useManeuver } from "./maneuver-service.mjs";
 
 /**
  * Combat actions, turn limits, reactions and start/end of turn (spec 008, US2; research R4–R7).
@@ -37,6 +40,15 @@ export function combatantOf(actor) {
 export async function takeAction(actor, action, { as, count = 1 } = {}) {
   const combatant = combatantOf(actor);
   if (!combatant) return true;
+  // Any action or reaction ends Overwatch; free actions do not (spec 017, p. 429).
+  if (action.type !== "free" && action.key !== "overwatch") await endOverwatch(actor);
+  // A Half Action held by Delay is used outside the turn without touching the turn state (p. 426).
+  const delay = combatant.getFlag("dtd40k", "delay");
+  if (usesDelay({ delay, ownTurn: game.combat.combatant?.id === combatant.id, action, as })) {
+    if (combatant.isOwner) await combatant.unsetFlag("dtd40k", "delay");
+    ui.notifications.info(game.i18n.format("DTD.Delay.Used", { name: actor.name, action: action.name }));
+    return true;
+  }
   let state = combatant.turnState;
   const reactionsMax = actor.system.combat.reactionsMax;
   for (let i = 0; i < count; i++) {
@@ -81,6 +93,15 @@ export async function useAction(actor, key, { weaponId, as, special = null } = {
     ui.notifications.warn(game.i18n.format("DTD.Combat.CannotAct", { name: actor.name }));
     return;
   }
+  // Pinned: no Full Actions; grappled or grappling: only the grapple (spec 017). The GM may allow it.
+  const limit = restriction({ statuses: actor.statuses, action, as });
+  if (!limit.allowed) {
+    const message = game.i18n.format(`DTD.Maneuver.Refused.${limit.reason}`, { name: actor.name, action: action.name });
+    ui.notifications.warn(message);
+    if (!game.user.isGM || !(await foundry.applications.api.DialogV2.confirm({
+      window: { title: action.name }, content: `<p>${message}</p><p>${localize("DTD.Combat.GMOverride")}</p>`, rejectClose: false
+    }))) return;
+  }
   const auto = action.automation;
   // A Hero Point ends Stunned (p. 444).
   if (action.key === "spendHeroPoint" && actor.statuses.has("stunned") && actor.system.heroPoints.value > 0) {
@@ -95,12 +116,35 @@ export async function useAction(actor, key, { weaponId, as, special = null } = {
   }
   if (auto.reaction) return rollReaction(actor, auto.reaction);
   if (auto.multiple) return multipleAttacks(actor, action, special);
+  // Kill zones, opposed tests, the grapple and Delay (spec 017).
+  if (auto.zone) return zoneAction(actor, action, weaponFor(actor, weaponId));
+  const target = auto.opposed ? [...game.user.targets][0]?.actor ?? null : null;
+  if (target) {
+    if (await takeAction(actor, action)) await useManeuver(actor, auto.opposed, target);
+    return;
+  }
+  if (auto.grapple && auto.grapple !== "enter") {
+    if (!(await takeAction(actor, action))) return;
+    if (auto.grapple === "control") await controlGrapple(actor);
+    else await escapeGrapple(actor, auto.grapple);
+    return;
+  }
   if (!(await takeAction(actor, action, { as: as ?? (auto.attack?.aim ? "half" : undefined) }))) return;
 
   if (auto.effect) await toggleCondition(actor, auto.effect, { active: true });
   if (auto.adds) await toggleCondition(actor, auto.adds, { active: true });
   if (auto.removes) await toggleCondition(actor, auto.removes, { active: false });
-  if (auto.attack && !auto.attack.aim) await rollAttack(actor, weaponFor(actor, weaponId), { action: auto.attack, special });
+  if (auto.attack && !auto.attack.aim) {
+    // The Grapple is a Brawl attack, whatever weapon is in hand (p. 427).
+    const message = await rollAttack(actor, auto.attack.unarmed ? "unarmed" : weaponFor(actor, weaponId), { action: auto.attack, special });
+    if (message && auto.grapple === "enter" && message.getFlag("dtd40k", "attack")?.hits !== 0) {
+      await message.update({ content: `${message.content}<div class="card-buttons"><button type="button" data-dtd-action="startGrapple"><i class="fa-solid fa-hands" inert></i> ${localize("DTD.Grapple.Start")}</button></div>` });
+    }
+  }
+  if (auto.delay) {
+    const combatant = combatantOf(actor);
+    if (combatant?.isOwner) await combatant.setFlag("dtd40k", "delay", { round: game.combat.round });
+  }
   if (auto.roll) {
     const message = auto.roll.skill
       ? await actor.rollSkill(auto.roll.skill, { tn: auto.roll.tn ?? 15 })
@@ -111,9 +155,32 @@ export async function useAction(actor, key, { weaponId, as, special = null } = {
   if (!auto.attack && !auto.roll) {
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor }),
-      content: `<p><b>${action.name}</b></p><p>${action.summary}</p>`
+      content: `<p><b>${action.name}</b></p><p>${action.summary}</p>${auto.tactical && actor.statuses.has("inCover") ? `<p>${localize("DTD.Maneuver.KeepsCover")}</p>` : ""}`
     });
   }
+}
+
+/**
+ * Suppressing Fire and Overwatch (spec 017, FR-001, FR-011): full-auto weapon; Overwatch asks what it fires and on
+ * what trigger; then the action is spent and the cone placed.
+ * @param {Actor} actor
+ * @param {object} action
+ * @param {string} weaponId
+ */
+async function zoneAction(actor, action, weaponId) {
+  const shot = await checkZoneWeapon(actor, weaponId);
+  if (!shot) return;
+  let overwatch = {};
+  if (action.automation.zone === "overwatch") {
+    overwatch = await foundry.applications.api.DialogV2.wait({
+      window: { title: action.name }, rejectClose: false,
+      content: `<div class="form-group"><label>${localize("DTD.Zone.AttackLabel")}</label><select name="attack"><option value="burst">${localize("DTD.Zone.Attack.burst")}</option><option value="suppressing">${localize("DTD.Zone.Attack.suppressing")}</option></select></div><div class="form-group"><label>${localize("DTD.Zone.Trigger")}</label><input type="text" name="trigger"></div>`,
+      buttons: [{ action: "ok", label: "DTD.Zone.Place", default: true, callback: (event, button) => ({ attack: button.form.elements.attack.value, trigger: button.form.elements.trigger.value }) }]
+    });
+    if (!overwatch) return;
+  }
+  if (!(await takeAction(actor, action))) return;
+  await placeZone(actor, shot, action.automation.zone, overwatch);
 }
 
 /**
@@ -248,6 +315,14 @@ export async function startOfTurn(combat, combatant) {
     return flags.untilTurnOf === combatant.id || (flags.expiresRound && combat.round >= flags.expiresRound);
   }).map((effect) => effect.id);
   if (expired.length) await actor.deleteEmbeddedDocuments("ActiveEffect", expired);
+  // Kill zones: the burst of his Suppressing Fire; his Overwatch and an unused Delay end (spec 017).
+  await zonesAtTurnStart(combat, combatant);
+  if (combatant.getFlag("dtd40k", "delay")) await combatant.unsetFlag("dtd40k", "delay");
+  // A grapple ends when either side can no longer act.
+  const partner = actor.getFlag("dtd40k", "grapple")?.partner;
+  if (partner && (combatFlags(actor.statuses).cannotAct || combatFlags((await foundry.utils.fromUuid(partner))?.statuses ?? new Set()).cannotAct)) {
+    await endGrapple(actor);
+  }
   // Effects this combatant put on others "until your next turn" (Special Attacks, spec 010) end too.
   for (const other of new Set(combat.combatants.map((c) => c.actor).filter((a) => a && a !== actor))) {
     const ids = other.effects.filter((effect) => effect.flags?.dtd40k?.untilTurnOf === combatant.id).map((effect) => effect.id);
@@ -287,6 +362,7 @@ export async function endOfTurn(actor) {
     notes.push(game.i18n.format("DTD.Combat.BloodLossRoll", { roll: roll.total }));
     if (roll.total === 1) await toggleCondition(actor, "dead", { active: true });
   }
-  if (actor.statuses.has("pinned")) notes.push(localize("DTD.Combat.PinnedTest"));
+  // Pinning (pp. 443–444): the escape test at the end of each of his turns (spec 017).
+  if (actor.statuses.has("pinned")) await postPinningEscape(actor);
   if (notes.length) await ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor }), content: `<p>${notes.join("</p><p>")}</p>` });
 }

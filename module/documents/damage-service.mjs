@@ -49,7 +49,8 @@ function damageTargets() {
 export async function applyDamage(message, tokenUuids) {
   const damage = message.getFlag("dtd40k", "damage");
   if (!damage) return;
-  const uuids = tokenUuids ?? damageTargets().map((token) => token.uuid);
+  // Cards aimed at known tokens (the burst of Suppressing Fire, the grapple — spec 017) apply to them.
+  const uuids = tokenUuids ?? (damage.tokenUuids?.length ? damage.tokenUuids : damageTargets().map((token) => token.uuid));
   if (!uuids.length) {
     ui.notifications.warn(localize("DTD.Combat.NoTarget"));
     return;

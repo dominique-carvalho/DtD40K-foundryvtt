@@ -51,6 +51,16 @@ export function canUse(state, action, { reactionsMax, as } = {}) {
 }
 
 /**
+ * Whether a Half Action held by Delay pays for this action (spec 017, p. 426): only outside the character's own turn,
+ * and only for a Half Action; it may repeat one already taken this turn.
+ * @param {{delay: object|null|undefined, ownTurn: boolean, action: {key: string, type: string}, as?: "half"|"full"}} input
+ * @returns {boolean}
+ */
+export function usesDelay({ delay, ownTurn, action, as }) {
+  return Boolean(delay) && !ownTurn && typeOf(action, as) === "half";
+}
+
+/**
  * Record the action.
  * @param {TurnState} state
  * @param {{key: string, type: string}} action

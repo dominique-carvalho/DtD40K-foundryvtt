@@ -1,0 +1,13 @@
+<div class="dtd40k pinning-card">
+  <p><i class="fa-solid fa-person-falling-burst" inert></i> <b>{{title}}</b> — {{localize "DTD.Pinning.Test" tn=tn}}</p>
+  <ul class="pinning-targets">
+    {{#each targets as |t|}}
+    <li>
+      <span>{{t.name}}</span>
+      {{#if t.immune}}<span class="feat-badge">{{localize "DTD.Pinning.Immune"}}</span>
+      {{else}}<button type="button" data-dtd-action="rollPinning" data-token="{{t.tokenUuid}}"><i class="fa-solid fa-dice-d10" inert></i> {{localize "DTD.Pinning.Roll"}}</button>{{/if}}
+    </li>
+    {{/each}}
+  </ul>
+  {{#unless escape}}<p class="hint">{{localize "DTD.Pinning.Reminder"}}</p>{{/unless}}
+</div>

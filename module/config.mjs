@@ -309,6 +309,9 @@ export const STATUS_EFFECTS = [
   status("unconscious", "icons/svg/unconscious.svg"),
   status("dead", "icons/svg/skull.svg"),
   status("grappled", "icons/svg/thrust.svg"),
+  // Controller of a grapple and a character in cover (spec 017).
+  status("grappling", "icons/svg/combat.svg"),
+  status("inCover", "icons/svg/castle.svg"),
   status("jaded", "icons/svg/silenced.svg"),
   status("lostHand", "icons/svg/downgrade.svg"),
   status("lostArm", "icons/svg/downgrade.svg"),
@@ -321,6 +324,9 @@ export const STATUS_EFFECTS = [
   status("healingSurge", "icons/svg/regen.svg", [["system.modifiers.combat.sd", 5]]),
   status("running", "icons/svg/wingfoot.svg")
 ];
+
+/** Armor Points of cover (p. 433), stored on the token by the In Cover condition (spec 017). */
+export const COVER_AP = [4, 8, 12, 16, 32];
 
 /** Statuses that are effects of an action and last until the character's next turn (research R5). */
 export const UNTIL_NEXT_TURN = ["fullDefense", "fightDefensively", "allOutAttack", "healingSurge", "running"];
@@ -594,6 +600,7 @@ export const DTD = {
   WEALTH_STRAIN,
   STATUS_EFFECTS,
   UNTIL_NEXT_TURN,
+  COVER_AP,
   DAMAGE_TABLE_TYPES,
   CRITICAL_LOCATIONS,
   FEAR_TN,

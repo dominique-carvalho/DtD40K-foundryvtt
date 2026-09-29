@@ -1086,8 +1086,12 @@
         "lostArm": "Como sem mão, e sem escudo.",
         "lostEye": "Alcance à distância pela metade; −2k1 em testes de visão.",
         "lostFoot": "Movimento pela metade; −2k0 em ações de movimento.",
-        "lostLeg": "Como sem pé, e sem esquiva."
-      }
+        "lostLeg": "Como sem pé, e sem esquiva.",
+        "grappling": "Controla um grapple: a cada turno uma ação completa e Strength oposta para escolher uma opção.",
+        "inCover": "Atrás de cobertura: o AP dela protege os locais cobertos; a rajada do Suppressing Fire não acerta."
+      },
+      "grappling": "Agarrando",
+      "inCover": "Em cobertura"
     },
     "Combat": {
       "ActionType": {
@@ -2353,6 +2357,99 @@
       "GMOverride": "Como Mestre, permitir mesmo assim?",
       "EndTitle": "Encerrar a criação do personagem",
       "EndPending": "Estas etapas não foram concluídas. Encerrar a criação mesmo assim?"
+    },
+    "Cover": {
+      "Ap": "AP da cobertura",
+      "Locations": "Locais cobertos",
+      "Set": "Definir cobertura"
+    },
+    "Zone": {
+      "Suppressing": "Suppressing Fire",
+      "Overwatch": "Overwatch",
+      "NeedAuto": "Precisa de uma arma que dispare em automático.",
+      "Braced": "A arma pesada está com Brace?",
+      "NeedBrace": "Arma pesada precisa de Brace para o automático.",
+      "NoToken": "O atirador precisa de um token na cena atual.",
+      "AttackLabel": "Ataque",
+      "Attack": {
+        "burst": "Full Auto Burst",
+        "suppressing": "Suppressing Fire"
+      },
+      "Trigger": "Gatilho",
+      "Place": "Colocar a zona",
+      "PlaceHint": "Mova, gire ou estique o cone no mapa (até 4× o alcance da arma) e confirme.",
+      "Ammo": "Gasta {rof} tiros (a munição não é controlada).",
+      "Confirm": "Confirmar zona",
+      "Fire": "Disparar",
+      "Burst": "Rajada do Suppressing Fire — {weapon}",
+      "BurstTotal": "total {total}; acerta alvos descobertos com Static Defense menor, até {rof}",
+      "NoHits": "Nenhum alvo acertado.",
+      "Missed": "Não acertados",
+      "NoOverwatch": "Nenhum Overwatch aguardando."
+    },
+    "Pinning": {
+      "Title": "Teste de Pinning",
+      "Escape": "Sair do Pinning",
+      "Test": "Willpower TN {tn}",
+      "Immune": "Imune",
+      "Roll": "Rolar",
+      "Reminder": "Pinned: só meias ações; ficar na cobertura, chegar a uma ou se afastar do atirador."
+    },
+    "Maneuver": {
+      "NoTarget": "Marque um token como alvo primeiro.",
+      "bullRush": "Bull Rush",
+      "knockDown": "Knock Down",
+      "disarm": "Disarm",
+      "feint": "Feint",
+      "Opposed": "{key} oposto",
+      "Winner": "{name} vence com {raises} raise(s).",
+      "Steady": "Squat Stability: não é empurrado nem derrubado.",
+      "Pushed": "{name} é empurrado {m} m.",
+      "KnockedDown": "{name} fica Prone.",
+      "Disarmed": "{name} derruba a arma.",
+      "Feinted": "{name} não pode Dodge nem Parry contra o próximo ataque corpo a corpo.",
+      "NoEffect": "Sem efeito.",
+      "KeepsCover": "Mantém a cobertura que deixou durante o movimento.",
+      "Refused": {
+        "pinnedFull": "{name} está Pinned e só faz meias ações ({action}).",
+        "grappled": "{name} está agarrado: só Break Free, Slip Free ou Take Control ({action}).",
+        "grappling": "{name} controla um grapple: use Control Grapple ({action})."
+      }
+    },
+    "Grapple": {
+      "Start": "Iniciar grapple",
+      "Started": "{a} agarra {b}.",
+      "Missed": "O ataque de Grapple errou.",
+      "NotControlling": "Este personagem não controla um grapple.",
+      "NotGrappled": "Este personagem não está agarrado.",
+      "ControlTitle": "Grapple — {name}",
+      "Go": "Rolar",
+      "Held": "Nada acontece; o grapple continua.",
+      "BreakFree": "Break Free",
+      "SlipFree": "Slip Free",
+      "TakeControl": "Take Control",
+      "Option": {
+        "weapon": "Atacar com arma de uma mão",
+        "throwDown": "Derrubar",
+        "push": "Empurrar",
+        "ready": "Ready",
+        "stand": "Levantar",
+        "useItem": "Usar um item",
+        "release": "Soltar (sem rolagem)"
+      },
+      "Done": {
+        "weapon": "Acerto automático: role o dano.",
+        "ready": "Prepara um item.",
+        "stand": "Levanta-se.",
+        "useItem": "Usa um item."
+      },
+      "Won": {
+        "breakFree": "Escapa e recupera meia ação.",
+        "takeControl": "Assume o controle do grapple."
+      }
+    },
+    "Delay": {
+      "Used": "{name} usa a meia ação guardada: {action}."
     }
   }
 }

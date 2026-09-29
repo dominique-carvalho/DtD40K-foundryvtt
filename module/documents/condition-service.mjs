@@ -54,6 +54,38 @@ export async function toggleCondition(actor, id, { active, rounds = null, untilT
 }
 
 /**
+ * In Cover (spec 017, FR-014; p. 433): ask the Armor Points and the covered locations, stored on the actor's tokens
+ * where the damage of spec 008 reads them.
+ * @param {Actor} actor
+ */
+export async function promptCover(actor) {
+  const { COVER_AP } = CONFIG.DTD;
+  const locations = ["head", "body", "gizzards", "arms", "legs"];
+  const choice = await foundry.applications.api.DialogV2.wait({
+    window: { title: game.i18n.localize("DTD.Condition.inCover") }, rejectClose: false,
+    content: `<div class="form-group"><label>${game.i18n.localize("DTD.Cover.Ap")}</label><select name="ap">${COVER_AP.map((ap) => `<option value="${ap}">${ap}</option>`).join("")}</select></div>
+      <fieldset><legend>${game.i18n.localize("DTD.Cover.Locations")}</legend>${locations.map((loc) => `<label><input type="checkbox" name="loc-${loc}" ${loc === "head" ? "" : "checked"}> ${game.i18n.localize(`DTD.Location.${loc}`)}</label>`).join(" ")}</fieldset>`,
+    buttons: [{ action: "ok", label: "DTD.Cover.Set", default: true, callback: (event, button) => ({
+      ap: Number(button.form.elements.ap.value), locations: locations.filter((loc) => button.form.elements[`loc-${loc}`].checked)
+    }) }]
+  });
+  if (choice) await setCover(actor, choice);
+}
+
+/**
+ * Store (or clear) the cover of an actor on its tokens.
+ * @param {Actor} actor
+ * @param {{ap: number, locations: string[]}|null} cover
+ */
+export async function setCover(actor, cover) {
+  for (const token of actor.getActiveTokens(false, true)) {
+    if (!token.isOwner) continue;
+    if (cover) await token.setFlag("dtd40k", "cover", cover);
+    else if (token.getFlag("dtd40k", "cover")) await token.unsetFlag("dtd40k", "cover");
+  }
+}
+
+/**
  * Add Fatigue; above Constitution the character falls Unconscious and Fatigue returns to Con (p. 443).
  * @param {Actor} actor
  * @param {number} amount

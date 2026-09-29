@@ -47,6 +47,9 @@ import { resolveSocial } from "./module/documents/social-service.mjs";
 import { resistSpell, rollSpellDamage } from "./module/documents/magic-service.mjs";
 import { applyAttackEffects, newScene } from "./module/documents/martial-service.mjs";
 import { DtdActor } from "./module/documents/actor.mjs";
+import { clearZones, confirmZone, fireOverwatch, rollPinning, suppressionDamage, suppressionDodge } from "./module/documents/zone-service.mjs";
+import { endGrapple, maneuverAsGm, startGrapple } from "./module/documents/maneuver-service.mjs";
+import { promptCover, setCover } from "./module/documents/condition-service.mjs";
 import { DtdItem } from "./module/documents/item.mjs";
 import { CharacterSheet } from "./module/apps/character-sheet.mjs";
 import { RaceSheet } from "./module/apps/race-sheet.mjs";
@@ -268,7 +271,14 @@ const CHAT_ACTIONS = {
   shipUndo: (message) => undoShipDamage(message),
   boardingRound: (message) => boardingRound(message),
   warpStep: (message) => warpStep(message),
-  chaseObstacle: (message, data) => markObstacle(message, data.uuid)
+  chaseObstacle: (message, data) => markObstacle(message, data.uuid),
+  // Combat actions (spec 017): kill zones, Pinning, the burst, the grapple.
+  confirmZone: (message) => confirmZone(message),
+  fireOverwatch: (message) => fireOverwatch(message),
+  rollPinning: (message, data) => rollPinning(message, data),
+  suppressionDamage: (message, data) => suppressionDamage(message, data),
+  suppressionDodge: (message, data) => suppressionDodge(message, data),
+  startGrapple: (message) => startGrapple(message)
 };
 Hooks.on("renderChatMessageHTML", (message, html) => {
   for (const button of html.querySelectorAll("[data-dtd-action]")) {
@@ -282,6 +292,8 @@ Hooks.on("renderChatMessageHTML", (message, html) => {
 Hooks.once("ready", () => {
   game.socket.on("system.dtd40k", async ({ action, payload }) => {
     if (game.users.activeGM !== game.user) return;
+    // Conditions and grapple links on actors the player does not own (spec 017).
+    if (action === "maneuver") return maneuverAsGm(payload);
     const message = game.messages.get(payload.messageId);
     if (!message) return;
     if (action === "applyDamage") await applyDamage(message, payload.tokenUuids);
@@ -291,6 +303,19 @@ Hooks.once("ready", () => {
   });
 });
 Hooks.on("deleteCombat", refreshCombatants);
+// Kill zones, Delay and grapples end with the combat (spec 017).
+Hooks.on("deleteCombat", async (combat) => {
+  if (game.users.activeGM !== game.user) return;
+  await clearZones(combat);
+  for (const actor of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.getFlag("dtd40k", "grapple")))) await endGrapple(actor);
+});
+// In Cover asks for the cover's Armor Points and locations; removing it clears them (spec 017).
+Hooks.on("createActiveEffect", (effect, options, userId) => {
+  if (userId === game.user.id && effect.statuses?.has("inCover") && effect.parent instanceof Actor) promptCover(effect.parent);
+});
+Hooks.on("deleteActiveEffect", (effect, options, userId) => {
+  if (userId === game.user.id && effect.statuses?.has("inCover") && effect.parent instanceof Actor) setCover(effect.parent, null);
+});
 // Last Resort (spec 010): once per scene; the end of a combat starts a new one.
 Hooks.on("deleteCombat", async (combat) => {
   if (game.users.activeGM !== game.user) return;

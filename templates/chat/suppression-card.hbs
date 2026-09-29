@@ -1,0 +1,15 @@
+<div class="dtd40k suppression-card">
+  <p><i class="fa-solid fa-burst" inert></i> <b>{{title}}</b> — {{localize "DTD.Zone.BurstTotal" total=total rof=rof}}</p>
+  {{#if hits.length}}
+  <ul class="pinning-targets">
+    {{#each hits as |h|}}
+    <li>
+      <span><b>{{h.name}}</b> (SD {{h.sd}})</span>
+      <button type="button" data-dtd-action="suppressionDamage" data-token="{{h.tokenUuid}}" data-actor="{{h.actorUuid}}"><i class="fa-solid fa-droplet" inert></i> {{localize "DTD.Attack.RollDamage"}}</button>
+      <button type="button" data-dtd-action="suppressionDodge" data-token="{{h.tokenUuid}}" data-actor="{{h.actorUuid}}"><i class="fa-solid fa-person-running" inert></i> {{localize "DTD.Combat.Dodge"}}</button>
+    </li>
+    {{/each}}
+  </ul>
+  {{else}}<p>{{localize "DTD.Zone.NoHits"}}</p>{{/if}}
+  {{#if misses.length}}<p class="hint">{{localize "DTD.Zone.Missed"}}: {{#each misses as |m|}}{{m.name}}{{#if m.covered}} ({{localize "DTD.Condition.inCover"}}){{/if}}{{#unless @last}}, {{/unless}}{{/each}}</p>{{/if}}
+</div>

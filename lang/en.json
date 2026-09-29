@@ -1086,8 +1086,12 @@
         "lostArm": "As a lost hand, and no shield.",
         "lostEye": "Ranged range halved; −2k1 on sight Tests.",
         "lostFoot": "Movement halved; −2k0 on Movement actions.",
-        "lostLeg": "As a lost foot, and no Dodge."
-      }
+        "lostLeg": "As a lost foot, and no Dodge.",
+        "grappling": "Controls a grapple: each turn a Full Action and opposed Strength to pick an option.",
+        "inCover": "Behind cover: its Armor Points protect the covered locations; the burst of Suppressing Fire misses."
+      },
+      "grappling": "Grappling",
+      "inCover": "In Cover"
     },
     "Combat": {
       "ActionType": {
@@ -2353,6 +2357,99 @@
       "GMOverride": "As GM, allow it anyway?",
       "EndTitle": "End character creation",
       "EndPending": "These steps are not finished. End creation anyway?"
+    },
+    "Cover": {
+      "Ap": "Cover Armor Points",
+      "Locations": "Covered locations",
+      "Set": "Set cover"
+    },
+    "Zone": {
+      "Suppressing": "Suppressing Fire",
+      "Overwatch": "Overwatch",
+      "NeedAuto": "This needs a weapon that can fire full auto.",
+      "Braced": "Is the heavy weapon braced?",
+      "NeedBrace": "A heavy weapon must be braced for full auto.",
+      "NoToken": "The shooter needs a token on the current scene.",
+      "AttackLabel": "Attack",
+      "Attack": {
+        "burst": "Full Auto Burst",
+        "suppressing": "Suppressing Fire"
+      },
+      "Trigger": "Trigger",
+      "Place": "Place the zone",
+      "PlaceHint": "Move, turn or stretch the cone on the map (up to 4× the weapon's range), then confirm.",
+      "Ammo": "Spends {rof} rounds (ammunition is not tracked).",
+      "Confirm": "Confirm zone",
+      "Fire": "Fire",
+      "Burst": "Suppressing Fire burst — {weapon}",
+      "BurstTotal": "total {total}; hits uncovered targets with a lower Static Defense, up to {rof}",
+      "NoHits": "No target hit.",
+      "Missed": "Not hit",
+      "NoOverwatch": "No Overwatch is waiting."
+    },
+    "Pinning": {
+      "Title": "Pinning Test",
+      "Escape": "Escape Pinning",
+      "Test": "Willpower TN {tn}",
+      "Immune": "Immune",
+      "Roll": "Roll",
+      "Reminder": "Pinned: Half Actions only; stay in cover, reach cover, or move away from the shooter."
+    },
+    "Maneuver": {
+      "NoTarget": "Target a token first.",
+      "bullRush": "Bull Rush",
+      "knockDown": "Knock Down",
+      "disarm": "Disarm",
+      "feint": "Feint",
+      "Opposed": "opposed {key}",
+      "Winner": "{name} wins with {raises} raise(s).",
+      "Steady": "Squat Stability: not moved and not knocked down.",
+      "Pushed": "{name} is pushed {m} m.",
+      "KnockedDown": "{name} is knocked Prone.",
+      "Disarmed": "{name} drops the weapon.",
+      "Feinted": "{name} cannot Dodge or Parry the next melee attack against them.",
+      "NoEffect": "No effect.",
+      "KeepsCover": "Keeps the cover left behind during the move.",
+      "Refused": {
+        "pinnedFull": "{name} is Pinned and can take only Half Actions ({action}).",
+        "grappled": "{name} is grappled: only Break Free, Slip Free or Take Control ({action}).",
+        "grappling": "{name} controls a grapple: use Control Grapple ({action})."
+      }
+    },
+    "Grapple": {
+      "Start": "Start grapple",
+      "Started": "{a} grapples {b}.",
+      "Missed": "The Grapple attack missed.",
+      "NotControlling": "This character does not control a grapple.",
+      "NotGrappled": "This character is not grappled.",
+      "ControlTitle": "Grapple — {name}",
+      "Go": "Roll",
+      "Held": "Nothing happens; the grapple goes on.",
+      "BreakFree": "Break Free",
+      "SlipFree": "Slip Free",
+      "TakeControl": "Take Control",
+      "Option": {
+        "weapon": "Attack with a one-handed weapon",
+        "throwDown": "Throw down",
+        "push": "Push",
+        "ready": "Ready",
+        "stand": "Stand",
+        "useItem": "Use an item",
+        "release": "Release (no roll)"
+      },
+      "Done": {
+        "weapon": "Automatic hit: roll the damage.",
+        "ready": "Ready an item.",
+        "stand": "Stands up.",
+        "useItem": "Uses an item."
+      },
+      "Won": {
+        "breakFree": "Breaks free and regains a Half Action.",
+        "takeControl": "Takes control of the grapple."
+      }
+    },
+    "Delay": {
+      "Used": "{name} uses the delayed Half Action: {action}."
     }
   }
 }

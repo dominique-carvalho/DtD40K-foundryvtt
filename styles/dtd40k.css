@@ -2336,3 +2336,41 @@
 .dtd40k .creation-step {
   break-inside: avoid;
 }
+
+/* Combat actions (spec 017) */
+.dtd40k .pinning-targets {
+  list-style: none;
+  margin: 0.25rem 0;
+  padding: 0;
+}
+
+.dtd40k .pinning-targets li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.15rem 0;
+}
+
+.dtd40k .pinning-targets li span:first-child {
+  flex: 1;
+}
+
+.dtd40k .opposed-table {
+  width: 100%;
+  margin: 0.25rem 0;
+}
+
+.dtd40k .opposed-dice span {
+  margin-right: 0.25rem;
+}
+
+.dtd40k .opposed-dice .dropped {
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+
+.dtd40k .grapple-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}

@@ -1,0 +1,14 @@
+<div class="dtd40k opposed-card">
+  <p><i class="fa-solid fa-people-arrows" inert></i> <b>{{label}}</b> — {{localize "DTD.Maneuver.Opposed" key=keyLabel}}</p>
+  <table class="opposed-table">
+    {{#each sides as |side|}}
+    <tr>
+      <td><b>{{side.name}}</b>{{#if side.bonus}} <span class="hint">{{side.bonus}}</span>{{/if}}</td>
+      <td class="opposed-dice">{{#each side.dice as |d|}}<span class="{{#if d.kept}}kept{{else}}dropped{{/if}}">{{d.value}}</span>{{/each}}</td>
+      <td><b>{{side.total}}</b></td>
+    </tr>
+    {{/each}}
+  </table>
+  <p>{{localize "DTD.Maneuver.Winner" name=winner raises=raises}}</p>
+  {{#if outcome}}<p class="notification info">{{outcome}}</p>{{/if}}
+</div>

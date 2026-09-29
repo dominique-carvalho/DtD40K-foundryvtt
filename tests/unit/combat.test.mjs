@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { ACTION_SUBTYPES, ACTION_TYPES, STATUS_EFFECTS } from "../../module/config.mjs";
-import { canUse, emptyTurn, resetForRound, spend } from "../../module/rules/turn.mjs";
+import { canUse, emptyTurn, resetForRound, spend, usesDelay } from "../../module/rules/turn.mjs";
 import {
   combatFlags, defendedSd, dodgeModifiers, multipleAttackPenalty, parryPool, reactionsMax, situationModifiers, stillHits
 } from "../../module/rules/defense.mjs";
@@ -131,9 +131,9 @@ describe("social, Fear and Insanity (pp. 446–452)", () => {
 });
 
 describe("combat actions and initiative (pp. 422–430)", () => {
-  it("lists the 38 actions with valid keys, types and subtypes", () => {
-    expect(COMBAT_ACTIONS).toHaveLength(38);
-    expect(new Set(COMBAT_ACTIONS.map((a) => a.key)).size).toBe(38);
+  it("lists the 42 actions (38 of spec 008, 4 of the grapple in spec 017) with valid keys, types and subtypes", () => {
+    expect(COMBAT_ACTIONS).toHaveLength(42);
+    expect(new Set(COMBAT_ACTIONS.map((a) => a.key)).size).toBe(42);
     const statuses = STATUS_EFFECTS.map((s) => s.id);
     for (const a of COMBAT_ACTIONS) {
       expect(ACTION_TYPES).toContain(a.type);
@@ -153,5 +153,19 @@ describe("combat actions and initiative (pp. 422–430)", () => {
     expect(compareInitiative({ ...b, die: 7 }, a)).toBeLessThan(0);
     expect(compareInitiative(a, { ...a })).toBe(0);
     expect(compareInitiative({ initiative: null, die: 0, dex: 0 }, a)).toBeGreaterThan(0);
+  });
+});
+
+describe("Delay (spec 017, p. 426)", () => {
+  const attack = { key: "standardAttack", type: "half" };
+  it("pays a Half Action outside the character's turn", () => {
+    expect(usesDelay({ delay: { round: 2 }, ownTurn: false, action: attack })).toBe(true);
+    expect(usesDelay({ delay: { round: 2 }, ownTurn: false, action: { key: "reload", type: "varies" } })).toBe(true);
+  });
+
+  it("does nothing on his own turn, for Full Actions or without a held action", () => {
+    expect(usesDelay({ delay: { round: 2 }, ownTurn: true, action: attack })).toBe(false);
+    expect(usesDelay({ delay: { round: 2 }, ownTurn: false, action: { key: "charge", type: "full" } })).toBe(false);
+    expect(usesDelay({ delay: null, ownTurn: false, action: attack })).toBe(false);
   });
 });

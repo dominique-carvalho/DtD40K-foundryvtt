@@ -38,7 +38,7 @@ quickstart.md
 - [X] T008 [US1] Condição Em cobertura: diálogo de AP/locais ao ligar e limpeza ao desligar (`Token.flags.dtd40k.cover`) em `module/documents/condition-service.mjs` e o hook em `dtd40k.mjs`
 - [X] T009 [US1] Cartões `templates/chat/zone-card.hbs`, `pinning-card.hbs`, `suppression-card.hbs`; `CHAT_ACTIONS` (`confirmZone`, `rollPinning`, `suppressionDodge`) e `clearZones` no fim do combate em `dtd40k.mjs`
 - [X] T010 [P] [US1] i18n e estilos
-- [ ] T011 [US1] Validar quickstart 1–8 e registrar
+- [X] T011 [US1] Validar quickstart 1–8 e registrar
 
 ---
 
@@ -47,7 +47,7 @@ quickstart.md
 - [X] T012 [US2] `module/documents/maneuver-service.mjs`: `opposedTest` (cartão `templates/chat/opposed-card.hbs`), `useManeuver` (Bull Rush empurra 2 m + 2 m/raise, Knock Down Prone e queda do atacante com 2 raises contra, Disarm com 2 raises, Feint), ligado ao `useAction` quando há alvo
 - [X] T013 [US2] Grapple: `useAction` ataca com Brawl desarmado e marca o cartão (`attack.grapple`); `startGrapple` (Grappling/Grappled ligados, remove Pinned), `controlGrapple` (opções, Strength oposta, Bear Hug, Crushing Bear, Squat Stability), `escapeGrapple` (Break Free, Slip Free, Take Control; meia ação de volta), `endGrapple` em `module/documents/maneuver-service.mjs`, `attack-service.mjs` e `templates/chat/grapple-card.hbs`
 - [X] T014 [P] [US2] i18n e estilos
-- [ ] T015 [US2] Validar quickstart 9–12 e registrar
+- [X] T015 [US2] Validar quickstart 9–12 e registrar
 
 ---
 
@@ -58,15 +58,15 @@ quickstart.md
 - [X] T018 [US3] Overwatch em `module/documents/zone-service.mjs`: diálogo (ataque, gatilho), `fireOverwatch` (Suppressing Fire → R3; Full Auto Burst → ataque automático no alvo sem gastar ação), `endOverwatch`; `CHAT_ACTIONS.fireOverwatch`
 - [X] T019 [US3] Tactical Advance: cartão lembrando que a cobertura se mantém; ações completas com Mark of Moradin como nota
 - [X] T020 [P] [US3] i18n
-- [ ] T021 [US3] Validar quickstart 13–17 e registrar
+- [X] T021 [US3] Validar quickstart 13–17 e registrar
 
 ---
 
 ## Phase 5: Polish
 
-- [ ] T022 [P] Atualizar `docs/pendencias.md` (ações feitas; munição, movimento do Pinned e cobertura direcional como pendências) e o `README.md`
-- [ ] T023 `npm run lint` e `npm test`
-- [ ] T024 `graphify update .`
+- [X] T022 [P] Atualizar `docs/pendencias.md` (ações feitas; munição, movimento do Pinned e cobertura direcional como pendências) e o `README.md`
+- [X] T023 `npm run lint` e `npm test`
+- [X] T024 `graphify update .`
 
 ## Dependencies
 

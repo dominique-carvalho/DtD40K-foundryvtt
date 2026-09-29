@@ -18,9 +18,9 @@ const render = (path, data) => foundry.applications.handlebars.renderTemplate(pa
 const zoneOf = (template) => template?.flags?.dtd40k?.zone ?? null;
 const featNames = (actor) => actor.items.filter((item) => item.type === "feat").map((item) => item.name);
 
-/** Attack options of a full-auto shot fired by the system. */
-const autoOptions = (braced) => ({
-  tn: null, modifiers: {}, specialty: false, rollMode: undefined, ammoId: "",
+/** Attack options of a full-auto shot fired by the system; `tn`: the target's Static Defense (none for the burst). */
+const autoOptions = (braced, tn = null) => ({
+  tn, modifiers: {}, specialty: false, rollMode: undefined, ammoId: "",
   weapon: { range: "normal", aim: 0, mode: "auto", braced, oneHanded: false, thrown: false },
   situation: { advantage: false, targetProne: false, targetRan: false, gangUp: 0, intoMelee: false, terrain: "", calledLocation: "" }
 });
@@ -199,6 +199,8 @@ async function resolveSuppression(template) {
   if (!actor || !weapon) return template.delete();
   const attackMessage = await rollAttack(actor, weapon.id, { preset: autoOptions(zone.braced) });
   const total = attackMessage?.getFlag("dtd40k", "attack")?.total;
+  // The roll card keeps only the roll: damage and Dodge go by target on the burst card.
+  if (attackMessage) await attackMessage.update({ content: attackMessage.content.replace(/<button[^>]*data-dtd-action="(?:rollDamage|dodge|parry)"[^>]*>[\s\S]*?<\/button>/g, "") });
   const inside = tokensInZone(template).filter((token) => token.id !== zone.tokenId);
   await template.delete();
   if (total === undefined) return;
@@ -274,7 +276,8 @@ export async function fireOverwatch(message) {
     return;
   }
   await template.delete();
-  await rollAttack(actor, zone.weaponId, { preset: autoOptions(zone.braced) });
+  const target = [...game.user.targets][0]?.actor;
+  await rollAttack(actor, zone.weaponId, { preset: autoOptions(zone.braced, target?.system.derived?.staticDefense ?? 15) });
 }
 
 /**

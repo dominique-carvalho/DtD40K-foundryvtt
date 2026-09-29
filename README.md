@@ -87,6 +87,9 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
 - **Criação guiada**: painel na ficha durante a criação com os pontos 6/4/2 e 8/6/4 (máx. 4 e 3), XP inicial,
   especialidades e checklist das etapas; máximo 5 nas notas (6 pelas exceções do livro); classe de nível 1, Assets e
   Hindrances só na criação; encerrar pede confirmação quando falta algo.
+- **Ações de combate**: Suppressing Fire e Overwatch com a zona de 45° como template no mapa, testes de Pinning pelo
+  cartão e a rajada no início do turno do atirador; testes opostos (Bull Rush, Knock Down, Disarm, Feint); Grapple
+  completo com as opções de cada lado; Delay fora do turno; condição Em cobertura com o AP da cobertura.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos

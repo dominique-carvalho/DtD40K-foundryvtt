@@ -44,7 +44,7 @@ stub; dados fixados quando o passo pedia um resultado.
 | 7 | Recarregar pelo botão da linha: ação completa gasta, 20 → 30, reserva 2 → 1 |
 | 8 | Plasma Gun (8Full): Reloads em três turnos → progresso 1, 2, 3 e selo "Reloading 3/8"; um Standard Attack zerou; oito Reloads encheram 20/20 (reserva 1) |
 | 9 | Reload sem reserva: recusado ("no spare clip"), sem gastar a ação |
-| 10 | Rajada com todos os dados em 1 e Ballistics 3: Autogun travada (selo "Jammed" e "Autogun (29/30 · Jammed)"), ataque seguinte recusado; Clear Jam por Ballistics 26 contra TN 15: destravada com 0; recarregada, voltou a atirar; Plasma Gun (Overheats) emperrada ficou com 0 |
+| 10 | Tiro simples com Ballistics 3 (3 dados mantidos) e todos os dados em 1: Autogun travada (selo "Jammed" e "Autogun (29/30 · Jammed)"), ataque seguinte recusado; Clear Jam por Ballistics 26 contra TN 15: destravada com 0; recarregada, voltou a atirar; Plasma Gun (Overheats) emperrada ficou com 0 |
 | 11 | NPC Raider: rajada 30 → 20, Reload pela aba Combate 20 → 30 (reserva 1) |
 | — | Fim do combate: progresso de recarga 2 → 0 |
 

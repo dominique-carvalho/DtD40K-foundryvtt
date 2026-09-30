@@ -7,7 +7,7 @@ import {
   SHIP_ACTIONS, SHIP_CRIT, boardingLoss, boardingRange, commitCrew, critRow, emergencyRepair, multiphasicHit,
   multiphasicRegen, ramDamage, shieldHit, shieldRegen, shipPool, weaponProfile
 } from "../rules/ship.mjs";
-import { requestGm } from "./damage-service.mjs";
+import { requestGm } from "./gm-socket.mjs";
 import { officerKept, officerOf, postShipCard } from "./ship-service.mjs";
 
 /**

@@ -158,8 +158,11 @@ export async function useAction(actor, key, { weaponId, as, special = null } = {
     if (combatant?.isOwner) await combatant.setFlag("dtd40k", "delay", { round: game.combat.round });
   }
   if (auto.roll) {
-    const message = auto.roll.skill
-      ? await actor.rollSkill(auto.roll.skill, { tn: auto.roll.tn ?? 15 })
+    // Clear Jam (p. 435): Tech-Use or Ballistics, whichever is better; Tech-Use is advanced and needs training (spec 019).
+    const techUse = actor.system.skills.techUse?.value ?? 0;
+    const skill = key === "clearJam" ? (techUse > 0 && techUse >= (actor.system.skills.ballistics?.value ?? 0) ? "techUse" : "ballistics") : auto.roll.skill;
+    const message = skill
+      ? await actor.rollSkill(skill, { tn: auto.roll.tn ?? 15 })
       : await actor.rollCharacteristic(auto.roll.characteristic, { tn: auto.roll.tn ?? 15 });
     const outcome = message?.getFlag("dtd40k", "test")?.outcome;
     if (auto.removesOnSuccess && outcome?.success) await toggleCondition(actor, auto.removesOnSuccess, { active: false });

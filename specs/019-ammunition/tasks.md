@@ -37,7 +37,7 @@ quickstart.md
 - [X] T007 [US1] `module/documents/zone-service.mjs`: Suppressing Fire gasta ao iniciar a zona e guarda `zone.rof`; rajada com `noAmmo` e o ROF da zona
 - [X] T008 [US1] Ficha: tiros/pente e reserva editáveis e selos na linha da arma (`module/apps/equipment-context.mjs`, `templates/actor/parts/equipment.hbs`)
 - [X] T009 [P] [US1] i18n e estilos
-- [ ] T010 [US1] Validar quickstart 1–6 e registrar
+- [X] T010 [US1] Validar quickstart 1–6 e registrar
 
 ---
 
@@ -46,7 +46,7 @@ quickstart.md
 - [X] T011 [US2] `reloadWeapon` e `resetReloadProgress` em `module/documents/ammo-service.mjs`; `useAction("reload")` com a arma (botão da linha ou a primeira equipada com pente) e `takeAction` zerando o progresso nas outras ações em `module/documents/turn-service.mjs`; zerar no fim do combate em `dtd40k.mjs`
 - [X] T012 [US2] Botão Recarregar e selo de progresso na linha da arma; ação `reloadWeapon` em `module/apps/character-sheet.mjs`
 - [X] T013 [P] [US2] i18n
-- [ ] T014 [US2] Validar quickstart 7–9 e registrar
+- [X] T014 [US2] Validar quickstart 7–9 e registrar
 
 ---
 
@@ -54,15 +54,15 @@ quickstart.md
 
 - [X] T015 [US3] `afterAttack` (trava; Overheats esvazia) e `clearJam` (destrava e esvazia) em `module/documents/ammo-service.mjs`, ligados ao `rollAttack` e ao Clear Jam do `turn-service`; recusa com arma travada; selo "Travada"
 - [X] T016 [P] [US3] i18n
-- [ ] T017 [US3] Validar quickstart 10–11 e registrar
+- [X] T017 [US3] Validar quickstart 10–11 e registrar
 
 ---
 
 ## Phase 5: Polish
 
-- [ ] T018 [P] Atualizar `docs/pendencias.md` (munição feita; notas) e o `README.md`
-- [ ] T019 `npm run lint` e `npm test`
-- [ ] T020 `graphify update .` (PowerShell)
+- [X] T018 [P] Atualizar `docs/pendencias.md` (munição feita; notas) e o `README.md`
+- [X] T019 `npm run lint` e `npm test`
+- [X] T020 `graphify update .` (PowerShell)
 
 ## Dependencies
 

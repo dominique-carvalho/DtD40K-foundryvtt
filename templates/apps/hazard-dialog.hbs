@@ -1,0 +1,46 @@
+<div class="hazard-dialog">
+  <div class="form-group">
+    <label>{{localize "DTD.Hazard.Kind"}}</label>
+    <select name="hazard">
+      <option value="fall">{{localize "DTD.Hazard.FallLabel"}}</option>
+      <option value="suffocation">{{localize "DTD.Hazard.Suffocation"}}</option>
+      <option value="march">{{localize "DTD.Hazard.March"}}</option>
+    </select>
+  </div>
+  <fieldset>
+    <legend>{{localize "DTD.Hazard.FallLabel"}}</legend>
+    <div class="form-group">
+      <label>{{localize "DTD.Hazard.Category"}}</label>
+      <select name="category">
+        <option value="short">{{localize "DTD.Hazard.Fall.short"}}</option>
+        <option value="long" selected>{{localize "DTD.Hazard.Fall.long"}}</option>
+        <option value="fatal">{{localize "DTD.Hazard.Fall.fatal"}}</option>
+      </select>
+    </div>
+    <label><input type="checkbox" name="intentional"> {{localize "DTD.Hazard.Intentional"}}</label>
+  </fieldset>
+  <fieldset>
+    <legend>{{localize "DTD.Hazard.Suffocation"}}</legend>
+    <div class="form-group">
+      <label>{{localize "DTD.Hazard.ModeLabel"}}</label>
+      <select name="mode">
+        <option value="strenuous">{{localize "DTD.Hazard.Mode.strenuous"}}</option>
+        <option value="conserve">{{localize "DTD.Hazard.Mode.conserve"}}</option>
+      </select>
+    </div>
+    <label><input type="checkbox" name="underwater"> {{localize "DTD.Hazard.Underwater"}}</label>
+  </fieldset>
+  <table class="hazard-tokens">
+    <thead><tr><th>{{localize "DTD.Hazard.Token"}}</th><th>{{localize "DTD.Hazard.NoBreath"}}</th><th>{{localize "DTD.Hazard.NoFatigue"}}</th></tr></thead>
+    <tbody>
+      {{#each rows as |r|}}
+      <tr>
+        <td>{{r.name}}</td>
+        <td><input type="checkbox" name="breath-{{r.uuid}}" {{checked r.breath}}></td>
+        <td><input type="checkbox" name="fatigue-{{r.uuid}}" {{checked r.fatigue}}></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <p class="hint">{{localize "DTD.Hazard.ImmuneHint"}}</p>
+</div>

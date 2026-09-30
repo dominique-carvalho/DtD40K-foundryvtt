@@ -47,6 +47,7 @@ import { resolveSocial } from "./module/documents/social-service.mjs";
 import { resistSpell, rollSpellDamage } from "./module/documents/magic-service.mjs";
 import { applyAttackEffects, newScene } from "./module/documents/martial-service.mjs";
 import { DtdActor } from "./module/documents/actor.mjs";
+import { endHazard, fallAcrobatics, hazardStep, openHazardTool, openXpDialog, reduceFall } from "./module/documents/hazard-service.mjs";
 import { clearZones, confirmZone, fireOverwatch, rollPinning, suppressionDamage, suppressionDodge } from "./module/documents/zone-service.mjs";
 import { endGrapple, maneuverAsGm, startGrapple } from "./module/documents/maneuver-service.mjs";
 import { promptCover, setCover } from "./module/documents/condition-service.mjs";
@@ -278,7 +279,11 @@ const CHAT_ACTIONS = {
   rollPinning: (message, data) => rollPinning(message, data),
   suppressionDamage: (message, data) => suppressionDamage(message, data),
   suppressionDodge: (message, data) => suppressionDodge(message, data),
-  startGrapple: (message) => startGrapple(message)
+  startGrapple: (message) => startGrapple(message),
+  // Hazards (spec 018): Acrobatics on a fall, the intervals of suffocation and forced march.
+  fallAcrobatics: (message) => fallAcrobatics(message),
+  hazardStep: (message) => hazardStep(message),
+  hazardEnd: (message) => endHazard(message)
 };
 Hooks.on("renderChatMessageHTML", (message, html) => {
   for (const button of html.querySelectorAll("[data-dtd-action]")) {
@@ -297,6 +302,7 @@ Hooks.once("ready", () => {
     const message = game.messages.get(payload.messageId);
     if (!message) return;
     if (action === "applyDamage") await applyDamage(message, payload.tokenUuids);
+    if (action === "hazard" && payload.op === "fallReduce") await reduceFall(message, payload.reduce);
     if (action === "martialEffects") await applyAttackEffects(message);
     if (action === "shipApply") await applyShipDamage(message, payload.targetUuid);
     if (action === "markSocial") await message.setFlag("dtd40k", "social", { ...message.getFlag("dtd40k", "social"), resolved: payload.resolved });
@@ -349,6 +355,15 @@ Hooks.on("getSceneControlButtons", (controls) => {
   tokens.tools.dtdChase = {
     name: "dtdChase", title: "DTD.Chase.Start", icon: "fa-solid fa-flag-checkered", button: true,
     order: Object.keys(tokens.tools).length + 1, visible: true, onChange: () => startChaseFromCanvas()
+  };
+  // Hazards and the group XP award (spec 018).
+  tokens.tools.dtdHazard = {
+    name: "dtdHazard", title: "DTD.Hazard.Title", icon: "fa-solid fa-skull-crossbones", button: true,
+    order: Object.keys(tokens.tools).length + 1, visible: true, onChange: () => openHazardTool()
+  };
+  tokens.tools.dtdXp = {
+    name: "dtdXp", title: "DTD.Xp.Title", icon: "fa-solid fa-star", button: true,
+    order: Object.keys(tokens.tools).length + 1, visible: true, onChange: () => openXpDialog()
   };
 });
 // The turn state lives on the Combatant (spec 008): refresh the open sheet when it changes.

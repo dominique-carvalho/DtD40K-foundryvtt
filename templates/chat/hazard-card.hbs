@@ -1,0 +1,23 @@
+<div class="dtd40k hazard-card">
+  <p><i class="fa-solid {{#if march}}fa-person-hiking{{else}}fa-lungs{{/if}}" inert></i> <b>{{title}}</b>{{#if mode}} — {{mode}}{{/if}}</p>
+  <p>{{localize "DTD.Hazard.Elapsed" step=step unit=unit}}{{#unless done}} · {{localize "DTD.Hazard.NextTn" tn=nextTn}}{{/unless}}</p>
+  <table class="hazard-tokens">
+    <tbody>
+      {{#each people as |p|}}
+      <tr>
+        <td><b>{{p.name}}</b></td>
+        <td>{{#if p.immune}}<span class="feat-badge">{{localize "DTD.Pinning.Immune"}}</span>{{else}}{{p.stateLabel}}{{/if}}</td>
+        <td>{{#if ../march}}{{p.distance}} km{{else}}{{#unless p.immune}}{{localize "DTD.Hazard.BreathLeft" n=p.breathLeft}}{{/unless}}{{/if}}</td>
+        <td class="hint">{{p.last}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{#if done}}<p class="notification info">{{localize "DTD.Hazard.Ended"}}</p>
+  {{else}}
+  <div class="card-buttons">
+    <button type="button" class="gm-only" data-dtd-action="hazardStep"><i class="fa-solid fa-forward-step" inert></i> {{#if march}}{{localize "DTD.Hazard.NextHour"}}{{else}}{{localize "DTD.Hazard.NextInterval"}}{{/if}}</button>
+    <button type="button" class="gm-only" data-dtd-action="hazardEnd"><i class="fa-solid fa-stop" inert></i> {{#if march}}{{localize "DTD.Hazard.EndMarch"}}{{else}}{{localize "DTD.Hazard.Breathes"}}{{/if}}</button>
+  </div>
+  {{/if}}
+</div>

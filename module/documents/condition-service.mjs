@@ -92,8 +92,10 @@ export async function setCover(actor, cover) {
  */
 export async function addFatigue(actor, amount) {
   if (!amount) return;
+  // A Promethean's Living Construct never tires (p. 87, spec 018).
+  if (actor.items.some((item) => item.type === "exaltation" && CONFIG.DTD.FATIGUE_IMMUNE_EXALTATIONS.includes(item.name))) return;
   const con = actor.system.characteristics.con.value;
-  const check = fatigueCheck({ fatigue: actor.system.fatigue.value + amount, con });
+  const check = fatigueCheck({ fatigue: actor.system.fatigue.value + amount, con, max: actor.system.fatigue.max ?? con });
   await actor.update({ "system.fatigue.value": check.fatigue });
   if (check.unconscious) {
     await toggleCondition(actor, "unconscious", { active: true });

@@ -90,6 +90,9 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
 - **Ações de combate**: Suppressing Fire e Overwatch com a zona de 45° como template no mapa, testes de Pinning pelo
   cartão e a rajada no início do turno do atirador; testes opostos (Bull Rush, Knock Down, Disarm, Feint); Grapple
   completo com as opções de cada lado; Delay fora do turno; condição Em cobertura com o AP da cobertura.
+- **Perigos e XP**: ferramentas do Mestre para queda (dano direto, Critical Damage da queda fatal, Catfall e
+  Acrobatics), sufocamento e marcha forçada por intervalo com imunes detectados, e XP para o grupo pela tabela de
+  Encounter Difficulty ou por sessão.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos

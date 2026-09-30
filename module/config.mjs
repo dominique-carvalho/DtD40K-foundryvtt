@@ -177,6 +177,21 @@ export const FEAT_AUTOMATION = [
   "beneficialMutation", "matron", "sturdy", "sand", "nineLives", "veteran", "skillFocus", "noisyCricket"
 ];
 
+/** Encounter Difficulty (p. 515): XP for each character when an encounter is overcome (spec 018). */
+export const ENCOUNTER_XP = { easy: 50, routine: 70, ordinary: 100, average: 130, challenging: 170, hard: 200, veryHard: 250 };
+
+/** The simpler award: XP per session (p. 514). */
+export const SESSION_XP = 500;
+
+/** Falling (p. 434): wounds of a short fall; long 1d10; fatal 1d5 plus 1d5 Critical Damage. */
+export const FALL = { short: 1 };
+
+/** What spares a character from suffocation and Fatigue (spec 018, research R6), by pack name or NPC trait key. */
+export const BREATHLESS_EXALTATIONS = ["Vampire", "Promethean"];
+export const BREATHLESS_TRAITS = ["undead", "machine", "stuffOfNightmares"];
+export const BREATH_ITEMS = ["Rebreather", "Void Suit", "Bionic Respiratory System"];
+export const FATIGUE_IMMUNE_EXALTATIONS = ["Promethean"];
+
 /** At most two hindrances per character (DtD 7.7a p. 179). */
 export const HINDRANCE_LIMIT = 2;
 
@@ -576,6 +591,13 @@ export const DTD = {
   GENERIC_SPENDS,
   FEAT_AUTOMATION,
   HINDRANCE_LIMIT,
+  ENCOUNTER_XP,
+  SESSION_XP,
+  FALL,
+  BREATHLESS_EXALTATIONS,
+  BREATHLESS_TRAITS,
+  BREATH_ITEMS,
+  FATIGUE_IMMUNE_EXALTATIONS,
   FEAT_REQUIREMENT_TYPES,
   CLASS_COMPLETION,
   CLASS_STATUS,

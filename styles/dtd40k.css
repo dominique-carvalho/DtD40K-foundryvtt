@@ -2374,3 +2374,19 @@
   flex-direction: column;
   gap: 0.2rem;
 }
+
+/* Hazards and XP (spec 018) */
+.dtd40k .hazard-tokens {
+  width: 100%;
+  margin: 0.25rem 0;
+}
+
+.dtd40k .hazard-tokens td,
+.dtd40k .hazard-tokens th {
+  padding: 0.1rem 0.25rem;
+}
+
+.dtd40k .xp-character {
+  display: inline-block;
+  margin-right: 0.75rem;
+}

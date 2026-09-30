@@ -35,7 +35,7 @@ quickstart.md
 ## Phase 2: User Story 1 — Queda (P1)
 
 - [X] T007 [US1] `module/documents/hazard-service.mjs`: `applyFall` (um cartão de dano por token com `resolve.direct`, `extraCritical`, `type: "I"`, `tokenUuids`, `flags.dtd40k.fall`; Catfall), `fallAcrobatics` (Acrobatics TN 15 do dono, uma vez, atualiza o total)
-- [X] T008 [US1] ``openHazardTool` (em `module/documents/hazard-service.mjs`) + `templates/apps/hazard-dialog.hbs`: perigo, categoria e intencional, tokens selecionados com imunes detectados; ferramenta `dtdHazard` nos controles de token (Mestre) e `CHAT_ACTIONS.fallAcrobatics` em `dtd40k.mjs`; botão Acrobatics no cartão de dano quando intencional
+- [X] T008 [US1] `openHazardTool` (em `module/documents/hazard-service.mjs`) + `templates/apps/hazard-dialog.hbs`: perigo, categoria e intencional, tokens selecionados com imunes detectados; ferramenta `dtdHazard` nos controles de token (Mestre) e `CHAT_ACTIONS.fallAcrobatics` em `dtd40k.mjs`; botão Acrobatics no cartão de dano quando intencional
 - [X] T009 [P] [US1] i18n e estilos
 - [ ] T010 [US1] Validar quickstart 1–5 e registrar
 

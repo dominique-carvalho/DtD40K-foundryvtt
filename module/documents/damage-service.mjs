@@ -4,6 +4,7 @@ import { addFatigue, rollValue, toggleCondition } from "./condition-service.mjs"
 import { removeMinions } from "./minion-service.mjs";
 import { casualties } from "../rules/minions.mjs";
 import { applyVehicleDamage } from "./vehicle-service.mjs";
+import { requestGm } from "./gm-socket.mjs";
 
 /**
  * Applying damage to targets and critical effects (spec 008, US1; research R1/R2).
@@ -13,23 +14,6 @@ import { applyVehicleDamage } from "./vehicle-service.mjs";
 const TABLE_PACK = "dtd40k.combat-tables";
 const APPLIED_TEMPLATE = "systems/dtd40k/templates/chat/damage-applied.hbs";
 const localize = (key) => game.i18n.localize(key);
-
-/** The active GM, who performs requests on actors the player does not own. */
-const activeGm = () => game.users.activeGM;
-
-/**
- * Ask the active GM to do something (research R1).
- * @param {string} action
- * @param {object} payload
- */
-export function requestGm(action, payload) {
-  if (!activeGm()) {
-    ui.notifications.warn(localize("DTD.Combat.NoGM"));
-    return;
-  }
-  game.socket.emit("system.dtd40k", { action, payload, user: game.user.id });
-  ui.notifications.info(localize("DTD.Combat.SentToGM"));
-}
 
 /**
  * Tokens the damage goes to: the user's targets, else the controlled tokens.

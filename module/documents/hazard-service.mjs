@@ -197,6 +197,7 @@ export async function hazardStep(message) {
       const test = conTest(actor, marchTn(hazard.step));
       person.last = format(test.outcome?.success ? "DTD.Hazard.Passed" : "DTD.Hazard.Failed", { total: test.total, tn: marchTn(hazard.step) });
       if (!test.outcome?.success) await addFatigue(actor, 1);
+      if (actor.statuses.has("unconscious")) person.state = "out";
       continue;
     }
     const stage = suffocationStep({ step: hazard.step, limit: person.limit });
@@ -204,6 +205,8 @@ export async function hazardStep(message) {
       const test = conTest(actor, 10);
       person.last = format(test.outcome?.success ? "DTD.Hazard.Passed" : "DTD.Hazard.Failed", { total: test.total, tn: 10 });
       if (!test.outcome?.success) await addFatigue(actor, 1);
+      // Knocked out by Fatigue: the breath still runs out on schedule.
+      if (actor.statuses.has("unconscious")) person.state = "out";
     } else if (stage.unconscious) {
       await toggleCondition(actor, "unconscious", { active: true });
       person.state = "out";
@@ -239,14 +242,15 @@ export async function endHazard(message) {
 export async function openXpDialog() {
   if (!game.user.isGM) return;
   const inCombat = new Set(game.combat?.combatants.map((c) => c.actor?.id).filter(Boolean) ?? []);
-  const characters = game.actors.filter((actor) => actor.type === "character" && (actor.hasPlayerOwner || inCombat.has(actor.id)));
+  // Every character is listed; those in the current combat (or else with a player owner) come checked.
+  const characters = game.actors.filter((actor) => actor.type === "character");
   if (!characters.length) {
     ui.notifications.warn(localize("DTD.Xp.NoCharacters"));
     return;
   }
   const content = await render(XP_TEMPLATE, {
     difficulties: Object.entries(ENCOUNTER_XP).map(([key, xp]) => ({ key, xp, label: localize(`DTD.Xp.Difficulty.${key}`) })),
-    characters: characters.map((actor) => ({ id: actor.id, name: actor.name, checked: inCombat.size ? inCombat.has(actor.id) : true }))
+    characters: characters.map((actor) => ({ id: actor.id, name: actor.name, checked: inCombat.size ? inCombat.has(actor.id) : actor.hasPlayerOwner }))
   });
   const choice = await foundry.applications.api.DialogV2.wait({
     window: { title: localize("DTD.Xp.Title") }, classes: ["dtd40k"], content, rejectClose: false,

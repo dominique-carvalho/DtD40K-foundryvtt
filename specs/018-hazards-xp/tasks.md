@@ -37,7 +37,7 @@ quickstart.md
 - [X] T007 [US1] `module/documents/hazard-service.mjs`: `applyFall` (um cartão de dano por token com `resolve.direct`, `extraCritical`, `type: "I"`, `tokenUuids`, `flags.dtd40k.fall`; Catfall), `fallAcrobatics` (Acrobatics TN 15 do dono, uma vez, atualiza o total)
 - [X] T008 [US1] `openHazardTool` (em `module/documents/hazard-service.mjs`) + `templates/apps/hazard-dialog.hbs`: perigo, categoria e intencional, tokens selecionados com imunes detectados; ferramenta `dtdHazard` nos controles de token (Mestre) e `CHAT_ACTIONS.fallAcrobatics` em `dtd40k.mjs`; botão Acrobatics no cartão de dano quando intencional
 - [X] T009 [P] [US1] i18n e estilos
-- [ ] T010 [US1] Validar quickstart 1–5 e registrar
+- [X] T010 [US1] Validar quickstart 1–5 e registrar
 
 ---
 
@@ -45,7 +45,7 @@ quickstart.md
 
 - [X] T011 [US2] `openXpDialog` em `module/documents/hazard-service.mjs` + `templates/apps/xp-dialog.hbs`: Encontro (dificuldade) ou Sessão, personagens (combate atual marcados), bônus e motivo; `awardXp` por personagem e linha separada do bônus; ferramenta `dtdXp` em `dtd40k.mjs`
 - [X] T012 [P] [US2] i18n
-- [ ] T013 [US2] Validar quickstart 6–7 e registrar
+- [X] T013 [US2] Validar quickstart 6–7 e registrar
 
 ---
 
@@ -53,15 +53,15 @@ quickstart.md
 
 - [X] T014 [US3] `startHazard`, `hazardStep`, `endHazard` em `module/documents/hazard-service.mjs` + `templates/chat/hazard-card.hbs`: sufocamento (modo, fôlego, Con TN 10, Fatigue, Unconscious, −1 HP, Dead) e marcha (TN 10 + 5/hora, Fatigue, distância); imunes; só o Mestre avança; `CHAT_ACTIONS.hazardStep`, `hazardEnd`
 - [X] T015 [P] [US3] i18n e estilos
-- [ ] T016 [US3] Validar quickstart 8–11 e registrar
+- [X] T016 [US3] Validar quickstart 8–11 e registrar
 
 ---
 
 ## Phase 5: Polish
 
-- [ ] T017 [P] Atualizar `docs/pendencias.md` (perigos e XP feitos; o que ficou em texto) e o `README.md`
-- [ ] T018 `npm run lint` e `npm test`
-- [ ] T019 `graphify update .` (PowerShell)
+- [X] T017 [P] Atualizar `docs/pendencias.md` (perigos e XP feitos; o que ficou em texto) e o `README.md`
+- [X] T018 `npm run lint` e `npm test`
+- [X] T019 `graphify update .` (PowerShell)
 
 ## Dependencies
 

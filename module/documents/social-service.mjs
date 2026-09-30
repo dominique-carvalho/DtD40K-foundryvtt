@@ -1,7 +1,7 @@
 import { refuteBonus, socialOutcome } from "../rules/social.mjs";
 import { isMindless } from "../rules/npc.mjs";
 import { toggleCondition } from "./condition-service.mjs";
-import { requestGm } from "./damage-service.mjs";
+import { requestGm } from "./gm-socket.mjs";
 
 /**
  * Social combat (spec 008, US4; research R9): social attacks against Mental Defense, Resolve, Jaded, Refute.

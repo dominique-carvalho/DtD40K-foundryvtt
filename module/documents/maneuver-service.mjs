@@ -6,7 +6,7 @@ import { runTest } from "../rules/test.mjs";
 import { hitLocation } from "../rules/weapon.mjs";
 import { rollDamage } from "./attack-service.mjs";
 import { toggleCondition } from "./condition-service.mjs";
-import { requestGm } from "./damage-service.mjs";
+import { requestGm } from "./gm-socket.mjs";
 
 /**
  * Opposed tests and the Grapple (spec 017, research R1 and R5): Bull Rush, Knock Down, Disarm and Feint against a

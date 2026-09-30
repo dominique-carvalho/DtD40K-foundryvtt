@@ -3,7 +3,7 @@ import { promptBuilder } from "../apps/martial-builder.mjs";
 import { COMBAT_ACTIONS } from "../rules/combat-actions.mjs";
 import { attackCost, attackModifiers, attackTotals, budget, resolveRef, usageCheck } from "../rules/martial.mjs";
 import { addFatigue, toggleCondition } from "./condition-service.mjs";
-import { requestGm } from "./damage-service.mjs";
+import { requestGm } from "./gm-socket.mjs";
 import { combatantOf, takeAction, useAction } from "./turn-service.mjs";
 import { recordEntry } from "./xp-service.mjs";
 

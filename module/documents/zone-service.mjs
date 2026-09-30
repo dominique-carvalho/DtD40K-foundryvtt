@@ -2,6 +2,7 @@ import { inCone, pinningImmune, pinningTn, suppressionHits } from "../rules/mane
 import { rollAttack, rollDamage } from "./attack-service.mjs";
 import { rollDefense } from "./turn-service.mjs";
 import { setStatus } from "./maneuver-service.mjs";
+import { checkAmmo, spendAmmo } from "./ammo-service.mjs";
 
 /**
  * Kill zones of Suppressing Fire and Overwatch (spec 017, research R2–R4, R6): a 45° cone template from the shooter's
@@ -124,12 +125,19 @@ export async function placeZone(actor, { weapon, braced }, kind, { attack = "sup
  */
 async function startSuppression(actor, template) {
   const zone = zoneOf(template);
+  // The rounds are spent now, once (spec 019): the ROF left is the burst's ROF next turn.
+  const weapon = actor.items.get(zone.weaponId);
+  let rof = weapon?.system.rof?.auto ?? 0;
+  if (weapon?.system.ammo?.tracked) {
+    if (!(await checkAmmo(weapon))) return;
+    rof = (await spendAmmo(weapon, "auto")).effectiveRof;
+  }
   const inside = tokensInZone(template).filter((token) => token.id !== zone.tokenId);
   const targets = inside.map((token) => ({
     tokenUuid: token.uuid, actorUuid: token.actor.uuid, name: token.name, immune: pinningImmune(featNames(token.actor))
   }));
   await template.update({
-    "flags.dtd40k.zone": { ...zone, kind: "suppressing", state: "active", round: game.combat?.round ?? 0, pinned: inside.map((t) => t.id) }
+    "flags.dtd40k.zone": { ...zone, kind: "suppressing", state: "active", round: game.combat?.round ?? 0, pinned: inside.map((t) => t.id), rof }
   });
   const content = await render(PINNING_TEMPLATE, { title: localize("DTD.Pinning.Title"), tn: pinningTn(), targets, escape: false });
   await ChatMessage.create({
@@ -197,7 +205,7 @@ async function resolveSuppression(template) {
   const actor = await foundry.utils.fromUuid(zone.actorUuid);
   const weapon = actor?.items.get(zone.weaponId);
   if (!actor || !weapon) return template.delete();
-  const attackMessage = await rollAttack(actor, weapon.id, { preset: autoOptions(zone.braced) });
+  const attackMessage = await rollAttack(actor, weapon.id, { preset: { ...autoOptions(zone.braced), noAmmo: true, rof: zone.rof ?? weapon.system.rof.auto } });
   const total = attackMessage?.getFlag("dtd40k", "attack")?.total;
   // The roll card keeps only the roll: damage and Dodge go by target on the burst card.
   if (attackMessage) await attackMessage.update({ content: attackMessage.content.replace(/<button[^>]*data-dtd-action="(?:rollDamage|dodge|parry)"[^>]*>[\s\S]*?<\/button>/g, "") });
@@ -207,13 +215,13 @@ async function resolveSuppression(template) {
   const candidates = inside.map((token) => ({
     id: token.uuid, sd: token.actor.system.derived?.staticDefense ?? 0, covered: token.actor.statuses.has("inCover")
   }));
-  const hitIds = suppressionHits({ total, targets: candidates, rof: weapon.system.rof.auto });
+  const hitIds = suppressionHits({ total, targets: candidates, rof: zone.rof ?? weapon.system.rof.auto });
   const rows = inside.map((token) => ({
     tokenUuid: token.uuid, actorUuid: token.actor.uuid, name: token.name,
     sd: token.actor.system.derived?.staticDefense ?? 0, covered: token.actor.statuses.has("inCover"), hit: hitIds.includes(token.uuid)
   }));
   const content = await render(SUPPRESSION_TEMPLATE, {
-    title: format("DTD.Zone.Burst", { weapon: weapon.name }), total, rof: weapon.system.rof.auto, rows,
+    title: format("DTD.Zone.Burst", { weapon: weapon.name }), total, rof: zone.rof ?? weapon.system.rof.auto, rows,
     hits: rows.filter((row) => row.hit), misses: rows.filter((row) => !row.hit)
   });
   await ChatMessage.create({

@@ -7,7 +7,7 @@ import { buildCharacteristicPool } from "../rules/pool.mjs";
 import { runTest } from "../rules/test.mjs";
 import { hitLocation } from "../rules/weapon.mjs";
 import { addFatigue, toggleCondition } from "./condition-service.mjs";
-import { requestGm } from "./damage-service.mjs";
+import { requestGm } from "./gm-socket.mjs";
 import { awardXp } from "./xp-service.mjs";
 
 /**

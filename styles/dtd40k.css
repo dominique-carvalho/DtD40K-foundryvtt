@@ -2390,3 +2390,16 @@
   display: inline-block;
   margin-right: 0.75rem;
 }
+
+/* Ammunition (spec 019) */
+.dtd40k .ammo-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  white-space: nowrap;
+}
+
+.dtd40k .ammo-counter .ammo-input {
+  width: 3.2em;
+  text-align: center;
+}

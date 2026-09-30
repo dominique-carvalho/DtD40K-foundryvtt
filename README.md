@@ -93,6 +93,9 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
 - **Perigos e XP**: ferramentas do Mestre para queda (dano direto, Critical Damage da queda fatal, Catfall e
   Acrobatics), sufocamento e marcha forçada por intervalo com imunes detectados, e XP para o grupo pela tabela de
   Encounter Difficulty ou por sessão.
+- **Munição**: tiros no pente e pentes de reserva por arma, gasto por tiro, rajada (ROF efetivo com o que restar) e
+  Suppressing Fire, lançadores gastando a granada ou o míssil, recarga pelo tempo da arma com progresso, emperrar
+  travando a arma até o Clear Jam.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos

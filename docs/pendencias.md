@@ -1,6 +1,6 @@
 # Pendências — o que falta implementar (DtD 7.7a)
 
-Levantamento de 2026-09-27, depois da feature 012 (PRs 1–12 na `main`); atualizado com as features 013 (Veículos), 014 (Naves), 015 (Criação de armas), 016 (Criação guiada), 017 (Ações de combate) e 018 (Perigos e XP). Cruza os capítulos da 7.7a com o que cada
+Levantamento de 2026-09-27, depois da feature 012 (PRs 1–12 na `main`); atualizado com as features 013 (Veículos), 014 (Naves), 015 (Criação de armas), 016 (Criação guiada), 017 (Ações de combate), 018 (Perigos e XP) e 019 (Munição). Cruza os capítulos da 7.7a com o que cada
 feature entregou e com o que as specs deixaram fora de escopo ou como texto. Atualizar a cada feature.
 
 ## 1. Capítulos sem implementação
@@ -13,7 +13,6 @@ feature entregou e com o que as specs deixaram fora de escopo ou como texto. Atu
 
 - **Exalted Assets sem custo de XP**: o exemplo da criação (p. 18) paga 100 XP pelo Exalted Asset; hoje ele entra sem
   cobrar (spec 004/006).
-- **Munição**: as armas não guardam os tiros restantes; Suppressing Fire e rajadas só lembram o gasto (spec 017).
 
 ## 3. Deixado como texto nas features feitas
 
@@ -34,6 +33,7 @@ feature entregou e com o que as specs deixaram fora de escopo ou como texto. Atu
 | 016 Criação guiada | idiomas só como lembrete (sem campo na ficha); escolhas do Atlantean e do Mark of Slaanesh contadas pela quantidade de perícias em 6 (quais perícias não são guardadas); especialidades só avisam |
 | 017 Ações de combate | movimento obrigatório do Pinned (ficar/ir para a cobertura, afastar-se) como lembrete; cobertura sem direção (vale contra todos); gatilho do Overwatch em texto (o jogador aperta Disparar); Ready/Usar item do grapple em texto; Mobbing Up e Mark of Moradin como nota; trick shot Crisis Zone como estava |
 | 018 Perigos e XP | categoria da queda escolhida pelo Mestre (sem distâncias no livro); Grav Bomb e Ejector Seat sem a queda; horas de desmaio por Fatigue só informadas; outras imunidades (feitiços, Blood Quickening, Stuff of Nightmares além do sufocamento) com o Mestre |
+| 019 Munição | preço e compra de pentes (o livro não dá; reserva editada na ficha); recarga reduzida (Thri-Kreen Multi-Armed) e recargas grátis ou sem gasto (Reloading Kata, Mithril, Gun Blessing, Wraithbone, Jumping Dove) como nota; munição especial como item continua da 007 |
 | 013 Veículos | efeitos da maioria dos componentes (AI de bordo, COFFIN/SYNC, Berserker, ECM, Void Shield, Jump Jets, Afterburners por cena, Orgone Antennae, reatores), munições e modos de arma, terreno difícil e voo (queda e recuperação), Vault the Curb/Slip By/Pick Up, desvirar o veículo, compra de componentes com Wealth; Trick Shots com Mobile Trace System; pacotes de armas do Battlemecha |
 
 ## 4. Decisões em aberto (premissas das PRs)

@@ -2,6 +2,7 @@ import { promptAttackOptions } from "../apps/attack-dialog.mjs";
 import { postTest, rng } from "../dice/roll-service.mjs";
 import { rollAndKeep } from "../rules/dice.mjs";
 import { unstableDamage } from "../rules/weapon-creation.mjs";
+import { afterJam, checkAmmo, spendAmmo, spendLauncherAmmo } from "./ammo-service.mjs";
 import { formatPool, normalizePool } from "../rules/pool.mjs";
 import { runTest } from "../rules/test.mjs";
 import { toggleCondition } from "./condition-service.mjs";
@@ -158,6 +159,11 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
     }
   }
 
+  // Ammunition (spec 019): a jammed or empty weapon is refused (the GM may allow it); the burst of Suppressing Fire
+  // was paid for when the zone started.
+  const tracked = !vehicle && Boolean(item?.system.ammo?.tracked) && !options.weapon.thrown && !options.noAmmo;
+  if (tracked && !(await checkAmmo(item))) return null;
+
   const thrown = options.weapon.thrown;
   const skill = attackSkill(weapon, { thrown });
   // NPCs are proficient with the weapons of their stat block (spec 012).
@@ -201,11 +207,16 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   if (helpless) hit = true;
   if (blindShot) hit = false;
   const auto = options.weapon.mode === "auto" && pool.autoAllowed;
-  const hits = auto && hit ? fullAutoHits(raises, weapon.rof.auto) : hit ? 1 : 0;
+  // A burst with fewer rounds than the ROF fires those left, which become its ROF (spec 019).
+  const shot = tracked ? await spendAmmo(item, auto ? "auto" : "single") : null;
+  const rof = options.rof ?? shot?.effectiveRof ?? weapon.rof.auto;
+  const hits = auto && hit ? fullAutoHits(raises, rof) : hit ? 1 : 0;
   const jammed = !shape.melee && isJammed({
     keptFaces: testResult.dice.filter((die) => die.kept).map((die) => die.chain[0]),
     level: actor.system.level, reliable: Boolean(qualities.reliable), unreliable: Boolean(qualities.unreliable)
   });
+  if (tracked && jammed) await afterJam(item, { overheats: Boolean(qualities.overheats) });
+  if (weapon.ammoGroup && options.ammoId) await spendLauncherAmmo(actor, options.ammoId);
   const d10 = Math.floor(rng() * 10) + 1;
   const called = action.calledShot && options.situation?.calledLocation;
   // Every hit on an Amorphous creature goes to the body (spec 012, p. 520).
@@ -235,6 +246,7 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
     called: Boolean(called),
     jammed,
     overheats: jammed && Boolean(qualities.overheats),
+    ammoLeft: shot ? game.i18n.format("DTD.Ammo.Left", { left: shot.left, clip: item.system.clip }) : "",
     textQualities: weapon.qualities.filter((q) => !CONFIG.DTD.WEAPON_QUALITIES[q.key]?.automated)
       .map((q) => ({ label: localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].label), hint: localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].hint) })),
     canDamage: Boolean(weapon.damage.kept || weapon.ammoGroup) && hit !== false,

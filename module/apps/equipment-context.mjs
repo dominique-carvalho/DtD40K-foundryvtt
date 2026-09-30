@@ -50,6 +50,11 @@ export function prepareEquipmentContext(actor) {
         skillLabel: localize(CONFIG.DTD.SKILLS[pools.skill].label),
         // Custom weapons waiting for the GM or being crafted cannot be used yet (spec 015).
         unfinished: item.system.custom?.status ? localize(`DTD.WeaponBuilder.Status.${item.system.custom.status}`) : "",
+        // Ammunition (spec 019): rounds, spare clips, reload under way, jammed.
+        ammo: item.system.ammo?.tracked ? {
+          current: item.system.ammo.current, max: item.system.ammo.max, spare: item.system.ammo.spare, jammed: item.system.ammo.jammed,
+          progress: item.system.ammo.progress ? `${item.system.ammo.progress}/${item.system.ammo.reloadInfo.actions}` : ""
+        } : null,
         canAttack: !item.system.custom?.status && (item.system.rof.single || item.system.rof.auto > 0 || item.system.weaponType === "melee" || item.system.weaponType === "thrown"),
         profile: `${item.system.damage.kept ? `${item.system.damage.rolled}k${item.system.damage.kept} ${item.system.damage.type}` : "—"} · Pen ${item.system.pen}`,
         qualities: item.system.qualities.map((q) => ({

@@ -113,6 +113,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       toggleEquipped: CharacterSheet.#onToggleEquipped,
       removeEquipment: CharacterSheet.#onRemoveEquipment,
       rollAttack: CharacterSheet.#onRollAttack,
+      reloadWeapon: CharacterSheet.#onReloadWeapon,
       openWeaponBuilder: CharacterSheet.#onOpenWeaponBuilder,
       acquireItem: CharacterSheet.#onAcquireItem,
       useDose: CharacterSheet.#onUseDose,
@@ -433,6 +434,16 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
   }
 
   /**
+   * Reload a weapon from its row (spec 019): the Reload action with that weapon.
+   * @this {CharacterSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onReloadWeapon(event, target) {
+    await useAction(this.document, "reload", { weaponId: target.dataset.itemId });
+  }
+
+  /**
    * Sanitize derived adjustments before Foundry validates the whole submission:
    * a blank bonus must never make the entire update fail (FR-010, research R11).
    * @override
@@ -465,6 +476,8 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
       }
     };
     bind(".quantity-input", (input) => setQuantity(this.document, input.dataset.itemId, input.value));
+    // Rounds and spare clips of a weapon (spec 019).
+    bind(".ammo-input", (input) => this.document.items.get(input.dataset.itemId)?.update({ [`system.ammo.${input.dataset.field}`]: Math.max(0, Number(input.value) || 0) }));
     bind(".socket-select", (select) => select.value && socketHearthstone(this.document, select.dataset.itemId, select.value));
     bind(".addiction-select", (select) => setAddiction(this.document, select.dataset.name, Number(select.value)));
     // Combat tab (spec 008): the GM edits Critical Damage; owners add Insanity points.

@@ -2525,6 +2525,26 @@
       "Encounter": "Encounter: {difficulty}",
       "Session": "Session",
       "Bonus": "Bonus"
+    },
+    "Ammo": {
+      "Title": "Ammunition",
+      "GMOverride": "As GM, allow it anyway?",
+      "Jammed": "{weapon} is jammed: use Clear Jam first.",
+      "Empty": "{weapon} is out of rounds: reload first.",
+      "NoWeapon": "Pick a weapon that uses a clip.",
+      "Refused": {
+        "noSpare": "{weapon} has no spare clip.",
+        "noReload": "{weapon} is not reloaded."
+      },
+      "Reloaded": "{weapon} reloaded: {clip} rounds; {spare} spare clip(s) left.",
+      "Progress": "Reloading {weapon}: {done}/{total}.",
+      "Left": "{left}/{clip} rounds left",
+      "JammedBadge": "Jammed",
+      "ProgressBadge": "Reloading {progress}",
+      "Tooltip": "Rounds in the clip / clip size · spare clips",
+      "Loaded": "Rounds in the clip",
+      "Spare": "Spare clips",
+      "Reload": "Reload"
     }
   }
 }

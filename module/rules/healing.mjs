@@ -39,7 +39,8 @@ export function rest({ state, period, count = 1, full = false, medical = false, 
  * @param {{fatigue: number, con: number}} input
  * @returns {{unconscious: boolean, fatigue: number, hours: number}}
  */
-export function fatigueCheck({ fatigue, con }) {
-  if (fatigue <= con) return { unconscious: false, fatigue, hours: 0 };
-  return { unconscious: true, fatigue: con, hours: Math.max(0, 10 - con) };
+export function fatigueCheck({ fatigue, con, max = con }) {
+  // The maximum is Constitution, raised by Sand (p. 207, spec 018); knocked out for 10 − Constitution hours.
+  if (fatigue <= max) return { unconscious: false, fatigue, hours: 0 };
+  return { unconscious: true, fatigue: max, hours: Math.max(0, 10 - con) };
 }

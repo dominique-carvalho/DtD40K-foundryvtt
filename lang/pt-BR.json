@@ -2450,6 +2450,81 @@
     },
     "Delay": {
       "Used": "{name} usa a meia ação guardada: {action}."
+    },
+    "Hazard": {
+      "Title": "Perigos",
+      "NoTokens": "Selecione primeiro os tokens de personagens ou NPCs.",
+      "Apply": "Aplicar",
+      "Kind": "Perigo",
+      "FallLabel": "Queda",
+      "Category": "Tipo de queda",
+      "Fall": {
+        "short": "curta",
+        "long": "longa",
+        "fatal": "fatal"
+      },
+      "Intentional": "Queda intencional (Acrobatics TN 15 reduz)",
+      "FallOf": "Queda ({category}) — {name}",
+      "Direct": "ferimentos diretos: sem armadura nem Resilience",
+      "Catfall": "Catfall: um degrau abaixo, {name} cai de pé",
+      "CatfallSafe": "Catfall: {name} cai de pé, sem ferimentos.",
+      "FatalCritical": "+{value} de Critical Damage",
+      "Acrobatics": "Acrobatics TN 15",
+      "Reduced": "Acrobatics: −{reduce} → {total} ferimento(s).",
+      "Suffocation": "Sufocamento",
+      "March": "Marcha forçada",
+      "ModeLabel": "Respiração",
+      "Mode": {
+        "strenuous": "em esforço (rodadas)",
+        "conserve": "poupando o ar (minutos)"
+      },
+      "Underwater": "Debaixo d'água (Amphibious respira)",
+      "Token": "Token",
+      "NoBreath": "Não precisa respirar",
+      "NoFatigue": "Sem Fatigue",
+      "ImmuneHint": "Detectado pelas exaltações, traits de NPC e equipamento equipado; ajuste se precisar.",
+      "Elapsed": "{step} {unit}(s) até agora",
+      "NextTn": "próximo teste Constitution TN {tn}",
+      "Hour": "hora",
+      "Round": "rodada",
+      "Minute": "minuto",
+      "BreathLeft": "restam {n}",
+      "State": {
+        "ok": "Bem",
+        "out": "Inconsciente",
+        "dead": "Morto"
+      },
+      "Passed": "Con {total} contra {tn}: passou",
+      "Failed": "Con {total} contra {tn}: +1 Fatigue",
+      "OutOfBreath": "Sem fôlego: Unconscious",
+      "HpLoss": "Sem ar: −1 HP (restam {hp})",
+      "NextInterval": "Próximo intervalo",
+      "NextHour": "Próxima hora",
+      "Breathes": "Respirou",
+      "EndMarch": "Fim da marcha",
+      "Ended": "Encerrado."
+    },
+    "Xp": {
+      "Title": "Conceder XP",
+      "NoCharacters": "Nenhum personagem de jogador para receber XP.",
+      "ByEncounter": "Encontro",
+      "BySession": "Sessão (500)",
+      "Difficulty": {
+        "easy": "Fácil",
+        "routine": "Rotineiro",
+        "ordinary": "Comum",
+        "average": "Médio",
+        "challenging": "Desafiador",
+        "hard": "Difícil",
+        "veryHard": "Muito difícil"
+      },
+      "BonusLabel": "Bônus",
+      "ReasonPlaceholder": "motivo do bônus",
+      "Characters": "Personagens",
+      "Award": "Conceder",
+      "Encounter": "Encontro: {difficulty}",
+      "Session": "Sessão",
+      "Bonus": "Bônus"
     }
   }
 }

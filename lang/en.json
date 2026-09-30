@@ -2450,6 +2450,81 @@
     },
     "Delay": {
       "Used": "{name} uses the delayed Half Action: {action}."
+    },
+    "Hazard": {
+      "Title": "Hazards",
+      "NoTokens": "Select the tokens of characters or NPCs first.",
+      "Apply": "Apply",
+      "Kind": "Hazard",
+      "FallLabel": "Fall",
+      "Category": "Kind of fall",
+      "Fall": {
+        "short": "short",
+        "long": "long",
+        "fatal": "fatal"
+      },
+      "Intentional": "Intentional fall (Acrobatics TN 15 reduces it)",
+      "FallOf": "Fall ({category}) — {name}",
+      "Direct": "direct wounds: no armor or Resilience",
+      "Catfall": "Catfall: one step lower, {name} lands on their feet",
+      "CatfallSafe": "Catfall: {name} lands on their feet unharmed.",
+      "FatalCritical": "+{value} Critical Damage",
+      "Acrobatics": "Acrobatics TN 15",
+      "Reduced": "Acrobatics: −{reduce} → {total} wound(s).",
+      "Suffocation": "Suffocation",
+      "March": "Forced march",
+      "ModeLabel": "Breathing",
+      "Mode": {
+        "strenuous": "busy (rounds)",
+        "conserve": "saving air (minutes)"
+      },
+      "Underwater": "Under water (Amphibious breathes)",
+      "Token": "Token",
+      "NoBreath": "No need to breathe",
+      "NoFatigue": "No Fatigue",
+      "ImmuneHint": "Detected from exaltations, NPC traits and equipped gear; change them if needed.",
+      "Elapsed": "{step} {unit}(s) so far",
+      "NextTn": "next test Constitution TN {tn}",
+      "Hour": "hour",
+      "Round": "round",
+      "Minute": "minute",
+      "BreathLeft": "{n} left",
+      "State": {
+        "ok": "Fine",
+        "out": "Unconscious",
+        "dead": "Dead"
+      },
+      "Passed": "Con {total} vs {tn}: passed",
+      "Failed": "Con {total} vs {tn}: +1 Fatigue",
+      "OutOfBreath": "Out of breath: Unconscious",
+      "HpLoss": "No air: −1 HP ({hp} left)",
+      "NextInterval": "Next interval",
+      "NextHour": "Next hour",
+      "Breathes": "Breathes again",
+      "EndMarch": "End the march",
+      "Ended": "Over."
+    },
+    "Xp": {
+      "Title": "Award XP",
+      "NoCharacters": "No player characters to award.",
+      "ByEncounter": "Encounter",
+      "BySession": "Session (500)",
+      "Difficulty": {
+        "easy": "Easy",
+        "routine": "Routine",
+        "ordinary": "Ordinary",
+        "average": "Average",
+        "challenging": "Challenging",
+        "hard": "Hard",
+        "veryHard": "Very Hard"
+      },
+      "BonusLabel": "Bonus",
+      "ReasonPlaceholder": "reason for the bonus",
+      "Characters": "Characters",
+      "Award": "Award",
+      "Encounter": "Encounter: {difficulty}",
+      "Session": "Session",
+      "Bonus": "Bonus"
     }
   }
 }

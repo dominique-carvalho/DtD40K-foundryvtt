@@ -34,15 +34,27 @@ const ARMOR_OF = {
  * @param {number} [input.resilienceMod]        added to the Resilience, at least 1 (Felling Giants Blow)
  * @param {number} [input.resilienceMultiplier] Resilience × this, rounding up (Castigating Blow, Demonic Weapon)
  * @param {boolean} [input.noCritical]          wounds beyond the HP are lost, not Critical Damage
+ * @param {boolean} [input.direct]              the total is the wounds: no cover, armor, Aura or Resilience (falls, spec 018)
+ * @param {number} [input.extraCritical]        Critical Damage added whatever the HP (fatal fall, spec 018)
  * @returns {{effective: number, wounds: number, hpLoss: number, criticalGain: number, critical: number,
  *   row: number, fatigue: number, coverHit: boolean, steps: {label: string, value: number}[]}}
  */
 export function resolveDamage({
   total, pen = 0, location, magic = false, tearing = false, unarmed = false, armor, aura = 0, resilience, hp,
   critical = 0, cover = null, ignoreArmor = false, armorMultiplier = 1, resilienceMod = 0, resilienceMultiplier = 1,
-  noCritical = false
+  noCritical = false, direct = false, extraCritical = 0
 }) {
   const steps = [{ label: "total", value: total }];
+  if (direct) {
+    const wounds = Math.max(0, total);
+    const hpLoss = Math.min(wounds, Math.max(0, hp));
+    const criticalGain = (noCritical ? 0 : wounds - hpLoss) + extraCritical;
+    const newCritical = critical + criticalGain;
+    return {
+      effective: wounds, wounds, hpLoss, criticalGain, critical: newCritical, row: criticalGain > 0 ? Math.min(5, newCritical) : 0,
+      fatigue: 0, coverHit: false, steps: [...steps, { label: "resilience", value: 1 }]
+    };
+  }
   const armorLocation = ARMOR_OF[location] ?? "body";
   let remaining = total;
   let penLeft = Math.max(0, pen);

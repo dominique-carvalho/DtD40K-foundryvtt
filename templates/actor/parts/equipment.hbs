@@ -27,12 +27,19 @@
           {{#if w.material}}<span class="feat-badge granted">{{w.material}} · {{localize "DTD.Equipment.ArtifactRating" rating=w.rating}}</span>{{/if}}
           {{#if w.starting}}<span class="feat-badge">{{localize "DTD.Equipment.StartingBadge"}}</span>{{/if}}
           {{#if w.unfinished}}<span class="feat-badge warning">{{w.unfinished}}</span>{{/if}}
+          {{#if w.ammo.jammed}}<span class="feat-badge warning">{{localize "DTD.Ammo.JammedBadge"}}</span>{{/if}}
+          {{#if w.ammo.progress}}<span class="feat-badge">{{localize "DTD.Ammo.ProgressBadge" progress=w.ammo.progress}}</span>{{/if}}
           <span class="hint">{{w.profile}}</span>
           {{#each w.qualities as |q|}}<span class="tag" data-tooltip="{{q.hint}}">{{q.label}}</span>{{/each}}
         </span>
         {{#if (and w.equipped (or w.unarmed w.canAttack))}}
         <a class="pool-button" data-action="rollAttack" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Attack.RollAttack"}}"><i class="fa-solid fa-crosshairs" inert></i> {{w.attack}}</a>
         {{#if w.damage}}<span class="pool" data-tooltip="{{localize "DTD.Attack.Damage"}}"><i class="fa-solid fa-burst" inert></i> {{w.damage}}</span>{{/if}}
+        {{/if}}
+        {{#if w.ammo}}
+        <span class="ammo-counter" data-tooltip="{{localize "DTD.Ammo.Tooltip"}}"><input class="ammo-input" type="number" value="{{w.ammo.current}}" min="0" max="{{w.ammo.max}}" data-item-id="{{w.id}}" data-field="loaded" aria-label="{{localize "DTD.Ammo.Loaded"}}" {{disabled (not @root.canEditRace)}}>/{{w.ammo.max}}
+          <i class="fa-solid fa-box-archive" inert></i><input class="ammo-input" type="number" value="{{w.ammo.spare}}" min="0" data-item-id="{{w.id}}" data-field="spare" aria-label="{{localize "DTD.Ammo.Spare"}}" {{disabled (not @root.canEditRace)}}></span>
+        {{#if @root.canEditRace}}<a data-action="reloadWeapon" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Ammo.Reload"}}"><i class="fa-solid fa-rotate" inert></i></a>{{/if}}
         {{/if}}
         {{#unless w.unarmed}}
         <input class="quantity-input" type="number" value="{{w.quantity}}" min="0" data-item-id="{{w.id}}" aria-label="{{localize "DTD.Equipment.Quantity"}}" {{disabled (not @root.canEditRace)}}>

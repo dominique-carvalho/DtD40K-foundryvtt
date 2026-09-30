@@ -8,6 +8,7 @@ import { isProficient } from "../rules/weapon.mjs";
 import { rollAttack } from "./attack-service.mjs";
 import { addFatigue, toggleCondition } from "./condition-service.mjs";
 import { checkZoneWeapon, endOverwatch, placeZone, postPinningEscape, zonesAtTurnStart } from "./zone-service.mjs";
+import { ammoWeapon, clearJam, reloadCheck, reloadWeapon, resetReloadProgress } from "./ammo-service.mjs";
 import { controlGrapple, endGrapple, escapeGrapple, useManeuver } from "./maneuver-service.mjs";
 
 /**
@@ -40,6 +41,8 @@ export function combatantOf(actor) {
 export async function takeAction(actor, action, { as, count = 1 } = {}) {
   const combatant = combatantOf(actor);
   if (!combatant) return true;
+  // Any other action breaks a reload under way (spec 019, p. 424); Reload keeps its own weapon's progress.
+  if (action.type !== "free" && action.type !== "reaction" && action.key !== "reload" && as !== "free") await resetReloadProgress(actor);
   // Any action or reaction ends Overwatch; free actions do not (spec 017, p. 429).
   if (action.type !== "free" && action.key !== "overwatch") await endOverwatch(actor);
   // A Half Action held by Delay is used outside the turn without touching the turn state (p. 426).
@@ -116,6 +119,15 @@ export async function useAction(actor, key, { weaponId, as, special = null } = {
   }
   if (auto.reaction) return rollReaction(actor, auto.reaction);
   if (auto.multiple) return multipleAttacks(actor, action, special);
+  // Reload with the weapon's time, one action at a time (spec 019).
+  if (key === "reload") {
+    const item = ammoWeapon(actor, weaponId === "unarmed" ? "" : weaponId);
+    const info = reloadCheck(item);
+    if (!info) return;
+    await resetReloadProgress(actor, { except: item.id });
+    if (!(await takeAction(actor, action, { as: info.type }))) return;
+    return reloadWeapon(actor, item);
+  }
   // Kill zones, opposed tests, the grapple and Delay (spec 017).
   if (auto.zone) return zoneAction(actor, action, weaponFor(actor, weaponId));
   const target = auto.opposed ? [...game.user.targets][0]?.actor ?? null : null;
@@ -151,6 +163,11 @@ export async function useAction(actor, key, { weaponId, as, special = null } = {
       : await actor.rollCharacteristic(auto.roll.characteristic, { tn: auto.roll.tn ?? 15 });
     const outcome = message?.getFlag("dtd40k", "test")?.outcome;
     if (auto.removesOnSuccess && outcome?.success) await toggleCondition(actor, auto.removesOnSuccess, { active: false });
+    // Clear Jam (p. 435): the weapon works again, with an empty clip (spec 019).
+    if (key === "clearJam" && outcome?.success) {
+      const item = ammoWeapon(actor, weaponId === "unarmed" ? "" : weaponId, { jammed: true });
+      if (item?.system.ammo?.jammed) await clearJam(item);
+    }
   }
   if (!auto.attack && !auto.roll) {
     await ChatMessage.create({

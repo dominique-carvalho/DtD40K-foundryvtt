@@ -44,7 +44,11 @@ export function prepareCombatContext(actor) {
     } : null,
     weapons: [
       { id: "unarmed", name: localize("DTD.Attack.Unarmed") },
-      ...actor.items.filter((item) => item.type === "weapon" && item.system.equipped).map((item) => ({ id: item.id, name: item.name }))
+      // Rounds in the clip next to the name (spec 019).
+      ...actor.items.filter((item) => item.type === "weapon" && item.system.equipped).map((item) => ({
+        id: item.id,
+        name: item.system.ammo?.tracked ? `${item.name} (${item.system.ammo.current}/${item.system.ammo.max}${item.system.ammo.jammed ? ` · ${localize("DTD.Ammo.JammedBadge")}` : ""})` : item.name
+      }))
     ],
     groups,
     conditions,

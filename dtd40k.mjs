@@ -47,6 +47,7 @@ import { resolveSocial } from "./module/documents/social-service.mjs";
 import { resistSpell, rollSpellDamage } from "./module/documents/magic-service.mjs";
 import { applyAttackEffects, newScene } from "./module/documents/martial-service.mjs";
 import { DtdActor } from "./module/documents/actor.mjs";
+import { resetReloadProgress } from "./module/documents/ammo-service.mjs";
 import { endHazard, fallAcrobatics, hazardStep, openHazardTool, openXpDialog, reduceFall } from "./module/documents/hazard-service.mjs";
 import { clearZones, confirmZone, fireOverwatch, rollPinning, suppressionDamage, suppressionDodge } from "./module/documents/zone-service.mjs";
 import { endGrapple, maneuverAsGm, startGrapple } from "./module/documents/maneuver-service.mjs";
@@ -309,10 +310,11 @@ Hooks.once("ready", () => {
   });
 });
 Hooks.on("deleteCombat", refreshCombatants);
-// Kill zones, Delay and grapples end with the combat (spec 017).
+// Kill zones, Delay and grapples end with the combat (spec 017); so does a reload under way (spec 019).
 Hooks.on("deleteCombat", async (combat) => {
   if (game.users.activeGM !== game.user) return;
   await clearZones(combat);
+  for (const actor of new Set(combat.combatants.map((c) => c.actor).filter(Boolean))) await resetReloadProgress(actor);
   for (const actor of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.getFlag("dtd40k", "grapple")))) await endGrapple(actor);
 });
 // In Cover asks for the cover's Armor Points and locations; removing it clears them (spec 017).

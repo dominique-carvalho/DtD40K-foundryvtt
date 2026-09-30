@@ -1,5 +1,6 @@
 import { DAMAGE_TYPES, WEAPON_PROFICIENCIES, WEAPON_QUALITIES, WEAPON_TYPES } from "../config.mjs";
 import { count, equipmentFields } from "./equipment-fields.mjs";
+import { parseReload, tracksAmmo } from "../rules/ammo.mjs";
 
 const { ArrayField, BooleanField, NumberField, SchemaField, StringField } = foundry.data.fields;
 
@@ -36,6 +37,13 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
       }),
       clip: count(0),
       reload: new StringField({ required: true, blank: true }),
+      // Ammunition (spec 019): rounds in the clip (empty = full), spare clips, Reload actions done, jammed.
+      ammo: new SchemaField({
+        loaded: new NumberField({ required: true, nullable: true, integer: true, min: 0, initial: null }),
+        spare: count(2),
+        progress: count(0),
+        jammed: new BooleanField({ initial: false })
+      }),
       qualities: new ArrayField(new SchemaField({
         key: new StringField({ required: true, choices: Object.keys(WEAPON_QUALITIES) }),
         value: new NumberField({ required: true, nullable: true, integer: true, initial: null, min: 0 })
@@ -70,5 +78,17 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
         miniaturized: count(0)
       })
     };
+  }
+
+  /**
+   * Ammunition read by the sheet and the attack (spec 019): the clip size, the rounds in it and the Reload value.
+   * @override
+   */
+  prepareDerivedData() {
+    super.prepareDerivedData();
+    this.ammo.tracked = tracksAmmo(this);
+    this.ammo.max = this.clip;
+    this.ammo.current = Math.min(this.ammo.loaded ?? this.clip, this.clip);
+    this.ammo.reloadInfo = parseReload(this.reload);
   }
 }

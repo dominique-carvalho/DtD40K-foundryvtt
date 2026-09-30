@@ -2,7 +2,6 @@
   <p><i class="fa-solid fa-bullseye" inert></i> <b>{{title}}</b> — {{name}}, {{weapon}}</p>
   {{#if overwatch}}<p>{{localize "DTD.Zone.AttackLabel"}}: <b>{{attack}}</b>{{#if trigger}} · {{localize "DTD.Zone.Trigger"}}: <i>{{trigger}}</i>{{/if}}</p>{{/if}}
   <p class="hint">{{localize "DTD.Zone.PlaceHint"}}</p>
-  <p class="hint">{{localize "DTD.Zone.Ammo" rof=rof}}</p>
   <div class="card-buttons">
     <button type="button" data-dtd-action="confirmZone"><i class="fa-solid fa-check" inert></i> {{localize "DTD.Zone.Confirm"}}</button>
     {{#if overwatch}}<button type="button" data-dtd-action="fireOverwatch"><i class="fa-solid fa-crosshairs" inert></i> {{localize "DTD.Zone.Fire"}}</button>{{/if}}

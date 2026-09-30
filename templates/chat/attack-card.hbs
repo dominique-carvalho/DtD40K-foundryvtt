@@ -3,6 +3,7 @@
   {{#if requiredRaises}}<p class="roll-card-note">{{localize "DTD.Attack.RequiredRaises" raises=requiredRaises}}</p>{{/if}}
   <p class="attack-location"><i class="fa-solid fa-location-crosshairs" inert></i> {{localize "DTD.Attack.Location"}}: <b>{{location}}</b> <span class="hint">{{#if called}}({{localize "DTD.Attack.Called"}}){{else}}(d10 {{d10}}){{/if}}</span></p>
   {{#if hits}}<p class="attack-hits">{{localize "DTD.Attack.Hits" hits=hits}}</p>{{/if}}
+  {{#if ammoLeft}}<p class="roll-card-note"><i class="fa-solid fa-box-archive" inert></i> {{ammoLeft}}</p>{{/if}}
   {{#if jammed}}<p class="notification warning">{{localize "DTD.Attack.Jammed"}}{{#if overheats}} {{localize "DTD.Attack.Overheats"}}{{/if}}</p>{{/if}}
   {{#if special}}
   <div class="martial-card">

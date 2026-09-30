@@ -2525,6 +2525,26 @@
       "Encounter": "Encontro: {difficulty}",
       "Session": "Sessão",
       "Bonus": "Bônus"
+    },
+    "Ammo": {
+      "Title": "Munição",
+      "GMOverride": "Como Mestre, permitir mesmo assim?",
+      "Jammed": "{weapon} está emperrada: use Clear Jam antes.",
+      "Empty": "{weapon} está sem tiros: recarregue antes.",
+      "NoWeapon": "Escolha uma arma que use pente.",
+      "Refused": {
+        "noSpare": "{weapon} não tem pente de reserva.",
+        "noReload": "{weapon} não é recarregada."
+      },
+      "Reloaded": "{weapon} recarregada: {clip} tiros; restam {spare} pente(s) de reserva.",
+      "Progress": "Recarregando {weapon}: {done}/{total}.",
+      "Left": "restam {left}/{clip} tiros",
+      "JammedBadge": "Emperrada",
+      "ProgressBadge": "Recarregando {progress}",
+      "Tooltip": "Tiros no pente / tamanho do pente · pentes de reserva",
+      "Loaded": "Tiros no pente",
+      "Spare": "Pentes de reserva",
+      "Reload": "Recarregar"
     }
   }
 }

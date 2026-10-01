@@ -1,0 +1,62 @@
+# Publica o sistema quando uma release do GitHub é publicada com uma tag vX.Y.Z.
+# Compila os compêndios, fixa versão e link de download no system.json e anexa
+# system.json + dtd40k.zip à release — é deles que o manifesto "latest" depende.
+name: Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Extrair versão da tag
+        id: version
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          if [[ ! "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::A tag '$TAG' não segue o formato vX.Y.Z."
+            exit 1
+          fi
+          echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build:packs
+
+      - name: Atualizar system.json
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+          TAG: ${{ github.event.release.tag_name }}
+          REPO: ${{ github.repository }}
+        run: |
+          jq --arg v "$VERSION" \
+             --arg manifest "https://github.com/$REPO/releases/latest/download/system.json" \
+             --arg download "https://github.com/$REPO/releases/download/$TAG/dtd40k.zip" \
+             '.version = $v | .manifest = $manifest | .download = $download' \
+             system.json > system.tmp.json
+          mv system.tmp.json system.json
+
+      - name: Montar dtd40k.zip
+        run: |
+          zip -r dtd40k.zip system.json dtd40k.mjs README.md lang module packs styles templates \
+            -x "packs/**/LOCK" "packs/**/LOG" "packs/**/LOG.old"
+
+      - name: Anexar à release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$TAG" system.json dtd40k.zip --clobber

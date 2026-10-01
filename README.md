@@ -112,7 +112,7 @@ Em *Game Systems → Install System*, cole o endereço do manifesto:
 https://github.com/dominique-carvalho/DtD40K-foundryvtt/releases/latest/download/system.json
 ```
 
-> Os pacotes de release ainda não foram publicados; por enquanto use a instalação local.
+O manifesto aponta sempre para a release mais recente; o Foundry avisa quando há atualização.
 
 ### Local (desenvolvimento)
 
@@ -175,6 +175,21 @@ npm run build:packs
 - Nunca edite `packs/` à mão; altere os JSON em `src/packs/` e rode o build de novo.
 - Para editar um compêndio pelo Foundry: clique com o botão direito no compêndio → "Alternar trava de edição", edite os itens, feche o Foundry e rode `npm run extract:packs` para gravar as mudanças de volta em `src/packs/` (depois revise o diff e faça o commit).
 - Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) `combat-tables` (22 tabelas do cap. XVII e as 2 do Warp) `spells` (126 magias do cap. VIII) `martial-schools` (15 escolas dos caps. IX–X) `deities` (21 deuses do cap. XII; a tabela Degeneration fica em `combat-tables`) `antagonists` (47 NPCs e 4 Minion Squads do cap. XX, só para o Mestre), `vehicle-components` (131 componentes, armas e munições do cap. XV), `vehicles` (16 veículos de exemplo), `ship-components` (104 peças do cap. XVI) e `ships` (6 naves de NPC).
+
+## Publicar uma versão
+
+O workflow [`.github/workflows/release.yml`](.github/workflows/release.yml) roda quando uma release
+é publicada no GitHub. Ele roda lint e testes, compila os compêndios, grava a versão e o link de
+download no `system.json` e anexa `system.json` + `dtd40k.zip` à release.
+
+1. Atualize `version` em `system.json` e `package.json` e faça o commit na `main`.
+2. Publique a release com a tag `vX.Y.Z` (a mesma versão):
+
+```bash
+gh release create v0.1.0 --title "v0.1.0" --generate-notes
+```
+
+3. Acompanhe o workflow em *Actions*; ao terminar, o manifesto `releases/latest/download/system.json` já aponta para a nova versão.
 
 ## Licença
 

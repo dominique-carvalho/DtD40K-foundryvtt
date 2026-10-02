@@ -41,7 +41,7 @@ Tiefling Werewolf Monk). Diálogos respondidos por stub; o jogador simulado com 
 | 7 | Criação encerrada; Action Hero: 600 → 500; Hero Points 4 → 5 (máximo 5) |
 | 8 | Desfazer a linha do Action Hero: asset apagado; 600; Hero Points 4/4 |
 | 9 | Desfazer Get of Fenris: asset apagado, 400 → 500. Remover Black Spiral Dancers pela ficha: 500, linha mantida; desfazer a linha depois: 600, só devolução |
-| 10 | Exemplo da p. 18: Enemy e Impulsive → 800; Black Spiral Dancers e Appearance → 600 (linhas `exaltedAsset` e `asset`); Brawl 3 → 4 → 550; Outsider → 450. Os 4 feats do exemplo não estão na lista do Monk (regra da 006), então entraram pela liberação do Mestre sem custo; com os 400 deles, o total fecha em 50 |
+| 10 | Exemplo da p. 18: Enemy e Impulsive → 800; Black Spiral Dancers e Appearance → 600 (linhas `exaltedAsset` e `asset`); Brawl 3 → 4 → 550; Outsider → 450. Os feats gerais do exemplo não estão na lista do Monk (regra da 006): Unarmed Warrior e Fleet of Foot entraram pela liberação do Mestre sem custo; Wholeness of Body travou o script na escolha do feat (stub do diálogo, não a 020) e Weapon Proficiency não foi tentado. Com os 400 desses quatro, a conta fecha em 50 |
 
 Correção feita na validação: o log de XP rejeitava o tipo `exaltedAsset` (lista `XP_KINDS` do schema); a compra
 entrava sem a linha. Tipo incluído, com teste.

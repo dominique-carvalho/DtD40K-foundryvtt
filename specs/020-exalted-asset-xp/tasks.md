@@ -52,7 +52,7 @@ quickstart.md
 
 - [X] T009 [P] `docs/pendencias.md` (tirar o item da seção 2; linha da 020 na seção 3, se houver texto) e `README.md`
 - [X] T010 `npm test`, `npm run lint`, checagem de chaves i18n
-- [ ] T011 Validar o quickstart no Foundry e registrar em `quickstart.md`
+- [X] T011 Validar o quickstart no Foundry e registrar em `quickstart.md`
 
 ## Dependencies
 

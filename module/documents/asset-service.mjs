@@ -1,6 +1,7 @@
 import { buildAssetEffects, validateAssetAdd } from "../rules/asset.mjs";
 import { clampHeroPoints, getExaltation } from "./exaltation-service.mjs";
 import { getRace } from "./race-service.mjs";
+import { priceExaltedAsset, recordEntry } from "./xp-service.mjs";
 
 /**
  * Adding and removing a character's Exalted Assets (spec 004, US5).
@@ -55,6 +56,10 @@ export async function addExaltedAsset(actor, assetItem, { granted = false } = {}
     if (!confirmed) return null;
   }
 
+  // Exalted Assets cost XP like any asset (spec 020); the GM override above keeps the price.
+  const price = await priceExaltedAsset(actor, assetItem, { granted });
+  if (!price.ok) return null;
+
   const data = assetItem.toObject();
   delete data._id;
   delete data.folder;
@@ -75,6 +80,7 @@ export async function addExaltedAsset(actor, assetItem, { granted = false } = {}
   if (created.system.automation === "actionHero") {
     await actor.update({ "system.heroPoints.value": actor._source.system.heroPoints.value + 1 });
   }
+  if (price.cost) await recordEntry(actor, { kind: "exaltedAsset", label: created.name, from: 0, to: 1, cost: price.cost, itemId: created.id });
   return created;
 }
 

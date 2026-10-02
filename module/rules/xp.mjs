@@ -123,6 +123,17 @@ const PATHS = {
 };
 
 /**
+ * Price of an Exalted Asset (spec 020): 100 XP like any asset (p. 16), free when granted by Perfection (p. 83).
+ * @param {{granted: boolean, available: number}} options
+ * @returns {{allowed: boolean, cost: number, reason: ""|"notEnough"}}
+ */
+export function exaltedAssetPrice({ granted, available }) {
+  if (granted) return { allowed: true, cost: 0, reason: "" };
+  const cost = XP_COSTS.asset;
+  return cost > available ? { allowed: false, cost, reason: "notEnough" } : { allowed: true, cost, reason: "" };
+}
+
+/**
  * How to undo a purchase (FR-016): restore the value only if it is still the purchased one,
  * delete the bought item, and refund the cost.
  * @param {{kind: string, key: string, from: number, to: number, cost: number, itemId?: string}} entry
@@ -130,7 +141,7 @@ const PATHS = {
  * @returns {{restore: {path: string, value: number}|null, deleteItem: string|null, refund: number}}
  */
 export function undoPlan(entry, current) {
-  if (entry.kind === "feat" || entry.kind === "asset") return { restore: null, deleteItem: entry.itemId || null, refund: entry.cost };
+  if (["feat", "asset", "exaltedAsset"].includes(entry.kind)) return { restore: null, deleteItem: entry.itemId || null, refund: entry.cost };
   const path = PATHS[entry.kind]?.(entry.key);
   const restore = path && current === entry.to ? { path, value: entry.from } : null;
   return { restore, deleteItem: null, refund: entry.cost };

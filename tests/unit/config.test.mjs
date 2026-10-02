@@ -153,7 +153,7 @@ describe("class and XP constants (006)", () => {
     expect(DTD.XP_COSTS).toEqual({ characteristic: 200, newSkill: 100, skill: 50, feat: 100, asset: 100, powerStat: 300 });
     expect(DTD.STARTING_XP).toBe(600);
     expect(DTD.FREE_STUDY_MULTIPLIER).toBe(2);
-    expect(DTD.XP_KINDS).toEqual(["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo", "martial", "specialAttack", "background"]);
+    expect(DTD.XP_KINDS).toEqual(["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo", "martial", "specialAttack", "background", "exaltedAsset"]);
   });
 });
 

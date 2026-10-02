@@ -30,7 +30,8 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   75 assets (em pastas por grupo). Arrastar uma exaltação para a ficha cria o Power Stat (teto =
   Level), a reserva do recurso com o máximo calculado, os poderes liberados por ponto, o limite de
   gasto por rodada, a Tell da cena e as escolhas do Paragon e do Dragonblooded; assets validam
-  exaltação, raça e o limite de um (exceto Paragon), com efeitos simples automatizados.
+  exaltação, raça e o limite de um (exceto Paragon), com efeitos simples automatizados, e custam 100 XP
+  (o da Perfection é grátis), com desfazer pelo histórico de XP.
 - **Feats, Assets e Hindrances**: compêndio *Feats* com as 274 entradas do cap. 7 da 7.7a (181 feats, 49
   feats raciais por raça, 22 assets e 22 hindrances). Arrastar para a ficha pede a subcategoria dos feats de
   grupo, confere repetição, raça, dependências e o limite de 2 hindrances (o Mestre pode incluir mesmo

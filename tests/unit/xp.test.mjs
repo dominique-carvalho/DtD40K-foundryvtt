@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { advanceCost, canAdvance, undoPlan, xpTotals } from "../../module/rules/xp.mjs";
+import { advanceCost, canAdvance, exaltedAssetPrice, undoPlan, xpTotals } from "../../module/rules/xp.mjs";
 
 const f = (name, subcategory = "", mandatory = true, orGroup = "") => ({ name, subcategory, mandatory, orGroup });
 const cls = (name, status, { characteristics = [], skills = [], feats = [], anyCharacteristic = false } = {}) => ({
@@ -86,6 +86,25 @@ describe("xpTotals and undoPlan (FR-012, FR-016)", () => {
     expect(undoPlan({ kind: "skill", key: "stealth", from: 0, to: 1, cost: 200 }, 1).restore).toEqual({ path: "system.skills.stealth.value", value: 0 });
     expect(undoPlan({ kind: "powerStat", key: "", from: 1, to: 2, cost: 300 }, 2).restore).toEqual({ path: "powerStat", value: 1 });
     expect(undoPlan({ kind: "feat", key: "", from: 0, to: 1, cost: 100, itemId: "abc" }, null)).toEqual({ restore: null, deleteItem: "abc", refund: 100 });
+  });
+});
+
+describe("Exalted Assets (spec 020, p. 16, p. 83)", () => {
+  it("cost 100 XP like any asset", () => {
+    expect(exaltedAssetPrice({ granted: false, available: 600 })).toEqual({ allowed: true, cost: 100, reason: "" });
+    expect(exaltedAssetPrice({ granted: false, available: 100 })).toEqual({ allowed: true, cost: 100, reason: "" });
+  });
+
+  it("are refused without enough XP", () => {
+    expect(exaltedAssetPrice({ granted: false, available: 99 })).toEqual({ allowed: false, cost: 100, reason: "notEnough" });
+  });
+
+  it("are free when granted by Perfection", () => {
+    expect(exaltedAssetPrice({ granted: true, available: 0 })).toEqual({ allowed: true, cost: 0, reason: "" });
+  });
+
+  it("undo deletes the asset and refunds", () => {
+    expect(undoPlan({ kind: "exaltedAsset", key: "", from: 0, to: 1, cost: 100, itemId: "xyz" }, null)).toEqual({ restore: null, deleteItem: "xyz", refund: 100 });
   });
 });
 

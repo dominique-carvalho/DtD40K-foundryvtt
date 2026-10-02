@@ -1,8 +1,8 @@
 import { CHARACTERISTICS, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, MAX_RATING, SKILLS } from "../config.mjs";
 import { fullName } from "../rules/feat.mjs";
-import { advanceCost, canAdvance, undoPlan } from "../rules/xp.mjs";
+import { advanceCost, canAdvance, exaltedAssetPrice, undoPlan } from "../rules/xp.mjs";
 import { canReach } from "../rules/creation.mjs";
-import { getExaltation, setPowerStat } from "./exaltation-service.mjs";
+import { clampHeroPoints, getExaltation, setPowerStat } from "./exaltation-service.mjs";
 import { getRace } from "./race-service.mjs";
 import { restoreAttack, syncPassives } from "./martial-service.mjs";
 import { restoreInstance } from "./background-service.mjs";
@@ -165,6 +165,23 @@ export async function priceFeat(actor, feat, selection) {
 }
 
 /**
+ * Price of an Exalted Asset about to be added (spec 020): free when granted by Perfection; without enough XP the
+ * purchase is refused and the GM may allow it free of charge; otherwise the owner confirms the 100 XP.
+ * @param {Actor} actor
+ * @param {Item} asset
+ * @param {{granted?: boolean}} [options]
+ * @returns {Promise<{ok: boolean, cost: number}>}
+ */
+export async function priceExaltedAsset(actor, asset, { granted = false } = {}) {
+  const available = actor.system.xp.totals.available;
+  const price = exaltedAssetPrice({ granted, available });
+  if (!price.allowed) return { ok: await refuse(price.reason, { cost: price.cost, available }), cost: 0 };
+  if (!price.cost) return { ok: true, cost: 0 };
+  const ok = await confirm(localize("DTD.XP.Buy"), `<p>${game.i18n.format("DTD.XP.BuyConfirm", { label: asset.name, cost: price.cost, available })}</p>`);
+  return { ok, cost: ok ? price.cost : 0 };
+}
+
+/**
  * Undo an entry of the ledger (FR-016): owners undo the last one, the GM any. Purchases restore the
  * value if it is still the purchased one and delete bought items; the XP comes back.
  * @param {Actor} actor
@@ -201,8 +218,10 @@ export async function undoXp(actor, entryId) {
     const plan = undoPlan(entry, current);
     if (plan.restore?.path === "powerStat") await exaltation.update({ "system.powerStat.value": plan.restore.value });
     else if (plan.restore) await actor.update({ [plan.restore.path]: plan.restore.value });
-    else if (!["feat", "asset", "combo", "specialAttack", "background"].includes(entry.kind)) ui.notifications.info(localize("DTD.XP.RefundOnly"));
+    else if (!["feat", "asset", "exaltedAsset", "combo", "specialAttack", "background"].includes(entry.kind)) ui.notifications.info(localize("DTD.XP.RefundOnly"));
     if (plan.deleteItem && actor.items.has(plan.deleteItem)) await actor.items.get(plan.deleteItem).delete();
+    // An undone Action Hero takes its Hero Point back (spec 020).
+    if (entry.kind === "exaltedAsset") await clampHeroPoints(actor);
     if (entry.kind === "martial") await syncPassives(actor);
   }
   await actor.update({ "system.xp.log": actor._source.system.xp.log.filter((item) => item.id !== entryId) });

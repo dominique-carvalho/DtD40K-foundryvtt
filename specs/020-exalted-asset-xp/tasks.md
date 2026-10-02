@@ -22,36 +22,36 @@ quickstart.md
 
 ## Phase 1: Foundational
 
-- [ ] T001 [P] Em `tests/unit/xp.test.mjs`: casos de [contracts/rules-api.md](contracts/rules-api.md) para `exaltedAssetPrice` e `undoPlan` com `kind: "exaltedAsset"`
-- [ ] T002 `module/rules/xp.mjs` (PURO): `exaltedAssetPrice`; `undoPlan` aceita `exaltedAsset`; fazer T001 passar
-- [ ] T003 Rodar `npm test` e `npm run lint`
+- [X] T001 [P] Em `tests/unit/xp.test.mjs`: casos de [contracts/rules-api.md](contracts/rules-api.md) para `exaltedAssetPrice` e `undoPlan` com `kind: "exaltedAsset"`
+- [X] T002 `module/rules/xp.mjs` (PURO): `exaltedAssetPrice`; `undoPlan` aceita `exaltedAsset`; fazer T001 passar
+- [X] T003 Rodar `npm test` e `npm run lint`
 
 ---
 
 ## Phase 2: User Story 1 — Compra com XP (P1)
 
-- [ ] T004 [US1] `module/documents/xp-service.mjs`: `priceExaltedAsset(actor, asset, { granted })` com confirmação (`DTD.XP.BuyConfirm`), recusa sem XP e liberação do Mestre sem custo
-- [ ] T005 [US1] `module/documents/asset-service.mjs`: `addExaltedAsset` chama `priceExaltedAsset` depois das checagens; cria o asset só se `ok`; `recordEntry({ kind: "exaltedAsset", … })` quando `cost > 0`
-- [ ] T006 [P] [US1] i18n (en, pt-BR) para o texto da liberação sem XP, se faltar chave
+- [X] T004 [US1] `module/documents/xp-service.mjs`: `priceExaltedAsset(actor, asset, { granted })` com confirmação (`DTD.XP.BuyConfirm`), recusa sem XP e liberação do Mestre sem custo
+- [X] T005 [US1] `module/documents/asset-service.mjs`: `addExaltedAsset` chama `priceExaltedAsset` depois das checagens; cria o asset só se `ok`; `recordEntry({ kind: "exaltedAsset", … })` quando `cost > 0`
+- [X] T006 [P] [US1] i18n (en, pt-BR) para o texto da liberação sem XP, se faltar chave
 
 ---
 
 ## Phase 3: User Story 2 — Paragon (P2)
 
-- [ ] T007 [US2] Conferir que a Perfection (`exaltation-service`, `granted: true`) não cobra nem registra, e que as Paragon Assets fora da criação passam pela cobrança
+- [X] T007 [US2] Conferir que a Perfection (`exaltation-service`, `granted: true`) não cobra nem registra, e que as Paragon Assets fora da criação passam pela cobrança
 
 ---
 
 ## Phase 4: User Story 3 — Desfazer (P3)
 
-- [ ] T008 [US3] `module/documents/xp-service.mjs` `undoXp`: `exaltedAsset` sem aviso "RefundOnly"; `clampHeroPoints` depois de apagar o asset
+- [X] T008 [US3] `module/documents/xp-service.mjs` `undoXp`: `exaltedAsset` sem aviso "RefundOnly"; `clampHeroPoints` depois de apagar o asset
 
 ---
 
 ## Phase 5: Polish
 
-- [ ] T009 [P] `docs/pendencias.md` (tirar o item da seção 2; linha da 020 na seção 3, se houver texto) e `README.md`
-- [ ] T010 `npm test`, `npm run lint`, checagem de chaves i18n
+- [X] T009 [P] `docs/pendencias.md` (tirar o item da seção 2; linha da 020 na seção 3, se houver texto) e `README.md`
+- [X] T010 `npm test`, `npm run lint`, checagem de chaves i18n
 - [ ] T011 Validar o quickstart no Foundry e registrar em `quickstart.md`
 
 ## Dependencies

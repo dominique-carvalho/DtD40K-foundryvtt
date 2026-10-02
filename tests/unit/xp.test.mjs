@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { XP_KINDS } from "../../module/config.mjs";
 import { advanceCost, canAdvance, exaltedAssetPrice, undoPlan, xpTotals } from "../../module/rules/xp.mjs";
 
 const f = (name, subcategory = "", mandatory = true, orGroup = "") => ({ name, subcategory, mandatory, orGroup });
@@ -101,6 +102,10 @@ describe("Exalted Assets (spec 020, p. 16, p. 83)", () => {
 
   it("are free when granted by Perfection", () => {
     expect(exaltedAssetPrice({ granted: true, available: 0 })).toEqual({ allowed: true, cost: 0, reason: "" });
+  });
+
+  it("are a ledger kind the character data accepts", () => {
+    expect(XP_KINDS).toContain("exaltedAsset");
   });
 
   it("undo deletes the asset and refunds", () => {

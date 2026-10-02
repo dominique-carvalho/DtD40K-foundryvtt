@@ -214,7 +214,7 @@ export const STARTING_XP = 600;
 export const FREE_STUDY_MULTIPLIER = 2;
 
 /** What an XP purchase can buy (schools, spells and backgrounds come with their own features). */
-export const XP_KINDS = ["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo", "martial", "specialAttack", "background"];
+export const XP_KINDS = ["characteristic", "skill", "feat", "asset", "powerStat", "school", "combo", "martial", "specialAttack", "background", "exaltedAsset"];
 
 /** Generic 1-point resource spends (DtD 7.7a p. 65). */
 export const GENERIC_SPENDS = ["heal", "skill", "reaction", "stunned", "dazed"];

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Proposta A — Iluminura</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Share+Tech+Mono&family=Signika:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="stage.css">
+<style>
+  /* Proposal A: an illuminated manuscript page. The sheet reads like a codex: arched portrait,
+     drop-capped name, bookmark ribbons as tabs, and an index of skills with leader dots. */
+  .sheet { padding: 0 22px 22px; }
+  .sheet { background-image: radial-gradient(ellipse at center, transparent 55%, #6b4a2a33 100%); }
+  [data-theme="cogitator"] .sheet { background-image: radial-gradient(ellipse at center, transparent 55%, #000a 100%); }
+
+  /* Header */
+  .a-head { display: grid; grid-template-columns: 124px 1fr auto; gap: 18px; padding: 18px 0 12px; align-items: start; }
+  .a-frame {
+    width: 124px; height: 156px; padding: 4px; box-sizing: border-box;
+    background: linear-gradient(135deg, var(--dtd-brass-bright), var(--dtd-brass) 45%, var(--dtd-seal-deep));
+    clip-path: path("M0 156 V64 Q0 14 62 0 Q124 14 124 64 V156 Z");
+  }
+  .a-frame > div {
+    width: 100%; height: 100%;
+    clip-path: path("M0 148 V62 Q0 14 58 1 Q116 14 116 62 V148 Z");
+    background: var(--dtd-paper-sunken);
+  }
+  .a-frame svg { width: 100%; height: 100%; display: block; }
+  .a-name { margin: 2px 0 0; font-family: var(--dtd-font-display); font-weight: 900; font-size: 2.5rem; line-height: 1; letter-spacing: 0.06em; }
+  .a-name::first-letter { font-family: var(--dtd-font-initial); font-weight: 900; font-size: 1.45em; color: var(--dtd-seal); text-shadow: 1px 1px 0 var(--dtd-brass); }
+  .a-epithet { font-style: italic; color: var(--dtd-ink-muted); font-size: 1.05rem; margin-top: 2px; }
+  .a-lineage { margin-top: 8px; font-size: 0.78rem; color: var(--dtd-ink); }
+  .a-lineage em { font-style: normal; color: var(--dtd-brass); margin: 0 0.4em; }
+  .a-lineage a { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--dtd-brass); }
+  .a-meta { margin-top: 4px; color: var(--dtd-ink-muted); font-size: 0.92rem; }
+  .a-meta b { font-family: var(--dtd-font-data); font-weight: 400; color: var(--dtd-ink); }
+  .a-seals { display: flex; gap: 8px; margin-top: 10px; }
+  .a-right { display: grid; justify-items: end; gap: 10px; }
+  .a-xp {
+    position: relative; padding: 4px 18px; font-family: var(--dtd-font-data); font-size: 0.9rem;
+    background: var(--dtd-paper-sunken); border-top: 1px solid var(--dtd-brass); border-bottom: 1px solid var(--dtd-brass);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 50%, 100% 100%, 0 100%, 8px 50%);
+  }
+  .a-xp b { font-size: 1.1rem; color: var(--dtd-seal); }
+  .a-power { display: grid; justify-items: end; gap: 3px; }
+  .a-power .sm-caps { font-size: 0.66rem; }
+
+  /* Vitals band */
+  .a-vitals {
+    display: grid; grid-template-columns: 1.3fr auto auto; gap: 18px; align-items: center;
+    padding: 10px 14px; margin: 0 -22px; border-top: var(--dtd-rule); border-bottom: var(--dtd-rule);
+    background: linear-gradient(var(--dtd-seal-soft), transparent);
+  }
+  .a-tracks { display: grid; gap: 8px; }
+  .a-plaques { display: flex; gap: 8px; }
+  .a-small { display: grid; gap: 6px; }
+  .a-small > div { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .a-coin { display: inline-block; width: 0.95rem; height: 0.95rem; margin-left: 3px; border-radius: 50%; vertical-align: middle;
+    background: radial-gradient(circle at 35% 30%, #fff8 0 14%, transparent 32%), var(--dtd-brass-bright); box-shadow: inset 0 0 0 1.5px var(--dtd-brass), 0 1px 1px #0005; }
+  .a-coin.off { background: transparent; box-shadow: inset 0 0 0 1.5px var(--dtd-paper-edge); }
+
+  /* Ribbon tabs hanging from a rod */
+  .a-tabs { position: relative; display: flex; gap: 6px; padding: 0 4px; margin: 0 0 16px; height: 50px; }
+  .a-tabs::before { content: ""; position: absolute; left: -22px; right: -22px; top: 0; height: 3px; background: linear-gradient(var(--dtd-brass-bright), var(--dtd-brass)); box-shadow: 0 1px 2px #0005; }
+  .a-tab {
+    flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px;
+    padding: 9px 4px 12px; height: 34px;
+    font-family: var(--dtd-font-display); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; line-height: 1.1; text-align: center; text-transform: uppercase;
+    color: var(--dtd-ink-muted); background: var(--dtd-paper-sunken); border: 1px solid var(--dtd-paper-edge); border-top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 7px), 0 100%);
+    cursor: pointer;
+  }
+  .a-tab i { font-size: 0.8rem; color: var(--dtd-brass); }
+  .a-tab.active { height: 44px; color: #fff; background: linear-gradient(#ffffff1a, transparent 40%), var(--dtd-seal); border-color: var(--dtd-seal-deep); }
+  .a-tab.active i { color: var(--dtd-brass-bright); }
+
+  /* Characteristics: the p. 17 triptych */
+  .a-grid { display: grid; grid-template-columns: 74px repeat(3, 1fr); gap: 0; margin-bottom: 18px; }
+  .a-col-head { padding: 0 0 6px; text-align: center; font-family: var(--dtd-font-display); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dtd-ink); }
+  .a-col-head i { color: var(--dtd-brass); margin-right: 5px; }
+  .a-row-head { display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; border-right: 1px solid var(--dtd-brass); }
+  .a-row-head span { font-family: var(--dtd-font-display); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dtd-ink-muted); }
+  .a-cell { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 10px; align-items: center; padding: 8px 12px; border-bottom: 1px dotted var(--dtd-paper-edge); }
+  .a-cell:hover { background: var(--dtd-seal-soft); cursor: pointer; }
+  .a-medal {
+    grid-row: span 2; display: grid; place-items: center; width: 2.3rem; height: 2.3rem; border-radius: 50%;
+    font-family: var(--dtd-font-data); font-size: 1.25rem; color: var(--dtd-ink);
+    background: var(--dtd-paper-raised); box-shadow: inset 0 0 0 1px var(--dtd-brass), inset 0 0 0 3px var(--dtd-paper-raised), inset 0 0 0 4px var(--dtd-paper-edge);
+  }
+  .a-cell .name { font-family: var(--dtd-font-display); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* Skills: a codex index */
+  .a-skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .a-skills h3 { margin: 0 0 4px; font-family: var(--dtd-font-display); font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dtd-ink-muted); text-align: center; }
+  .a-skill { display: grid; grid-template-columns: auto 1fr auto auto; gap: 5px; align-items: center; padding: 2px 0; cursor: pointer; }
+  .a-skill:hover .label { color: var(--dtd-seal); }
+  .a-skill .label { font-size: 0.95rem; white-space: nowrap; }
+  .a-skill.untrained .label { color: var(--dtd-ink-subtle); }
+  .a-skill .adv { color: var(--dtd-brass); font-size: 0.7rem; vertical-align: super; }
+  .a-skill .leader { border-bottom: 1px dotted var(--dtd-ink-subtle); transform: translateY(-3px); }
+  .a-skill .spec { grid-column: 1 / -1; margin: -3px 0 2px 10px; font-style: italic; font-size: 0.82rem; color: var(--dtd-lapis); }
+  .a-skill .sm-gems { --dtd-gem-size: 0.62rem; }
+  .a-skill .pool { width: 2.4rem; font-family: var(--dtd-font-data); font-size: 0.74rem; text-align: right; color: var(--dtd-ink-subtle); }
+  .a-skill:hover .pool { color: var(--dtd-ink); }
+  .a-foot { margin-top: 14px; font-size: 0.8rem; color: var(--dtd-ink-subtle); font-style: italic; text-align: center; }
+</style>
+</head>
+<body>
+<div class="window" id="root" data-theme="vellum">
+  <div class="window-header"><i class="fa-solid fa-user"></i> Jane <span class="spacer"></span><i class="fa-solid fa-gear"></i><i class="fa-solid fa-xmark"></i></div>
+  <div class="sheet sm-surface" id="sheet"></div>
+</div>
+<aside class="chat">
+  <div><div class="msg-head"><span>Jane</span><span>agora</span></div><div id="card"></div></div>
+  <p class="note">O cartão de chat usa os mesmos tokens: filete de lacre no topo, dados em facetas de d10 (mantidos em tinta, explodidos em lacre) e a faixa de resultado.</p>
+</aside>
+<div class="proposal-label">Proposta A — Iluminura</div>
+<script src="data.js"></script>
+<script>
+  const J = JANE, C = J.chars;
+  const colIcons = { Mental: "fa-brain", Physical: "fa-hand-fist", Social: "fa-masks-theater" };
+  const cell = (key) => { const [name, value, bonus = 0] = C[key];
+    return `<div class="a-cell"><span class="a-medal">${value}</span><span class="name">${name}</span>${gems(value, { bonus })}</div>`; };
+  const skill = (s) => { const [name, value, , advanced] = s; const spec = J.specialties[name];
+    return `<div class="a-skill${value ? "" : " untrained"}"><span class="label">${name}${advanced ? '<span class="adv">✠</span>' : ""}</span><span class="leader"></span>${gems(value)}<span class="pool">${pool(s)}</span>${spec ? `<span class="spec">— ${spec}</span>` : ""}</div>`; };
+  const pct = ([v, m]) => Math.round(v / m * 100);
+
+  document.getElementById("sheet").innerHTML = `
+    <header class="a-head">
+      <div class="a-frame"><div>${portrait()}</div></div>
+      <div>
+        <h1 class="a-name">${J.name}</h1>
+        <div class="a-epithet">${J.epithet}</div>
+        <div class="a-lineage sm-caps"><a>${J.race}</a><em>✠</em><a>${J.exaltation}</a><em>✠</em>${J.cls}</div>
+        <div class="a-meta">Nível <b>${J.level}</b> · Tamanho <b>${J.size}</b> · devoto de ${J.alignment} (Devotion <b>${J.devotion}</b>)</div>
+        <div class="a-seals">${J.conditions.map((c) => `<span class="sm-seal"><span>${c}</span></span>`).join("")}<span class="sm-seal brass"><span>Black Spiral Dancers</span></span></div>
+      </div>
+      <div class="a-right">
+        <span class="sm-switch"><button>Edição</button><button class="active">Jogo</button><button>Evolução</button></span>
+        <div class="a-xp"><b>${J.xp.available}</b> / ${J.xp.total} XP</div>
+        <div class="a-power"><span class="sm-caps">${J.power.name} · Power Stat ${J.power.value}</span>${gems(J.power.pool[0], { max: J.power.pool[1] })}</div>
+      </div>
+    </header>
+
+    <div class="a-vitals">
+      <div class="a-tracks">
+        <div class="sm-track"><div class="sm-track-head"><span class="sm-caps">Hit Points</span><span class="sm-track-value"><b>${J.hp[0]}</b> / ${J.hp[1]}</span></div><div class="sm-tube"><i style="width:${pct(J.hp)}%"></i></div></div>
+        <div class="sm-track"><div class="sm-track-head"><span class="sm-caps">Resolve</span><span class="sm-track-value"><b>${J.resolve[0]}</b> / ${J.resolve[1]}</span></div><div class="sm-tube resolve"><i style="width:${pct(J.resolve)}%"></i></div></div>
+      </div>
+      <div class="a-plaques">
+        <div class="sm-plaque"><span class="sm-caps">Static Def.</span><b>${J.derived.staticDefense}</b></div>
+        <div class="sm-plaque"><span class="sm-caps">Mental Def.</span><b>${J.derived.mentalDefense}</b></div>
+        <div class="sm-plaque"><span class="sm-caps">Resilience</span><b>${J.derived.resilience}</b></div>
+      </div>
+      <div class="a-small">
+        <div><span class="sm-caps">Fatigue</span>${gems(J.fatigue[0], { max: J.fatigue[1] })}</div>
+        <div><span class="sm-caps">Hero Points</span><span>${"<i class='a-coin'></i>".repeat(J.hero[0])}${"<i class='a-coin off'></i>".repeat(J.hero[1] - J.hero[0])}</span></div>
+        <div><span class="sm-caps">Iniciativa</span><span class="sm-data">+${J.derived.initiative} · social +${J.derived.socialInitiative}</span></div>
+      </div>
+    </div>
+
+    <nav class="a-tabs">${J.tabs.map((t, i) => `<div class="a-tab${i ? "" : " active"}"><i class="fa-solid ${J.tabIcons[i]}"></i>${t}</div>`).join("")}</nav>
+
+    <h2 class="sm-title"><span class="sm-lozenge"></span>Características<span class="sm-lozenge"></span></h2>
+    <div class="a-grid">
+      <span></span>${J.grid.columns.map((c) => `<div class="a-col-head"><i class="fa-solid ${colIcons[c]}"></i>${c}</div>`).join("")}
+      ${J.grid.rows.map((r, i) => `<div class="a-row-head"><span>${r}</span></div>${J.grid.cells[i].map(cell).join("")}`).join("")}
+    </div>
+
+    <h2 class="sm-title"><span class="sm-lozenge"></span>Perícias<span class="sm-lozenge"></span></h2>
+    <div class="a-skills">${Object.entries(J.skills).map(([g, list]) => `<div><h3>${g}</h3>${list.map(skill).join("")}</div>`).join("")}</div>
+    <p class="a-foot">✠ perícia avançada: sem treino, não rola · clique no nome para rolar · a parada aparece à direita</p>`;
+  document.getElementById("card").innerHTML = rollCard();
+  themeToggle(document.getElementById("root"));
+  // The chat card follows the same theme
+  new MutationObserver(() => { document.querySelector(".chat").dataset.theme = root.dataset.theme; }).observe(root, { attributes: true });
+  document.querySelector(".chat").dataset.theme = root.dataset.theme;
+</script>
+</body>
+</html>

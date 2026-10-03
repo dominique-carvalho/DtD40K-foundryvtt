@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Proposta C — Dossiê</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Share+Tech+Mono&family=Signika:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="stage.css">
+<style>
+  /* Proposal C: an agent dossier of the Ordo. The sheet is a filed record: pict with a paper clip,
+     typed fields, rubber stamps, tick-box tracks like a paper character sheet, folder tabs on the edge. */
+  .window { width: 820px; overflow: visible; }
+  .window-header { border-radius: 6px 6px 0 0; }
+  .folder { position: relative; padding: 14px 52px 16px 14px; background: linear-gradient(var(--dtd-seal-deep), color-mix(in srgb, var(--dtd-seal-deep) 70%, #000)); border-radius: 0 0 6px 6px; }
+  [data-theme="cogitator"] .folder { background: linear-gradient(#2a3034, #181c1f); }
+  .sheet { padding: 18px 22px 20px; box-shadow: 4px 4px 0 var(--dtd-paper-edge), 0 6px 14px #0008;
+    background-image: repeating-linear-gradient(transparent 0 27px, color-mix(in srgb, var(--dtd-lapis) 12%, transparent) 27px 28px); }
+
+  /* Folder tabs on the right edge */
+  .c-tabs { position: absolute; right: 8px; top: 30px; display: grid; gap: 4px; }
+  .c-tab { writing-mode: vertical-rl; padding: 10px 5px; min-height: 64px; text-align: center;
+    font-family: var(--dtd-font-display); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--dtd-ink-muted); background: var(--dtd-paper-sunken); border: 1px solid var(--dtd-paper-edge); border-left: 0; border-radius: 0 4px 4px 0; cursor: pointer; }
+  .c-tab i { writing-mode: horizontal-tb; margin-bottom: 6px; color: var(--dtd-brass); }
+  .c-tab.active { margin-left: -6px; padding-left: 11px; color: var(--dtd-ink); background: var(--dtd-paper); box-shadow: 2px 0 0 var(--dtd-seal) inset; }
+  .c-tab.active i { color: var(--dtd-seal); }
+
+  /* Record header */
+  .c-band { display: flex; justify-content: space-between; padding-bottom: 6px; margin-bottom: 12px; border-bottom: 2px solid var(--dtd-ink); font-family: var(--dtd-font-data); font-size: 0.72rem; letter-spacing: 0.08em; color: var(--dtd-ink-muted); }
+  .c-head { position: relative; display: grid; grid-template-columns: 132px 1fr 96px; gap: 18px; }
+  .c-pict { position: relative; width: 120px; height: 146px; padding: 6px 6px 18px; background: #fbf7ee; box-shadow: 0 2px 5px #0006; transform: rotate(-2.5deg); }
+  [data-theme="cogitator"] .c-pict { background: #2a3136; }
+  .c-pict svg { width: 100%; height: 100%; display: block; }
+  .c-pict::after { content: ""; position: absolute; top: -10px; left: 18px; width: 14px; height: 38px; border: 2.5px solid #8d949a; border-radius: 8px; border-bottom-color: transparent; }
+  .c-pict span { position: absolute; bottom: 2px; left: 0; right: 0; text-align: center; font-family: var(--dtd-font-data); font-size: 0.6rem; color: #555; }
+  .c-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; align-content: start; }
+  .c-field { display: grid; gap: 0; }
+  .c-field.wide { grid-column: 1 / -1; }
+  .c-field label { font-family: var(--dtd-font-display); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dtd-ink-subtle); }
+  .c-field div { padding: 1px 2px; border-bottom: 1px solid var(--dtd-ink-subtle); font-family: var(--dtd-font-data); font-size: 0.98rem; color: var(--dtd-ink); }
+  .c-field.name div { font-family: var(--dtd-font-display); font-weight: 900; font-size: 1.7rem; letter-spacing: 0.08em; line-height: 1.1; }
+  .c-field.name div::first-letter { color: var(--dtd-seal); font-family: var(--dtd-font-initial); }
+  .c-field.name em { font-family: var(--dtd-font-body); font-weight: 400; font-size: 0.95rem; letter-spacing: 0; color: var(--dtd-ink-muted); text-transform: none; margin-left: 6px; }
+  .c-stamp { position: absolute; left: 4px; top: 108px; padding: 2px 9px; transform: rotate(-12deg);
+    font-family: var(--dtd-font-display); font-weight: 900; font-size: 1.05rem; letter-spacing: 0.16em; color: var(--dtd-seal);
+    border: 3px double var(--dtd-seal); border-radius: 4px; opacity: 0.78; mix-blend-mode: multiply; pointer-events: none; }
+  [data-theme="cogitator"] .c-stamp { mix-blend-mode: screen; text-shadow: 0 0 8px var(--dtd-seal-soft); }
+  .c-wax { display: grid; place-items: center; align-self: start; justify-self: end; width: 84px; height: 84px; border-radius: 48% 52% 50% 47%;
+    background: radial-gradient(circle at 36% 32%, #ffffff45 0 12%, transparent 30%), var(--dtd-seal); box-shadow: inset 0 0 0 5px var(--dtd-seal-deep), inset 0 0 0 7px #ffffff22, 0 2px 4px #0006; color: #fff; text-align: center; }
+  .c-wax b { display: block; font-family: var(--dtd-font-initial); font-size: 1.9rem; line-height: 0.9; }
+  .c-wax small { font-family: var(--dtd-font-display); font-size: 0.5rem; letter-spacing: 0.2em; }
+  .c-modes { margin-top: 10px; display: flex; justify-content: flex-end; }
+
+  /* Tick-box tracks */
+  .c-vitals { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 26px; margin: 16px 0 6px; padding: 10px 12px; border: 1px solid var(--dtd-ink-subtle); background: var(--dtd-paper-raised); }
+  .c-track { display: grid; grid-template-columns: 6.4rem 1fr auto; align-items: center; gap: 8px; }
+  .c-boxes { display: flex; flex-wrap: wrap; gap: 3px; }
+  .c-box { position: relative; width: 13px; height: 13px; border: 1.5px solid var(--dtd-ink); background: var(--dtd-paper); }
+  .c-box.full { background: var(--dtd-ink); }
+  .c-track.resolve .c-box.full { background: var(--dtd-lapis); border-color: var(--dtd-lapis); }
+  .c-box.lost::before, .c-box.lost::after { content: ""; position: absolute; left: -2px; right: -2px; top: 5px; height: 1.5px; background: var(--dtd-seal); transform: rotate(45deg); }
+  .c-box.lost::after { transform: rotate(-45deg); }
+  .c-num { font-family: var(--dtd-font-data); font-size: 0.85rem; color: var(--dtd-ink-muted); }
+  .c-num b { font-size: 1.05rem; color: var(--dtd-ink); font-weight: 400; }
+  .c-minis { display: flex; gap: 6px; align-items: center; }
+  .c-dw { width: 15px; height: 15px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff6 0 14%, transparent 32%), var(--dtd-seal); box-shadow: inset 0 0 0 2px var(--dtd-seal-deep); }
+  .c-dw.off { background: transparent; box-shadow: inset 0 0 0 1.5px var(--dtd-ink-subtle); }
+
+  /* Derived values: a ruled table like the official sheet */
+  .c-derived { display: grid; grid-template-columns: repeat(6, 1fr); margin: 10px 0 16px; border: 1px solid var(--dtd-ink); }
+  .c-derived div { display: grid; justify-items: center; padding: 4px 2px; border-right: 1px solid var(--dtd-ink-subtle); }
+  .c-derived div:last-child { border-right: 0; }
+  .c-derived span { font-family: var(--dtd-font-display); font-size: 0.56rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dtd-ink-subtle); }
+  .c-derived b { font-family: var(--dtd-font-data); font-weight: 400; font-size: 1.35rem; }
+
+  /* Characteristics: the official 3 × 3 table */
+  .c-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+  .c-table th { padding: 4px; font-family: var(--dtd-font-display); font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dtd-ink-inverse); background: var(--dtd-ink); }
+  .c-table th.row { width: 80px; text-align: right; padding-right: 8px; background: transparent; color: var(--dtd-ink-subtle); border: 0; }
+  .c-table td { padding: 6px 10px; border: 1px solid var(--dtd-ink-subtle); cursor: pointer; }
+  .c-table td:hover { background: var(--dtd-seal-soft); }
+  .c-table td .name { font-size: 1rem; }
+  .c-table td .val { float: right; font-family: var(--dtd-font-data); font-size: 1.15rem; }
+
+  /* Skills: typed form lines */
+  .c-skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 20px; }
+  .c-skills h3 { margin: 0 0 2px; padding-bottom: 2px; font-family: var(--dtd-font-display); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; border-bottom: 2px solid var(--dtd-ink); }
+  .c-skill { display: grid; grid-template-columns: 1fr auto; align-items: center; height: 28px; border-bottom: 1px solid var(--dtd-paper-edge); cursor: pointer; }
+  .c-skill .label { font-family: var(--dtd-font-data); font-size: 0.82rem; white-space: nowrap; }
+  .c-skill.untrained .label { color: var(--dtd-ink-subtle); }
+  .c-skill .hand { font-family: var(--dtd-font-body); font-style: italic; font-size: 0.95rem; color: var(--dtd-lapis); margin-left: 4px; }
+  .c-skill .sm-gems { --dtd-gem-size: 0.6rem; }
+  .c-skill:hover .label { color: var(--dtd-seal); }
+  .c-note { margin: 12px 0 0; font-family: var(--dtd-font-body); font-style: italic; font-size: 0.9rem; color: var(--dtd-lapis); transform: rotate(-0.6deg); }
+</style>
+</head>
+<body>
+<div class="window" id="root" data-theme="vellum">
+  <div class="window-header"><i class="fa-solid fa-user"></i> Jane <span class="spacer"></span><i class="fa-solid fa-gear"></i><i class="fa-solid fa-xmark"></i></div>
+  <div class="folder">
+    <div class="sheet sm-surface" id="sheet"></div>
+    <nav class="c-tabs" id="tabs"></nav>
+  </div>
+</div>
+<aside class="chat">
+  <div><div class="msg-head"><span>Jane</span><span>agora</span></div><div id="card"></div></div>
+  <p class="note">No tema escuro o dossiê vira uma dataslate: a mesma ficha, com o papel pautado trocado por vidro escuro.</p>
+</aside>
+<div class="proposal-label">Proposta C — Dossiê</div>
+<script src="data.js"></script>
+<script>
+  const J = JANE, C = J.chars;
+  const boxes = ([v, m], cls = "") => `<span class="c-boxes">${Array.from({ length: m }, (_, i) => `<i class="c-box ${i < v ? "full" : "lost"}"></i>`).join("")}</span>`;
+  const skill = (s) => { const [name, value] = s; const spec = J.specialties[name];
+    return `<div class="c-skill${value ? "" : " untrained"}" title="${pool(s)}"><span class="label">${name}${spec ? `<span class="hand">${spec}</span>` : ""}</span>${gems(value)}</div>`; };
+
+  document.getElementById("sheet").innerHTML = `
+    <div class="c-band"><span>ORDO DRAGONIS · REGISTRO DE AGENTE</span><span>Nº 0001-JN · NÍVEL DE ACESSO: VERMILLION</span></div>
+    <div class="c-head">
+      <div class="c-pict">${portrait()}<span>PICT 0001</span></div>
+      <div class="c-fields">
+        <div class="c-field name wide"><label>Designação</label><div>${J.name}<em>${J.epithet}</em></div></div>
+        <div class="c-field"><label>Espécie</label><div>${J.race}</div></div>
+        <div class="c-field"><label>Exaltação</label><div>${J.exaltation} · ${J.power.name} ${J.power.value}</div></div>
+        <div class="c-field"><label>Função</label><div>${J.cls}</div></div>
+        <div class="c-field"><label>Patrono</label><div>${J.alignment} · Devotion ${J.devotion}</div></div>
+        <div class="c-field"><label>Tamanho</label><div>${J.size}</div></div>
+        <div class="c-field"><label>Experiência</label><div>${J.xp.available} / ${J.xp.total}</div></div>
+      </div>
+      <div>
+        <div class="c-wax"><div><b>${J.level}</b><small>NÍVEL</small></div></div>
+        <div class="c-modes"><span class="sm-switch"><button title="Edição"><i class="fa-solid fa-pen"></i></button><button class="active" title="Jogo"><i class="fa-solid fa-dice-d10"></i></button><button title="Evolução"><i class="fa-solid fa-arrow-up"></i></button></span></div>
+      </div>
+      <div class="c-stamp">EXALTADO</div>
+    </div>
+
+    <div class="c-vitals">
+      <div class="c-track"><span class="sm-caps">Hit Points</span>${boxes(J.hp)}<span class="c-num"><b>${J.hp[0]}</b>/${J.hp[1]}</span></div>
+      <div class="c-track resolve"><span class="sm-caps">Resolve</span>${boxes(J.resolve)}<span class="c-num"><b>${J.resolve[0]}</b>/${J.resolve[1]}</span></div>
+      <div class="c-track"><span class="sm-caps">Fatigue</span>${boxes([J.fatigue[0], J.fatigue[1]]).replace(/lost/g, "x").replace(/full/g, "lost").replace(/"c-box x"/g, '"c-box"')}<span class="c-num"><b>${J.fatigue[0]}</b>/${J.fatigue[1]}</span></div>
+      <div class="c-track"><span class="sm-caps">Hero · ${J.power.name}</span><span class="c-minis">${"<i class='c-dw'></i>".repeat(J.hero[0])}${"<i class='c-dw off'></i>".repeat(J.hero[1] - J.hero[0])}<span style="width:10px"></span>${gems(J.power.pool[0], { max: J.power.pool[1] })}</span><span>${J.conditions.map((c) => `<span class="sm-seal"><span>${c}</span></span>`).join("")}</span></div>
+    </div>
+
+    <div class="c-derived">
+      <div><span>Static Def.</span><b>${J.derived.staticDefense}</b></div><div><span>Mental Def.</span><b>${J.derived.mentalDefense}</b></div>
+      <div><span>Resilience</span><b>${J.derived.resilience}</b></div><div><span>Iniciativa</span><b>+${J.derived.initiative}</b></div>
+      <div><span>Social</span><b>+${J.derived.socialInitiative}</b></div><div><span>Movimento</span><b>${J.derived.move}</b></div>
+    </div>
+
+    <table class="c-table">
+      <tr><th class="row"></th>${J.grid.columns.map((c) => `<th>${c}</th>`).join("")}</tr>
+      ${J.grid.rows.map((r, i) => `<tr><th class="row">${r}</th>${J.grid.cells[i].map((k) => { const [n, v, b = 0] = C[k]; return `<td><span class="name">${n}</span><span class="val">${v}</span><br>${gems(v, { bonus: b })}</td>`; }).join("")}</tr>`).join("")}
+    </table>
+
+    <div class="c-skills">${Object.entries(J.skills).map(([g, list]) => `<div><h3>${g}</h3>${list.map(skill).join("")}</div>`).join("")}</div>
+    <p class="c-note">Anotação do Inquisidor: "Garras perigosas. Não deixar perto do Malal."</p>`;
+  document.getElementById("tabs").innerHTML = J.tabs.map((t, i) => `<div class="c-tab${i ? "" : " active"}"><i class="fa-solid ${J.tabIcons[i]}"></i>${t.replace("Características e Perícias", "Perícias")}</div>`).join("");
+  document.getElementById("card").innerHTML = rollCard();
+  themeToggle(document.getElementById("root"));
+  const sync = () => { document.querySelector(".chat").dataset.theme = root.dataset.theme; };
+  new MutationObserver(sync).observe(root, { attributes: true }); sync();
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Proposta B — Cogitador</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Share+Tech+Mono&family=Signika:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="stage.css">
+<style>
+  /* Proposal B: a sacred cogitator console. Vitals live in a fixed side rail that never scrolls away;
+     numbers are machine readouts; characteristics are riveted modules; skills are a dense, rollable table. */
+  .window { width: 900px; }
+  .sheet { display: grid; grid-template-columns: 212px minmax(0, 1fr); min-height: 860px; }
+
+  /* Circuit trace divider */
+  .trace { height: 9px; margin: 10px 0; background:
+    radial-gradient(circle, var(--dtd-brass) 2.5px, transparent 3px) left center / 9px 9px no-repeat,
+    radial-gradient(circle, var(--dtd-brass) 2.5px, transparent 3px) right center / 9px 9px no-repeat,
+    linear-gradient(var(--dtd-brass), var(--dtd-brass)) center / calc(100% - 12px) 1px no-repeat; opacity: 0.75; }
+
+  /* Side rail */
+  .b-rail { padding: 16px 14px; background: var(--dtd-paper-sunken); border-right: 2px solid var(--dtd-iron); box-shadow: inset -6px 0 12px #0002; }
+  .b-portrait { position: relative; width: 150px; height: 150px; margin: 0 auto; padding: 4px; background: var(--dtd-iron);
+    clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%); }
+  .b-portrait > div { width: 100%; height: 100%; overflow: hidden; clip-path: inherit; background: var(--dtd-paper); }
+  .b-portrait svg { width: 100%; height: 100%; display: block; }
+  .b-portrait::after { content: ""; position: absolute; inset: 4px; clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+    background: repeating-linear-gradient(0deg, #0000 0 2px, #0002 2px 3px); pointer-events: none; }
+  [data-theme="cogitator"] .b-portrait::after { background: repeating-linear-gradient(0deg, #0000 0 2px, #62f08f14 2px 3px); }
+  .b-name { margin: 10px 0 0; text-align: center; font-family: var(--dtd-font-display); font-weight: 900; font-size: 1.7rem; letter-spacing: 0.1em; }
+  .b-name::first-letter { color: var(--dtd-seal); }
+  .b-epithet { text-align: center; font-style: italic; color: var(--dtd-ink-muted); font-size: 0.92rem; }
+  .b-kv { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; margin-top: 10px; font-family: var(--dtd-font-data); font-size: 0.8rem; }
+  .b-kv dt { color: var(--dtd-ink-subtle); }
+  .b-kv dd { margin: 0; text-align: right; color: var(--dtd-ink); }
+  [data-theme="cogitator"] .b-kv dd { color: var(--dtd-phosphor); text-shadow: 0 0 6px var(--dtd-phosphor-glow); }
+  .b-read { display: flex; justify-content: space-between; align-items: baseline; }
+  .b-read b { font-family: var(--dtd-font-data); font-weight: 400; font-size: 1.6rem; line-height: 1; }
+  .b-read small { font-family: var(--dtd-font-data); color: var(--dtd-ink-subtle); }
+  .b-vital { margin-bottom: 10px; }
+  .b-vital .sm-tube { height: 0.8rem; margin-top: 3px; }
+  .b-leds { display: flex; gap: 3px; }
+  .b-led { width: 12px; height: 12px; border: 1px solid var(--dtd-iron); background: var(--dtd-paper); }
+  .b-led.on { background: var(--dtd-brass-bright); box-shadow: 0 0 6px var(--dtd-brass-bright); }
+  .b-led.warn.on { background: var(--dtd-warning); box-shadow: 0 0 6px var(--dtd-warning); }
+  .b-line { display: flex; justify-content: space-between; align-items: center; margin: 7px 0; }
+  .b-seals { display: grid; gap: 6px; justify-items: start; }
+  .b-odo { display: flex; gap: 2px; justify-content: center; margin-top: 6px; font-family: var(--dtd-font-data); font-size: 1.1rem; }
+  .b-odo span { width: 1.1rem; padding: 2px 0; text-align: center; background: var(--dtd-ink); color: var(--dtd-paper); }
+  [data-theme="cogitator"] .b-odo span { background: #000; color: var(--dtd-phosphor); text-shadow: 0 0 6px var(--dtd-phosphor-glow); border: 1px solid var(--dtd-iron); }
+  .b-odo em { align-self: center; margin: 0 4px; font-style: normal; color: var(--dtd-ink-subtle); font-size: 0.85rem; }
+
+  /* Main column */
+  .b-main { min-width: 0; padding: 14px 16px 18px; }
+  .b-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .b-gauges { display: flex; gap: 6px; }
+  .b-gauge { display: grid; justify-items: center; min-width: 3.4rem; padding: 3px 6px; border: 1px solid var(--dtd-iron); background: var(--dtd-paper-sunken); box-shadow: var(--dtd-shadow-inset); }
+  .b-gauge span { font-family: var(--dtd-font-display); font-size: 0.55rem; font-weight: 700; letter-spacing: 0.12em; color: var(--dtd-ink-subtle); text-transform: uppercase; }
+  .b-gauge b { font-family: var(--dtd-font-data); font-weight: 400; font-size: 1.25rem; line-height: 1.1; }
+  [data-theme="cogitator"] .b-gauge b { color: var(--dtd-phosphor); text-shadow: 0 0 6px var(--dtd-phosphor-glow); }
+
+  .b-tabs { display: flex; gap: 4px; margin: 12px 0 14px; padding: 4px; background: var(--dtd-iron); border-radius: var(--dtd-radius); }
+  .b-tab { position: relative; flex: 1; display: grid; justify-items: center; gap: 2px; padding: 8px 2px 5px;
+    font-family: var(--dtd-font-display); font-size: 0.56rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--dtd-ink-muted); background: linear-gradient(var(--dtd-paper-raised), var(--dtd-paper-sunken)); border-radius: 1px; cursor: pointer; }
+  .b-tab i { font-size: 0.95rem; color: var(--dtd-ink-subtle); }
+  .b-tab::before { content: ""; position: absolute; top: 3px; width: 14px; height: 3px; border-radius: 2px; background: var(--dtd-paper-edge); }
+  .b-tab.active { color: var(--dtd-ink); background: var(--dtd-paper-raised); box-shadow: inset 0 0 0 1px var(--dtd-brass); }
+  .b-tab.active i { color: var(--dtd-seal); }
+  .b-tab.active::before { background: var(--dtd-phosphor); box-shadow: 0 0 6px var(--dtd-phosphor); }
+
+  .b-mods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .b-mod { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto auto; align-items: end; padding: 9px 12px 9px; cursor: pointer; }
+  .b-mod:hover { box-shadow: 0 0 0 1px var(--dtd-brass-bright), var(--dtd-shadow); }
+  .b-mod .axis { grid-column: 1 / -1; font-family: var(--dtd-font-data); font-size: 0.62rem; color: var(--dtd-ink-subtle); letter-spacing: 0.06em; }
+  .b-mod .name { font-family: var(--dtd-font-display); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .b-mod b { grid-row: 2 / 4; grid-column: 2; font-family: var(--dtd-font-data); font-weight: 400; font-size: 2rem; line-height: 0.9; }
+  [data-theme="cogitator"] .b-mod b { color: var(--dtd-phosphor); text-shadow: 0 0 8px var(--dtd-phosphor-glow); }
+  .b-mod .sm-gems { margin-top: 4px; }
+
+  .b-table { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 6px; }
+  .b-group h3 { display: flex; justify-content: space-between; margin: 0 0 4px; padding: 3px 6px; font-family: var(--dtd-font-display); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dtd-ink-inverse); background: var(--dtd-iron); }
+  .b-group h3 span { font-family: var(--dtd-font-data); letter-spacing: 0; opacity: 0.8; }
+  .b-row { display: grid; grid-template-columns: 1fr auto auto; gap: 6px; align-items: center; padding: 3px 4px; border-bottom: 1px solid var(--dtd-paper-edge); font-size: 0.9rem; }
+  .b-row:nth-child(odd) { background: #0000000a; }
+  [data-theme="cogitator"] .b-row:nth-child(odd) { background: #ffffff06; }
+  .b-row.untrained .label { color: var(--dtd-ink-subtle); }
+  .b-row .label small { color: var(--dtd-lapis); font-style: italic; }
+  .b-row .sm-gems { --dtd-gem-size: 0.52rem; gap: 2px; }
+  .b-row .label { line-height: 1.1; }
+  .b-roll { min-width: 3.1rem; padding: 1px 5px; font-family: var(--dtd-font-data); font-size: 0.74rem; text-align: center;
+    color: var(--dtd-ink); background: var(--dtd-paper-raised); border: 1px solid var(--dtd-paper-edge); cursor: pointer; }
+  .b-roll:hover { border-color: var(--dtd-seal); color: var(--dtd-seal); }
+  .b-roll.none { opacity: 0.4; cursor: not-allowed; }
+  .b-hint { margin-top: 10px; font-family: var(--dtd-font-data); font-size: 0.7rem; color: var(--dtd-ink-subtle); }
+</style>
+</head>
+<body>
+<div class="window" id="root" data-theme="cogitator">
+  <div class="window-header"><i class="fa-solid fa-user"></i> Jane <span class="spacer"></span><i class="fa-solid fa-gear"></i><i class="fa-solid fa-xmark"></i></div>
+  <div class="sheet sm-surface" id="sheet"></div>
+</div>
+<aside class="chat">
+  <div><div class="msg-head"><span>Jane</span><span>agora</span></div><div id="card"></div></div>
+  <p class="note">Aqui o tema escuro é o de referência: leituras em fósforo, placas rebitadas. No claro, a mesma ficha vira um painel de latão e marfim.</p>
+</aside>
+<div class="proposal-label">Proposta B — Cogitador</div>
+<script src="data.js"></script>
+<script>
+  const J = JANE, C = J.chars;
+  const short = ["Perícias", "Traços", "Equip.", "Combate", "Magia", "Marcial", "Classe/XP"];
+  const pct = ([v, m]) => Math.round(v / m * 100);
+  const leds = (v, m, warn) => `<span class="b-leds">${Array.from({ length: m }, (_, i) => `<i class="b-led${warn ? " warn" : ""}${i < v ? " on" : ""}"></i>`).join("")}</span>`;
+  const pad = (n) => String(n).padStart(3, "0").split("").map((d) => `<span>${d}</span>`).join("");
+  const mod = (key, r, c) => { const [name, value, bonus = 0] = C[key];
+    return `<div class="b-mod sm-panel riveted"><span class="axis">${J.grid.rows[r].toUpperCase()} · ${J.grid.columns[c].toUpperCase()}</span><span class="name">${name}</span><b>${value}</b>${gems(value, { bonus })}</div>`; };
+  const row = (s) => { const [name, value] = s; const p = pool(s); const spec = J.specialties[name];
+    return `<div class="b-row${value ? "" : " untrained"}"><span class="label">${name}${spec ? ` <small>${spec}</small>` : ""}</span>${gems(value)}<button class="b-roll${p === "—" ? " none" : ""}">${p === "—" ? "—" : p + " ▸"}</button></div>`; };
+
+  document.getElementById("sheet").innerHTML = `
+    <aside class="b-rail">
+      <div class="b-portrait"><div>${portrait()}</div></div>
+      <h1 class="b-name">${J.name}</h1>
+      <div class="b-epithet">${J.epithet}</div>
+      <dl class="b-kv"><dt>RACE</dt><dd>${J.race}</dd><dt>EXALT</dt><dd>${J.exaltation}</dd><dt>CLASS</dt><dd>${J.cls}</dd><dt>LEVEL · SIZE</dt><dd>${J.level} · ${J.size}</dd><dt>PATRON</dt><dd>${J.alignment} · ${J.devotion}</dd></dl>
+      <div class="trace"></div>
+      <div class="b-vital"><div class="b-read"><span class="sm-caps">Hit Points</span><span><b>${J.hp[0]}</b><small>/${J.hp[1]}</small></span></div><div class="sm-tube"><i style="width:${pct(J.hp)}%"></i></div></div>
+      <div class="b-vital"><div class="b-read"><span class="sm-caps">Resolve</span><span><b>${J.resolve[0]}</b><small>/${J.resolve[1]}</small></span></div><div class="sm-tube resolve"><i style="width:${pct(J.resolve)}%"></i></div></div>
+      <div class="b-line"><span class="sm-caps">Fatigue</span>${leds(J.fatigue[0], J.fatigue[1], true)}</div>
+      <div class="b-line"><span class="sm-caps">Hero Points</span>${leds(J.hero[0], J.hero[1])}</div>
+      <div class="b-line"><span class="sm-caps">${J.power.name} (PS ${J.power.value})</span>${gems(J.power.pool[0], { max: J.power.pool[1] })}</div>
+      <div class="trace"></div>
+      <div class="b-seals">${J.conditions.map((c) => `<span class="sm-seal"><span>${c}</span></span>`).join("")}<span class="sm-seal brass"><span>Black Spiral Dancers</span></span></div>
+      <div class="trace"></div>
+      <div class="sm-caps" style="text-align:center">Experiência</div>
+      <div class="b-odo">${pad(J.xp.available)}<em>/</em>${pad(J.xp.total)}</div>
+    </aside>
+    <main class="b-main">
+      <div class="b-top">
+        <div class="b-gauges">
+          <div class="b-gauge"><span>Static</span><b>${J.derived.staticDefense}</b></div>
+          <div class="b-gauge"><span>Mental</span><b>${J.derived.mentalDefense}</b></div>
+          <div class="b-gauge"><span>Resil.</span><b>${J.derived.resilience}</b></div>
+          <div class="b-gauge"><span>Init.</span><b>+${J.derived.initiative}</b></div>
+          <div class="b-gauge"><span>Move</span><b>${J.derived.move}</b></div>
+        </div>
+        <span class="sm-switch"><button>Edição</button><button class="active">Jogo</button><button>Evolução</button></span>
+      </div>
+      <nav class="b-tabs">${short.map((t, i) => `<div class="b-tab${i ? "" : " active"}"><i class="fa-solid ${J.tabIcons[i]}"></i>${t}</div>`).join("")}</nav>
+      <h2 class="sm-title"><span class="sm-lozenge"></span>Características<span class="sm-lozenge"></span></h2>
+      <div class="b-mods">${J.grid.cells.map((cells, r) => cells.map((k, c) => mod(k, r, c)).join("")).join("")}</div>
+      <div class="trace"></div>
+      <h2 class="sm-title"><span class="sm-lozenge"></span>Perícias<span class="sm-lozenge"></span></h2>
+      <div class="b-table">${Object.entries(J.skills).map(([g, list]) => `<div class="b-group"><h3>${g}<span>${list.filter((s) => s[1]).length}/${list.length}</span></h3>${list.map(row).join("")}</div>`).join("")}</div>
+      <p class="b-hint">&gt; o botão de cada perícia já mostra a parada (perícia + característica k característica) e rola com um clique</p>
+    </main>`;
+  document.getElementById("card").innerHTML = rollCard();
+  themeToggle(document.getElementById("root"));
+  const sync = () => { document.querySelector(".chat").dataset.theme = root.dataset.theme; };
+  new MutationObserver(sync).observe(root, { attributes: true }); sync();
+</script>
+</body>
+</html>

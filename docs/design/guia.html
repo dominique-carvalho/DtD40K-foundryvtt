@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Scriptorium Machina — guia visual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<style>
+  body { margin: 0; background: #555; font-family: var(--dtd-font-body); }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
+  .sheet { padding: 1.5rem 1.75rem 2rem; }
+  h1 { margin: 0; font-family: var(--dtd-font-display); font-weight: 900; font-size: 1.9rem; letter-spacing: 0.1em; }
+  h1 small { display: block; font-family: var(--dtd-font-body); font-weight: 400; font-style: italic; font-size: 1rem; letter-spacing: 0; color: var(--dtd-ink-muted); text-transform: none; }
+  section { margin-top: 1.4rem; }
+  .row { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+  .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
+  .sw { border: 1px solid var(--dtd-paper-edge); }
+  .sw i { display: block; height: 2.6rem; }
+  .sw span { display: block; padding: 0.2rem 0.35rem; font-family: var(--dtd-font-data); font-size: 0.68rem; color: var(--dtd-ink-muted); }
+  .type > div { display: flex; align-items: baseline; gap: 0.8rem; margin-bottom: 0.3rem; }
+  .type .sm-caps { width: 5.5rem; flex: none; }
+  .skill { display: flex; align-items: center; gap: 0.5rem; width: 100%; }
+  .skill .leader { flex: 1; border-bottom: 1px dotted var(--dtd-ink-subtle); transform: translateY(-3px); }
+</style>
+</head>
+<body>
+<div class="cols">
+  <!-- Two identical columns; only data-theme changes -->
+  <template id="guide">
+    <div class="sheet sm-surface">
+      <h1 class="sm-initial"><span class="label"></span><small class="sub"></small></h1>
+
+      <section>
+        <h2 class="sm-title"><span class="sm-lozenge"></span>Cores<span class="sm-lozenge"></span></h2>
+        <div class="swatches">
+          <div class="sw"><i style="background:var(--dtd-paper)"></i><span>paper</span></div>
+          <div class="sw"><i style="background:var(--dtd-paper-raised)"></i><span>paper-raised</span></div>
+          <div class="sw"><i style="background:var(--dtd-paper-sunken)"></i><span>paper-sunken</span></div>
+          <div class="sw"><i style="background:var(--dtd-ink)"></i><span>ink</span></div>
+          <div class="sw"><i style="background:var(--dtd-seal)"></i><span>seal · lacre</span></div>
+          <div class="sw"><i style="background:var(--dtd-brass)"></i><span>brass · latão</span></div>
+          <div class="sw"><i style="background:var(--dtd-phosphor)"></i><span>phosphor · fósforo</span></div>
+          <div class="sw"><i style="background:var(--dtd-lapis)"></i><span>lapis · lápis-lazúli</span></div>
+        </div>
+      </section>
+
+      <section class="type">
+        <h2 class="sm-title"><span class="sm-lozenge"></span>Tipografia<span class="sm-lozenge"></span></h2>
+        <div><span class="sm-caps">Display</span><span class="sm-display" style="font-size:1.3rem">Aldred Kain</span></div>
+        <div><span class="sm-caps">Capitular</span><span style="font-family:var(--dtd-font-initial);font-size:1.6rem;color:var(--dtd-seal)">D</span></div>
+        <div><span class="sm-caps">Texto</span><span>O Imperador protege; o dragão, nem tanto.</span></div>
+        <div><span class="sm-caps">Dados</span><span class="sm-data">8k4 · TN 15 · 27/32</span></div>
+      </section>
+
+      <section>
+        <h2 class="sm-title"><span class="sm-lozenge"></span>Gemas (dots)<span class="sm-lozenge"></span></h2>
+        <div class="skill"><span>Brawl</span><span class="leader"></span>
+          <span class="sm-gems"><i class="sm-gem on"></i><i class="sm-gem on"></i><i class="sm-gem on"></i><i class="sm-gem on"></i><i class="sm-gem"></i></span></div>
+        <div class="skill"><span>Strength (exceção: 6)</span><span class="leader"></span>
+          <span class="sm-gems"><i class="sm-gem on"></i><i class="sm-gem on"></i><i class="sm-gem on"></i><i class="sm-gem on"></i><i class="sm-gem on"></i><i class="sm-gem six on"></i></span></div>
+        <div class="skill"><span>Bônus de raça</span><span class="leader"></span>
+          <span class="sm-gems"><i class="sm-gem on"></i><i class="sm-gem on bonus"></i><i class="sm-gem"></i><i class="sm-gem"></i><i class="sm-gem"></i></span></div>
+      </section>
+
+      <section>
+        <h2 class="sm-title"><span class="sm-lozenge"></span>Selos<span class="sm-lozenge"></span></h2>
+        <div class="row">
+          <span class="sm-seal"><span>Pinned</span></span>
+          <span class="sm-seal"><span>On Fire</span></span>
+          <span class="sm-seal brass"><span>Exalted Asset</span></span>
+          <span class="sm-seal machine"><span>Automático</span></span>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sm-title"><span class="sm-lozenge"></span>Recursos e valores<span class="sm-lozenge"></span></h2>
+        <div class="sm-track">
+          <div class="sm-track-head"><span class="sm-caps">Hit Points</span><span class="sm-track-value"><b>27</b> / 32</span></div>
+          <div class="sm-tube"><i style="width:84%"></i></div>
+        </div>
+        <div class="sm-track" style="margin-top:.5rem">
+          <div class="sm-track-head"><span class="sm-caps">Resolve</span><span class="sm-track-value"><b>4</b> / 7</span></div>
+          <div class="sm-tube resolve"><i style="width:57%"></i></div>
+        </div>
+        <div class="row" style="margin-top:.7rem">
+          <div class="sm-plaque"><span class="sm-caps">Static Def.</span><b>31</b></div>
+          <div class="sm-plaque"><span class="sm-caps">Mental Def.</span><b>19</b></div>
+          <div class="sm-plaque"><span class="sm-caps">Resilience</span><b>6</b></div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sm-title"><span class="sm-lozenge"></span>Controles<span class="sm-lozenge"></span></h2>
+        <div class="row">
+          <button class="sm-btn primary">Rolar</button>
+          <button class="sm-btn">Aplicar dano</button>
+          <button class="sm-btn ghost">Cancelar</button>
+          <span class="sm-switch"><button>Edição</button><button class="active">Jogo</button><button>Evolução</button></span>
+          <input class="sm-input" value="12">
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sm-title"><span class="sm-lozenge"></span>Painéis<span class="sm-lozenge"></span></h2>
+        <div class="row" style="align-items:stretch">
+          <div class="sm-panel" style="flex:1">Painel com cantoneiras (gótico).</div>
+          <div class="sm-panel riveted" style="flex:1">Placa rebitada (máquina).</div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sm-title"><span class="sm-lozenge"></span>Cartão de chat<span class="sm-lozenge"></span></h2>
+        <div class="sm-card sm-surface">
+          <div class="sm-card-head"><h3>Brawl · Dexterity</h3><span class="sm-data">8k4</span></div>
+          <div class="sm-card-body">
+            <ol class="sm-dice">
+              <li class="sm-die exploded">10+6</li><li class="sm-die kept">9</li><li class="sm-die kept">8</li><li class="sm-die kept">7</li>
+              <li class="sm-die dropped">5</li><li class="sm-die dropped">3</li><li class="sm-die dropped">2</li><li class="sm-die dropped">1</li>
+            </ol>
+            <div class="sm-total"><span class="sm-caps">Total · TN 15</span><strong>40</strong></div>
+            <div class="sm-outcome">Sucesso · 5 raises</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </template>
+</div>
+<script>
+  const cols = document.querySelector(".cols"), tpl = document.getElementById("guide");
+  for (const [theme, label, sub] of [["vellum", "Vellum", "Tema claro — gótico imperial"], ["cogitator", "Cogitator", "Tema escuro — grimório tech"]]) {
+    const node = tpl.content.firstElementChild.cloneNode(true);
+    node.dataset.theme = theme;
+    node.querySelector(".label").textContent = label;
+    node.querySelector(".sub").textContent = sub;
+    cols.append(node);
+  }
+</script>
+</body>
+</html>

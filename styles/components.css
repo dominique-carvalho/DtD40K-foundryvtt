@@ -30,8 +30,16 @@
   color: var(--dtd-header-ink);
 }
 
+/* Header controls: plain icons in the bar's colour (the icon is the button's own Font Awesome class) */
 .application.dtd40k .window-header :is(button, .header-control) {
   color: var(--dtd-header-ink);
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.application.dtd40k .window-header :is(button, .header-control):hover {
+  color: var(--dtd-brass-bright);
 }
 
 /* ---------- Typography ---------- */
@@ -278,7 +286,8 @@
 
 /* ---------- Controls ---------- */
 
-.dtd40k button {
+/* Text buttons only: icon buttons carry their glyph in a Font Awesome class and must keep its font */
+.dtd40k button:not(.icon, [class*="fa-"]) {
   font-family: var(--dtd-font-display);
   font-size: var(--dtd-text-xs);
   font-weight: 700;
@@ -314,6 +323,8 @@
 }
 
 .dtd40k .mode-toggle .mode-button {
+  min-width: 0;
+  opacity: 1;
   margin: 0;
   border: 0;
   border-right: 1px solid var(--dtd-paper-edge);

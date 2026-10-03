@@ -97,6 +97,10 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
 - **Munição**: tiros no pente e pentes de reserva por arma, gasto por tiro, rajada (ROF efetivo com o que restar) e
   Suppressing Fire, lançadores gastando a granada ou o míssil, recarga pelo tempo da arma com progresso, emperrar
   travando a arma até o Clear Jam.
+- **Visual Scriptorium Machina**: ficha de personagem em dois layouts, Cogitador (padrão: trilho lateral com os
+  recursos sempre à vista) e Iluminura (página de códice), escolhidos no menu de ficha; cartões de chat com dados em
+  facetas de d10; variantes clara (pergaminho) e escura (cogitador) que seguem o tema do Foundry; fontes livres
+  empacotadas. Detalhes em `docs/design-system.md`.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos

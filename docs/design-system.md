@@ -112,13 +112,20 @@ espaçamento de 0.08 a 0.16em.
 
 ## 6. Aplicação no sistema
 
-1. `styles/tokens.css`: os tokens sob `.dtd40k` (Vellum) e `.dtd40k.themed.theme-dark`, `.theme-dark .dtd40k`
-   (Cogitator). Os cartões de chat seguem o tema do chat.
-2. `fonts/` com as quatro famílias e um `@font-face` no CSS do sistema.
-3. As variáveis atuais (`--dtd-text`, `--dtd-accent`, `--dtd-hp`, `--dtd-resolve`) passam a apontar para os tokens. A
-   troca é incremental, uma ficha e um cartão por vez.
-4. As classes dos componentes ganham o visual sem mudar a estrutura dos templates sempre que possível. A ficha
-   escolhida entre as propostas abaixo é a que muda de layout.
+Implementado na feature 021. A fonte da verdade é o CSS do sistema; `docs/design/` fica como referência visual.
+
+| Arquivo | Papel |
+|---|---|
+| `fonts/` + `styles/fonts.css` | as quatro famílias OFL (8 `.woff2`, 130 KB) e as licenças |
+| `styles/tokens.css` | Vellum (tema claro) e Cogitator (tema escuro); o tema da janela vence o da página; os nomes antigos (`--dtd-text`, `--dtd-border`, `--dtd-accent`…) são aliases; as variáveis do Foundry dentro do sistema apontam para os tokens |
+| `styles/dtd40k.css` | o CSS de antes, só com tokens |
+| `styles/components.css` | janelas, títulos, gemas (`.dot`), selos (`.tag`, `.feat-badge`, `.automation-tag`), placas (`.stat-box`), tubos, abas, botões e campos |
+| `styles/chat.css` | os cartões de chat, pela raiz de cada um |
+| `styles/sheet-cogitator.css`, `styles/sheet-illuminated.css` | os dois layouts da ficha de personagem |
+
+As fichas de personagem são `CogitatorSheet` (padrão) e `IlluminatedSheet`, subclasses de `CharacterSheet`; a escolha
+é pelo menu de ficha do Foundry. O teste `tests/unit/design-tokens.test.mjs` confere o contraste dos tokens e os
+arquivos de estilo e de fontes.
 
 ## 7. Propostas para a ficha de personagem
 

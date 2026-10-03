@@ -35,7 +35,7 @@ quickstart.md
 - [X] T005 `styles/components.css`: gemas sobre `.dot` (`.filled`, `.superhuman`, `.racial`, `.locked`), `.section-title` com filete, selos (`.tag`, `.automation-tag`, `.feat-badge`), botões, campos, painéis, grão do papel
 - [X] T006 `styles/dtd40k.css`: trocar hex e `--color-*` diretos por tokens (lista do inventário); tirar as regras de chat que nunca casam (vão para T014)
 - [X] T007 `module/apps/character-sheet.mjs`: `context.rail` (condições, XP, Power Stat, ícones das abas) (R5)
-- [ ] T008 Rodar `npm test` e `npm run lint`
+- [X] T008 Rodar `npm test` e `npm run lint`
 
 ---
 

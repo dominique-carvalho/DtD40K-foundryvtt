@@ -140,7 +140,8 @@
 .dtd40k.layout-cogitator .cog-ident dd {
   margin: 0;
   text-align: right;
-  color: var(--dtd-ink);
+  color: var(--dtd-readout);
+  text-shadow: 0 0 6px var(--dtd-phosphor-glow);
   overflow-wrap: anywhere;
 }
 
@@ -149,11 +150,6 @@
   height: 1.4rem;
 }
 
-.dtd40k.dtd40k.theme-dark.layout-cogitator .cog-ident dd,
-.theme-dark .dtd40k.layout-cogitator .cog-ident dd {
-  color: var(--dtd-phosphor);
-  text-shadow: 0 0 6px var(--dtd-phosphor-glow);
-}
 
 /* Circuit trace divider */
 .dtd40k.layout-cogitator .cog-trace {
@@ -279,17 +275,12 @@
   font-family: var(--dtd-font-data);
   font-size: 1.1rem;
   letter-spacing: 0.12em;
-  color: var(--dtd-ink-inverse);
-  background: var(--dtd-ink);
-}
-
-.dtd40k.dtd40k.theme-dark.layout-cogitator .cog-odo,
-.theme-dark .dtd40k.layout-cogitator .cog-odo {
-  color: var(--dtd-phosphor);
-  background: #000;
+  color: var(--dtd-odo-ink);
+  background: var(--dtd-odo-bg);
   border: 1px solid var(--dtd-iron);
   text-shadow: 0 0 6px var(--dtd-phosphor-glow);
 }
+
 
 .dtd40k.layout-cogitator .cog-odo em {
   margin: 0 0.25rem;
@@ -337,13 +328,10 @@
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.1;
-}
-
-.dtd40k.dtd40k.theme-dark.layout-cogitator .cog-gauge b,
-.theme-dark .dtd40k.layout-cogitator .cog-gauge b {
-  color: var(--dtd-phosphor);
+  color: var(--dtd-readout);
   text-shadow: 0 0 6px var(--dtd-phosphor-glow);
 }
+
 
 .dtd40k.layout-cogitator nav.cog-tabs {
   display: flex;
@@ -476,13 +464,10 @@
   font-size: 2rem;
   font-weight: 400;
   line-height: 0.9;
-}
-
-.dtd40k.dtd40k.theme-dark.layout-cogitator .cog-module-value,
-.theme-dark .dtd40k.layout-cogitator .cog-module-value {
-  color: var(--dtd-phosphor);
+  color: var(--dtd-readout);
   text-shadow: 0 0 8px var(--dtd-phosphor-glow);
 }
+
 
 .dtd40k.layout-cogitator .cog-module > .trait-row {
   grid-area: row;
@@ -528,13 +513,9 @@
 }
 
 .dtd40k.layout-cogitator .cog-skill-group .trait.skill:nth-child(odd) {
-  background: #0000000a;
+  background: var(--dtd-zebra);
 }
 
-.dtd40k.dtd40k.theme-dark.layout-cogitator .cog-skill-group .trait.skill:nth-child(odd),
-.theme-dark .dtd40k.layout-cogitator .cog-skill-group .trait.skill:nth-child(odd) {
-  background: #ffffff06;
-}
 
 .dtd40k.layout-cogitator .cog-skill-group .trait-row {
   display: grid;
@@ -594,4 +575,29 @@
 
 .dtd40k.layout-cogitator .cog-skill-group .specialties {
   margin: 0.1rem 0 0.1rem 0.4rem;
+}
+
+/* Play and advance modes: the footer only has the stats shown in the readouts */
+.dtd40k.layout-cogitator:not(.mode-edit) .window-content > .sheet-footer {
+  display: none;
+}
+
+.dtd40k.layout-cogitator .cog-rail {
+  overflow-x: hidden;
+}
+
+/* Skill names wrap instead of being cut */
+.dtd40k.layout-cogitator .cog-skill-group .trait-name {
+  overflow: visible;
+  white-space: normal;
+  text-overflow: clip;
+}
+
+.dtd40k.layout-cogitator .cog-skill-group .trait-char {
+  display: none;
+}
+
+/* Advance mode: buying, not rolling — the purchase button takes the pool's place */
+.dtd40k.layout-cogitator.mode-advance .cog-skill-group .cog-roll {
+  display: none;
 }

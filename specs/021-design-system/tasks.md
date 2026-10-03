@@ -65,15 +65,15 @@ quickstart.md
 
 ## Phase 6: User Story 4 — Resto em tokens (P3)
 
-- [ ] T018 [US4] Conferir e ajustar no `dtd40k.css` as fichas de NPC, minion, esquadrão, veículo e nave, as 11 fichas de item, os diálogos com `.dtd40k` e o criador de armas: tokens, fontes e componentes, sem mudança de layout
+- [X] T018 [US4] Conferir e ajustar no `dtd40k.css` as fichas de NPC, minion, esquadrão, veículo e nave, as 11 fichas de item, os diálogos com `.dtd40k` e o criador de armas: tokens, fontes e componentes, sem mudança de layout
 
 ---
 
 ## Phase 7: Polish
 
 - [X] T019 [P] `docs/design-system.md` (fonte da verdade em `styles/`), `README.md`, `docs/pendencias.md`
-- [ ] T020 `npm test`, `npm run lint`, checagem de chaves i18n, `npm run build:packs`
-- [ ] T021 Validar o quickstart no Foundry, nos dois temas, e registrar em `quickstart.md`
+- [X] T020 `npm test`, `npm run lint`, checagem de chaves i18n, `npm run build:packs`
+- [X] T021 Validar o quickstart no Foundry, nos dois temas, e registrar em `quickstart.md`
 
 ## Dependencies
 

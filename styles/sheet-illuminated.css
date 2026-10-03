@@ -7,13 +7,9 @@
 
 .dtd40k.sheet.character.layout-illuminated .window-content {
   padding: 0 1.2rem 1rem;
-  background-image: radial-gradient(ellipse at center, transparent 60%, #6b4a2a26 100%);
+  background-image: radial-gradient(ellipse at center, transparent 60%, var(--dtd-vignette) 100%);
 }
 
-.dtd40k.dtd40k.theme-dark.layout-illuminated .window-content,
-.theme-dark .dtd40k.layout-illuminated .window-content {
-  background-image: radial-gradient(ellipse at center, transparent 60%, #0009 100%);
-}
 
 /* ---------- Header ---------- */
 

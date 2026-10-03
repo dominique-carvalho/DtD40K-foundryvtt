@@ -20,8 +20,14 @@
   letter-spacing: 0.06em;
 }
 
+.application.dtd40k .window-header {
+  --color-text-primary: var(--dtd-header-ink);
+  --color-text-emphatic: var(--dtd-header-ink);
+}
+
 .application.dtd40k .window-header .window-title {
   font-weight: 700;
+  color: var(--dtd-header-ink);
 }
 
 .application.dtd40k .window-header :is(button, .header-control) {
@@ -59,13 +65,9 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--dtd-seal);
+  color: var(--dtd-title);
 }
 
-.dtd40k.dtd40k.theme-dark .section-title,
-.theme-dark .dtd40k .section-title {
-  color: var(--dtd-brass-bright);
-}
 
 .dtd40k .section-title::before,
 .dtd40k .section-title::after {
@@ -268,16 +270,11 @@
 }
 
 .dtd40k nav.sheet-tabs > .item.active {
-  color: var(--dtd-seal);
+  color: var(--dtd-active);
   text-shadow: none;
-  box-shadow: inset 0 -2px 0 var(--dtd-seal);
+  box-shadow: inset 0 -2px 0 var(--dtd-active);
 }
 
-.dtd40k.dtd40k.theme-dark nav.sheet-tabs > .item.active,
-.theme-dark .dtd40k nav.sheet-tabs > .item.active {
-  color: var(--dtd-phosphor);
-  box-shadow: inset 0 -2px 0 var(--dtd-phosphor);
-}
 
 /* ---------- Controls ---------- */
 
@@ -330,16 +327,11 @@
 }
 
 .dtd40k .mode-toggle .mode-button.active {
-  color: var(--dtd-on-seal);
-  background: var(--dtd-seal);
+  color: var(--dtd-switch-ink);
+  background: var(--dtd-switch-bg);
+  box-shadow: inset 0 -2px 0 var(--dtd-switch-line);
 }
 
-.dtd40k.dtd40k.theme-dark .mode-toggle .mode-button.active,
-.theme-dark .dtd40k .mode-toggle .mode-button.active {
-  color: var(--dtd-phosphor);
-  background: transparent;
-  box-shadow: inset 0 -2px 0 var(--dtd-phosphor);
-}
 
 /* ---------- Panels, tables, details ---------- */
 

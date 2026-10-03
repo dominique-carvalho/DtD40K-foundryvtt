@@ -23,17 +23,17 @@ quickstart.md
 
 ## Phase 1: Setup
 
-- [ ] T001 [P] `fonts/`: copiar os 8 `.woff2` do @fontsource 5.3.0 e os `OFL-<família>.txt` (R7)
-- [ ] T002 [P] `.github/workflows/release.yml`: incluir `fonts` no zip
+- [X] T001 [P] `fonts/`: copiar os 8 `.woff2` do @fontsource 5.3.0 e os `OFL-<família>.txt` (R7)
+- [X] T002 [P] `.github/workflows/release.yml`: incluir `fonts` no zip
 
 ---
 
 ## Phase 2: Foundational (bloqueia todas as histórias)
 
-- [ ] T003 [P] `tests/unit/design-tokens.test.mjs`: casos de [contracts/rules-api.md](contracts/rules-api.md); confirmar que falha
-- [ ] T004 `styles/fonts.css` (`@font-face`, `font-display: swap`) e `styles/tokens.css` (Vellum, Cogitator, seletores de tema de R2, aliases antigos); `system.json → styles` na ordem de R1; T003 passa
-- [ ] T005 `styles/components.css`: gemas sobre `.dot` (`.filled`, `.superhuman`, `.racial`, `.locked`), `.section-title` com filete, selos (`.tag`, `.automation-tag`, `.feat-badge`), botões, campos, painéis, grão do papel
-- [ ] T006 `styles/dtd40k.css`: trocar hex e `--color-*` diretos por tokens (lista do inventário); tirar as regras de chat que nunca casam (vão para T014)
+- [X] T003 [P] `tests/unit/design-tokens.test.mjs`: casos de [contracts/rules-api.md](contracts/rules-api.md); confirmar que falha
+- [X] T004 `styles/fonts.css` (`@font-face`, `font-display: swap`) e `styles/tokens.css` (Vellum, Cogitator, seletores de tema de R2, aliases antigos); `system.json → styles` na ordem de R1; T003 passa
+- [X] T005 `styles/components.css`: gemas sobre `.dot` (`.filled`, `.superhuman`, `.racial`, `.locked`), `.section-title` com filete, selos (`.tag`, `.automation-tag`, `.feat-badge`), botões, campos, painéis, grão do papel
+- [X] T006 `styles/dtd40k.css`: trocar hex e `--color-*` diretos por tokens (lista do inventário); tirar as regras de chat que nunca casam (vão para T014)
 - [ ] T007 `module/apps/character-sheet.mjs`: `context.rail` (condições, XP, Power Stat, ícones das abas) (R5)
 - [ ] T008 Rodar `npm test` e `npm run lint`
 
@@ -51,7 +51,7 @@ quickstart.md
 
 ## Phase 4: User Story 3 — Chat (P2)
 
-- [ ] T014 [US3] `styles/chat.css`: as 19 raízes `.dtd40k.<card>`; cabeçalho com filete, facetas de d10, total, faixa de resultado, botões, tabelas dos cartões (opposed, chase, pinning, hazard, damage-applied); tema pela barra lateral
+- [X] T014 [US3] `styles/chat.css`: as 19 raízes `.dtd40k.<card>`; cabeçalho com filete, facetas de d10, total, faixa de resultado, botões, tabelas dos cartões (opposed, chase, pinning, hazard, damage-applied); tema pela barra lateral
 
 ---
 

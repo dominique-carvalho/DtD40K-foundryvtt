@@ -17,7 +17,13 @@
     "dtd40k.mjs"
   ],
   "styles": [
-    "styles/dtd40k.css"
+    "styles/fonts.css",
+    "styles/tokens.css",
+    "styles/dtd40k.css",
+    "styles/components.css",
+    "styles/chat.css",
+    "styles/sheet-cogitator.css",
+    "styles/sheet-illuminated.css"
   ],
   "languages": [
     {

@@ -1,0 +1,36 @@
+<section class="tab main-tab {{tabs.main.cssClass}}" data-group="primary" data-tab="main">
+  {{#if creation}}{{> "systems/dtd40k/templates/actor/parts/creation.hbs"}}{{/if}}
+
+  <section class="characteristics">
+    <h2 class="section-title">{{localize "DTD.Sheet.Characteristics"}}</h2>
+    <div class="ill-triptych">
+      <span class="ill-corner"></span>
+      {{#each gridColumns as |column|}}
+      <span class="ill-col-head ill-col-{{column.key}}">{{localize column.label}}</span>
+      {{/each}}
+      {{#each gridRows as |row|}}
+      <span class="ill-row-head">{{localize row.label}}</span>
+      {{#each row.cells as |entry|}}
+      <div class="trait characteristic ill-cell" data-key="{{entry.key}}">
+        <span class="ill-medal">{{entry.value}}</span>
+        <div class="ill-cell-body">
+          {{#if @root.isEdit}}
+          <span class="trait-name" data-tooltip="{{localize entry.abbr}}">{{localize entry.label}}</span>
+          {{else}}
+          <a class="trait-name roll-link" data-action="rollCharacteristic" data-key="{{entry.key}}" data-tooltip="{{localize "DTD.Roll.RollTooltip"}}">{{localize entry.label}}</a>
+          {{/if}}
+          <div class="trait-row">
+            {{> "systems/dtd40k/templates/actor/parts/dots.hbs" dots=entry.dots path=entry.valuePath capped=entry.capped editable=@root.isEdit}}
+            {{#unless @root.isEdit}}<span class="pool">{{entry.pool}}</span>{{/unless}}
+            {{> "systems/dtd40k/templates/actor/parts/advance-button.hbs" advance=entry.advance action="advanceCharacteristic" key=entry.key}}
+          </div>
+        </div>
+        {{> "systems/dtd40k/templates/actor/parts/specialties.hbs" entry=entry isEdit=@root.isEdit}}
+      </div>
+      {{/each}}
+      {{/each}}
+    </div>
+  </section>
+
+  {{> "systems/dtd40k/templates/actor/parts/skills.hbs"}}
+</section>

@@ -1,1 +1,597 @@
-/* Scriptorium Machina (spec 021) — sheet-cogitator. */
+/* Scriptorium Machina — Cogitator character sheet (spec 021, US1). Reference: docs/design/proposta-b-cogitador.html.
+   The window content is a grid: the rail spans the left column; readouts and keys, the active tab (scrolling) and
+   the footer fill the right one. */
+
+.dtd40k.sheet.character.layout-cogitator {
+  min-width: 760px;
+}
+
+.dtd40k.sheet.character.layout-cogitator .window-content {
+  display: grid;
+  grid-template-columns: 212px minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.dtd40k.layout-cogitator .window-content > .tab {
+  grid-column: 2;
+  grid-row: 2;
+  min-height: 0;
+  padding: 0.7rem 0.9rem 0.9rem;
+  overflow-y: auto;
+}
+
+.dtd40k.layout-cogitator .window-content > .sheet-footer {
+  grid-column: 2;
+  grid-row: 3;
+  max-height: 40%;
+  margin: 0;
+  padding: 0.4rem 0.9rem 0.6rem;
+  overflow-y: auto;
+  border-top: var(--dtd-rule);
+}
+
+/* The readouts above already show initiative and speed */
+.dtd40k.layout-cogitator .sheet-footer .footer-stats {
+  display: none;
+}
+
+/* ---------- Rail ---------- */
+
+.dtd40k.layout-cogitator .cog-rail {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-height: 0;
+  padding: 0.9rem 0.8rem;
+  overflow-y: auto;
+  background: var(--dtd-paper-sunken);
+  border-right: 2px solid var(--dtd-iron);
+  box-shadow: inset -6px 0 12px #0002;
+}
+
+.dtd40k.layout-cogitator .cog-portrait {
+  position: relative;
+  align-self: center;
+  width: 140px;
+  height: 140px;
+  padding: 4px;
+  box-sizing: border-box;
+  background: var(--dtd-iron);
+  clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+}
+
+.dtd40k.layout-cogitator .cog-portrait .profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+  background: var(--dtd-paper);
+}
+
+.dtd40k.layout-cogitator .cog-portrait .profile-img[data-action] {
+  cursor: pointer;
+}
+
+/* Scan lines over the portrait */
+.dtd40k.layout-cogitator .cog-portrait::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+  background: repeating-linear-gradient(0deg, #0000 0 2px, #0000001c 2px 3px);
+  pointer-events: none;
+}
+
+.dtd40k.layout-cogitator .cog-name {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  font-family: var(--dtd-font-display);
+  font-size: 1.55rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.dtd40k.layout-cogitator .cog-name::first-letter {
+  color: var(--dtd-seal);
+}
+
+.dtd40k.layout-cogitator .cog-name-input {
+  width: 100%;
+  font-family: var(--dtd-font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.dtd40k.layout-cogitator .cog-rail .mode-toggle {
+  align-self: center;
+}
+
+.dtd40k.layout-cogitator .cog-rail .mode-button {
+  padding: 0.2rem 0.6rem;
+}
+
+.dtd40k.layout-cogitator .cog-ident {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.15rem 0.5rem;
+  margin: 0.2rem 0 0;
+  font-family: var(--dtd-font-data);
+  font-size: var(--dtd-text-sm);
+}
+
+.dtd40k.layout-cogitator .cog-ident dt {
+  color: var(--dtd-ink-subtle);
+  text-transform: uppercase;
+  font-size: var(--dtd-text-xs);
+  align-self: center;
+}
+
+.dtd40k.layout-cogitator .cog-ident dd {
+  margin: 0;
+  text-align: right;
+  color: var(--dtd-ink);
+  overflow-wrap: anywhere;
+}
+
+.dtd40k.layout-cogitator .cog-ident input[type="number"] {
+  width: 2.8rem;
+  height: 1.4rem;
+}
+
+.dtd40k.dtd40k.theme-dark.layout-cogitator .cog-ident dd,
+.theme-dark .dtd40k.layout-cogitator .cog-ident dd {
+  color: var(--dtd-phosphor);
+  text-shadow: 0 0 6px var(--dtd-phosphor-glow);
+}
+
+/* Circuit trace divider */
+.dtd40k.layout-cogitator .cog-trace {
+  flex: none;
+  height: 9px;
+  margin: 0.15rem 0;
+  background:
+    radial-gradient(circle, var(--dtd-brass) 2.5px, transparent 3px) left center / 9px 9px no-repeat,
+    radial-gradient(circle, var(--dtd-brass) 2.5px, transparent 3px) right center / 9px 9px no-repeat,
+    linear-gradient(var(--dtd-brass), var(--dtd-brass)) center / calc(100% - 12px) 1px no-repeat;
+  opacity: 0.75;
+}
+
+.dtd40k.layout-cogitator .cog-label {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-muted);
+}
+
+.dtd40k.layout-cogitator .cog-label small {
+  font-family: var(--dtd-font-data);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.dtd40k.layout-cogitator .cog-read {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.dtd40k.layout-cogitator .cog-value {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--dtd-font-data);
+}
+
+.dtd40k.layout-cogitator .cog-value input[type="number"] {
+  width: 2.6rem;
+  height: 1.7rem;
+  padding: 0;
+  font-size: 1.45rem;
+  text-align: right;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.dtd40k.layout-cogitator .cog-value small {
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.layout-cogitator .cog-vital .track .bar {
+  height: 0.8rem;
+  margin-top: 2px;
+}
+
+.dtd40k.layout-cogitator .cog-line {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dtd40k.layout-cogitator .cog-line .cog-label {
+  flex: 1;
+}
+
+.dtd40k.layout-cogitator .cog-line input[type="number"] {
+  width: 2.2rem;
+  height: 1.3rem;
+}
+
+.dtd40k.layout-cogitator .cog-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.dtd40k.layout-cogitator .cog-leds {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.dtd40k.layout-cogitator .cog-led {
+  width: 11px;
+  height: 11px;
+  border: 1px solid var(--dtd-iron);
+  background: var(--dtd-paper);
+}
+
+.dtd40k.layout-cogitator .cog-led.on {
+  background: var(--dtd-brass-bright);
+  box-shadow: 0 0 6px var(--dtd-brass-bright);
+}
+
+.dtd40k.layout-cogitator .cog-leds.warn .cog-led.on {
+  background: var(--dtd-warning);
+  box-shadow: 0 0 6px var(--dtd-warning);
+}
+
+.dtd40k.layout-cogitator .cog-number {
+  font-family: var(--dtd-font-data);
+}
+
+.dtd40k.layout-cogitator .cog-conditions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.dtd40k.layout-cogitator .cog-xp {
+  display: grid;
+  justify-items: center;
+  gap: 0.2rem;
+}
+
+.dtd40k.layout-cogitator .cog-odo {
+  padding: 0.1rem 0.5rem;
+  font-family: var(--dtd-font-data);
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  color: var(--dtd-ink-inverse);
+  background: var(--dtd-ink);
+}
+
+.dtd40k.dtd40k.theme-dark.layout-cogitator .cog-odo,
+.theme-dark .dtd40k.layout-cogitator .cog-odo {
+  color: var(--dtd-phosphor);
+  background: #000;
+  border: 1px solid var(--dtd-iron);
+  text-shadow: 0 0 6px var(--dtd-phosphor-glow);
+}
+
+.dtd40k.layout-cogitator .cog-odo em {
+  margin: 0 0.25rem;
+  font-style: normal;
+  opacity: 0.6;
+}
+
+/* ---------- Readouts and keys ---------- */
+
+.dtd40k.layout-cogitator .cog-top {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.75rem 0.9rem 0;
+}
+
+.dtd40k.layout-cogitator .cog-gauges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.dtd40k.layout-cogitator .cog-gauge {
+  display: grid;
+  justify-items: center;
+  min-width: 3.4rem;
+  padding: 0.15rem 0.4rem;
+  background: var(--dtd-paper-sunken);
+  border: 1px solid var(--dtd-iron);
+  box-shadow: var(--dtd-shadow-inset);
+}
+
+.dtd40k.layout-cogitator .cog-gauge span {
+  font-family: var(--dtd-font-display);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.layout-cogitator .cog-gauge b {
+  font-family: var(--dtd-font-data);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.dtd40k.dtd40k.theme-dark.layout-cogitator .cog-gauge b,
+.theme-dark .dtd40k.layout-cogitator .cog-gauge b {
+  color: var(--dtd-phosphor);
+  text-shadow: 0 0 6px var(--dtd-phosphor-glow);
+}
+
+.dtd40k.layout-cogitator nav.cog-tabs {
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 4px;
+  background: var(--dtd-iron);
+  border: 0;
+  border-radius: var(--dtd-radius);
+}
+
+.dtd40k.layout-cogitator nav.cog-tabs > .cog-key {
+  position: relative;
+  flex: 1;
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  min-width: 0;
+  padding: 0.55rem 0.15rem 0.3rem;
+  font-family: var(--dtd-font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--dtd-ink-muted);
+  background: linear-gradient(var(--dtd-paper-raised), var(--dtd-paper-sunken));
+  border-radius: 1px;
+  box-shadow: none;
+}
+
+.dtd40k.layout-cogitator nav.cog-tabs > .cog-key i {
+  font-size: 0.95rem;
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.layout-cogitator nav.cog-tabs > .cog-key span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* Status lamp on each key */
+.dtd40k.layout-cogitator nav.cog-tabs > .cog-key::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--dtd-paper-edge);
+}
+
+.dtd40k.layout-cogitator nav.cog-tabs > .cog-key.active {
+  color: var(--dtd-ink);
+  background: var(--dtd-paper-raised);
+  box-shadow: inset 0 0 0 1px var(--dtd-brass);
+  text-shadow: none;
+}
+
+.dtd40k.layout-cogitator nav.cog-tabs > .cog-key.active i {
+  color: var(--dtd-seal);
+}
+
+.dtd40k.layout-cogitator nav.cog-tabs > .cog-key.active::before {
+  background: var(--dtd-phosphor);
+  box-shadow: 0 0 6px var(--dtd-phosphor);
+}
+
+/* ---------- Characteristic modules ---------- */
+
+.dtd40k.layout-cogitator .cog-modules {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.dtd40k.layout-cogitator .cog-module {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "axis axis"
+    "name value"
+    "row value"
+    "spec spec";
+  align-items: end;
+  padding: 0.5rem 0.7rem;
+  background:
+    radial-gradient(circle at 7px 7px, var(--dtd-iron) 2px, transparent 2.5px),
+    radial-gradient(circle at calc(100% - 7px) 7px, var(--dtd-iron) 2px, transparent 2.5px),
+    radial-gradient(circle at 7px calc(100% - 7px), var(--dtd-iron) 2px, transparent 2.5px),
+    radial-gradient(circle at calc(100% - 7px) calc(100% - 7px), var(--dtd-iron) 2px, transparent 2.5px),
+    var(--dtd-paper-raised);
+  border: 1px solid var(--dtd-paper-edge);
+  border-radius: var(--dtd-radius);
+  box-shadow: var(--dtd-shadow);
+}
+
+.dtd40k.layout-cogitator .cog-module:hover {
+  border-color: var(--dtd-brass-bright);
+}
+
+.dtd40k.layout-cogitator .cog-axis {
+  grid-area: axis;
+  padding-left: 0.4rem;
+  font-family: var(--dtd-font-data);
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.layout-cogitator .cog-module-name {
+  grid-area: name;
+  min-width: 0;
+}
+
+.dtd40k.layout-cogitator .cog-module-name .trait-name {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-sm);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dtd40k.layout-cogitator .cog-module-value {
+  grid-area: value;
+  align-self: center;
+  font-family: var(--dtd-font-data);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.dtd40k.dtd40k.theme-dark.layout-cogitator .cog-module-value,
+.theme-dark .dtd40k.layout-cogitator .cog-module-value {
+  color: var(--dtd-phosphor);
+  text-shadow: 0 0 8px var(--dtd-phosphor-glow);
+}
+
+.dtd40k.layout-cogitator .cog-module > .trait-row {
+  grid-area: row;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.dtd40k.layout-cogitator .cog-module > .specialties {
+  grid-area: spec;
+  margin-top: 0.25rem;
+}
+
+/* ---------- Skill table ---------- */
+
+.dtd40k.layout-cogitator .cog-skill-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.dtd40k.layout-cogitator .cog-skill-group h3 {
+  margin: 0 0 0.2rem;
+  padding: 0.15rem 0.4rem;
+  border: 0;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-inverse);
+  background: var(--dtd-iron);
+}
+
+.dtd40k.layout-cogitator .cog-skill-group .trait-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k.layout-cogitator .cog-skill-group .trait.skill {
+  padding: 0.15rem 0.25rem;
+  border-bottom: 1px solid var(--dtd-paper-edge);
+}
+
+.dtd40k.layout-cogitator .cog-skill-group .trait.skill:nth-child(odd) {
+  background: #0000000a;
+}
+
+.dtd40k.dtd40k.theme-dark.layout-cogitator .cog-skill-group .trait.skill:nth-child(odd),
+.theme-dark .dtd40k.layout-cogitator .cog-skill-group .trait.skill:nth-child(odd) {
+  background: #ffffff06;
+}
+
+.dtd40k.layout-cogitator .cog-skill-group .trait-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.dtd40k.layout-cogitator .cog-skill-group .trait-name {
+  min-width: 0;
+  font-size: 0.9rem;
+  line-height: 1.15;
+}
+
+.dtd40k.layout-cogitator .cog-skill-group .untrained-row .trait-name {
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.layout-cogitator .cog-skill-group .trait-char {
+  font-family: var(--dtd-font-data);
+  font-size: 0.66rem;
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.layout-cogitator .cog-skill-group .dots {
+  --dtd-gem-size: 0.55rem;
+  gap: 2px;
+}
+
+.dtd40k.layout-cogitator .cog-roll {
+  min-width: 3rem;
+  padding: 0 0.3rem;
+  font-family: var(--dtd-font-data);
+  font-size: 0.74rem;
+  text-align: center;
+  color: var(--dtd-ink);
+  background: var(--dtd-paper-raised);
+  border: 1px solid var(--dtd-paper-edge);
+  border-radius: var(--dtd-radius);
+  cursor: pointer;
+}
+
+.dtd40k.layout-cogitator a.cog-roll:hover {
+  color: var(--dtd-seal);
+  border-color: var(--dtd-seal);
+}
+
+.dtd40k.layout-cogitator .cog-roll.untrained {
+  font-style: italic;
+  color: var(--dtd-ink-muted);
+}
+
+.dtd40k.layout-cogitator .cog-roll.none {
+  color: var(--dtd-ink-subtle);
+  cursor: not-allowed;
+}
+
+.dtd40k.layout-cogitator .cog-skill-group .specialties {
+  margin: 0.1rem 0 0.1rem 0.4rem;
+}

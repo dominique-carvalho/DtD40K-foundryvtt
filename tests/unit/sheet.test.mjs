@@ -1,5 +1,25 @@
 import { describe, expect, it } from "vitest";
-import { buildDots, filterSkills, nextBaseValue, nextDotValue, sanitizeDerivedMods } from "../../module/rules/sheet.mjs";
+import { buildDots, filterSkills, ledRow, nextBaseValue, nextDotValue, sanitizeDerivedMods } from "../../module/rules/sheet.mjs";
+
+describe("ledRow (spec 021)", () => {
+  it("lights the first value lamps out of max", () => {
+    expect(ledRow(1, 3)).toEqual({ lamps: [{ on: true }, { on: false }, { on: false }], overflow: false });
+  });
+
+  it("clamps the value between 0 and max", () => {
+    expect(ledRow(5, 2).lamps.filter((l) => l.on)).toHaveLength(2);
+    expect(ledRow(-1, 2).lamps.filter((l) => l.on)).toHaveLength(0);
+  });
+
+  it("gives no lamps above the limit, so the sheet shows the number", () => {
+    expect(ledRow(12, 20)).toEqual({ lamps: [], overflow: true });
+    expect(ledRow(3, 10, { limit: 10 }).lamps).toHaveLength(10);
+  });
+
+  it("handles an empty maximum", () => {
+    expect(ledRow(0, 0)).toEqual({ lamps: [], overflow: false });
+  });
+});
 
 describe("buildDots", () => {
   it("returns 6 dots, filling the first N and flagging the 6th as superhuman", () => {

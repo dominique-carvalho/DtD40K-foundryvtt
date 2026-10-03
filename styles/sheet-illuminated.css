@@ -1,1 +1,453 @@
-/* Scriptorium Machina (spec 021) — sheet-illuminated. */
+/* Scriptorium Machina — Illuminated character sheet (spec 021, US2). Reference: docs/design/proposta-a-iluminura.html.
+   The page scrolls as a whole (base layout of dtd40k.css); the header is a codex opening. */
+
+.dtd40k.sheet.character.layout-illuminated {
+  min-width: 700px;
+}
+
+.dtd40k.sheet.character.layout-illuminated .window-content {
+  padding: 0 1.2rem 1rem;
+  background-image: radial-gradient(ellipse at center, transparent 60%, #6b4a2a26 100%);
+}
+
+.dtd40k.dtd40k.theme-dark.layout-illuminated .window-content,
+.theme-dark .dtd40k.layout-illuminated .window-content {
+  background-image: radial-gradient(ellipse at center, transparent 60%, #0009 100%);
+}
+
+/* ---------- Header ---------- */
+
+.dtd40k.layout-illuminated .ill-head {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem 0 0.7rem;
+}
+
+/* Gothic arch frame */
+.dtd40k.layout-illuminated .ill-frame {
+  width: 116px;
+  height: 146px;
+  padding: 4px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, var(--dtd-brass-bright), var(--dtd-brass) 45%, var(--dtd-seal-deep));
+  clip-path: path("M0 146 V60 Q0 13 58 0 Q116 13 116 60 V146 Z");
+}
+
+.dtd40k.layout-illuminated .ill-frame .profile-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  background: var(--dtd-paper-sunken);
+  clip-path: path("M0 138 V58 Q0 13 54 1 Q108 13 108 58 V138 Z");
+}
+
+.dtd40k.layout-illuminated .ill-frame .profile-img[data-action] {
+  cursor: pointer;
+}
+
+.dtd40k.layout-illuminated .ill-name {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--dtd-font-display);
+  font-size: 2.3rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+.dtd40k.layout-illuminated .ill-name::first-letter {
+  font-family: var(--dtd-font-initial);
+  font-size: 1.4em;
+  color: var(--dtd-seal);
+  text-shadow: 1px 1px 0 var(--dtd-brass);
+}
+
+.dtd40k.layout-illuminated .ill-name-input {
+  width: 100%;
+  font-family: var(--dtd-font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.dtd40k.layout-illuminated .ill-lineage {
+  margin-top: 0.4rem;
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-sm);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dtd40k.layout-illuminated .ill-lineage em {
+  margin: 0 0.35em;
+  font-style: normal;
+  color: var(--dtd-brass);
+}
+
+.dtd40k.layout-illuminated .ill-lineage a {
+  border-bottom: 1px dotted var(--dtd-brass);
+  cursor: pointer;
+}
+
+.dtd40k.layout-illuminated .ill-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  margin-top: 0.3rem;
+  color: var(--dtd-ink-muted);
+}
+
+.dtd40k.layout-illuminated .ill-meta b {
+  font-family: var(--dtd-font-data);
+  font-weight: 400;
+  color: var(--dtd-ink);
+}
+
+.dtd40k.layout-illuminated .ill-meta input[type="number"] {
+  width: 2.8rem;
+  height: 1.4rem;
+}
+
+.dtd40k.layout-illuminated .ill-seals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.dtd40k.layout-illuminated .ill-aside {
+  display: grid;
+  justify-items: end;
+  gap: 0.5rem;
+}
+
+.dtd40k.layout-illuminated .ill-xp {
+  padding: 0.2rem 1rem;
+  font-family: var(--dtd-font-data);
+  background: var(--dtd-paper-sunken);
+  border-top: 1px solid var(--dtd-brass);
+  border-bottom: 1px solid var(--dtd-brass);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 50%, 100% 100%, 0 100%, 8px 50%);
+}
+
+.dtd40k.layout-illuminated .ill-xp b {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--dtd-seal);
+}
+
+.dtd40k.layout-illuminated .ill-power {
+  display: grid;
+  justify-items: end;
+  gap: 0.15rem;
+}
+
+.dtd40k.layout-illuminated .ill-caps {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-muted);
+}
+
+.dtd40k.layout-illuminated .ill-number {
+  font-family: var(--dtd-font-data);
+}
+
+/* ---------- Resource band ---------- */
+
+.dtd40k.layout-illuminated .ill-vitals {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) auto auto;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 -1.2rem;
+  padding: 0.6rem 1.2rem;
+  border-top: var(--dtd-rule);
+  border-bottom: var(--dtd-rule);
+  background: linear-gradient(var(--dtd-seal-soft), transparent);
+}
+
+.dtd40k.layout-illuminated .ill-tracks {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.dtd40k.layout-illuminated .ill-tracks .track-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.dtd40k.layout-illuminated .ill-tracks .track-values input[type="number"] {
+  width: 2.6rem;
+  height: 1.4rem;
+}
+
+.dtd40k.layout-illuminated .ill-plaques {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dtd40k.layout-illuminated .ill-plaques .stat-box {
+  display: grid;
+  justify-items: center;
+  min-width: 4.4rem;
+  padding: 0.25rem 0.4rem 0.3rem;
+}
+
+.dtd40k.layout-illuminated .ill-small {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.dtd40k.layout-illuminated .ill-small > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dtd40k.layout-illuminated .ill-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dtd40k.layout-illuminated .ill-counter input[type="number"] {
+  width: 2.2rem;
+  height: 1.3rem;
+}
+
+.dtd40k.layout-illuminated .ill-coin {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff8 0 14%, transparent 32%), var(--dtd-brass-bright);
+  box-shadow: inset 0 0 0 1.5px var(--dtd-brass), 0 1px 1px #0005;
+}
+
+.dtd40k.layout-illuminated .ill-coin.off {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--dtd-paper-edge);
+}
+
+/* ---------- Ribbon tabs hanging from a rod ---------- */
+
+.dtd40k.layout-illuminated nav.ill-tabs {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  height: 3.3rem;
+  margin: 0 0 0.6rem;
+  padding: 0 0.2rem;
+  border: 0;
+}
+
+.dtd40k.layout-illuminated nav.ill-tabs::before {
+  content: "";
+  position: absolute;
+  left: -1.2rem;
+  right: -1.2rem;
+  top: 0;
+  height: 3px;
+  background: linear-gradient(var(--dtd-brass-bright), var(--dtd-brass));
+  box-shadow: 0 1px 2px #0005;
+}
+
+.dtd40k.layout-illuminated nav.ill-tabs > .ill-ribbon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px;
+  min-width: 0;
+  height: 2.4rem;
+  padding: 0.5rem 0.2rem 0.7rem;
+  font-family: var(--dtd-font-display);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--dtd-ink-muted);
+  background: var(--dtd-paper-sunken);
+  border: 1px solid var(--dtd-paper-edge);
+  border-top: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 7px), 0 100%);
+  box-shadow: none;
+}
+
+.dtd40k.layout-illuminated nav.ill-tabs > .ill-ribbon i {
+  font-size: 0.8rem;
+  color: var(--dtd-brass);
+}
+
+.dtd40k.layout-illuminated nav.ill-tabs > .ill-ribbon.active {
+  height: 3rem;
+  color: var(--dtd-on-seal);
+  background: linear-gradient(#ffffff1a, transparent 40%), var(--dtd-seal);
+  border-color: var(--dtd-seal-deep);
+  text-shadow: none;
+}
+
+.dtd40k.layout-illuminated nav.ill-tabs > .ill-ribbon.active i {
+  color: var(--dtd-brass-bright);
+}
+
+/* ---------- Characteristic triptych (p. 17) ---------- */
+
+.dtd40k.layout-illuminated .ill-triptych {
+  display: grid;
+  grid-template-columns: 5.2rem repeat(3, minmax(0, 1fr));
+}
+
+.dtd40k.layout-illuminated .ill-col-head {
+  padding-bottom: 0.3rem;
+  text-align: center;
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-sm);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.dtd40k.layout-illuminated .ill-row-head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.6rem;
+  border-right: 1px solid var(--dtd-brass);
+  font-family: var(--dtd-font-display);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-muted);
+}
+
+.dtd40k.layout-illuminated .ill-cell {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 0.6rem;
+  align-items: center;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px dotted var(--dtd-paper-edge);
+}
+
+.dtd40k.layout-illuminated .ill-cell:hover {
+  background: var(--dtd-seal-soft);
+}
+
+.dtd40k.layout-illuminated .ill-medal {
+  display: grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  font-family: var(--dtd-font-data);
+  font-size: 1.2rem;
+  background: var(--dtd-paper-raised);
+  box-shadow: inset 0 0 0 1px var(--dtd-brass), inset 0 0 0 3px var(--dtd-paper-raised), inset 0 0 0 4px var(--dtd-paper-edge);
+}
+
+.dtd40k.layout-illuminated .ill-cell-body .trait-name {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-sm);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dtd40k.layout-illuminated .ill-cell-body .trait-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dtd40k.layout-illuminated .ill-cell-body .pool {
+  font-size: var(--dtd-text-xs);
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.layout-illuminated .ill-cell > .specialties {
+  grid-column: 1 / -1;
+}
+
+/* ---------- Skill index (parts/skills.hbs) ---------- */
+
+.dtd40k.layout-illuminated .skill-column h3 {
+  border: 0;
+  text-align: center;
+  font-size: var(--dtd-text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-muted);
+}
+
+.dtd40k.layout-illuminated .skill .trait-row {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Leader dots between the name and the gems */
+.dtd40k.layout-illuminated .skill .trait-row > .trait-name {
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.dtd40k.layout-illuminated .skill .trait-row > .trait-name::after {
+  content: "";
+  flex: 1;
+  min-width: 0.5rem;
+  border-bottom: 1px dotted var(--dtd-ink-subtle);
+  transform: translateY(-3px);
+}
+
+.dtd40k.layout-illuminated .skill .trait-name i.fa-dice-d10 {
+  display: none;
+}
+
+.dtd40k.layout-illuminated .skill .trait-char {
+  font-family: var(--dtd-font-data);
+  font-size: 0.66rem;
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.layout-illuminated .skill .advanced-mark {
+  color: var(--dtd-brass);
+}
+
+.dtd40k.layout-illuminated .skill .dots {
+  --dtd-gem-size: 0.6rem;
+}
+
+.dtd40k.layout-illuminated .skill .pool {
+  min-width: 2.3rem;
+  font-size: var(--dtd-text-xs);
+  text-align: right;
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.layout-illuminated .skill[data-value="0"] .trait-name {
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.layout-illuminated .specialty-chip {
+  font-style: italic;
+  color: var(--dtd-lapis);
+}

@@ -54,6 +54,8 @@ import { endGrapple, maneuverAsGm, startGrapple } from "./module/documents/maneu
 import { promptCover, setCover } from "./module/documents/condition-service.mjs";
 import { DtdItem } from "./module/documents/item.mjs";
 import { CharacterSheet } from "./module/apps/character-sheet.mjs";
+import { CogitatorSheet } from "./module/apps/cogitator-sheet.mjs";
+import { IlluminatedSheet } from "./module/apps/illuminated-sheet.mjs";
 import { RaceSheet } from "./module/apps/race-sheet.mjs";
 import { ExaltationSheet } from "./module/apps/exaltation-sheet.mjs";
 import { FeatSheet } from "./module/apps/feat-sheet.mjs";
@@ -101,10 +103,16 @@ Hooks.once("init", () => {
     decimals: 0
   };
 
-  foundry.applications.apps.DocumentSheetConfig.registerSheet(Actor, "dtd40k", CharacterSheet, {
+  // Character sheet layouts (spec 021): Cogitator by default, Illuminated in the sheet menu. CharacterSheet stays the
+  // base of both and of the NPC sheet, but is no longer offered for characters.
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Actor, "dtd40k", CogitatorSheet, {
     types: ["character"],
     makeDefault: true,
-    label: "DTD.Sheet.Character"
+    label: "DTD.Sheet.Cogitator"
+  });
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(Actor, "dtd40k", IlluminatedSheet, {
+    types: ["character"],
+    label: "DTD.Sheet.Illuminated"
   });
 
   // Antagonists (spec 012).

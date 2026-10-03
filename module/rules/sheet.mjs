@@ -61,6 +61,21 @@ function normalize(text) {
 }
 
 /**
+ * Lamp row for small counters on the sheet (Fatigue, Hero Points, exaltation pool) — spec 021. Above `limit`
+ * lamps the row is empty and flagged, so the sheet shows the number instead.
+ * @param {number} value
+ * @param {number} max
+ * @param {{limit?: number}} [options]
+ * @returns {{lamps: {on: boolean}[], overflow: boolean}}
+ */
+export function ledRow(value, max, { limit = 10 } = {}) {
+  const size = Math.max(0, Math.trunc(max) || 0);
+  if (size > limit) return { lamps: [], overflow: true };
+  const lit = Math.min(Math.max(0, Math.trunc(value) || 0), size);
+  return { lamps: Array.from({ length: size }, (_, i) => ({ on: i < lit })), overflow: false };
+}
+
+/**
  * Filter skill entries by name query and/or trained status.
  * @template {{name: string, value: number}} T
  * @param {T[]} entries

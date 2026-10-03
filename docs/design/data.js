@@ -28,7 +28,7 @@ window.JANE = {
 
 /** Roll & Keep pool of a skill (rules/pool.mjs): (skill + char) k char; untrained (char − 1) k (char − 1); advanced untrained: none. */
 window.pool = ([, value, char, advanced]) => {
-  const c = JANE.chars[char][1];
+  const c = window.JANE.chars[char][1];
   if (value > 0) return `${value + c}k${c}`;
   return advanced ? "—" : `${c - 1}k${c - 1}`;
 };

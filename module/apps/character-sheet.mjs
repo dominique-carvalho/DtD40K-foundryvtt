@@ -33,7 +33,7 @@ import { addInstance, raiseBackground, rollContacts, setInheritancePicks } from 
 import { cureDegeneration, rollAlignmentCheck, setAlignment } from "../documents/alignment-service.mjs";
 import { buildAttack, deleteAttack, newScene as newMartialScene, useAttack } from "../documents/martial-service.mjs";
 import { needsChoice } from "../rules/race.mjs";
-import { buildDots, filterSkills, nextBaseValue, sanitizeDerivedMods } from "../rules/sheet.mjs";
+import { buildDots, filterSkills, ledRow, nextBaseValue, sanitizeDerivedMods } from "../rules/sheet.mjs";
 import { buildCharacteristicPool, buildSkillPool, formatPool, normalizePool } from "../rules/pool.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
@@ -42,6 +42,11 @@ const TEMPLATE_ROOT = "systems/dtd40k/templates/actor/parts";
 // Advance mode spends XP (spec 006, research R7); edit mode stays free.
 const MODES = { EDIT: "edit", PLAY: "play", ADVANCE: "advance" };
 const TAB_IDS = ["main", "traits", "equipment", "combat", "magic", "martial", "class"];
+/** Tab icons (spec 021): shown by the core navigation and by the Cogitator and Illuminated tabs. */
+export const TAB_ICONS = {
+  main: "fa-solid fa-chess-rook", traits: "fa-solid fa-dna", equipment: "fa-solid fa-shield-halved", combat: "fa-solid fa-crosshairs",
+  magic: "fa-solid fa-hat-wizard", martial: "fa-solid fa-hand-fist", class: "fa-solid fa-scroll", npc: "fa-solid fa-skull"
+};
 
 /**
  * Split a specialties list into the stored ones (editable) and those added by feat effects.
@@ -160,7 +165,7 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
   /** Main (characteristics and skills) and Traits (race) tabs — spec 002, FR-015a. */
   static TABS = {
     primary: {
-      tabs: TAB_IDS.map((id) => ({ id })),
+      tabs: TAB_IDS.map((id) => ({ id, icon: TAB_ICONS[id] })),
       initial: "main",
       labelPrefix: "DTD.Sheet.Tab"
     }
@@ -359,6 +364,20 @@ export class CharacterSheet extends HandlebarsApplicationMixin(foundry.applicati
         };
       })
     });
+    // Side rail and header of the Cogitator and Illuminated layouts (spec 021, research R5)
+    const exaltationState = system.exaltation;
+    context.rail = {
+      conditions: context.combatTab.conditions.filter((condition) => condition.active),
+      xp: context.classContext?.xp ?? null,
+      fatigue: ledRow(system.fatigue.value, system.fatigue.max),
+      hero: ledRow(system.heroPoints.value, system.heroPoints.max),
+      power: exaltationState ? {
+        name: exaltationState.powerStat.name,
+        value: exaltationState.powerStat.value,
+        resource: exaltationState.resource,
+        lamps: ledRow(exaltationState.resource.value, exaltationState.resource.max)
+      } : null
+    };
     return context;
   }
 

@@ -19,6 +19,13 @@ const foundryGlobals = {
   Roll: "readonly"
 };
 
+// Pure rule modules must not depend on Foundry (constitution, principle III).
+// Flat config merges `languageOptions.globals` across matching blocks, so the
+// only way to keep these files free of browser/Foundry globals is to never
+// match them with the block that declares those globals.
+const pureFiles = ["module/rules/**", "module/config.mjs"];
+const nodeFiles = ["tests/**", "scripts/**", "*.config.mjs"];
+
 export default [
   {
     ignores: ["node_modules/", "coverage/", "dist/", "build/", "graphify-out/", "*.min.js"]
@@ -28,19 +35,25 @@ export default [
     files: ["**/*.mjs", "**/*.js"],
     languageOptions: {
       ecmaVersion: 2022,
-      sourceType: "module",
+      sourceType: "module"
+    }
+  },
+  {
+    files: ["**/*.mjs", "**/*.js"],
+    ignores: [...pureFiles, ...nodeFiles],
+    languageOptions: {
       globals: { ...globals.browser, ...foundryGlobals }
     }
   },
   {
-    // Pure rule modules must not depend on Foundry (constitution, principle III).
-    files: ["module/rules/**/*.mjs", "module/config.mjs"],
+    // Host-agnostic APIs available in both Node (tests) and the browser (Foundry).
+    files: pureFiles,
     languageOptions: {
-      globals: {}
+      globals: { structuredClone: "readonly" }
     }
   },
   {
-    files: ["tests/**/*.mjs", "scripts/**/*.mjs", "*.config.mjs"],
+    files: nodeFiles,
     languageOptions: {
       globals: { ...globals.node }
     }

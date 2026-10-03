@@ -1,0 +1,55 @@
+/* Mockup stage: a Foundry-like canvas, an application window and the chat sidebar. Not part of the system. */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 28px;
+  box-sizing: border-box;
+  background: radial-gradient(circle at 30% 20%, #3b4148, #1d2024 70%);
+  font-family: var(--dtd-font-body);
+}
+.window {
+  width: 780px;
+  flex: none;
+  box-shadow: 0 12px 40px #000a;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.window-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 30px;
+  padding: 0 10px;
+  font: 600 13px "Signika", system-ui, sans-serif;
+  color: #ddd;
+  background: #23272b;
+  border-bottom: 1px solid #000;
+}
+.window-header .spacer { flex: 1; }
+.window-header i { opacity: 0.7; }
+.chat {
+  width: 310px;
+  flex: none;
+  display: grid;
+  gap: 10px;
+}
+.chat .msg-head {
+  display: flex; justify-content: space-between;
+  font: 600 12px "Signika", system-ui, sans-serif; color: #ccc;
+  margin-bottom: 4px;
+}
+.chat .note { font: 12px/1.4 "Signika", system-ui, sans-serif; color: #aab; }
+.theme-toggle {
+  position: fixed; right: 16px; bottom: 16px;
+  padding: 8px 14px;
+  font: 600 13px "Signika", system-ui, sans-serif;
+  color: #eee; background: #23272b; border: 1px solid #555; border-radius: 4px; cursor: pointer;
+}
+.proposal-label {
+  position: fixed; left: 16px; bottom: 16px;
+  font: 600 13px "Signika", system-ui, sans-serif; color: #ccc;
+}

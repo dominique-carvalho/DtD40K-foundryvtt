@@ -1,0 +1,7 @@
+<nav class="sheet-tabs tabs ill-tabs" aria-roledescription="{{localize "SHEETS.FormNavLabel"}}">
+  {{#each tabs as |tab|}}
+  <a data-action="tab" data-group="{{tab.group}}" data-tab="{{tab.id}}" class="ill-ribbon {{tab.cssClass}}">
+    <i class="{{tab.icon}}" inert></i><span>{{localize tab.label}}</span>
+  </a>
+  {{/each}}
+</nav>

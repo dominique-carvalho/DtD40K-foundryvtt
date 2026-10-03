@@ -1,0 +1,100 @@
+<header class="ill-header">
+  <div class="ill-head">
+    <div class="ill-frame">
+      <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}" {{#if isEdit}}data-action="editImage" data-edit="img"{{/if}}>
+    </div>
+
+    <div class="ill-identity">
+      {{#if isEdit}}
+      <input class="ill-name-input" type="text" name="name" value="{{actor.name}}" placeholder="{{localize "Name"}}">
+      {{else}}
+      <h1 class="ill-name">{{actor.name}}</h1>
+      {{/if}}
+      <div class="ill-lineage">
+        {{#if race}}<a data-action="openRace">{{race.name}}</a>{{else}}—{{/if}}
+        <em>✠</em>
+        {{#if exaltation}}<a data-action="openExaltation">{{exaltation.name}}</a>{{else}}—{{/if}}
+        <em>✠</em>
+        {{#if currentClass}}{{currentClass}}{{else if hasClasses}}{{localize "DTD.Class.FreeStudy"}}{{else}}—{{/if}}
+      </div>
+      <div class="ill-meta">
+        <label>{{localize "DTD.Sheet.Level"}}
+          {{#if (and isEdit (not hasClasses))}}<input type="number" name="system.level" value="{{system.level}}" min="1" max="10" step="1">{{else}}<b{{#if hasClasses}} data-tooltip="{{localize "DTD.Class.LevelFromClasses"}}"{{/if}}>{{system.level}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Sheet.Size"}}
+          {{#if isEdit}}<input type="number" name="system.size" value="{{base.size}}" min="1" max="10" step="1">{{#if base.sizeChanged}}<span class="final-value" data-tooltip="{{localize "DTD.Race.FinalValue"}}">→ {{system.size}}</span>{{/if}}{{else}}<b>{{system.size}}</b>{{/if}}
+        </label>
+        <label>{{localize "DTD.Sheet.Devotion"}}
+          {{#if isEdit}}<input type="number" name="system.devotion.value" value="{{system.devotion.value}}" min="0" max="10" step="1">{{else}}<b>{{system.devotion.value}}</b>{{/if}}
+        </label>
+      </div>
+      {{#if rail.conditions.length}}
+      <div class="ill-seals" aria-label="{{localize "DTD.Combat.Conditions"}}">
+        {{#each rail.conditions as |condition|}}<span class="tag condition">{{condition.label}}</span>{{/each}}
+      </div>
+      {{/if}}
+    </div>
+
+    <div class="ill-aside">
+      {{#if canToggle}}
+      <div class="mode-toggle" role="group" aria-label="{{localize "DTD.Sheet.ToggleMode"}}">
+        <button type="button" class="mode-button{{#if isEdit}} active{{/if}}" data-action="toggleMode" data-mode="edit">{{localize "DTD.Sheet.ModeEdit"}}</button>
+        <button type="button" class="mode-button{{#if (and (not isEdit) (not isAdvance))}} active{{/if}}" data-action="toggleMode" data-mode="play">{{localize "DTD.Sheet.ModePlay"}}</button>
+        <button type="button" class="mode-button{{#if isAdvance}} active{{/if}}" data-action="toggleMode" data-mode="advance" data-tooltip="{{localize "DTD.XP.AdvanceHint"}}">{{localize "DTD.Sheet.ModeAdvance"}}</button>
+      </div>
+      {{/if}}
+      {{#if rail.xp}}<div class="ill-xp"><b>{{rail.xp.available}}</b> / {{rail.xp.total}} XP</div>{{/if}}
+      {{#if rail.power}}
+      <div class="ill-power">
+        <span class="ill-caps">{{rail.power.resource.name}} · {{rail.power.name}} {{rail.power.value}}</span>
+        {{#if rail.power.lamps.overflow}}
+        <span class="ill-number">{{rail.power.resource.value}}/{{rail.power.resource.max}}</span>
+        {{else}}
+        <span class="dots">{{#each rail.power.lamps.lamps as |lamp|}}<span class="dot{{#if lamp.on}} filled{{/if}}"></span>{{/each}}</span>
+        {{/if}}
+      </div>
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="ill-vitals">
+    <div class="ill-tracks">
+      <div class="track hp">
+        <div class="track-label">
+          <span>{{localize "DTD.Sheet.HitPoints"}}</span>
+          <span class="track-values"><input type="number" name="system.hp.value" value="{{system.hp.value}}" min="0" step="1"><span>/ {{system.hp.max}}</span></span>
+        </div>
+        <div class="bar"><span class="fill" style="width: {{hpPct}}%"></span></div>
+      </div>
+      <div class="track resolve">
+        <div class="track-label">
+          <span>{{localize "DTD.Sheet.Resolve"}}</span>
+          <span class="track-values"><input type="number" name="system.resolve.value" value="{{system.resolve.value}}" min="0" step="1"><span>/ {{system.resolve.max}}</span></span>
+        </div>
+        <div class="bar"><span class="fill" style="width: {{resolvePct}}%"></span></div>
+      </div>
+    </div>
+    <div class="ill-plaques">
+      <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.staticDefense"}}</span><span class="stat-value">{{system.derived.staticDefense}}</span></div>
+      <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.mentalDefense"}}</span><span class="stat-value">{{system.derived.mentalDefense}}</span></div>
+      <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.resilience"}}</span><span class="stat-value">{{system.derived.resilience}}</span></div>
+    </div>
+    <div class="ill-small">
+      <div>
+        <span class="ill-caps">{{localize "DTD.Sheet.Fatigue"}}</span>
+        <span class="ill-counter">
+          <span class="dots">{{#each rail.fatigue.lamps as |lamp|}}<span class="dot{{#if lamp.on}} filled{{/if}}"></span>{{/each}}</span>
+          <input type="number" name="system.fatigue.value" value="{{system.fatigue.value}}" min="0" step="1" aria-label="{{localize "DTD.Sheet.Fatigue"}}">
+        </span>
+      </div>
+      <div>
+        <span class="ill-caps">{{localize "DTD.Sheet.HeroPoints"}}</span>
+        <span class="ill-counter">
+          {{#each rail.hero.lamps as |lamp|}}<i class="ill-coin{{#unless lamp.on}} off{{/unless}}"></i>{{/each}}
+          <input type="number" name="system.heroPoints.value" value="{{system.heroPoints.value}}" min="0" step="1" aria-label="{{localize "DTD.Sheet.HeroPoints"}}">
+          {{#if isEdit}}/<input type="number" name="system.heroPoints.max" value="{{base.heroPointsMax}}" min="0" step="1">{{#if base.heroPointsMaxChanged}}<span class="final-value" data-tooltip="{{localize "DTD.Race.FinalValue"}}">→ {{system.heroPoints.max}}</span>{{/if}}{{/if}}
+        </span>
+      </div>
+    </div>
+  </div>
+</header>

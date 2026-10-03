@@ -153,7 +153,29 @@
       "Vehicle": "DtD Vehicle Sheet",
       "ShipComponent": "DtD Ship Component Sheet",
       "Ship": "DtD Ship Sheet",
-      "Squadron": "DtD Fighter Squadron Sheet"
+      "Squadron": "DtD Fighter Squadron Sheet",
+      "Cogitator": "DtD Character — Cogitator",
+      "Illuminated": "DtD Character — Illuminated",
+      "TabShort": {
+        "main": "Skills",
+        "traits": "Traits",
+        "equipment": "Gear",
+        "combat": "Combat",
+        "magic": "Magic",
+        "martial": "Martial",
+        "class": "Class/XP",
+        "npc": "Antagonist"
+      },
+      "Rail": {
+        "Experience": "Experience",
+        "StaticShort": "Static",
+        "MentalShort": "Mental",
+        "ResilienceShort": "Resil.",
+        "InitiativeShort": "Init.",
+        "SocialShort": "Social",
+        "SpeedShort": "Speed",
+        "Resources": "Resources"
+      }
     },
     "Roll": {
       "Success": "Success",

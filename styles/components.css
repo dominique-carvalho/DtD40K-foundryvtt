@@ -1,0 +1,362 @@
+/* Scriptorium Machina — components over the system's existing classes (spec 021, docs/design-system.md §4–5).
+   Loaded after dtd40k.css: these rules set the base look of shared elements (windows, titles, gems, tags, plaques,
+   tracks, tabs, buttons, inputs). Layout-specific rules live in sheet-*.css; chat cards in chat.css. */
+
+/* ---------- Windows ---------- */
+
+.application.dtd40k {
+  color: var(--dtd-ink);
+  background: var(--dtd-grain), var(--dtd-paper);
+  font-family: var(--dtd-font-body);
+  font-size: var(--dtd-text-md);
+  scrollbar-color: var(--dtd-brass) transparent;
+}
+
+.application.dtd40k .window-header {
+  color: var(--dtd-header-ink);
+  background: var(--dtd-header-bg);
+  border-bottom: 2px solid var(--dtd-brass);
+  font-family: var(--dtd-font-display);
+  letter-spacing: 0.06em;
+}
+
+.application.dtd40k .window-header {
+  --color-text-primary: var(--dtd-header-ink);
+  --color-text-emphatic: var(--dtd-header-ink);
+}
+
+.application.dtd40k .window-header .window-title {
+  font-weight: 700;
+  color: var(--dtd-header-ink);
+}
+
+.application.dtd40k .window-header :is(button, .header-control) {
+  color: var(--dtd-header-ink);
+}
+
+/* ---------- Typography ---------- */
+
+.dtd40k :is(h1, h2, h3, h4) {
+  font-family: var(--dtd-font-display);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--dtd-ink);
+  border-bottom-color: var(--dtd-brass);
+}
+
+.dtd40k :is(.pool, .stat-value, .track-values, .uses-value, .xp-totals, .derived-value, .martial-cost) {
+  font-family: var(--dtd-font-data);
+}
+
+.dtd40k a:not(.dot):hover {
+  color: var(--dtd-seal);
+  text-shadow: none;
+}
+
+/* Section title: double brass rule and a lozenge */
+.dtd40k .section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--dtd-space-2);
+  padding: 0;
+  border: 0;
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-sm);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dtd-title);
+}
+
+
+.dtd40k .section-title::before,
+.dtd40k .section-title::after {
+  content: "";
+  height: 4px;
+  border-top: 1px solid var(--dtd-brass);
+  border-bottom: 1px solid var(--dtd-brass);
+}
+
+.dtd40k .section-title::before {
+  flex: 0 0 0.8rem;
+}
+
+.dtd40k .section-title::after {
+  flex: 1;
+}
+
+/* ---------- Gems: rating dots as lozenges (shape + fill, never color alone) ---------- */
+
+.dtd40k .dots {
+  gap: 3px;
+  align-items: center;
+}
+
+.dtd40k .dot {
+  width: var(--dtd-gem-size);
+  height: var(--dtd-gem-size);
+  box-sizing: border-box;
+  border: 1.5px solid var(--dtd-gem-rim);
+  border-radius: 0;
+  background: var(--dtd-gem-off);
+  transform: rotate(45deg) scale(0.8);
+}
+
+.dtd40k .dot.filled {
+  border-color: var(--dtd-gem-rim);
+  background: radial-gradient(circle at 35% 35%, #fff6 0 18%, transparent 30%), var(--dtd-gem-on);
+  box-shadow: 0 0 6px var(--dtd-phosphor-glow);
+}
+
+/* The 6th (Exalted) dot */
+.dtd40k .dot.superhuman {
+  margin-left: 4px;
+  border-style: dashed;
+  border-color: var(--dtd-gem-six);
+}
+
+.dtd40k .dot.superhuman.filled {
+  border-style: solid;
+  background: var(--dtd-gem-six);
+}
+
+/* Racial or exaltation bonus: bright brass rim */
+.dtd40k .dot.racial.filled {
+  border-color: var(--dtd-brass-bright);
+  box-shadow: 0 0 0 1px var(--dtd-brass-bright);
+}
+
+.dtd40k .dot.locked {
+  opacity: 0.4;
+  border-style: dotted;
+}
+
+.dtd40k .dots.editable .dot:hover {
+  box-shadow: 0 0 0 2px var(--dtd-focus);
+}
+
+/* ---------- Tags as purity seals ---------- */
+
+.dtd40k :is(.tag, .feat-badge, .automation-tag) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.05rem 0.45rem 0.05rem 0.35rem;
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dtd-ink);
+  background: var(--dtd-paper-sunken);
+  border: 1px solid var(--dtd-paper-edge);
+  border-radius: var(--dtd-radius);
+}
+
+.dtd40k :is(.tag, .feat-badge, .automation-tag)::before {
+  content: "";
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--dtd-seal);
+  box-shadow: inset 0 0 0 1px var(--dtd-seal-deep);
+}
+
+.dtd40k .feat-badge.granted {
+  color: var(--dtd-ink);
+  border-color: var(--dtd-lapis);
+}
+
+.dtd40k .feat-badge.granted::before {
+  background: var(--dtd-lapis);
+  box-shadow: none;
+}
+
+.dtd40k .feat-badge.warning {
+  color: var(--dtd-ink);
+  border-color: var(--dtd-seal);
+}
+
+/* Automation: the machine seal */
+.dtd40k .automation-tag::before {
+  border-radius: 1px;
+  background: var(--dtd-phosphor);
+  box-shadow: 0 0 5px var(--dtd-phosphor-glow);
+  transform: rotate(45deg) scale(0.85);
+}
+
+/* ---------- Plaques: derived values ---------- */
+
+.dtd40k .stat-box {
+  background: var(--dtd-paper-raised);
+  border: 1px solid var(--dtd-brass);
+  border-radius: 0;
+  outline: 1px solid var(--dtd-paper-edge);
+  outline-offset: 2px;
+  clip-path: polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0 calc(100% - 7px), 0 7px);
+}
+
+.dtd40k .stat-box .stat-label {
+  font-family: var(--dtd-font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-muted);
+}
+
+.dtd40k .stat-box .stat-value {
+  font-size: var(--dtd-text-lg);
+  color: var(--dtd-ink);
+}
+
+/* ---------- Resource tracks: segmented tubes ---------- */
+
+.dtd40k .track .bar,
+.dtd40k .resource-bar {
+  position: relative;
+  height: 0.65rem;
+  background: var(--dtd-paper-sunken);
+  border: 1px solid var(--dtd-iron);
+  border-radius: 0;
+  box-shadow: var(--dtd-shadow-inset);
+  overflow: hidden;
+}
+
+.dtd40k .track .bar::after,
+.dtd40k .resource-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, transparent 0 calc(10% - 1px), var(--dtd-paper) calc(10% - 1px) 10%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.dtd40k .track .fill,
+.dtd40k .resource-bar-fill {
+  background: linear-gradient(#fff3, transparent 60%), var(--dtd-hp);
+  border-radius: 0;
+}
+
+.dtd40k .track.resolve .fill,
+.dtd40k .resource-bar-fill {
+  background: linear-gradient(#fff3, transparent 60%), var(--dtd-resolve);
+}
+
+.dtd40k .track-label > span:first-child {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-muted);
+}
+
+/* ---------- Tabs (core tab navigation inside system sheets) ---------- */
+
+.dtd40k nav.sheet-tabs {
+  border-bottom: var(--dtd-rule);
+}
+
+.dtd40k nav.sheet-tabs > .item {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-muted);
+}
+
+.dtd40k nav.sheet-tabs > .item.active {
+  color: var(--dtd-active);
+  text-shadow: none;
+  box-shadow: inset 0 -2px 0 var(--dtd-active);
+}
+
+
+/* ---------- Controls ---------- */
+
+.dtd40k button {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--dtd-radius);
+}
+
+.dtd40k button:focus-visible,
+.dtd40k :is(input, select, textarea):focus-visible {
+  outline: 2px solid var(--dtd-focus);
+  outline-offset: 1px;
+}
+
+.dtd40k :is(input[type="text"], input[type="number"], select, textarea) {
+  color: var(--dtd-ink);
+  background: var(--dtd-paper-sunken);
+  border: 1px solid var(--dtd-paper-edge);
+  border-bottom-color: var(--dtd-brass);
+  border-radius: var(--dtd-radius);
+}
+
+.dtd40k input[type="number"] {
+  font-family: var(--dtd-font-data);
+}
+
+/* Mode switch (Edit / Play / Advance) */
+.dtd40k .mode-toggle {
+  display: inline-flex;
+  border: 1px solid var(--dtd-brass);
+  border-radius: var(--dtd-radius);
+  overflow: hidden;
+}
+
+.dtd40k .mode-toggle .mode-button {
+  margin: 0;
+  border: 0;
+  border-right: 1px solid var(--dtd-paper-edge);
+  border-radius: 0;
+  color: var(--dtd-ink-muted);
+  background: transparent;
+}
+
+.dtd40k .mode-toggle .mode-button:last-child {
+  border-right: 0;
+}
+
+.dtd40k .mode-toggle .mode-button.active {
+  color: var(--dtd-switch-ink);
+  background: var(--dtd-switch-bg);
+  box-shadow: inset 0 -2px 0 var(--dtd-switch-line);
+}
+
+
+/* ---------- Panels, tables, details ---------- */
+
+.dtd40k :is(.exaltation-card, .race-card, .class-card, .creation-panel, .vehicle-row, .equipment-row.equipped) {
+  border-color: var(--dtd-paper-edge);
+  border-radius: var(--dtd-radius);
+}
+
+.dtd40k table th {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-muted);
+}
+
+.dtd40k details > summary {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-sm);
+  letter-spacing: 0.04em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dtd40k * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

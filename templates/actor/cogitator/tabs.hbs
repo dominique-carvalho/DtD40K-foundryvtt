@@ -1,0 +1,17 @@
+<div class="cog-top">
+  <div class="cog-gauges">
+    <div class="cog-gauge" data-tooltip="{{localize "DTD.Derived.staticDefense"}}"><span>{{localize "DTD.Sheet.Rail.StaticShort"}}</span><b>{{system.derived.staticDefense}}</b></div>
+    <div class="cog-gauge" data-tooltip="{{localize "DTD.Derived.mentalDefense"}}"><span>{{localize "DTD.Sheet.Rail.MentalShort"}}</span><b>{{system.derived.mentalDefense}}</b></div>
+    <div class="cog-gauge" data-tooltip="{{localize "DTD.Derived.resilience"}}"><span>{{localize "DTD.Sheet.Rail.ResilienceShort"}}</span><b>{{system.derived.resilience}}</b></div>
+    <div class="cog-gauge" data-tooltip="{{localize "DTD.Sheet.Initiative"}}"><span>{{localize "DTD.Sheet.Rail.InitiativeShort"}}</span><b>+{{initiativeBonus}}</b></div>
+    <div class="cog-gauge" data-tooltip="{{localize "DTD.Sheet.SocialInitiative"}}"><span>{{localize "DTD.Sheet.Rail.SocialShort"}}</span><b>+{{socialInitiativeBonus}}</b></div>
+    <div class="cog-gauge" data-tooltip="{{localize "DTD.Derived.speed"}}"><span>{{localize "DTD.Sheet.Rail.SpeedShort"}}</span><b>{{system.derived.speed}}</b></div>
+  </div>
+  <nav class="sheet-tabs tabs cog-tabs" aria-roledescription="{{localize "SHEETS.FormNavLabel"}}">
+    {{#each tabs as |tab|}}
+    <a data-action="tab" data-group="{{tab.group}}" data-tab="{{tab.id}}" class="cog-key {{tab.cssClass}}" data-tooltip="{{localize tab.label}}">
+      <i class="{{tab.icon}}" inert></i><span>{{localize (concat "DTD.Sheet.TabShort." tab.id)}}</span>
+    </a>
+    {{/each}}
+  </nav>
+</div>

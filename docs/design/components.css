@@ -1,0 +1,288 @@
+/* Scriptorium Machina — components. Depends on tokens.css. Prefix .sm- in the mockups;
+   in the system they become .dtd40k rules over the existing classes. */
+
+.sm-surface {
+  position: relative;
+  background-color: var(--dtd-paper);
+  color: var(--dtd-ink);
+  font-family: var(--dtd-font-body);
+  font-size: var(--dtd-text-md);
+  line-height: 1.35;
+}
+/* Paper grain over any surface */
+.sm-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--dtd-grain);
+  opacity: var(--dtd-grain-opacity);
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+[data-theme="cogitator"] .sm-surface::before,
+[data-theme="cogitator"].sm-surface::before { mix-blend-mode: screen; }
+.sm-surface > * { position: relative; }
+
+/* ---------- Typography ---------- */
+.sm-display {
+  font-family: var(--dtd-font-display);
+  font-weight: 700;
+  letter-spacing: var(--dtd-tracking-caps);
+  text-transform: uppercase;
+}
+.sm-initial::first-letter {
+  font-family: var(--dtd-font-initial);
+  color: var(--dtd-seal);
+  font-size: 1.35em;
+}
+.sm-data { font-family: var(--dtd-font-data); letter-spacing: 0.02em; }
+.sm-caps {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-muted);
+}
+
+/* ---------- Section title: double rule with a central lozenge ---------- */
+.sm-title {
+  display: flex;
+  align-items: center;
+  gap: var(--dtd-space-2);
+  margin: 0 0 var(--dtd-space-2);
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-sm);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dtd-seal);
+}
+[data-theme="cogitator"] .sm-title { color: var(--dtd-brass-bright); }
+.sm-title::before,
+.sm-title::after {
+  content: "";
+  flex: 1;
+  height: 4px;
+  border-top: 1px solid var(--dtd-brass);
+  border-bottom: 1px solid var(--dtd-brass);
+  opacity: 0.8;
+}
+.sm-title::before { flex: 0 0 0.9rem; }
+.sm-title .sm-lozenge {
+  width: 0.45rem; height: 0.45rem;
+  transform: rotate(45deg);
+  background: var(--dtd-brass);
+}
+
+/* ---------- Panel: plate with corner brackets ---------- */
+.sm-panel {
+  position: relative;
+  padding: var(--dtd-space-3);
+  background: var(--dtd-paper-raised);
+  border: var(--dtd-border);
+  border-radius: var(--dtd-radius);
+  box-shadow: var(--dtd-shadow);
+}
+.sm-panel::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--dtd-brass), var(--dtd-brass)) top left / 10px 1px,
+    linear-gradient(var(--dtd-brass), var(--dtd-brass)) top left / 1px 10px,
+    linear-gradient(var(--dtd-brass), var(--dtd-brass)) top right / 10px 1px,
+    linear-gradient(var(--dtd-brass), var(--dtd-brass)) top right / 1px 10px,
+    linear-gradient(var(--dtd-brass), var(--dtd-brass)) bottom left / 10px 1px,
+    linear-gradient(var(--dtd-brass), var(--dtd-brass)) bottom left / 1px 10px,
+    linear-gradient(var(--dtd-brass), var(--dtd-brass)) bottom right / 10px 1px,
+    linear-gradient(var(--dtd-brass), var(--dtd-brass)) bottom right / 1px 10px;
+  background-repeat: no-repeat;
+}
+/* Rivets: the cogitator plate */
+.sm-panel.riveted {
+  background-image:
+    radial-gradient(circle at 7px 7px, var(--dtd-iron) 2px, transparent 2.5px),
+    radial-gradient(circle at calc(100% - 7px) 7px, var(--dtd-iron) 2px, transparent 2.5px),
+    radial-gradient(circle at 7px calc(100% - 7px), var(--dtd-iron) 2px, transparent 2.5px),
+    radial-gradient(circle at calc(100% - 7px) calc(100% - 7px), var(--dtd-iron) 2px, transparent 2.5px);
+}
+.sm-panel.riveted::after { display: none; }
+
+/* ---------- Gems: rating dots as lozenges (shape + fill, never color alone) ---------- */
+.sm-gems { display: inline-flex; gap: 3px; vertical-align: middle; }
+.sm-gem {
+  width: var(--dtd-gem-size);
+  height: var(--dtd-gem-size);
+  transform: rotate(45deg) scale(0.82);
+  border: 1.5px solid var(--dtd-gem-rim);
+  background: var(--dtd-gem-off);
+}
+.sm-gem.on {
+  background: radial-gradient(circle at 35% 35%, #fff6 0 18%, transparent 30%), var(--dtd-gem-on);
+  border-color: var(--dtd-gem-rim);
+  box-shadow: 0 0 6px var(--dtd-phosphor-glow);
+}
+.sm-gem.six { margin-left: 4px; border-style: dashed; }
+.sm-gem.six.on { background: var(--dtd-gem-six); border-style: solid; }
+.sm-gem.bonus { border-color: var(--dtd-brass-bright); }
+
+/* ---------- Purity seal: tags for conditions, keywords, automation ---------- */
+.sm-seal {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dtd-ink);
+  white-space: nowrap;
+}
+.sm-seal::before {
+  content: "";
+  width: 1.15rem; height: 1.15rem;
+  border-radius: 50% 46% 52% 48%;
+  background: radial-gradient(circle at 38% 35%, #ffffff40 0 15%, transparent 35%), var(--dtd-seal);
+  box-shadow: inset 0 0 0 2px var(--dtd-seal-deep), 0 1px 1px #0005;
+  z-index: 1;
+}
+.sm-seal span {
+  margin-left: -0.35rem;
+  padding: 0.1rem 0.55rem 0.1rem 0.6rem;
+  background: var(--dtd-paper-sunken);
+  border: 1px solid var(--dtd-paper-edge);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 50%, 100% 100%, 0 100%);
+}
+.sm-seal.brass::before { background: radial-gradient(circle at 38% 35%, #fff5 0 15%, transparent 35%), var(--dtd-brass); box-shadow: inset 0 0 0 2px var(--dtd-iron); }
+.sm-seal.machine::before { background: var(--dtd-phosphor); box-shadow: inset 0 0 0 2px var(--dtd-iron), 0 0 6px var(--dtd-phosphor-glow); border-radius: 2px; transform: rotate(45deg) scale(0.75); }
+
+/* ---------- Resource track: segmented tube ---------- */
+.sm-track { display: grid; gap: 3px; }
+.sm-track-head { display: flex; justify-content: space-between; align-items: baseline; }
+.sm-track-value { font-family: var(--dtd-font-data); font-size: var(--dtd-text-md); }
+.sm-track-value b { font-size: var(--dtd-text-lg); color: var(--dtd-ink); }
+.sm-tube {
+  --fill: var(--dtd-hp);
+  position: relative;
+  height: 0.65rem;
+  background: var(--dtd-paper-sunken);
+  border: 1px solid var(--dtd-iron);
+  box-shadow: var(--dtd-shadow-inset);
+  overflow: hidden;
+}
+.sm-tube > i {
+  position: absolute; inset: 0 auto 0 0;
+  background: linear-gradient(#fff3, transparent 60%), var(--fill);
+  box-shadow: 0 0 8px var(--dtd-phosphor-glow);
+}
+.sm-tube::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(90deg, transparent 0 calc(10% - 1px), var(--dtd-paper) calc(10% - 1px) 10%);
+  opacity: 0.6;
+}
+.sm-tube.resolve { --fill: var(--dtd-resolve); }
+
+/* ---------- Plaque: derived values ---------- */
+.sm-plaque {
+  display: grid;
+  justify-items: center;
+  min-width: 4.2rem;
+  padding: 0.3rem 0.4rem 0.35rem;
+  background: var(--dtd-paper-raised);
+  border: 1px solid var(--dtd-brass);
+  outline: 1px solid var(--dtd-paper-edge);
+  outline-offset: 2px;
+  clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+}
+.sm-plaque .sm-caps { font-size: 0.62rem; }
+.sm-plaque b { font-family: var(--dtd-font-data); font-size: var(--dtd-text-xl); line-height: 1; color: var(--dtd-ink); }
+
+/* ---------- Buttons ---------- */
+.sm-btn {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dtd-ink);
+  background: var(--dtd-paper-raised);
+  border: 1px solid var(--dtd-brass);
+  border-radius: var(--dtd-radius);
+  cursor: pointer;
+}
+.sm-btn:hover { border-color: var(--dtd-brass-bright); box-shadow: 0 0 0 1px var(--dtd-brass-bright); }
+.sm-btn:focus-visible { outline: 2px solid var(--dtd-focus); outline-offset: 2px; }
+.sm-btn.primary { color: var(--dtd-ink-inverse); background: linear-gradient(#ffffff22, transparent), var(--dtd-seal); border-color: var(--dtd-seal-deep); }
+[data-theme="cogitator"] .sm-btn.primary { color: #fff; }
+.sm-btn.ghost { background: transparent; border-color: transparent; color: var(--dtd-ink-muted); }
+.sm-btn.ghost:hover { color: var(--dtd-ink); box-shadow: none; border-color: var(--dtd-paper-edge); }
+
+/* Segmented switch (Edit / Play / Advance) */
+.sm-switch { display: inline-flex; border: 1px solid var(--dtd-brass); border-radius: var(--dtd-radius); overflow: hidden; }
+.sm-switch button {
+  padding: 0.25rem 0.6rem; border: 0; border-right: 1px solid var(--dtd-paper-edge);
+  background: transparent; color: var(--dtd-ink-muted);
+  font-family: var(--dtd-font-display); font-size: var(--dtd-text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+}
+.sm-switch button:last-child { border-right: 0; }
+.sm-switch button.active { background: var(--dtd-seal); color: #fff; }
+[data-theme="cogitator"] .sm-switch button.active { background: transparent; color: var(--dtd-phosphor); text-shadow: 0 0 6px var(--dtd-phosphor-glow); box-shadow: inset 0 -2px 0 var(--dtd-phosphor); }
+
+/* Input */
+.sm-input {
+  width: 3rem; height: 1.6rem;
+  font-family: var(--dtd-font-data); font-size: var(--dtd-text-md); text-align: center;
+  color: var(--dtd-ink); background: var(--dtd-paper-sunken);
+  border: 0; border-bottom: 1px solid var(--dtd-brass);
+  box-shadow: var(--dtd-shadow-inset);
+}
+
+/* ---------- Chat card: roll ---------- */
+.sm-card {
+  position: relative;
+  width: 300px;
+  border: 1px solid var(--dtd-paper-edge);
+  border-top: 3px solid var(--dtd-seal);
+  box-shadow: var(--dtd-shadow);
+}
+.sm-card-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 0.45rem 0.6rem 0.35rem;
+  border-bottom: var(--dtd-rule);
+}
+.sm-card-head h3 { margin: 0; font-family: var(--dtd-font-display); font-size: var(--dtd-text-md); letter-spacing: 0.06em; }
+.sm-card-head .sm-data { color: var(--dtd-ink-muted); }
+.sm-card-body { padding: 0.5rem 0.6rem 0.6rem; display: grid; gap: 0.5rem; }
+.sm-dice { display: flex; flex-wrap: wrap; gap: 5px; margin: 0; padding: 0; list-style: none; }
+.sm-die {
+  display: grid; place-items: center;
+  min-width: 1.9rem; height: 1.9rem; padding: 0 0.25rem;
+  font-family: var(--dtd-font-data); font-size: var(--dtd-text-md);
+  border: 1px solid var(--dtd-paper-edge);
+  background: var(--dtd-paper-sunken);
+  color: var(--dtd-ink-subtle);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);  /* d10-like facet */
+}
+.sm-die.kept { background: var(--dtd-ink); color: var(--dtd-paper); }
+[data-theme="cogitator"] .sm-die.kept { background: var(--dtd-phosphor); color: #06140b; }
+.sm-die.exploded { background: var(--dtd-seal); color: #fff; }
+.sm-die.dropped { text-decoration: line-through; opacity: 0.6; }
+.sm-total { display: flex; align-items: baseline; justify-content: space-between; }
+.sm-total strong { font-family: var(--dtd-font-data); font-size: var(--dtd-text-xxl); line-height: 1; }
+.sm-outcome {
+  padding: 0.3rem 0.5rem;
+  font-family: var(--dtd-font-display); font-weight: 700; font-size: var(--dtd-text-sm); letter-spacing: 0.1em; text-transform: uppercase; text-align: center;
+  color: #fff; background: var(--dtd-success);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 50%, 100% 100%, 0 100%, 8px 50%);
+}
+[data-theme="cogitator"] .sm-outcome { color: #06140b; }
+.sm-outcome.failure { background: var(--dtd-failure); color: #fff; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

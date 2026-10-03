@@ -1,0 +1,90 @@
+<aside class="cog-rail">
+  <div class="cog-portrait">
+    <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}" {{#if isEdit}}data-action="editImage" data-edit="img"{{/if}}>
+  </div>
+
+  {{#if isEdit}}
+  <input class="cog-name-input" type="text" name="name" value="{{actor.name}}" placeholder="{{localize "Name"}}">
+  {{else}}
+  <h1 class="cog-name">{{actor.name}}</h1>
+  {{/if}}
+
+  {{#if canToggle}}
+  <div class="mode-toggle" role="group" aria-label="{{localize "DTD.Sheet.ToggleMode"}}">
+    <button type="button" class="mode-button{{#if isEdit}} active{{/if}}" data-action="toggleMode" data-mode="edit" data-tooltip="{{localize "DTD.Sheet.ModeEdit"}}" aria-label="{{localize "DTD.Sheet.ModeEdit"}}"><i class="fa-solid fa-pen" inert></i></button>
+    <button type="button" class="mode-button{{#if (and (not isEdit) (not isAdvance))}} active{{/if}}" data-action="toggleMode" data-mode="play" data-tooltip="{{localize "DTD.Sheet.ModePlay"}}" aria-label="{{localize "DTD.Sheet.ModePlay"}}"><i class="fa-solid fa-dice-d10" inert></i></button>
+    <button type="button" class="mode-button{{#if isAdvance}} active{{/if}}" data-action="toggleMode" data-mode="advance" data-tooltip="{{localize "DTD.XP.AdvanceHint"}}" aria-label="{{localize "DTD.Sheet.ModeAdvance"}}"><i class="fa-solid fa-arrow-up" inert></i></button>
+  </div>
+  {{/if}}
+
+  <dl class="cog-ident">
+    <dt>{{localize "DTD.Race.Race"}}</dt>
+    <dd>{{#if race}}<a data-action="openRace">{{race.name}}</a>{{else}}—{{/if}}</dd>
+    <dt>{{localize "DTD.Exaltation.Exaltation"}}</dt>
+    <dd>{{#if exaltation}}<a data-action="openExaltation">{{exaltation.name}}</a>{{else}}—{{/if}}</dd>
+    <dt>{{localize "TYPES.Item.class"}}</dt>
+    <dd>{{#if currentClass}}{{currentClass}}{{else if hasClasses}}{{localize "DTD.Class.FreeStudy"}}{{else}}—{{/if}}</dd>
+    <dt>{{localize "DTD.Sheet.Level"}}</dt>
+    <dd>{{#if (and isEdit (not hasClasses))}}<input type="number" name="system.level" value="{{system.level}}" min="1" max="10" step="1">{{else}}<span{{#if hasClasses}} data-tooltip="{{localize "DTD.Class.LevelFromClasses"}}"{{/if}}>{{system.level}}</span>{{/if}}</dd>
+    <dt>{{localize "DTD.Sheet.Size"}}</dt>
+    <dd>{{#if isEdit}}<input type="number" name="system.size" value="{{base.size}}" min="1" max="10" step="1">{{#if base.sizeChanged}}<span class="final-value" data-tooltip="{{localize "DTD.Race.FinalValue"}}">→ {{system.size}}</span>{{/if}}{{else}}{{system.size}}{{/if}}</dd>
+    <dt>{{localize "DTD.Sheet.Devotion"}}</dt>
+    <dd>{{#if isEdit}}<input type="number" name="system.devotion.value" value="{{system.devotion.value}}" min="0" max="10" step="1">{{else}}{{system.devotion.value}}{{/if}}</dd>
+  </dl>
+
+  <div class="cog-trace"></div>
+
+  <div class="cog-vital hp">
+    <div class="cog-read">
+      <span class="cog-label">{{localize "DTD.Sheet.HitPoints"}}</span>
+      <span class="cog-value"><input type="number" name="system.hp.value" value="{{system.hp.value}}" min="0" step="1"><small>/{{system.hp.max}}</small></span>
+    </div>
+    <div class="track hp"><div class="bar"><span class="fill" style="width: {{hpPct}}%"></span></div></div>
+  </div>
+  <div class="cog-vital resolve">
+    <div class="cog-read">
+      <span class="cog-label">{{localize "DTD.Sheet.Resolve"}}</span>
+      <span class="cog-value"><input type="number" name="system.resolve.value" value="{{system.resolve.value}}" min="0" step="1"><small>/{{system.resolve.max}}</small></span>
+    </div>
+    <div class="track resolve"><div class="bar"><span class="fill" style="width: {{resolvePct}}%"></span></div></div>
+  </div>
+
+  <div class="cog-line">
+    <span class="cog-label">{{localize "DTD.Sheet.Fatigue"}}</span>
+    <span class="cog-leds warn">{{#each rail.fatigue.lamps as |lamp|}}<i class="cog-led{{#if lamp.on}} on{{/if}}"></i>{{/each}}</span>
+    <input type="number" name="system.fatigue.value" value="{{system.fatigue.value}}" min="0" step="1" aria-label="{{localize "DTD.Sheet.Fatigue"}}">
+  </div>
+  <div class="cog-line">
+    <span class="cog-label">{{localize "DTD.Sheet.HeroPoints"}}</span>
+    <span class="cog-leds">{{#each rail.hero.lamps as |lamp|}}<i class="cog-led{{#if lamp.on}} on{{/if}}"></i>{{/each}}</span>
+    <span class="cog-pair">
+      <input type="number" name="system.heroPoints.value" value="{{system.heroPoints.value}}" min="0" step="1" aria-label="{{localize "DTD.Sheet.HeroPoints"}}">
+      {{#if isEdit}}/<input type="number" name="system.heroPoints.max" value="{{base.heroPointsMax}}" min="0" step="1">{{#if base.heroPointsMaxChanged}}<span class="final-value" data-tooltip="{{localize "DTD.Race.FinalValue"}}">→ {{system.heroPoints.max}}</span>{{/if}}{{/if}}
+    </span>
+  </div>
+  {{#if rail.power}}
+  <div class="cog-line">
+    <span class="cog-label">{{rail.power.resource.name}} <small>({{rail.power.name}} {{rail.power.value}})</small></span>
+    {{#if rail.power.lamps.overflow}}
+    <span class="cog-number">{{rail.power.resource.value}}/{{rail.power.resource.max}}</span>
+    {{else}}
+    <span class="dots">{{#each rail.power.lamps.lamps as |lamp|}}<span class="dot{{#if lamp.on}} filled{{/if}}"></span>{{/each}}</span>
+    {{/if}}
+  </div>
+  {{/if}}
+
+  {{#if rail.conditions.length}}
+  <div class="cog-trace"></div>
+  <div class="cog-conditions" aria-label="{{localize "DTD.Combat.Conditions"}}">
+    {{#each rail.conditions as |condition|}}<span class="tag condition">{{condition.label}}</span>{{/each}}
+  </div>
+  {{/if}}
+
+  {{#if rail.xp}}
+  <div class="cog-trace"></div>
+  <div class="cog-xp">
+    <span class="cog-label">{{localize "DTD.Sheet.Rail.Experience"}}</span>
+    <span class="cog-odo"><b>{{rail.xp.available}}</b><em>/</em>{{rail.xp.total}}</span>
+  </div>
+  {{/if}}
+</aside>

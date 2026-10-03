@@ -1,0 +1,113 @@
+/* Scriptorium Machina — design tokens of Dungeons the Dragoning 40K.
+   Light theme: "Vellum" (gothic imperial). Dark theme: "Cogitator" (tech grimoire).
+   In the system these live under .dtd40k (light) and .dtd40k.themed.theme-dark (dark);
+   in the mockups, under [data-theme]. */
+
+:root,
+[data-theme="vellum"] {
+  /* Surfaces */
+  --dtd-paper: #efe4cc;          /* parchment */
+  --dtd-paper-raised: #f6eedb;   /* panel over the page */
+  --dtd-paper-sunken: #e2d2ae;   /* inputs, wells */
+  --dtd-paper-edge: #c4ab7c;     /* burnt edge, rules */
+
+  /* Ink */
+  --dtd-ink: #2a1f17;            /* iron-gall ink */
+  --dtd-ink-muted: #5c4a3a;
+  --dtd-ink-subtle: #6f5c47;
+  --dtd-ink-inverse: #f6eedb;
+
+  /* Identity colors */
+  --dtd-seal: #8e1b1b;           /* wax-seal crimson: primary action, damage, emphasis */
+  --dtd-seal-deep: #5e0f12;
+  --dtd-seal-soft: #8e1b1b1f;
+  --dtd-brass: #9a7328;          /* aged gold: ornaments, frames, secondary */
+  --dtd-brass-bright: #c4973c;
+  --dtd-iron: #3a3834;           /* iron: rivets, plates */
+  --dtd-phosphor: #2d6e45;       /* cogitator green: success, data, machine */
+  --dtd-phosphor-glow: transparent;
+  --dtd-lapis: #2a5a8c;          /* lapis: Resolve, mental, magic */
+
+  /* Semantic */
+  --dtd-hp: var(--dtd-seal);
+  --dtd-resolve: var(--dtd-lapis);
+  --dtd-success: var(--dtd-phosphor);
+  --dtd-failure: var(--dtd-seal);
+  --dtd-warning: #a8611a;
+  --dtd-focus: var(--dtd-brass-bright);
+
+  /* Gems (rating dots) */
+  --dtd-gem-on: var(--dtd-seal);
+  --dtd-gem-rim: var(--dtd-brass);
+  --dtd-gem-off: transparent;
+  --dtd-gem-six: var(--dtd-brass-bright);  /* the 6th, Exalted dot */
+
+  /* Texture and depth */
+  --dtd-grain-opacity: 0.18;
+  --dtd-shadow: 0 1px 0 #fff8, 0 2px 6px #3b2a1640;
+  --dtd-shadow-inset: inset 0 1px 3px #3b2a1650;
+}
+
+[data-theme="cogitator"] {
+  --dtd-paper: #141719;
+  --dtd-paper-raised: #1c2124;
+  --dtd-paper-sunken: #0d1011;
+  --dtd-paper-edge: #3a4246;
+
+  --dtd-ink: #e8dfca;            /* bone */
+  --dtd-ink-muted: #b3a88f;
+  --dtd-ink-subtle: #978f7b;
+  --dtd-ink-inverse: #141719;
+
+  --dtd-seal: #c8372f;
+  --dtd-seal-deep: #7d1b16;
+  --dtd-seal-soft: #c8372f26;
+  --dtd-brass: #c09a48;
+  --dtd-brass-bright: #e2bd66;
+  --dtd-iron: #4a5257;
+  --dtd-phosphor: #62f08f;
+  --dtd-phosphor-glow: #62f08f55;
+  --dtd-lapis: #64a2dc;
+
+  --dtd-warning: #e0963a;
+
+  --dtd-gem-on: var(--dtd-phosphor);
+  --dtd-gem-rim: var(--dtd-iron);
+  --dtd-gem-six: var(--dtd-brass-bright);
+
+  --dtd-grain-opacity: 0.08;
+  --dtd-shadow: 0 0 0 1px #0008, 0 4px 12px #000a;
+  --dtd-shadow-inset: inset 0 1px 4px #000c;
+}
+
+:root {
+  /* Typography (OFL fonts; bundled in the system, Google Fonts in the mockups) */
+  --dtd-font-display: "Cinzel", "Modesto Condensed", serif;          /* names, titles, tabs */
+  --dtd-font-initial: "Cinzel Decorative", "Cinzel", serif;          /* drop caps */
+  --dtd-font-body: "Crimson Pro", "Amiri", Georgia, serif;           /* text */
+  --dtd-font-data: "Share Tech Mono", "Courier New", monospace;      /* numbers, formulas, readouts */
+
+  --dtd-text-xs: 0.72rem;
+  --dtd-text-sm: 0.82rem;
+  --dtd-text-md: 0.95rem;
+  --dtd-text-lg: 1.15rem;
+  --dtd-text-xl: 1.5rem;
+  --dtd-text-xxl: 2.1rem;
+  --dtd-tracking-caps: 0.08em;
+
+  /* Space (4 px grid) */
+  --dtd-space-1: 0.25rem;
+  --dtd-space-2: 0.5rem;
+  --dtd-space-3: 0.75rem;
+  --dtd-space-4: 1rem;
+  --dtd-space-6: 1.5rem;
+
+  /* Shape */
+  --dtd-radius: 2px;              /* almost square: plates and parchment, never pills */
+  --dtd-border: 1px solid var(--dtd-paper-edge);
+  --dtd-rule: 1px solid var(--dtd-brass);
+  --dtd-gem-size: 0.72rem;
+
+  /* Paper grain (SVG noise; works offline) */
+  --dtd-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .23 0 0 0 0 .16 0 0 0 0 .09 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}

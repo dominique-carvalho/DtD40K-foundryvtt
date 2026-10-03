@@ -153,7 +153,29 @@
       "Vehicle": "Ficha de Veículo DtD",
       "ShipComponent": "Ficha de Componente de Nave DtD",
       "Ship": "Ficha de Nave DtD",
-      "Squadron": "Ficha de Esquadrão DtD"
+      "Squadron": "Ficha de Esquadrão DtD",
+      "Cogitator": "Personagem DtD — Cogitador",
+      "Illuminated": "Personagem DtD — Iluminura",
+      "TabShort": {
+        "main": "Perícias",
+        "traits": "Traços",
+        "equipment": "Equip.",
+        "combat": "Combate",
+        "magic": "Magia",
+        "martial": "Marcial",
+        "class": "Classe/XP",
+        "npc": "Antagonista"
+      },
+      "Rail": {
+        "Experience": "Experiência",
+        "StaticShort": "Estática",
+        "MentalShort": "Mental",
+        "ResilienceShort": "Resil.",
+        "InitiativeShort": "Inic.",
+        "SocialShort": "Social",
+        "SpeedShort": "Desloc.",
+        "Resources": "Recursos"
+      }
     },
     "Roll": {
       "Success": "Sucesso",

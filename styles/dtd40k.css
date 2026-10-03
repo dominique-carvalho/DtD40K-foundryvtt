@@ -1,16 +1,6 @@
 /* Dungeons the Dragoning — system styles. All rules are scoped under .dtd40k.
-   Colors come only from Foundry v13 theme variables (light and dark themes). */
-
-.dtd40k {
-  --dtd-text: var(--color-text-primary);
-  --dtd-text-muted: var(--color-text-secondary);
-  --dtd-text-subtle: var(--color-text-subtle);
-  --dtd-border: var(--color-border);
-  --dtd-accent: var(--color-border-highlight);
-  --dtd-hp: #c0392b;
-  --dtd-resolve: #2e86c1;
-  --dtd-dot-size: 0.7rem;
-}
+   Colors come only from the Scriptorium Machina tokens (styles/tokens.css, spec 021); shared components in
+   components.css, chat cards in chat.css, character sheet layouts in sheet-*.css. */
 
 /* ---------- Window & layout ---------- */
 
@@ -51,12 +41,8 @@
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.6rem 0 0.5rem;
-  background: var(--color-cool-5, inherit);
+  background: var(--dtd-grain), var(--dtd-paper);
   border-bottom: 1px solid var(--dtd-border);
-}
-
-.dtd40k.themed.theme-light .sheet-header {
-  background: var(--color-light-1, #f3f3f3);
 }
 
 .dtd40k .identity {
@@ -705,7 +691,7 @@
 
 .dtd40k.race-choice fieldset {
   margin: 0 0 0.5rem;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--dtd-border);
   border-radius: 4px;
 }
 
@@ -718,7 +704,7 @@
 .dtd40k.race-choice .choice-group h4 {
   margin: 0.25rem 0;
   font-size: 0.85rem;
-  color: var(--color-text-secondary);
+  color: var(--dtd-text-muted);
 }
 
 .dtd40k.race-choice .choice-group {
@@ -783,7 +769,7 @@
 
 .dtd40k.race-info dt {
   font-weight: bold;
-  color: var(--color-text-secondary);
+  color: var(--dtd-text-muted);
 }
 
 .dtd40k.race-info dd {
@@ -842,7 +828,7 @@
 
 .dtd40k .pool {
   min-width: 2.6rem;
-  font-family: var(--font-mono, monospace);
+  font-family: var(--dtd-font-data);
   font-size: 0.8rem;
   text-align: right;
   color: var(--dtd-text-muted);
@@ -850,110 +836,6 @@
 
 .dtd40k .pool.untrained {
   font-style: italic;
-}
-
-/* ---------- Chat roll card (US2) ---------- */
-
-.dtd40k.roll-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.dtd40k .roll-card-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.5rem;
-  border-bottom: 1px solid var(--color-border-highlight);
-}
-
-.dtd40k .roll-card-title {
-  margin: 0;
-  font-size: 1rem;
-  border: none;
-}
-
-.dtd40k .roll-card-formula {
-  font-family: var(--font-mono, monospace);
-  font-weight: bold;
-}
-
-.dtd40k .roll-card-note {
-  margin: 0;
-  font-size: 0.8rem;
-  font-style: italic;
-  color: var(--color-text-secondary);
-}
-
-.dtd40k .roll-card-dice {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.dtd40k .roll-die {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.2rem;
-  padding: 0.05rem 0.4rem;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  font-family: var(--font-mono, monospace);
-}
-
-.dtd40k .roll-die.kept {
-  border-color: var(--color-border-highlight);
-  font-weight: bold;
-}
-
-.dtd40k .roll-die.dropped {
-  opacity: 0.55;
-}
-
-.dtd40k .roll-die .chain {
-  font-size: 0.75rem;
-  font-weight: normal;
-}
-
-.dtd40k .roll-die .rerolled {
-  font-size: 0.75rem;
-  opacity: 0.7;
-}
-
-.dtd40k .roll-card-total {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-
-.dtd40k .roll-card-total strong {
-  font-size: 1.4rem;
-}
-
-.dtd40k .roll-card-tn {
-  margin-left: auto;
-  color: var(--color-text-secondary);
-}
-
-.dtd40k .roll-card-outcome {
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.dtd40k .roll-card-outcome.success {
-  border: 1px solid #2e8b57;
-  color: #2e8b57;
-}
-
-.dtd40k .roll-card-outcome.failure {
-  border: 1px solid #c0392b;
-  color: #c0392b;
 }
 
 /* ---------- Roll dialog (US3) ---------- */
@@ -1107,7 +989,7 @@
 
 .dtd40k.item:is(.exaltation, .class, .equipment, .spell, .martial-school, .deity, .vehicle-component, .ship-component) .tag,
 .dtd40k .equipment-tab .tag,
-.dtd40k .attack-card-extra .tag {
+.dtd40k.attack-card-extra .tag {
   display: inline-block;
   margin: 0 0.3rem 0.2rem 0;
   padding: 0 0.4rem;
@@ -1243,7 +1125,7 @@
 
 .dtd40k .exaltation-tell.tell-level-1 .tell-label { color: var(--dtd-text-muted); }
 .dtd40k .exaltation-tell.tell-level-2 .tell-label { color: var(--dtd-resolve); }
-.dtd40k .exaltation-tell.tell-level-3 .tell-label { color: #b9770e; font-weight: bold; }
+.dtd40k .exaltation-tell.tell-level-3 .tell-label { color: var(--dtd-warning); font-weight: bold; }
 .dtd40k .exaltation-tell.tell-level-4 .tell-label { color: var(--dtd-hp); font-weight: bold; }
 
 .dtd40k .generic-spends {
@@ -1682,8 +1564,8 @@
   gap: 0.3rem;
 }
 
-.dtd40k .attack-card-extra,
-.dtd40k .acquire-card-extra {
+.dtd40k.attack-card-extra,
+.dtd40k.acquire-card-extra {
   margin-top: 0.3rem;
 }
 
@@ -1692,7 +1574,7 @@
 }
 
 .dtd40k .attack-damage-button,
-.dtd40k .acquire-card-extra button {
+.dtd40k.acquire-card-extra button {
   width: 100%;
   margin-top: 0.3rem;
 }
@@ -1782,14 +1664,14 @@
 }
 
 .dtd40k .defense-buttons button,
-.dtd40k .damage-card button[data-dtd-action="applyDamage"],
-.dtd40k .damage-applied button {
+.dtd40k.damage-card button[data-dtd-action="applyDamage"],
+.dtd40k.damage-applied button {
   flex: 1;
   width: 100%;
   margin-top: 0.3rem;
 }
 
-.dtd40k .damage-applied .applied-row {
+.dtd40k.damage-applied .applied-row {
   padding: 0.2rem 0;
   border-bottom: 1px dotted var(--dtd-border);
 }
@@ -1816,7 +1698,7 @@
   margin-top: 0.4rem;
 }
 
-.dtd40k .spell-card-extra .spell-row {
+.dtd40k.spell-card-extra .spell-row {
   padding: 0.2rem 0;
   border-bottom: 1px dotted var(--dtd-border);
 }
@@ -1890,7 +1772,7 @@
 }
 
 .dtd40k .martial-budget.warning {
-  color: var(--color-level-warning, #c9593f);
+  color: var(--dtd-warning);
 }
 
 .dtd40k .martial-options {
@@ -1912,7 +1794,7 @@
   width: 3rem;
 }
 
-.dtd40k .attack-card-extra .martial-card {
+.dtd40k.attack-card-extra .martial-card {
   border-left: 2px solid var(--dtd-accent);
   padding-left: 0.4rem;
   margin: 0.3rem 0;
@@ -2263,7 +2145,7 @@
   display: flex;
   flex-direction: column;
   padding: 0.15rem 0;
-  border-bottom: 1px solid var(--color-border-light-tertiary, #0002);
+  border-bottom: 1px solid var(--dtd-border);
 }
 
 .dtd40k .weapon-builder-mods li.disabled {
@@ -2272,7 +2154,7 @@
 
 .dtd40k .weapon-builder-mods .mod-cost {
   float: right;
-  font-family: var(--font-mono, monospace);
+  font-family: var(--dtd-font-data);
 }
 
 .dtd40k .weapon-builder-notes {
@@ -2288,7 +2170,7 @@
 
 /* Character creation panel (spec 016) */
 .dtd40k .creation-panel {
-  border: 1px solid var(--color-border-light-tertiary, #0003);
+  border: 1px solid var(--dtd-border);
   border-radius: 4px;
   padding: 0.4rem 0.6rem;
   margin-bottom: 0.5rem;
@@ -2319,13 +2201,13 @@
 
 .dtd40k .creation-group.full b,
 .dtd40k .creation-step.done i {
-  color: var(--color-level-success, #3a8a3a);
+  color: var(--dtd-success);
 }
 
 .dtd40k .creation-group.over b,
 .dtd40k .creation-step.warning i,
 .dtd40k .creation-note.warning {
-  color: var(--color-level-warning, #c9593f);
+  color: var(--dtd-warning);
 }
 
 .dtd40k .creation-steps {

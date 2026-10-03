@@ -1,0 +1,164 @@
+/* Scriptorium Machina — design tokens (spec 021, docs/design-system.md).
+   Vellum (gothic imperial) follows Foundry's light theme; Cogitator (tech grimoire) the dark one.
+   The nearest theme wins: a window's own theme beats the page's, and each nesting level (page, sidebar, chat log)
+   adds one class, so the innermost themed ancestor decides.
+   The `@variant` markers are read by tests/unit/design-tokens.test.mjs. */
+
+/* @variant vellum */
+.dtd40k,
+.theme-light .dtd40k,
+.theme-dark .theme-light .dtd40k,
+.theme-light .theme-dark .theme-light .dtd40k,
+.dtd40k.dtd40k.theme-light {
+  --dtd-paper: #efe4cc;
+  --dtd-paper-raised: #f6eedb;
+  --dtd-paper-sunken: #e2d2ae;
+  --dtd-paper-edge: #c4ab7c;
+  --dtd-ink: #2a1f17;
+  --dtd-ink-muted: #5c4a3a;
+  --dtd-ink-subtle: #6f5c47;
+  --dtd-ink-inverse: #f6eedb;
+  --dtd-seal: #8e1b1b;
+  --dtd-seal-deep: #5e0f12;
+  --dtd-seal-soft: #8e1b1b1f;
+  --dtd-brass: #9a7328;
+  --dtd-brass-bright: #c4973c;
+  --dtd-iron: #3a3834;
+  --dtd-phosphor: #2d6e45;
+  --dtd-phosphor-glow: #0000;
+  --dtd-lapis: #2a5a8c;
+  --dtd-warning: #a8611a;
+  --dtd-on-seal: #ffffff;
+  --dtd-on-phosphor: #ffffff;
+  --dtd-gem-on: var(--dtd-seal);
+  --dtd-gem-rim: var(--dtd-brass);
+  --dtd-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .23 0 0 0 0 .16 0 0 0 0 .09 0 0 0 .16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --dtd-header-bg: #5e0f12;
+  --dtd-header-ink: #f6eedb;
+  --dtd-title: var(--dtd-seal);
+  --dtd-active: var(--dtd-seal);
+  --dtd-switch-bg: var(--dtd-seal);
+  --dtd-switch-ink: var(--dtd-on-seal);
+  --dtd-switch-line: transparent;
+  --dtd-readout: var(--dtd-ink);
+  --dtd-die-kept: var(--dtd-ink);
+  --dtd-on-die-kept: var(--dtd-ink-inverse);
+  --dtd-odo-bg: var(--dtd-ink);
+  --dtd-odo-ink: var(--dtd-ink-inverse);
+  --dtd-zebra: #0000000a;
+  --dtd-vignette: #6b4a2a26;
+  --dtd-shadow: 0 1px 0 #fff8, 0 2px 6px #3b2a1640;
+  --dtd-shadow-inset: inset 0 1px 3px #3b2a1650;
+}
+
+/* @variant cogitator */
+.theme-dark .dtd40k,
+.theme-light .theme-dark .dtd40k,
+.theme-dark .theme-light .theme-dark .dtd40k,
+.dtd40k.dtd40k.theme-dark {
+  --dtd-paper: #141719;
+  --dtd-paper-raised: #1c2124;
+  --dtd-paper-sunken: #0d1011;
+  --dtd-paper-edge: #3a4246;
+  --dtd-ink: #e8dfca;
+  --dtd-ink-muted: #b3a88f;
+  --dtd-ink-subtle: #978f7b;
+  --dtd-ink-inverse: #141719;
+  --dtd-seal: #c8372f;
+  --dtd-seal-deep: #7d1b16;
+  --dtd-seal-soft: #c8372f26;
+  --dtd-brass: #c09a48;
+  --dtd-brass-bright: #e2bd66;
+  --dtd-iron: #4a5257;
+  --dtd-phosphor: #62f08f;
+  --dtd-phosphor-glow: #62f08f55;
+  --dtd-lapis: #64a2dc;
+  --dtd-warning: #e0963a;
+  --dtd-on-seal: #ffffff;
+  --dtd-on-phosphor: #06140b;
+  --dtd-gem-on: var(--dtd-phosphor);
+  --dtd-gem-rim: var(--dtd-iron);
+  --dtd-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .9 0 0 0 0 .9 0 0 0 0 .85 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --dtd-header-bg: #0d1011;
+  --dtd-header-ink: #e8dfca;
+  --dtd-title: var(--dtd-brass-bright);
+  --dtd-active: var(--dtd-phosphor);
+  --dtd-switch-bg: transparent;
+  --dtd-switch-ink: var(--dtd-phosphor);
+  --dtd-switch-line: var(--dtd-phosphor);
+  --dtd-readout: var(--dtd-phosphor);
+  --dtd-die-kept: var(--dtd-phosphor);
+  --dtd-on-die-kept: var(--dtd-on-phosphor);
+  --dtd-odo-bg: #000000;
+  --dtd-odo-ink: var(--dtd-phosphor);
+  --dtd-zebra: #ffffff06;
+  --dtd-vignette: #00000099;
+  --dtd-shadow: 0 0 0 1px #0008, 0 4px 12px #000a;
+  --dtd-shadow-inset: inset 0 1px 4px #000c;
+}
+
+/* Shared tokens and aliases (same in both variants). Repeated class: beats Foundry's `.themed.theme-*` variables. */
+.dtd40k.dtd40k.dtd40k {
+  /* Semantic */
+  --dtd-hp: var(--dtd-seal);
+  --dtd-resolve: var(--dtd-lapis);
+  --dtd-success: var(--dtd-phosphor);
+  --dtd-failure: var(--dtd-seal);
+  --dtd-focus: var(--dtd-brass-bright);
+  --dtd-gem-off: transparent;
+  --dtd-gem-six: var(--dtd-brass-bright);
+
+  /* Aliases of the names used before the design system (all colors) */
+  --dtd-text: var(--dtd-ink);
+  --dtd-text-muted: var(--dtd-ink-muted);
+  --dtd-text-subtle: var(--dtd-ink-subtle);
+  --dtd-border: var(--dtd-paper-edge);
+  --dtd-accent: var(--dtd-brass);
+
+  /* Typography */
+  --dtd-font-display: "Cinzel", "Modesto Condensed", serif;
+  --dtd-font-initial: "Cinzel Decorative", "Cinzel", serif;
+  --dtd-font-body: "Crimson Pro", "Amiri", Georgia, serif;
+  --dtd-font-data: "Share Tech Mono", "Courier New", monospace;
+  --dtd-text-xs: 0.72rem;
+  --dtd-text-sm: 0.82rem;
+  --dtd-text-md: 0.95rem;
+  --dtd-text-lg: 1.15rem;
+  --dtd-text-xl: 1.5rem;
+  --dtd-text-xxl: 2.1rem;
+  --dtd-tracking-caps: 0.08em;
+
+  /* Space and shape */
+  --dtd-space-1: 0.25rem;
+  --dtd-space-2: 0.5rem;
+  --dtd-space-3: 0.75rem;
+  --dtd-space-4: 1rem;
+  --dtd-space-6: 1.5rem;
+  --dtd-radius: 2px;
+  --dtd-rule: 1px solid var(--dtd-brass);
+  --dtd-gem-size: 0.72rem;
+  --dtd-dot-size: var(--dtd-gem-size);
+
+  /* Foundry's own variables inside system elements, so core-styled inputs, buttons and text follow the palette */
+  --color-text-primary: var(--dtd-ink);
+  --color-text-secondary: var(--dtd-ink-muted);
+  --color-text-subtle: var(--dtd-ink-subtle);
+  --color-text-emphatic: var(--dtd-ink);
+  --color-border: var(--dtd-paper-edge);
+  --color-border-highlight: var(--dtd-brass);
+  --color-border-light-tertiary: var(--dtd-paper-edge);
+  --color-level-success: var(--dtd-success);
+  --color-level-warning: var(--dtd-warning);
+  --color-level-error: var(--dtd-failure);
+  --input-background-color: var(--dtd-paper-sunken);
+  --input-text-color: var(--dtd-ink);
+  --input-border-color: var(--dtd-paper-edge);
+  --input-focus-outline-color: var(--dtd-focus);
+  --button-background-color: var(--dtd-paper-raised);
+  --button-text-color: var(--dtd-ink);
+  --button-border-color: var(--dtd-brass);
+  --button-hover-background-color: var(--dtd-paper-sunken);
+  --button-hover-text-color: var(--dtd-ink);
+  --button-hover-border-color: var(--dtd-brass-bright);
+  --font-mono: var(--dtd-font-data);
+}

@@ -1,0 +1,360 @@
+/* Scriptorium Machina — character builder (spec 023). Steps on the left, the current step in the middle, the summary
+   on the right, the footer below. Tokens of styles/tokens.css. */
+
+.dtd40k.character-builder .window-content {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr) 220px;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ---------- Steps ---------- */
+
+.dtd40k.character-builder .builder-steps {
+  grid-row: 1 / -1;
+  padding: 0.8rem 0.6rem;
+  overflow-y: auto;
+  background: var(--dtd-paper-sunken);
+  border-right: 2px solid var(--dtd-iron);
+}
+
+.dtd40k.character-builder .builder-steps ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k.character-builder .builder-step-link a {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.35rem;
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dtd-ink-muted);
+  border-radius: var(--dtd-radius);
+  cursor: pointer;
+}
+
+.dtd40k.character-builder .builder-step-mark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  font-family: var(--dtd-font-data);
+  font-size: var(--dtd-text-xs);
+  border: 1px solid var(--dtd-brass);
+  border-radius: 50%;
+}
+
+.dtd40k.character-builder .builder-step-link.current a {
+  color: var(--dtd-ink);
+  background: var(--dtd-paper-raised);
+  box-shadow: inset 2px 0 0 var(--dtd-seal);
+}
+
+.dtd40k.character-builder .builder-step-link.done .builder-step-mark {
+  color: var(--dtd-on-phosphor);
+  background: var(--dtd-success);
+  border-color: var(--dtd-success);
+}
+
+.dtd40k.character-builder .builder-step-link.warn .builder-step-mark {
+  color: var(--dtd-on-seal);
+  background: var(--dtd-warning);
+  border-color: var(--dtd-warning);
+}
+
+/* ---------- Current step ---------- */
+
+.dtd40k.character-builder .builder-step {
+  grid-column: 2;
+  grid-row: 1;
+  min-height: 0;
+  padding: 0.9rem 1.1rem;
+  overflow-y: auto;
+}
+
+.dtd40k.character-builder .builder-form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.dtd40k.character-builder .builder-form label {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.dtd40k.character-builder .builder-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  gap: 0.5rem;
+  margin: 0.4rem 0 0.8rem;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k.character-builder .builder-card a {
+  display: grid;
+  justify-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  text-align: center;
+  background: var(--dtd-paper-raised);
+  border: 1px solid var(--dtd-paper-edge);
+  border-radius: var(--dtd-radius);
+  cursor: pointer;
+}
+
+.dtd40k.character-builder .builder-card img {
+  width: 48px;
+  height: 48px;
+  border: 0;
+}
+
+.dtd40k.character-builder .builder-card span {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-sm);
+  font-weight: 700;
+}
+
+.dtd40k.character-builder .builder-card.selected a,
+.dtd40k.character-builder .builder-list li.selected a {
+  border-color: var(--dtd-seal);
+  box-shadow: 0 0 0 1px var(--dtd-seal);
+}
+
+.dtd40k.character-builder .builder-choice {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+.dtd40k.character-builder .builder-checks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0.2rem 0.8rem;
+}
+
+.dtd40k.character-builder .builder-checks a {
+  cursor: pointer;
+}
+
+.dtd40k.character-builder .builder-checks .selected a {
+  color: var(--dtd-seal);
+  font-weight: 600;
+}
+
+.dtd40k.character-builder .builder-ranks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.dtd40k.character-builder .builder-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.dtd40k.character-builder .builder-group {
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--dtd-paper-edge);
+  border-radius: var(--dtd-radius);
+}
+
+.dtd40k.character-builder .builder-group legend {
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dtd40k.character-builder .builder-budget {
+  font-family: var(--dtd-font-data);
+  color: var(--dtd-ink-muted);
+}
+
+.dtd40k.character-builder .builder-budget.over {
+  color: var(--dtd-seal);
+}
+
+.dtd40k.character-builder .builder-rating {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0;
+}
+
+.dtd40k.character-builder .builder-rating input[type="number"] {
+  width: 3rem;
+}
+
+.dtd40k.character-builder .builder-rating.low span {
+  color: var(--dtd-seal);
+}
+
+.dtd40k.character-builder .builder-final {
+  min-width: 1.6rem;
+  font-family: var(--dtd-font-data);
+  font-weight: 400;
+  text-align: center;
+  color: var(--dtd-readout);
+}
+
+.dtd40k.character-builder .builder-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dtd40k.character-builder .builder-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.2rem 0.3rem;
+  border-bottom: 1px dotted var(--dtd-paper-edge);
+}
+
+.dtd40k.character-builder .builder-list li a {
+  cursor: pointer;
+}
+
+.dtd40k.character-builder .builder-list li.disabled {
+  opacity: 0.55;
+}
+
+.dtd40k.character-builder .builder-purchase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.dtd40k.character-builder .builder-review li.ok i {
+  color: var(--dtd-success);
+}
+
+.dtd40k.character-builder .builder-review li.bad i {
+  color: var(--dtd-failure);
+}
+
+.dtd40k.character-builder .builder-review li.released i {
+  color: var(--dtd-warning);
+}
+
+/* ---------- Summary ---------- */
+
+.dtd40k.character-builder .builder-summary {
+  grid-column: 3;
+  grid-row: 1;
+  min-height: 0;
+  padding: 0.8rem;
+  overflow-y: auto;
+  background: var(--dtd-paper-raised);
+  border-left: var(--dtd-rule);
+}
+
+.dtd40k.character-builder .builder-portrait {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
+  object-fit: cover;
+  border: 1px solid var(--dtd-brass);
+}
+
+.dtd40k.character-builder .builder-name {
+  margin: 0.4rem 0;
+  text-align: center;
+  border: 0;
+  font-size: var(--dtd-text-lg);
+}
+
+.dtd40k.character-builder .builder-ident {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.15rem 0.4rem;
+  font-size: var(--dtd-text-sm);
+}
+
+.dtd40k.character-builder .builder-ident dt {
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.character-builder .builder-ident dd {
+  margin: 0;
+  text-align: right;
+}
+
+.dtd40k.character-builder .builder-chars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem;
+}
+
+.dtd40k.character-builder .builder-chars span {
+  display: grid;
+  justify-items: center;
+  padding: 0.15rem;
+  border: 1px solid var(--dtd-paper-edge);
+}
+
+.dtd40k.character-builder .builder-chars b,
+.dtd40k.character-builder .builder-xp b {
+  font-family: var(--dtd-font-data);
+  font-weight: 400;
+  font-size: var(--dtd-text-lg);
+}
+
+.dtd40k.character-builder .builder-skills {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--dtd-text-sm);
+}
+
+.dtd40k.character-builder .builder-skills li {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---------- Footer ---------- */
+
+.dtd40k.character-builder .builder-footer {
+  grid-column: 2 / -1;
+  grid-row: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem 0.9rem;
+  border-top: var(--dtd-rule);
+}
+
+.dtd40k.character-builder .builder-messages p {
+  margin: 0.1rem 0;
+}
+
+.dtd40k.character-builder .builder-buttons {
+  display: flex;
+  gap: 0.4rem;
+  flex: none;
+}
+
+.dtd40k.character-builder .builder-next,
+.dtd40k.character-builder .builder-finish {
+  color: var(--dtd-on-seal);
+  background: var(--dtd-seal);
+  border-color: var(--dtd-seal-deep);
+}

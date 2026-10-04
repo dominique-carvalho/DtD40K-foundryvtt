@@ -1,0 +1,12 @@
+<nav class="builder-steps">
+  <ol>
+    {{#each steps as |s|}}
+    <li class="builder-step-link{{#if s.current}} current{{/if}}{{#if s.done}} done{{/if}}{{#if s.warn}} warn{{/if}}">
+      <a data-action="goto" data-step="{{s.key}}">
+        <span class="builder-step-mark">{{#if s.done}}<i class="fa-solid fa-check" inert></i>{{else if s.warn}}<i class="fa-solid fa-triangle-exclamation" inert></i>{{else}}{{s.number}}{{/if}}</span>
+        {{s.label}}
+      </a>
+    </li>
+    {{/each}}
+  </ol>
+</nav>

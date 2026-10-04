@@ -94,6 +94,11 @@ Hooks.once("init", () => {
   // Combat order, turn limits and the conditions of the book (spec 008, research R3–R5).
   CONFIG.Combat.documentClass = DtdCombat;
   CONFIG.Combatant.documentClass = DtdCombatant;
+  // The active GM creates characters for players who cannot create actors (spec 023).
+  CONFIG.queries["dtd40k.createCharacter"] = async (data) => {
+    const { createCharacterForPlayer } = await import("./module/documents/builder-service.mjs");
+    return createCharacterForPlayer(data);
+  };
   CONFIG.statusEffects = foundry.utils.deepClone(DTD.STATUS_EFFECTS);
   CONFIG.specialStatusEffects.DEFEATED = "dead";
 
@@ -342,6 +347,22 @@ Hooks.on("deleteCombat", async (combat) => {
   for (const ship of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "ship"))) await newShipScene(ship);
 });
 // The GM opens the custom weapon builder from the Items directory (spec 015).
+// Character builder (spec 023): "New character" in the Actors directory, for every user.
+Hooks.on("renderActorDirectory", (app, html) => {
+  const root = html instanceof HTMLElement ? html : html[0];
+  const actions = root?.querySelector(".header-actions");
+  if (!actions || actions.querySelector(".dtd-character-builder")) return;
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "dtd-character-builder";
+  button.innerHTML = `<i class="fa-solid fa-user-plus" inert></i> ${game.i18n.localize("DTD.Builder.Open")}`;
+  button.addEventListener("click", async () => {
+    const { CharacterBuilder } = await import("./module/apps/character-builder.mjs");
+    await CharacterBuilder.open();
+  });
+  actions.append(button);
+});
+
 Hooks.on("renderItemDirectory", (app, html) => {
   if (!game.user.isGM) return;
   const root = html instanceof HTMLElement ? html : html[0];

@@ -97,6 +97,11 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
 - **Munição**: tiros no pente e pentes de reserva por arma, gasto por tiro, rajada (ROF efetivo com o que restar) e
   Suppressing Fire, lançadores gastando a granada ou o míssil, recarga pelo tempo da arma com progresso, emperrar
   travando a arma até o Clear Jam.
+- **Montador de personagem**: botão "Novo personagem" na aba de atores abre um assistente na ordem do livro
+  (conceito, raça, exaltação, características e perícias por prioridade, especialidades, classe, backgrounds,
+  divindade, Assets e Hindrances, Exalted Asset, XP inicial, equipamento por raridade), com resumo lateral, bloqueio
+  das escolhas fora da regra (o Mestre libera) e rascunho salvo; jogadores sem permissão de criar atores têm o
+  personagem criado pelo Mestre conectado.
 - **Visual Scriptorium Machina**: ficha de personagem em dois layouts, Cogitador (padrão: trilho lateral com os
   recursos sempre à vista) e Iluminura (página de códice), escolhidos no menu de ficha; cartões de chat com dados em
   facetas de d10; variantes clara (pergaminho) e escura (cogitador) que seguem o tema do Foundry; fontes livres

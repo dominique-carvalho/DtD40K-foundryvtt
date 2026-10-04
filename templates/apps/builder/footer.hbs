@@ -1,0 +1,18 @@
+<footer class="builder-footer">
+  <div class="builder-messages">
+    {{#each validation.messages as |m|}}<p class="notification warning">{{m}}</p>{{/each}}
+    {{#each validation.warningMessages as |m|}}<p class="hint">{{m}}</p>{{/each}}
+    {{#if validation.released}}<p class="hint"><i class="fa-solid fa-unlock" inert></i> {{localize "DTD.Builder.Released"}}</p>{{/if}}
+  </div>
+  <div class="builder-buttons">
+    <button type="button" data-action="back" {{#if first}}disabled{{/if}}><i class="fa-solid fa-arrow-left" inert></i> {{localize "DTD.Builder.Back"}}</button>
+    {{#if (and isGM (not validation.ok) (not validation.released))}}
+    <button type="button" data-action="release"><i class="fa-solid fa-unlock" inert></i> {{localize "DTD.Builder.Release"}}</button>
+    {{/if}}
+    {{#if last}}
+    <button type="button" class="builder-finish" data-action="finish" {{#unless view.canFinish}}disabled{{/unless}}><i class="fa-solid fa-feather-pointed" inert></i> {{localize "DTD.Builder.Finish"}}</button>
+    {{else}}
+    <button type="button" class="builder-next" data-action="next">{{localize "DTD.Builder.Next"}} <i class="fa-solid fa-arrow-right" inert></i></button>
+    {{/if}}
+  </div>
+</footer>

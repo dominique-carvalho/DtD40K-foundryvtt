@@ -68,7 +68,7 @@ quickstart.md, inventory.json
 
 - [X] T015 [P] i18n completo, `docs/pendencias.md`, `README.md`
 - [X] T016 `npm test`, `npm run lint`, checagem de chaves i18n, `npm run build:packs`
-- [ ] T017 Validar o quickstart no Foundry (Jane) e registrar em `quickstart.md`
+- [X] T017 Validar o quickstart no Foundry (Jane) e registrar em `quickstart.md`
 
 ## Dependencies
 

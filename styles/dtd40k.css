@@ -2311,6 +2311,12 @@
 
 .dtd40k .npc-ability-editor summary input[type="text"] {
   flex: 1;
+  min-width: 8rem;
+}
+
+.dtd40k .npc-ability-editor summary select {
+  flex: none;
+  width: auto;
 }
 
 .dtd40k .npc-ability-editor textarea {

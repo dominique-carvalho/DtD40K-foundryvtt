@@ -15,14 +15,6 @@ const ATTACK_TEMPLATE = "systems/dtd40k/templates/chat/minion-attack.hbs";
 const DAMAGE_TEMPLATE = "systems/dtd40k/templates/chat/damage-card.hbs";
 
 /**
- * Attack of a squad (FR-007): (minions attacking)k(Threat Rating) against the target's Static Defense; a hit offers
- * the damage card.
- * @param {Actor} squad
- * @param {"melee"|"ranged"} kind
- * @param {{attacking?: number, tn?: number|null}} [options]
- * @returns {Promise<ChatMessage|null>}
- */
-/**
  * A squad's action in its turn (spec 022, US4, research R9): move (half: TR m; full: 2×TR), run (6×TR, Running),
  * or one attack per turn as a half action. Outside combat only the attack is rolled.
  * @param {Actor} squad
@@ -59,6 +51,14 @@ async function gmAllows(message) {
   return Boolean(await foundry.applications.api.DialogV2.confirm({ window: { title: localize("DTD.Minion.Attack") }, content: `<p>${message}</p><p>${localize("DTD.Combat.GMOverride")}</p>`, rejectClose: false }));
 }
 
+/**
+ * Attack of a squad (FR-007): (minions attacking)k(Threat Rating) against the target's Static Defense; a hit offers
+ * the damage card.
+ * @param {Actor} squad
+ * @param {"melee"|"ranged"} kind
+ * @param {{attacking?: number, tn?: number|null}} [options]
+ * @returns {Promise<ChatMessage|null>}
+ */
 export async function attack(squad, kind = "melee", { attacking, tn } = {}) {
   const system = squad.system;
   const profile = system[kind];

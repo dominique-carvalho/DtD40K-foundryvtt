@@ -384,7 +384,9 @@ export async function rollDamage(message) {
       total: result.total, pen: pool.pen, type: weapon.damage.type, location: attack.location,
       tearing: Boolean(effectiveQualities(weapon).tearing), unarmed: attackSkill(weapon) === "brawl", magic: false, resolve,
       // Minion Squads lose one minion plus one per raise, or the Blast rating (spec 012).
-      raises: attack.raises, blast: weapon.qualities.find((q) => q.key === "blast")?.value ?? 0
+      raises: attack.raises, blast: weapon.qualities.find((q) => q.key === "blast")?.value ?? 0,
+      // Incorporeal targets ignore weapons without a Power Field (spec 022).
+      qualities: weapon.qualities.map((q) => q.key)
     } } }
   };
   ChatMessage.applyRollMode(chatData, attack.rollMode ?? game.settings.get("core", "rollMode"));

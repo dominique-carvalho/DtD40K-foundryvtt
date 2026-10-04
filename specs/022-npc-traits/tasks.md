@@ -42,9 +42,9 @@ no turno, US5 feats, formas e recurso.
 
 ## Phase 3: User Story 2 — Phasing e Auto-Stabilized (P2)
 
-- [ ] T010 [US2] Ação "Incorpóreo" (meia ação) no turno para NPC com Phasing; status alterna; Stealth +2 raises sugerido
-- [ ] T011 [US2] `damage-service`: `incorporealBlocks` → zero com aviso; o Mestre força
-- [ ] T012 [US2] Auto-Stabilized: `braced` no ataque; `as: "half"` em `fullAutoBurst`/`suppressingFire` no `turn-service`
+- [X] T010 [US2] Ação "Incorpóreo" (meia ação) no turno para NPC com Phasing; status alterna; Stealth +2 raises sugerido
+- [X] T011 [US2] `damage-service`: `incorporealBlocks` → zero com aviso; o Mestre força
+- [X] T012 [US2] Auto-Stabilized: `braced` no ataque; `as: "half"` em `fullAutoBurst`/`suppressingFire` no `turn-service`
 
 ---
 

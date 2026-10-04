@@ -26,7 +26,8 @@ export function prepareCombatContext(actor) {
   const groups = ACTION_TYPES.map((type) => ({
     type,
     label: localize(`DTD.Combat.ActionType.${type}`),
-    actions: COMBAT_ACTIONS.filter((a) => a.type === type).map((a) => ({
+    // Trait actions (spec 022) only for actors with the trait.
+    actions: COMBAT_ACTIONS.filter((a) => a.type === type && (!a.automation.trait || system.traitFlags?.[a.automation.trait])).map((a) => ({
       key: a.key, name: a.name, summary: a.summary, page: a.page, used: used(a), attack: Boolean(a.automation.attack && !a.automation.attack.aim)
     }))
   })).filter((g) => g.actions.length);

@@ -1,3 +1,4 @@
+import { incorporealBlocks } from "../rules/npc-traits.mjs";
 import { criticalPlan, criticalTableKey } from "../rules/critical.mjs";
 import { resolveDamage } from "../rules/damage.mjs";
 import { addFatigue, rollValue, toggleCondition } from "./condition-service.mjs";
@@ -64,6 +65,14 @@ export async function applyDamage(message, tokenUuids) {
     if (actor?.type !== "character" && actor?.type !== "npc") {
       if (token) ui.notifications.warn(game.i18n.format("DTD.Combat.NotCharacter", { name: token.name }));
       continue;
+    }
+    // Incorporeal (spec 022, p. 521): only spells, magic and Power Field weapons harm it; the GM may apply it anyway.
+    if (actor.statuses.has("incorporeal") && incorporealBlocks({ incorporeal: true, magic: Boolean(damage.magic), qualities: damage.qualities ?? [], spell: Boolean(damage.magic) })) {
+      const text = game.i18n.format("DTD.Npc.IncorporealBlocked", { name: actor.name });
+      ui.notifications.warn(text);
+      if (!game.user.isGM || !(await foundry.applications.api.DialogV2.confirm({
+        window: { title: localize("DTD.Condition.incorporeal") }, content: `<p>${text}</p><p>${localize("DTD.Combat.GMOverride")}</p>`, rejectClose: false
+      }))) continue;
     }
     applied.push(await applyTo(actor, token, damage));
   }

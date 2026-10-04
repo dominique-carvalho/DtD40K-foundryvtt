@@ -41,6 +41,8 @@ export const COMBAT_ACTIONS = [
   action("reload", "Reload", "varies", ["miscellaneous", "provokes"], 429, "Reload a ranged weapon; the time comes from its Reload value."),
   action("run", "Run", "full", ["movement", "provokes"], 429, "Move 6× Speed; until your next turn ranged attacks against you take −2k0 and melee attacks get +2k0.", { effect: "running" }),
   action("shift", "Shift", "half", ["movement"], 429, "Move your Dexterity in metres without provoking."),
+  // NPC trait actions (spec 022): only offered to actors with the trait.
+  action("phase", "Phase", "half", ["miscellaneous"], 521, "Phasing: turn incorporeal or solid again. Incorporeal, you pass through walls and only magic or Power Field weapons harm you.", { trait: "phasing", toggles: "incorporeal" }),
   action("stand", "Stand", "half", ["movement", "provokes"], 429, "Get up; ends Prone.", { removes: "prone" }),
   action("standardAttack", "Standard Attack", "half", ["attack", "melee", "ranged"], 429, "One melee or ranged attack.", { attack: {} }),
   action("suppressingFire", "Suppressing Fire", "full", ["attack", "ranged"], 430, "Full-auto weapon: a 45° kill zone; everyone inside tests for Pinning; next turn one roll hits uncovered targets whose Static Defense it beats, up to the ROF.", { zone: "suppressing" }),

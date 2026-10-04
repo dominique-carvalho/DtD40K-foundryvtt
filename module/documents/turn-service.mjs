@@ -141,7 +141,11 @@ export async function useAction(actor, key, { weaponId, as, special = null } = {
     else await escapeGrapple(actor, auto.grapple);
     return;
   }
-  if (!(await takeAction(actor, action, { as: as ?? (auto.attack?.aim ? "half" : undefined) }))) return;
+  // Auto-Stabilized (spec 022, p. 520): a Full Auto Burst is a half action.
+  const stabilized = actor.system.traitFlags?.autoStabilized && key === "fullAutoBurst";
+  if (!(await takeAction(actor, action, { as: as ?? (stabilized || auto.attack?.aim ? "half" : undefined) }))) return;
+  // Phasing (spec 022): the action switches Incorporeal on and off.
+  if (auto.toggles) await toggleCondition(actor, auto.toggles, { active: !actor.statuses.has(auto.toggles) });
 
   if (auto.effect) await toggleCondition(actor, auto.effect, { active: true });
   if (auto.adds) await toggleCondition(actor, auto.adds, { active: true });
@@ -199,7 +203,8 @@ async function zoneAction(actor, action, weaponId) {
     });
     if (!overwatch) return;
   }
-  if (!(await takeAction(actor, action))) return;
+  // Auto-Stabilized (spec 022): Suppressing Fire is a half action.
+  if (!(await takeAction(actor, action, { as: actor.system.traitFlags?.autoStabilized ? "half" : undefined }))) return;
   await placeZone(actor, shot, action.automation.zone, overwatch);
 }
 

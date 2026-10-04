@@ -1,3 +1,5 @@
+import { tickForm } from "./form-service.mjs";
+import { triggerAuras } from "./ability-service.mjs";
 import { postTest, rng } from "../dice/roll-service.mjs";
 import { COMBAT_ACTIONS } from "../rules/combat-actions.mjs";
 import { combatFlags, defendedSd, dodgeModifiers, multipleAttackPenalty, parryPool, stillHits } from "../rules/defense.mjs";
@@ -53,7 +55,8 @@ export async function takeAction(actor, action, { as, count = 1 } = {}) {
     return true;
   }
   let state = combatant.turnState;
-  const reactionsMax = actor.system.combat.reactionsMax;
+  // Minion Squads have no reactions (spec 022).
+  const reactionsMax = actor.system.combat?.reactionsMax ?? 0;
   for (let i = 0; i < count; i++) {
     const check = canUse(state, action, { reactionsMax, as });
     if (!check.ok) {
@@ -141,7 +144,13 @@ export async function useAction(actor, key, { weaponId, as, special = null } = {
     else await escapeGrapple(actor, auto.grapple);
     return;
   }
-  if (!(await takeAction(actor, action, { as: as ?? (auto.attack?.aim ? "half" : undefined) }))) return;
+  // Auto-Stabilized (spec 022, p. 520): a Full Auto Burst is a half action.
+  const stabilized = actor.system.traitFlags?.autoStabilized && key === "fullAutoBurst";
+  if (!(await takeAction(actor, action, { as: as ?? (stabilized || auto.attack?.aim ? "half" : undefined) }))) return;
+  // Phasing (spec 022): the action switches Incorporeal on and off.
+  if (auto.toggles) await toggleCondition(actor, auto.toggles, { active: !actor.statuses.has(auto.toggles) });
+  // Frightful Presence and other auras on a Charge or an All Out Attack (spec 022, FR-013).
+  if (key === "charge" || key === "allOutAttack") await triggerAuras(actor, "assault");
 
   if (auto.effect) await toggleCondition(actor, auto.effect, { active: true });
   if (auto.adds) await toggleCondition(actor, auto.adds, { active: true });
@@ -199,7 +208,8 @@ async function zoneAction(actor, action, weaponId) {
     });
     if (!overwatch) return;
   }
-  if (!(await takeAction(actor, action))) return;
+  // Auto-Stabilized (spec 022): Suppressing Fire is a half action.
+  if (!(await takeAction(actor, action, { as: actor.system.traitFlags?.autoStabilized ? "half" : undefined }))) return;
   await placeZone(actor, shot, action.automation.zone, overwatch);
 }
 
@@ -211,7 +221,7 @@ async function zoneAction(actor, action, weaponId) {
  * @param {object|null} [special]  a Special Attack: its Advantages go to the first attack only (p. 263)
  */
 async function multipleAttacks(actor, action, special = null) {
-  const has = (name) => actor.items.some((item) => item.type === "feat" && item.name === name);
+  const has = (name) => actor.hasFeat(name);
   const weapons = actor.items.filter((item) => item.type === "weapon" && item.system.equipped);
   let attacks = [];
   let penalty = 0;
@@ -286,7 +296,8 @@ async function defenseRoll(actor, kind) {
  * @param {"dodge"|"parry"} kind
  */
 export async function rollDefense(message, kind) {
-  const attack = message.getFlag("dtd40k", "attack");
+  // Minion Squad attacks carry their total and TN in the minion flag (spec 022).
+  const attack = message.getFlag("dtd40k", "attack") ?? message.getFlag("dtd40k", "minion");
   const target = attack?.targetUuid ? await foundry.utils.fromUuid(attack.targetUuid) : null;
   if (!target?.isOwner) {
     ui.notifications.warn(localize("DTD.Combat.NotYourTarget"));
@@ -337,6 +348,8 @@ export async function startOfTurn(combat, combatant) {
   if (expired.length) await actor.deleteEmbeddedDocuments("ActiveEffect", expired);
   // Kill zones: the burst of his Suppressing Fire; his Overwatch and an unused Delay end (spec 017).
   await zonesAtTurnStart(combat, combatant);
+  // Auras at the start of the NPC's turn: the Fire Elemental's heat (spec 022, FR-013).
+  await triggerAuras(actor, "turnStart");
   if (combatant.getFlag("dtd40k", "delay")) await combatant.unsetFlag("dtd40k", "delay");
   // A grapple ends when either side can no longer act.
   const partner = actor.getFlag("dtd40k", "grapple")?.partner;
@@ -370,6 +383,8 @@ export async function startOfRound(combat) {
  */
 export async function endOfTurn(actor) {
   if (!actor) return;
+  // A timed alternate form loses a round (spec 022).
+  await tickForm(actor);
   if (actor.type !== "character" && actor.type !== "npc") return;
   const notes = [];
   if (actor.statuses.has("onFire")) {

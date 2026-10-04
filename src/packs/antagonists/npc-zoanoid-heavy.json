@@ -133,7 +133,53 @@
       "source": {
         "book": "DtD 7.7a",
         "page": 525
-      }
+      },
+      "forms": [
+        {
+          "id": "warform",
+          "name": "Warform",
+          "kind": "shift",
+          "cost": 1,
+          "action": "full",
+          "duration": 7,
+          "characteristics": {
+            "str": 7,
+            "dex": null,
+            "con": 7,
+            "cha": null,
+            "fel": null,
+            "cmp": null,
+            "int": null,
+            "wis": null,
+            "wil": null
+          },
+          "size": 6,
+          "derived": {
+            "staticDefense": 13,
+            "hpMax": 24,
+            "speed": 10,
+            "resilience": 6
+          },
+          "armor": [
+            {
+              "name": "Warform hide",
+              "ap": 3,
+              "locations": [
+                "all"
+              ]
+            }
+          ],
+          "traits": [
+            {
+              "key": "regeneration",
+              "value": "1"
+            }
+          ],
+          "abilities": []
+        }
+      ],
+      "activeForm": "",
+      "formRounds": 0
     }
   },
   "items": [
@@ -179,6 +225,50 @@
       },
       "_id": "dtdNi04803158639",
       "_key": "!actors.items!dtdN30952576c268.dtdNi04803158639"
+    },
+    {
+      "name": "Claw/Bite",
+      "type": "weapon",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "description": "",
+        "quantity": 1,
+        "equipped": true,
+        "weaponType": "melee",
+        "thrown": false,
+        "group": "Exotic",
+        "damage": {
+          "rolled": 9,
+          "kept": 3,
+          "type": "R"
+        },
+        "pen": 0,
+        "rof": {
+          "single": true,
+          "auto": 0
+        },
+        "range": {
+          "value": 0,
+          "strMultiplier": 0
+        },
+        "clip": 0,
+        "reload": "",
+        "qualities": [
+          {
+            "key": "brawling",
+            "value": null
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "dtd40k": {
+          "npcDamage": true,
+          "form": "warform"
+        }
+      },
+      "_id": "dtdNi637a606e287",
+      "_key": "!actors.items!dtdN30952576c268.dtdNi637a606e287"
     }
   ],
   "effects": [],

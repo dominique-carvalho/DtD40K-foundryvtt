@@ -89,6 +89,7 @@ export async function promptAttackOptions({ actor, title, skillKey, shape, ammo 
       intoMelee: Boolean(result.intoMelee),
       gangUp: Number(result.gangUp) || 0,
       terrain: result.terrain || "",
+      darkness: Boolean(result.darkness),
       calledLocation: result.calledLocation || ""
     }
   };

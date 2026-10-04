@@ -49,11 +49,16 @@ import { applyAttackEffects, newScene } from "./module/documents/martial-service
 import { DtdActor } from "./module/documents/actor.mjs";
 import { resetReloadProgress } from "./module/documents/ammo-service.mjs";
 import { endHazard, fallAcrobatics, hazardStep, openHazardTool, openXpDialog, reduceFall } from "./module/documents/hazard-service.mjs";
+import { flightFall, offerFlightFall } from "./module/documents/flight-service.mjs";
+import { applyAbility, resistAbility } from "./module/documents/ability-service.mjs";
+import { resetAbilityUses } from "./module/documents/form-service.mjs";
 import { clearZones, confirmZone, fireOverwatch, rollPinning, suppressionDamage, suppressionDodge } from "./module/documents/zone-service.mjs";
 import { endGrapple, maneuverAsGm, startGrapple } from "./module/documents/maneuver-service.mjs";
 import { promptCover, setCover } from "./module/documents/condition-service.mjs";
 import { DtdItem } from "./module/documents/item.mjs";
 import { CharacterSheet } from "./module/apps/character-sheet.mjs";
+import { DtdTokenDocument } from "./module/documents/token-document.mjs";
+import { DtdToken } from "./module/canvas/token.mjs";
 import { CogitatorSheet } from "./module/apps/cogitator-sheet.mjs";
 import { IlluminatedSheet } from "./module/apps/illuminated-sheet.mjs";
 import { RaceSheet } from "./module/apps/race-sheet.mjs";
@@ -94,6 +99,18 @@ Hooks.once("init", () => {
   // Combat order, turn limits and the conditions of the book (spec 008, research R3–R5).
   CONFIG.Combat.documentClass = DtdCombat;
   CONFIG.Combatant.documentClass = DtdCombatant;
+  // NPC traits on the map (spec 022): movement action, vision and terrain cost derived from the actor.
+  CONFIG.Token.documentClass = DtdTokenDocument;
+  CONFIG.Token.objectClass = DtdToken;
+  // Phasing: an incorporeal token passes through walls (walls: null); only it can pick this action.
+  CONFIG.Token.movement.actions.phase = {
+    label: "DTD.Npc.Phase",
+    icon: "fa-solid fa-ghost",
+    img: "icons/svg/mystery-man.svg",
+    order: 9,
+    walls: null,
+    canSelect: (token) => Boolean(token.actor?.system?.traitFlags?.phasing && token.actor.statuses.has("incorporeal"))
+  };
   // The active GM creates characters for players who cannot create actors (spec 023).
   CONFIG.queries["dtd40k.createCharacter"] = async (data) => {
     const { createCharacterForPlayer } = await import("./module/documents/builder-service.mjs");
@@ -246,6 +263,11 @@ Hooks.once("ready", () => {
 
 // Buttons of the attack and acquisition cards (spec 007, research R7/R9).
 const CHAT_ACTIONS = {
+  // Flyers that fall (spec 022).
+  flightFall: (message, data) => flightFall(message, data),
+  // NPC special abilities (spec 022).
+  abilityResist: (message, data) => resistAbility(message, data),
+  abilityApply: (message, data) => applyAbility(message, data),
   rollDamage: (message) => rollDamage(message),
   spendLiquid: (message) => spendLiquid(message),
   // Combat (spec 008): apply damage, undo, reactions, social answers.
@@ -316,6 +338,7 @@ Hooks.once("ready", () => {
     const message = game.messages.get(payload.messageId);
     if (!message) return;
     if (action === "applyDamage") await applyDamage(message, payload.tokenUuids);
+    if (action === "ability") await applyAbility(message, payload);
     if (action === "hazard" && payload.op === "fallReduce") await reduceFall(message, payload.reduce);
     if (action === "martialEffects") await applyAttackEffects(message);
     if (action === "shipApply") await applyShipDamage(message, payload.targetUuid);
@@ -333,6 +356,8 @@ Hooks.on("deleteCombat", async (combat) => {
 // In Cover asks for the cover's Armor Points and locations; removing it clears them (spec 017).
 Hooks.on("createActiveEffect", (effect, options, userId) => {
   if (userId === game.user.id && effect.statuses?.has("inCover") && effect.parent instanceof Actor) promptCover(effect.parent);
+  // A flyer that is stunned, knocked out or prone falls (spec 022).
+  if (userId === game.user.id && effect.statuses?.size) offerFlightFall(effect);
 });
 Hooks.on("deleteActiveEffect", (effect, options, userId) => {
   if (userId === game.user.id && effect.statuses?.has("inCover") && effect.parent instanceof Actor) setCover(effect.parent, null);
@@ -341,6 +366,8 @@ Hooks.on("deleteActiveEffect", (effect, options, userId) => {
 Hooks.on("deleteCombat", async (combat) => {
   if (game.users.activeGM !== game.user) return;
   for (const actor of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "character"))) await newScene(actor);
+  // Uses per scene of NPC abilities come back (spec 022).
+  for (const actor of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "npc"))) await resetAbilityUses(actor);
   // Vehicles: wounds in the scene and round-based conditions reset (spec 013).
   for (const vehicle of allVehicles()) await newVehicleScene(vehicle);
   // Ships: temporary Crew, committed Crew and this round's effects end (spec 014).

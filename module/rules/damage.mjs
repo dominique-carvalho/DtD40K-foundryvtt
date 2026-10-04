@@ -35,7 +35,8 @@ const ARMOR_OF = {
  * @param {number} [input.resilienceMultiplier] Resilience × this, rounding up (Castigating Blow, Demonic Weapon)
  * @param {boolean} [input.noCritical]          wounds beyond the HP are lost, not Critical Damage
  * @param {boolean} [input.direct]              the total is the wounds: no cover, armor, Aura or Resilience (falls, spec 018)
- * @param {number} [input.extraCritical]        Critical Damage added whatever the HP (fatal fall, spec 018)
+ * @param {number} [input.extraCritical]        Critical Damage added whatever the HP (fatal fall, spec 018;
+ *                                              Gauss hit, spec 022: only when the hit wounds)
  * @returns {{effective: number, wounds: number, hpLoss: number, criticalGain: number, critical: number,
  *   row: number, fatigue: number, coverHit: boolean, steps: {label: string, value: number}[]}}
  */
@@ -80,7 +81,8 @@ export function resolveDamage({
   steps.push({ label: "resilience", value: res });
 
   const hpLoss = Math.min(wounds, Math.max(0, hp));
-  const criticalGain = noCritical ? 0 : wounds - hpLoss;
+  // A Gauss hit (spec 022) adds its Critical Damage to any wounding hit, even with HP left.
+  const criticalGain = (noCritical ? 0 : wounds - hpLoss) + (wounds > 0 ? extraCritical : 0);
   const newCritical = critical + criticalGain;
   return {
     effective,

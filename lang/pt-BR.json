@@ -1018,7 +1018,8 @@
         "redDotSight": "Red-Dot Sight +1k0",
         "motionPredict": "Motion Predictor +1k0",
         "breacher": "Breacher +1k0",
-        "nonlethal": "não letal (sem explosões)"
+        "nonlethal": "não letal (sem explosões)",
+        "darkness": "escuridão (+5 SD)"
       },
       "Situation": "Situação",
       "Advantage": "Combat Advantage (+1 free raise)",
@@ -1032,7 +1033,9 @@
       "CalledLocation": "Localização escolhida",
       "Called": "tiro mirado",
       "Unstable": "Unstable: d10 = {d10}, dano {before} → {after}",
-      "OrgoneExploded": "Orgone Array: um dado explodiu — role Fenômenos Psíquicos para o alvo."
+      "OrgoneExploded": "Orgone Array: um dado explodiu — role Fenômenos Psíquicos para o alvo.",
+      "Darkness": "Escuridão",
+      "DarknessHint": "Ocultação: o alvo ganha +5 de Static Defense, exceto se o atacante tiver Dark Sight (p. 433)."
     },
     "Acquire": {
       "Button": "Adquirir",
@@ -1113,7 +1116,8 @@
         "inCover": "Atrás de cobertura: o AP dela protege os locais cobertos; a rajada do Suppressing Fire não acerta."
       },
       "grappling": "Agarrando",
-      "inCover": "Em cobertura"
+      "inCover": "Em cobertura",
+      "incorporeal": "Incorpóreo"
     },
     "Combat": {
       "ActionType": {
@@ -1649,7 +1653,88 @@
       "NoHero": "Selecione o token do seu personagem ou associe um personagem ao seu usuário.",
       "Regenerated": "{name} regenera {hp} HP.",
       "Immune": "{name} é imune a {condition}.",
-      "MindlessSocial": "{name} é Mindless: ataques sociais não têm efeito."
+      "MindlessSocial": "{name} é Mindless: ataques sociais não têm efeito.",
+      "Phase": "Atravessar (sem paredes)",
+      "Range": {
+        "reach": "Fora do alcance corpo a corpo: {distance} m.",
+        "long": "Alcance longo: {distance} m.",
+        "beyond": "Além do alcance da arma: {distance} m."
+      },
+      "Speed": {
+        "fly": "Deslocamento de voo",
+        "swim": "Deslocamento de nado"
+      },
+      "FlightFall": "{name} fica {status} a {elevation} m de elevação e cai.",
+      "FlightFallButton": "Queda",
+      "FlightFallPick": "{name} cai de {elevation} m. Escolha a categoria da queda.",
+      "IncorporealStealth": "Incorpóreo: esconder-se dentro de um objeto dá +2 raises.",
+      "IncorporealBlocked": "{name} está incorpóreo: só magias, armas mágicas e com Power Field o ferem.",
+      "AbilityKind": {
+        "text": "Texto",
+        "area": "Área",
+        "aura": "Aura",
+        "onHit": "No acerto",
+        "spell": "Como magia"
+      },
+      "Shape": {
+        "cone": "Cone",
+        "blast": "Explosão",
+        "line": "Linha"
+      },
+      "Trigger": {
+        "assault": "Charge ou All Out Attack",
+        "turnStart": "Início do turno dele"
+      },
+      "Action": {
+        "free": "Ação livre",
+        "half": "Meia ação",
+        "full": "Ação completa"
+      },
+      "FormKind": {
+        "shift": "Transformação",
+        "variant": "Variante"
+      },
+      "FearSave": "Medo {rating}",
+      "FailCondition": "{condition} por {rounds} rodada(s)",
+      "FailFatigue": "{value} de Fatigue",
+      "FormAbility": "{name} é de uma forma que não está ativa.",
+      "NoUses": "{name} não tem mais usos nesta cena.",
+      "SpellLike": "{name}: funciona como a magia {spell}.",
+      "NotYourTarget": "Só o dono do alvo rola isto.",
+      "Resisted": "{name} resiste.",
+      "Affected": "{name} falha: {effect}.",
+      "OnFail": "Na falha",
+      "Resist": "Resistir",
+      "ApplyEffect": "Aplicar",
+      "NoTargets": "Nenhum alvo na área.",
+      "Forms": "Formas",
+      "FormTaken": "{name} assume a forma {form} ({cost} de {resource}; {rounds} rodadas).",
+      "FormEnds": "{name} deixa a forma {form}.",
+      "VariantChosen": "{name} é da variante {form}.",
+      "NoResource": "{name} não tem {resource}: a forma custa {cost}.",
+      "Resource": "Recurso",
+      "ResourceSpent": "{name} gasta {resource}: {value}/{max}.",
+      "ResourceRegained": "{name} recupera {resource}: {value}/{max}.",
+      "TraitValue": "Valor",
+      "Remove": "Remover",
+      "ActionCost": "Ação",
+      "Area": "Área",
+      "TriggerLabel": "Gatilho",
+      "Save": "Resistência",
+      "Rounds": "rodadas",
+      "OnHitWeapon": "Arma (no acerto)",
+      "ExtraCritical": "Dano crítico extra",
+      "SpellLabel": "Magia",
+      "UsesPerScene": "Usos por cena",
+      "FeatsHint": "Nomes dos feats, separados por vírgula",
+      "Cost": "Custo",
+      "BaseForm": "Forma base",
+      "ActiveForm": "Forma ativa",
+      "Spend": "Gastar",
+      "Regain": "Recuperar",
+      "Use": "Usar",
+      "NewAbility": "Nova habilidade",
+      "NewForm": "Nova forma"
     },
     "Minion": {
       "ThreatRating": "Threat Rating",
@@ -1670,7 +1755,17 @@
       "DamageFormula": "5 × (DR {rating} + {raises} raises)",
       "NoRoll": "Dano de minion: sem rolagem",
       "Removed": "{name}: {n} minion(s) derrubado(s), restam {left}.",
-      "AllDown": "{name}: {n} minion(s) derrubado(s), a squad foi derrotada."
+      "AllDown": "{name}: {n} minion(s) derrubado(s), a squad foi derrotada.",
+      "Turn": "Ações do turno",
+      "Action": {
+        "moveHalf": "Mover (meia)",
+        "moveFull": "Mover (completa)",
+        "run": "Correr",
+        "attack": "Atacar"
+      },
+      "Moves": "{name}: {action}, até {distance} m.",
+      "OneAttack": "{name} já atacou neste turno.",
+      "Defended": "A defesa desviou o golpe: sem dano."
     },
     "Vehicle": {
       "Category": {

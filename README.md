@@ -97,6 +97,12 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
 - **Munição**: tiros no pente e pentes de reserva por arma, gasto por tiro, rajada (ROF efetivo com o que restar) e
   Suppressing Fire, lançadores gastando a granada ou o míssil, recarga pelo tempo da arma com progresso, emperrar
   travando a arma até o Clear Jam.
+- **Traits de NPC no mapa e no turno**: Flyer voa por padrão e cai se ficar Stunned, Unconscious ou Prone; Phasing
+  incorpóreo atravessa paredes e só sofre dano de magia ou Power Field; Dark Sight dá visão no escuro e ignora a
+  escuridão (+5 SD); Crawler ignora terreno difícil; Auto-Stabilized faz Full Auto Burst como meia ação; aviso de
+  alcance com elevação. Habilidades de ataque rolam pela ficha (Mind Blast em cone, Frightful Presence, calor do
+  Elemental, Gauss Weapon, Possession); Minion Squads agem no turno; formas alternativas (Warform, composição do
+  Elemental), Resource Stat e editores na aba Antagonista.
 - **Montador de personagem**: botão "Novo personagem" na aba de atores abre um assistente na ordem do livro
   (conceito, raça, exaltação, características e perícias por prioridade, especialidades, classe, backgrounds,
   divindade, Assets e Hindrances, Exalted Asset, XP inicial, equipamento por raridade), com resumo lateral, bloqueio

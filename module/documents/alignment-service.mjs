@@ -174,7 +174,7 @@ export async function applyDegeneration(actor, point, { roll: forced } = {}) {
   if (!table) return null;
   const results = table.results.contents.sort((a, b) => a.range[0] - b.range[0]);
   const owned = actor.system.alignment.degenerations.map((d) => d.name);
-  const hasNightTerrors = actor.items.some((item) => item.type === "feat" && item.name === "Night Terrors");
+  const hasNightTerrors = actor.hasFeat("Night Terrors");
   let row = null;
   let rolled = 0;
   for (let attempt = 0; attempt < 30 && !row; attempt++) {

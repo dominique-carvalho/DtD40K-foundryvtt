@@ -5,6 +5,110 @@
     {{#if n.alternate}}<p class="hint">{{localize "DTD.Npc.Alternate"}}: {{n.alternate}}</p>{{/if}}
   </section>
 
+  {{#if n.edit}}
+  {{!-- Edit mode (spec 022, FR-018): traits, abilities, feats and forms --}}
+  <section class="npc-section npc-editor">
+    <h2 class="section-title">{{localize "DTD.Npc.Traits"}} <a class="pool-button" data-action="npcAdd" data-list="traits"><i class="fa-solid fa-plus" inert></i></a></h2>
+    {{#each n.edit.traits as |t|}}
+    <div class="npc-edit-row">
+      <select class="npc-edit" data-list="traits" data-index="{{t.index}}" data-field="key">{{#each n.edit.traitKeys as |o|}}<option value="{{o.key}}" {{#if (eq o.key t.key)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select>
+      <input class="npc-edit" type="text" data-list="traits" data-index="{{t.index}}" data-field="value" value="{{t.value}}" placeholder="{{localize "DTD.Npc.TraitValue"}}">
+      <a class="list-control" data-action="npcRemove" data-list="traits" data-index="{{t.index}}" data-tooltip="{{localize "DTD.Npc.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
+    </div>
+    {{/each}}
+  </section>
+
+  <section class="npc-section npc-editor">
+    <h2 class="section-title">{{localize "DTD.Npc.Abilities"}} <a class="pool-button" data-action="npcAdd" data-list="abilities"><i class="fa-solid fa-plus" inert></i></a></h2>
+    {{#each n.edit.abilities as |a|}}
+    <details class="npc-ability-editor" {{#if a.structured}}open{{/if}}>
+      <summary>
+        <input class="npc-edit" type="text" data-list="abilities" data-index="{{a.index}}" data-field="name" value="{{a.name}}">
+        <select class="npc-edit" data-list="abilities" data-index="{{a.index}}" data-field="kind">{{#each n.edit.kinds as |o|}}<option value="{{o.key}}" {{#if (eq o.key a.kind)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select>
+        <a class="list-control" data-action="npcRemove" data-list="abilities" data-index="{{a.index}}" data-tooltip="{{localize "DTD.Npc.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
+      </summary>
+      <textarea class="npc-edit" data-list="abilities" data-index="{{a.index}}" data-field="effect" rows="2">{{a.effect}}</textarea>
+      {{#if a.structured}}
+      <div class="npc-edit-grid">
+        <label>{{localize "DTD.Npc.ActionCost"}} <select class="npc-edit" data-list="abilities" data-index="{{a.index}}" data-field="action">{{#each n.edit.actions as |o|}}<option value="{{o.key}}" {{#if (eq o.key a.action)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select></label>
+        <label>{{localize "DTD.Npc.Area"}} <select class="npc-edit" data-list="abilities" data-index="{{a.index}}" data-field="area.shape">{{#each n.edit.shapes as |o|}}<option value="{{o.key}}" {{#if (eq o.key a.area.shape)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select>
+          <input class="npc-edit" type="number" min="0" data-list="abilities" data-index="{{a.index}}" data-field="area.size" value="{{a.area.size}}"> m</label>
+        <label>{{localize "DTD.Npc.TriggerLabel"}} <select class="npc-edit" data-list="abilities" data-index="{{a.index}}" data-field="trigger">{{#each n.edit.triggers as |o|}}<option value="{{o.key}}" {{#if (eq o.key a.trigger)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select></label>
+        <label>{{localize "DTD.Npc.Save"}} <select class="npc-edit" data-list="abilities" data-index="{{a.index}}" data-field="save.characteristic">{{#each n.edit.saves as |o|}}<option value="{{o.key}}" {{#if (eq o.key a.save.characteristic)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select>
+          <select class="npc-edit" data-list="abilities" data-index="{{a.index}}" data-field="save.skill">{{#each n.edit.skills as |o|}}<option value="{{o.key}}" {{#if (eq o.key a.save.skill)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select>
+          TN <input class="npc-edit" type="number" min="0" data-list="abilities" data-index="{{a.index}}" data-field="save.tn" value="{{a.save.tn}}"></label>
+        <label>{{localize "DTD.Npc.OnFail"}} <select class="npc-edit" data-list="abilities" data-index="{{a.index}}" data-field="onFail.condition">{{#each n.edit.conditions as |o|}}<option value="{{o.key}}" {{#if (eq o.key a.onFail.condition)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select>
+          <input class="npc-edit" type="number" min="0" data-list="abilities" data-index="{{a.index}}" data-field="onFail.rounds" value="{{a.onFail.rounds}}" data-tooltip="{{localize "DTD.Npc.Rounds"}}">
+          {{localize "DTD.Sheet.Fatigue"}} <input class="npc-edit" type="number" min="0" data-list="abilities" data-index="{{a.index}}" data-field="onFail.fatigue" value="{{a.onFail.fatigue}}"></label>
+        <label>{{localize "DTD.Npc.OnHitWeapon"}} <input class="npc-edit" type="text" data-list="abilities" data-index="{{a.index}}" data-field="weapon" value="{{a.weapon}}">
+          +<input class="npc-edit" type="number" min="0" data-list="abilities" data-index="{{a.index}}" data-field="extraCritical" value="{{a.extraCritical}}" data-tooltip="{{localize "DTD.Npc.ExtraCritical"}}"></label>
+        <label>{{localize "DTD.Npc.SpellLabel"}} <input class="npc-edit" type="text" data-list="abilities" data-index="{{a.index}}" data-field="spell.name" value="{{a.spell.name}}">
+          <select class="npc-edit" data-list="abilities" data-index="{{a.index}}" data-field="spell.characteristic">{{#each n.edit.saves as |o|}}<option value="{{o.key}}" {{#if (eq o.key a.spell.characteristic)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select>
+          <select class="npc-edit" data-list="abilities" data-index="{{a.index}}" data-field="spell.skill">{{#each n.edit.skills as |o|}}<option value="{{o.key}}" {{#if (eq o.key a.spell.skill)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select></label>
+        <label>{{localize "DTD.Npc.UsesPerScene"}} <input class="npc-edit" type="number" min="0" data-list="abilities" data-index="{{a.index}}" data-field="uses.max" value="{{a.uses.max}}"></label>
+      </div>
+      {{/if}}
+    </details>
+    {{/each}}
+  </section>
+
+  <section class="npc-section npc-editor">
+    <h2 class="section-title">{{localize "DTD.Npc.Feats"}}</h2>
+    <input class="npc-edit wide" type="text" data-list="feats" data-field="_csv" value="{{n.edit.feats}}" placeholder="{{localize "DTD.Npc.FeatsHint"}}">
+  </section>
+
+  <section class="npc-section npc-editor">
+    <h2 class="section-title">{{localize "DTD.Npc.Forms"}} <a class="pool-button" data-action="npcAdd" data-list="forms"><i class="fa-solid fa-plus" inert></i></a></h2>
+    {{#each n.edit.forms as |f|}}
+    <details class="npc-ability-editor" open>
+      <summary>
+        <input class="npc-edit" type="text" data-list="forms" data-index="{{f.index}}" data-field="name" value="{{f.name}}">
+        <select class="npc-edit" data-list="forms" data-index="{{f.index}}" data-field="kind">{{#each n.edit.formKinds as |o|}}<option value="{{o.key}}" {{#if (eq o.key f.kind)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select>
+        <a class="list-control" data-action="npcRemove" data-list="forms" data-index="{{f.index}}" data-tooltip="{{localize "DTD.Npc.Remove"}}"><i class="fa-solid fa-trash" inert></i></a>
+      </summary>
+      <div class="npc-edit-grid">
+        <label>{{localize "DTD.Npc.Cost"}} <input class="npc-edit" type="number" min="0" data-list="forms" data-index="{{f.index}}" data-field="cost" value="{{f.cost}}"></label>
+        <label>{{localize "DTD.Npc.ActionCost"}} <select class="npc-edit" data-list="forms" data-index="{{f.index}}" data-field="action">{{#each n.edit.actions as |o|}}<option value="{{o.key}}" {{#if (eq o.key f.action)}}selected{{/if}}>{{o.label}}</option>{{/each}}</select></label>
+        <label>{{localize "DTD.Npc.Rounds"}} <input class="npc-edit" type="number" min="0" data-list="forms" data-index="{{f.index}}" data-field="duration" value="{{f.duration}}"></label>
+        <label>{{localize "DTD.Sheet.Size"}} <input class="npc-edit" type="number" data-list="forms" data-index="{{f.index}}" data-field="size" data-nullable="true" value="{{f.size}}"></label>
+        <span class="npc-edit-chars">{{#each f.characteristicRows as |c|}}<label>{{c.label}} <input class="npc-edit" type="number" data-list="forms" data-index="{{f.index}}" data-field="characteristics.{{c.key}}" data-nullable="true" value="{{c.value}}"></label>{{/each}}</span>
+        <label>{{localize "DTD.Derived.staticDefense"}} <input class="npc-edit" type="number" data-list="forms" data-index="{{f.index}}" data-field="derived.staticDefense" data-nullable="true" value="{{f.derived.staticDefense}}"></label>
+        <label>HP <input class="npc-edit" type="number" data-list="forms" data-index="{{f.index}}" data-field="derived.hpMax" data-nullable="true" value="{{f.derived.hpMax}}"></label>
+        <label>{{localize "DTD.Derived.speed"}} <input class="npc-edit" type="number" data-list="forms" data-index="{{f.index}}" data-field="derived.speed" data-nullable="true" value="{{f.derived.speed}}"></label>
+        <label>{{localize "DTD.Derived.resilience"}} <input class="npc-edit" type="number" data-list="forms" data-index="{{f.index}}" data-field="derived.resilience" data-nullable="true" value="{{f.derived.resilience}}"></label>
+        <label>{{localize "DTD.Npc.Armor"}} AP <input class="npc-edit" type="number" min="0" data-list="forms" data-index="{{f.index}}" data-field="_armorAp" data-nullable="true" value="{{f.armorAp}}"></label>
+        <label class="wide">{{localize "DTD.Npc.Traits"}} <input class="npc-edit" type="text" data-list="forms" data-index="{{f.index}}" data-field="_traits" value="{{f.traitsText}}" placeholder="regeneration=1; phasing"></label>
+        <label class="wide">{{localize "DTD.Npc.Abilities"}} <input class="npc-edit" type="text" data-list="forms" data-index="{{f.index}}" data-field="_abilities" value="{{f.abilitiesText}}"></label>
+      </div>
+    </details>
+    {{/each}}
+  </section>
+  {{else}}
+
+  {{#if n.forms.length}}
+  <section class="npc-section">
+    <h2 class="section-title">{{localize "DTD.Npc.Forms"}}</h2>
+    <div class="combat-buttons">
+      {{#each n.forms as |f|}}
+      <a class="pool-button{{#if f.active}} active{{/if}}" data-action="npcForm" data-form-id="{{f.id}}">{{#if f.variant}}<i class="fa-solid fa-shapes" inert></i>{{else}}<i class="fa-solid fa-paw" inert></i>{{/if}} {{f.name}}{{#if f.cost}} ({{f.cost}}){{/if}}</a>
+      {{/each}}
+      {{#if n.activeForm}}<a class="pool-button" data-action="npcForm" data-form-id=""><i class="fa-solid fa-rotate-left" inert></i> {{localize "DTD.Npc.BaseForm"}}</a>{{/if}}
+    </div>
+    {{#if n.activeForm}}<p class="hint">{{localize "DTD.Npc.ActiveForm"}}: <b>{{n.activeForm}}</b>{{#if n.formRounds}} · {{n.formRounds}} {{localize "DTD.Npc.Rounds"}}{{/if}}</p>{{/if}}
+  </section>
+  {{/if}}
+
+  {{#if n.resource}}
+  <section class="npc-section">
+    <h2 class="section-title">{{n.resource.type}}</h2>
+    <div class="combat-buttons">
+      <a class="pool-button" data-action="npcResource" data-delta="-1"><i class="fa-solid fa-minus" inert></i> {{localize "DTD.Npc.Spend"}}</a>
+      <b class="uses-value">{{n.resource.value}} / {{n.resource.max}}</b>
+      <a class="pool-button" data-action="npcResource" data-delta="1"><i class="fa-solid fa-plus" inert></i> {{localize "DTD.Npc.Regain"}}</a>
+    </div>
+  </section>
+  {{/if}}
+
   {{#if n.traits.length}}
   <section class="npc-section">
     <h2 class="section-title">{{localize "DTD.Npc.Traits"}}</h2>
@@ -20,14 +124,23 @@
   {{#if n.abilities.length}}
   <section class="npc-section">
     <h2 class="section-title">{{localize "DTD.Npc.Abilities"}}</h2>
-    <dl class="spell-stats">{{#each n.abilities as |a|}}<dt>{{a.name}}</dt><dd>{{a.effect}}</dd>{{/each}}</dl>
+    <ul class="martial-entries">
+      {{#each n.abilities as |a|}}
+      <li class="martial-entry{{#unless a.active}} inactive{{/unless}}">
+        <span class="martial-entry-head"><b>{{a.name}}</b>{{#if a.kindLabel}} <span class="automation-tag">{{a.kindLabel}}</span>{{/if}}{{#if a.uses}} <span class="tag">{{a.uses}}</span>{{/if}}
+          {{#if a.usable}}<a class="pool-button" data-action="npcAbility" data-index="{{a.index}}"><i class="fa-solid fa-burst" inert></i> {{localize "DTD.Npc.Use"}}</a>{{/if}}</span>
+        <span class="martial-entry-effect">{{a.effect}}</span>
+      </li>
+      {{/each}}
+    </ul>
   </section>
+  {{/if}}
   {{/if}}
 
   <section class="npc-section">
     <dl class="spell-stats">
       {{#if n.armor}}<dt>{{localize "DTD.Npc.Armor"}}</dt><dd>{{n.armor}}</dd>{{/if}}
-      {{#if n.feats}}<dt>{{localize "DTD.Npc.Feats"}}</dt><dd>{{n.feats}}</dd>{{/if}}
+      {{#unless n.edit}}{{#if n.feats}}<dt>{{localize "DTD.Npc.Feats"}}</dt><dd>{{n.feats}}</dd>{{/if}}{{/unless}}
       {{#if n.gear}}<dt>{{localize "DTD.Npc.Gear"}}</dt><dd>{{n.gear}}</dd>{{/if}}
     </dl>
   </section>

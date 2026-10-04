@@ -327,6 +327,8 @@ export const STATUS_EFFECTS = [
   // Controller of a grapple and a character in cover (spec 017).
   status("grappling", "icons/svg/combat.svg"),
   status("inCover", "icons/svg/castle.svg"),
+  // Phasing NPCs (spec 022): passes through walls; only magic or Power Field weapons harm it.
+  status("incorporeal", "icons/svg/mystery-man.svg"),
   status("jaded", "icons/svg/silenced.svg"),
   status("lostHand", "icons/svg/downgrade.svg"),
   status("lostArm", "icons/svg/downgrade.svg"),
@@ -442,6 +444,9 @@ export const INHERITANCE_SLOTS = { ubiquitous: 0.125, veryCommon: 0.25, common: 
 /* ---------- Antagonists (spec 012, DtD 7.7a ch. XX, pp. 520–544) ---------- */
 
 /** Folders of the Antagonists compendium. */
+/** Kinds of NPC special abilities (spec 022, research R8). */
+export const ABILITY_KINDS = ["text", "area", "aura", "onHit", "spell"];
+
 export const NPC_CATEGORIES = ["people", "military", "criminals", "cultists", "machines", "daemons", "creatures", "legends", "undead", "xenos"];
 
 /** The twenty creature traits (pp. 520–522); hasValue: printed with a rating, e.g. Armor Plating (X). */

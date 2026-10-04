@@ -33,6 +33,9 @@ export async function promptRollOptions({ actor, skillKey, characteristicKey, tn
   const context = {
     summary: `${traitLabel} (${trait.value})`,
     tn: tn ?? "",
+    // Phasing (spec 022, p. 521): hiding inside an object while incorporeal is +2 raises.
+    freeRaises: skillKey === "stealth" && actor.statuses?.has("incorporeal") ? 2 : 0,
+    raisesHint: skillKey === "stealth" && actor.statuses?.has("incorporeal") ? game.i18n.localize("DTD.Npc.IncorporealStealth") : "",
     characteristics: isSkill
       ? Object.entries(CHARACTERISTICS).map(([key, def]) => ({
         key,

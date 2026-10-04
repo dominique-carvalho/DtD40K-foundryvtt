@@ -112,7 +112,41 @@
       "abilities": [
         {
           "name": "Possession",
-          "effect": "Rolls Charisma + Arcana to affect a target as though casting the Dominate spell."
+          "effect": "Rolls Charisma + Arcana to affect a target as though casting the Dominate spell.",
+          "kind": "spell",
+          "action": "",
+          "area": {
+            "shape": "",
+            "size": 0
+          },
+          "trigger": "",
+          "save": {
+            "characteristic": "",
+            "skill": "",
+            "tn": 0
+          },
+          "onFail": {
+            "condition": "",
+            "rounds": 0,
+            "fatigue": 0,
+            "damage": {
+              "rolled": 0,
+              "kept": 0,
+              "type": "",
+              "pen": 0
+            }
+          },
+          "weapon": "",
+          "extraCritical": 0,
+          "spell": {
+            "name": "Dominate",
+            "characteristic": "cha",
+            "skill": "arcana"
+          },
+          "uses": {
+            "max": 0,
+            "value": 0
+          }
         }
       ],
       "feats": [],

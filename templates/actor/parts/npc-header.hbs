@@ -64,7 +64,7 @@
         <span>/ {{system.fatigue.max}}</span>
       </span>
     </div>
-    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.speed"}}</span><span class="stat-value">{{system.derived.speed}}</span></div>
+    <div class="stat-box"><span class="stat-label">{{localize "DTD.Derived.speed"}}</span><span class="stat-value">{{system.derived.speed}}{{#if system.speeds.fly}} <small data-tooltip="{{localize "DTD.Npc.Speed.fly"}}"><i class="fa-solid fa-feather-pointed" inert></i>{{system.speeds.fly}}</small>{{/if}}{{#if system.speeds.swim}} <small data-tooltip="{{localize "DTD.Npc.Speed.swim"}}"><i class="fa-solid fa-water" inert></i>{{system.speeds.swim}}</small>{{/if}}</span></div>
     {{#if npcTab.resource}}
     <div class="stat-box">
       <span class="stat-label">{{npcTab.resource.type}}</span>

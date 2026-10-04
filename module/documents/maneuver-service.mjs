@@ -16,7 +16,7 @@ import { requestGm } from "./gm-socket.mjs";
 const OPPOSED_TEMPLATE = "systems/dtd40k/templates/chat/opposed-card.hbs";
 const localize = (key) => game.i18n.localize(key);
 const format = (key, data) => game.i18n.format(key, data);
-const hasFeat = (actor, name) => actor.items.some((item) => item.type === "feat" && item.name === name);
+const hasFeat = (actor, name) => actor.hasFeat(name);
 const grappleOf = (actor) => actor?.getFlag("dtd40k", "grapple") ?? null;
 
 /**

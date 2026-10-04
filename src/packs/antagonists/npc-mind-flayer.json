@@ -138,7 +138,41 @@
       "abilities": [
         {
           "name": "Mind Blast",
-          "effect": "As a half action it emits a 60' cone of psychic force; anyone caught in it who fails a Willpower roll at TN 25 is stunned for one round."
+          "effect": "As a half action it emits a 60' cone of psychic force; anyone caught in it who fails a Willpower roll at TN 25 is stunned for one round.",
+          "kind": "area",
+          "action": "half",
+          "area": {
+            "shape": "cone",
+            "size": 18
+          },
+          "trigger": "",
+          "save": {
+            "characteristic": "wil",
+            "skill": "",
+            "tn": 25
+          },
+          "onFail": {
+            "condition": "stunned",
+            "rounds": 1,
+            "fatigue": 0,
+            "damage": {
+              "rolled": 0,
+              "kept": 0,
+              "type": "",
+              "pen": 0
+            }
+          },
+          "weapon": "",
+          "extraCritical": 0,
+          "spell": {
+            "name": "",
+            "characteristic": "",
+            "skill": ""
+          },
+          "uses": {
+            "max": 0,
+            "value": 0
+          }
         },
         {
           "name": "Eats Your Goddamn Brain",

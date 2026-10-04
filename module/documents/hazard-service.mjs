@@ -81,7 +81,7 @@ export async function openHazardTool() {
 export async function applyFall(tokens, { category, intentional }) {
   for (const token of tokens) {
     const actor = token.actor;
-    const catfall = actor.items.some((item) => item.type === "feat" && item.name === "Catfall");
+    const catfall = actor.hasFeat("Catfall");
     const final = fallCategory({ category, catfall });
     if (!final) {
       await ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor }), content: `<p>${format("DTD.Hazard.CatfallSafe", { name: actor.name })}</p>` });

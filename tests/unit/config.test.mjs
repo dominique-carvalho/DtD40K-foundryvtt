@@ -210,7 +210,7 @@ describe("combat constants (008)", () => {
     const ids = DTD.STATUS_EFFECTS.map((s) => s.id);
     expect(ids).toEqual([
       "blinded", "bloodLoss", "dazed", "deafened", "diseased", "onFire", "helpless", "immobilized", "pinned", "prone",
-      "restrained", "stunned", "surprised", "unconscious", "dead", "grappled", "grappling", "inCover", "jaded", "lostHand", "lostArm", "lostEye",
+      "restrained", "stunned", "surprised", "unconscious", "dead", "grappled", "grappling", "inCover", "incorporeal", "jaded", "lostHand", "lostArm", "lostEye",
       "lostFoot", "lostLeg", "fullDefense", "fightDefensively", "allOutAttack", "healingSurge", "running"
     ]);
     for (const s of DTD.STATUS_EFFECTS) {

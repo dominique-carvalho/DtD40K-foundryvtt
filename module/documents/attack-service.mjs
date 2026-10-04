@@ -1,3 +1,4 @@
+import { onHitCritical } from "./ability-service.mjs";
 import { promptAttackOptions } from "../apps/attack-dialog.mjs";
 import { postTest, rng } from "../dice/roll-service.mjs";
 import { rollAndKeep } from "../rules/dice.mjs";
@@ -8,6 +9,7 @@ import { runTest } from "../rules/test.mjs";
 import { toggleCondition } from "./condition-service.mjs";
 import { isAmorphous } from "../rules/npc.mjs";
 import { combatFlags, situationModifiers } from "../rules/defense.mjs";
+import { distance3d, outOfRange } from "../rules/npc-traits.mjs";
 import {
   UNARMED, attackPool, attackSkill, damagePool, effectiveQualities, fullAutoHits, hitLocation, isJammed, isProficient
 } from "../rules/weapon.mjs";
@@ -37,8 +39,33 @@ const proficiencyChoices = (actor) => actor.items
  */
 function hasWeaponFeat(actor, featName, weapon) {
   const names = [weapon.name, weapon.system?.group].filter(Boolean).map((name) => name.toLowerCase());
-  return actor.items.some((item) => item.type === "feat" && item.name.startsWith(featName)
-    && names.includes(item.system.selection?.subcategory?.toLowerCase()));
+  if (actor.items.some((item) => item.type === "feat" && item.name.startsWith(featName)
+    && names.includes(item.system.selection?.subcategory?.toLowerCase()))) return true;
+  // NPC stat-block feats (spec 022): "Weapon Focus (Gauss)" names the weapon or its group.
+  return actor.type === "npc" && (actor.system.npc?.feats ?? []).some((feat) => {
+    const match = String(feat).match(/^(.+?)\s*\((.+)\)/);
+    return match && match[1] === featName && names.some((name) => name.includes(match[2].toLowerCase()));
+  });
+}
+
+/**
+ * Out-of-range warning between the attacker's token and the target's, with elevation (spec 022, research R4).
+ * Only warns: the book has no 3D rules.
+ * @param {Actor} actor
+ * @param {Token|undefined} targetToken
+ * @param {object} weapon
+ * @param {boolean} melee
+ * @returns {string}
+ */
+function rangeWarning(actor, targetToken, weapon, melee) {
+  const own = actor.getActiveTokens()[0];
+  if (!canvas?.ready || !own || !targetToken) return "";
+  const planar = canvas.grid.measurePath([own.center, targetToken.center]).distance;
+  const elevation = Math.abs((own.document.elevation ?? 0) - (targetToken.document.elevation ?? 0));
+  const distance = distance3d({ planar, elevation });
+  const range = weapon.range?.strMultiplier ? weapon.range.strMultiplier * actor.system.characteristics.str.value : weapon.range?.value ?? 0;
+  const band = outOfRange({ distance, melee, reach: Math.max(2, canvas.grid.distance), range });
+  return band ? game.i18n.format(`DTD.Npc.Range.${band}`, { distance }) : "";
 }
 
 /**
@@ -164,6 +191,8 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   const tracked = !vehicle && Boolean(item?.system.ammo?.tracked) && !options.weapon.thrown && !options.noAmmo;
   if (tracked && !(await checkAmmo(item))) return null;
 
+  // Auto-Stabilized NPCs are always braced (spec 022, p. 520).
+  if (actor.system.traitFlags?.autoStabilized) options.weapon.braced = true;
   const thrown = options.weapon.thrown;
   const skill = attackSkill(weapon, { thrown });
   // NPCs are proficient with the weapons of their stat block (spec 012).
@@ -175,6 +204,7 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   const melee = shape.melee && !thrown;
   const sit = situationModifiers({
     ...(options.situation ?? situation), melee, pointBlank: options.weapon.range === "pointBlank",
+    attackerDarkSight: Boolean(actor.system.traitFlags?.darkSight),
     calledShot: Boolean(action.calledShot), allOut: Boolean(action.allOut), charge: Boolean(action.charge), defensive: Boolean(action.defensive)
   });
   pool.requiredRaises += sit.requiredRaises;
@@ -187,7 +217,8 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   if (penalty) pool.notes.push("twoWeapons");
   const testResult = runTest({
     base: { rolled: pool.rolled + sit.rolled - penalty, kept: pool.kept },
-    tn: options.tn,
+    // Darkness raises the target number (concealment, p. 433; spec 022).
+    tn: options.tn === null || options.tn === undefined ? options.tn : options.tn + sit.tn,
     specialty: options.specialty,
     rng,
     // Vehicle weapons ignore the shooter's effect bonuses (p. 360).
@@ -247,6 +278,7 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
     jammed,
     overheats: jammed && Boolean(qualities.overheats),
     ammoLeft: shot ? game.i18n.format("DTD.Ammo.Left", { left: shot.left, clip: item.system.clip }) : "",
+    rangeNote: rangeWarning(actor, targetToken, weapon, melee),
     textQualities: weapon.qualities.filter((q) => !CONFIG.DTD.WEAPON_QUALITIES[q.key]?.automated)
       .map((q) => ({ label: localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].label), hint: localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].hint) })),
     canDamage: Boolean(weapon.damage.kept || weapon.ammoGroup) && hit !== false,
@@ -316,6 +348,9 @@ export async function rollDamage(message) {
     if (resolve.locations && !resolve.locations.includes(attack.location)) delete resolve.resilienceMultiplier;
     delete resolve.locations;
   }
+  // Weapons with an on-hit ability (Gauss Weapon, spec 022): extra Critical Damage on the location.
+  const onHit = onHitCritical(actor, item);
+  if (onHit) resolve = { ...resolve, extraCritical: (resolve.extraCritical ?? 0) + onHit };
   const normalized = normalizePool(pool);
   const result = rollAndKeep(normalized, { rng, explodeOn: pool.explodeOn, rerollBelow: pool.rerollBelow });
   // Helpless target: damage is rolled twice and added (p. 443).
@@ -358,7 +393,9 @@ export async function rollDamage(message) {
       total: result.total, pen: pool.pen, type: weapon.damage.type, location: attack.location,
       tearing: Boolean(effectiveQualities(weapon).tearing), unarmed: attackSkill(weapon) === "brawl", magic: false, resolve,
       // Minion Squads lose one minion plus one per raise, or the Blast rating (spec 012).
-      raises: attack.raises, blast: weapon.qualities.find((q) => q.key === "blast")?.value ?? 0
+      raises: attack.raises, blast: weapon.qualities.find((q) => q.key === "blast")?.value ?? 0,
+      // Incorporeal targets ignore weapons without a Power Field (spec 022).
+      qualities: weapon.qualities.map((q) => q.key)
     } } }
   };
   ChatMessage.applyRollMode(chatData, attack.rollMode ?? game.settings.get("core", "rollMode"));

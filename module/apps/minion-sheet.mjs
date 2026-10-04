@@ -1,6 +1,6 @@
 import { DAMAGE_TYPES, MINION } from "../config.mjs";
 import { allyBonus } from "../rules/minions.mjs";
-import { alliesOf, attack, setAlly } from "../documents/minion-service.mjs";
+import { alliesOf, minionAction, setAlly } from "../documents/minion-service.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -17,6 +17,7 @@ export class MinionSheet extends HandlebarsApplicationMixin(foundry.applications
     form: { submitOnChange: true },
     actions: {
       minionAttack: MinionSheet.#onAttack,
+      minionAction: MinionSheet.#onAction,
       editImage: MinionSheet.#onEditImage
     }
   };
@@ -70,7 +71,17 @@ export class MinionSheet extends HandlebarsApplicationMixin(foundry.applications
   static async #onAttack(event, target) {
     if (!this.document.isOwner) return;
     const attacking = Number(this.element.querySelector(".minion-attacking")?.value) || this.document.system.count;
-    await attack(this.document, target.dataset.kind, { attacking });
+    await minionAction(this.document, "attack", { kind: target.dataset.kind, attacking });
+  }
+
+  /**
+   * Move or run in the squad's turn (spec 022).
+   * @this {MinionSheet}
+   * @param {PointerEvent} event
+   * @param {HTMLElement} target
+   */
+  static async #onAction(event, target) {
+    await minionAction(this.document, target.dataset.key);
   }
 
   /**

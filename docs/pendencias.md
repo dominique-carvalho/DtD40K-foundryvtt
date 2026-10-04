@@ -1,6 +1,6 @@
 # Pendências — o que falta implementar (DtD 7.7a)
 
-Levantamento de 2026-09-27, depois da feature 012 (PRs 1–12 na `main`); atualizado com as features 013 (Veículos), 014 (Naves), 015 (Criação de armas), 016 (Criação guiada), 017 (Ações de combate), 018 (Perigos e XP), 019 (Munição), 020 (Custo dos Exalted Assets), 021 (Design system) e 023 (Montador de personagem). Cruza os capítulos da 7.7a com o que cada
+Levantamento de 2026-09-27, depois da feature 012 (PRs 1–12 na `main`); atualizado com as features 013 (Veículos), 014 (Naves), 015 (Criação de armas), 016 (Criação guiada), 017 (Ações de combate), 018 (Perigos e XP), 019 (Munição), 020 (Custo dos Exalted Assets), 021 (Design system), 022 (Traits de NPC) e 023 (Montador de personagem). Cruza os capítulos da 7.7a com o que cada
 feature entregou e com o que as specs deixaram fora de escopo ou como texto. Atualizar a cada feature.
 
 ## 1. Capítulos sem implementação
@@ -26,7 +26,8 @@ Nenhuma regra mecânica pendente (o custo dos Exalted Assets entrou na 020). O q
 | 009 Magia | magias de efeito complexo (ilusões, invocações, teleporte), efeitos não simples de Phenomena/Perils, feats Spell Focus, Penetration, Might, Mastery, Parry |
 | 010 Escolas marciais | vantagens complexas (teleporte, trilha de fogo, ataques extras), Wind Step e passivas condicionais, Death From Above depois de Dodge/Parry |
 | 011 Alinhamento | Degenerations Ill-fortuned, Witch-mark, Ashen Taste, Blackouts; fora de escopo: feats Mark of X, Chosen, magias Atonement/Divine Power, troca de escola de Khorne |
-| 012 NPCs | traits Phasing, Flyer, Quadruped, Crawler, Auto-Stabilized, Amphibious, Dark Sight, Resource Stat; feats de NPC; Special Attacks de NPC; ações de Minion Squad no turno; forma alternativa (Zoanoid) como nota |
+| 012 NPCs | Mobbing e ataques de minions em equipe (teamed minions, Animal Companion); traits Unnatural Toughness e Daemonic já nos valores impressos |
+| 022 Traits de NPC | penalidades de dado por terreno difícil (só o custo de movimento do Crawler); limite de deslocamento por ação no mapa (só exibido); queda de quem voa com a categoria escolhida pelo Mestre; dano na falha de uma ability só como texto; magias afetam incorpóreos (premissa); duração do Warform editável (NPC não tem Feral Heart); demais abilities do compêndio como texto (We'll Be Back, Possession como Dominate, Warp Step…) |
 | 014 Naves | efeitos da maioria dos consoles (Cloaking Device, Destiny Knot, Self Destruct, Grappler Arms, Freelance Market, Library Computer…), arco e alcance no mapa, recarga de torpedos em combate, encontros do Warp além da Crew perdida, efeitos de Chaplain, Chief Cook, Chief Medical Officer e Rogue Trader, Hail como combate social, serviços de porto sem contar tempo, hangar sem regra de capacidade |
 | 015 Criação de armas | efeitos em texto (nota na arma e no cartão): Arm Mounted, Felling, Melee Attachment I/II, Precise, Preysense Sight, Quick Draw/Combat Sheath; a rolagem de Psychic Phenomena do Orgone Array é só lembrada; Throwing usa o arremesso da 007 com 10 m fixos |
 | 016 Criação guiada | idiomas só como lembrete (sem campo na ficha); escolhas do Atlantean e do Mark of Slaanesh contadas pela quantidade de perícias em 6 (quais perícias não são guardadas); especialidades só avisam |

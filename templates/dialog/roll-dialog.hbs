@@ -41,7 +41,7 @@
   <div class="form-group">
     <label for="dtd-roll-raises">{{localize "DTD.Roll.Dialog.FreeRaises"}}</label>
     <div class="form-fields">
-      <input id="dtd-roll-raises" type="number" name="freeRaises" value="0" min="0" step="1">
+      <input id="dtd-roll-raises" type="number" name="freeRaises" value="{{freeRaises}}" min="0" step="1">{{#if raisesHint}}<p class="hint">{{raisesHint}}</p>{{/if}}
     </div>
   </div>
 

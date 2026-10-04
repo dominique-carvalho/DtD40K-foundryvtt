@@ -1,3 +1,6 @@
+import { minionActionCost, minionCanAttack } from "../rules/npc-traits.mjs";
+import { combatantOf, takeAction } from "./turn-service.mjs";
+import { toggleCondition } from "./condition-service.mjs";
 import { postTest, rng } from "../dice/roll-service.mjs";
 import { minionDamage, squadPool } from "../rules/minions.mjs";
 import { runTest } from "../rules/test.mjs";
@@ -10,6 +13,43 @@ import { runTest } from "../rules/test.mjs";
 const localize = (key) => game.i18n.localize(key);
 const ATTACK_TEMPLATE = "systems/dtd40k/templates/chat/minion-attack.hbs";
 const DAMAGE_TEMPLATE = "systems/dtd40k/templates/chat/damage-card.hbs";
+
+/**
+ * A squad's action in its turn (spec 022, US4, research R9): move (half: TR m; full: 2×TR), run (6×TR, Running),
+ * or one attack per turn as a half action. Outside combat only the attack is rolled.
+ * @param {Actor} squad
+ * @param {"moveHalf"|"moveFull"|"run"|"attack"} key
+ * @param {{kind?: "melee"|"ranged", attacking?: number}} [options]
+ */
+export async function minionAction(squad, key, { kind = "melee", attacking } = {}) {
+  if (!squad.isOwner) return null;
+  if (squad.system.count <= 0) {
+    ui.notifications.warn(localize("DTD.Minion.Defeated"));
+    return null;
+  }
+  const cost = minionActionCost({ action: key, threatRating: squad.system.threatRating });
+  const combatant = combatantOf(squad);
+  const actionKey = key === "attack" ? "minionAttack" : key;
+  if (key === "attack" && combatant) {
+    const attacksThisTurn = (combatant.turnState?.halves ?? []).filter((k) => k === "minionAttack").length;
+    if (!minionCanAttack({ attacksThisTurn }) && !(await gmAllows(game.i18n.format("DTD.Minion.OneAttack", { name: squad.name })))) return null;
+  }
+  const action = { key: actionKey, name: localize(`DTD.Minion.Action.${key}`), type: cost.type };
+  if (!(await takeAction(squad, action))) return null;
+  if (key === "attack") return attack(squad, kind, { attacking });
+  if (key === "run") await toggleCondition(squad, "running", { active: true });
+  return ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor: squad }), content: `<p>${game.i18n.format("DTD.Minion.Moves", { name: squad.name, action: action.name, distance: cost.distance })}</p>` });
+}
+
+/**
+ * Refusal the GM may override (constitution IV).
+ * @param {string} message
+ */
+async function gmAllows(message) {
+  ui.notifications.warn(message);
+  if (!game.user.isGM) return false;
+  return Boolean(await foundry.applications.api.DialogV2.confirm({ window: { title: localize("DTD.Minion.Attack") }, content: `<p>${message}</p><p>${localize("DTD.Combat.GMOverride")}</p>`, rejectClose: false }));
+}
 
 /**
  * Attack of a squad (FR-007): (minions attacking)k(Threat Rating) against the target's Static Defense; a hit offers
@@ -38,12 +78,14 @@ export async function attack(squad, kind = "melee", { attacking, tn } = {}) {
   const extraContent = await foundry.applications.handlebars.renderTemplate(ATTACK_TEMPLATE, {
     weapon: profile.weapon, rating: profile.rating, type: profile.type ? localize(`DTD.DamageType.${profile.type}`) : "",
     hit, damage: hit ? minionDamage({ rating: profile.rating, raises }) : 0, kind: localize(`DTD.Minion.${kind}`),
-    range: kind === "ranged" ? system.range : 0
+    range: kind === "ranged" ? system.range : 0,
+    canDefend: Boolean(target) && hit && target.type !== "minionSquad", melee: kind === "melee"
   });
   const label = `${squad.name} — ${profile.weapon || localize(`DTD.Minion.${kind}`)}`;
   return postTest({
     actor: squad, label, testResult, extraContent,
-    flags: { minion: { squadUuid: squad.uuid, kind, raises, hit, targetUuid: target?.uuid ?? "" } }
+    // total, tn and requiredRaises let the target Dodge or Parry from the card (spec 022).
+    flags: { minion: { squadUuid: squad.uuid, kind, raises, hit, targetUuid: target?.uuid ?? "", total: testResult.total, tn: testResult.tn, requiredRaises: 0 } }
   });
 }
 
@@ -56,6 +98,11 @@ export async function rollMinionDamage(message) {
   const data = message.getFlag("dtd40k", "minion");
   const squad = data ? await foundry.utils.fromUuid(data.squadUuid) : null;
   if (!squad?.isOwner || !data.hit) return null;
+  // The target's Dodge or Parry turned the hit away (spec 022).
+  if (message.getFlag("dtd40k", "defense")?.hits === false) {
+    ui.notifications.info(localize("DTD.Minion.Defended"));
+    return null;
+  }
   const profile = squad.system[data.kind];
   const total = minionDamage({ rating: profile.rating, raises: data.raises });
   const content = await foundry.applications.handlebars.renderTemplate(DAMAGE_TEMPLATE, {

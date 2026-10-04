@@ -77,7 +77,7 @@ no turno, US5 feats, formas e recurso.
 
 - [X] T023 [P] i18n (en, pt-BR), estilos (design system 021), `docs/pendencias.md`, `README.md`
 - [X] T024 `npm test`, `npm run lint`, checagem de chaves i18n, `npm run build:packs`
-- [ ] T025 Validar o quickstart no Foundry e registrar em `quickstart.md`
+- [X] T025 Validar o quickstart no Foundry e registrar em `quickstart.md`
 
 ## Dependencies
 

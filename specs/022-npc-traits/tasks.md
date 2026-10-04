@@ -23,20 +23,20 @@ no turno, US5 feats, formas e recurso.
 
 ## Phase 1: Foundational (bloqueia todas as histórias)
 
-- [ ] T001 [P] `tests/unit/npc-traits.test.mjs`: casos de [contracts/rules-api.md](contracts/rules-api.md); extensões em `tests/unit/defense.test.mjs` (escuridão) e no teste de feats (`npcFeatNames`); confirmar que falham
-- [ ] T002 `module/rules/npc-traits.mjs` (PURO), `rules/defense.mjs` (`darkness`), `rules/feat.mjs` (`npcFeatNames`); T001 passa
-- [ ] T003 `module/data/npc-data.mjs`: abilities estendidas (campos com padrão), `forms`, `activeForm`, `formRounds`; derivados `speeds` e flags de trait; forma ativa aplicada com `applyForm`
-- [ ] T004 `module/config.mjs`: status `incorporeal`, tipos de ability, ação de movimento `phase`; i18n base
-- [ ] T005 Rodar `npm test` e `npm run lint`
+- [X] T001 [P] `tests/unit/npc-traits.test.mjs`: casos de [contracts/rules-api.md](contracts/rules-api.md); extensões em `tests/unit/defense.test.mjs` (escuridão) e no teste de feats (`npcFeatNames`); confirmar que falham
+- [X] T002 `module/rules/npc-traits.mjs` (PURO), `rules/defense.mjs` (`darkness`), `rules/feat.mjs` (`npcFeatNames`); T001 passa
+- [X] T003 `module/data/npc-data.mjs`: abilities estendidas (campos com padrão), `forms`, `activeForm`, `formRounds`; derivados `speeds` e flags de trait; forma ativa aplicada com `applyForm`
+- [X] T004 `module/config.mjs`: status `incorporeal`, tipos de ability, ação de movimento `phase`; i18n base
+- [X] T005 Rodar `npm test` e `npm run lint`
 
 ---
 
 ## Phase 2: User Story 1 — Movimento e sentidos no mapa (P1) 🎯 MVP
 
-- [ ] T006 [US1] `module/documents/token-document.mjs` (`DtdTokenDocument`: ação padrão, visão no escuro, reset em `_onRelatedUpdate`) e `module/canvas/token.mjs` (`DtdToken`: custo de terreno do Crawler); registro em `dtd40k.mjs`
-- [ ] T007 [US1] `attack-service` e diálogo de ataque: opção escuridão; aviso de alcance com `distance3d`/`outOfRange` no diálogo e no cartão
-- [ ] T008 [US1] `condition-service`: hook de status (stunned, unconscious, prone) + `flyingFall` → `templates/chat/flight-fall.hbs`; botão abre a queda da 018 e zera a elevação
-- [ ] T009 [US1] Ficha do NPC: velocidades walk/fly/swim no cabeçalho
+- [X] T006 [US1] `module/documents/token-document.mjs` (`DtdTokenDocument`: ação padrão, visão no escuro, reset em `_onRelatedUpdate`) e `module/canvas/token.mjs` (`DtdToken`: custo de terreno do Crawler); registro em `dtd40k.mjs`
+- [X] T007 [US1] `attack-service` e diálogo de ataque: opção escuridão; aviso de alcance com `distance3d`/`outOfRange` no diálogo e no cartão
+- [X] T008 [US1] `condition-service`: hook de status (stunned, unconscious, prone) + `flyingFall` → `templates/chat/flight-fall.hbs`; botão abre a queda da 018 e zera a elevação
+- [X] T009 [US1] Ficha do NPC: velocidades walk/fly/swim no cabeçalho
 
 ---
 

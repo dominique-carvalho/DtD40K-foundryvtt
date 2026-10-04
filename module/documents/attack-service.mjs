@@ -8,6 +8,7 @@ import { runTest } from "../rules/test.mjs";
 import { toggleCondition } from "./condition-service.mjs";
 import { isAmorphous } from "../rules/npc.mjs";
 import { combatFlags, situationModifiers } from "../rules/defense.mjs";
+import { distance3d, outOfRange } from "../rules/npc-traits.mjs";
 import {
   UNARMED, attackPool, attackSkill, damagePool, effectiveQualities, fullAutoHits, hitLocation, isJammed, isProficient
 } from "../rules/weapon.mjs";
@@ -45,6 +46,26 @@ function hasWeaponFeat(actor, featName, weapon) {
  * Profile of the weapon for the pure rules.
  * @param {Item|null} item  null: unarmed
  */
+/**
+ * Out-of-range warning between the attacker's token and the target's, with elevation (spec 022, research R4).
+ * Only warns: the book has no 3D rules.
+ * @param {Actor} actor
+ * @param {Token|undefined} targetToken
+ * @param {object} weapon
+ * @param {boolean} melee
+ * @returns {string}
+ */
+function rangeWarning(actor, targetToken, weapon, melee) {
+  const own = actor.getActiveTokens()[0];
+  if (!canvas?.ready || !own || !targetToken) return "";
+  const planar = canvas.grid.measurePath([own.center, targetToken.center]).distance;
+  const elevation = Math.abs((own.document.elevation ?? 0) - (targetToken.document.elevation ?? 0));
+  const distance = distance3d({ planar, elevation });
+  const range = weapon.range?.strMultiplier ? weapon.range.strMultiplier * actor.system.characteristics.str.value : weapon.range?.value ?? 0;
+  const band = outOfRange({ distance, melee, reach: Math.max(2, canvas.grid.distance), range });
+  return band ? game.i18n.format(`DTD.Npc.Range.${band}`, { distance }) : "";
+}
+
 function profileOf(item) {
   if (!item) return { ...UNARMED, name: localize("DTD.Attack.Unarmed") };
   return { name: item.name, ...item.system };
@@ -173,8 +194,11 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
     focus: item && !vehicle ? hasWeaponFeat(actor, "Weapon Focus", item) : false, options: options.weapon, mods: modsOf(item)
   });
   const melee = shape.melee && !thrown;
+  // Auto-Stabilized NPCs are always braced (spec 022, p. 520).
+  if (actor.system.traitFlags?.autoStabilized) options.weapon.braced = true;
   const sit = situationModifiers({
     ...(options.situation ?? situation), melee, pointBlank: options.weapon.range === "pointBlank",
+    attackerDarkSight: Boolean(actor.system.traitFlags?.darkSight),
     calledShot: Boolean(action.calledShot), allOut: Boolean(action.allOut), charge: Boolean(action.charge), defensive: Boolean(action.defensive)
   });
   pool.requiredRaises += sit.requiredRaises;
@@ -187,7 +211,8 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   if (penalty) pool.notes.push("twoWeapons");
   const testResult = runTest({
     base: { rolled: pool.rolled + sit.rolled - penalty, kept: pool.kept },
-    tn: options.tn,
+    // Darkness raises the target number (concealment, p. 433; spec 022).
+    tn: options.tn === null || options.tn === undefined ? options.tn : options.tn + sit.tn,
     specialty: options.specialty,
     rng,
     // Vehicle weapons ignore the shooter's effect bonuses (p. 360).
@@ -247,6 +272,7 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
     jammed,
     overheats: jammed && Boolean(qualities.overheats),
     ammoLeft: shot ? game.i18n.format("DTD.Ammo.Left", { left: shot.left, clip: item.system.clip }) : "",
+    rangeNote: rangeWarning(actor, targetToken, weapon, melee),
     textQualities: weapon.qualities.filter((q) => !CONFIG.DTD.WEAPON_QUALITIES[q.key]?.automated)
       .map((q) => ({ label: localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].label), hint: localize(CONFIG.DTD.WEAPON_QUALITIES[q.key].hint) })),
     canDamage: Boolean(weapon.damage.kept || weapon.ammoGroup) && hit !== false,

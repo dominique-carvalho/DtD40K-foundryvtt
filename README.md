@@ -97,6 +97,12 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
 - **Munição**: tiros no pente e pentes de reserva por arma, gasto por tiro, rajada (ROF efetivo com o que restar) e
   Suppressing Fire, lançadores gastando a granada ou o míssil, recarga pelo tempo da arma com progresso, emperrar
   travando a arma até o Clear Jam.
+- **Traits de NPC no mapa e no turno**: Flyer voa por padrão e cai se ficar Stunned, Unconscious ou Prone; Phasing
+  incorpóreo atravessa paredes e só sofre dano de magia ou Power Field; Dark Sight dá visão no escuro e ignora a
+  escuridão (+5 SD); Crawler ignora terreno difícil; Auto-Stabilized faz Full Auto Burst como meia ação; aviso de
+  alcance com elevação. Habilidades de ataque rolam pela ficha (Mind Blast em cone, Frightful Presence, calor do
+  Elemental, Gauss Weapon, Possession); Minion Squads agem no turno; formas alternativas (Warform, composição do
+  Elemental), Resource Stat e editores na aba Antagonista.
 - **Visual Scriptorium Machina**: ficha de personagem em dois layouts, Cogitador (padrão: trilho lateral com os
   recursos sempre à vista) e Iluminura (página de códice), escolhidos no menu de ficha; cartões de chat com dados em
   facetas de d10; variantes clara (pergaminho) e escura (cogitador) que seguem o tema do Foundry; fontes livres

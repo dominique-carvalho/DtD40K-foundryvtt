@@ -2285,3 +2285,77 @@
   width: 3.2em;
   text-align: center;
 }
+
+/* ---------- NPC editors, abilities and forms (spec 022) ---------- */
+
+.dtd40k .npc-edit-row {
+  display: grid;
+  grid-template-columns: minmax(8rem, 12rem) 1fr auto;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.dtd40k .npc-ability-editor {
+  margin-bottom: 0.4rem;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid var(--dtd-border);
+  border-radius: var(--dtd-radius);
+}
+
+.dtd40k .npc-ability-editor summary {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.dtd40k .npc-ability-editor summary input[type="text"] {
+  flex: 1;
+}
+
+.dtd40k .npc-ability-editor textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.dtd40k .npc-edit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.3rem 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.dtd40k .npc-edit-grid label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+  font-size: var(--dtd-text-sm);
+}
+
+.dtd40k .npc-edit-grid label.wide,
+.dtd40k .npc-edit-grid .npc-edit-chars,
+.dtd40k .npc-editor input.wide {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.dtd40k .npc-edit-grid input[type="number"] {
+  width: 3.2rem;
+}
+
+.dtd40k .npc-edit-chars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.6rem;
+}
+
+.dtd40k .martial-entry.inactive {
+  opacity: 0.55;
+}
+
+.dtd40k .pool-button.active {
+  color: var(--dtd-on-seal);
+  background: var(--dtd-seal);
+  border-color: var(--dtd-seal-deep);
+}

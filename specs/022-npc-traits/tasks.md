@@ -69,14 +69,14 @@ no turno, US5 feats, formas e recurso.
 - [X] T019 [US5] `module/documents/form-service.mjs`: `switchForm`, `tickForm`, `chooseVariant`; armas com `flags.dtd40k.form`
 - [X] T020 [US5] Packs: formas dos dois Zoanoids (valores entre colchetes relidos do livro; Claw/Bite da forma) e as quatro variantes do Elemental; `packs.test.mjs`
 - [X] T021 [US5] `npc-service`: gastar/recuperar recurso com chat
-- [ ] T022 [US5] Aba Antagonista: editores (Edição) de traits, abilities por tipo, feats e formas; botões (Jogo) de usar ability, trocar forma, escolher variante, recurso
+- [X] T022 [US5] Aba Antagonista: editores (Edição) de traits, abilities por tipo, feats e formas; botões (Jogo) de usar ability, trocar forma, escolher variante, recurso
 
 ---
 
 ## Phase 7: Polish
 
-- [ ] T023 [P] i18n (en, pt-BR), estilos (design system 021), `docs/pendencias.md`, `README.md`
-- [ ] T024 `npm test`, `npm run lint`, checagem de chaves i18n, `npm run build:packs`
+- [X] T023 [P] i18n (en, pt-BR), estilos (design system 021), `docs/pendencias.md`, `README.md`
+- [X] T024 `npm test`, `npm run lint`, checagem de chaves i18n, `npm run build:packs`
 - [ ] T025 Validar o quickstart no Foundry e registrar em `quickstart.md`
 
 ## Dependencies

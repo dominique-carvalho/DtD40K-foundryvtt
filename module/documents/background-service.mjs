@@ -1,3 +1,4 @@
+import { isSilent } from "./silent.mjs";
 import { BACKGROUNDS, CHARACTERISTICS } from "../config.mjs";
 import { promptRollOptions } from "../apps/roll-dialog.mjs";
 import { postTest, rng } from "../dice/roll-service.mjs";
@@ -20,6 +21,7 @@ const LISTS = { artifact: "artifacts", backing: "backings" };
  * @param {string} content
  */
 async function confirm(title, content) {
+  if (isSilent()) return true;
   return Boolean(await foundry.applications.api.DialogV2.confirm({ window: { title }, content, rejectClose: false }));
 }
 
@@ -36,6 +38,7 @@ const artifactDots = (actor) => actor._source.system.backgrounds.artifacts.reduc
 async function price(actor, key, to, label) {
   const creation = actor.system.creation.active;
   const check = canRaise({ creation, isGM: game.user.isGM, to, artifactTotal: key === "artifact" ? artifactDots(actor) + 1 : 0 });
+  if (!check.allowed && check.reason !== "atMax" && isSilent()) return 0;
   if (!check.allowed) {
     const message = game.i18n.format(`DTD.Background.Refused.${check.reason}`, { label });
     ui.notifications.warn(message);

@@ -22,10 +22,10 @@ quickstart.md, inventory.json
 
 ## Phase 1: Foundational (bloqueia todas as histórias)
 
-- [ ] T001 [P] `tests/unit/builder.test.mjs`: casos de [contracts/rules-api.md](contracts/rules-api.md) (Jane, p. 18); confirmar que falham
-- [ ] T002 `module/rules/builder.mjs` (PURO): passos, validações, saldo de XP, prévia, plano; T001 passa
-- [ ] T003 Serviços com opções (R2): `applyRace { choice }`, `applyExaltation { selection, replace }`, `startClass { silent }`, `addFeat`/`priceFeat { selection, silent }`, `addExaltedAsset`/`priceExaltedAsset { silent }`, `raiseBackground { silent }`, `advance { silent }`; comportamento padrão inalterado
-- [ ] T004 Rodar `npm test` e `npm run lint`
+- [X] T001 [P] `tests/unit/builder.test.mjs`: casos de [contracts/rules-api.md](contracts/rules-api.md) (Jane, p. 18); confirmar que falham
+- [X] T002 `module/rules/builder.mjs` (PURO): passos, validações, saldo de XP, prévia, plano; T001 passa
+- [X] T003 Serviços com opções (R2): `applyRace { choice }`, `applyExaltation { selection, replace }`, `startClass { silent }`, `addFeat`/`priceFeat { selection, silent }`, `addExaltedAsset`/`priceExaltedAsset { silent }`, `raiseBackground { silent }`, `advance { silent }`; comportamento padrão inalterado
+- [X] T004 Rodar `npm test` e `npm run lint`
 
 ---
 

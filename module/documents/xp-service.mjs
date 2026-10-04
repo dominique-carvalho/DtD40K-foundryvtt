@@ -1,3 +1,4 @@
+import { isSilent } from "./silent.mjs";
 import { CHARACTERISTICS, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, MAX_RATING, SKILLS } from "../config.mjs";
 import { fullName } from "../rules/feat.mjs";
 import { advanceCost, canAdvance, exaltedAssetPrice, undoPlan } from "../rules/xp.mjs";
@@ -33,6 +34,7 @@ function context(actor) {
  * @param {string} content
  */
 async function confirm(title, content) {
+  if (isSilent()) return true;
   return Boolean(await foundry.applications.api.DialogV2.confirm({ window: { title }, content, rejectClose: false }));
 }
 
@@ -44,6 +46,7 @@ async function confirm(title, content) {
  */
 async function refuse(reason, data = {}) {
   const message = game.i18n.format(`DTD.XP.Error.${reason}`, data);
+  if (isSilent()) return true;
   ui.notifications.warn(message);
   if (!game.user.isGM) return false;
   return confirm(localize("DTD.XP.GMOverrideTitle"), `<p>${message}</p><p>${localize("DTD.XP.GMOverride")}</p>`);
@@ -177,7 +180,7 @@ export async function priceExaltedAsset(actor, asset, { granted = false } = {}) 
   const price = exaltedAssetPrice({ granted, available });
   if (!price.allowed) return { ok: await refuse(price.reason, { cost: price.cost, available }), cost: 0 };
   if (!price.cost) return { ok: true, cost: 0 };
-  const ok = await confirm(localize("DTD.XP.Buy"), `<p>${game.i18n.format("DTD.XP.BuyConfirm", { label: asset.name, cost: price.cost, available })}</p>`);
+  const ok = isSilent() || await confirm(localize("DTD.XP.Buy"), `<p>${game.i18n.format("DTD.XP.BuyConfirm", { label: asset.name, cost: price.cost, available })}</p>`);
   return { ok, cost: ok ? price.cost : 0 };
 }
 

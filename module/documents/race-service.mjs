@@ -60,15 +60,16 @@ export async function promptRaceChoice(race, current = defaultChoice(race.system
  * Apply a race to a character, replacing any previous one (FR-009 to FR-011).
  * @param {Actor} actor
  * @param {Item} raceItem  race dropped from a compendium, the sidebar or another actor
+ * @param {{choice?: object}} [options]  choice: the racial choice made beforehand (character builder, spec 023)
  * @returns {Promise<Item|null>}  the new embedded race, or null if cancelled or refused
  */
-export async function applyRace(actor, raceItem) {
+export async function applyRace(actor, raceItem, { choice: preset } = {}) {
   if (actor.type !== "character") {
     ui.notifications.warn(localize("DTD.Race.NotCharacter"));
     return null;
   }
 
-  const choice = needsChoice(raceItem.system) ? await promptRaceChoice(raceItem) : defaultChoice(raceItem.system);
+  const choice = preset ?? (needsChoice(raceItem.system) ? await promptRaceChoice(raceItem) : defaultChoice(raceItem.system));
   if (!choice) return null;
 
   const data = raceItem.toObject();

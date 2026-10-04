@@ -1,3 +1,4 @@
+import { isSilent } from "./silent.mjs";
 import { buildAssetEffects, validateAssetAdd } from "../rules/asset.mjs";
 import { clampHeroPoints, getExaltation } from "./exaltation-service.mjs";
 import { getRace } from "./race-service.mjs";
@@ -46,9 +47,9 @@ export async function addExaltedAsset(actor, assetItem, { granted = false } = {}
       exaltation: assetItem.system.prerequisites.exaltation,
       race: assetItem.system.prerequisites.race
     });
-    ui.notifications.warn(message);
-    if (!game.user.isGM) return null;
-    const confirmed = await foundry.applications.api.DialogV2.confirm({
+    if (!isSilent()) ui.notifications.warn(message);
+    if (!game.user.isGM && !isSilent()) return null;
+    const confirmed = isSilent() || await foundry.applications.api.DialogV2.confirm({
       window: { title: localize("DTD.Asset.GMOverrideTitle") },
       content: `<p>${message}</p><p>${localize("DTD.Asset.GMOverride")}</p>`,
       rejectClose: false

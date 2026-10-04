@@ -1,3 +1,4 @@
+import { isSilent } from "./silent.mjs";
 import { CHARACTERISTICS } from "../config.mjs";
 import { perfectionAsset } from "../rules/asset.mjs";
 import {
@@ -111,9 +112,10 @@ export async function promptExaltationSelection(exaltation, race, current = defa
  * Apply an exaltation to a character, replacing any previous one (FR-010 to FR-011).
  * @param {Actor} actor
  * @param {Item} exaltationItem  dropped from a compendium, the sidebar or another actor
+ * @param {{selection?: object}} [options]  selection made beforehand (character builder, spec 023)
  * @returns {Promise<Item|null>}  the new embedded exaltation, or null if cancelled or refused
  */
-export async function applyExaltation(actor, exaltationItem) {
+export async function applyExaltation(actor, exaltationItem, { selection: preset } = {}) {
   if (actor.type !== "character") {
     ui.notifications.warn(localize("DTD.Exaltation.NotCharacter"));
     return null;
@@ -121,7 +123,7 @@ export async function applyExaltation(actor, exaltationItem) {
 
   const current = getExaltation(actor);
   if (current) {
-    const confirmed = await foundry.applications.api.DialogV2.confirm({
+    const confirmed = isSilent() || await foundry.applications.api.DialogV2.confirm({
       window: { title: localize("DTD.Exaltation.Replace") },
       content: `<p>${game.i18n.format("DTD.Exaltation.ReplaceConfirm", { old: current.name, exaltation: exaltationItem.name })}</p>`,
       rejectClose: false
@@ -130,7 +132,7 @@ export async function applyExaltation(actor, exaltationItem) {
   }
 
   const race = raceSystem(actor);
-  const selection = needsSelection(exaltationItem.system, race)
+  const selection = preset ? { ...defaultSelection(exaltationItem.system, race), ...preset } : needsSelection(exaltationItem.system, race)
     ? await promptExaltationSelection(exaltationItem, race)
     : defaultSelection(exaltationItem.system, race);
   if (!selection) return null;

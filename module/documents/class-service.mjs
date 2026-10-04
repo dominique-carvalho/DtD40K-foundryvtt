@@ -1,3 +1,4 @@
+import { isSilent } from "./silent.mjs";
 import { SKILLS } from "../config.mjs";
 import { buildCompletionEffects, checkClassEntry, classProgress, completionSkillOptions } from "../rules/class.mjs";
 import { grantFeats, releaseGrants } from "./feat-service.mjs";
@@ -40,6 +41,7 @@ const ownedFeats = (actor) => actor.items.filter((item) => item.type === "feat" 
  * @param {string} content
  */
 async function confirm(title, content) {
+  if (isSilent()) return true;
   return Boolean(await foundry.applications.api.DialogV2.confirm({ window: { title }, content, rejectClose: false }));
 }
 
@@ -83,7 +85,7 @@ export async function startClass(actor, classItem) {
     feats: ownedFeats(actor),
     creation: actor.system.creation.active
   });
-  if (check.errors.length) {
+  if (check.errors.length && !isSilent()) {
     const message = check.errors.map(describe).join(" ");
     ui.notifications.warn(message);
     if (!game.user.isGM || !(await confirm(localize("DTD.Class.GMOverrideTitle"), `<p>${message}</p><p>${localize("DTD.Class.GMOverride")}</p>`))) {

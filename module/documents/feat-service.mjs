@@ -1,3 +1,4 @@
+import { isSilent } from "./silent.mjs";
 import { CHARACTERISTICS, GROUPS, SKILLS } from "../config.mjs";
 import { activeGrants, buildFeatEffects, characteristicOptions, fullName, grantedByOf, grantPlan, needsFeatSelection,
   releasePlan, validateFeatAdd, validateFeatSelection, withSkillFocusName } from "../rules/feat.mjs";
@@ -117,7 +118,7 @@ export async function addFeat(actor, featItem, { selection } = {}) {
   }
 
   const check = validateFeatAdd({ feat: featItem, selection: chosen, owned, race: getRace(actor), creation: actor.system.creation.active });
-  if (check.errors.length) {
+  if (check.errors.length && !isSilent()) {
     const message = check.errors.map((error) => game.i18n.format(`DTD.Feat.Error.${error}`, {
       feat: name,
       race: featItem.system.prerequisites.race
@@ -319,6 +320,7 @@ async function clampHeroPoints(actor) {
  * @returns {Promise<boolean>}
  */
 async function confirm(titleKey, content) {
+  if (isSilent()) return true;
   return Boolean(await foundry.applications.api.DialogV2.confirm({
     window: { title: localize(titleKey) },
     content,

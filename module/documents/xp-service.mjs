@@ -1,3 +1,4 @@
+import { isSilent } from "./silent.mjs";
 import { CHARACTERISTICS, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, MAX_RATING, SKILLS } from "../config.mjs";
 import { fullName } from "../rules/feat.mjs";
 import { advanceCost, canAdvance, exaltedAssetPrice, undoPlan } from "../rules/xp.mjs";
@@ -33,17 +34,20 @@ function context(actor) {
  * @param {string} content
  */
 async function confirm(title, content) {
+  if (isSilent()) return true;
   return Boolean(await foundry.applications.api.DialogV2.confirm({ window: { title }, content, rejectClose: false }));
 }
 
 /**
- * Refuse a purchase; the GM may allow it anyway, without charging (constitution IV).
+ * Refuse a purchase; the GM may allow it anyway, without charging (constitution IV). In the character builder
+ * (silent) the GM already released the step.
  * @param {string} reason  DTD.XP.Error.<reason>
  * @param {object} [data]
  * @returns {Promise<boolean>}  true if the GM allowed it
  */
 async function refuse(reason, data = {}) {
   const message = game.i18n.format(`DTD.XP.Error.${reason}`, data);
+  if (isSilent()) return true;
   ui.notifications.warn(message);
   if (!game.user.isGM) return false;
   return confirm(localize("DTD.XP.GMOverrideTitle"), `<p>${message}</p><p>${localize("DTD.XP.GMOverride")}</p>`);
@@ -121,7 +125,8 @@ export async function advance(actor, kind, key = "") {
   let cost = advanceCost(kind, from) * check.multiplier;
   if (!check.allowed) {
     if (!(await refuse(check.reason, { label }))) return false;
-    cost = 0;
+    // The character builder (silent) charges what the GM released: its XP balance already counts it.
+    if (!isSilent()) cost = 0;
   } else if (cost > actor.system.xp.totals.available) {
     ui.notifications.warn(game.i18n.format("DTD.XP.Error.notEnough", { cost, available: actor.system.xp.totals.available }));
     return false;
@@ -152,7 +157,11 @@ export async function priceFeat(actor, feat, selection) {
   if (category !== "asset") {
     const probe = { name: feat.name, system: { ...feat.system, selection } };
     const check = canAdvance({ kind: "feat", feat: probe, ...context(actor) });
-    if (!check.allowed) return { ok: await refuse(check.reason, { label: name }), cost: 0 };
+    if (!check.allowed) {
+      const ok = await refuse(check.reason, { label: name });
+      // The character builder (silent) charges what the GM released: its XP balance already counts it.
+      return { ok, cost: ok && isSilent() ? cost : 0 };
+    }
   }
   const available = actor.system.xp.totals.available;
   if (cost > available) {
@@ -177,7 +186,7 @@ export async function priceExaltedAsset(actor, asset, { granted = false } = {}) 
   const price = exaltedAssetPrice({ granted, available });
   if (!price.allowed) return { ok: await refuse(price.reason, { cost: price.cost, available }), cost: 0 };
   if (!price.cost) return { ok: true, cost: 0 };
-  const ok = await confirm(localize("DTD.XP.Buy"), `<p>${game.i18n.format("DTD.XP.BuyConfirm", { label: asset.name, cost: price.cost, available })}</p>`);
+  const ok = isSilent() || await confirm(localize("DTD.XP.Buy"), `<p>${game.i18n.format("DTD.XP.BuyConfirm", { label: asset.name, cost: price.cost, available })}</p>`);
   return { ok, cost: ok ? price.cost : 0 };
 }
 

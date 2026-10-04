@@ -103,6 +103,11 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   alcance com elevação. Habilidades de ataque rolam pela ficha (Mind Blast em cone, Frightful Presence, calor do
   Elemental, Gauss Weapon, Possession); Minion Squads agem no turno; formas alternativas (Warform, composição do
   Elemental), Resource Stat e editores na aba Antagonista.
+- **Montador de personagem**: botão "Novo personagem" na aba de atores abre um assistente na ordem do livro
+  (conceito, raça, exaltação, características e perícias por prioridade, especialidades, classe, backgrounds,
+  divindade, Assets e Hindrances, Exalted Asset, XP inicial, equipamento por raridade), com resumo lateral, bloqueio
+  das escolhas fora da regra (o Mestre libera) e rascunho salvo; jogadores sem permissão de criar atores têm o
+  personagem criado pelo Mestre conectado.
 - **Visual Scriptorium Machina**: ficha de personagem em dois layouts, Cogitador (padrão: trilho lateral com os
   recursos sempre à vista) e Iluminura (página de códice), escolhidos no menu de ficha; cartões de chat com dados em
   facetas de d10; variantes clara (pergaminho) e escura (cogitador) que seguem o tema do Foundry; fontes livres

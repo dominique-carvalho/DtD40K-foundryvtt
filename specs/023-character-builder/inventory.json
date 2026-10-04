@@ -1,0 +1,105 @@
+{
+  "feature": "023-character-builder",
+  "worktree": "C:/Users/Dominique/Documents/Personal Projects/DtD40K-foundryvtt-023",
+  "book": {
+    "source": "dtd.txt lines 418-923 (pp. 12-19); page markers: L457=p12, L514=p13, L577=p14, L636=p15, L692=p16",
+    "step0_concept": "p.13, no numbers",
+    "step1_scores": {
+      "page": "13-14",
+      "characteristics": "9 in 3 groups (Physical str/dex/con, Social cha/fel/cmp, Mental int/wis/wil); base 1; priorities 6/4/2; cannot reach 5 in this step (cap 4); race may raise it later",
+      "skills": "groups Mental/Physical/Social ranked separately from characteristics; base 0; priorities 8/6/4; max 3 in this step",
+      "code": "module/config.mjs:129 CREATION"
+    },
+    "step2_race": "p.14; 16 races; +1 characteristic (choice of 2; Human any) and skill dots (Human chooses 2 skills), Size, racial power",
+    "step3_exaltation": "pp.14-15; 9 exaltations, any race; Power Stat starts at 1 with its level-1 power (example p.18)",
+    "step4_class": "p.15; every Hero starts in a class; XP only buys advances on the Class List; level-1 contents not defined in ch.II (classes chapter p.106)",
+    "step5_backgrounds": "p.15 (L613-634); 7 dots; none above 3 without XP; XP on backgrounds only during creation; max 5 dots of Artifacts; 11 backgrounds",
+    "step6_alignment": "pp.15-16; choose a god (3 pantheons x 6; Luna listed twice); Devotion starts at 6 (L606)",
+    "step7_xp": {
+      "page": "16 (L661-689)",
+      "starting": 600,
+      "hindrances": "assets/hindrances only at creation; assets unlimited; max 2 hindrances, +100 XP each (also p.179)",
+      "costs": {"characteristic": 200, "newSkill": 100, "skill": 50, "newSchool": 200, "improveSchool": "100 x current rank", "feat": 100, "asset": 100, "powerStat": 300, "background1to3": 50, "background4to5": 100},
+      "notes": "* PS/Magic/Sword/Gun Kata ranks capped at level; ** assets and background dots only at creation; no cost listed for specialties or classes",
+      "exaltedAsset": "not in ch.II; p.179: taking an Exalted Asset bars a second one, except Paragon assets; priced 100 like an asset (spec 020)"
+    },
+    "step8_equipment": "p.16; clothes + 1 Rare, 1 Uncommon, 2 Common, 2 Very Common; more via Inheritance, Wealth, Artifact (pp.280-283)",
+    "step9_finishing": "pp.16-17; Size by race (Human 4); SD 10+3Wis+3Dex-2Size; HP 2Wil+2Con; MD 5+5Cmp; Resolve Wil+Cmp; Speed Str+Dex; Resilience ceil((Size+Level)/2)+1; Fatigue Con; Hero Points 2 (all derived in code)",
+    "specialties": "p.23 (L1035-1046): a specialty at 4 dots in any skill/characteristic, SM approves; reroll 1s; no purchase/count at creation",
+    "languages": "p.24 (L1136-1143): local/racial + Trade + 1 per Int dot above 2",
+    "caps": "p.22: rating max 5, 6 only via exceptions (module/config.mjs:118 RATING_EXCEPTIONS)",
+    "example_p18": "Tiefling Werewolf Monk: char Physical 6/Mental 4/Social 2; skills Physical 8/Social 6/Mental 4; Tiefling +1 Con, Size 5; Feral Heart 1; Monk prereqs Brawl 2/Acrobatics 1/Athletics 1; backgrounds Contacts 3, Status 2, Backing 1, Wealth 1; Malal Devotion 6; 2 hindrances -> 800 XP: 200 two assets, 400 four feats, 50 Brawl 3->4, 100 racial feat Outsider, 50 left; gear 20 Biofoam (Rare), Injector Rig (Uncommon), Autopistol + Micro-Bead (Common), Knife + Leather (Very Common)",
+    "ambiguities": [
+      "XP restricted to current class list (p.16) vs example spends XP on assets and a racial feat (code already lets assets and racial feats bypass the class list: rules/xp.mjs:47, xp-service priceFeat)",
+      "specialty count/purchase at creation unspecified",
+      "skill cap 3 only for Step One; racial dots may exceed (code: race bonus is an effect, not stored)",
+      "class level-1 grants not defined in ch.II",
+      "example derived numbers partly inconsistent (HP/Resolve/Initiative vs Social tertiary)",
+      "starting equipment: quantity of consumables (20 Biofoam) and whether craftsmanship/artifacts may fill picks unspecified",
+      "Luna listed twice"
+    ]
+  },
+  "code": {
+    "spec016": {
+      "module/rules/creation.mjs": "xpDots:19, creationSpend:33, assignPriorities:52, checkDots:70 (stepMax/budget), ratingCaps:83, canReach:103, specialtyCheck:121, creationXp:156, languagesHint:165, creationChecklist:182 - pure",
+      "module/documents/creation-service.mjs": "refuseUnlessGM(message):25 (DialogV2.confirm GM override), creationSummary(actor):39, setCreationDots(actor,path,value):86 (writes immediately), endCreation(actor):111 (GM only, confirm, sets creation.active false)",
+      "module/apps/creation-context.mjs": "prepareCreationContext(actor):44",
+      "templates/actor/parts/creation.hbs": "40 lines; groups, specialties, checklist, endCreation button",
+      "module/data/character-data.mjs": "creation.active initial true (:224); xp.starting = STARTING_XP 600 (:231); xp.log; xp.totals derived (:303, hindranceXp from feat.system.xpGranted, all hindrances 100); backgrounds.dots derived (:279); ratingCaps (:404); wealth.value 0-5 (:214); backgrounds.* 0-5, artifacts/backings arrays {id,name,value}, inheritancePicks by rarity (:86-100); devotion initial 6; heroPoints 2; size 4; no languages field (race item lore list race-data.mjs:62)"
+    },
+    "services": [
+      {"fn": "race-service applyRace(actor, raceItem)", "line": 65, "dialog": "promptRaceChoice when needsChoice; no selection param", "writes": "deletes old race, creates item with racial effects, heroicHeritage +1 Hero Point, syncPerfection"},
+      {"fn": "race-service promptRaceChoice(race, current)", "line": 29, "dialog": "DialogV2.wait loop"},
+      {"fn": "rules/race characteristicOptions:34 needsChoice:43 defaultChoice:52 validateRaceChoice:62 buildRaceEffects:92", "pure": true},
+      {"fn": "exaltation-service applyExaltation(actor, item)", "line": 116, "dialog": "replace confirm if one exists; promptExaltationSelection(:62) when needsSelection; no selection param", "writes": "PS=1, effects, Destiny +2 Hero Points, syncPerfection (Paragon racial asset)"},
+      {"fn": "rules/exaltation statuesqueOptions:129 needsSelection:140 defaultSelection:151 validateExaltationSelection:167", "pure": true, "note": "only Paragon (statuesque) and Dragonblooded (bloodQuickening) need a selection"},
+      {"fn": "class-service startClass(actor, classItem)", "line": 72, "dialog": "GM override confirm on errors; confirm on warnings (school/text prereqs)", "validates": "checkClassEntry (rules/class.mjs:78): creationLevel when creation.active, skill/feat prereqs, current class", "writes": "class item status current; nothing granted at level 1 (grants skipped for class, item.mjs:42)"},
+      {"fn": "feat-service addFeat(actor, featItem, {selection})", "line": 99, "dialog": "promptFeatSelection skipped if selection given; GM override; missing-dependency confirm; priceFeat confirm for non-hindrances", "validates": "validateFeatAdd (rules/feat.mjs:125): duplicates, racial race, hindranceLimit 2, creationOnly; notices extraHindrances (Sturdy 2, Veteran 1)", "writes": "feat item + XP log"},
+      {"fn": "asset-service addExaltedAsset(actor, item, {granted})", "line": 30, "dialog": "GM override; priceExaltedAsset confirm 100 XP", "validates": "validateAssetAdd (exaltation, race, one-asset limit, Paragon exempt) + creationOnly"},
+      {"fn": "background-service raiseBackground(actor, key, {id})", "line": 64, "dialog": "price() confirm when cost>0; GM override", "validates": "canRaise/backgroundCost (rules/backgrounds.mjs:32-56)", "other": "addInstance(actor,key,name):102, setInheritancePicks(actor,picks):135, inheritanceFits rules/backgrounds.mjs:58"},
+      {"fn": "alignment-service setAlignment(actor, deity)", "line": 33, "dialog": "none for first deity; change confirms otherwise", "writes": "deity item"},
+      {"fn": "xp-service advance(actor, kind, key)", "line": 84, "dialog": "refuse() GM override only", "validates": "canReach + canAdvance (needs a class; list membership; school cap level) + available XP", "writes": "stored +1, recordEntry"},
+      {"fn": "xp-service priceFeat(actor, feat, selection)", "line": 147, "dialog": "always confirms cost"},
+      {"fn": "xp-service recordEntry(actor, entry)", "line": 57, "dialog": "none"},
+      {"fn": "equipment-service addEquipment(actor, item, {starting, overrides})", "line": 37, "dialog": "asks starting? only if starting undefined; GM override when no slot", "validates": "startingSlots/startingSlotFor (rules/acquisition.mjs:61-88): piece one rarity lower, craftsmanship shifts rarity, anyNonArtifact excludes material/wonder"}
+    ],
+    "side_effects": "DtdItem._onCreate (item.mjs:37) runs grantFeats/syncClassCompletion only on the creating client; DtdActor._preCreate (actor.mjs:14) sets hp/resolve to max"
+  },
+  "equipment": {
+    "source": "src/packs/equipment (203 files: 170 items + 33 folders); compiled packs/ absent in worktree (npm run build:packs); counts from source JSON",
+    "fields": "system.rarity (equipment-fields.mjs:20, RARITIES config.mjs:225), system.craftsmanship (:22, all 170 'common'), system.startingSlot (:27)",
+    "counts": {"rare": 69, "uncommon": 37, "common": 28, "veryCommon": 8, "veryRare": 23, "mythicRare": 4, "ubiquitous": 1},
+    "by_type": {"armor": {"uncommon": 3, "common": 2, "veryCommon": 1, "veryRare": 2, "rare": 2}, "gear:gear": {"uncommon": 8, "veryCommon": 3, "common": 6, "rare": 1}, "gear:cybernetic": {"uncommon": 9, "rare": 5, "common": 1, "veryRare": 1}, "gear:drug": {"uncommon": 6, "veryCommon": 2, "common": 2, "rare": 3, "mythicRare": 2, "veryRare": 1}, "weapon": {"uncommon": 11, "common": 17, "rare": 21, "veryRare": 19, "ubiquitous": 1, "mythicRare": 2, "veryCommon": 2}, "gear:hearthstone": {"rare": 16}, "gear:material": {"rare": 5}, "gear:wonder": {"rare": 16}},
+    "veryCommon_items": "Leather, Comfort, Stimm, Backpack, Clothing, Torch, Knife, Sling",
+    "gaps": "no Biofoam (book example Rare); 37 of 69 Rare are artifacts (hearthstones/materials/wonders); clothes not auto-given",
+    "config": "STARTING_SLOTS config.mjs:293; BACKGROUND_XP :434; INHERITANCE_SLOTS :440"
+  },
+  "foundry_v13": {
+    "directory": "ActorDirectory extends DocumentDirectory (foundry.mjs:110381/103782); renderActorDirectory(app, element HTMLElement, context, options) fired per class chain (27967); header.hbs always has div.header-actions (create-entry only if canCreateEntry); existing pattern dtd40k.mjs:345 renderItemDirectory; entry context hook getActorContextOptions (103960)",
+    "permission": "USER_PERMISSIONS.ACTOR_CREATE defaultRole ASSISTANT (3923); Actor.canUserCreate(user) -> hasPermission (14299), plus FILES_BROWSE if prototypeToken.randomImg; game.user.can('ACTOR_CREATE'); ownership {default:0,[userId]:3} (3065)",
+    "gm_request": "game.users.activeGM (40953); User#query(name, data, {timeout}) (47812) -> CONFIG.queries[name](queryData, {timeout}) result returned (41083-41094); needs QUERY_USER (4061, default PLAYER); handler receives no sender id",
+    "appv2": "DEFAULT_OPTIONS (26800); PARTS (28535), _configureRenderParts (28572), _preparePartContext (28637), _replaceHTML keeps unrendered parts (28675); _onClose (28066); static TABS (26830); no dragDrop option in v2: new foundry.applications.ux.DragDrop.implementation({...}).bind(this.element) in _onRender (35724)",
+    "compendium": "getIndex({fields}) (24907), getDocuments({type__in}) (24986), fromUuid (33901), TextEditor.implementation.getDragEventData (32275)",
+    "dialogs": "DialogV2 confirm 57329, prompt 57352, input 57373, wait 57388",
+    "embedded_create": "#handleCreateDocuments (58644) calls _onCreate only for top-level created docs: items embedded in Actor.create data do not run DtdItem._onCreate"
+  },
+  "socket": {
+    "requestGm": "module/documents/gm-socket.mjs:16 emits {action, payload, user} on system.dtd40k; fire-and-forget; warns if no active GM",
+    "handler": "dtd40k.mjs:306-319; only activeGM; destructures {action, payload} (drops user); maneuver dispatched before message lookup; others return if payload.messageId missing - new action must go before line 312",
+    "system.json": "socket: true (:321)"
+  },
+  "issues": [
+    "N1 build at end: keep wizard state in memory; at Finish replay in order race -> exaltation -> characteristics/skills (direct update) -> class -> deity -> backgrounds -> hindrances/assets/feats -> exalted asset -> XP advances -> equipment",
+    "N2 dialogs: applyRace/applyExaltation have no selection param; addFeat accepts {selection}; priceFeat/priceExaltedAsset/background price() always confirm; addEquipment accepts {starting:true}; need silent/preset options",
+    "N3 Actor.create with embedded items skips DtdItem._onCreate (grants, syncClassCompletion) and service side effects (racial/exalted effects, heroicHeritage/Destiny/actionHero Hero Points, syncPerfection)",
+    "N4 player without ACTOR_CREATE: requestGm has no reply; User#query via CONFIG.queries can return the actor id; sender identity self-reported",
+    "N5 cancel/rollback: nothing to roll back if actor created at Finish; partial failure -> delete actor or leave creation.active for the 016 panel",
+    "N6 XP purchases need a current class and creation.active; class prereqs need skills stored before startClass",
+    "N7 backgrounds beyond 7 free dots / above 3 spend the same XP pool (backgroundCost)",
+    "N8 Exalted Asset 100 XP, needs exaltation; Paragon gets one free via Perfection",
+    "N9 equipment: artifacts accepted in Rare pick; consumable quantity unspecified; Biofoam missing; packs not built in worktree",
+    "N10 specialties: one per rating >=4 using final values incl. effects (specialtyCheck)",
+    "N11 GM override: reuse refuseUnlessGM per step",
+    "N12 caps 4/3 apply to creation dots; race bonus is an effect on top"
+  ]
+}

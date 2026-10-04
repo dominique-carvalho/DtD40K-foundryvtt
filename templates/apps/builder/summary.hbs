@@ -1,0 +1,21 @@
+<aside class="builder-summary">
+  {{#with summary as |s|}}
+  <img class="builder-portrait" src="{{s.img}}" alt="">
+  <h2 class="builder-name">{{#if s.name}}{{s.name}}{{else}}—{{/if}}</h2>
+  <dl class="builder-ident">
+    <dt>{{localize "DTD.Race.Race"}}</dt><dd>{{s.race}}</dd>
+    <dt>{{localize "DTD.Exaltation.Exaltation"}}</dt><dd>{{s.exaltation}}</dd>
+    <dt>{{localize "TYPES.Item.class"}}</dt><dd>{{s.cls}}</dd>
+    <dt>{{localize "DTD.Builder.Deity"}}</dt><dd>{{s.deity}}</dd>
+    {{#if s.devotion}}<dt>{{localize "DTD.Sheet.Devotion"}}</dt><dd>{{s.devotion}}</dd>{{/if}}
+  </dl>
+  <h3 class="section-title">{{localize "DTD.Sheet.Characteristics"}}</h3>
+  <div class="builder-chars">{{#each s.characteristics as |c|}}<span><small>{{c.label}}</small><b>{{c.value}}</b></span>{{/each}}</div>
+  {{#if s.skills.length}}
+  <h3 class="section-title">{{localize "DTD.Sheet.Skills"}}</h3>
+  <ul class="builder-skills">{{#each s.skills as |k|}}<li>{{k.label}} <b>{{k.value}}</b></li>{{/each}}</ul>
+  {{/if}}
+  <h3 class="section-title">XP</h3>
+  <p class="builder-xp"><b>{{s.xp.available}}</b> / {{s.xpTotal}}</p>
+  {{/with}}
+</aside>

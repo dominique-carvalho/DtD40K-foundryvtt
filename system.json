@@ -23,7 +23,8 @@
     "styles/components.css",
     "styles/chat.css",
     "styles/sheet-cogitator.css",
-    "styles/sheet-illuminated.css"
+    "styles/sheet-illuminated.css",
+    "styles/builder.css"
   ],
   "languages": [
     {

@@ -49,10 +49,6 @@ function hasWeaponFeat(actor, featName, weapon) {
 }
 
 /**
- * Profile of the weapon for the pure rules.
- * @param {Item|null} item  null: unarmed
- */
-/**
  * Out-of-range warning between the attacker's token and the target's, with elevation (spec 022, research R4).
  * Only warns: the book has no 3D rules.
  * @param {Actor} actor
@@ -72,6 +68,10 @@ function rangeWarning(actor, targetToken, weapon, melee) {
   return band ? game.i18n.format(`DTD.Npc.Range.${band}`, { distance }) : "";
 }
 
+/**
+ * Profile of the weapon for the pure rules.
+ * @param {Item|null} item  null: unarmed
+ */
 function profileOf(item) {
   if (!item) return { ...UNARMED, name: localize("DTD.Attack.Unarmed") };
   return { name: item.name, ...item.system };
@@ -191,6 +191,8 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
   const tracked = !vehicle && Boolean(item?.system.ammo?.tracked) && !options.weapon.thrown && !options.noAmmo;
   if (tracked && !(await checkAmmo(item))) return null;
 
+  // Auto-Stabilized NPCs are always braced (spec 022, p. 520).
+  if (actor.system.traitFlags?.autoStabilized) options.weapon.braced = true;
   const thrown = options.weapon.thrown;
   const skill = attackSkill(weapon, { thrown });
   // NPCs are proficient with the weapons of their stat block (spec 012).
@@ -200,8 +202,6 @@ export async function rollAttack(actor, itemId, { fastForward = false, action = 
     focus: item && !vehicle ? hasWeaponFeat(actor, "Weapon Focus", item) : false, options: options.weapon, mods: modsOf(item)
   });
   const melee = shape.melee && !thrown;
-  // Auto-Stabilized NPCs are always braced (spec 022, p. 520).
-  if (actor.system.traitFlags?.autoStabilized) options.weapon.braced = true;
   const sit = situationModifiers({
     ...(options.situation ?? situation), melee, pointBlank: options.weapon.range === "pointBlank",
     attackerDarkSight: Boolean(actor.system.traitFlags?.darkSight),

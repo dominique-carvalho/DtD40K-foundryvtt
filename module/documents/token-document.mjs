@@ -10,9 +10,20 @@ export class DtdTokenDocument extends foundry.documents.TokenDocument {
    * Trait flags of the represented actor, if it has NPC traits.
    * @returns {object|null}
    */
-  get #traits() {
+  _traitFlags() {
+    return this._traitSource()?.system?.traitFlags ?? null;
+  }
+
+  /**
+   * Private members are avoided: the core prepares a token being created with another receiver.
+   * The represented actor without building the synthetic actor too early: during the first data preparation of an
+   * unlinked token the delta does not exist yet, and reading `this.actor` then would leave the token without one.
+   * @returns {Actor|null}
+   */
+  _traitSource() {
+    if (!this.actorLink && !this.delta) return game.actors?.get(this.actorId) ?? null;
     try {
-      return this.actor?.system?.traitFlags ?? null;
+      return this.actor ?? null;
     } catch {
       return null;
     }
@@ -20,15 +31,15 @@ export class DtdTokenDocument extends foundry.documents.TokenDocument {
 
   /** @override */
   _inferMovementAction() {
-    const traits = this.#traits;
-    if (traits?.phasing && this.actor?.statuses?.has("incorporeal")) return "phase";
+    const traits = this._traitFlags();
+    if (traits?.phasing && this._traitSource()?.statuses?.has("incorporeal")) return "phase";
     if (traits?.flyer) return "fly";
     return super._inferMovementAction();
   }
 
   /** @override */
   _prepareDetectionModes() {
-    if (this.#traits?.darkSight && this.sight.enabled) {
+    if (this._traitFlags()?.darkSight && this.sight.enabled) {
       this.sight.visionMode = "darkvision";
       this.sight.range = Infinity;
     }

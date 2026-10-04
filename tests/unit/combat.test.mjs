@@ -131,9 +131,9 @@ describe("social, Fear and Insanity (pp. 446–452)", () => {
 });
 
 describe("combat actions and initiative (pp. 422–430)", () => {
-  it("lists the 42 actions (38 of spec 008, 4 of the grapple in spec 017) with valid keys, types and subtypes", () => {
-    expect(COMBAT_ACTIONS).toHaveLength(42);
-    expect(new Set(COMBAT_ACTIONS.map((a) => a.key)).size).toBe(42);
+  it("lists the 43 actions (38 of spec 008, 4 of the grapple in spec 017, Phase of spec 022) with valid keys, types and subtypes", () => {
+    expect(COMBAT_ACTIONS).toHaveLength(43);
+    expect(new Set(COMBAT_ACTIONS.map((a) => a.key)).size).toBe(43);
     const statuses = STATUS_EFFECTS.map((s) => s.id);
     for (const a of COMBAT_ACTIONS) {
       expect(ACTION_TYPES).toContain(a.type);

@@ -17,7 +17,7 @@ const localize = (key) => game.i18n.localize(key);
 const format = (key, data) => game.i18n.format(key, data);
 const render = (path, data) => foundry.applications.handlebars.renderTemplate(path, data);
 const zoneOf = (template) => template?.flags?.dtd40k?.zone ?? null;
-const featNames = (actor) => actor.items.filter((item) => item.type === "feat").map((item) => item.name);
+const featNames = (actor) => actor.featNames();
 
 /** Attack options of a full-auto shot fired by the system; `tn`: the target's Static Defense (none for the burst). */
 const autoOptions = (braced, tn = null) => ({

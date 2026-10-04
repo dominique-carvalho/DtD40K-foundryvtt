@@ -74,11 +74,12 @@ export function combatFlags(statuses) {
  * Situational attack modifiers (pp. 433–436).
  * @param {{advantage?: boolean, gangUp?: 0|2|3, targetRan?: boolean, intoMelee?: boolean, terrain?: ""|"difficult"|"arduous",
  *   calledShot?: boolean, targetProne?: boolean, melee: boolean, pointBlank?: boolean, allOut?: boolean, charge?: boolean,
- *   defensive?: boolean}} options
- * @returns {{rolled: number, kept: number, freeRaises: number, requiredRaises: number, notes: string[]}}
+ *   defensive?: boolean, darkness?: boolean, attackerDarkSight?: boolean}} options
+ * @returns {{rolled: number, kept: number, freeRaises: number, requiredRaises: number, tn: number, notes: string[]}}  tn: added to
+ *   the target number (darkness as concealment, p. 433; spec 022)
  */
 export function situationModifiers(options) {
-  const out = { rolled: 0, kept: 0, freeRaises: 0, requiredRaises: 0, notes: [] };
+  const out = { rolled: 0, kept: 0, freeRaises: 0, requiredRaises: 0, tn: 0, notes: [] };
   const add = (rolled, note) => {
     out.rolled += rolled;
     out.notes.push(note);
@@ -107,6 +108,10 @@ export function situationModifiers(options) {
   if (options.allOut && melee) add(2, "allOutAttack");
   if (options.charge && melee) add(1, "charge");
   if (options.defensive) add(-1, "fightDefensively");
+  if (options.darkness && !options.attackerDarkSight) {
+    out.tn += 5;
+    out.notes.push("darkness");
+  }
   return out;
 }
 

@@ -41,6 +41,17 @@
     {{/each}}
   </section>
 
+  {{#if editable}}
+  <section class="spell-section minion-turn">
+    <h3 class="section-title">{{localize "DTD.Minion.Turn"}}</h3>
+    <div class="combat-buttons">
+      <a class="pool-button" data-action="minionAction" data-key="moveHalf"><i class="fa-solid fa-person-walking" inert></i> {{localize "DTD.Minion.Action.moveHalf"}}</a>
+      <a class="pool-button" data-action="minionAction" data-key="moveFull"><i class="fa-solid fa-person-walking-arrow-right" inert></i> {{localize "DTD.Minion.Action.moveFull"}}</a>
+      <a class="pool-button" data-action="minionAction" data-key="run"><i class="fa-solid fa-person-running" inert></i> {{localize "DTD.Minion.Action.run"}}</a>
+    </div>
+  </section>
+  {{/if}}
+
   <section class="spell-section">
     <h3 class="section-title">{{localize "DTD.Minion.Ally"}}</h3>
     <select class="minion-ally" {{#unless editable}}disabled{{/unless}}>

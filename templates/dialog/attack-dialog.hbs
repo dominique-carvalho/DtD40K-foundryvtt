@@ -57,6 +57,7 @@
     <label><input type="checkbox" name="advantage" {{checked situation.advantage}}> {{localize "DTD.Attack.Advantage"}}</label>
     <label><input type="checkbox" name="targetProne" {{checked situation.targetProne}}> {{localize "DTD.Attack.TargetProne"}}</label>
     <label><input type="checkbox" name="targetRan" {{checked situation.targetRan}}> {{localize "DTD.Attack.TargetRan"}}</label>
+    <label data-tooltip="{{localize "DTD.Attack.DarknessHint"}}"><input type="checkbox" name="darkness" {{checked situation.darkness}}> {{localize "DTD.Attack.Darkness"}}</label>
     {{#if shape.melee}}
     <label>{{localize "DTD.Attack.GangUp"}} <select name="gangUp"><option value="0">—</option><option value="2">2:1 (+2k0)</option><option value="3">3:1 (+3k0)</option></select></label>
     {{else}}

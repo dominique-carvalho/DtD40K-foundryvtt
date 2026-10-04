@@ -25,6 +25,24 @@ import { ADD, OVERRIDE } from "./race.mjs";
  */
 
 /**
+ * Feat names of an NPC stat block (spec 022, research R10): counts ("×2") dropped; a specialization keeps both the full
+ * name and the base name, so name checks find "Weapon Proficiency" in "Weapon Proficiency (Gauss)".
+ * @param {string[]} list
+ * @returns {string[]}
+ */
+export function npcFeatNames(list) {
+  const names = [];
+  for (const raw of list ?? []) {
+    const name = String(raw).replace(/\s*[×x]\s*\d+\s*$/u, "").trim();
+    if (!name) continue;
+    names.push(name);
+    const base = name.replace(/\s*\(.*\)\s*$/, "").trim();
+    if (base !== name) names.push(base);
+  }
+  return names;
+}
+
+/**
  * Display name of a feat on a character: "Peer (Nobility)" for feat groups (p. 174).
  * @param {{name: string, system: {selection?: {subcategory?: string}}}} feat
  * @returns {string}

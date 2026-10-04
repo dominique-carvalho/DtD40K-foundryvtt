@@ -1,3 +1,4 @@
+import { inactiveFormItem } from "../documents/form-service.mjs";
 import { ADDICTION_LEVELS, WEAPON_QUALITIES } from "../config.mjs";
 import { weaponPools } from "../documents/attack-service.mjs";
 import { socketsOf } from "../documents/equipment-service.mjs";
@@ -42,7 +43,7 @@ export function prepareEquipmentContext(actor) {
 
   const weapons = [
     { ...weaponPools(actor, null), id: "unarmed", name: localize("DTD.Attack.Unarmed"), unarmed: true, equipped: true, img: "icons/svg/combat.svg" },
-    ...items.filter((item) => item.type === "weapon").map((item) => {
+    ...items.filter((item) => item.type === "weapon" && !inactiveFormItem(item)).map((item) => {
       const pools = weaponPools(actor, item);
       return {
         ...row(item),

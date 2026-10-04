@@ -1018,7 +1018,8 @@
         "redDotSight": "Red-Dot Sight +1k0",
         "motionPredict": "Motion Predictor +1k0",
         "breacher": "Breacher +1k0",
-        "nonlethal": "nonlethal (no explosions)"
+        "nonlethal": "nonlethal (no explosions)",
+        "darkness": "darkness (+5 SD)"
       },
       "Situation": "Situation",
       "Advantage": "Combat Advantage (+1 free raise)",
@@ -1032,7 +1033,9 @@
       "CalledLocation": "Called location",
       "Called": "called shot",
       "Unstable": "Unstable: d10 = {d10}, damage {before} → {after}",
-      "OrgoneExploded": "Orgone Array: a die exploded — roll Psychic Phenomena for the target."
+      "OrgoneExploded": "Orgone Array: a die exploded — roll Psychic Phenomena for the target.",
+      "Darkness": "Darkness",
+      "DarknessHint": "Concealment: the target gets +5 Static Defense, unless the attacker has Dark Sight (p. 433)."
     },
     "Acquire": {
       "Button": "Acquire",
@@ -1113,7 +1116,8 @@
         "inCover": "Behind cover: its Armor Points protect the covered locations; the burst of Suppressing Fire misses."
       },
       "grappling": "Grappling",
-      "inCover": "In Cover"
+      "inCover": "In Cover",
+      "incorporeal": "Incorporeal"
     },
     "Combat": {
       "ActionType": {
@@ -1649,7 +1653,88 @@
       "NoHero": "Select your character's token or assign a character to your user.",
       "Regenerated": "{name} regenerates {hp} HP.",
       "Immune": "{name} is immune to {condition}.",
-      "MindlessSocial": "{name} is Mindless: social attacks have no effect."
+      "MindlessSocial": "{name} is Mindless: social attacks have no effect.",
+      "Phase": "Phase (through walls)",
+      "Range": {
+        "reach": "Out of reach: {distance} m away.",
+        "long": "Long range: {distance} m away.",
+        "beyond": "Beyond the weapon's range: {distance} m away."
+      },
+      "Speed": {
+        "fly": "Fly speed",
+        "swim": "Swim speed"
+      },
+      "FlightFall": "{name} is {status} at {elevation} m of elevation and falls.",
+      "FlightFallButton": "Fall",
+      "FlightFallPick": "{name} falls from {elevation} m. Pick the fall category.",
+      "IncorporealStealth": "Incorporeal: hiding inside an object gives +2 raises.",
+      "IncorporealBlocked": "{name} is incorporeal: only spells, magic and Power Field weapons harm it.",
+      "AbilityKind": {
+        "text": "Text",
+        "area": "Area",
+        "aura": "Aura",
+        "onHit": "On hit",
+        "spell": "Spell-like"
+      },
+      "Shape": {
+        "cone": "Cone",
+        "blast": "Blast",
+        "line": "Line"
+      },
+      "Trigger": {
+        "assault": "Charge or All Out Attack",
+        "turnStart": "Start of its turn"
+      },
+      "Action": {
+        "free": "Free action",
+        "half": "Half action",
+        "full": "Full action"
+      },
+      "FormKind": {
+        "shift": "Shift",
+        "variant": "Variant"
+      },
+      "FearSave": "Fear {rating}",
+      "FailCondition": "{condition} for {rounds} round(s)",
+      "FailFatigue": "{value} Fatigue",
+      "FormAbility": "{name} belongs to a form that is not active.",
+      "NoUses": "{name} has no uses left this scene.",
+      "SpellLike": "{name}: works as the {spell} spell.",
+      "NotYourTarget": "Only the target's owner rolls this.",
+      "Resisted": "{name} resists.",
+      "Affected": "{name} fails: {effect}.",
+      "OnFail": "On a failure",
+      "Resist": "Resist",
+      "ApplyEffect": "Apply",
+      "NoTargets": "No targets in the area.",
+      "Forms": "Forms",
+      "FormTaken": "{name} takes the {form} form ({cost} {resource}; {rounds} rounds).",
+      "FormEnds": "{name} leaves the {form} form.",
+      "VariantChosen": "{name} is a {form} variant.",
+      "NoResource": "{name} lacks {resource}: the form costs {cost}.",
+      "Resource": "Resource",
+      "ResourceSpent": "{name} spends {resource}: {value}/{max}.",
+      "ResourceRegained": "{name} regains {resource}: {value}/{max}.",
+      "TraitValue": "Value",
+      "Remove": "Remove",
+      "ActionCost": "Action",
+      "Area": "Area",
+      "TriggerLabel": "Trigger",
+      "Save": "Save",
+      "Rounds": "rounds",
+      "OnHitWeapon": "Weapon (on hit)",
+      "ExtraCritical": "Extra Critical Damage",
+      "SpellLabel": "Spell",
+      "UsesPerScene": "Uses per scene",
+      "FeatsHint": "Feat names, separated by commas",
+      "Cost": "Cost",
+      "BaseForm": "Base form",
+      "ActiveForm": "Active form",
+      "Spend": "Spend",
+      "Regain": "Regain",
+      "Use": "Use",
+      "NewAbility": "New ability",
+      "NewForm": "New form"
     },
     "Minion": {
       "ThreatRating": "Threat Rating",
@@ -1670,7 +1755,17 @@
       "DamageFormula": "5 × (DR {rating} + {raises} raises)",
       "NoRoll": "Minion damage: no roll",
       "Removed": "{name}: {n} minion(s) down, {left} left.",
-      "AllDown": "{name}: {n} minion(s) down, the squad is defeated."
+      "AllDown": "{name}: {n} minion(s) down, the squad is defeated.",
+      "Turn": "Turn actions",
+      "Action": {
+        "moveHalf": "Move (half)",
+        "moveFull": "Move (full)",
+        "run": "Run",
+        "attack": "Attack"
+      },
+      "Moves": "{name}: {action}, up to {distance} m.",
+      "OneAttack": "{name} already attacked this turn.",
+      "Defended": "The defense turned the hit away: no damage."
     },
     "Vehicle": {
       "Category": {

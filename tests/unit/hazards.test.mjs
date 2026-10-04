@@ -91,6 +91,14 @@ describe("resolveDamage — direct wounds (p. 436)", () => {
     expect(result.criticalGain).toBe(3);
     expect(result.row).toBe(3);
   });
+
+  it("adds the Critical Damage of a Gauss hit only when it wounds (spec 022)", () => {
+    const hit = resolveDamage({ ...base, total: 12, extraCritical: 1 });
+    expect(hit.hpLoss).toBe(2);
+    expect(hit.criticalGain).toBe(1);
+    expect(hit.row).toBe(1);
+    expect(resolveDamage({ ...base, total: 6, extraCritical: 1 }).criticalGain).toBe(0);
+  });
 });
 
 describe("fatigueCheck with a raised maximum (Sand, p. 207)", () => {

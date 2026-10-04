@@ -4,12 +4,32 @@ import { runTest } from "../rules/test.mjs";
 import { postTest, rng } from "../dice/roll-service.mjs";
 import { promptRollOptions } from "../apps/roll-dialog.mjs";
 import { allyBonus } from "../rules/minions.mjs";
+import { npcFeatNames } from "../rules/feat.mjs";
 import { alliesOf } from "./minion-service.mjs";
 
 /**
  * Actor document class for Dungeons the Dragoning.
  */
 export class DtdActor extends Actor {
+  /**
+   * Names of the actor's feats: feat items, plus an NPC's stat-block feats (spec 022, research R10). Name checks of
+   * feats with an effect in play read this list; NPC feats never create Active Effects (their numbers are printed).
+   * @returns {string[]}
+   */
+  featNames() {
+    const names = this.items.filter((item) => item.type === "feat").map((item) => item.name);
+    if (this.type === "npc") names.push(...npcFeatNames(this.system.npc?.feats));
+    return names;
+  }
+
+  /**
+   * Whether the actor has a feat by name (items or NPC stat block).
+   * @param {string} name
+   */
+  hasFeat(name) {
+    return this.featNames().includes(name);
+  }
+
   /** @override */
   async _preCreate(data, options, user) {
     const allowed = await super._preCreate(data, options, user);

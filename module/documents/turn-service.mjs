@@ -1,3 +1,4 @@
+import { tickForm } from "./form-service.mjs";
 import { triggerAuras } from "./ability-service.mjs";
 import { postTest, rng } from "../dice/roll-service.mjs";
 import { COMBAT_ACTIONS } from "../rules/combat-actions.mjs";
@@ -220,7 +221,7 @@ async function zoneAction(actor, action, weaponId) {
  * @param {object|null} [special]  a Special Attack: its Advantages go to the first attack only (p. 263)
  */
 async function multipleAttacks(actor, action, special = null) {
-  const has = (name) => actor.items.some((item) => item.type === "feat" && item.name === name);
+  const has = (name) => actor.hasFeat(name);
   const weapons = actor.items.filter((item) => item.type === "weapon" && item.system.equipped);
   let attacks = [];
   let penalty = 0;
@@ -382,6 +383,8 @@ export async function startOfRound(combat) {
  */
 export async function endOfTurn(actor) {
   if (!actor) return;
+  // A timed alternate form loses a round (spec 022).
+  await tickForm(actor);
   if (actor.type !== "character" && actor.type !== "npc") return;
   const notes = [];
   if (actor.statuses.has("onFire")) {

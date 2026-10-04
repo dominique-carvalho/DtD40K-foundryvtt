@@ -1,3 +1,4 @@
+import { inactiveFormItem } from "../documents/form-service.mjs";
 import { ACTION_TYPES, STATUS_EFFECTS, UNTIL_NEXT_TURN } from "../config.mjs";
 import { combatantOf } from "../documents/turn-service.mjs";
 import { COMBAT_ACTIONS } from "../rules/combat-actions.mjs";
@@ -46,7 +47,8 @@ export function prepareCombatContext(actor) {
     weapons: [
       { id: "unarmed", name: localize("DTD.Attack.Unarmed") },
       // Rounds in the clip next to the name (spec 019).
-      ...actor.items.filter((item) => item.type === "weapon" && item.system.equipped).map((item) => ({
+      // Weapons of an inactive alternate form stay hidden (spec 022).
+      ...actor.items.filter((item) => item.type === "weapon" && item.system.equipped && !inactiveFormItem(item)).map((item) => ({
         id: item.id,
         name: item.system.ammo?.tracked ? `${item.name} (${item.system.ammo.current}/${item.system.ammo.max}${item.system.ammo.jammed ? ` · ${localize("DTD.Ammo.JammedBadge")}` : ""})` : item.name
       }))

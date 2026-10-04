@@ -39,8 +39,13 @@ const proficiencyChoices = (actor) => actor.items
  */
 function hasWeaponFeat(actor, featName, weapon) {
   const names = [weapon.name, weapon.system?.group].filter(Boolean).map((name) => name.toLowerCase());
-  return actor.items.some((item) => item.type === "feat" && item.name.startsWith(featName)
-    && names.includes(item.system.selection?.subcategory?.toLowerCase()));
+  if (actor.items.some((item) => item.type === "feat" && item.name.startsWith(featName)
+    && names.includes(item.system.selection?.subcategory?.toLowerCase()))) return true;
+  // NPC stat-block feats (spec 022): "Weapon Focus (Gauss)" names the weapon or its group.
+  return actor.type === "npc" && (actor.system.npc?.feats ?? []).some((feat) => {
+    const match = String(feat).match(/^(.+?)\s*\((.+)\)/);
+    return match && match[1] === featName && names.some((name) => name.includes(match[2].toLowerCase()));
+  });
 }
 
 /**

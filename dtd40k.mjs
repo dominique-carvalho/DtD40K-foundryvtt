@@ -51,6 +51,7 @@ import { resetReloadProgress } from "./module/documents/ammo-service.mjs";
 import { endHazard, fallAcrobatics, hazardStep, openHazardTool, openXpDialog, reduceFall } from "./module/documents/hazard-service.mjs";
 import { flightFall, offerFlightFall } from "./module/documents/flight-service.mjs";
 import { applyAbility, resistAbility } from "./module/documents/ability-service.mjs";
+import { resetAbilityUses } from "./module/documents/form-service.mjs";
 import { clearZones, confirmZone, fireOverwatch, rollPinning, suppressionDamage, suppressionDodge } from "./module/documents/zone-service.mjs";
 import { endGrapple, maneuverAsGm, startGrapple } from "./module/documents/maneuver-service.mjs";
 import { promptCover, setCover } from "./module/documents/condition-service.mjs";
@@ -360,6 +361,8 @@ Hooks.on("deleteActiveEffect", (effect, options, userId) => {
 Hooks.on("deleteCombat", async (combat) => {
   if (game.users.activeGM !== game.user) return;
   for (const actor of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "character"))) await newScene(actor);
+  // Uses per scene of NPC abilities come back (spec 022).
+  for (const actor of new Set(combat.combatants.map((c) => c.actor).filter((a) => a?.type === "npc"))) await resetAbilityUses(actor);
   // Vehicles: wounds in the scene and round-based conditions reset (spec 013).
   for (const vehicle of allVehicles()) await newVehicleScene(vehicle);
   // Ships: temporary Crew, committed Crew and this round's effects end (spec 014).

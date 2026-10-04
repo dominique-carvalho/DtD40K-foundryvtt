@@ -65,10 +65,10 @@ no turno, US5 feats, formas e recurso.
 
 ## Phase 6: User Story 5 — Feats, formas e recurso (P3)
 
-- [ ] T018 [US5] `hasFeat` por nome lendo `npc.feats`; checagens existentes por nome passam a usá-lo
-- [ ] T019 [US5] `module/documents/form-service.mjs`: `switchForm`, `tickForm`, `chooseVariant`; armas com `flags.dtd40k.form`
-- [ ] T020 [US5] Packs: formas dos dois Zoanoids (valores entre colchetes relidos do livro; Claw/Bite da forma) e as quatro variantes do Elemental; `packs.test.mjs`
-- [ ] T021 [US5] `npc-service`: gastar/recuperar recurso com chat
+- [X] T018 [US5] `hasFeat` por nome lendo `npc.feats`; checagens existentes por nome passam a usá-lo
+- [X] T019 [US5] `module/documents/form-service.mjs`: `switchForm`, `tickForm`, `chooseVariant`; armas com `flags.dtd40k.form`
+- [X] T020 [US5] Packs: formas dos dois Zoanoids (valores entre colchetes relidos do livro; Claw/Bite da forma) e as quatro variantes do Elemental; `packs.test.mjs`
+- [X] T021 [US5] `npc-service`: gastar/recuperar recurso com chat
 - [ ] T022 [US5] Aba Antagonista: editores (Edição) de traits, abilities por tipo, feats e formas; botões (Jogo) de usar ability, trocar forma, escolher variante, recurso
 
 ---

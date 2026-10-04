@@ -1034,6 +1034,26 @@ describe("antagonists compendium source (spec 012, SC-001)", () => {
     for (const doc of npcs) for (const a of doc.system.npc.abilities) expect(kinds).toContain(a.kind ?? "text");
   });
 
+  it("structures the alternate forms (spec 022, research R11)", () => {
+    for (const [npc, w] of [["Zoanoid Thug", { str: 5, con: 6, sd: 10, hp: 16, speed: 7, res: 5, ap: 2, claw: 7 }], ["Zoanoid Heavy", { str: 7, con: 7, sd: 13, hp: 24, speed: 10, res: 6, ap: 3, claw: 9 }]]) {
+      const doc = npcNamed(npc);
+      const [warform] = doc.system.npc.forms;
+      expect(warform).toMatchObject({
+        id: "warform", kind: "shift", cost: 1, action: "full", duration: w.con, size: 6,
+        characteristics: { str: w.str, con: w.con, dex: null }, derived: { staticDefense: w.sd, hpMax: w.hp, speed: w.speed, resilience: w.res },
+        armor: [{ ap: w.ap, locations: ["all"] }], traits: [{ key: "regeneration", value: "1" }]
+      });
+      const claw = doc.items.find((i) => i.name === "Claw/Bite");
+      expect(claw.system.damage).toEqual({ rolled: w.claw, kept: 3, type: "R" });
+      expect(claw.flags.dtd40k.form).toBe("warform");
+    }
+    const elemental = npcNamed("Elemental");
+    expect(elemental.system.npc.forms.map((f) => [f.id, f.kind])).toEqual([["earth", "variant"], ["air", "variant"], ["fire", "variant"], ["water", "variant"]]);
+    expect(elemental.system.npc.forms.find((f) => f.id === "air").traits).toEqual([{ key: "phasing", value: "" }]);
+    expect(elemental.system.npc.abilities.find((a) => a.name === "Fire")).toMatchObject({ kind: "aura", trigger: "turnStart", save: { characteristic: "con", tn: 15 }, onFail: { fatigue: 1 } });
+    expect(elemental.items.find((i) => i.name === "Fiery Slam")).toMatchObject({ system: { damage: { type: "E" } }, flags: { dtd40k: { form: "fire" } } });
+  });
+
   it("has the sample Minion Squads", () => {
     const pirates = squads.find((s) => s.name === "Space Pirate Crew").system;
     expect(pirates).toMatchObject({ threatRating: 3, count: 6, melee: { rating: 3, type: "R" }, ranged: { rating: 3, type: "I" } });

@@ -103,7 +103,7 @@ export async function castSpell(actor, spellId, { comboId } = {}) {
     characteristic = test.characteristic;
     tn = test.tn === null ? null : test.tn + system.modifiers.magic.tn;
   }
-  const implementFocus = system.magic.state.hasImplement && actor.items.some((item) => item.type === "feat" && item.name === "Implement Focus");
+  const implementFocus = system.magic.state.hasImplement && actor.hasFeat("Implement Focus");
 
   const options = await promptCastOptions({
     title: game.i18n.format("DTD.Magic.CastTitle", { spell: combo ? combo.name : main.name }),

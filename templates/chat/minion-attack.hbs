@@ -1,5 +1,11 @@
 <div class="dtd40k minion-attack-extra">
   <p class="roll-card-note">{{kind}}{{#if weapon}} · {{weapon}}{{/if}} · DR {{rating}} {{type}}{{#if range}} · {{range}} m{{/if}}</p>
+  {{#if canDefend}}
+  <div class="defense-buttons">
+    <button type="button" data-dtd-action="dodge"><i class="fa-solid fa-person-running" inert></i> {{localize "DTD.Combat.Dodge"}}</button>
+    {{#if melee}}<button type="button" data-dtd-action="parry"><i class="fa-solid fa-shield-halved" inert></i> {{localize "DTD.Combat.Parry"}}</button>{{/if}}
+  </div>
+  {{/if}}
   {{#if hit}}
   <p><b>{{localize "DTD.Minion.HitDamage" damage=damage}}</b></p>
   <button type="button" data-dtd-action="minionDamage"><i class="fa-solid fa-burst" inert></i> {{localize "DTD.Attack.RollDamage"}}</button>

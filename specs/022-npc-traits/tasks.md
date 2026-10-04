@@ -59,7 +59,7 @@ no turno, US5 feats, formas e recurso.
 
 ## Phase 5: User Story 4 — Esquadrão no turno (P2)
 
-- [ ] T017 [US4] `minion-service`: `minionAction` (mover TR/2×TR, correr, atacar uma vez por turno, meia ação) com o `turnState` da 008; ficha do esquadrão com as ações; cartão de ataque com Dodge/Parry
+- [X] T017 [US4] `minion-service`: `minionAction` (mover TR/2×TR, correr, atacar uma vez por turno, meia ação) com o `turnState` da 008; ficha do esquadrão com as ações; cartão de ataque com Dodge/Parry
 
 ---
 

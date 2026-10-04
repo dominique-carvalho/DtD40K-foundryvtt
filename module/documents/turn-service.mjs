@@ -54,7 +54,8 @@ export async function takeAction(actor, action, { as, count = 1 } = {}) {
     return true;
   }
   let state = combatant.turnState;
-  const reactionsMax = actor.system.combat.reactionsMax;
+  // Minion Squads have no reactions (spec 022).
+  const reactionsMax = actor.system.combat?.reactionsMax ?? 0;
   for (let i = 0; i < count; i++) {
     const check = canUse(state, action, { reactionsMax, as });
     if (!check.ok) {
@@ -294,7 +295,8 @@ async function defenseRoll(actor, kind) {
  * @param {"dodge"|"parry"} kind
  */
 export async function rollDefense(message, kind) {
-  const attack = message.getFlag("dtd40k", "attack");
+  // Minion Squad attacks carry their total and TN in the minion flag (spec 022).
+  const attack = message.getFlag("dtd40k", "attack") ?? message.getFlag("dtd40k", "minion");
   const target = attack?.targetUuid ? await foundry.utils.fromUuid(attack.targetUuid) : null;
   if (!target?.isOwner) {
     ui.notifications.warn(localize("DTD.Combat.NotYourTarget"));

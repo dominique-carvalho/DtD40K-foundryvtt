@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
-  abilityOutcome, applyForm, darknessModifier, distance3d, flyingFall, incorporealBlocks, minionActionCost, minionCanAttack,
+  abilityActive, abilityOutcome, applyForm, inArea, darknessModifier, distance3d, flyingFall, incorporealBlocks, minionActionCost, minionCanAttack,
   npcSpeeds, outOfRange
 } from "../../module/rules/npc-traits.mjs";
 import { situationModifiers } from "../../module/rules/defense.mjs";
@@ -99,6 +99,26 @@ describe("abilities, forms and flight (research R5, R8, R11)", () => {
     expect(flyingFall({ elevation: 10, status: "unconscious" })).toBe(true);
     expect(flyingFall({ elevation: 0, status: "stunned" })).toBe(false);
     expect(flyingFall({ elevation: 10, status: "bloodLoss" })).toBe(false);
+  });
+});
+
+describe("ability areas and forms (research R8, R11)", () => {
+  const origin = { x: 0, y: 0 };
+  it("finds points in a cone, a blast and a line", () => {
+    expect(inArea({ shape: "cone", origin, direction: 0, distance: 10, point: { x: 8, y: 2 } })).toBe(true);
+    expect(inArea({ shape: "cone", origin, direction: 0, distance: 10, point: { x: 2, y: 8 } })).toBe(false);
+    expect(inArea({ shape: "blast", origin, distance: 5, point: { x: 3, y: 4 } })).toBe(true);
+    expect(inArea({ shape: "blast", origin, distance: 5, point: { x: 4, y: 4 } })).toBe(false);
+    expect(inArea({ shape: "line", origin, direction: 0, distance: 10, width: 2, point: { x: 9, y: 0.9 } })).toBe(true);
+    expect(inArea({ shape: "line", origin, direction: 0, distance: 10, width: 2, point: { x: 9, y: 1.5 } })).toBe(false);
+    expect(inArea({ shape: "line", origin, direction: 0, distance: 10, width: 2, point: { x: -1, y: 0 } })).toBe(false);
+  });
+
+  it("keeps form abilities for the active form only", () => {
+    const npc = { activeForm: "fire", forms: [{ id: "fire", abilities: ["Fire"] }, { id: "air", abilities: ["Air"] }] };
+    expect(abilityActive(npc, { name: "Fire" })).toBe(true);
+    expect(abilityActive(npc, { name: "Air" })).toBe(false);
+    expect(abilityActive(npc, { name: "Mind Blast" })).toBe(true);
   });
 });
 

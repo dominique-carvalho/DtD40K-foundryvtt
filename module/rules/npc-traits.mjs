@@ -5,6 +5,7 @@
  * Source: DtD 7.7a pp. 428–433 (actions, concealment), pp. 520–522 (traits), pp. 543–544 (Minion Squads);
  * specs/022-npc-traits/contracts/rules-api.md.
  */
+import { inCone } from "./maneuvers.mjs";
 import { traitValue } from "./npc.mjs";
 
 const has = (traits, key) => (traits ?? []).some((trait) => trait.key === key);
@@ -114,6 +115,34 @@ export function applyForm({ base, form }) {
     armor: form.armor?.length ? form.armor : base.armor,
     traits: [...base.traits, ...(form.traits ?? [])]
   };
+}
+
+/**
+ * Whether a point is inside an ability's area (research R8), in the same units as the distances.
+ * Cones are 60° wide; lines are `width` wide (2 m by default).
+ * @param {{shape: "cone"|"blast"|"line", origin: {x: number, y: number}, direction?: number, distance: number,
+ *   width?: number, angle?: number, point: {x: number, y: number}}} input
+ * @returns {boolean}
+ */
+export function inArea({ shape, origin, direction = 0, distance, width = 2, angle = 60, point }) {
+  const dx = point.x - origin.x;
+  const dy = point.y - origin.y;
+  if (shape === "blast") return Math.hypot(dx, dy) <= distance;
+  if (shape === "cone") return inCone({ origin, direction, angle, distance, point });
+  const rad = (direction * Math.PI) / 180;
+  const along = dx * Math.cos(rad) + dy * Math.sin(rad);
+  const across = Math.abs(-dx * Math.sin(rad) + dy * Math.cos(rad));
+  return along >= 0 && along <= distance && across <= width / 2;
+}
+
+/**
+ * An ability tied to a form (by name) works only while that form is active (research R11).
+ * @param {{activeForm: string, forms: {id: string, abilities: string[]}[]}} npc
+ * @param {{name: string}} ability
+ */
+export function abilityActive(npc, ability) {
+  const owner = (npc.forms ?? []).find((form) => (form.abilities ?? []).includes(ability.name));
+  return !owner || owner.id === npc.activeForm;
 }
 
 /** Statuses that make a flyer fall (research R5). */

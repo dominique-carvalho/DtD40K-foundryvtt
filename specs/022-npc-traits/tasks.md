@@ -50,10 +50,10 @@ no turno, US5 feats, formas e recurso.
 
 ## Phase 4: User Story 3 — Ataques especiais (P2)
 
-- [ ] T013 [US3] `module/documents/ability-service.mjs`: `useAbility` (usos, ação, template/alvos), `resistAbility`, `applyAbility` (socket), `triggerAuras`, `onHitEffects`; `templates/chat/ability-card.hbs`; CHAT_ACTIONS
-- [ ] T014 [US3] Gatilhos no `turn-service`: `charge`/`allOutAttack` → Frightful Presence (teste de medo da 012); `turnStart` → calor do Fire Elemental
-- [ ] T015 [US3] `attack-service`/dano: `onHit` (`extraCritical`) da arma
-- [ ] T016 [US3] Packs: Mind Blast (área), Frightful Presence ×3 (aura), Gauss Weapon ×2 (onHit nas armas), calor do Elemental Fire (aura da variante), Possession (spell); Dragon Breath como arma (perfil do Flamer) nos dois NPCs; `packs.test.mjs`
+- [X] T013 [US3] `module/documents/ability-service.mjs`: `useAbility` (usos, ação, template/alvos), `resistAbility`, `applyAbility` (socket), `triggerAuras`, `onHitEffects`; `templates/chat/ability-card.hbs`; CHAT_ACTIONS
+- [X] T014 [US3] Gatilhos no `turn-service`: `charge`/`allOutAttack` → Frightful Presence (teste de medo da 012); `turnStart` → calor do Fire Elemental
+- [X] T015 [US3] `attack-service`/dano: `onHit` (`extraCritical`) da arma
+- [X] T016 [US3] Packs: Mind Blast (área), Frightful Presence ×3 (aura), Gauss Weapon ×2 (onHit nas armas), calor do Elemental Fire (aura da variante), Possession (spell); Dragon Breath como arma (perfil do Flamer) nos dois NPCs; `packs.test.mjs`
 
 ---
 

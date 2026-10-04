@@ -1,0 +1,23 @@
+<div class="dtd40k ability-card">
+  <header class="roll-card-header">
+    <h3 class="roll-card-title"><i class="fa-solid fa-burst" inert></i> {{name}}</h3>
+    {{#if saveLabel}}<span class="roll-card-formula">{{saveLabel}}</span>{{/if}}
+  </header>
+  {{#if effect}}<p class="roll-card-note">{{effect}}</p>{{/if}}
+  {{#if failure}}<p class="hint">{{localize "DTD.Npc.OnFail"}}: {{failure}}</p>{{/if}}
+  {{#if rows.length}}
+  <table class="opposed-table ability-targets">
+    {{#each rows as |row|}}
+    <tr>
+      <td>{{row.name}}</td>
+      <td class="card-buttons">
+        {{#if ../hasSave}}<button type="button" data-dtd-action="abilityResist" data-actor-uuid="{{row.actorUuid}}" data-token-uuid="{{row.tokenUuid}}"><i class="fa-solid fa-shield-halved" inert></i> {{localize "DTD.Npc.Resist"}}</button>{{/if}}
+        <button type="button" class="gm-only" data-dtd-action="abilityApply" data-actor-uuid="{{row.actorUuid}}" data-token-uuid="{{row.tokenUuid}}"><i class="fa-solid fa-check" inert></i> {{localize "DTD.Npc.ApplyEffect"}}</button>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+  {{else}}
+  <p class="hint">{{localize "DTD.Npc.NoTargets"}}</p>
+  {{/if}}
+</div>

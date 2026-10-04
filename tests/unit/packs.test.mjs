@@ -1015,6 +1015,25 @@ describe("antagonists compendium source (spec 012, SC-001)", () => {
     expect(npcNamed("Monodrone Modron").system.npc.traits).toEqual(expect.arrayContaining([{ key: "aura", value: "4" }, { key: "regeneration", value: "1" }]));
   });
 
+  it("structures the attack-like abilities (spec 022, research R8)", () => {
+    const ability = (npc, name) => npcNamed(npc).system.npc.abilities.find((a) => a.name === name);
+    expect(ability("Mind Flayer", "Mind Blast")).toMatchObject({
+      kind: "area", action: "half", area: { shape: "cone", size: 18 }, save: { characteristic: "wil", tn: 25 }, onFail: { condition: "stunned", rounds: 1 }
+    });
+    for (const npc of ["Dragon", "Duodrone Modron", "Monodrone Modron"]) {
+      expect(ability(npc, "Frightful Presence")).toMatchObject({ kind: "aura", trigger: "assault", save: { characteristic: "fear" } });
+    }
+    for (const [npc, weapon] of [["Duodrone Modron", "Gauss Blaster"], ["Monodrone Modron", "Gauss Flayer"]]) {
+      expect(ability(npc, "Gauss Weapon")).toMatchObject({ kind: "onHit", weapon, extraCritical: 1 });
+      expect(npcNamed(npc).items.map((i) => i.name)).toContain(weapon);
+    }
+    expect(ability("Ghost", "Possession")).toMatchObject({ kind: "spell", spell: { name: "Dominate", characteristic: "cha", skill: "arcana" } });
+    // Dragon Breath is already a weapon (Flamer profile) of both NPCs that have it.
+    for (const npc of ["Dragonfire Adept", "Talon of Tiamat"]) expect(npcNamed(npc).items.map((i) => i.name)).toContain("Dragon Breath");
+    const kinds = ["text", "area", "aura", "onHit", "spell"];
+    for (const doc of npcs) for (const a of doc.system.npc.abilities) expect(kinds).toContain(a.kind ?? "text");
+  });
+
   it("has the sample Minion Squads", () => {
     const pirates = squads.find((s) => s.name === "Space Pirate Crew").system;
     expect(pirates).toMatchObject({ threatRating: 3, count: 6, melee: { rating: 3, type: "R" }, ranged: { rating: 3, type: "I" } });

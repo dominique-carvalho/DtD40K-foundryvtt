@@ -6,7 +6,7 @@
 
 :is(.dtd40k.roll-card, .dtd40k.chase-card, .dtd40k.vehicle-card, .dtd40k.opposed-card, .dtd40k.hazard-card,
   .dtd40k.zone-card, .dtd40k.pinning-card, .dtd40k.suppression-card, .dtd40k.defense-card, .dtd40k.social-card,
-  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
+  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.ability-card, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
   .dtd40k.spell-card-extra, .dtd40k.minion-attack-extra, .dtd40k.ship-card-extra) {
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
 
 :is(.dtd40k.roll-card, .dtd40k.chase-card, .dtd40k.vehicle-card, .dtd40k.opposed-card, .dtd40k.hazard-card,
   .dtd40k.zone-card, .dtd40k.pinning-card, .dtd40k.suppression-card, .dtd40k.defense-card, .dtd40k.social-card,
-  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
+  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.ability-card, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
   .dtd40k.spell-card-extra, .dtd40k.minion-attack-extra, .dtd40k.ship-card-extra) p {
   margin: 0;
 }
@@ -52,7 +52,7 @@
 
 :is(.dtd40k.roll-card, .dtd40k.chase-card, .dtd40k.vehicle-card, .dtd40k.opposed-card, .dtd40k.hazard-card,
   .dtd40k.zone-card, .dtd40k.pinning-card, .dtd40k.suppression-card, .dtd40k.defense-card, .dtd40k.social-card,
-  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
+  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.ability-card, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
   .dtd40k.spell-card-extra, .dtd40k.minion-attack-extra, .dtd40k.ship-card-extra) :is(.roll-card-title, h3, h4) {
   margin: 0;
   border: 0;
@@ -76,7 +76,7 @@
 
 :is(.dtd40k.roll-card, .dtd40k.chase-card, .dtd40k.vehicle-card, .dtd40k.opposed-card, .dtd40k.hazard-card,
   .dtd40k.zone-card, .dtd40k.pinning-card, .dtd40k.suppression-card, .dtd40k.defense-card, .dtd40k.social-card,
-  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
+  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.ability-card, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
   .dtd40k.spell-card-extra, .dtd40k.minion-attack-extra, .dtd40k.ship-card-extra) i.fa-solid {
   color: var(--dtd-brass);
 }
@@ -88,7 +88,7 @@
 
 :is(.dtd40k.roll-card, .dtd40k.chase-card, .dtd40k.vehicle-card, .dtd40k.opposed-card, .dtd40k.hazard-card,
   .dtd40k.zone-card, .dtd40k.pinning-card, .dtd40k.suppression-card, .dtd40k.defense-card, .dtd40k.social-card,
-  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
+  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.ability-card, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
   .dtd40k.spell-card-extra, .dtd40k.minion-attack-extra, .dtd40k.ship-card-extra) :is(.roll-card-note, .hint) {
   margin: 0;
   font-size: var(--dtd-text-sm);
@@ -258,7 +258,7 @@
 
 :is(.dtd40k.roll-card, .dtd40k.chase-card, .dtd40k.vehicle-card, .dtd40k.opposed-card, .dtd40k.hazard-card,
   .dtd40k.zone-card, .dtd40k.pinning-card, .dtd40k.suppression-card, .dtd40k.defense-card, .dtd40k.social-card,
-  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
+  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.ability-card, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
   .dtd40k.spell-card-extra, .dtd40k.minion-attack-extra, .dtd40k.ship-card-extra) button {
   flex: 1;
   min-height: 1.8rem;
@@ -275,7 +275,7 @@
 
 :is(.dtd40k.roll-card, .dtd40k.chase-card, .dtd40k.vehicle-card, .dtd40k.opposed-card, .dtd40k.hazard-card,
   .dtd40k.zone-card, .dtd40k.pinning-card, .dtd40k.suppression-card, .dtd40k.defense-card, .dtd40k.social-card,
-  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
+  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.ability-card, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
   .dtd40k.spell-card-extra, .dtd40k.minion-attack-extra, .dtd40k.ship-card-extra) button:hover {
   border-color: var(--dtd-brass-bright);
   box-shadow: 0 0 0 1px var(--dtd-brass-bright);
@@ -290,7 +290,7 @@
 
 :is(.dtd40k.roll-card, .dtd40k.chase-card, .dtd40k.vehicle-card, .dtd40k.opposed-card, .dtd40k.hazard-card,
   .dtd40k.zone-card, .dtd40k.pinning-card, .dtd40k.suppression-card, .dtd40k.defense-card, .dtd40k.social-card,
-  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
+  .dtd40k.npc-fear-card, .dtd40k.damage-applied, .dtd40k.ability-card, .dtd40k.attack-card-extra, .dtd40k.acquire-card-extra,
   .dtd40k.spell-card-extra, .dtd40k.minion-attack-extra, .dtd40k.ship-card-extra) .notification {
   margin: 0;
   font-size: var(--dtd-text-sm);

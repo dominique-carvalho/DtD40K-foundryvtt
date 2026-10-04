@@ -124,11 +124,79 @@
       "abilities": [
         {
           "name": "Gauss Weapon",
-          "effect": "Any creature damaged by the Gauss Blaster also takes 1 critical damage on that location, even with hit points left."
+          "effect": "Any creature damaged by the Gauss Blaster also takes 1 critical damage on that location, even with hit points left.",
+          "kind": "onHit",
+          "action": "",
+          "area": {
+            "shape": "",
+            "size": 0
+          },
+          "trigger": "",
+          "save": {
+            "characteristic": "",
+            "skill": "",
+            "tn": 0
+          },
+          "onFail": {
+            "condition": "",
+            "rounds": 0,
+            "fatigue": 0,
+            "damage": {
+              "rolled": 0,
+              "kept": 0,
+              "type": "",
+              "pen": 0
+            }
+          },
+          "weapon": "Gauss Blaster",
+          "extraCritical": 1,
+          "spell": {
+            "name": "",
+            "characteristic": "",
+            "skill": ""
+          },
+          "uses": {
+            "max": 0,
+            "value": 0
+          }
         },
         {
           "name": "Frightful Presence",
-          "effect": "Charging or attacking all-out forces every creature in melee reach to roll against its fear rating."
+          "effect": "Charging or attacking all-out forces every creature in melee reach to roll against its fear rating.",
+          "kind": "aura",
+          "action": "",
+          "area": {
+            "shape": "",
+            "size": 0
+          },
+          "trigger": "assault",
+          "save": {
+            "characteristic": "fear",
+            "skill": "",
+            "tn": 0
+          },
+          "onFail": {
+            "condition": "",
+            "rounds": 0,
+            "fatigue": 0,
+            "damage": {
+              "rolled": 0,
+              "kept": 0,
+              "type": "",
+              "pen": 0
+            }
+          },
+          "weapon": "",
+          "extraCritical": 0,
+          "spell": {
+            "name": "",
+            "characteristic": "",
+            "skill": ""
+          },
+          "uses": {
+            "max": 0,
+            "value": 0
+          }
         },
         {
           "name": "We'll Be Back",

@@ -50,7 +50,8 @@ export class NpcData extends CharacterData {
           kind: new StringField({ required: true, choices: ABILITY_KINDS, initial: "text" }),
           action: choice(ACTIONS, ""),
           area: new SchemaField({ shape: choice(["", "cone", "blast", "line"], ""), size: int(0, { min: 0 }) }),
-          trigger: choice(["", "charge", "allOutAttack", "turnStart"], ""),
+          // assault: a Charge or an All Out Attack (Frightful Presence); turnStart: the NPC's turn begins.
+          trigger: choice(["", "assault", "turnStart"], ""),
           save: new SchemaField({ characteristic: text(), skill: text(), tn: int(0, { min: 0 }) }),
           onFail: new SchemaField({ condition: text(), rounds: int(0, { min: 0 }), fatigue: int(0, { min: 0 }), damage: damage() }),
           weapon: text(),

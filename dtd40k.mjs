@@ -50,6 +50,7 @@ import { DtdActor } from "./module/documents/actor.mjs";
 import { resetReloadProgress } from "./module/documents/ammo-service.mjs";
 import { endHazard, fallAcrobatics, hazardStep, openHazardTool, openXpDialog, reduceFall } from "./module/documents/hazard-service.mjs";
 import { flightFall, offerFlightFall } from "./module/documents/flight-service.mjs";
+import { applyAbility, resistAbility } from "./module/documents/ability-service.mjs";
 import { clearZones, confirmZone, fireOverwatch, rollPinning, suppressionDamage, suppressionDodge } from "./module/documents/zone-service.mjs";
 import { endGrapple, maneuverAsGm, startGrapple } from "./module/documents/maneuver-service.mjs";
 import { promptCover, setCover } from "./module/documents/condition-service.mjs";
@@ -258,6 +259,9 @@ Hooks.once("ready", () => {
 const CHAT_ACTIONS = {
   // Flyers that fall (spec 022).
   flightFall: (message, data) => flightFall(message, data),
+  // NPC special abilities (spec 022).
+  abilityResist: (message, data) => resistAbility(message, data),
+  abilityApply: (message, data) => applyAbility(message, data),
   rollDamage: (message) => rollDamage(message),
   spendLiquid: (message) => spendLiquid(message),
   // Combat (spec 008): apply damage, undo, reactions, social answers.
@@ -328,6 +332,7 @@ Hooks.once("ready", () => {
     const message = game.messages.get(payload.messageId);
     if (!message) return;
     if (action === "applyDamage") await applyDamage(message, payload.tokenUuids);
+    if (action === "ability") await applyAbility(message, payload);
     if (action === "hazard" && payload.op === "fallReduce") await reduceFall(message, payload.reduce);
     if (action === "martialEffects") await applyAttackEffects(message);
     if (action === "shipApply") await applyShipDamage(message, payload.targetUuid);

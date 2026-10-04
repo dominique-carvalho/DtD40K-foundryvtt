@@ -1,3 +1,4 @@
+import { onHitCritical } from "./ability-service.mjs";
 import { promptAttackOptions } from "../apps/attack-dialog.mjs";
 import { postTest, rng } from "../dice/roll-service.mjs";
 import { rollAndKeep } from "../rules/dice.mjs";
@@ -342,6 +343,9 @@ export async function rollDamage(message) {
     if (resolve.locations && !resolve.locations.includes(attack.location)) delete resolve.resilienceMultiplier;
     delete resolve.locations;
   }
+  // Weapons with an on-hit ability (Gauss Weapon, spec 022): extra Critical Damage on the location.
+  const onHit = onHitCritical(actor, item);
+  if (onHit) resolve = { ...resolve, extraCritical: (resolve.extraCritical ?? 0) + onHit };
   const normalized = normalizePool(pool);
   const result = rollAndKeep(normalized, { rng, explodeOn: pool.explodeOn, rerollBelow: pool.rerollBelow });
   // Helpless target: damage is rolled twice and added (p. 443).

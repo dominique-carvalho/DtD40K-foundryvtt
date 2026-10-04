@@ -2669,7 +2669,8 @@
       },
       "Warning": {
         "unspent": "Some dots are not spent.",
-        "emptySlots": "Some equipment slots are empty."
+        "emptySlots": "Some equipment slots are empty.",
+        "missing": "A rating at 4 or more has no specialty (an XP purchase may have raised it)."
       },
       "ClassReason": {
         "creationLevel": "not Level 1",

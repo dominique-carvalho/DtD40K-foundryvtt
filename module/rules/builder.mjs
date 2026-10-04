@@ -80,7 +80,10 @@ export function validateSpecialties({ finals, specialties }) {
     const [kind, key] = path.split(".");
     if ((finals[kind]?.[key] ?? 0) < 4) reasons.add("specialtyLow");
   }
-  return result([...reasons]);
+  // A rating raised to 4 later (an XP purchase) without its specialty only warns.
+  const missing = ["characteristic", "skill"].some((kind) => Object.entries(finals[kind] ?? {})
+    .some(([key, value]) => value >= 4 && !String(specialties?.[`${kind}.${key}`] ?? "").trim()));
+  return result([...reasons], { warnings: missing ? ["missing"] : [] });
 }
 
 /**
@@ -139,7 +142,7 @@ export function validateFeats({ hindrances, assets, exaltedAsset = null, exaltat
 /**
  * Price the XP purchases in order (FR-010, p. 16) against the class lists, Level 1: each one from the value the
  * previous ones left. Racial feats of the race are always allowed (spec 006). Released by the GM, the refused ones
- * are bought anyway and cost their XP.
+ * are bought anyway and cost their XP (the step stays marked as released).
  * @param {{purchases: object[], values: {characteristic: object, skill: object}, cls: object|null, race: object|null,
  *   owned: object[], powerStat?: number, schools?: object, released?: boolean}} input
  */
@@ -173,7 +176,7 @@ export function pricePurchases({ purchases, values, cls, race, owned, powerStat 
     }
     return { ...p, from, cost: cost * (check.multiplier ?? 1), allowed, reason: check.reason ?? "" };
   });
-  return result(!released && entries.some((e) => !e.allowed) ? ["purchaseRefused"] : [], { entries, spent });
+  return result(entries.some((e) => !e.allowed) ? ["purchaseRefused"] : [], { entries, spent });
 }
 
 /**

@@ -71,6 +71,14 @@ describe("specialties (FR-006, p. 23)", () => {
     expect(validateSpecialties({ finals, specialties: { "skill.brawl": "Claws" } }).reasons).toEqual(["specialtyLow"]);
     expect(validateSpecialties({ finals, specialties: { "skill.brawl": "  " } }).ok).toBe(true);
   });
+
+  it("warns about a rating at 4 or more without a specialty", () => {
+    const finals = { characteristic: { dex: 4 }, skill: { brawl: 4 } };
+    const out = validateSpecialties({ finals, specialties: { "characteristic.dex": "Quick hands" } });
+    expect(out.ok).toBe(true);
+    expect(out.warnings).toEqual(["missing"]);
+    expect(validateSpecialties({ finals, specialties: { "characteristic.dex": "Quick hands", "skill.brawl": "Claws" } }).warnings).toEqual([]);
+  });
 });
 
 describe("classes (FR-007)", () => {
@@ -126,12 +134,12 @@ describe("XP purchases and balance (FR-010, p. 16)", () => {
     expect(out.ok).toBe(false);
   });
 
-  it("charges the refused purchases once the GM releases them", () => {
+  it("charges the refused purchases once the GM releases the step", () => {
     const outOfList = { name: "Unarmed Warrior", system: { category: "general", prerequisites: {}, selection: {} } };
     const out = pricePurchases({ purchases: [{ kind: "feat", feat: outOfList }], values: { characteristic: {}, skill: {} }, cls: monk, race: null, owned: [], released: true });
     expect(out.entries[0].allowed).toBe(false);
     expect(out.spent).toBe(100);
-    expect(out.ok).toBe(true);
+    expect(out.reasons).toEqual(["purchaseRefused"]);
   });
 
   it("keeps the balance", () => {

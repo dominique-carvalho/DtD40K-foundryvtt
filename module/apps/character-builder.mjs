@@ -395,6 +395,8 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
   /** @override */
   async _onClose(options) {
     await super._onClose(options);
+    // A finished character already dropped its draft.
+    if (options.skipSave) return;
     if (this.draft.concept.name || this.draft.race.uuid) await saveDraft(this.draft);
   }
 

@@ -2669,7 +2669,8 @@
       },
       "Warning": {
         "unspent": "Há pontos não gastos.",
-        "emptySlots": "Há vagas de equipamento vazias."
+        "emptySlots": "Há vagas de equipamento vazias.",
+        "missing": "Um valor em 4 ou mais está sem especialidade (uma compra de XP pode tê-lo subido)."
       },
       "ClassReason": {
         "creationLevel": "não é nível 1",

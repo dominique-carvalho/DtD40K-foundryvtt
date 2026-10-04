@@ -39,7 +39,8 @@ async function confirm(title, content) {
 }
 
 /**
- * Refuse a purchase; the GM may allow it anyway, without charging (constitution IV).
+ * Refuse a purchase; the GM may allow it anyway, without charging (constitution IV). In the character builder
+ * (silent) the GM already released the step.
  * @param {string} reason  DTD.XP.Error.<reason>
  * @param {object} [data]
  * @returns {Promise<boolean>}  true if the GM allowed it
@@ -124,7 +125,8 @@ export async function advance(actor, kind, key = "") {
   let cost = advanceCost(kind, from) * check.multiplier;
   if (!check.allowed) {
     if (!(await refuse(check.reason, { label }))) return false;
-    cost = 0;
+    // The character builder (silent) charges what the GM released: its XP balance already counts it.
+    if (!isSilent()) cost = 0;
   } else if (cost > actor.system.xp.totals.available) {
     ui.notifications.warn(game.i18n.format("DTD.XP.Error.notEnough", { cost, available: actor.system.xp.totals.available }));
     return false;
@@ -155,7 +157,11 @@ export async function priceFeat(actor, feat, selection) {
   if (category !== "asset") {
     const probe = { name: feat.name, system: { ...feat.system, selection } };
     const check = canAdvance({ kind: "feat", feat: probe, ...context(actor) });
-    if (!check.allowed) return { ok: await refuse(check.reason, { label: name }), cost: 0 };
+    if (!check.allowed) {
+      const ok = await refuse(check.reason, { label: name });
+      // The character builder (silent) charges what the GM released: its XP balance already counts it.
+      return { ok, cost: ok && isSilent() ? cost : 0 };
+    }
   }
   const available = actor.system.xp.totals.available;
   if (cost > available) {

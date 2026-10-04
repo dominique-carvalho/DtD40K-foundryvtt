@@ -126,6 +126,14 @@ describe("XP purchases and balance (FR-010, p. 16)", () => {
     expect(out.ok).toBe(false);
   });
 
+  it("charges the refused purchases once the GM releases them", () => {
+    const outOfList = { name: "Unarmed Warrior", system: { category: "general", prerequisites: {}, selection: {} } };
+    const out = pricePurchases({ purchases: [{ kind: "feat", feat: outOfList }], values: { characteristic: {}, skill: {} }, cls: monk, race: null, owned: [], released: true });
+    expect(out.entries[0].allowed).toBe(false);
+    expect(out.spent).toBe(100);
+    expect(out.ok).toBe(true);
+  });
+
   it("keeps the balance", () => {
     expect(xpBalance({ starting: 600, granted: 200, traits: 200, backgrounds: 0, purchases: 550 })).toEqual({ starting: 600, granted: 200, spent: 750, available: 50 });
   });

@@ -7,6 +7,7 @@
     <dt>{{localize "DTD.Exaltation.Exaltation"}}</dt><dd>{{s.exaltation}}</dd>
     <dt>{{localize "TYPES.Item.class"}}</dt><dd>{{s.cls}}</dd>
     <dt>{{localize "DTD.Builder.Deity"}}</dt><dd>{{s.deity}}</dd>
+    {{#if s.devotion}}<dt>{{localize "DTD.Sheet.Devotion"}}</dt><dd>{{s.devotion}}</dd>{{/if}}
   </dl>
   <h3 class="section-title">{{localize "DTD.Sheet.Characteristics"}}</h3>
   <div class="builder-chars">{{#each s.characteristics as |c|}}<span><small>{{c.label}}</small><b>{{c.value}}</b></span>{{/each}}</div>

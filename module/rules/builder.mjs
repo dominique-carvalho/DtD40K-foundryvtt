@@ -138,11 +138,12 @@ export function validateFeats({ hindrances, assets, exaltedAsset = null, exaltat
 
 /**
  * Price the XP purchases in order (FR-010, p. 16) against the class lists, Level 1: each one from the value the
- * previous ones left. Racial feats of the race are always allowed (spec 006).
+ * previous ones left. Racial feats of the race are always allowed (spec 006). Released by the GM, the refused ones
+ * are bought anyway and cost their XP.
  * @param {{purchases: object[], values: {characteristic: object, skill: object}, cls: object|null, race: object|null,
- *   owned: object[], powerStat?: number, schools?: object}} input
+ *   owned: object[], powerStat?: number, schools?: object, released?: boolean}} input
  */
-export function pricePurchases({ purchases, values, cls, race, owned, powerStat = 1, schools = {} }) {
+export function pricePurchases({ purchases, values, cls, race, owned, powerStat = 1, schools = {}, released = false }) {
   const current = { characteristic: { ...values.characteristic }, skill: { ...values.skill }, school: { ...schools }, martial: { ...schools } };
   const classes = cls ? [{ ...cls, system: { ...cls.system, status: "current" } }] : [];
   let ps = powerStat;
@@ -165,14 +166,14 @@ export function pricePurchases({ purchases, values, cls, race, owned, powerStat 
       check = canAdvance({ kind: p.kind, key: p.key, classes, race, owned, level: 1, from });
     }
     const allowed = check.allowed;
-    if (allowed) {
+    if (allowed || released) {
       spent += cost * (check.multiplier ?? 1);
       if (p.kind === "powerStat") ps += 1;
       else if (p.kind !== "feat") current[p.kind][p.key] = from + 1;
     }
     return { ...p, from, cost: cost * (check.multiplier ?? 1), allowed, reason: check.reason ?? "" };
   });
-  return result(entries.some((e) => !e.allowed) ? ["purchaseRefused"] : [], { entries, spent });
+  return result(!released && entries.some((e) => !e.allowed) ? ["purchaseRefused"] : [], { entries, spent });
 }
 
 /**

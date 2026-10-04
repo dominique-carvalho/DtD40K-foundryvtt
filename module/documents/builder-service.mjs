@@ -104,7 +104,7 @@ export async function applyPlan(actor, draft, docs) {
     }),
     specialties: () => {
       const update = {};
-      for (const [path, text] of Object.entries(draft.specialties)) {
+      for (const [path, text] of Object.entries(foundry.utils.flattenObject(draft.specialties))) {
         if (!String(text).trim()) continue;
         const [kind, key] = path.split(".");
         update[`system.${kind === "characteristic" ? "characteristics" : "skills"}.${key}.specialties`] = [String(text).trim()];

@@ -122,7 +122,7 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
     const backgrounds = validateBackgrounds({ backgrounds: d.backgrounds, wealth: d.wealth, artifacts: d.artifacts });
     const purchases = pricePurchases({
       purchases: d.purchases.map((p) => (p.kind === "feat" ? { ...p, feat: this.#doc(p.uuid) ?? { name: "", system: { prerequisites: {} } } } : p)),
-      values, cls, race: race ? { name: race.name } : null, owned: []
+      values, cls, race: race ? { name: race.name } : null, owned: [], released: d.released.includes("xp")
     });
     const balance = xpBalance({ granted: feats.xpGranted, traits: feats.xpSpent, backgrounds: backgrounds.xp, purchases: purchases.spent });
     const finals = previewCharacter({
@@ -142,7 +142,7 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
         case "exaltation": return validateExaltation({ exaltation: s.exaltation?.system ?? null, selection: d.exaltation.selection, race: s.race?.system ?? null, raceChoice: d.race.choice });
         case "characteristics": return validateRatings({ kind: "characteristic", priorities: d.priorities.characteristic, dots: d.characteristic });
         case "skills": return validateRatings({ kind: "skill", priorities: d.priorities.skill, dots: d.skill });
-        case "specialties": return validateSpecialties({ finals: s.finals, specialties: d.specialties });
+        case "specialties": return validateSpecialties({ finals: s.finals, specialties: foundry.utils.flattenObject(d.specialties) });
         case "class": {
           if (!s.cls) return { ok: false, reasons: ["classRequired"] };
           const [entry] = availableClasses({ classes: [s.cls], skills: s.values.skill });
@@ -244,8 +244,10 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
         const rows = [];
         for (const kind of ["characteristic", "skill"]) {
           for (const [key, value] of Object.entries(s.finals[kind])) {
-            if (value < 4 && !d.specialties[`${kind}.${key}`]) continue;
-            rows.push({ path: `${kind}.${key}`, label: kind === "characteristic" ? charLabel(key) : skillLabel(key), value, text: d.specialties[`${kind}.${key}`] ?? "", low: value < 4 });
+            // Stored nested (a flag expands dotted keys): specialties.characteristic.dex.
+            const text = d.specialties[kind]?.[key] ?? "";
+            if (value < 4 && !text) continue;
+            rows.push({ path: `${kind}.${key}`, label: kind === "characteristic" ? charLabel(key) : skillLabel(key), value, text, low: value < 4 });
           }
         }
         return { rows };
@@ -326,6 +328,8 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
       name: d.concept.name, img: d.concept.img,
       race: s.race?.name ?? "—", exaltation: s.exaltation?.name ?? "—", cls: s.cls?.name ?? "—",
       deity: this.#doc(d.deity.uuid)?.name ?? "—",
+      // Every hero starts with Devotion 6 to the chosen god (p. 286).
+      devotion: d.deity.uuid ? 6 : null,
       characteristics: Object.entries(s.finals.characteristic).map(([key, value]) => ({ label: localize(CHARACTERISTICS[key].abbr), value })),
       skills: Object.entries(s.finals.skill).filter(([, v]) => v > 0).map(([key, value]) => ({ label: localize(SKILLS[key].label), value })),
       xp: s.balance,
@@ -370,10 +374,22 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
     await this.#changed();
   }
 
-  /** Save the draft and re-render. */
+  /**
+   * Save the draft and re-render. The text field the user moved into keeps its focus, caret and what was already
+   * typed in it: the change of the previous field re-renders the window while the user writes in the next one.
+   */
   async #changed() {
     await saveDraft(this.draft);
-    this.render();
+    const active = this.element?.contains(document.activeElement) ? document.activeElement : null;
+    const typing = active?.dataset.field && (active.tagName === "TEXTAREA" || ["text", "number"].includes(active.type));
+    const kept = typing ? { field: active.dataset.field, value: active.value, start: active.selectionStart, end: active.selectionEnd } : null;
+    await this.render();
+    if (!kept) return;
+    const input = this.element.querySelector(`[data-field="${kept.field}"]`);
+    if (!input) return;
+    input.value = kept.value;
+    input.focus();
+    if (kept.start !== null && input.type !== "number") input.setSelectionRange(kept.start, kept.end);
   }
 
   /** @override */

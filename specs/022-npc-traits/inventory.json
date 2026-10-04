@@ -1,0 +1,272 @@
+{
+  "feature": "022-npc-traits",
+  "rules": "DtD 7.7a",
+  "foundry": "13.351",
+  "worktree": "C:/Users/Dominique/Documents/Personal Projects/DtD40K-foundryvtt-022",
+  "rules_book": {
+    "key_fact_printed_values": "Printed Speed/HP/SD already include trait effects (checked against Speed = Str + Dex, rules/derived.mjs:72): Ferocious Creature 4+4=8, printed 16 (Quadruped x2); Beast of Burden 6, printed 12 (Quadruped); Slithering Creature 6->3, Monodrone 6->3, Aboleth 8->4 (Crawler /2); Flying Creature Speed 7, Flyer (14); Dragon 'Speed 11 (22)', Flyer (22); Ghost Speed 5, Flyer (10). Pack NPCs keep the printed value in system.derivedMods.speed.override, so automating the multipliers would apply them twice.",
+    "traits": {
+      "source": "Chapter XX, Trait Descriptions, pp. 520-522 (20 traits)",
+      "amphibious": {
+        "page": 520,
+        "numeric": "swim speed = 2x listed speed",
+        "map": "swim movement action at double speed; no tests needed for rough water",
+        "narrative": "usually breathes underwater (hazardImmunity already uses this underwater)"
+      },
+      "autoStabilized": {
+        "page": 521,
+        "numeric": "always counts as braced with heavy weapons (removes the unbraced -3k1 and the full-auto ban, p. 318); Full Auto Burst costs a half action instead of a full one (Full Auto Burst is a Full action in the action table, pp. 422-423)",
+        "map": "none",
+        "used_by": "Obliterator (printed 'Auto Stabilized', p. 542)"
+      },
+      "crawler": {
+        "page": 521,
+        "numeric": "base speed halved (already in printed speed)",
+        "map": "no terrain penalties: difficult terrain halves speed and gives -1k0 to melee and dodge, arduous terrain -2k0 (p. 433); Foundry: ignore the difficult-terrain cost from regions",
+        "narrative": "slithers"
+      },
+      "darkSight": {
+        "page": 521,
+        "numeric": "never takes lighting penalties; darkness gives concealment, +5 SD (p. 433), which a Dark Sight attacker should ignore",
+        "map": "token vision in total darkness (visionMode darkvision, unlimited sight range)",
+        "note": "the system has no darkness or concealment automation today"
+      },
+      "flyer": {
+        "page": 521,
+        "numeric": "the value is the flying Speed; with no value, 2x normal speed",
+        "map": "fly movement action + token elevation",
+        "interactions": "Falling, p. 434 (short fall 1 wound, long 1d10, fatal 1d5 + 1d5 Critical Damage) if flight is lost: the book is silent. Higher Ground gives Combat Advantage (pp. 434-435): the book is silent on flyers.",
+        "sources_elsewhere": "Kenku p. 49 (Flyer at normal speed), Tengu Dive (2x), Mark of Tiamat (one scene), Dragonblooded wings, Dragon Form spell p. 259 (Flyer at 2x Speed), Improved Wild Shape p. 189"
+      },
+      "phasing": {
+        "page": 522,
+        "numeric": "turns incorporeal or corporeal as a half action; while incorporeal, +2 free raises on Stealth when hiding inside an object; immune to normal weapons (magic weapons and Power Field weapons affect it normally)",
+        "map": "passes through solid objects and barriers (walls)",
+        "narrative": "ghostlike",
+        "related": "Wraith Dematerialize p. 99 (1 Plasm and a half action: incorporeal 'as per the Phasing trait' for up to Resolve rounds; Shroud gives Aura instead of Armor while incorporeal); Air Elemental gains Phasing (p. 534)",
+        "unresolved": "the book does not say whether an incorporeal creature can attack, whether spells affect it, or whether it can affect material targets"
+      },
+      "quadruped": {
+        "page": 522,
+        "numeric": "ground speed doubled (already in printed speed)",
+        "map": "walking speed only (not fly or swim)",
+        "sources_elsewhere": "Wild Shape p. 197, Polymorph p. 258, Werewolf wolf form p. 95"
+      },
+      "resourceStat": {
+        "page": 522,
+        "numeric": "a pool of points with a named type and size, under the normal resource-stat rules (Exalt rules, ch. V)",
+        "narrative": "what the pool buys depends on the exaltation power the stat block copies (Vitae, Rage, Favor, Pyros, Essence)"
+      },
+      "already_automated_by_012": "armorPlating, machine, daemonic (armor), aura, regeneration (start of turn), fear (card -> Fear Test; table p. 450, TN 15/20/25/30/35), amorphous (all hits to body), mindless (immune to social), undead and stuffOfNightmares (immune to stunned and bloodLoss), caster (sanctioned + school ranks)",
+      "other_text_only_or_partial": {
+        "machine": "immunity to vacuum, cold and mind-influencing psychic effects is not automated (breath immunity is, via BREATHLESS_TRAITS)",
+        "stuffOfNightmares": "immune to poison, disease, hazards and Critical results short of outright destruction unless the source is a spell, power weapon or similar; only stun, bloodLoss and breath are automated",
+        "undead": "needs no breath (automated); mindless-undead clause is text only",
+        "unnaturalToughness": "HP x2, including Sound Constitution (printed HP already includes it)",
+        "daemonic": "extra HP = Con (printed HP already includes it); armor is automated only when the NPC has no Armor line",
+        "fear": "the Frightful Presence ability (Dragon, Modrons: a charge or all-out attack makes everyone in melee range test against the fear rating) is not automated"
+      }
+    },
+    "special_attacks": {
+      "pages": "pp. 260-262 (Sword Schools, ch. IX); Gun Kata / Trick Shots, ch. X, pp. 270-279",
+      "rules": "Built by Martial Adepts: choose the action (Standard Attack by default; schools add more), add Advantages up to the Martial Adept level in style points; Restrictions allow up to 2x the level; 50 XP per Advantage point. Melee only (Trick Shots cover guns). Universal Advantages: +1k0 damage (1), +0k1 damage (3), +1k0 to hit (1), +0k1 to hit (2), +2 Pen per point. Universal Restrictions: Difficult Strike (-1, not in two consecutive rounds), Last Resort (-2, once per scene), -1k0 or -0k1 damage, -1k0 or -0k1 to hit, Non-Penetrating.",
+      "npc_finding": "NO stat block in ch. XX lists Special Attacks or sword schools. In practice the NPC special attacks are the attack-like free-text 'Abilities': Mind Blast (Mind Flayer, p. 533: half action, 60-foot cone, Willpower TN 25 or Stunned for 1 round); Dragon Breath (Dragonfire Adept, Talon of Tiamat: Dragonborn racial power, Flamer template; also printed as a weapon, 20 m, 3k2 E, Pen 6, Flame); Frightful Presence (Dragon p. 532, Modrons pp. 526-527: Fear test for everyone in melee range on a charge or all-out attack); Gauss Weapon (Modrons: a damaging hit also deals 1 Critical Damage to that location); Fire Elemental heat (p. 534: everyone in melee range tests Con at TN 15 each turn or takes 1 Fatigue; attacks deal E damage); Possession (Ghost, p. 535: Cha + Arcana, as the Dominate spell); Mindslaver (Aboleth); Eats Your Goddamn Brain (Mind Flayer: grapple attacks hit the head, tentacles gain Tearing); Integrated Weapons Array (Obliterator: a full round to switch weapons, two at a time); Mechendrites (extra half action, limited use); We'll Be Back (Modrons: when killed, roll 1d10 each turn, 8+ fades away, returns after 3 rounds at 0 wounds); Phylactery; Man of Iron; references to racial powers."
+    },
+    "minion_squads": {
+      "pages": "pp. 543-544",
+      "rules": [
+        "Groups of up to 6 minions form a Minion Squad",
+        "Threat Rating 1-5 (peasants 1, soldiers and pirates around 3, elite 5)",
+        "Speed = TR",
+        "Combat rolls: roll one die per minion taking part, keep TR (never keep more than rolled)",
+        "Static Defense = 5 x TR",
+        "Each hit removes 1 minion, +1 per raise; a Blast weapon removes as many minions as its Blast rating",
+        "Damage Rating 1-5 with a damage type; a hit deals 5 x (DR + raises), with no damage roll",
+        "The DR line notes any ranged attack; the text gives the range two ways, 5x TR and 10x TR (code uses 10x)",
+        "Teamed with a character: + highest TR + 1 per extra minion on every skill roll, up to Fellowship minions; teamed minions are targeted separately, and one hit can fell several at one raise per extra minion",
+        "Samples: Kobold Stabbers TR1 DR 1R; Ninja Slayers TR4 DR 2R, ranged 2R; Fluffy Bunnies TR1 DR 5R; Space Pirate Crew TR3 DR 3R, ranged 3I"
+      ],
+      "not_in_book": "squad initiative (no Dex or Cmp; code uses 1d10 + TR); actions per turn (the book only covers the attack and Speed; Fightercraft, the space analogue, only have Move and Fire Everything); morale, fear and pinning; whether minions dodge, parry or take reactions; splitting a squad between targets; the hero's hit location and armor (code: body, Pen 0)",
+      "related_feats": "Animal Companion p. 180 (one minion, TR 1, DR 1), Beastmaster p. 181 (+1 squad size), Improved Animal Companion p. 188 (+1 TR and DR)"
+    },
+    "npc_feats": {
+      "rules": "NPC feats are ordinary feats from ch. VII (pp. 174-210); the printed SD/HP/Speed already include their numeric effects (Sound Constitution and so on)",
+      "combat_relevant_in_pack": "Swift Attack 5 (Aboleth, Aspect Warrior, Flying Creature...), Power Attack 4, Powerful Charge 3, Frenzy 3, Furious Assault 2, Iron Jaw 6 (shrug off stun: Con TN 10 + 5 x rounds, p. 189), True Grit 4, Blind Fighting 4, Fearless 4 (immune to pinning), Step Aside 1, Danger Sense 5, Strong Minded 5, Lucky/Luck, Catfall 2, Fleet of Foot 2, Sneak Attack 2, Backstab 1, Cleave 2, Crushing Blow 2, Combat Master 2, Wall of Steel 1, Unarmed Master 1, Quick Draw 1, Crack Shot 1, Deadeye Shot 1, Defensive Mobility 3, Blademaster 2, Evasion 1, Fast Reflexes 1, Foresight 1, spell feats (Spell Focus, Spell Might, Spell Penetration, Wizard Tradition, Spell Specialization, Tested)"
+    },
+    "alternate_forms": {
+      "zoanoid": "Zoanoid Thug (p. 525) and Zoanoid Heavy (pp. 525-526): 'Shifting - As the Werewolf power', bracketed stats are the Warform. Thug: Str 3[5], Con 4[6], Speed 5[7], Size/Res 4/4 [6/5], SD 14[10], HP 12[16], Armor None [2], Unarmed 3k1 I [Claw/Bite 7k3 R], Traits Resource Stat (Rage 7), [Regeneration 1]. Heavy: Str 5[7], Con 5[7], Speed 8[10], Size/Res 4/5 [6/6], SD 17[13], HP 20[24], Armor None [3], Unarmed 5k1 I [Claw/Bite 9k3 R], Rage 10, [Regeneration 1]. Both also have Lycan Resilience and Silver Bane.",
+      "werewolf_shifting_p95_96": "Shift between wolf form, Warform and normal form as a full action (Quick Shift: half action). Warform costs 1 Rage and lasts Con + Feral Heart rounds; in Warform the creature may only attack or move toward an opponent. Warform: Stuff of Nightmares, Str +2, Size +2, Con +2, magical Bite/Claw 2k3 R. Wolf form: Quadruped, +2 Dex, -1 Size, bite 2k2. Lycan Resilience: armor = Feral Heart in wolf form and Warform, not stacking with worn armor. Fast Healing: Regeneration (1) at a Feral Heart threshold. Luna's Blessing. NPC Zoanoids have no Feral Heart value, so the Warform duration is undefined.",
+      "others": "Wild Shape p. 197 (move 1 physical point, gain Quadruped, Crawler or Amphibious, full action); Improved Wild Shape p. 189; Polymorph p. 258 (wolf form: Quadruped, +2 Dex, -1 Size, bite 2k2); Dragon Form p. 259 (+3 Size, -1 Dex, +2 Str, bite 2k3, Flyer at 2x, Flamer breath); Wraith Dematerialize and Ectoplasmic Form pp. 99-100; Elemental composition variants p. 534 (one of Earth, Air, Fire, Water)"
+    },
+    "antagonist_creation": "7.7a has no NPC or antagonist creation rules beyond the Trait list and Weapon Creation (p. 516). docs/comparativo-7.7a.md section 10: 47 stat blocks, 20 traits; printed SD/HP do not follow the formulas, so they are stored as printed.",
+    "related_core_rules": {
+      "movement_p445": "climbing: half speed on an Athletics success; swimming: half speed on a Swim test (TN 10, TN 20 in Medium or heavier armor); holding breath",
+      "move_action_p422": "Move: half action up to Speed, full action double; Run",
+      "falling_p434": "short fall 1 wound, long 1d10, fatal 1d5 + 1d5 Critical Damage; Acrobatics TN 15 reduces intentional falls",
+      "suffocation_p444": "hold breath for Con minutes, or 2 x Con rounds when strenuous; Con TN 10 each interval",
+      "concealment_p433": "darkness or fog: +5 SD",
+      "blinded_p443": "automatically fails vision tests and Ballistics, -2k1 Weaponry, grants Combat Advantage",
+      "fear_p450": "Fear 1-5, TN 15-35; Shock Table on a failure in combat"
+    }
+  },
+  "code": {
+    "data_models": {
+      "npc": "module/data/npc-data.mjs (extends CharacterData): system.npc.{category, description (HTML), traits[{key (choices NPC_TRAITS), value: string}], abilities[{name, effect: string}], feats[string], gear[string], armor[{name, ap, locations}], alternate: string, resource{type: string, value, max}, source{book, page}}. prepareDerivedData adds traitArmor (only when there is no Armor line), traitAura and Caster sanctioned. Printed values live in system.derivedMods.{staticDefense, hpMax, speed, resilience}.override. Inherits system.martial (attacks array) from CharacterData, but the sheet hides the martial tab.",
+      "minionSquad": "module/data/minion-squad-data.mjs: threatRating (1-5), count (0-6), melee/ranged{rating 0-5, type, weapon}, allyUuid, description, source; derived {staticDefense 5 x TR, speed TR, mentalDefense 0, resilience 1}, range 10 x TR, defeated"
+    },
+    "config": "module/config.mjs:448-455 NPC_TRAITS (20 keys with hasValue); :459 MINION {maxCount 6, sdPerThreat 5, damagePerRating 5, rangePerThreat 10}; :191 BREATHLESS_TRAITS [undead, machine, stuffOfNightmares]",
+    "rules": "module/rules/npc.mjs (traitValue, traitArmor, traitAura, regeneration, fearRating, immunities, isAmorphous, isMindless); module/rules/minions.mjs (squadDerived, squadPool, minionDamage, casualties, allyBonus); module/rules/trait-text.mjs (TRAIT_TEXT, own words); module/rules/hazards.mjs:72 hazardImmunity reads traits, including amphibious underwater",
+    "services": "module/documents/npc-service.mjs (regenerate on _onStartTurn, fearCard, fearFromCard); module/documents/minion-service.mjs (attack, rollMinionDamage, removeMinions, setAlly, alliesOf); module/documents/combat.mjs:47-53 regenerate in _onStartTurn, :75 squad initiative 1d10 + @threatRating; damage-service.mjs:53 a hit on a squad removes casualties; attack-service.mjs:80,170 NPCs always proficient, :223 amorphous; condition-service.mjs:36 immunities; social-service.mjs:26 mindless; turn-service.mjs:373 endOfTurn for NPCs; martial-service.mjs (saveAttack charges XP, useAttack, applyAttackEffects) could be reused for NPC special attacks",
+    "sheets": "module/apps/npc-sheet.mjs (tabs main/combat/magic/npc; action npcFear), npc-context.mjs, templates/actor/parts/npc.hbs (traits, abilities, feats, gear are display-only; only system.npc.resource.value is editable, npc-header.hbs:72); module/apps/minion-sheet.mjs + templates/actor/minion-sheet.hbs (melee/ranged attack with an 'attacking' input, ally select); chat templates minion-attack.hbs, npc-fear.hbs",
+    "feats_gap": "Feat automation looks up feat Items by name (turn-service.mjs:214-223 Swift/Lightning Attack; maneuvers.mjs:56 Fearless and pinning; hazard-service.mjs:84 Catfall; character-data.mjs:356 Tested; attack-service.mjs:38 Weapon Focus/Specialization), so NPC string feats never apply.",
+    "token_map": "No Token or TokenDocument class override, and no elevation, sight, detectionModes or movementAction code anywhere; pack prototypeToken is only {name, actorLink: false, disposition: -1}.",
+    "tests": "tests/unit/npc.test.mjs (5 tests: TRAIT_TEXT, traitValue, armor, aura/regeneration/fear, immunities); tests/unit/minions.test.mjs (5 tests); tests/unit/hazards.test.mjs; tests/unit/martial.test.mjs",
+    "pack": {
+      "path": "src/packs/antagonists (47 npc-*.json + 4 minions-*.json + folder-*.json)",
+      "trait_counts": {
+        "resourceStat": "10 (Arch-Heretic Favor 8, Cultist Favor 6, Dark Mechanius Pyros 9, Heretek Pyros 3, Greater Daemon Essence 14, Lesser Daemon Essence 8, Sabbat Prince Vitae 15, Sabbat Thug Vitae 5, Zoanoid Heavy Rage 10, Zoanoid Thug Rage 7)",
+        "darkSight": "9 (Aboleth, Dragon, Ferocious Creature, both Incarnate Daemons, Lich, Mind Flayer, Sabbat Prince, Sabbat Thug)",
+        "fear": 7,
+        "caster": 6,
+        "armorPlating": 6,
+        "stuffOfNightmares": 5,
+        "crawler": "4 (Aboleth, Duodrone, Monodrone, Slithering Creature)",
+        "machine": 3,
+        "flyer": "3 (Dragon 22, Flying Creature 14, Ghost 10)",
+        "mindless": 3,
+        "undead": 3,
+        "quadruped": "2 (Beast of Burden, Ferocious Creature)",
+        "aura": 2,
+        "regeneration": 2,
+        "daemonic": 2,
+        "amphibious": "1 (Aboleth)",
+        "unnaturalToughness": 1,
+        "amorphous": 1,
+        "phasing": "1 (Ghost; the Air Elemental gets it only through an ability option)",
+        "autoStabilized": "1 (Obliterator)"
+      },
+      "ability_counts": "33 distinct, e.g. Frightful Presence 3, Dragon Breath 2, Gauss Weapon 2, We'll Be Back 2, Shifting 2, Mind Blast 1, Possession 1, Elemental Earth/Air/Fire/Water 1 each, plus references to racial powers (Warp Step, Bloody Minded, WAAAAAGH!, Squat Toughness...)",
+      "feat_entries": "about 75 distinct strings; most common: Weapon Proficiency variants, Iron Jaw 6, Danger Sense 5, Strong Minded 5, Swift Attack 5, Sound Constitution x2 5",
+      "alternate": "only Zoanoid Thug 'STR 5, CON 6 (Warform (Shifting))' and Zoanoid Heavy 'STR 7, CON 7 (Warform (Shifting))'. The other bracketed values (Speed, Size/Res, SD, HP, armor, Claw/Bite, Regeneration 1) are missing, and the Zoanoids' only item is 'Unarmed'",
+      "minions": "Fluffy Bunnies TR1 melee 5R; Kobold Stabbers TR1 1R; Ninja Slayers TR4 2R / ranged 2R; Space Pirate Crew TR3 3R / ranged 3I; all count 6"
+    },
+    "deferred_012": "spec.md:51-52 (Amphibious, Auto-Stabilized, Dark Sight, Flyer, Phasing, Quadruped, Crawler, Resource Stat as text); :103 alternate form as a note; :15 and :180 Special Attacks out of scope for NPCs; :177 NPC feats text only; :181 squads act in combat without the 008 action control. docs/pendencias.md:29 lists the same set. The spec input (line 9) says Flyer/Quadruped/Crawler are automated, but FR-004 (:120) and the code leave them as text."
+  },
+  "foundry_v13": {
+    "elevation": "common/documents/token.mjs:73 elevation NumberField; set with token.update({elevation}) or TokenDocument#move waypoints {x, y, elevation, action} (client/documents/token.mjs:410); the HUD edits elevation (Token#_getHUDMovementPosition, client/canvas/placeables/token.mjs:3491)",
+    "movement_actions": "CONFIG.Token.movement {defaultAction: 'walk', actions: {walk, fly, swim, burrow, crawl, climb, jump, blink, displace}}, foundry.mjs:179792-179905; TokenMovementActionConfig typedef foundry.mjs:170989 (teleport, measure, walls: string|null with default 'move', visualize, canSelect(token), deriveTerrainDifficulty, getCostFunction, getAnimationOptions). displace has walls: null and canSelect false; blink teleports but keeps the default walls.",
+    "movementAction_field": "common/documents/token.mjs:140 movementAction (nullable, choices = CONFIG actions); TokenDocument#prepareDerivedData sets it with ??= _inferMovementAction() (client/documents/token.mjs:301,324; foundry.mjs:52563). Override _inferMovementAction in a TokenDocument subclass to default flyers to 'fly'.",
+    "walls": "Token#constrainMovementPath(waypoints, {ignoreWalls, ignoreCost}) at client/canvas/placeables/token.mjs:2689 (foundry.mjs:141688) reads CONFIG.Token.movement.actions[action].walls at :2750 (foundry.mjs:141749) and skips the wall test when it is null. It runs client-side during the update at client/documents/token.mjs:1273 with the movement constrainOptions. Dragging uses Token#_getDragConstrainOptions (:4432, foundry.mjs:143432), which sets ignoreWalls only for a GM with the core setting 'unconstrainedMovement'. Token#checkCollision is at :2515 (foundry.mjs:141514). Ways to implement Phasing: (a) a custom action CONFIG.Token.movement.actions.phase = {walls: null, canSelect: token => its actor has phasing and is incorporeal}; (b) a Token subclass overriding _getDragConstrainOptions or constrainMovementPath to set ignoreWalls; (c) _preUpdateMovement or the preMoveToken hook to veto moves.",
+    "hooks": "preMoveToken (client/documents/token.mjs:1434, foundry.mjs:53673), moveToken (:2156, foundry.mjs:54395), TokenDocument#_preUpdateMovement (:1973, foundry.mjs:54212), _onUpdateMovement (:1984, foundry.mjs:54223); preCreateToken/createToken; Actor#getActiveTokens to sync tokens when traits or state change.",
+    "vision": "common/documents/token.mjs:97-114: sight{enabled, range (null means Infinity, set in prepareBaseData, client/documents/token.mjs:282 / foundry.mjs:52522), angle, visionMode 'basic', color, attenuation, brightness, saturation, contrast}, detectionModes[{id, enabled, range}]. _prepareDetectionModes (:335, foundry.mjs:52574) adds lightPerception (Infinity) and basicSight (range = sight.range) whenever sight.enabled. CONFIG.Canvas.visionModes: basic, darkvision, monochromatic, blindness, tremorsense, lightAmplification (client/config.mjs:973-1076; darkvision at foundry.mjs:178811). detectionModes: lightPerception, basicSight (DetectionModeDarkvision), seeInvisibility, senseInvisibility, feelTremor, seeAll, senseAll (client/config.mjs:1116-1151; foundry.mjs:178947).",
+    "active_effects": "Not verified line by line: as far as I know, v13 Active Effects change only the actor's data, not TokenDocument fields. So token sight, elevation and movementAction must be written through prototypeToken (actor.update({'prototypeToken.sight...'})) and on placed tokens (token.update), or computed in a TokenDocument subclass in prepareBaseData/_prepareDetectionModes (not saved, derived from actor traits; cleanest, needs no migration).",
+    "grid": "canvas.scene.grid.distance / units to convert Speed in meters"
+  },
+  "issues": [
+    {
+      "id": "N1",
+      "issue": "Printed Speed already includes Quadruped/Crawler, and printed HP/SD include Daemonic, Unnatural Toughness and feats. Automating the multipliers would apply them twice to every pack NPC.",
+      "resolution": "Apply multipliers only to the derived speed when it is not overridden (GM-built NPCs), or treat the traits as information for speed. Use the Flyer value as the fly speed, and 2x speed only when the value is empty."
+    },
+    {
+      "id": "N2",
+      "issue": "The book's NPC stat blocks contain no Special Attacks (a sword-school feature); the attack-like effects sit in free-text 'abilities'.",
+      "resolution": "Define NPC Special Attacks as structured abilities (action cost, area shape and size, save characteristic + TN, condition and duration, damage profile, uses) and convert the attack-like abilities (Mind Blast, Frightful Presence, Gauss Weapon, Fire Elemental heat, Possession, Dragon Breath). Optionally also let NPCs use martial-service special attacks without the XP cost."
+    },
+    {
+      "id": "N3",
+      "issue": "traits[].value is a free string ('Rage 7', 'Divination 4, ...'), and the resource is duplicated in npc.resource.",
+      "resolution": "Keep the string for display and parse numbers in the rules (traitValue already does). Either parse resourceStat or make npc.resource the source of truth. No schema change is needed for traits."
+    },
+    {
+      "id": "N4",
+      "issue": "The Zoanoid alternate form is stored only as 'STR x, CON y' text; the bracketed Speed, Size/Res, SD, HP, armor, Claw/Bite and Regeneration are lost.",
+      "resolution": "Add structured npc.forms[{name, characteristics, size, derived overrides, armor, traits, weapons/itemIds, cost (1 Rage), action (full)}] plus an active-form flag. Migrate the 2 Zoanoid JSONs (re-read pp. 525-526). Existing world actors keep the text until the GM re-imports them (migrateData can turn the alternate text into a note)."
+    },
+    {
+      "id": "N5",
+      "issue": "Zoanoid Warform lasts Con + Feral Heart rounds, but NPCs have no Feral Heart.",
+      "resolution": "Use Level or 0 as Feral Heart (GM-editable), or no timer; decide during clarify."
+    },
+    {
+      "id": "N6",
+      "issue": "NPC feats are strings, and feat automation looks for feat Items by name. Turning them into Items risks counting effects already in the printed SD/HP twice (Sound Constitution).",
+      "resolution": "Make the name checks also read system.npc.feats (one hasFeat(actor, name) helper for both) and create no Active Effects for NPC feats. List which feats become active (Swift Attack multiple attacks, Fearless, Iron Jaw, Catfall, Furious Assault, Power Attack, Step Aside, Blind Fighting...)."
+    },
+    {
+      "id": "N7",
+      "issue": "Phasing through walls: Foundry has no per-token ignore-walls flag, the displace action cannot be selected, and the incorporeal state must be tracked.",
+      "resolution": "Register a custom movement action 'phase' (walls: null, canSelect only for tokens whose actor has phasing and is incorporeal), or use a Token subclass override. Track incorporeal as a status toggled by a half-action button. Only 'move' walls are ignored; sight and light walls still block vision."
+    },
+    {
+      "id": "N8",
+      "issue": "Immunity to 'normal weapons' while incorporeal needs a weapon classification: magic weapons and the Power Field quality get through. What about spells and Aura?",
+      "resolution": "In damage-service: if the target is incorporeal and the weapon is neither magic nor powerField, no damage. Spells affect it normally (the book is silent; flag as an assumption). Whether an incorporeal creature can attack material targets (the Ghost has no attacks): assume yes, or leave to the SM."
+    },
+    {
+      "id": "N9",
+      "issue": "Flyer + elevation: the book has no 3D rules (range with elevation, falling when stunned or knocked out in flight, melee reach against flyers).",
+      "resolution": "On the map: fly movement action and editable elevation. Optionally warn or offer the fall card (hazard-service, 018) when a flying token becomes stunned, unconscious or prone. Foundry's distance measurement for range would include elevation (not verified in this inventory)."
+    },
+    {
+      "id": "N10",
+      "issue": "Dark Sight: the system has no lighting or concealment automation, and NPC token vision only matters when players control NPCs or for the GM's view.",
+      "resolution": "Set sight.visionMode 'darkvision' with unlimited range and detection in the derived token data. On the combat side, add an optional 'darkness concealment +5 SD' toggle to the attack dialog that Dark Sight attackers ignore; otherwise the rule effect has no mapping."
+    },
+    {
+      "id": "N11",
+      "issue": "Saving token changes: v13 Active Effects cannot target token fields, writing to prototypeToken changes pack data and needs migration, and writing to placed tokens needs GM permission.",
+      "resolution": "Prefer a TokenDocument subclass that derives sight and movementAction from the actor's traits in prepareBaseData/prepareDerivedData (not saved, no migration, works for existing actors). Elevation stays user-set (saved)."
+    },
+    {
+      "id": "N12",
+      "issue": "Crawler ignores terrain: in Foundry, difficult terrain only comes from Region 'modifyMovementCost' behaviors, and the system's own difficult-terrain penalties (-1k0/-2k0) are not automated.",
+      "resolution": "A custom action or cost function that keeps the base cost for Crawlers (deriveTerrainDifficulty), or an override of Token#_getMovementCostFunction. The dice penalties are out of scope unless terrain automation exists."
+    },
+    {
+      "id": "N13",
+      "issue": "Minion range contradiction: 5x vs 10x TR (pp. 543-544).",
+      "resolution": "Keep 10x (decided in 012) and note it in the spec."
+    },
+    {
+      "id": "N14",
+      "issue": "Minion Squad actions in the turn: the book only defines the attack and Speed. Initiative is not given, there are no reaction, defense, pinning or fear rules, and splitting a squad's attacks between targets is unclear.",
+      "resolution": "Define the squad's action set: Move (half/full = TR / 2 x TR), melee or ranged attack (one per turn; half action?), Run. Use the 008 turn economy through the combatant's turnState. Heroes may dodge squad hits (assumption). Fear and pinning: squads immune, or SM's call; clarify."
+    },
+    {
+      "id": "N15",
+      "issue": "Teamed minions (allyBonus) and the Animal Companion/Beastmaster feats link to minion squads; teamed minions must be targeted separately.",
+      "resolution": "Out of scope or minor: reuse allyBonus and flag it."
+    },
+    {
+      "id": "N16",
+      "issue": "Auto-Stabilized: attack-service always passes braced: false for characters and NPCs (bracing comes from the Brace action), and Full Auto Burst is a full action in COMBAT_ACTIONS.",
+      "resolution": "Pass braced = true in the attack options for autoStabilized actors. For fullAutoBurst/suppressingFire, charge a half action instead of a full one (override in turn-service takeAction)."
+    },
+    {
+      "id": "N17",
+      "issue": "Amphibious and Quadruped affect only specific movement modes, and Foundry does not enforce speed per action unless a cost function or limit is implemented.",
+      "resolution": "Expose a speed per action (walk, fly, swim) in the actor's derived data for the ruler/TokenRuler label; enforcement is optional."
+    },
+    {
+      "id": "N18",
+      "issue": "Resource Stat spending follows the copied exaltation power (Vitae, Rage, Favor, Pyros, Essence); the stat blocks only say 'as the X power' in text.",
+      "resolution": "Minimum: an editable pool plus spend/regain buttons with a chat log. Regain rules (e.g. Rage = Feral Heart per combat) stay manual unless specified."
+    },
+    {
+      "id": "N19",
+      "issue": "On the NPC sheet, traits, abilities and feats are display-only (only resource.value is editable), so a GM cannot add a trait such as Flyer to a custom NPC through the UI.",
+      "resolution": "Add editors to the Antagonist tab (trait key + value, ability rows); any structured data needs them."
+    },
+    {
+      "id": "N20",
+      "issue": "The Elemental's composition (Earth/Air/Fire/Water) is stored as 4 abilities: Air gives Phasing, Water Regeneration 1, Earth +6 armor, and only one applies.",
+      "resolution": "Model it as a variant choice (forms) or split it into 4 pack entries; the Phasing count would then include the Air Elemental."
+    },
+    {
+      "id": "N21",
+      "issue": "Frightful Presence and Fire Elemental heat are area or automatic effects, triggered by actions (charge, all-out attack) or every turn.",
+      "resolution": "Trigger a card on the charge/allOutAttack actions through turn-service; apply the heat at start or end of turn to tokens in melee range (needs token adjacency on the map)."
+    }
+  ]
+}

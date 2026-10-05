@@ -49,7 +49,7 @@ description: "Task list for 025-condition-icons"
 
 - [X] T012 [P] README (selos e atualização), `docs/pendencias.md` (024/025)
 - [X] T013 `npm test`, `npm run lint`, chaves i18n, `build:icons` duas vezes sem diferença, `build:packs`, zip local ≤ 2,5 MB
-- [ ] T014 Validar o quickstart no Foundry e registrar em `quickstart.md`
+- [X] T014 Validar o quickstart no Foundry e registrar em `quickstart.md`
 
 ## Dependencies
 

@@ -31,6 +31,26 @@ function collectDocs() {
   return docs;
 }
 
+/**
+ * Active Effects of the world (spec 025): on actors, on the items they carry and on world items. An effect carried by an
+ * item (or coming from one, by its origin) gets that item's icon, the new one when the item is updated in the same run.
+ * @param {Map<string, string>} newImages  uuid → planned image of the items
+ */
+function collectEffects(newImages) {
+  const docs = [];
+  const itemImg = (item) => (item ? newImages.get(item.uuid) ?? item.img : undefined);
+  const push = (effect, item) => docs.push({
+    uuid: effect.uuid, kind: "effect", img: effect.img, statuses: [...effect.statuses], flags: effect.flags,
+    itemImg: itemImg(item ?? (effect.origin ? foundry.utils.fromUuidSync(effect.origin, { strict: false }) : null))
+  });
+  for (const item of game.items) for (const effect of item.effects) push(effect, item);
+  for (const actor of game.actors) {
+    for (const effect of actor.effects) push(effect, null);
+    for (const item of actor.items) for (const effect of item.effects) push(effect, item);
+  }
+  return docs;
+}
+
 /** Images of the sources the documents point at (one index per pack; actors loaded for their embedded items). */
 async function sourceImages(docs) {
   const images = {};
@@ -56,15 +76,17 @@ async function sourceImages(docs) {
   return images;
 }
 
-/** Apply the planned updates in batches: world items, actors (portrait and token) and embedded items per actor. */
+/** Apply the planned updates in batches: world items, actors (portrait and token), items per actor, effects per parent. */
 async function apply(updates) {
   const items = [];
   const actors = new Map();
   const embedded = new Map();
+  const effects = new Map();
   for (const { uuid, kind, img } of updates) {
     const doc = foundry.utils.fromUuidSync(uuid);
     if (!doc) continue;
-    if (kind === "item") items.push({ _id: doc.id, img });
+    if (kind === "effect") effects.set(doc.parent, [...(effects.get(doc.parent) ?? []), { _id: doc.id, img }]);
+    else if (kind === "item") items.push({ _id: doc.id, img });
     else if (kind === "embedded") embedded.set(doc.parent.id, [...(embedded.get(doc.parent.id) ?? []), { _id: doc.id, img }]);
     else {
       const change = actors.get(doc.id) ?? { _id: doc.id };
@@ -76,13 +98,20 @@ async function apply(updates) {
   if (items.length) await Item.updateDocuments(items);
   if (actors.size) await Actor.updateDocuments([...actors.values()]);
   for (const [actorId, changes] of embedded) await game.actors.get(actorId)?.updateEmbeddedDocuments("Item", changes);
+  for (const [parent, changes] of effects) await parent.updateEmbeddedDocuments("ActiveEffect", changes);
 }
 
 export class UpdateIconsMenu extends foundry.applications.api.ApplicationV2 {
   /** Rendering the menu runs the update instead of opening a window. */
   async render() {
     if (!game.user.isGM) return this;
-    const plan = planIconUpdates({ docs: collectDocs(), sourceImages: await sourceImages(collectDocs()) });
+    const docs = collectDocs();
+    const documents = planIconUpdates({ docs, sourceImages: await sourceImages(docs) });
+    // Effects after the documents, so an item's effect follows the item's new icon.
+    const newImages = new Map(documents.updates.map((u) => [u.uuid, u.img]));
+    const conditionImages = Object.fromEntries(CONFIG.statusEffects.map((s) => [s.id, s.img]));
+    const effects = planIconUpdates({ docs: collectEffects(newImages), sourceImages: {}, conditionImages, effectImages: CONFIG.DTD.ICONS.effect });
+    const plan = { updates: [...documents.updates, ...effects.updates], counts: { ...documents.counts, effect: effects.counts.effect } };
     const total = plan.updates.length;
     if (!total) {
       ui.notifications.info(localize("DTD.Icons.Update.Nothing"));

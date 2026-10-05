@@ -16,19 +16,42 @@ export function isCoreImage(img) {
 }
 
 /**
+ * New image of an effect (spec 025, research R6): a condition takes its seal, an effect a service created takes its
+ * seal, and an effect carried by an item takes the item's icon (only when the item already uses a system icon).
+ * @param {{statuses?: string[], flags?: object, itemImg?: string}} effect
+ * @param {Record<string, string>} conditionImages
+ * @param {Record<string, string>} effectImages
+ * @returns {string|null}
+ */
+function effectImage(effect, conditionImages, effectImages) {
+  const condition = (effect.statuses ?? []).find((id) => conditionImages[id]);
+  if (condition) return conditionImages[condition];
+  const flags = effect.flags?.dtd40k ?? {};
+  const key = flags.effectIcon ?? (flags.degeneration ? "degeneration" : null);
+  if (key && effectImages[key]) return effectImages[key];
+  return effect.itemImg && !isCoreImage(effect.itemImg) ? effect.itemImg : null;
+}
+
+/**
  * Plan the image updates.
- * @param {{docs: {uuid: string, kind: "item"|"actor"|"embedded"|"token", img: string, source: string}[],
- *   sourceImages: Record<string, {img: string, token?: string}>}} input
- *   docs: world items and actors, items embedded in actors and prototype tokens, each with its compendium source
+ * @param {{docs: {uuid: string, kind: "item"|"actor"|"embedded"|"token"|"effect", img: string, source?: string,
+ *   statuses?: string[], flags?: object, itemImg?: string}[], sourceImages: Record<string, {img: string, token?: string}>,
+ *   conditionImages?: Record<string, string>, effectImages?: Record<string, string>}} input
+ *   docs: world items and actors, items embedded in actors, prototype tokens (each with its compendium source) and
+ *   Active Effects (with their statuses, flags and the icon of the item carrying them)
  * @returns {{updates: {uuid: string, kind: string, img: string}[], counts: Record<string, number>, skipped: number}}
  */
-export function planIconUpdates({ docs, sourceImages }) {
-  const counts = { item: 0, actor: 0, token: 0, embedded: 0 };
+export function planIconUpdates({ docs, sourceImages, conditionImages = {}, effectImages = {} }) {
+  const counts = { item: 0, actor: 0, token: 0, embedded: 0, effect: 0 };
   const updates = [];
   let skipped = 0;
   for (const doc of docs) {
-    const images = String(doc.source ?? "").startsWith(SYSTEM_SOURCE) ? sourceImages[doc.source] : null;
-    const img = doc.kind === "token" ? images?.token ?? images?.img : images?.img;
+    let img;
+    if (doc.kind === "effect") img = effectImage(doc, conditionImages, effectImages);
+    else {
+      const images = String(doc.source ?? "").startsWith(SYSTEM_SOURCE) ? sourceImages[doc.source] : null;
+      img = doc.kind === "token" ? images?.token ?? images?.img : images?.img;
+    }
     if (!img || !isCoreImage(doc.img) || img === doc.img) {
       skipped += 1;
       continue;

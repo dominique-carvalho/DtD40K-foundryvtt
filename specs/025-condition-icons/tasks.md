@@ -38,10 +38,10 @@ description: "Task list for 025-condition-icons"
 ## Phase 3: User Story 2 — Efeitos e atualização do mundo (P2)
 
 - [X] T007 [US2] `build-icons`: o `img` do item em cada efeito dos itens de `src/packs` (e dos embutidos); teste de varredura: nenhum efeito com imagem do Foundry, efeito de item com o `img` do item
-- [ ] T008 [US2] alignment-, martial- e vehicle-service: `CONFIG.DTD.ICONS.effect.*` e `flags.dtd40k.effectIcon`
-- [ ] T009 [P] [US2] Testes de `planIconUpdates` com efeitos (condição, degeneração, `effectIcon`, efeito de item, imagem personalizada preservada); confirmar que falham
-- [ ] T010 [US2] `module/rules/icons.mjs`: `planIconUpdates` com `effect`; T009 passa
-- [ ] T011 [US2] `module/apps/update-icons.mjs`: coleta de efeitos (atores, itens dos atores, itens do mundo) e aplicação em lote; i18n da confirmação com efeitos (en, pt-BR)
+- [X] T008 [US2] alignment-, martial- e vehicle-service: `CONFIG.DTD.ICONS.effect.*` e `flags.dtd40k.effectIcon`
+- [X] T009 [P] [US2] Testes de `planIconUpdates` com efeitos (condição, degeneração, `effectIcon`, efeito de item, imagem personalizada preservada); confirmar que falham
+- [X] T010 [US2] `module/rules/icons.mjs`: `planIconUpdates` com `effect`; T009 passa
+- [X] T011 [US2] `module/apps/update-icons.mjs`: coleta de efeitos (atores, itens dos atores, itens do mundo) e aplicação em lote; i18n da confirmação com efeitos (en, pt-BR)
 
 ---
 

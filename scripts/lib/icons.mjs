@@ -90,6 +90,22 @@ export function composeIcon({ glyphSvg, color }) {
 }
 
 /**
+ * Round seal of a condition or effect (spec 025, research R1): iron disc, a ring in the color of its severity group and a
+ * light glyph, readable at 20 px over a token.
+ * @param {{glyphSvg: string, color: string}} input
+ * @returns {string}
+ */
+export function composeSeal({ glyphSvg, color }) {
+  if (!Object.values(ICON_COLORS).includes(color)) throw new Error(`Color ${color} is not a design token.`);
+  const glyph = glyphPaths(glyphSvg).map(({ d, fillRule }) => `<path d="${compactPath(d)}" fill="${ICON_COLORS.ink}"${fillRule ? ` fill-rule="${fillRule}"` : ""}/>`).join("");
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512">'
+    + `<circle cx="50" cy="50" r="48" fill="${PLATE}"/>`
+    + `<circle cx="50" cy="50" r="44" fill="none" stroke="${color}" stroke-width="6"/>`
+    + `<g transform="translate(20 20) scale(.117)">${glyph}</g>`
+    + "</svg>\n";
+}
+
+/**
  * Value a rule field reads from a document.
  * @param {object} doc
  * @param {{pack: string, parentType?: string}} where

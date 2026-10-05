@@ -298,8 +298,10 @@ export const WEALTH_STRAIN = [{ min: 11, penalty: 5 }, { min: 10, penalty: 3 }, 
 /* ---------- Combat (spec 008, DtD 7.7a ch. XVII, pp. 416–452) ---------- */
 
 const ADD_MODE = 2;
-const status = (id, img, changes = []) => ({
-  id, name: `DTD.Condition.${id}`, img,
+/** Round seals of the conditions (spec 025). */
+const CONDITION_ICONS = "systems/dtd40k/assets/icons/conditions";
+const status = (id, changes = []) => ({
+  id, name: `DTD.Condition.${id}`, img: `${CONDITION_ICONS}/${id}.svg`,
   changes: changes.map(([key, value]) => ({ key, mode: ADD_MODE, value: String(value) }))
 });
 
@@ -308,38 +310,38 @@ const status = (id, img, changes = []) => ({
  * effects. Numeric effects are `changes`; the others are read from `actor.statuses` by the pure rules.
  */
 export const STATUS_EFFECTS = [
-  status("blinded", "icons/svg/blind.svg"),
-  status("bloodLoss", "icons/svg/blood.svg"),
-  status("dazed", "icons/svg/daze.svg", [["system.modifiers.rolls.all.rolled", -1]]),
-  status("deafened", "icons/svg/deaf.svg"),
-  status("diseased", "icons/svg/biohazard.svg"),
-  status("onFire", "icons/svg/fire.svg"),
-  status("helpless", "icons/svg/paralysis.svg"),
-  status("immobilized", "icons/svg/anchor.svg"),
-  status("pinned", "icons/svg/terror.svg"),
-  status("prone", "icons/svg/falling.svg"),
-  status("restrained", "icons/svg/net.svg"),
-  status("stunned", "icons/svg/stoned.svg"),
-  status("surprised", "icons/svg/hazard.svg"),
-  status("unconscious", "icons/svg/unconscious.svg"),
-  status("dead", "icons/svg/skull.svg"),
-  status("grappled", "icons/svg/thrust.svg"),
+  status("blinded"),
+  status("bloodLoss"),
+  status("dazed", [["system.modifiers.rolls.all.rolled", -1]]),
+  status("deafened"),
+  status("diseased"),
+  status("onFire"),
+  status("helpless"),
+  status("immobilized"),
+  status("pinned"),
+  status("prone"),
+  status("restrained"),
+  status("stunned"),
+  status("surprised"),
+  status("unconscious"),
+  status("dead"),
+  status("grappled"),
   // Controller of a grapple and a character in cover (spec 017).
-  status("grappling", "icons/svg/combat.svg"),
-  status("inCover", "icons/svg/castle.svg"),
+  status("grappling"),
+  status("inCover"),
   // Phasing NPCs (spec 022): passes through walls; only magic or Power Field weapons harm it.
-  status("incorporeal", "icons/svg/mystery-man.svg"),
-  status("jaded", "icons/svg/silenced.svg"),
-  status("lostHand", "icons/svg/downgrade.svg"),
-  status("lostArm", "icons/svg/downgrade.svg"),
-  status("lostEye", "icons/svg/invisible.svg"),
-  status("lostFoot", "icons/svg/leg.svg"),
-  status("lostLeg", "icons/svg/leg.svg"),
-  status("fullDefense", "icons/svg/holy-shield.svg", [["system.modifiers.combat.sd", 10], ["system.modifiers.combat.reactions", 2]]),
-  status("fightDefensively", "icons/svg/shield.svg", [["system.modifiers.combat.reactions", 1]]),
-  status("allOutAttack", "icons/svg/sword.svg"),
-  status("healingSurge", "icons/svg/regen.svg", [["system.modifiers.combat.sd", 5]]),
-  status("running", "icons/svg/wingfoot.svg")
+  status("incorporeal"),
+  status("jaded"),
+  status("lostHand"),
+  status("lostArm"),
+  status("lostEye"),
+  status("lostFoot"),
+  status("lostLeg"),
+  status("fullDefense", [["system.modifiers.combat.sd", 10], ["system.modifiers.combat.reactions", 2]]),
+  status("fightDefensively", [["system.modifiers.combat.reactions", 1]]),
+  status("allOutAttack"),
+  status("healingSurge", [["system.modifiers.combat.sd", 5]]),
+  status("running")
 ];
 
 /** Armor Points of cover (p. 433), stored on the token by the In Cover condition (spec 017). */
@@ -606,6 +608,13 @@ export const ICONS = {
     squadron: `${ICON_ROOT}/defaults/squadron.svg`,
     vehicle: `${ICON_ROOT}/defaults/vehicle.svg`,
     character: `${ICON_ROOT}/defaults/character.svg`
+  },
+  // Effects the services create (spec 025).
+  effect: {
+    degeneration: `${ICON_ROOT}/effects/degeneration.svg`,
+    martialSelf: `${ICON_ROOT}/effects/martialSelf.svg`,
+    martialTarget: `${ICON_ROOT}/effects/martialTarget.svg`,
+    barrelRoll: `${ICON_ROOT}/effects/barrelRoll.svg`
   }
 };
 

@@ -2,7 +2,7 @@
  * Download the game-icons.net glyphs the icon pipeline needs (spec 024, research R1). Development tool: the only step
  * that uses the network; the glyphs it saves are versioned, so `npm run build:icons` works offline.
  *
- *   npm run icons:fetch             download the glyphs cited in categories.json and curation.json that are missing
+ *   npm run icons:fetch             download the glyphs cited in categories.json, curation.json and conditions.json
  *   npm run icons:fetch -- --index  refresh src/icons/glyph-index.json and the license file from the repository
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -15,10 +15,16 @@ const GLYPHS = join(ROOT, "glyphs");
 
 const readJson = (path, fallback) => (existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : fallback);
 
-async function get(url) {
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`${response.status} ${url}`);
-  return response.text();
+async function get(url, attempts = 3) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`${response.status} ${url}`);
+    return await response.text();
+  } catch (error) {
+    // A dropped connection is common over a long run; try again before giving up.
+    if (attempts <= 1) throw error;
+    return get(url, attempts - 1);
+  }
 }
 
 /** Names of every glyph in the repository ("author/name") and its license file. */
@@ -36,7 +42,8 @@ async function refreshIndex() {
 function citedGlyphs() {
   const categories = readJson(join(ROOT, "categories.json"), []);
   const curation = readJson(join(ROOT, "curation.json"), {});
-  return [...new Set([...categories.map((c) => c.glyph), ...Object.values(curation)])].sort();
+  const seals = readJson(join(ROOT, "conditions.json"), { seals: [] }).seals.map((s) => s.glyph);
+  return [...new Set([...categories.map((c) => c.glyph), ...Object.values(curation), ...seals])].sort();
 }
 
 async function fetchMissing() {

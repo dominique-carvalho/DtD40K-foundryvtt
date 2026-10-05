@@ -21,23 +21,23 @@ description: "Task list for 025-condition-icons"
 
 ## Phase 1: Foundational
 
-- [ ] T001 [P] Testes de `composeSeal` em `tests/unit/icons.test.mjs` (disco, anel na cor, glifo claro, 512 px, determinístico, cor inválida); confirmar que falham
-- [ ] T002 `composeSeal` em `scripts/lib/icons.mjs` (research R1); T001 passa
+- [X] T001 [P] Testes de `composeSeal` em `tests/unit/icons.test.mjs` (disco, anel na cor, glifo claro, 512 px, determinístico, cor inválida); confirmar que falham
+- [X] T002 `composeSeal` em `scripts/lib/icons.mjs` (research R1); T001 passa
 
 ---
 
 ## Phase 2: User Story 1 — Condições (P1) 🎯 MVP
 
-- [ ] T003 [US1] `src/icons/conditions.json`: grupos (research R2) e os 30 selos de condição com glifos distintos; os 4 de efeito (`effect:degeneration`, `effect:martialSelf`, `effect:martialTarget`, `effect:barrelRoll`); `npm run icons:fetch`
-- [ ] T004 [US1] `scripts/build-icons.mjs`: gera `assets/icons/conditions/*.svg` e `assets/icons/effects/*.svg`, remove os obsoletos, autores no `CREDITS.md`
-- [ ] T005 [US1] Testes: `conditions.json` cobre as 30 condições de `STATUS_EFFECTS`, glifos distintos, arquivos existentes; `STATUS_EFFECTS` aponta para os selos; confirmar que falham antes de T006
-- [ ] T006 [US1] `module/config.mjs`: `STATUS_EFFECTS` com os selos e `ICONS.effect`; T005 passa
+- [X] T003 [US1] `src/icons/conditions.json`: grupos (research R2) e os 30 selos de condição com glifos distintos; os 4 de efeito (`effect:degeneration`, `effect:martialSelf`, `effect:martialTarget`, `effect:barrelRoll`); `npm run icons:fetch`
+- [X] T004 [US1] `scripts/build-icons.mjs`: gera `assets/icons/conditions/*.svg` e `assets/icons/effects/*.svg`, remove os obsoletos, autores no `CREDITS.md`
+- [X] T005 [US1] Testes: `conditions.json` cobre as 30 condições de `STATUS_EFFECTS`, glifos distintos, arquivos existentes; `STATUS_EFFECTS` aponta para os selos; confirmar que falham antes de T006
+- [X] T006 [US1] `module/config.mjs`: `STATUS_EFFECTS` com os selos e `ICONS.effect`; T005 passa
 
 ---
 
 ## Phase 3: User Story 2 — Efeitos e atualização do mundo (P2)
 
-- [ ] T007 [US2] `build-icons`: o `img` do item em cada efeito dos itens de `src/packs` (e dos embutidos); teste de varredura: nenhum efeito com imagem do Foundry, efeito de item com o `img` do item
+- [X] T007 [US2] `build-icons`: o `img` do item em cada efeito dos itens de `src/packs` (e dos embutidos); teste de varredura: nenhum efeito com imagem do Foundry, efeito de item com o `img` do item
 - [ ] T008 [US2] alignment-, martial- e vehicle-service: `CONFIG.DTD.ICONS.effect.*` e `flags.dtd40k.effectIcon`
 - [ ] T009 [P] [US2] Testes de `planIconUpdates` com efeitos (condição, degeneração, `effectIcon`, efeito de item, imagem personalizada preservada); confirmar que falham
 - [ ] T010 [US2] `module/rules/icons.mjs`: `planIconUpdates` com `effect`; T009 passa

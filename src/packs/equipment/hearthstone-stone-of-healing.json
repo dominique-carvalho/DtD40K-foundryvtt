@@ -28,7 +28,7 @@
   "effects": [
     {
       "name": "Stone of Healing",
-      "img": "icons/svg/aura.svg",
+      "img": "systems/dtd40k/assets/icons/hearthstone/stone-of-healing.svg",
       "transfer": true,
       "disabled": false,
       "changes": [

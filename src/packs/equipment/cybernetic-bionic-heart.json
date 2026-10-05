@@ -34,7 +34,7 @@
   "effects": [
     {
       "name": "Bionic Heart",
-      "img": "icons/svg/aura.svg",
+      "img": "systems/dtd40k/assets/icons/cybernetic/bionic-heart.svg",
       "transfer": true,
       "disabled": false,
       "changes": [

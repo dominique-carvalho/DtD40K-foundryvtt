@@ -28,7 +28,7 @@
   "effects": [
     {
       "name": "Hither",
-      "img": "icons/svg/aura.svg",
+      "img": "systems/dtd40k/assets/icons/drug/hither.svg",
       "transfer": true,
       "disabled": false,
       "changes": [

@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { ICON_COLORS, assignPaths, categoryFor, compactPath, composeIcon, glyphFor, glyphPaths, slugify } from "../../scripts/lib/icons.mjs";
+import { ICON_COLORS, assignPaths, categoryFor, compactPath, composeIcon, composeSeal, glyphFor, glyphPaths, slugify } from "../../scripts/lib/icons.mjs";
 
 /**
  * Icon pipeline (spec 024, contracts/icon-pipeline.md): pure helpers that compose the Cogitator plate, pick the
@@ -60,6 +60,23 @@ describe("compactPath", () => {
       }
     }
     expect(broken).toEqual([]);
+  });
+});
+
+describe("composeSeal (spec 025)", () => {
+  const svg = composeSeal({ glyphSvg: GLYPH, color: "#e0963a" });
+
+  it("draws an iron disc, a ring in the group color and a light glyph", () => {
+    expect(svg).toMatch(/^<svg xmlns="http:\/\/www\.w3\.org\/2000\/svg" viewBox="0 0 100 100" width="512" height="512">/);
+    expect(svg).toContain('<circle cx="50" cy="50" r="48" fill="#1c2124"/>');
+    expect(svg).toContain('stroke="#e0963a"');
+    expect(svg).toContain('<path d="M10 10h20v20z" fill="#e8dfca"/>');
+    expect(svg).not.toContain("M0 0h512v512H0z");
+  });
+
+  it("is deterministic and refuses a color outside the design tokens", () => {
+    expect(composeSeal({ glyphSvg: GLYPH, color: "#e0963a" })).toBe(svg);
+    expect(() => composeSeal({ glyphSvg: GLYPH, color: "#123456" })).toThrow();
   });
 });
 
@@ -185,5 +202,46 @@ describe("compendium icons (FR-001, FR-011)", () => {
     for (const hex of Object.values(ICON_COLORS)) expect(tokens).toContain(hex);
     const glyphs = [...categories.map((c) => c.glyph), ...Object.values(curation)];
     expect(glyphs.filter((g) => !existsSync(`src/icons/glyphs/${g}.svg`))).toEqual([]);
+  });
+});
+
+describe("condition and effect seals (spec 025)", () => {
+  const conditions = JSON.parse(readFileSync("src/icons/conditions.json", "utf8"));
+  const sealOf = (key) => conditions.seals.find((s) => s.key === key);
+
+  it("covers every condition with its own glyph and an existing seal", async () => {
+    const { STATUS_EFFECTS, ICONS } = await import("../../module/config.mjs");
+    const ids = STATUS_EFFECTS.map((s) => s.id);
+    expect(ids.filter((id) => !sealOf(id))).toEqual([]);
+    const glyphs = ids.map((id) => sealOf(id).glyph);
+    expect(new Set(glyphs).size).toBe(ids.length);
+    for (const s of STATUS_EFFECTS) {
+      expect(s.img).toBe(`systems/dtd40k/assets/icons/conditions/${s.id}.svg`);
+      expect(existsSync(s.img.replace("systems/dtd40k/", "")), s.id).toBe(true);
+    }
+    for (const key of ["degeneration", "martialSelf", "martialTarget", "barrelRoll"]) {
+      expect(ICONS.effect[key]).toBe(`systems/dtd40k/assets/icons/effects/${key}.svg`);
+      expect(existsSync(ICONS.effect[key].replace("systems/dtd40k/", "")), key).toBe(true);
+    }
+  });
+
+  it("uses design-token colors for every group", () => {
+    for (const color of Object.values(conditions.groups)) expect(ICON_COLORS[color], color).toBeDefined();
+    for (const s of conditions.seals) expect(conditions.groups[s.group], s.key).toBeDefined();
+  });
+
+  it("gives the effects of compendium items the item's icon (FR-004)", () => {
+    const walk = (dir) => readdirSync(dir).flatMap((name) => {
+      const path = join(dir, name);
+      return statSync(path).isDirectory() ? walk(path) : path.endsWith(".json") ? [path] : [];
+    });
+    const bad = [];
+    for (const file of walk("src/packs")) {
+      const doc = JSON.parse(readFileSync(file, "utf8"));
+      for (const owner of [doc, ...(doc.items ?? [])]) for (const effect of owner.effects ?? []) {
+        if (effect.img !== owner.img || String(effect.img).startsWith("icons/")) bad.push(`${file} ${effect.name} ${effect.img}`);
+      }
+    }
+    expect(bad).toEqual([]);
   });
 });

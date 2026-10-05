@@ -28,7 +28,7 @@
   "effects": [
     {
       "name": "Optical Mechadendrite",
-      "img": "icons/svg/aura.svg",
+      "img": "systems/dtd40k/assets/icons/cybernetic/optical-mechadendrite.svg",
       "transfer": true,
       "disabled": false,
       "changes": [

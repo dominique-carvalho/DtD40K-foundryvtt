@@ -81,7 +81,7 @@ describe("default icons (FR-009)", () => {
       const path = `systems/dtd40k/assets/icons/defaults/${c.key}.svg`;
       if (d.startsWith("actor:")) expected.actor[d.slice(6)] = path; else expected.item[d] = path;
     }
-    expect(ICONS).toEqual(expected);
+    expect({ item: ICONS.item, actor: ICONS.actor }).toEqual(expected);
     for (const path of [...Object.values(ICONS.item), ...Object.values(ICONS.actor)]) expect(existsSync(path.replace("systems/dtd40k/", "")), path).toBe(true);
   });
 

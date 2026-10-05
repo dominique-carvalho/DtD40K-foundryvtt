@@ -112,6 +112,9 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   recursos sempre à vista) e Iluminura (página de códice), escolhidos no menu de ficha; cartões de chat com dados em
   facetas de d10; variantes clara (pergaminho) e escura (cogitador) que seguem o tema do Foundry; fontes livres
   empacotadas. Detalhes em `docs/design-system.md`.
+- **Ícones próprios**: todos os itens, atores e tabelas dos compêndios têm ícone na placa Cogitador (octógono de ferro,
+  aro de latão e glifo na cor da categoria); itens e atores criados no mundo nascem com o ícone do tipo, e o Mestre
+  atualiza os documentos antigos do mundo em Configurações → Ícones dos compêndios.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos
@@ -192,6 +195,19 @@ npm run build:packs
 - Para editar um compêndio pelo Foundry: clique com o botão direito no compêndio → "Alternar trava de edição", edite os itens, feche o Foundry e rode `npm run extract:packs` para gravar as mudanças de volta em `src/packs/` (depois revise o diff e faça o commit).
 - Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) `combat-tables` (22 tabelas do cap. XVII e as 2 do Warp) `spells` (126 magias do cap. VIII) `martial-schools` (15 escolas dos caps. IX–X) `deities` (21 deuses do cap. XII; a tabela Degeneration fica em `combat-tables`) `antagonists` (47 NPCs e 4 Minion Squads do cap. XX, só para o Mestre), `vehicle-components` (131 componentes, armas e munições do cap. XV), `vehicles` (16 veículos de exemplo), `ship-components` (104 peças do cap. XVI) e `ships` (6 naves de NPC).
 
+## Ícones
+
+Os ícones são gerados a partir de `src/icons/` (`categories.json`: cor e glifo padrão de cada categoria;
+`curation.json`: o glifo de cada documento; `glyphs/`: os glifos do game-icons.net usados) em `assets/icons/`:
+
+```bash
+npm run build:icons
+```
+
+- Rode antes de `npm run build:packs`: ele também grava o caminho dos ícones nos JSON de `src/packs`. Sem mudança, não altera nada.
+- Documento novo sem glifo próprio usa o padrão da categoria e entra em `src/icons/uncurated.json`; para escolher, rode `npm run icons:suggest` (candidatos em `src/icons/suggestions.json`), anote em `curation.json` e baixe o glifo com `npm run icons:fetch` (único passo com rede).
+- O teste `tests/unit/icons.test.mjs` falha se algum documento de compêndio ficar com imagem do Foundry ou sem arquivo.
+
 ## Publicar uma versão
 
 O workflow [`.github/workflows/release.yml`](.github/workflows/release.yml) roda quando uma release
@@ -209,4 +225,5 @@ gh release create v0.1.0 --title "v0.1.0" --generate-notes
 
 ## Licença
 
-Sem licença definida por enquanto. *Dungeons the Dragoning* pertence a LawfulNice.
+Sem licença definida por enquanto. *Dungeons the Dragoning* pertence a LawfulNice. Os glifos dos ícones são do
+[game-icons.net](https://game-icons.net) (CC BY 3.0); autores em [`CREDITS.md`](CREDITS.md).

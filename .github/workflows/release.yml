@@ -52,7 +52,7 @@ jobs:
 
       - name: Montar dtd40k.zip
         run: |
-          zip -r dtd40k.zip system.json dtd40k.mjs README.md lang module packs styles templates fonts \
+          zip -r dtd40k.zip system.json dtd40k.mjs README.md CREDITS.md lang module packs styles templates fonts assets \
             -x "packs/**/LOCK" "packs/**/LOG" "packs/**/LOG.old"
 
       - name: Anexar à release

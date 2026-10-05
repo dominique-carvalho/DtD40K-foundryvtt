@@ -57,7 +57,7 @@ quickstart.md
 
 ## Phase 5: Polish
 
-- [ ] T016 [P] `.github/workflows/release.yml` (zip com `assets` e `CREDITS.md`); README (créditos e manutenção dos ícones); `docs/pendencias.md` (ícones das condições, arte ilustrada)
+- [X] T016 [P] `.github/workflows/release.yml` (zip com `assets` e `CREDITS.md`); README (créditos e manutenção dos ícones); `docs/pendencias.md` (ícones das condições, arte ilustrada)
 - [ ] T017 `npm test`, `npm run lint`, checagem de chaves i18n, `build:icons` duas vezes sem diferença (SC-005), zip local com tamanho (SC-006)
 - [ ] T018 Validar o quickstart no Foundry e registrar em `quickstart.md`
 

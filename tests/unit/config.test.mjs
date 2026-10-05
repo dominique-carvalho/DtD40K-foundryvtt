@@ -215,7 +215,7 @@ describe("combat constants (008)", () => {
     ]);
     for (const s of DTD.STATUS_EFFECTS) {
       expect(s.name).toBe(`DTD.Condition.${s.id}`);
-      expect(s.img).toMatch(/^icons\/svg\/.+\.svg$/);
+      expect(s.img).toMatch(/^systems\/dtd40k\/assets\/icons\/conditions\/.+\.svg$/);
     }
     const changes = (id) => DTD.STATUS_EFFECTS.find((s) => s.id === id).changes.map((c) => `${c.key}=${c.value}`);
     expect(changes("dazed")).toEqual(["system.modifiers.rolls.all.rolled=-1"]);

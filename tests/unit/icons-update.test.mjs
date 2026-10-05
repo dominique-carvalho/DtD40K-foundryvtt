@@ -41,7 +41,7 @@ describe("planIconUpdates", () => {
       { uuid: "Actor.d.Token", kind: "token", img: sourceImages[NPC].token },
       { uuid: "Actor.x.Item.b", kind: "embedded", img: sourceImages[SOURCE].img }
     ]);
-    expect(plan.counts).toEqual({ item: 1, actor: 1, token: 1, embedded: 1 });
+    expect(plan.counts).toEqual({ item: 1, actor: 1, token: 1, embedded: 1, effect: 0 });
   });
 
   it("keeps custom images, other sources, unknown sources and documents already up to date", () => {
@@ -56,7 +56,7 @@ describe("planIconUpdates", () => {
       sourceImages
     });
     expect(plan.updates).toEqual([]);
-    expect(plan.counts).toEqual({ item: 0, actor: 0, token: 0, embedded: 0 });
+    expect(plan.counts).toEqual({ item: 0, actor: 0, token: 0, embedded: 0, effect: 0 });
     expect(plan.skipped).toBe(5);
   });
 });
@@ -81,7 +81,7 @@ describe("default icons (FR-009)", () => {
       const path = `systems/dtd40k/assets/icons/defaults/${c.key}.svg`;
       if (d.startsWith("actor:")) expected.actor[d.slice(6)] = path; else expected.item[d] = path;
     }
-    expect(ICONS).toEqual(expected);
+    expect({ item: ICONS.item, actor: ICONS.actor }).toEqual(expected);
     for (const path of [...Object.values(ICONS.item), ...Object.values(ICONS.actor)]) expect(existsSync(path.replace("systems/dtd40k/", "")), path).toBe(true);
   });
 
@@ -91,5 +91,38 @@ describe("default icons (FR-009)", () => {
     const types = JSON.parse(readFileSync("system.json", "utf8")).documentTypes;
     expect(Object.keys(types.Item).filter((t) => !ICONS.item[t])).toEqual([]);
     expect(Object.keys(types.Actor).filter((t) => !ICONS.actor[t])).toEqual([]);
+  });
+});
+
+describe("planIconUpdates with effects (spec 025, FR-006)", () => {
+  const conditionImages = { stunned: "systems/dtd40k/assets/icons/conditions/stunned.svg" };
+  const effectImages = { degeneration: "systems/dtd40k/assets/icons/effects/degeneration.svg", barrelRoll: "systems/dtd40k/assets/icons/effects/barrelRoll.svg" };
+  const ITEM_IMG = "systems/dtd40k/assets/icons/drug/stimm.svg";
+
+  it("gives conditions their seal, service effects theirs and item effects the item's icon", () => {
+    const plan = planIconUpdates({
+      docs: [
+        { uuid: "Actor.a.ActiveEffect.1", kind: "effect", img: "icons/svg/stoned.svg", statuses: ["stunned"], flags: {} },
+        { uuid: "Actor.a.ActiveEffect.2", kind: "effect", img: "icons/svg/skull.svg", statuses: [], flags: { dtd40k: { degeneration: "x" } } },
+        { uuid: "Actor.a.ActiveEffect.3", kind: "effect", img: "icons/svg/wing.svg", statuses: [], flags: { dtd40k: { effectIcon: "barrelRoll" } } },
+        { uuid: "Actor.a.Item.s.ActiveEffect.4", kind: "effect", img: "icons/svg/aura.svg", statuses: [], flags: {}, itemImg: ITEM_IMG }
+      ],
+      sourceImages: {}, conditionImages, effectImages
+    });
+    expect(plan.updates.map((u) => u.img)).toEqual([conditionImages.stunned, effectImages.degeneration, effectImages.barrelRoll, ITEM_IMG]);
+    expect(plan.counts.effect).toBe(4);
+  });
+
+  it("keeps custom effect images and effects it cannot place", () => {
+    const plan = planIconUpdates({
+      docs: [
+        { uuid: "Actor.a.ActiveEffect.1", kind: "effect", img: "worlds/mist/art/curse.webp", statuses: ["stunned"], flags: {} },
+        { uuid: "Actor.a.ActiveEffect.2", kind: "effect", img: "icons/svg/aura.svg", statuses: [], flags: {}, itemImg: "icons/svg/item-bag.svg" },
+        { uuid: "Actor.a.ActiveEffect.3", kind: "effect", img: "icons/svg/aura.svg", statuses: ["modded"], flags: {} }
+      ],
+      sourceImages: {}, conditionImages, effectImages
+    });
+    expect(plan.updates).toEqual([]);
+    expect(plan.skipped).toBe(3);
   });
 });

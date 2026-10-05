@@ -28,7 +28,7 @@
   "effects": [
     {
       "name": "Machinator Array",
-      "img": "icons/svg/aura.svg",
+      "img": "systems/dtd40k/assets/icons/cybernetic/machinator-array.svg",
       "transfer": true,
       "disabled": false,
       "changes": [

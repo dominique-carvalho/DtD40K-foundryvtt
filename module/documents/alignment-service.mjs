@@ -155,9 +155,9 @@ async function degenerationTable() {
 /** Active Effect data of a Degeneration. */
 function effectData(name, id, changes) {
   return {
-    name: `${localize("DTD.Alignment.Degeneration")}: ${name}`, img: "icons/svg/skull.svg",
+    name: `${localize("DTD.Alignment.Degeneration")}: ${name}`, img: CONFIG.DTD.ICONS.effect.degeneration,
     changes: changes.map((c) => ({ key: c.key, mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: String(c.value) })),
-    flags: { dtd40k: { degeneration: id } }
+    flags: { dtd40k: { degeneration: id, effectIcon: "degeneration" } }
   };
 }
 

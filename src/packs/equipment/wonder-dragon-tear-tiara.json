@@ -28,7 +28,7 @@
   "effects": [
     {
       "name": "Dragon Tear Tiara",
-      "img": "icons/svg/aura.svg",
+      "img": "systems/dtd40k/assets/icons/wonder/dragon-tear-tiara.svg",
       "transfer": true,
       "disabled": false,
       "changes": [

@@ -25,7 +25,7 @@
   "effects": [
     {
       "name": "Power Armor: Strength and Resilience",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/armor/power-armor.svg",
       "transfer": true,
       "disabled": false,
       "changes": [

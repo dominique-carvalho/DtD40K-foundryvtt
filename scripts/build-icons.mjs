@@ -8,7 +8,7 @@
  */
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join, relative } from "node:path";
-import { ICON_COLORS, assignPaths, categoryFor, composeIcon, glyphFor } from "./lib/icons.mjs";
+import { ICON_COLORS, assignPaths, categoryFor, composeIcon, composeSeal, glyphFor } from "./lib/icons.mjs";
 
 const PACKS = "src/packs";
 const ICONS = "src/icons";
@@ -82,6 +82,14 @@ function glyphSvg(glyph) {
 for (const entry of entries.values()) glyphSvg(entry.glyph);
 for (const c of categories) glyphSvg(c.glyph);
 
+// Round seals of the conditions and of the effects the services create (spec 025, research R1–R3).
+const conditions = existsSync(join(ICONS, "conditions.json")) ? readJson(join(ICONS, "conditions.json")) : { groups: {}, seals: [] };
+const sealPath = (key) => (key.startsWith("effect:") ? `effects/${key.slice("effect:".length)}.svg` : `conditions/${key}.svg`);
+for (const seal of conditions.seals) {
+  if (!ICON_COLORS[conditions.groups[seal.group]]) errors.push(`Seal ${seal.key}: unknown group ${seal.group}`);
+  glyphSvg(seal.glyph);
+}
+
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
@@ -92,11 +100,12 @@ const paths = assignPaths([...entries.values()]);
 const wanted = new Map();
 for (const entry of entries.values()) wanted.set(paths.get(entry.key), { glyph: entry.glyph, hex: entry.hex });
 for (const c of categories) if (c.defaultFor?.length) wanted.set(`defaults/${c.key}.svg`, { glyph: c.glyph, hex: c.hex });
+for (const seal of conditions.seals) wanted.set(sealPath(seal.key), { glyph: seal.glyph, hex: ICON_COLORS[conditions.groups[seal.group]], seal: true });
 
 let written = 0;
-for (const [path, { glyph, hex }] of wanted) {
+for (const [path, { glyph, hex, seal }] of wanted) {
   const file = join(OUT, path);
-  const svg = composeIcon({ glyphSvg: glyphSvg(glyph), color: hex });
+  const svg = (seal ? composeSeal : composeIcon)({ glyphSvg: glyphSvg(glyph), color: hex });
   if (existsSync(file) && readFileSync(file, "utf8") === svg) continue;
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, svg);
@@ -122,6 +131,8 @@ for (const { file, pack, text, eol, doc } of files) {
   if (doc.prototypeToken) doc.prototypeToken.texture = { ...(doc.prototypeToken.texture ?? {}), src: img };
   for (const result of doc.results ?? []) result.img = img;
   for (const item of doc.items ?? []) item.img = urlOf(keyOf(pack, item));
+  // Effects carried by an item show the item's icon (spec 025, research R5).
+  for (const owner of [doc, ...(doc.items ?? [])]) for (const effect of owner.effects ?? []) if (owner.img) effect.img = owner.img;
   const out = JSON.stringify(doc, null, 2).replaceAll("\n", eol) + eol;
   if (out === text) continue;
   writeFileSync(file, out);

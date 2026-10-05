@@ -267,9 +267,9 @@ async function barrelRoll(pilot) {
   if (!pilot) return;
   const combatant = game.combat?.started ? game.combat.combatants.find((c) => c.actor === pilot) : null;
   await pilot.createEmbeddedDocuments("ActiveEffect", [{
-    name: localize("DTD.Vehicle.Stunt.barrelRoll.label"), img: "icons/svg/wing.svg",
+    name: localize("DTD.Vehicle.Stunt.barrelRoll.label"), img: CONFIG.DTD.ICONS.effect.barrelRoll,
     changes: [{ key: "system.modifiers.combat.reactions", mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: "1" }],
-    flags: { dtd40k: { untilTurnOf: combatant?.id ?? null } }
+    flags: { dtd40k: { untilTurnOf: combatant?.id ?? null, effectIcon: "barrelRoll" } }
   }]);
 }
 

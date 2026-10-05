@@ -28,7 +28,7 @@
   "effects": [
     {
       "name": "Collar of Dawn's Cleansing Light",
-      "img": "icons/svg/aura.svg",
+      "img": "systems/dtd40k/assets/icons/wonder/collar-of-dawns-cleansing-light.svg",
       "transfer": true,
       "disabled": false,
       "changes": [

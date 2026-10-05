@@ -271,9 +271,9 @@ async function afterUse(actor, attack, modifiers, { inCombat, combat, prepared }
     if (self.fatigue) await addFatigue(actor, self.fatigue);
     if (self.changes?.length) {
       await actor.createEmbeddedDocuments("ActiveEffect", [{
-        name: attack.name, img: "icons/svg/sword.svg",
+        name: attack.name, img: CONFIG.DTD.ICONS.effect.martialSelf,
         changes: self.changes.map((c) => ({ key: c.key, mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: String(c.value) })),
-        flags: { dtd40k: self.untilNextTurn && combatantId ? { untilTurnOf: combatantId } : {} }
+        flags: { dtd40k: { effectIcon: "martialSelf", ...(self.untilNextTurn && combatantId ? { untilTurnOf: combatantId } : {}) } }
       }]);
     }
   }
@@ -324,9 +324,9 @@ export async function applyAttackEffects(message) {
     }
     if (hit.changes?.length) {
       await target.createEmbeddedDocuments("ActiveEffect", [{
-        name: special.name, img: "icons/svg/sword.svg",
+        name: special.name, img: CONFIG.DTD.ICONS.effect.martialTarget,
         changes: hit.changes.map((c) => ({ key: c.key, mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: String(c.value) })),
-        flags: { dtd40k: hit.untilNextTurn && untilTurnOf ? { untilTurnOf } : {} }
+        flags: { dtd40k: { effectIcon: "martialTarget", ...(hit.untilNextTurn && untilTurnOf ? { untilTurnOf } : {}) } }
       }]);
       notes.push(special.name);
     }

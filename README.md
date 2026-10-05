@@ -114,7 +114,9 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   empacotadas. Detalhes em `docs/design-system.md`.
 - **Ícones próprios**: todos os itens, atores e tabelas dos compêndios têm ícone na placa Cogitador (octógono de ferro,
   aro de latão e glifo na cor da categoria); itens e atores criados no mundo nascem com o ícone do tipo, e o Mestre
-  atualiza os documentos antigos do mundo em Configurações → Ícones dos compêndios.
+  atualiza os documentos antigos do mundo em Configurações → Ícones dos compêndios. As 30 condições e os efeitos do
+  sistema usam um selo redondo (disco de ferro, anel na cor da gravidade: dano, incapacidade, restrição, postura
+  favorável); os efeitos dos itens usam o ícone do item.
 - Interface em **português (pt-BR)** e **inglês**.
 
 ## Requisitos
@@ -198,7 +200,8 @@ npm run build:packs
 ## Ícones
 
 Os ícones são gerados a partir de `src/icons/` (`categories.json`: cor e glifo padrão de cada categoria;
-`curation.json`: o glifo de cada documento; `glyphs/`: os glifos do game-icons.net usados) em `assets/icons/`:
+`curation.json`: o glifo de cada documento; `conditions.json`: grupo e glifo dos selos das condições e dos efeitos;
+`glyphs/`: os glifos do game-icons.net usados) em `assets/icons/`:
 
 ```bash
 npm run build:icons

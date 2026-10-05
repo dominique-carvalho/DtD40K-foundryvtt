@@ -28,7 +28,7 @@
   "effects": [
     {
       "name": "Slaught",
-      "img": "icons/svg/aura.svg",
+      "img": "systems/dtd40k/assets/icons/drug/slaught.svg",
       "transfer": true,
       "disabled": false,
       "changes": [

@@ -1,7 +1,7 @@
 {
   "name": "Awe",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/awe.svg",
   "system": {
     "description": "<p>Stun applied to every creature in a 10m radius.</p>",
     "source": {

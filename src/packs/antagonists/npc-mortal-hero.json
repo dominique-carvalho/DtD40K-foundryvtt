@@ -1,7 +1,7 @@
 {
   "name": "Mortal Hero",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/mortal-hero.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -149,7 +149,7 @@
     {
       "name": "Chainsword",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/chainsword.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -192,7 +192,7 @@
     {
       "name": "Pulse Rifle",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/pulse-rifle.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -239,7 +239,7 @@
     {
       "name": "Frag Grenade",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-thrown/frag-grenade.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -284,7 +284,10 @@
   "prototypeToken": {
     "name": "Mortal Hero",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/mortal-hero.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNd20f5aab9a72",

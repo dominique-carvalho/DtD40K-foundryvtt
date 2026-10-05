@@ -1,7 +1,7 @@
 {
   "name": "Treesong",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/treesong.svg",
   "system": {
     "description": "<p>Sculpts living wood into a simple, clay-like shape that is permanent; up to 1 cubic meter.</p>",
     "source": {

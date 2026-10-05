@@ -1,7 +1,7 @@
 {
   "name": "Melta (weapon type)",
   "type": "shipComponent",
-  "img": "icons/svg/aura.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/melta-weapon-type.svg",
   "system": {
     "description": "<p>Microwave bursts: cheap and hard-hitting, but short reach and weak against shields.</p><p>Damage +1k0, Dis -1, Range Half, Cost -5 BP.</p>",
     "source": {

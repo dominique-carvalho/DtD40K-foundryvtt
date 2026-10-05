@@ -3,7 +3,7 @@
   "_key": "!items!dtdFee203c3b9e3f",
   "name": "Spell Focus",
   "type": "feat",
-  "img": "icons/svg/mage-shield.svg",
+  "img": "systems/dtd40k/assets/icons/feat/spell-focus.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

@@ -1,7 +1,7 @@
 {
   "name": "Caestus",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/caestus.svg",
   "system": {
     "description": "<p>A more elaborate fist weapon than brass knuckles, studded with spikes or blades that tear flesh. It is meant to frighten as well as to wound, and it does both well.</p>",
     "source": {

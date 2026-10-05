@@ -1,7 +1,7 @@
 {
   "name": "Heavy Wards",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/heavy-wards.svg",
   "system": {
     "description": "<p>Etched anti-magic runes giving Aura 20.</p>",
     "source": {

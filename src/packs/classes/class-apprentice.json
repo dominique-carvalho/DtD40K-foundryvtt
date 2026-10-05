@@ -3,7 +3,7 @@
   "_key": "!items!dtdCf404df256d27",
   "name": "Apprentice",
   "type": "class",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/class/apprentice.svg",
   "folder": "dtdCFd8d68c1b723",
   "system": {
     "description": "<p>The opening step of the Magic User track: a studious novice who learns the fundamentals of arcane study. Apprentices build their memory and foresight, bind a familiar or focus through an implement, and dabble across six schools of magic.</p>",

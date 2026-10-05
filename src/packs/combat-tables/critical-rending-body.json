@@ -1,6 +1,6 @@
 {
   "name": "Critical — Rending — Body",
-  "img": "icons/svg/blood.svg",
+  "img": "systems/dtd40k/assets/icons/table/critical-rending-body.svg",
   "description": "<p>Critical Damage (Rending, Body), DtD 7.7a p. 441. Use the row equal to the accumulated Critical Damage.</p>",
   "formula": "1d5",
   "replacement": true,
@@ -9,7 +9,7 @@
     {
       "type": "text",
       "name": "Rending Body 1",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-rending-body.svg",
       "description": "<p>If the Body is unarmoured, 1 Fatigue; if armoured, no effect.</p>",
       "weight": 1,
       "range": [
@@ -28,7 +28,7 @@
     {
       "type": "text",
       "name": "Rending Body 2",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-rending-body.svg",
       "description": "<p>Skin flayed from torso: Stunned 1 round; 2 Fatigue.</p>",
       "weight": 1,
       "range": [
@@ -53,7 +53,7 @@
     {
       "type": "text",
       "name": "Rending Body 3",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-rending-body.svg",
       "description": "<p>Long torso wound: 1d5 Fatigue.</p>",
       "weight": 1,
       "range": [
@@ -74,7 +74,7 @@
     {
       "type": "text",
       "name": "Rending Body 4",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-rending-body.svg",
       "description": "<p>Falls Prone clutching wounds; 1d10 Fatigue.</p>",
       "weight": 1,
       "range": [
@@ -98,7 +98,7 @@
     {
       "type": "text",
       "name": "Rending Body 5",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-rending-body.svg",
       "description": "<p>Cleaved in two; dead.</p>",
       "weight": 1,
       "range": [

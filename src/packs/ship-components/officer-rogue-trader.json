@@ -1,7 +1,7 @@
 {
   "name": "Rogue Trader",
   "type": "shipComponent",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/rogue-trader.svg",
   "system": {
     "description": "<p>Takes up deck space but opens exotic trade: in any market the Rogue Trader visits with you, items up to two rarity steps above normal can be found.</p>",
     "source": {

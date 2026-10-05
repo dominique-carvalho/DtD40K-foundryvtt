@@ -1,7 +1,7 @@
 {
   "name": "Slaught",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/slaught.svg",
   "system": {
     "description": "<p>An expensive reflex accelerator popular with fighter pilots and the Dark Eldarin; it causes twitching, paranoia and brightly coloured sweat that makes users easy to spot.</p><p>For one scene the user has +1 Dexterity and the TN of their Perception tests is lowered by 10. When it wears off they suffer two levels of fatigue.</p>",
     "source": {

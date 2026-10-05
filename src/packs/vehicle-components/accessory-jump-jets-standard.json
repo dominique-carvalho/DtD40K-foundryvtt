@@ -1,7 +1,7 @@
 {
   "name": "Jump Jets (Standard)",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/jump-jets-standard.svg",
   "system": {
     "description": "<p>A Half Action lets the vehicle move as a flyer until the pilot's next turn; needs 2 rounds of cooldown between firings.</p>",
     "source": {

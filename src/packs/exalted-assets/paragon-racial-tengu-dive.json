@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsRacTD000000",
   "name": "Tengu Dive",
   "type": "feat",
-  "img": "icons/svg/wing.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/tengu-dive.svg",
   "folder": "dtdFldParRacial0",
   "system": {
     "category": "exaltedAsset",

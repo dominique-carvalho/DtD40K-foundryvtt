@@ -1,7 +1,7 @@
 {
   "name": "Cloudkill",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/cloudkill.svg",
   "system": {
     "description": "<p>Poison cloud of up to one 5m cube per caster level; blocks sight past 2m and always gives concealment. Breathing creatures that begin a turn in it or cross it are treated as hit by a Toxic weapon. Disperses in about five minutes normally.</p>",
     "source": {

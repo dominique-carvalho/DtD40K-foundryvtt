@@ -1,7 +1,7 @@
 {
   "name": "Plasma Grenade",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-thrown/plasma-grenade.svg",
   "system": {
     "description": "<p>A grenade that deliberately breaches its plasma containment, releasing a burst of heat and light like a small sun. It is deadly against nearly any target.</p>",
     "source": {

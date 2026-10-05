@@ -1,7 +1,7 @@
 {
   "name": "Lich",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/lich.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -195,7 +195,7 @@
     {
       "name": "Unarmed",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/unarmed.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -240,7 +240,10 @@
   "prototypeToken": {
     "name": "Lich",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/lich.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN6a34f5f62b1b",

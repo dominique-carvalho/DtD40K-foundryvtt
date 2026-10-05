@@ -3,7 +3,7 @@
   "_key": "!items!dtdC3d304920a09e",
   "name": "Spellshooter",
   "type": "class",
-  "img": "icons/svg/lightning.svg",
+  "img": "systems/dtd40k/assets/icons/class/spellshooter.svg",
   "folder": "dtdCFd1fb65dfd09",
   "system": {
     "description": "<p>The Magitek Gunman track begins with this shooter who charges bullets with magic. Spellshooters bless their guns and fire elemental shots.</p>",

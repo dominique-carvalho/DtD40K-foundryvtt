@@ -3,7 +3,7 @@
   "_key": "!items!dtdF8e2fa09ac575",
   "name": "Spell Parry",
   "type": "feat",
-  "img": "icons/svg/mage-shield.svg",
+  "img": "systems/dtd40k/assets/icons/feat/spell-parry.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

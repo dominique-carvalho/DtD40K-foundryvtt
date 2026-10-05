@@ -1,7 +1,7 @@
 {
   "name": "Great Weapon",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/great-weapon.svg",
   "system": {
     "description": "<p>A generic profile for large two-handed weapons such as greataxes, big swords, glaives or huge iron clubs, which all hit about equally hard. Choose whether it deals Rending (R) or Impact (I) damage when it is purchased.</p>",
     "source": {

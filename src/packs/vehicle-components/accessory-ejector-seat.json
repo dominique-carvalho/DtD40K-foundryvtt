@@ -1,7 +1,7 @@
 {
   "name": "Ejector Seat",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/ejector-seat.svg",
   "system": {
     "description": "<p>When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.</p>",
     "source": {

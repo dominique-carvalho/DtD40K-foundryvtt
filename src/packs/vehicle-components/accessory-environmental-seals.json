@@ -1,7 +1,7 @@
 {
   "name": "Environmental Seals",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/environmental-seals.svg",
   "system": {
     "description": "<p>Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.</p>",
     "source": {

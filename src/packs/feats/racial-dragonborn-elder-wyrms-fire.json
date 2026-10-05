@@ -3,7 +3,7 @@
   "_key": "!items!dtdFbc40defd0879",
   "name": "Elder Wyrm's Fire",
   "type": "feat",
-  "img": "icons/svg/fire.svg",
+  "img": "systems/dtd40k/assets/icons/racial-feat/elder-wyrms-fire.svg",
   "folder": "dtdFld18a473cdba",
   "system": {
     "category": "racialFeat",

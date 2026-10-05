@@ -1,7 +1,7 @@
 {
   "name": "Grimscythe",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/grimscythe.svg",
   "system": {
     "description": "<p>A larger, two-handed version of the Syrneth scythe. It is even more lethal than the smaller weapon but somewhat slower to defend with.</p>",
     "source": {

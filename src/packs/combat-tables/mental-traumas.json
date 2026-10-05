@@ -1,6 +1,6 @@
 {
   "name": "Mental Traumas",
-  "img": "icons/svg/daze.svg",
+  "img": "systems/dtd40k/assets/icons/table/mental-traumas.svg",
   "description": "<p>Failed Trauma Test: roll 1d10, +1 per Check (DtD 7.7a p. 452).</p>",
   "formula": "1d10",
   "replacement": true,
@@ -9,7 +9,7 @@
     {
       "type": "text",
       "name": "Trauma 1-2",
-      "img": "icons/svg/daze.svg",
+      "img": "systems/dtd40k/assets/icons/table/mental-traumas.svg",
       "description": "<p>Withdrawn: -1 Charisma for 3d10 hours.</p>",
       "weight": 1,
       "range": [
@@ -28,7 +28,7 @@
     {
       "type": "text",
       "name": "Trauma 3-4",
-      "img": "icons/svg/daze.svg",
+      "img": "systems/dtd40k/assets/icons/table/mental-traumas.svg",
       "description": "<p>Compulsive behaviour: -1k0 on Int, Fel and Cmp Tests for 3d10 hours.</p>",
       "weight": 1,
       "range": [
@@ -47,7 +47,7 @@
     {
       "type": "text",
       "name": "Trauma 5-6",
-      "img": "icons/svg/daze.svg",
+      "img": "systems/dtd40k/assets/icons/table/mental-traumas.svg",
       "description": "<p>Paranoid: +1k0 Perception Tests, -1 Willpower for 1d5 days.</p>",
       "weight": 1,
       "range": [
@@ -66,7 +66,7 @@
     {
       "type": "text",
       "name": "Trauma 7-8",
-      "img": "icons/svg/daze.svg",
+      "img": "systems/dtd40k/assets/icons/table/mental-traumas.svg",
       "description": "<p>Severe phobia for 1d5 days.</p>",
       "weight": 1,
       "range": [
@@ -85,7 +85,7 @@
     {
       "type": "text",
       "name": "Trauma 9",
-      "img": "icons/svg/daze.svg",
+      "img": "systems/dtd40k/assets/icons/table/mental-traumas.svg",
       "description": "<p>Agitated: -1k0 to all Tests when stressed (e.g. combat) for 1d5 days.</p>",
       "weight": 1,
       "range": [
@@ -104,7 +104,7 @@
     {
       "type": "text",
       "name": "Trauma 10",
-      "img": "icons/svg/daze.svg",
+      "img": "systems/dtd40k/assets/icons/table/mental-traumas.svg",
       "description": "<p>Nightmares: no HP recovery from bed rest for 1d10 days.</p>",
       "weight": 1,
       "range": [
@@ -123,7 +123,7 @@
     {
       "type": "text",
       "name": "Trauma 11",
-      "img": "icons/svg/daze.svg",
+      "img": "systems/dtd40k/assets/icons/table/mental-traumas.svg",
       "description": "<p>Mute for 1d5 days.</p>",
       "weight": 1,
       "range": [
@@ -142,7 +142,7 @@
     {
       "type": "text",
       "name": "Trauma 12",
-      "img": "icons/svg/daze.svg",
+      "img": "systems/dtd40k/assets/icons/table/mental-traumas.svg",
       "description": "<p>Refuses food/drink: every characteristic -1 for 1d10 days.</p>",
       "weight": 1,
       "range": [
@@ -161,7 +161,7 @@
     {
       "type": "text",
       "name": "Trauma 13",
-      "img": "icons/svg/daze.svg",
+      "img": "systems/dtd40k/assets/icons/table/mental-traumas.svg",
       "description": "<p>Hysterical blindness or deafness for 1d10 days.</p>",
       "weight": 1,
       "range": [
@@ -180,7 +180,7 @@
     {
       "type": "text",
       "name": "Trauma 14+",
-      "img": "icons/svg/daze.svg",
+      "img": "systems/dtd40k/assets/icons/table/mental-traumas.svg",
       "description": "<p>Unresponsive: cannot initiate actions, can be led, for 1d10 days.</p>",
       "weight": 1,
       "range": [

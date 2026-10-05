@@ -1,7 +1,7 @@
 {
   "name": "Dragonfire Adept",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/dragonfire-adept.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -169,7 +169,7 @@
     {
       "name": "Fencing Sword",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/fencing-sword.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -212,7 +212,7 @@
     {
       "name": "Meltagun",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/meltagun.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -250,7 +250,7 @@
     {
       "name": "Dragon Breath",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/dragon-breath.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -295,7 +295,10 @@
   "prototypeToken": {
     "name": "Dragonfire Adept",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/dragonfire-adept.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN97a4714e3c3b",

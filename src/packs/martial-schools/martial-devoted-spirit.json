@@ -1,7 +1,7 @@
 {
   "name": "Devoted Spirit",
   "type": "martialSchool",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/devoted-spirit.svg",
   "system": {
     "description": "<p>A zealous, faith-driven style that punishes foes of the cause and sustains allies, using flails.</p>",
     "source": {

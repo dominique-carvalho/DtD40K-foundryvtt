@@ -1,7 +1,7 @@
 {
   "name": "Call Item",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/call-item.svg",
   "system": {
     "description": "<p>Marks an item that fits in one hand; the caster can teleport it into their hand as a free action at any time, whatever the distance. Marked items at once are limited to the caster's ranks in Conjuration.</p>",
     "source": {

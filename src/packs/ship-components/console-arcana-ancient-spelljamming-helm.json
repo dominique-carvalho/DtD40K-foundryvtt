@@ -1,7 +1,7 @@
 {
   "name": "Ancient Spelljamming Helm",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/ancient-spelljamming-helm.svg",
   "system": {
     "description": "<p>Old, risky helm design that is very fast: warp journeys take half the time, but Warp Encounter rolls get +2.</p>",
     "source": {

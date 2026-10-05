@@ -1,7 +1,7 @@
 {
   "name": "Flail",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/flail.svg",
   "system": {
     "description": "<p>A single spiked ball on a chain attached to a handle. Hard to learn, but once mastered it is excellent at slipping around an opponent's guard.</p>",
     "source": {

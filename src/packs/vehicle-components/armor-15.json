@@ -1,7 +1,7 @@
 {
   "name": "Armor 15",
   "type": "vehicleComponent",
-  "img": "icons/svg/statue.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/armor-15.svg",
   "system": {
     "description": "<p>15 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
     "source": {

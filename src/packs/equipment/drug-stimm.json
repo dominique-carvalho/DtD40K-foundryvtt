@@ -1,7 +1,7 @@
 {
   "name": "Stimm",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/stimm.svg",
   "system": {
     "description": "<p>A family of military painkillers and stimulants, usually injected or applied as slap-patches, that let wounded soldiers keep fighting; abusers are pale and thin-blooded.</p><p>For one scene critical damage effects (except fatal ones) can be disregarded, as well as any effect that works through pain. When the scene ends, every effect ignored this way strikes them in full.</p>",
     "source": {

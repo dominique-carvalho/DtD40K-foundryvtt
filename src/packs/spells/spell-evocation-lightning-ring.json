@@ -1,7 +1,7 @@
 {
   "name": "Lightning Ring",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/lightning-ring.svg",
   "system": {
     "description": "<p>Aura dealing Xk2 E to all in melee reach as the caster's turn ends, X = Level + raises. Half action: shoot a bolt at an enemy within 40m (ranged attack, 5k2 E, Shocking); each bolt lowers X by 1.</p>",
     "source": {

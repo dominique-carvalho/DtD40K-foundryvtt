@@ -1,7 +1,7 @@
 {
   "name": "Open Topped",
   "type": "vehicleComponent",
-  "img": "icons/svg/hazard.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/open-topped.svg",
   "system": {
     "description": "<p>Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.</p>",
     "source": {

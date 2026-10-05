@@ -1,7 +1,7 @@
 {
   "name": "Monitor-Class",
   "type": "shipComponent",
-  "img": "icons/svg/castle.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/monitor-class.svg",
   "system": {
     "description": "<p>Long-range explorer with big storage vaults and strong sensors; resold units get very different fittings.</p>",
     "source": {

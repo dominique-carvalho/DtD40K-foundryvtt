@@ -1,7 +1,7 @@
 {
   "name": "Custom Escort",
   "type": "shipComponent",
-  "img": "icons/svg/clockwork.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/custom-escort.svg",
   "system": {
     "description": "<p>Most commonly built custom frame; cheap and quick, easy to specialize.</p><p>Spend its 10 Customization Points on the chart of p. 393; its 0 non-universal console slots go to the types you choose.</p>",
     "source": {

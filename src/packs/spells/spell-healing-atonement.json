@@ -1,7 +1,7 @@
 {
   "name": "Atonement",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/atonement.svg",
   "system": {
     "description": "<p>Removes the target's Degeneration at their highest Devotion level (e.g. only the Devotion 5 one out of 5/4/3). It cannot help the same target again until their Devotion rises by at least one. No material is named.</p>",
     "source": {

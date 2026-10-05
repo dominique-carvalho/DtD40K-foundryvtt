@@ -1,7 +1,7 @@
 {
   "name": "Type-32 RAV",
   "type": "vehicle",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle/type-32-rav.svg",
   "system": {
     "size": 8,
     "speed": 12,
@@ -31,7 +31,7 @@
     {
       "name": "Hover Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/direction.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/hover-drive.svg",
       "system": {
         "description": "<p>Matches wheels for pace and needs less road, but steers like someone skating on a frozen pond.</p><p><strong>Rise Above.</strong> Difficult terrain does not slow it, and it can travel across liquid surfaces as if on ground.</p><p><strong>Slide About.</strong> Handling is slippery: every Control Test needs 2 additional raises to pass.</p>",
         "source": {
@@ -74,7 +74,7 @@
     {
       "name": "Good Lightweight Frame",
       "type": "vehicleComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/good-lightweight-frame.svg",
       "system": {
         "description": "<p>Good Lightweight frame: 10 HP and Resilience 4. Comes with a Cockpit.</p>",
         "source": {
@@ -114,7 +114,7 @@
     {
       "name": "Armor 7",
       "type": "vehicleComponent",
-      "img": "icons/svg/statue.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/armor-7.svg",
       "system": {
         "description": "<p>7 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
         "source": {
@@ -154,7 +154,7 @@
     {
       "name": "Afterburners",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/afterburners.svg",
       "system": {
         "description": "<p>Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.</p>",
         "source": {
@@ -196,7 +196,7 @@
     {
       "name": "Open Topped",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/open-topped.svg",
       "system": {
         "description": "<p>Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.</p>",
         "source": {
@@ -240,7 +240,7 @@
     {
       "name": "Multilas (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/multilas-macronized.svg",
       "system": {
         "description": "<p>Pulsed rapid-fire laser, mainly an anti-infantry tool.</p>",
         "source": {
@@ -295,7 +295,10 @@
   "prototypeToken": {
     "name": "Type-32 RAV",
     "actorLink": true,
-    "disposition": 0
+    "disposition": 0,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/vehicle/type-32-rav.svg"
+    }
   },
   "flags": {},
   "_id": "dtdWd53366f0db75",

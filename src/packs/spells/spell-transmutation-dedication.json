@@ -1,7 +1,7 @@
 {
   "name": "Dedication",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/dedication.svg",
   "system": {
     "description": "<p>Links an item to a shapechanger so it transforms with them instead of dropping or tearing apart.</p>",
     "source": {

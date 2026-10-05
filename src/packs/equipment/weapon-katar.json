@@ -1,7 +1,7 @@
 {
   "name": "Katar",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/katar.svg",
   "system": {
     "description": "<p>A punch dagger with a hilt set crosswise to the blade, gripped in the fist so the blade juts forward and turns punches into stabs. It is used with the Brawl skill as an unarmed attack.</p>",
     "source": {

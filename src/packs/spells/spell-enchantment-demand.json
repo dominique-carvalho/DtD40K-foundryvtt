@@ -1,7 +1,7 @@
 {
   "name": "Demand",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/demand.svg",
   "system": {
     "description": "<p>As Suggestion but with no saving throw; the target complies as best it can unless it spends 1 Resolve (plus 1 per raise) to refuse. Only one Demand from the same caster per target every 24 hours.</p>",
     "source": {

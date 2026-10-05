@@ -3,7 +3,7 @@
   "_key": "!items!dtdC108912a28356",
   "name": "Sorcerer-Swordsman",
   "type": "class",
-  "img": "icons/svg/mage-shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/sorcerer-swordsman.svg",
   "folder": "dtdCFdaebebd4a00",
   "system": {
     "description": "<p>The pinnacle of the Arcane Knight path, a blade-wielding sorcerer whose Mental Fortress and Spell Shield let them stand in melee while hurling magic, optionally clad in heavy armor.</p>",

@@ -1,7 +1,7 @@
 {
   "name": "Space Pirate Crew",
   "type": "minionSquad",
-  "img": "icons/svg/pawprint.svg",
+  "img": "systems/dtd40k/assets/icons/minion-squad/space-pirate-crew.svg",
   "system": {
     "threatRating": 3,
     "count": 6,
@@ -27,7 +27,10 @@
   "prototypeToken": {
     "name": "Space Pirate Crew",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/minion-squad/space-pirate-crew.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN0dd162fb05c9",

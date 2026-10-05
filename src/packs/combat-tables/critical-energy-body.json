@@ -1,6 +1,6 @@
 {
   "name": "Critical — Energy — Body",
-  "img": "icons/svg/blood.svg",
+  "img": "systems/dtd40k/assets/icons/table/critical-energy-body.svg",
   "description": "<p>Critical Damage (Energy, Body), DtD 7.7a p. 438. Use the row equal to the accumulated Critical Damage.</p>",
   "formula": "1d5",
   "replacement": true,
@@ -9,7 +9,7 @@
     {
       "type": "text",
       "name": "Energy Body 1",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-energy-body.svg",
       "description": "<p>Winded: limited to one Half Action next turn.</p>",
       "weight": 1,
       "range": [
@@ -30,7 +30,7 @@
     {
       "type": "text",
       "name": "Energy Body 2",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-energy-body.svg",
       "description": "<p>Torso badly burned: 1d5 Fatigue.</p>",
       "weight": 1,
       "range": [
@@ -51,7 +51,7 @@
     {
       "type": "text",
       "name": "Energy Body 3",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-energy-body.svg",
       "description": "<p>Prone; Stunned 1d10 rounds.</p>",
       "weight": 1,
       "range": [
@@ -76,7 +76,7 @@
     {
       "type": "text",
       "name": "Energy Body 4",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-energy-body.svg",
       "description": "<p>Skin burned away: Stunned 2d10 rounds; halve Str, Con and Dex while that Critical Damage remains.</p>",
       "weight": 1,
       "range": [
@@ -100,7 +100,7 @@
     {
       "type": "text",
       "name": "Energy Body 5",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-energy-body.svg",
       "description": "<p>Engulfed in flame; left a charred corpse.</p>",
       "weight": 1,
       "range": [

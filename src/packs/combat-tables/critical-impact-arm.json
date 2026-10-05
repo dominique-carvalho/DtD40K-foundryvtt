@@ -1,6 +1,6 @@
 {
   "name": "Critical — Impact — Arm",
-  "img": "icons/svg/blood.svg",
+  "img": "systems/dtd40k/assets/icons/table/critical-impact-arm.svg",
   "description": "<p>Critical Damage (Impact, Arm), DtD 7.7a p. 440. Use the row equal to the accumulated Critical Damage.</p>",
   "formula": "1d5",
   "replacement": true,
@@ -9,7 +9,7 @@
     {
       "type": "text",
       "name": "Impact Arm 1",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-impact-arm.svg",
       "description": "<p>Limb numbed; drops what that hand holds.</p>",
       "weight": 1,
       "range": [
@@ -28,7 +28,7 @@
     {
       "type": "text",
       "name": "Impact Arm 2",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-impact-arm.svg",
       "description": "<p>Crushing pain: 1 Fatigue.</p>",
       "weight": 1,
       "range": [
@@ -49,7 +49,7 @@
     {
       "type": "text",
       "name": "Impact Arm 3",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-impact-arm.svg",
       "description": "<p>Hand smashed, 1d5 fingers broken (thumb counts): 1 Fatigue; hand unusable until medical attention.</p>",
       "weight": 1,
       "range": [
@@ -70,7 +70,7 @@
     {
       "type": "text",
       "name": "Impact Arm 4",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-impact-arm.svg",
       "description": "<p>Arm broken, useless until healed; 2 Fatigue.</p>",
       "weight": 1,
       "range": [
@@ -91,7 +91,7 @@
     {
       "type": "text",
       "name": "Impact Arm 5",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-impact-arm.svg",
       "description": "<p>Arm ripped off; collapses and dies.</p>",
       "weight": 1,
       "range": [

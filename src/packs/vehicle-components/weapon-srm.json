@@ -1,7 +1,7 @@
 {
   "name": "SRM",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/srm.svg",
   "system": {
     "description": "<p>Short Range Missiles: direct-fire, less complex, trading reach for impact; good against troops and vehicles.</p>",
     "source": {

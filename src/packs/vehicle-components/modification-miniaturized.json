@@ -1,7 +1,7 @@
 {
   "name": "Miniaturized",
   "type": "vehicleComponent",
-  "img": "icons/svg/hazard.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/miniaturized.svg",
   "system": {
     "description": "<p>Applied to a component: halve its slots (round up) and double its cost; stackable, doubling cost again each time.</p>",
     "source": {

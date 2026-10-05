@@ -1,7 +1,7 @@
 {
   "name": "Energy Bits",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/energy-bits.svg",
   "system": {
     "description": "<p>Creates one energy sphere lasting the scene. At the start of the caster's turn any number may be spent as a free action, each making a 50m ranged attack for 4k2 E; at most 2 spheres per target per turn.</p>",
     "source": {

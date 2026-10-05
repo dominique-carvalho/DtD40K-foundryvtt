@@ -1,7 +1,7 @@
 {
   "name": "Frag Missile",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/frag-missile.svg",
   "system": {
     "description": "<p>A fragmentation warhead for the missile launcher, filled with shrapnel that shreds infantry across a wide area.</p>",
     "source": {

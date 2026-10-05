@@ -1,7 +1,7 @@
 {
   "name": "Catapult",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/catapult.svg",
   "system": {
     "description": "<p>Slow, crude rock-slinger still found on feudal or desperate worlds.</p>",
     "source": {

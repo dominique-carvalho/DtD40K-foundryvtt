@@ -1,7 +1,7 @@
 {
   "name": "Dominate",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/dominate.svg",
   "system": {
     "description": "<p>Caster controls a creature within 10m, maintained by spending a half action each round; resisted with Arcana + Willpower. Orders against its nature give it one free raise to resist; self-harm or violence toward allies gives three.</p>",
     "source": {

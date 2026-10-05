@@ -1,7 +1,7 @@
 {
   "name": "Programmed Image",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/programmed-image.svg",
   "system": {
     "description": "<p>An Image whose maximum duration is one hour per Level, programmable to respond to a number of triggers up to the caster's Intelligence; may include sounds and speech.</p>",
     "source": {

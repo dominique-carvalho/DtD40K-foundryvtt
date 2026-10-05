@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsWerBlackSpi",
   "name": "Black Spiral Dancers",
   "type": "feat",
-  "img": "icons/svg/blood.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/black-spiral-dancers.svg",
   "folder": "dtdFldWerTribe00",
   "system": {
     "category": "exaltedAsset",

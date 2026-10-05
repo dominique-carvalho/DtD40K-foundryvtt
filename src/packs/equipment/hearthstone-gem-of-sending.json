@@ -1,7 +1,7 @@
 {
   "name": "Gem of Sending",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/gem-of-sending.svg",
   "system": {
     "description": "<p>A cloudy white half-sphere always found with its bonded twin (the rating covers the pair). The two can relay messages across any distance, but only to each other, only when both are mounted in settings, and only a sentence or two at a time.</p>",
     "source": {

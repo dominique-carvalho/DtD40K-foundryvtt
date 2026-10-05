@@ -1,7 +1,7 @@
 {
   "name": "Drive",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/drive.svg",
   "system": {
     "description": "<p>An inhaled cognitive stimulant popular wherever people compete with their intellect, such as universities and law firms; users become so absorbed in a task that they ignore even obvious danger.</p><p>Through to the scene's end, the user has +1 to every mental characteristic, yet every Perception test they attempt fails automatically.</p>",
     "source": {

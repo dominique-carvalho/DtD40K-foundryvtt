@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsVamTremere0",
   "name": "Tremere",
   "type": "feat",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/tremere.svg",
   "folder": "dtdFldVamClan000",
   "system": {
     "category": "exaltedAsset",

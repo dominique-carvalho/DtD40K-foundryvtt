@@ -1,7 +1,7 @@
 {
   "name": "Machinator Array",
   "type": "gear",
-  "img": "icons/svg/clockwork.svg",
+  "img": "systems/dtd40k/assets/icons/cybernetic/machinator-array.svg",
   "system": {
     "description": "<p>An implanted partial exoskeleton that is very hard to hide. It grants +1 Strength, +1 Resilience and -1 Dexterity; the bearer weighs about three times as much as normal and can no longer swim.</p><p>Poor: sluggish, so the bearer can neither Run nor Dodge. Good: partly concealed, passing as an exotic exoskeleton or armor. Best: fully concealable, though the bearer seems to swell when exerting full strength.</p>",
     "source": {

@@ -3,7 +3,7 @@
   "_key": "!items!dtdCa103d381811c",
   "name": "Guardsman",
   "type": "class",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/guardsman.svg",
   "folder": "dtdCFd29e9d6f032",
   "system": {
     "description": "<p>The second class of the Guardsman track, turning a conscript into a seasoned rifleman. Guardsmen fire twice in quick succession, land precise shots and hit targets at long range.</p>",

@@ -1,7 +1,7 @@
 {
   "name": "Chain",
   "type": "armor",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/armor/chain.svg",
   "system": {
     "description": "<p>Primitive medium armor of interlocked metal rings that cushion and turn aside blows, among the most widespread armor on feral worlds.</p><p>Like all primitive armor, its rarity counts one step lower when it is chosen as an Artifact.</p>",
     "source": {

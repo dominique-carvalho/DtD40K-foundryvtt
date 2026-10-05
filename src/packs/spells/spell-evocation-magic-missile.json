@@ -1,7 +1,7 @@
 {
   "name": "Magic Missile",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/magic-missile.svg",
   "system": {
     "description": "<p>Deals 2k1 E to one target up to 30m away; it cannot be dodged.</p>",
     "source": {

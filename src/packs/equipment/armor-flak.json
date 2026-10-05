@@ -1,7 +1,7 @@
 {
   "name": "Flak",
   "type": "armor",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/armor/flak.svg",
   "system": {
     "description": "<p>Medium armor built from stacked ablative and shock-absorbing layers, made to stop shrapnel, small-arms fire and nearby explosions.</p><p>Against weapons with the Blast quality its AP is doubled, unless the wearer was the direct target of the hit rather than caught in the area.</p>",
     "source": {

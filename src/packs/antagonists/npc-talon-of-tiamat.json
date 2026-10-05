@@ -1,7 +1,7 @@
 {
   "name": "Talon of Tiamat",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/talon-of-tiamat.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -151,7 +151,7 @@
     {
       "name": "Fencing Sword",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/fencing-sword.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -194,7 +194,7 @@
     {
       "name": "Pump Shotgun",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/pump-shotgun.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -237,7 +237,7 @@
     {
       "name": "Dragon Breath",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/dragon-breath.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -282,7 +282,10 @@
   "prototypeToken": {
     "name": "Talon of Tiamat",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/talon-of-tiamat.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNe15ff0595f30",

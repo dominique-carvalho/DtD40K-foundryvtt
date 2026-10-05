@@ -1,7 +1,7 @@
 {
   "name": "Boltgun",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/boltgun.svg",
   "system": {
     "description": "<p>The classic bolter rifle, firing rocket-propelled explosive shells with a distinctive roar followed by the blast on impact. Bolter weapons are mostly sized for Aasimar and Tieflings and need skilled maintenance and costly ammunition.</p>",
     "source": {

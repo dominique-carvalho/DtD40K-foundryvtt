@@ -1,7 +1,7 @@
 {
   "name": "Heavy Lance",
   "type": "shipComponent",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/heavy-lance.svg",
   "system": {
     "description": "<p>Longest-reaching, hardest-hitting non-torpedo weapon; its limit is the crew effort needed per shot.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
     "source": {

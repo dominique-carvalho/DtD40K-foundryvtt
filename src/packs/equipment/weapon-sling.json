@@ -1,7 +1,7 @@
 {
   "name": "Sling",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/sling.svg",
   "system": {
     "description": "<p>A hard-to-master strap for hurling stones, metal shot or even grenades. When it throws a grenade, use the grenade's effects in place of the sling's damage but keep the sling's range.</p>",
     "source": {

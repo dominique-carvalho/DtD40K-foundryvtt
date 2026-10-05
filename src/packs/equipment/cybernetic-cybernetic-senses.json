@@ -1,7 +1,7 @@
 {
   "name": "Cybernetic Senses",
   "type": "gear",
-  "img": "icons/svg/clockwork.svg",
+  "img": "systems/dtd40k/assets/icons/cybernetic/cybernetic-senses.svg",
   "system": {
     "description": "<p>Artificial replacements for sight, hearing, touch or taste, or entirely new senses. Common versions are clearly artificial and roughly match human senses, with no further effect.</p><p>Poor: -2k0 on Tests that use the sense. Good: grants Heightened Senses for that sense and +2k0 on Tests to resist attacks on it, such as blinding flashes or deafening noise. Extras such as telescopic sight, a photo-visor, darksight or a built-in micro-bead are each paid for as a separate implant. Best adds no further benefit beyond Good.</p>",
     "source": {

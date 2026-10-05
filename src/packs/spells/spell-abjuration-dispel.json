@@ -1,7 +1,7 @@
 {
   "name": "Dispel",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/dispel.svg",
   "system": {
     "description": "<p>Reaction that counters another caster's spell in progress; its TN equals that caster's Focus Power result.</p>",
     "source": {

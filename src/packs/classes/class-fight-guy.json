@@ -3,7 +3,7 @@
   "_key": "!items!dtdC430464db7ce0",
   "name": "Fight Guy",
   "type": "class",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/class/fight-guy.svg",
   "folder": "dtdCFd1ee77afc60",
   "system": {
     "description": "<p>The Fighter track's dedicated brawler, focused purely on winning melee fights. It stacks armor and weapon specializations, Crushing Blow and Swift Attack, and trains in the White Raven, Iron Heart, Stone Dragon and Diamond Mind schools.</p>",

@@ -1,7 +1,7 @@
 {
   "name": "Hidden Compartment",
   "type": "vehicleComponent",
-  "img": "icons/svg/chest.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/hidden-compartment.svg",
   "system": {
     "description": "<p>One chosen Cargo Space cannot be detected by outside scans.</p>",
     "source": {

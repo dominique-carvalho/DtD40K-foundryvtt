@@ -1,7 +1,7 @@
 {
   "name": "Energy Wall",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/energy-wall.svg",
   "system": {
     "description": "<p>A see-through wall 10m long that can be targeted through; anyone crossing it takes 4k2 E. It lasts to the end of the scene.</p>",
     "source": {

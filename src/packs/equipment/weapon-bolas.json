@@ -1,7 +1,7 @@
 {
   "name": "Bolas",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-thrown/bolas.svg",
   "system": {
     "description": "<p>A set of weighted balls (some designs carry up to eight) joined by heavy cords or wire, thrown to tangle a target's limbs. It deals no damage and is usually non-lethal, so bounty hunters and local law enforcement favour it.</p>",
     "source": {

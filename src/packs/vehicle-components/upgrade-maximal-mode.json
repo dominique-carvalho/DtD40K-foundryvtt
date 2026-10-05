@@ -1,7 +1,7 @@
 {
   "name": "Maximal Mode",
   "type": "vehicleComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/maximal-mode.svg",
   "system": {
     "description": "<p>Bombast maximal shot: much harder hit, then the capacitor must recharge.</p><p>Damage 5k5+10 E; Pen 10; ROF S/-; Range 300m; Recharge.</p>",
     "source": {

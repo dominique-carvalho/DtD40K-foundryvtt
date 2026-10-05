@@ -1,7 +1,7 @@
 {
   "name": "Library Computer",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/library-computer.svg",
   "system": {
     "description": "<p>Huge onboard database. After a few minutes with the main computer, a character can attempt Lore tests untrained and gets +1k1 on all Lore tests.</p>",
     "source": {

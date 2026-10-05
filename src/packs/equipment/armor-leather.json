@@ -1,7 +1,7 @@
 {
   "name": "Leather",
   "type": "armor",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/armor/leather.svg",
   "system": {
     "description": "<p>Primitive light armor of hardened leather; in a pinch most heavy or thick clothing counts as leathers.</p><p>Like all primitive armor, its rarity counts one step lower when it is chosen as an Artifact.</p>",
     "source": {

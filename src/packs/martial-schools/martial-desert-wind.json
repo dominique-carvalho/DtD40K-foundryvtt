@@ -1,7 +1,7 @@
 {
   "name": "Desert Wind",
   "type": "martialSchool",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/desert-wind.svg",
   "system": {
     "description": "<p>A mobile, fiery style of rapid strikes, charges and footwork, traditionally tied to Syrneth weapons.</p>",
     "source": {

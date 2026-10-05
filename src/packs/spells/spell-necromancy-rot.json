@@ -1,7 +1,7 @@
 {
   "name": "Rot",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/rot.svg",
   "system": {
     "description": "<p>Ages unattended items in a 1m cube within 20m: food spoils and water stagnates. Attended items (someone's gear) are immune.</p>",
     "source": {

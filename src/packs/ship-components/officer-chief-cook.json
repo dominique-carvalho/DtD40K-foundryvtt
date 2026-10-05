@@ -1,7 +1,7 @@
 {
   "name": "Chief Cook",
   "type": "shipComponent",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/chief-cook.svg",
   "system": {
     "description": "<p>Improves morale aboard a grim vessel. Once each journey removes 1d5 Insanity and returns one Resolve.</p>",
     "source": {

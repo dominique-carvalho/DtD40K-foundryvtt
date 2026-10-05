@@ -1,7 +1,7 @@
 {
   "name": "Enhanced Sensors",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/enhanced-sensors.svg",
   "system": {
     "description": "<p>Extra dishes and antennae improve detection; Sensors become +5.</p>",
     "source": {

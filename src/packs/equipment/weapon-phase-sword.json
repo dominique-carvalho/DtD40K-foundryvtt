@@ -1,7 +1,7 @@
 {
   "name": "Phase Sword",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/phase-sword.svg",
   "system": {
     "description": "<p>One of the deadliest weapons anyone can wield, forged with magical materials and closely guarded dark arts. Its edge is said to only half-exist, letting it pass through armour and cut the body beneath while leaving the armour unmarked.</p>",
     "source": {

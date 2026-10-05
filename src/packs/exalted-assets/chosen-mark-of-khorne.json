@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsChoKhorne00",
   "name": "Mark of Khorne",
   "type": "feat",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/mark-of-khorne.svg",
   "folder": "dtdFldChoMark000",
   "system": {
     "category": "exaltedAsset",

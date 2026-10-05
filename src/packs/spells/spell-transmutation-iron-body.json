@@ -1,7 +1,7 @@
 {
   "name": "Iron Body",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/iron-body.svg",
   "system": {
     "description": "<p>The caster's body becomes living iron: 10 armor on all locations (not stacking with other armor), no need to breathe, +2 Strength and -2 Dexterity (minimum 1).</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Setting Sun",
   "type": "martialSchool",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/setting-sun.svg",
   "system": {
     "description": "<p>An unarmed style that turns the enemy's strength and speed against them.</p>",
     "source": {

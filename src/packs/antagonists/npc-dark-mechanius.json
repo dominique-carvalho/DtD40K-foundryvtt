@@ -1,7 +1,7 @@
 {
   "name": "Dark Mechanius",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/dark-mechanius.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -165,7 +165,7 @@
     {
       "name": "Integrated Plasma Gun",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/integrated-plasma-gun.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -208,7 +208,7 @@
     {
       "name": "Power Sword",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/power-sword.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -253,7 +253,10 @@
   "prototypeToken": {
     "name": "Dark Mechanius",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/dark-mechanius.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN1c939ee02622",

@@ -1,7 +1,7 @@
 {
   "name": "Musket",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/musket.svg",
   "system": {
     "description": "<p>A crude black-powder firearm that shoots once before a lengthy reload and fails often, carried only by savages or desperate renegades. When it does connect, it is lethal against unarmoured targets.</p>",
     "source": {

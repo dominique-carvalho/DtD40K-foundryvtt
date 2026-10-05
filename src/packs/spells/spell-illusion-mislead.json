@@ -1,7 +1,7 @@
 {
   "name": "Mislead",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/mislead.svg",
   "system": {
     "description": "<p>Caster leaves an image of themself and turns invisible, then may move up to their speed; onlookers perceive nothing unusual. It ends, exposing the caster, when they attack or the image is attacked.</p>",
     "source": {

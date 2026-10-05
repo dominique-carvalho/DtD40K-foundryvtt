@@ -1,7 +1,7 @@
 {
   "name": "RAM/3",
   "type": "vehicleComponent",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/ram-3.svg",
   "system": {
     "description": "<p>AI gets 3 bonus Half Actions per scene (still max one per round).</p>",
     "source": {

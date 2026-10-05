@@ -1,7 +1,7 @@
 {
   "name": "Ninja Slayers",
   "type": "minionSquad",
-  "img": "icons/svg/pawprint.svg",
+  "img": "systems/dtd40k/assets/icons/minion-squad/ninja-slayers.svg",
   "system": {
     "threatRating": 4,
     "count": 6,
@@ -27,7 +27,10 @@
   "prototypeToken": {
     "name": "Ninja Slayers",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/minion-squad/ninja-slayers.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNa53d4da8f9fa",

@@ -1,7 +1,7 @@
 {
   "name": "Boon",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/boon.svg",
   "system": {
     "description": "<p>Allies within 10m add +1k0 to skill tests while it lasts.</p>",
     "source": {

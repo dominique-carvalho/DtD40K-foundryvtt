@@ -1,7 +1,7 @@
 {
   "name": "Luck",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/luck.svg",
   "system": {
     "description": "<p>Touched target gets 1 floating rolled die for skill tests until scene end. At most their Level in floating dice can go on a single roll; spent dice disappear.</p>",
     "source": {

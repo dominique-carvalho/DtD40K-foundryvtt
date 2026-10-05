@@ -1,7 +1,7 @@
 {
   "name": "Tzeentch",
   "type": "deity",
-  "img": "icons/svg/fire.svg",
+  "img": "systems/dtd40k/assets/icons/deity/tzeentch.svg",
   "system": {
     "description": "<p>Chessmaster god of change, hope, trickery, magic and scheming who uses followers as pieces in a vast unseen design, often lifting them to power along the way.</p>",
     "source": {

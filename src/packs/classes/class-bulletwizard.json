@@ -3,7 +3,7 @@
   "_key": "!items!dtdCbea284b5b4db",
   "name": "Bulletwizard",
   "type": "class",
-  "img": "icons/svg/lightning.svg",
+  "img": "systems/dtd40k/assets/icons/class/bulletwizard.svg",
   "folder": "dtdCFd1fb65dfd09",
   "system": {
     "description": "<p>A Magitek Gunman who loads spells into ammunition, hitting distant targets with Far Shot and elemental rounds while wielding Evocation and Conjuration.</p>",

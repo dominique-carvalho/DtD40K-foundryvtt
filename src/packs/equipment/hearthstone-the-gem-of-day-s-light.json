@@ -1,7 +1,7 @@
 {
   "name": "The Gem of Day's Light",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/the-gem-of-days-light.svg",
   "system": {
     "description": "<p>A yellow gem with a seemingly endless inner radiance. By concentrating, the bearer makes it shine with natural sunlight that lights everything within a kilometre, for as long as desired, and can end the glow instantly.</p>",
     "source": {

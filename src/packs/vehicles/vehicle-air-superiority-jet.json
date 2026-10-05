@@ -1,7 +1,7 @@
 {
   "name": "Air Superiority Jet",
   "type": "vehicle",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle/air-superiority-jet.svg",
   "system": {
     "size": 17,
     "speed": 12,
@@ -31,7 +31,7 @@
     {
       "name": "Aerospace Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/wing.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/aerospace-drive.svg",
       "system": {
         "description": "<p>Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.</p><p><strong>Stalin.</strong> Must keep moving or start to fall: it needs Momentum 3 to take off and must cover at least 30 x base Speed meters per round to stay up.</p>",
         "source": {
@@ -73,7 +73,7 @@
     {
       "name": "Best Lightweight Frame",
       "type": "vehicleComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/best-lightweight-frame.svg",
       "system": {
         "description": "<p>Best Lightweight frame: 20 HP and Resilience 6. Comes with a Cockpit.</p>",
         "source": {
@@ -113,7 +113,7 @@
     {
       "name": "Armor 4",
       "type": "vehicleComponent",
-      "img": "icons/svg/statue.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/armor-4.svg",
       "system": {
         "description": "<p>4 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
         "source": {
@@ -153,7 +153,7 @@
     {
       "name": "Afterburners",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/afterburners.svg",
       "system": {
         "description": "<p>Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.</p>",
         "source": {
@@ -195,7 +195,7 @@
     {
       "name": "Ejector Seat (Macronized)",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/ejector-seat-macronized.svg",
       "system": {
         "description": "<p>When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.</p>",
         "source": {
@@ -237,7 +237,7 @@
     {
       "name": "Environmental Seals",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/environmental-seals.svg",
       "system": {
         "description": "<p>Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.</p>",
         "source": {
@@ -282,7 +282,7 @@
     {
       "name": "XL Engine (Rating 4)",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/xl-engine-rating-4.svg",
       "system": {
         "description": "<p>Oversized engine adding 4 to maximum Momentum, even beyond the usual cap of 10.</p>",
         "source": {
@@ -323,7 +323,7 @@
     {
       "name": "Sensor System (Standard) (Macronized)",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/sensor-system-standard-macronized.svg",
       "system": {
         "description": "<p>Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.</p>",
         "source": {
@@ -366,7 +366,7 @@
     {
       "name": "Flawed (Hangar Queen)",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/flawed-hangar-queen.svg",
       "system": {
         "description": "<p>After each sortie it needs upkeep lasting the deployment time plus 8 hours.</p>",
         "source": {
@@ -407,7 +407,7 @@
     {
       "name": "LRM",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/lrm.svg",
       "system": {
         "description": "<p>Long Range Missile rack firing volleys to extreme range, with several ammo types.</p>",
         "source": {
@@ -465,7 +465,7 @@
     {
       "name": "Light Punisher Gatling Cannon",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/light-punisher-gatling-cannon.svg",
       "system": {
         "description": "<p>Rotary-barrel autocannon deadly to lightly armoured vehicles and big living targets; banned against infantry in many Spheres.</p>",
         "source": {
@@ -525,7 +525,10 @@
   "prototypeToken": {
     "name": "Air Superiority Jet",
     "actorLink": true,
-    "disposition": 0
+    "disposition": 0,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/vehicle/air-superiority-jet.svg"
+    }
   },
   "flags": {},
   "_id": "dtdW0d04b6bd0efb",

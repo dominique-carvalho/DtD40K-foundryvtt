@@ -3,7 +3,7 @@
   "_key": "!items!dtdExalDaemonhst",
   "name": "Daemonhost",
   "type": "exaltation",
-  "img": "icons/svg/terror.svg",
+  "img": "systems/dtd40k/assets/icons/exaltation/daemonhost.svg",
   "system": {
     "description": "<p>A Daemonhost is someone who, on the brink of death, let a warp entity into their body in exchange for more life. The daemon does not simply take control: it merges with the dying soul, and the being that rises is something new — it keeps all of the host's memories but is bent by the daemon's cravings. Of all the Exalted, they are the ones mortals truly fear.</p><p>They are often confused with Atlanteans, since both are an ancient soul in a fresh body, but an Atlantean is a cursed people's second chance whereas the Daemonhost is a parasitic being that revives the dead to escape its own torment. Their magic runs on Essence, and every point spent turns into Resonance.</p>",
     "fullText": "",

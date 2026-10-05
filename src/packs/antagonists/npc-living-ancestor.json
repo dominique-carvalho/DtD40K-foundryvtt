@@ -1,7 +1,7 @@
 {
   "name": "Living Ancestor",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/living-ancestor.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -153,7 +153,7 @@
     {
       "name": "Power Axe",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/power-axe.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -196,7 +196,7 @@
     {
       "name": "Plasma Pistol",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-pistol/plasma-pistol.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -245,7 +245,10 @@
   "prototypeToken": {
     "name": "Living Ancestor",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/living-ancestor.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN761160643389",

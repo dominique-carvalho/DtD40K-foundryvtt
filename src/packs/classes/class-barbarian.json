@@ -3,7 +3,7 @@
   "_key": "!items!dtdCca92f9d3fb0d",
   "name": "Barbarian",
   "type": "class",
-  "img": "icons/svg/blood.svg",
+  "img": "systems/dtd40k/assets/icons/class/barbarian.svg",
   "folder": "dtdCFd66518142b0",
   "system": {
     "description": "<p>A raging melee brute of the Barbarian track who shrugs off blows with Iron Jaw and Diamond Body, cleaving through foes while in a Battle Rage.</p>",

@@ -1,7 +1,7 @@
 {
   "name": "Shield",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/shield.svg",
   "system": {
     "description": "<p>Cast as a reaction; the Focus Power result stands in for a Parry Test.</p>",
     "source": {

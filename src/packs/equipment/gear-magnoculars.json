@@ -1,7 +1,7 @@
 {
   "name": "Magnoculars",
   "type": "gear",
-  "img": "icons/svg/item-bag.svg",
+  "img": "systems/dtd40k/assets/icons/gear/magnoculars.svg",
   "system": {
     "description": "<p>Binocular-style vision aids that magnify distant objects. Better models can also show range readouts, detect heat, work out target positions and capture snapshots for later study.</p>",
     "source": {

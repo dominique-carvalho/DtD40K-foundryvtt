@@ -1,7 +1,7 @@
 {
   "name": "Eldarin Farseer",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/eldarin-farseer.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -186,7 +186,7 @@
     {
       "name": "Fencing Sword",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/fencing-sword.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -231,7 +231,10 @@
   "prototypeToken": {
     "name": "Eldarin Farseer",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/eldarin-farseer.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNefd587406f1e",

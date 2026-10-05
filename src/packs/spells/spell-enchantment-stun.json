@@ -1,7 +1,7 @@
 {
   "name": "Stun",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/stun.svg",
   "system": {
     "description": "<p>A creature within 10m is limited to a half action during its next turn; resisted with Arcana + Willpower. Failing that resistance by 5 or more costs its whole action.</p>",
     "source": {

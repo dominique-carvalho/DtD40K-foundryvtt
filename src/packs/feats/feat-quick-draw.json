@@ -3,7 +3,7 @@
   "_key": "!items!dtdF3c652115e590",
   "name": "Quick Draw",
   "type": "feat",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/feat/quick-draw.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

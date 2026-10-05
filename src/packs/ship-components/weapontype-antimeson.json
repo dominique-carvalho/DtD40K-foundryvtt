@@ -1,7 +1,7 @@
 {
   "name": "Antimeson (weapon type)",
   "type": "shipComponent",
-  "img": "icons/svg/aura.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/antimeson-weapon-type.svg",
   "system": {
     "description": "<p>Experimental long-range, low-damage sniping weapon, often massed in arrays.</p><p>Damage -1k0, Acc +5, Crit -2, Range Double.</p>",
     "source": {

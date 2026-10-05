@@ -1,7 +1,7 @@
 {
   "name": "Overcharged Reactor",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/overcharged-reactor.svg",
   "system": {
     "description": "<p>Safety-free engine: as a Half Action the vehicle drops by one quarter of its maximum HP (round up) and its Momentum jumps to 10.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Hand Bow",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-pistol/hand-bow.svg",
   "system": {
     "description": "<p>A crossbow-like weapon in a pistol grip, used one-handed at shorter range. It is silent and easy to break down and hide, so assassins love it.</p>",
     "source": {

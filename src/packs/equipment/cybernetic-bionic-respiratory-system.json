@@ -1,7 +1,7 @@
 {
   "name": "Bionic Respiratory System",
   "type": "gear",
-  "img": "icons/svg/clockwork.svg",
+  "img": "systems/dtd40k/assets/icons/cybernetic/bionic-respiratory-system.svg",
   "system": {
     "description": "<p>Artificial lungs that keep the body oxygenated. Common: +2k0 on Tests against gas weapons and toxins carried in the air.</p><p>Poor: same bonus, but the noisy system imposes -2k0 on Stealth tests involving sound and every Test of strenuous physical effort needs an extra raise to succeed. Good: acts as full life support if the natural respiratory system fails, and can be built to go unnoticed. Best adds no further benefit beyond Good.</p>",
     "source": {

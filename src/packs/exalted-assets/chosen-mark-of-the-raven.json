@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsChoRavenQue",
   "name": "Mark of the Raven",
   "type": "feat",
-  "img": "icons/svg/wing.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/mark-of-the-raven.svg",
   "folder": "dtdFldChoMark000",
   "system": {
     "category": "exaltedAsset",

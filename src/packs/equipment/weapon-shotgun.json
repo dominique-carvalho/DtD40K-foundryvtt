@@ -1,7 +1,7 @@
 {
   "name": "Shotgun",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/shotgun.svg",
   "system": {
     "description": "<p>A simple double-barrelled scattergun that the crudest workshops can turn out. Its devastating power at short range makes it a favourite for fighting in city streets and ship corridors.</p>",
     "source": {

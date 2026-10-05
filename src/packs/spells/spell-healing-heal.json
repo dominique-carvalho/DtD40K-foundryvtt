@@ -1,7 +1,7 @@
 {
   "name": "Heal",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/heal.svg",
   "system": {
     "description": "<p>Cure Moderate Wounds that additionally clears disease, drug effects and blood loss.</p>",
     "source": {

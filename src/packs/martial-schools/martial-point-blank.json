@@ -1,7 +1,7 @@
 {
   "name": "Point Blank",
   "type": "martialSchool",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/point-blank.svg",
   "system": {
     "description": "<p>A close-quarters gunfighting style that shoves guns into melee.</p>",
     "source": {

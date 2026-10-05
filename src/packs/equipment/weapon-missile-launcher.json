@@ -1,7 +1,7 @@
 {
   "name": "Missile Launcher",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/missile-launcher.svg",
   "system": {
     "description": "<p>A shoulder-fired tube that sends a single stabilised, guided missile at great distance and with excellent accuracy. Damage, penetration and qualities depend on the missile loaded, and resting it on the shoulder counts as bracing the heavy weapon.</p>",
     "source": {

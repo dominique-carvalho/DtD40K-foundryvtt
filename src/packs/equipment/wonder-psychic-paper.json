@@ -1,7 +1,7 @@
 {
   "name": "Psychic Paper",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/psychic-paper.svg",
   "system": {
     "description": "<p>Paper that becomes whatever document its user pictures or remembers, complete with the right stamps and signatures, and passes any casual inspection. The transformation lasts only one scene, so a document taken away for processing or closer examination soon reveals what it really is.</p>",
     "source": {

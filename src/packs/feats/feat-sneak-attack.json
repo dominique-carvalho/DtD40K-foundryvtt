@@ -3,7 +3,7 @@
   "_key": "!items!dtdF027f866e7f90",
   "name": "Sneak Attack",
   "type": "feat",
-  "img": "icons/svg/cowled.svg",
+  "img": "systems/dtd40k/assets/icons/feat/sneak-attack.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

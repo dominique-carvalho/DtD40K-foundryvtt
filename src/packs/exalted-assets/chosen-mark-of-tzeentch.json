@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsChoTzeentch",
   "name": "Mark of Tzeentch",
   "type": "feat",
-  "img": "icons/svg/fire.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/mark-of-tzeentch.svg",
   "folder": "dtdFldChoMark000",
   "system": {
     "category": "exaltedAsset",

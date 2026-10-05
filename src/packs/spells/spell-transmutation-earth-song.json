@@ -1,7 +1,7 @@
 {
   "name": "Earth Song",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/earth-song.svg",
   "system": {
     "description": "<p>Treesong for stone: permanently reshape up to 1 cubic meter.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Mobile Decouplers",
   "type": "vehicleComponent",
-  "img": "icons/svg/hazard.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/mobile-decouplers.svg",
   "system": {
     "description": "<p>Swapping between drivetrains becomes a Reaction instead of a Half Action.</p>",
     "source": {

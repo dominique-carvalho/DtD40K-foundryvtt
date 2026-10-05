@@ -1,7 +1,7 @@
 {
   "name": "Wave Motion Cannon",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/wave-motion-cannon.svg",
   "system": {
     "description": "<p>Shrunken lance battery; the strongest vehicle weapon and able to hurt starships.</p>",
     "source": {

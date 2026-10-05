@@ -1,7 +1,7 @@
 {
   "name": "Optical Mechadendrite",
   "type": "gear",
-  "img": "icons/svg/clockwork.svg",
+  "img": "systems/dtd40k/assets/icons/cybernetic/optical-mechadendrite.svg",
   "system": {
     "description": "<p>A sensor limb up to three meters long that can thin to the width of a pencil, fitted with pict-capture devices. It gives +2k0 on all Perception tests, can examine surfaces microscopically and works as a telescopic sight.</p><p>Its infrared torch and sensors remove all darkness penalties, and it carries a light that can be tinted many colors. Only tech-priests can use mechadendrites, up to a number equal to their Constitution.</p>",
     "source": {

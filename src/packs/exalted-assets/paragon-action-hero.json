@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsParAH000000",
   "name": "Action Hero",
   "type": "feat",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/action-hero.svg",
   "folder": "dtdFldParagon000",
   "system": {
     "category": "exaltedAsset",

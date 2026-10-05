@@ -3,7 +3,7 @@
   "_key": "!items!dtdCdb11012414ab",
   "name": "Magic User",
   "type": "class",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/class/magic-user.svg",
   "folder": "dtdCFd8d68c1b723",
   "system": {
     "description": "<p>The Magic User track's proper wizard, a scholar who casts from a Spell Book. It sharpens touch spells and spell penetration, joins a Wizard Tradition, and draws on six schools from Abjuration to Necromancy.</p>",

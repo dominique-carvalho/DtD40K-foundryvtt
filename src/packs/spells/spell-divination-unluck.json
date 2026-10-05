@@ -1,7 +1,7 @@
 {
   "name": "Unluck",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/unluck.svg",
   "system": {
     "description": "<p>A target within 10m loses 1 rolled die on every test; resisted with Arcana + Willpower.</p>",
     "source": {

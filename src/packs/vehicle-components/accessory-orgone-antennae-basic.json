@@ -1,7 +1,7 @@
 {
   "name": "Orgone Antennae (Basic)",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/orgone-antennae-basic.svg",
   "system": {
     "description": "<p>The pilot can channel spells through the vehicle; self-targeted spell bonuses apply to the vehicle where sensible.</p>",
     "source": {

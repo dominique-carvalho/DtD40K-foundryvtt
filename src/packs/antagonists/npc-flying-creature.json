@@ -1,7 +1,7 @@
 {
   "name": "Flying Creature",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/flying-creature.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -120,7 +120,7 @@
     {
       "name": "Bite",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/bite.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -160,7 +160,10 @@
   "prototypeToken": {
     "name": "Flying Creature",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/flying-creature.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN23b5e7fb56d1",

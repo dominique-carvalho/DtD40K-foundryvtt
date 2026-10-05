@@ -1,7 +1,7 @@
 {
   "name": "Daiklave",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/daiklave.svg",
   "system": {
     "description": "<p>A lavishly decorated double-edged blade, the signature weapon of Heroes. Forged from steel alloyed with magical materials, it is poorly balanced for ordinary mortals.</p>",
     "source": {

@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsChoMalal000",
   "name": "Mark of Malal",
   "type": "feat",
-  "img": "icons/svg/skull.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/mark-of-malal.svg",
   "folder": "dtdFldChoMark000",
   "system": {
     "category": "exaltedAsset",

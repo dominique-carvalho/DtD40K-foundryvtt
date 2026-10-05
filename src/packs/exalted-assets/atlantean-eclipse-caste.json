@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsAtlEC000000",
   "name": "Eclipse Caste",
   "type": "feat",
-  "img": "icons/svg/holy-shield.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/eclipse-caste.svg",
   "folder": "dtdFldAtlCaste00",
   "system": {
     "category": "exaltedAsset",

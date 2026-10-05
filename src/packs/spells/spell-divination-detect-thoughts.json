@@ -1,7 +1,7 @@
 {
   "name": "Detect Thoughts",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/detect-thoughts.svg",
   "system": {
     "description": "<p>Reads a person's surface emotions. The test is rolled against the target's Mental Defense; success reveals more specific thoughts. Enough raises yield one answer, possibly wrong if the target is misinformed.</p>",
     "source": {

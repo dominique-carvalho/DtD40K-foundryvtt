@@ -3,7 +3,7 @@
   "_key": "!items!dtdExalParagon00",
   "name": "Paragon",
   "type": "exaltation",
-  "img": "icons/svg/statue.svg",
+  "img": "systems/dtd40k/assets/icons/exaltation/paragon.svg",
   "system": {
     "description": "<p>A Paragon is the finest specimen of their race: someone born with talent and raw ability so far beyond the norm that they are effectively a different kind of person. Perhaps one birth in a thousand produces one, and even fewer ever realise what they are.</p><p>Paragons are the subtlest Exalts, with no shapeshifting or overt supernatural tricks — only boundless potential that almost always carries them to the top of their society. Ordinary experts, however skilled, simply cannot compete with them on equal terms.</p>",
     "fullText": "",

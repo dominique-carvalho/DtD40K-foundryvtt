@@ -1,7 +1,7 @@
 {
   "name": "Pelor",
   "type": "deity",
-  "img": "icons/svg/sun.svg",
+  "img": "systems/dtd40k/assets/icons/deity/pelor.svg",
   "system": {
     "description": "<p>Sun god of mercy, kindness and healing who wants everyone to be decent to one another; hugely popular and rarely banned.</p>",
     "source": {

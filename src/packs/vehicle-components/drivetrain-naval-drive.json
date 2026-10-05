@@ -1,7 +1,7 @@
 {
   "name": "Naval Drive",
   "type": "vehicleComponent",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/naval-drive.svg",
   "system": {
     "description": "<p>Boats; a technology as old as the wheel, confined to water.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p>",
     "source": {

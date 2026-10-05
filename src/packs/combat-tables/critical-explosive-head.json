@@ -1,6 +1,6 @@
 {
   "name": "Critical — Explosive — Head",
-  "img": "icons/svg/blood.svg",
+  "img": "systems/dtd40k/assets/icons/table/critical-explosive-head.svg",
   "description": "<p>Critical Damage (Explosive, Head), DtD 7.7a p. 439. Use the row equal to the accumulated Critical Damage.</p>",
   "formula": "1d5",
   "replacement": true,
@@ -9,7 +9,7 @@
     {
       "type": "text",
       "name": "Explosive Head 1",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-explosive-head.svg",
       "description": "<p>Blinded and Deafened 1 round.</p>",
       "weight": 1,
       "range": [
@@ -34,7 +34,7 @@
     {
       "type": "text",
       "name": "Explosive Head 2",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-explosive-head.svg",
       "description": "<p>Knocked down and Stunned 1 round; 2 Fatigue.</p>",
       "weight": 1,
       "range": [
@@ -60,7 +60,7 @@
     {
       "type": "text",
       "name": "Explosive Head 3",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-explosive-head.svg",
       "description": "<p>Head blown off; killed at once (joke: -1k0 Perception for a round).</p>",
       "weight": 1,
       "range": [
@@ -81,7 +81,7 @@
     {
       "type": "text",
       "name": "Explosive Head 4",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-explosive-head.svg",
       "description": "<p>Head and torso torn apart; dead.</p>",
       "weight": 1,
       "range": [
@@ -102,7 +102,7 @@
     {
       "type": "text",
       "name": "Explosive Head 5",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-explosive-head.svg",
       "description": "<p>As 4; allies within 2m must Test against Fear 1.</p>",
       "weight": 1,
       "range": [

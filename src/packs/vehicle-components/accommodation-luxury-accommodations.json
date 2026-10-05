@@ -1,7 +1,7 @@
 {
   "name": "Luxury Accommodations",
   "type": "vehicleComponent",
-  "img": "icons/svg/chest.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/luxury-accommodations.svg",
   "system": {
     "description": "<p>Makes a chosen Passenger Space plush and possibly private.</p>",
     "source": {

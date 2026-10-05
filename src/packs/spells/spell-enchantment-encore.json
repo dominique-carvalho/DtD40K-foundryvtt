@@ -1,7 +1,7 @@
 {
   "name": "Encore",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/encore.svg",
   "system": {
     "description": "<p>Each turn the target tests Arcana + Willpower; on failure it must, if possible, repeat the actions of its previous turn.</p>",
     "source": {

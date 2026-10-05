@@ -1,7 +1,7 @@
 {
   "name": "Bow",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/bow.svg",
   "system": {
     "description": "<p>The bow has barely changed over countless centuries and appears across the Wheel in many designs. Even on advanced worlds, assassins and gangers value it for being quiet and dependable.</p>",
     "source": {

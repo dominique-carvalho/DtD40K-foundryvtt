@@ -3,7 +3,7 @@
   "_key": "!items!dtdExalVampire00",
   "name": "Vampire",
   "type": "exaltation",
-  "img": "icons/svg/blood.svg",
+  "img": "systems/dtd40k/assets/icons/exaltation/vampire.svg",
   "system": {
     "description": "<p>Vampires are undead predators who survive on the blood of the living. Their condition is a curse descended from the few who once drank the blood of Khaine, the Elven war god, as he died. Mortals fear them and rarely understand them, and many count them the weakest of the Exalted, yet they are hard to destroy, refill their reserves fast wherever people are plentiful, and hold deeper pools of power than most of their peers.</p><p>No birthright or divine favour is needed to join their ranks: a mortal only has to become valuable enough to an existing vampire that it agrees to turn them. The newcomer then usually spends decades, even centuries, repaying that blood debt while the elder protects and tutors them.</p>",
     "fullText": "",

@@ -1,7 +1,7 @@
 {
   "name": "Scythe",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/scythe.svg",
   "system": {
     "description": "<p>A Syrneth weapon shaped like a short, crescent-bladed sickle. The visible blade is not what cuts: an invisible line of force stretching from its tip back to the handle forms an edge that slices through steel.</p>",
     "source": {

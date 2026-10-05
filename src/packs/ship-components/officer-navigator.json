@@ -1,7 +1,7 @@
 {
   "name": "Navigator",
   "type": "shipComponent",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/navigator.svg",
   "system": {
     "description": "<p>Most vital person aboard: without one, warp travel is hopeless and likely to throw the ship far off course. Navigators are ritually blinded against the warp's horrors. Requires Divination school rated 1 or higher (p. 411). Rolls Arcana + Wisdom for charting and leaving the warp.</p>",
     "source": {

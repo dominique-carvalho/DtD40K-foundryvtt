@@ -1,7 +1,7 @@
 {
   "name": "Standard Shield Mk. III",
   "type": "shipComponent",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/standard-shield-mk-iii.svg",
   "system": {
     "description": "<p>Baseline bubble shield against which the others are compared.</p>",
     "source": {

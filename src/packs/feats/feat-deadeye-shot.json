@@ -3,7 +3,7 @@
   "_key": "!items!dtdFcbc23a31a8bf",
   "name": "Deadeye Shot",
   "type": "feat",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/feat/deadeye-shot.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

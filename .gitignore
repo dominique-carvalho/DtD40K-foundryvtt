@@ -39,3 +39,6 @@ desktop.ini
 
 # Cobertura de testes
 coverage/
+
+# Ícones — sugestões de glifo (apoio à curadoria, spec 024)
+src/icons/suggestions.json

@@ -1,7 +1,7 @@
 {
   "name": "Control Weather",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/control-weather.svg",
   "system": {
     "description": "<p>Alters local weather within what fits the region's climate and season (SM decides), taking 10 minutes to manifest. Controls broad tendencies such as wind direction and strength, not specifics like lightning strikes or a tornado's path.</p>",
     "source": {

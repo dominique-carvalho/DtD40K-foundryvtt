@@ -1,7 +1,7 @@
 {
   "name": "Cockpit",
   "type": "vehicleComponent",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/cockpit.svg",
   "system": {
     "description": "<p>The standard pilot seat that controls every system; every frame comes with one at no charge.</p>",
     "source": {

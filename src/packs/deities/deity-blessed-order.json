@@ -1,7 +1,7 @@
 {
   "name": "Blessed Order",
   "type": "deity",
-  "img": "icons/svg/sun.svg",
+  "img": "systems/dtd40k/assets/icons/deity/blessed-order.svg",
   "system": {
     "description": "<p>General worship of the whole Blessed Pantheon by spiritual people seeking pattern and purpose, holding that all events serve a divine plan for the common good.</p>",
     "source": {

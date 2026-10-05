@@ -1,7 +1,7 @@
 {
   "name": "Tactical Officer",
   "type": "shipComponent",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/tactical-officer.svg",
   "system": {
     "description": "<p>Runs the guns and keeps gunners and engineers working; supplies kept dice for Tactical actions and for fightercraft squads.</p>",
     "source": {

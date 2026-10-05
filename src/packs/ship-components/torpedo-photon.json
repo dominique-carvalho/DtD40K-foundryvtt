@@ -1,7 +1,7 @@
 {
   "name": "Photon Torpedo",
   "type": "shipComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/photon-torpedo.svg",
   "system": {
     "description": "<p>Standard military torpedo, able to level a city in moments.</p><p>A purchase is a set of 5 warheads.</p>",
     "source": {

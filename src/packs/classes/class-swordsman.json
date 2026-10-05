@@ -3,7 +3,7 @@
   "_key": "!items!dtdCf5acaedc3c2c",
   "name": "Swordsman",
   "type": "class",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/class/swordsman.svg",
   "folder": "dtdCFd1ee77afc60",
   "system": {
     "description": "<p>The Fighter track opens with this all-round master of melee. Swordsmen draw fast, react quickly and put their strength behind every blow with Power Attack.</p>",

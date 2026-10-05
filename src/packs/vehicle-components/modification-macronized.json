@@ -1,7 +1,7 @@
 {
   "name": "Macronized",
   "type": "vehicleComponent",
-  "img": "icons/svg/hazard.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/macronized.svg",
   "system": {
     "description": "<p>Applied to a component of size 1+: halve its cost (round up) and double its slots; stackable, doubling slots again each time.</p>",
     "source": {

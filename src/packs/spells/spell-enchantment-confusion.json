@@ -1,7 +1,7 @@
 {
   "name": "Confusion",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/confusion.svg",
   "system": {
     "description": "<p>On a failed save the target is confused; at the start of each of its turns roll 1d10: 1-4 loses 1 Hit Point and ends the turn, 5-6 does nothing, 7-9 acts normally, 10 breaks the spell. Confusion effects do not stack.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Arcane Eye",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/arcane-eye.svg",
   "system": {
     "description": "<p>Creates a tiny (Size 1), hard-to-spot flying sensor moving at the caster's speed up to 4km away; the caster perceives through it with natural senses only (no magical or tech enhancements). Any damage destroys it.</p>",
     "source": {

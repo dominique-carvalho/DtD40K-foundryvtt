@@ -1,7 +1,7 @@
 {
   "name": "Attraction",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/attraction.svg",
   "system": {
     "description": "<p>The touched object or creature compels attention: those passing within 30m stop to look; an enchanted person gets +2k1 on social rolls, and people try to interact with an object. Up to one hour; resisted with Arcana + Willpower.</p>",
     "source": {

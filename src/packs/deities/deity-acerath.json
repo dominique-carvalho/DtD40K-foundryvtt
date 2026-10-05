@@ -1,7 +1,7 @@
 {
   "name": "Acerath",
   "type": "deity",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/deity/acerath.svg",
   "system": {
     "description": "<p>A frail wizard who gave up body, face and name piece by piece to become the skull-god of magic and secrets, knowing every answer but rarely sharing.</p>",
     "source": {

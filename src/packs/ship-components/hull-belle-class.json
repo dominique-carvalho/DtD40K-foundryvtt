@@ -1,7 +1,7 @@
 {
   "name": "Belle-Class",
   "type": "shipComponent",
-  "img": "icons/svg/castle.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/belle-class.svg",
   "system": {
     "description": "<p>Enormous, costly warship whose arrival signals someone important.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Wilderness Gem",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/wilderness-gem.svg",
   "system": {
     "description": "<p>A rough, pale purple stone that lets its bearer survive in the wild in any environment. It grants instinctive knowledge of where to find safe shelter and campsites, what local plants and creatures can be eaten safely, and how to recognise the warning signs of dangerous weather.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Arch-Heretic",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/arch-heretic.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -149,7 +149,7 @@
     {
       "name": "Dire-Flail",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/dire-flail.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -200,7 +200,7 @@
     {
       "name": "Hand Flamer",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-pistol/hand-flamer.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -245,7 +245,10 @@
   "prototypeToken": {
     "name": "Arch-Heretic",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/arch-heretic.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNf49b8c7c36e3",

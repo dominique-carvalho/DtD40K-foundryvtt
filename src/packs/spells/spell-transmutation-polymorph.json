@@ -1,7 +1,7 @@
 {
   "name": "Polymorph",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/polymorph.svg",
   "system": {
     "description": "<p>The touched creature can take wolf form: no speech or fine manipulation, but it gains Quadruped, +1k1 on scent-based Perception, +2 Dexterity, -1 Size and a 2k2 bite.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Electro-Fail",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/electro-fail.svg",
   "system": {
     "description": "<p>An electro-flail: a bundle of tendril-like lashes fixed to a short staff or grip. It has little reach, but its swarm of strikes is extremely good at incapacitating a foe.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Jump Pack",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/jump-pack.svg",
   "system": {
     "description": "<p>An arcane device for moving fast over broken ground. Once per scene the wearer may Run using only a half action; during that move they fly, covering the distance in any of the three dimensions.</p>",
     "source": {

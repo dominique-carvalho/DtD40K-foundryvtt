@@ -1,7 +1,7 @@
 {
   "name": "Rift Torpedo",
   "type": "shipComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/rift-torpedo.svg",
   "system": {
     "description": "<p>Tears a warp rift via sorcery and an inverted Geller Field. A damaged ship automatically loses 1d10 crew. In bombardment the area doubles and a horde of daemons pours out; some are bound to one god and summon that god's servants.</p><p>A purchase is a set of 5 warheads.</p>",
     "source": {

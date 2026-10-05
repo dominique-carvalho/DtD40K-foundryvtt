@@ -1,7 +1,7 @@
 {
   "name": "Malal",
   "type": "deity",
-  "img": "icons/svg/fire.svg",
+  "img": "systems/dtd40k/assets/icons/deity/malal.svg",
   "system": {
     "description": "<p>Renegade god of limitless destruction and Chaos's self-destructive streak, loathed by the other gods, feeding on their power and eventually betraying even his own.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Shield",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/shield.svg",
   "system": {
     "description": "<p>A basic shield, anything from an improvised plank or plastic sheet to armourplas plates, and from small bucklers to full-body pavises. Strapped to the arm, it adds +2 armour to that arm and the body; bonuses from more than one shield do not stack.</p>",
     "source": {

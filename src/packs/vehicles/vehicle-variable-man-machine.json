@@ -1,7 +1,7 @@
 {
   "name": "Variable Man Machine",
   "type": "vehicle",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle/variable-man-machine.svg",
   "system": {
     "size": 18,
     "speed": 6,
@@ -31,7 +31,7 @@
     {
       "name": "Aerospace Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/wing.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/aerospace-drive.svg",
       "system": {
         "description": "<p>Winged craft that must stay in motion; among the fastest drives while keeping better handling than a Scramjet.</p><p><strong>Stalin.</strong> Must keep moving or start to fall: it needs Momentum 3 to take off and must cover at least 30 x base Speed meters per round to stay up.</p>",
         "source": {
@@ -73,7 +73,7 @@
     {
       "name": "Walker Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/direction.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/walker-drive.svg",
       "system": {
         "description": "<p>Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.</p><p><strong>Leggy.</strong> Terrain that is normally impassible is treated only as difficult terrain.</p><p><strong>AMBAC.</strong> The pilot can stand the machine back up from prone with a Half Action.</p>",
         "source": {
@@ -115,7 +115,7 @@
     {
       "name": "Good Standard Frame",
       "type": "vehicleComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/good-standard-frame.svg",
       "system": {
         "description": "<p>Good Standard frame: 20 HP and Resilience 11. Comes with a Cockpit.</p>",
         "source": {
@@ -155,7 +155,7 @@
     {
       "name": "Armor 9",
       "type": "vehicleComponent",
-      "img": "icons/svg/statue.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/armor-9.svg",
       "system": {
         "description": "<p>9 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
         "source": {
@@ -195,7 +195,7 @@
     {
       "name": "Ejector Seat",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/ejector-seat.svg",
       "system": {
         "description": "<p>When the vehicle is destroyed the pilot is flung 100 m opposite its heading; striking a solid obstacle first ends the flight and deals falling damage for the rest of the distance.</p>",
         "source": {
@@ -236,7 +236,7 @@
     {
       "name": "Environmental Seals",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/environmental-seals.svg",
       "system": {
         "description": "<p>Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.</p>",
         "source": {
@@ -281,7 +281,7 @@
     {
       "name": "Sensor System (Standard)",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/sensor-system-standard.svg",
       "system": {
         "description": "<p>Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.</p>",
         "source": {
@@ -323,7 +323,7 @@
     {
       "name": "Light Wards",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/light-wards.svg",
       "system": {
         "description": "<p>Etched anti-magic runes giving Aura 5.</p>",
         "source": {
@@ -364,7 +364,7 @@
     {
       "name": "Manipulator Arms (Standard)",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/manipulator-arms-standard.svg",
       "system": {
         "description": "<p>Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.</p>",
         "source": {
@@ -406,7 +406,7 @@
     {
       "name": "Mobile Decouplers",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/mobile-decouplers.svg",
       "system": {
         "description": "<p>Swapping between drivetrains becomes a Reaction instead of a Half Action.</p>",
         "source": {
@@ -447,7 +447,7 @@
     {
       "name": "AC/2",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/ac-2.svg",
       "system": {
         "description": "<p>Smallest standard autocannon calibre; long reach and able to load special ammunition.</p>",
         "source": {
@@ -505,7 +505,7 @@
     {
       "name": "SRM",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/srm.svg",
       "system": {
         "description": "<p>Short Range Missiles: direct-fire, less complex, trading reach for impact; good against troops and vehicles.</p>",
         "source": {
@@ -563,7 +563,7 @@
     {
       "name": "Ordinary Vehicle CQC Weapon",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/ordinary-vehicle-cqc-weapon.svg",
       "system": {
         "description": "<p>Vehicle melee weapon (mostly on mecha); pick one category for its quality and add the vehicle's Strength to damage.</p><p>Choose a category, which sets the quality: Proven 4 for Ordinary, Thrown 10m for Parrying, Reach 5m for Cavalry, Flexible for Flail, Balanced for Fencing, Volatile, Unwieldy for Two Handed, Power Field for Syrneth, Tearing for Chain, Defensive for Shields, Brawling, Arm Mounted for Unarmed. Damage is Impact or Rending by category; adds the vehicle's Strength to damage, like any melee weapon.</p>",
         "source": {
@@ -623,7 +623,10 @@
   "prototypeToken": {
     "name": "Variable Man Machine",
     "actorLink": true,
-    "disposition": 0
+    "disposition": 0,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/vehicle/variable-man-machine.svg"
+    }
   },
   "flags": {},
   "_id": "dtdWaa088e9fcfec",

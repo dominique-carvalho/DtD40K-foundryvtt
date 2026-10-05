@@ -1,7 +1,7 @@
 {
   "name": "Bioneural Gel Packs",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/bioneural-gel-packs.svg",
   "system": {
     "description": "<p>Fuzzy-logic computing that outpaces normal circuits. One reroll of an Arcana test each combat.</p>",
     "source": {

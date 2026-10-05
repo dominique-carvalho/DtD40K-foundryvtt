@@ -1,7 +1,7 @@
 {
   "name": "Basic Ground Vehicle",
   "type": "vehicle",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle/basic-ground-vehicle.svg",
   "system": {
     "size": 8,
     "speed": 4,
@@ -31,7 +31,7 @@
     {
       "name": "Wheeled Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/direction.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/wheeled-drive.svg",
       "system": {
         "description": "<p>The default ground drive; wheels are about as ancient as organised society itself.</p>",
         "source": {
@@ -71,7 +71,7 @@
     {
       "name": "Standard Frame",
       "type": "vehicleComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/standard-frame.svg",
       "system": {
         "description": "<p>Normal Standard frame: 10 HP and Resilience 10. Comes with a Cockpit.</p>",
         "source": {
@@ -111,7 +111,7 @@
     {
       "name": "Armor 3",
       "type": "vehicleComponent",
-      "img": "icons/svg/statue.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/armor-3.svg",
       "system": {
         "description": "<p>3 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
         "source": {
@@ -151,7 +151,7 @@
     {
       "name": "Cargo Space",
       "type": "vehicleComponent",
-      "img": "icons/svg/chest.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/cargo-space.svg",
       "system": {
         "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
         "source": {
@@ -197,7 +197,7 @@
     {
       "name": "Passenger Space",
       "type": "vehicleComponent",
-      "img": "icons/svg/chest.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/passenger-space.svg",
       "system": {
         "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
         "source": {
@@ -245,7 +245,10 @@
   "prototypeToken": {
     "name": "Basic Ground Vehicle",
     "actorLink": true,
-    "disposition": 0
+    "disposition": 0,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/vehicle/basic-ground-vehicle.svg"
+    }
   },
   "flags": {},
   "_id": "dtdW14ddc73d8971",

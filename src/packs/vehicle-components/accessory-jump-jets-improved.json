@@ -1,7 +1,7 @@
 {
   "name": "Jump Jets (Improved)",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/jump-jets-improved.svg",
   "system": {
     "description": "<p>As Standard Jump Jets but with only 1 round of cooldown.</p>",
     "source": {

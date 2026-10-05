@@ -1,7 +1,7 @@
 {
   "name": "Holy Weapon",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/holy-weapon.svg",
   "system": {
     "description": "<p>The touched weapon gains +1k1 damage against enemies of the caster's god and counts as magical for one day; enchanting another weapon ends it.</p>",
     "source": {

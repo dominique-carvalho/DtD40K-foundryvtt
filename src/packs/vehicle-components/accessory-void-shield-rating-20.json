@@ -1,7 +1,7 @@
 {
   "name": "Void Shield (Rating 20)",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/void-shield-rating-20.svg",
   "system": {
     "description": "<p>As above with rating 20.</p>",
     "source": {

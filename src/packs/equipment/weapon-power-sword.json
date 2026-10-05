@@ -1,7 +1,7 @@
 {
   "name": "Power Sword",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/power-sword.svg",
   "system": {
     "description": "<p>A modern, far deadlier take on the hand weapon, whose power field generator wraps the blade in lethal arcs of energy. Many are centuries old and passed down through families.</p>",
     "source": {

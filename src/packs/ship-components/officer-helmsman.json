@@ -1,7 +1,7 @@
 {
   "name": "Helmsman",
   "type": "shipComponent",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/helmsman.svg",
   "system": {
     "description": "<p>Steers the ship toward its destination, either flying it personally or directing others. Supplies the kept dice for Manoeuver actions.</p>",
     "source": {

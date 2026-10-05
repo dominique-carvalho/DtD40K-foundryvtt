@@ -1,7 +1,7 @@
 {
   "name": "Augury",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/augury.svg",
   "system": {
     "description": "<p>Reveals roughly whether the caster's current plan will turn out well or badly. On a failed test it seems to work but gives a wrong answer.</p>",
     "source": {

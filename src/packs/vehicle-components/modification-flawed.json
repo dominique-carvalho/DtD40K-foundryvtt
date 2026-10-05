@@ -1,7 +1,7 @@
 {
   "name": "Flawed",
   "type": "vehicleComponent",
-  "img": "icons/svg/hazard.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/flawed.svg",
   "system": {
     "description": "<p>Take one design flaw per purchase (each flaw once) for a VP rebate.</p><ul><li><strong>External Power.</strong> Runs on beamed or cabled power; beamed power needs line of sight to the source.</li><li><strong>Feedback.</strong> Each time the vehicle is damaged the pilot tests Athletics + Constitution at TN 15 or takes 1 level of fatigue.</li><li><strong>Hangar Queen.</strong> After each sortie it needs upkeep lasting the deployment time plus 8 hours.</li><li><strong>Inefficient Controls.</strong> Move costs a Full Action and Punch It is unavailable.</li><li><strong>Junker.</strong> Any damage suffered triggers a roll on the crit chart.</li><li><strong>Overheating.</strong> Loses 1 HP in each round with Momentum over 6 or in which Punch It is used.</li><li><strong>Unstable.</strong> Control tests suffer 2 checks.</li></ul>",
     "source": {

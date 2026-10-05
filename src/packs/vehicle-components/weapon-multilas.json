@@ -1,7 +1,7 @@
 {
   "name": "Multilas",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/multilas.svg",
   "system": {
     "description": "<p>Pulsed rapid-fire laser, mainly an anti-infantry tool.</p>",
     "source": {

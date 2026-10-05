@@ -1,7 +1,7 @@
 {
   "name": "Voidskin",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/voidskin.svg",
   "system": {
     "description": "<p>Caster gains Void Shield 1. Ranged attacks whose Penetration is below that rating are fully negated unless the attacker owns a Void Shield too. While active the caster is immune to the hazards of space.</p>",
     "source": {

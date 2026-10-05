@@ -1,7 +1,7 @@
 {
   "name": "Legend Lore",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/legend-lore.svg",
   "system": {
     "description": "<p>Name any person, location, thing or idea to get a broad picture of it as society at large sees it; if it is present, the caster learns all its possible stats and capabilities.</p>",
     "source": {

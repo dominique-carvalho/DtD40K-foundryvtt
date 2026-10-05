@@ -22,12 +22,12 @@ quickstart.md
 
 ## Phase 1: Foundational (bloqueia todas as histórias)
 
-- [ ] T001 [P] `tests/unit/icons.test.mjs`: `slugify`, `glyphPaths` (tira o quadrado de fundo), `composeIcon` (placa, cor, tamanho 512, determinístico), `categoryFor` (regras em ordem), `glyphFor` (curadoria → equivalente de compêndio → padrão), `assignPaths` (colisões); confirmar que falham
-- [ ] T002 `scripts/lib/icons.mjs` (PURO) conforme [contracts/icon-pipeline.md](contracts/icon-pipeline.md); T001 passa
-- [ ] T003 `scripts/fetch-glyphs.mjs` (`--index` grava `src/icons/glyph-index.json` pela árvore de `game-icons/icons`; sem flag baixa os glifos citados que faltam) e scripts `icons:fetch`, `icons:suggest`, `build:icons` em `package.json`
-- [ ] T004 `src/icons/categories.json`: as ~25 categorias com cor (research R3), glifo padrão, regras `match` e `defaultFor`; baixar os glifos padrão
-- [ ] T005 `scripts/build-icons.mjs`: lê `src/packs`, resolve categoria e glifo (inclusive embutidos), grava `assets/icons/**` e `assets/icons/defaults/**`, reescreve `img`/`prototypeToken.texture.src` só quando muda, gera `CREDITS.md`; falha com a lista se faltar glifo ou categoria
-- [ ] T006 Teste de varredura em `tests/unit/icons.test.mjs`: nenhum `img`/token em `src/packs` com `icons/`, todos os arquivos existem, toda chave da curadoria e todo glifo existem, todo documento casa com uma categoria
+- [X] T001 [P] `tests/unit/icons.test.mjs`: `slugify`, `glyphPaths` (tira o quadrado de fundo), `composeIcon` (placa, cor, tamanho 512, determinístico), `categoryFor` (regras em ordem), `glyphFor` (curadoria → equivalente de compêndio → padrão), `assignPaths` (colisões); confirmar que falham
+- [X] T002 `scripts/lib/icons.mjs` (PURO) conforme [contracts/icon-pipeline.md](contracts/icon-pipeline.md); T001 passa
+- [X] T003 `scripts/fetch-glyphs.mjs` (`--index` grava `src/icons/glyph-index.json` pela árvore de `game-icons/icons`; sem flag baixa os glifos citados que faltam) e scripts `icons:fetch`, `icons:suggest`, `build:icons` em `package.json`
+- [X] T004 `src/icons/categories.json`: as ~25 categorias com cor (research R3), glifo padrão, regras `match` e `defaultFor`; baixar os glifos padrão
+- [X] T005 `scripts/build-icons.mjs`: lê `src/packs`, resolve categoria e glifo (inclusive embutidos), grava `assets/icons/**` e `assets/icons/defaults/**`, reescreve `img`/`prototypeToken.texture.src` só quando muda, gera `CREDITS.md`; falha com a lista se faltar glifo ou categoria
+- [X] T006 Teste de varredura em `tests/unit/icons.test.mjs`: nenhum `img`/token em `src/packs` com `icons/`, todos os arquivos existem, toda chave da curadoria e todo glifo existem, todo documento casa com uma categoria
 
 ---
 

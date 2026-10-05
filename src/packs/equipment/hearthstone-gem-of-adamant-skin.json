@@ -1,7 +1,7 @@
 {
   "name": "Gem of Adamant Skin",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/gem-of-adamant-skin.svg",
   "system": {
     "description": "<p>A flawless glittering black ovoid that toughens the bearer's skin and bones. Each time the bearer loses Hit Points, the loss is reduced by 1 (minimum 0) and the bearer takes one level of fatigue from the jarring blow.</p>",
     "source": {

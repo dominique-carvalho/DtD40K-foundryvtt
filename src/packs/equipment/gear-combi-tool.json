@@ -1,7 +1,7 @@
 {
   "name": "Combi-Tool",
   "type": "gear",
-  "img": "icons/svg/item-bag.svg",
+  "img": "systems/dtd40k/assets/icons/gear/combi-tool.svg",
   "system": {
     "description": "<p>A versatile, somewhat odd-looking multi-purpose tool favored by seasoned engineers. Its user counts as having the proper tools for nearly any Tech-Use Test.</p>",
     "source": {

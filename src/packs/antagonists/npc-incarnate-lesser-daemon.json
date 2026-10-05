@@ -1,7 +1,7 @@
 {
   "name": "Incarnate Lesser Daemon",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/incarnate-lesser-daemon.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -135,7 +135,7 @@
     {
       "name": "Claws and Teeth",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/claws-and-teeth.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -180,7 +180,10 @@
   "prototypeToken": {
     "name": "Incarnate Lesser Daemon",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/incarnate-lesser-daemon.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN7566a0c3a11b",

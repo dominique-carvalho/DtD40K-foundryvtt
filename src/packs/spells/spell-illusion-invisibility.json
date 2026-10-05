@@ -1,7 +1,7 @@
 {
   "name": "Invisibility",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/invisibility.svg",
   "system": {
     "description": "<p>Caster turns invisible and may substitute this test's result for sight-based stealth rolls without needing cover. Maximum duration one minute per Level; attacking ends it immediately.</p>",
     "source": {

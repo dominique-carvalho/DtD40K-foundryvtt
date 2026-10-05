@@ -1,7 +1,7 @@
 {
   "name": "Web",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/web.svg",
   "system": {
     "description": "<p>A Blast (5) burst of umbral webbing; everyone inside suffers the Snare property, with the Focus Power result used as the starting TN to break free.</p>",
     "source": {

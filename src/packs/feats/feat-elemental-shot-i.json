@@ -3,7 +3,7 @@
   "_key": "!items!dtdF2d09be85df58",
   "name": "Elemental Shot I",
   "type": "feat",
-  "img": "icons/svg/fire.svg",
+  "img": "systems/dtd40k/assets/icons/feat/elemental-shot-i.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

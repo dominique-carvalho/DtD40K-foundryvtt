@@ -1,7 +1,7 @@
 {
   "name": "Warpsbane Hull",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/warpsbane-hull.svg",
   "system": {
     "description": "<p>Silver warding hexagrams over the hull bolster the Geller Field; such ships usually carry a shrine to one God. Warp Encounter rolls get -2.</p>",
     "source": {

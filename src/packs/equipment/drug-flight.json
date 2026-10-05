@@ -1,7 +1,7 @@
 {
   "name": "Flight",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/flight.svg",
   "system": {
     "description": "<p>A hallucinogenic blend of fear pheromones first made as a crowd-control payload for Needle weapons; it proved addictive, and repeated doses can leave lasting madness.</p><p>A dosed target rolls on the Shock Table at once. Each extra dose taken the same day adds a cumulative +1 to that roll (+1 for the second, +2 for the third, and so on).</p>",
     "source": {

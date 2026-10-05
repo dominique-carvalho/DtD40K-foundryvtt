@@ -1,7 +1,7 @@
 {
   "name": "Reinforced Bulkheads",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/reinforced-bulkheads.svg",
   "system": {
     "description": "<p>Honeycomb bulkheads throughout the hull. Crit rolls against the ship get -3.</p>",
     "source": {

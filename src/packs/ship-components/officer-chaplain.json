@@ -1,7 +1,7 @@
 {
   "name": "Chaplain",
   "type": "shipComponent",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/chaplain.svg",
   "system": {
     "description": "<p>Spiritual leader who focuses worship on a chosen God, resolves moral quarrels and resists warp intrusion. Warp Encounter rolls are lowered by 1; also enables the 6+ sermon check in The End encounter.</p>",
     "source": {

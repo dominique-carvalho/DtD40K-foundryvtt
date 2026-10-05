@@ -3,7 +3,7 @@
   "_key": "!items!dtdCa91321609e88",
   "name": "Monk",
   "type": "class",
-  "img": "icons/svg/walk.svg",
+  "img": "systems/dtd40k/assets/icons/class/monk.svg",
   "folder": "dtdCFdb5564e5415",
   "system": {
     "description": "<p>The Monk track's unarmed martial artist, fighting without armor through speed and discipline. It learns Stunning Fist, Diamond Body and Defensive Mobility, and practices the Setting Sun, Shadow Hand and Diamond Mind schools.</p>",

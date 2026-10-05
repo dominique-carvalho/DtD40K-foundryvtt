@@ -1,7 +1,7 @@
 {
   "name": "Plate",
   "type": "armor",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/armor/plate.svg",
   "system": {
     "description": "<p>Primitive extreme armor of heavy metal plates, jointed so the wearer can still move; the most protective of the primitive suits.</p><p>Like all primitive armor, its rarity counts one step lower when it is chosen as an Artifact.</p>",
     "source": {

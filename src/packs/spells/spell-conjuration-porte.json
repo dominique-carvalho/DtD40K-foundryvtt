@@ -1,7 +1,7 @@
 {
   "name": "Porte",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/porte.svg",
   "system": {
     "description": "<p>Opens a person-sized portal on a fairly flat visible surface within 100m, at any angle; it vanishes if the surface moves. A pair acts as a single doorway, preserving momentum. Maximum two open; a third forces closing one of them.</p>",
     "source": {

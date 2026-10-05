@@ -1,7 +1,7 @@
 {
   "name": "Draining Touch",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/draining-touch.svg",
   "system": {
     "description": "<p>Unarmed melee attack for 2k2 R; the caster recovers 1 hit point per wound inflicted. Vampires gain 1 Vitae per wound instead.</p>",
     "source": {

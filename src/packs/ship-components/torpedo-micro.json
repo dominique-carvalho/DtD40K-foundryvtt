@@ -1,7 +1,7 @@
 {
   "name": "Micro Torpedo",
   "type": "shipComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/micro-torpedo.svg",
   "system": {
     "description": "<p>Small, cheap filler ammunition. In surface bombardment the blast is only 1 km across and deals 8k4.</p><p>A purchase is a set of 5 warheads.</p>",
     "source": {

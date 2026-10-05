@@ -1,7 +1,7 @@
 {
   "name": "Hindsight",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/hindsight.svg",
   "system": {
     "description": "<p>Shows the past in sharp detail: historic events or a specified day/time replay around the caster's current location. The caster may walk around to view more but cannot interact; it is only an illusion.</p>",
     "source": {

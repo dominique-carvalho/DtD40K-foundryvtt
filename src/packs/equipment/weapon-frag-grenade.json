@@ -1,7 +1,7 @@
 {
   "name": "Frag Grenade",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-thrown/frag-grenade.svg",
   "system": {
     "description": "<p>A fragmentation grenade packed with shot, wire or metal shards that burst into high-speed shrapnel, lethal to infantry. The Throwing proficiency applies only when it is thrown; fired from a launcher it needs no extra proficiency.</p>",
     "source": {

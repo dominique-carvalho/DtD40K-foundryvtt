@@ -1,7 +1,7 @@
 {
   "name": "LRM Swarm",
   "type": "vehicleComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/lrm-swarm.svg",
   "system": {
     "description": "<p>ROF changes to S/- and the LRM gains Blast (10).</p><p>ROF S/-; Blast (10).</p>",
     "source": {

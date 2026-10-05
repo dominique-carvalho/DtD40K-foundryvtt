@@ -1,7 +1,7 @@
 {
   "name": "Dream-Stone",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/dream-stone.svg",
   "system": {
     "description": "<p>A smooth black stone with abstract white markings that makes its bearer's remembered dreams prophetic. Once per session, on waking, the bearer may roll Wisdom + Scrutiny at TN 15; any success recalls a dream hinting at future events, and more raises make the vision clearer.</p>",
     "source": {

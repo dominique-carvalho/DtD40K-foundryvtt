@@ -1,7 +1,7 @@
 {
   "name": "SYNC",
   "type": "vehicleComponent",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/sync.svg",
   "system": {
     "description": "<p>COFFIN upgrade: once each round the pilot may reroll one vehicle action.</p>",
     "source": {

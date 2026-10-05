@@ -3,7 +3,7 @@
   "_key": "!items!dtdC604f6bd31498",
   "name": "Zealot",
   "type": "class",
-  "img": "icons/svg/holy-shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/zealot.svg",
   "folder": "dtdCFd94e8732b9c",
   "system": {
     "description": "<p>A fervent Cleric who mixes holy spellcasting with a militant religious reputation, able to absolve allies and bless blades or guns for the faithful.</p>",

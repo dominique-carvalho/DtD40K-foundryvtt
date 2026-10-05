@@ -1,7 +1,7 @@
 {
   "name": "Shortspear",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/shortspear.svg",
   "system": {
     "description": "<p>A short-hafted stabbing spear, often with a long head that can slash and chop when needed. It can be thrown out to 10m, using the Throwing proficiency when thrown.</p>",
     "source": {

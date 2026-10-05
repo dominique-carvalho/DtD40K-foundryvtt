@@ -1,7 +1,7 @@
 {
   "name": "Silence",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/silence.svg",
   "system": {
     "description": "<p>A touched object or person emits silence out to 5m: sound-based Stealth Tests there succeed automatically and Verbal spells automatically fail. Maximum 1 minute per Level.</p>",
     "source": {

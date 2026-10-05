@@ -1,7 +1,7 @@
 {
   "name": "Khorne",
   "type": "deity",
-  "img": "icons/svg/fire.svg",
+  "img": "systems/dtd40k/assets/icons/deity/khorne.svg",
   "system": {
     "description": "<p>Blood-and-battle god of honor who craves the blood of strong foes in worthy fights and scorns killing the weak or innocent.</p>",
     "source": {

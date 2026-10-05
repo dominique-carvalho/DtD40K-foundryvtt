@@ -3,7 +3,7 @@
   "_key": "!items!dtdC271e72271361",
   "name": "Aspirant",
   "type": "class",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/class/aspirant.svg",
   "folder": "dtdCFd8d68c1b723",
   "system": {
     "description": "<p>The second rung of the Magic User track, where a wizard formalizes their craft. Aspirants keep a spell book, focus or specialize their spells, pick a wizard tradition and learn to improvise magic on the fly.</p>",

@@ -1,7 +1,7 @@
 {
   "name": "PPC",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/ppc.svg",
   "system": {
     "description": "<p>Particle Projection Cannon: near-lightspeed neutral particle beam needing strong power or stored particles.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Elite Soldiers/Raiders",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/elite-soldiers-raiders.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -146,7 +146,7 @@
     {
       "name": "Knife",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/knife.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -184,7 +184,7 @@
     {
       "name": "Lasgun",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/lasgun.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -227,7 +227,7 @@
     {
       "name": "Frag Grenade",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-thrown/frag-grenade.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -272,7 +272,10 @@
   "prototypeToken": {
     "name": "Elite Soldiers/Raiders",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/elite-soldiers-raiders.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN305f0f00144f",

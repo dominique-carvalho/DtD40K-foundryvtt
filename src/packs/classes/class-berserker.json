@@ -3,7 +3,7 @@
   "_key": "!items!dtdC2cd15f3df044",
   "name": "Berserker",
   "type": "class",
-  "img": "icons/svg/blood.svg",
+  "img": "systems/dtd40k/assets/icons/class/berserker.svg",
   "folder": "dtdCFd66518142b0",
   "system": {
     "description": "<p>The final step of the Barbarian track, a frenzied killer whose Lightning Attacks and Devastating Criticals tear enemies apart while True Grit keeps them standing.</p>",

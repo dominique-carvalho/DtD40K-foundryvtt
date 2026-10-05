@@ -1,7 +1,7 @@
 {
   "name": "Alt. Control",
   "type": "vehicleComponent",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/alt-control.svg",
   "system": {
     "description": "<p>Lets one extra skill run the controls besides Pilot or Drive, chosen from the list in mechanics.extraControlSkill (via voice, warp link, motion mimicry and so on).</p>",
     "source": {

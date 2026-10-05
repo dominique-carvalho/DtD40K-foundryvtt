@@ -1,7 +1,7 @@
 {
   "name": "Crisis Zone",
   "type": "martialSchool",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/crisis-zone.svg",
   "system": {
     "description": "<p>Loud, relentless heavy-weapon fire used for suppression and support.</p>",
     "source": {

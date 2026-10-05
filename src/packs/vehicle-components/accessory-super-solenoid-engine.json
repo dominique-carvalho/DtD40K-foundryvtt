@@ -1,7 +1,7 @@
 {
   "name": "Super Solenoid Engine",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/super-solenoid-engine.svg",
   "system": {
     "description": "<p>Warp-fuelled S2 engine: as a Half Action, roll on Psychic Phenomena and set Momentum to one tenth of that roll; a Perils result means maximum Momentum.</p>",
     "source": {

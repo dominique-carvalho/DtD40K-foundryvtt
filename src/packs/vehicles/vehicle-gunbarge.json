@@ -1,7 +1,7 @@
 {
   "name": "Gunbarge",
   "type": "vehicle",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle/gunbarge.svg",
   "system": {
     "size": 30,
     "speed": 7,
@@ -31,7 +31,7 @@
     {
       "name": "Battleship Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/direction.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/battleship-drive.svg",
       "system": {
         "description": "<p>A floating fortress rather than a true vehicle; huge masses of steel are easier to keep afloat than to walk.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p><p><strong>Metal Giant.</strong> Grants 2 Equipment Slots per point of Size instead of 1; lost if the vehicle has more than one drivetrain.</p>",
         "source": {
@@ -75,7 +75,7 @@
     {
       "name": "Good Reinforced Frame",
       "type": "vehicleComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/good-reinforced-frame.svg",
       "system": {
         "description": "<p>Good Reinforced frame: 25 HP and Resilience 12. Comes with a Cockpit.</p>",
         "source": {
@@ -115,7 +115,7 @@
     {
       "name": "Armor 5",
       "type": "vehicleComponent",
-      "img": "icons/svg/statue.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/armor-5.svg",
       "system": {
         "description": "<p>5 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
         "source": {
@@ -155,7 +155,7 @@
     {
       "name": "Cargo Space",
       "type": "vehicleComponent",
-      "img": "icons/svg/chest.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/cargo-space.svg",
       "system": {
         "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
         "source": {
@@ -201,7 +201,7 @@
     {
       "name": "Passenger Space",
       "type": "vehicleComponent",
-      "img": "icons/svg/chest.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/passenger-space.svg",
       "system": {
         "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
         "source": {
@@ -247,7 +247,7 @@
     {
       "name": "Features (Open Topped Deck)",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/features-open-topped-deck.svg",
       "system": {
         "description": "<p>A minor gadget (alarm, camera, lights, tow cable, radar detector...) worth at most +1k0 in fitting situations, as the SM rules; never better than a real dedicated system.</p>",
         "source": {
@@ -288,7 +288,7 @@
     {
       "name": "Sensor System (Standard)",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/sensor-system-standard.svg",
       "system": {
         "description": "<p>Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.</p>",
         "source": {
@@ -330,7 +330,7 @@
     {
       "name": "Flawed (Inefficient Controls)",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/flawed-inefficient-controls.svg",
       "system": {
         "description": "<p>Move costs a Full Action and Punch It is unavailable.</p>",
         "source": {
@@ -373,7 +373,7 @@
     {
       "name": "Flawed (Unstable)",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/flawed-unstable.svg",
       "system": {
         "description": "<p>Control tests suffer 2 checks.</p>",
         "source": {
@@ -415,7 +415,7 @@
     {
       "name": "AC/2",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/ac-2.svg",
       "system": {
         "description": "<p>Smallest standard autocannon calibre; long reach and able to load special ammunition.</p>",
         "source": {
@@ -473,7 +473,7 @@
     {
       "name": "AC/2",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/ac-2.svg",
       "system": {
         "description": "<p>Smallest standard autocannon calibre; long reach and able to load special ammunition.</p>",
         "source": {
@@ -531,7 +531,7 @@
     {
       "name": "Copilot Seat (AC/2)",
       "type": "vehicleComponent",
-      "img": "icons/svg/eye.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/copilot-seat-ac-2.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -572,7 +572,7 @@
     {
       "name": "AC/10",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/ac-10.svg",
       "system": {
         "description": "<p>Heavier autocannon, a cheap and effective choice for bigger units.</p>",
         "source": {
@@ -630,7 +630,7 @@
     {
       "name": "Copilot Seat (AC/10)",
       "type": "vehicleComponent",
-      "img": "icons/svg/eye.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/copilot-seat-ac-10.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -671,7 +671,7 @@
     {
       "name": "AC/20",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/ac-20.svg",
       "system": {
         "description": "<p>Biggest standard calibre, carried only by the largest, most lethal units.</p>",
         "source": {
@@ -729,7 +729,7 @@
     {
       "name": "Copilot Seat (AC/20)",
       "type": "vehicleComponent",
-      "img": "icons/svg/eye.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/copilot-seat-ac-20.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -770,7 +770,7 @@
     {
       "name": "Vulcan Mega-Bolter (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/vulcan-mega-bolter-macronized.svg",
       "system": {
         "description": "<p>Heavy rotary bolt gun with a very high fire rate, for infantry, light vehicles and buildings.</p>",
         "source": {
@@ -828,7 +828,7 @@
     {
       "name": "Vulcan Mega-Bolter (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/vulcan-mega-bolter-macronized.svg",
       "system": {
         "description": "<p>Heavy rotary bolt gun with a very high fire rate, for infantry, light vehicles and buildings.</p>",
         "source": {
@@ -886,7 +886,7 @@
     {
       "name": "Copilot Seat (Vulcan Mega-Bolter)",
       "type": "vehicleComponent",
-      "img": "icons/svg/eye.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/copilot-seat-vulcan-mega-bolter.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -929,7 +929,10 @@
   "prototypeToken": {
     "name": "Gunbarge",
     "actorLink": true,
-    "disposition": 0
+    "disposition": 0,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/vehicle/gunbarge.svg"
+    }
   },
   "flags": {},
   "_id": "dtdW9ba2ce4fe7da",

@@ -1,7 +1,7 @@
 {
   "name": "Resilient Shield Mk. II",
   "type": "shipComponent",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/resilient-shield-mk-ii.svg",
   "system": {
     "description": "<p>Hybrid of Covariant and Standard. Its key feature: every weapon firing at it has Disruption reduced to 0.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Obscura",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/obscura.svg",
   "system": {
     "description": "<p>A banned narcotic and a favourite of smugglers, used by everyone from hive scum to nobles; users wander as if sleepwalking or lie in a trance.</p><p>Once dosed, the user suffers mild, usually pleasant hallucinations, often dreamlike replays of happy memories, lasting 1d10 hours.</p>",
     "source": {

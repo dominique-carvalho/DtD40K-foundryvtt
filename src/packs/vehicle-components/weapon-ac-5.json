@@ -1,7 +1,7 @@
 {
   "name": "AC/5",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/ac-5.svg",
   "system": {
     "description": "<p>Mid calibre that fits most chassis; a light anti-vehicle gun.</p>",
     "source": {

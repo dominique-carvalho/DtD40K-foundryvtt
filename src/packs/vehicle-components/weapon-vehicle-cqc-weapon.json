@@ -1,7 +1,7 @@
 {
   "name": "Vehicle CQC Weapon",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/vehicle-cqc-weapon.svg",
   "system": {
     "description": "<p>Vehicle melee weapon (mostly on mecha); pick one category for its quality and add the vehicle's Strength to damage.</p><p>Choose a category, which sets the quality: Proven 4 for Ordinary, Thrown 10m for Parrying, Reach 5m for Cavalry, Flexible for Flail, Balanced for Fencing, Volatile, Unwieldy for Two Handed, Power Field for Syrneth, Tearing for Chain, Defensive for Shields, Brawling, Arm Mounted for Unarmed. Damage is Impact or Rending by category; adds the vehicle's Strength to damage, like any melee weapon.</p>",
     "source": {

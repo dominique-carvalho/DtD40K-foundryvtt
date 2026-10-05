@@ -1,7 +1,7 @@
 {
   "name": "Improved Invisibility",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/improved-invisibility.svg",
   "system": {
     "description": "<p>Invisibility capped at one minute, but attacking does not end it.</p>",
     "source": {

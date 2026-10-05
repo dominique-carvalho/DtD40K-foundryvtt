@@ -1,7 +1,7 @@
 {
   "name": "Power Fist",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/power-fist.svg",
   "system": {
     "description": "<p>A power-field gauntlet that lets its wearer punch hard enough for a tank to notice. A blow from one lands with the force of a speeding locomotive.</p>",
     "source": {

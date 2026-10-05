@@ -1,7 +1,7 @@
 {
   "name": "Regular Troops/Rebels",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/regular-troops-rebels.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -144,7 +144,7 @@
     {
       "name": "Knife",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/knife.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -182,7 +182,7 @@
     {
       "name": "Lasgun",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/lasgun.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -227,7 +227,10 @@
   "prototypeToken": {
     "name": "Regular Troops/Rebels",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/regular-troops-rebels.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNbcce421528f8",

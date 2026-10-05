@@ -3,7 +3,7 @@
   "_key": "!items!dtdC6326e973460d",
   "name": "Gunmage",
   "type": "class",
-  "img": "icons/svg/lightning.svg",
+  "img": "systems/dtd40k/assets/icons/class/gunmage.svg",
   "folder": "dtdCFd1fb65dfd09",
   "system": {
     "description": "<p>The Magitek Gunman track's core spellslinger, who loads elemental magic into every round. It masters Elemental Shot II, gains a familiar, and mixes Evocation and Conjuration with the Elemental Gearbolt and Clay Pigeon kata.</p>",

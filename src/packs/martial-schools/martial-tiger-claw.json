@@ -1,7 +1,7 @@
 {
   "name": "Tiger Claw",
   "type": "martialSchool",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/tiger-claw.svg",
   "system": {
     "description": "<p>A wild, instinctive style of leaps and pounces with explosive, unpredictable strikes, favoring chain weapons.</p>",
     "source": {

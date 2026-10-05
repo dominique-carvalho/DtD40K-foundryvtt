@@ -1,7 +1,7 @@
 {
   "name": "Battleship Drive",
   "type": "vehicleComponent",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/battleship-drive.svg",
   "system": {
     "description": "<p>A floating fortress rather than a true vehicle; huge masses of steel are easier to keep afloat than to walk.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p><p><strong>Metal Giant.</strong> Grants 2 Equipment Slots per point of Size instead of 1; lost if the vehicle has more than one drivetrain.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Primal Power",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/primal-power.svg",
   "system": {
     "description": "<p>Animal Power applied to Strength, Dexterity and Constitution at once.</p>",
     "source": {

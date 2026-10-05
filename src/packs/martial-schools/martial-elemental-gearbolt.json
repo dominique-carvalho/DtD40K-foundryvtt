@@ -1,7 +1,7 @@
 {
   "name": "Elemental Gearbolt",
   "type": "martialSchool",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/elemental-gearbolt.svg",
   "system": {
     "description": "<p>The oldest Gun Kata, fusing magic with archery and later firearms.</p>",
     "source": {

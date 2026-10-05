@@ -1,7 +1,7 @@
 {
   "name": "Brass Knuckles",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/brass-knuckles.svg",
   "system": {
     "description": "<p>Metal knuckles, usually steel despite the name, that add weight and rigidity to the fist. They use the Brawl skill and replace normal unarmed damage; finer Good or Best pairs are frequently made to pass for gloves or fancy rings.</p>",
     "source": {

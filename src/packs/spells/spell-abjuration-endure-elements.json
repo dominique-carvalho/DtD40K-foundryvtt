@@ -1,7 +1,7 @@
 {
   "name": "Endure Elements",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/endure-elements.svg",
   "system": {
     "description": "<p>The caster lives comfortably in most natural climates and ignores weather penalties to actions. Expendable: the first time E wounds are taken they drop by 1, and the first time the caster would catch fire it is cancelled, then the spell ends.</p>",
     "source": {

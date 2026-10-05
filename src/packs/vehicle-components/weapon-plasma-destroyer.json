@@ -1,7 +1,7 @@
 {
   "name": "Plasma Destroyer",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/plasma-destroyer.svg",
   "system": {
     "description": "<p>Rare vehicle plasma gun hurling globs of fusion plasma that melt armour.</p>",
     "source": {

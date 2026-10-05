@@ -1,7 +1,7 @@
 {
   "name": "Murder Servitors",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/murder-servitors.svg",
   "system": {
     "description": "<p>Skull-faced killing machines for repelling boarders: 5 extra Crew usable only against boarding actions.</p>",
     "source": {

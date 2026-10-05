@@ -1,7 +1,7 @@
 {
   "name": "Chrono",
   "type": "gear",
-  "img": "icons/svg/item-bag.svg",
+  "img": "systems/dtd40k/assets/icons/gear/chrono.svg",
   "system": {
     "description": "<p>A simple, reliable timepiece, carried in the hand or strapped to the wrist.</p>",
     "source": {

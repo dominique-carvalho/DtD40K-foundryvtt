@@ -1,7 +1,7 @@
 {
   "name": "Vectron",
   "type": "deity",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/deity/vectron.svg",
   "system": {
     "description": "<p>A parody god, loudly insisted to be real, patron of whatever you need right now, who accepts any worship aimed at him.</p>",
     "source": {

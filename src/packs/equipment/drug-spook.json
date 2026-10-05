@@ -1,7 +1,7 @@
 {
   "name": "Spook",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/spook.svg",
   "system": {
     "description": "<p>The dangerous opposite of Null: an illegal, highly addictive drug that forces the mind open to the Warp.</p><p>For one scene the user gains +1k1 on every spellcasting roll and +1 caster level. Taking a dose, and every spell cast while it lasts, automatically produces a warp phenomenon.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "EPS Conduits",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/eps-conduits.svg",
   "system": {
     "description": "<p>Electro Plasma power routing. Any successful Overcharge test gains two more raises.</p>",
     "source": {

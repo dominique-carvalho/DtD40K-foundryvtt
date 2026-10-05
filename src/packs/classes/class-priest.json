@@ -3,7 +3,7 @@
   "_key": "!items!dtdC17a20220713e",
   "name": "Priest",
   "type": "class",
-  "img": "icons/svg/holy-shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/priest.svg",
   "folder": "dtdCFd94e8732b9c",
   "system": {
     "description": "<p>First class of the Cleric track: a holy caster protected by faith and contempt for the heretic. Priests combine divine magic with armor and a willingness to charge into battle.</p>",

@@ -3,7 +3,7 @@
   "_key": "!items!dtdC85d5ad4481ff",
   "name": "Sniper",
   "type": "class",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/class/sniper.svg",
   "folder": "dtdCFd6fe71ac156",
   "system": {
     "description": "<p>The Operator track's patient long-range marksman, killing unseen from a hidden perch. It gains Deadeye Shot, Crack Shot and Expert Tracker, and uses the Clay Pigeon, Tin Star and Silent Scope kata.</p>",

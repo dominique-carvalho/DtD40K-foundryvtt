@@ -3,7 +3,7 @@
   "_key": "!items!dtdCcb461870bc92",
   "name": "Preacher",
   "type": "class",
-  "img": "icons/svg/holy-shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/preacher.svg",
   "folder": "dtdCFd94e8732b9c",
   "system": {
     "description": "<p>The Cleric track's second step, a spellcaster who serves a religious order. Preachers focus their divine spells and guide others with Virgil's Guidance.</p>",

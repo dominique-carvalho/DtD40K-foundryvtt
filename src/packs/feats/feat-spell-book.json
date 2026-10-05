@@ -3,7 +3,7 @@
   "_key": "!items!dtdF87909c11409c",
   "name": "Spell Book",
   "type": "feat",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/feat/spell-book.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

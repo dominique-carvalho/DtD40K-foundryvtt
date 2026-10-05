@@ -1,7 +1,7 @@
 {
   "name": "Afterburners",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/afterburners.svg",
   "system": {
     "description": "<p>Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.</p>",
     "source": {

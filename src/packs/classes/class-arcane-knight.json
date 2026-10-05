@@ -3,7 +3,7 @@
   "_key": "!items!dtdCade65ac6acfe",
   "name": "Arcane Knight",
   "type": "class",
-  "img": "icons/svg/mage-shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/arcane-knight.svg",
   "folder": "dtdCFdaebebd4a00",
   "system": {
     "description": "<p>A battle-mage of the Arcane Knight track who fuses spellcraft and swordplay, firing Sword Beams from the blade and fighting in the Daggerspell Stance.</p>",

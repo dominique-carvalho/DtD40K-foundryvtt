@@ -1,7 +1,7 @@
 {
   "name": "Slayer",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/slayer.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -135,7 +135,7 @@
     {
       "name": "Axe",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/axe.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -173,7 +173,7 @@
     {
       "name": "Frag Grenade",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-thrown/frag-grenade.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -218,7 +218,10 @@
   "prototypeToken": {
     "name": "Slayer",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/slayer.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN16303d9f1afd",

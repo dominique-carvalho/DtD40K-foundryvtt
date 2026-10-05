@@ -1,7 +1,7 @@
 {
   "name": "Plasma Pistol",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-pistol/plasma-pistol.svg",
   "system": {
     "description": "<p>A sidearm that hurls bolts of superheated plasma, among the deadliest pistols in existence. Those willing to risk its instability can kill almost anything at close range with it.</p>",
     "source": {

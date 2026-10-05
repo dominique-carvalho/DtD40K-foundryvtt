@@ -1,7 +1,7 @@
 {
   "name": "Bolt Pistol",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-pistol/bolt-pistol.svg",
   "system": {
     "description": "<p>A pistol that fires self-propelled, mass-reactive bolts which detonate just after penetrating. Its expensive upkeep and scarce ammunition make it a symbol of status that few can afford.</p>",
     "source": {

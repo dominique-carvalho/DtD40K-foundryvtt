@@ -3,7 +3,7 @@
   "_key": "!items!dtdC5a0397180f92",
   "name": "Captain",
   "type": "class",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/class/captain.svg",
   "folder": "dtdCFd3d80d0dc1c",
   "system": {
     "description": "<p>A starship commander who leads from the bridge through presence, politics and persuasion. Its feats, such as Acceptable Losses, Lend Expertise and Luck, focus on steering a crew and weighing lives in the heat of command.</p>",

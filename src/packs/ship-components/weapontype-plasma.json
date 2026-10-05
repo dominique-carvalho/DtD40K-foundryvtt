@@ -1,7 +1,7 @@
 {
   "name": "Plasma (weapon type)",
   "type": "shipComponent",
-  "img": "icons/svg/aura.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/plasma-weapon-type.svg",
   "system": {
     "description": "<p>Premier weapon that wrecks hulls; pricey, with slow bolts that are harder to land.</p><p>Damage +2k0, Acc -5, Cost +5 BP.</p>",
     "source": {

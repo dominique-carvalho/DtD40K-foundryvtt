@@ -1,7 +1,7 @@
 {
   "name": "Fencing Sword",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/fencing-sword.svg",
   "system": {
     "description": "<p>A light, quick blade that can take many forms, from rapiers and sabres to longer curved swords like katanas. Easy to handle, though its light weight makes it tricky to master as a killing tool.</p>",
     "source": {

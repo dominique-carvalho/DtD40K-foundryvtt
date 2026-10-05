@@ -1,7 +1,7 @@
 {
   "name": "Collar of Dawn's Cleansing Light",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/collar-of-dawns-cleansing-light.svg",
   "system": {
     "description": "<p>While worn, this collar keeps its wearer spotless: dirt, mud and even stubborn stains slide off almost immediately, and many versions add a pleasant fragrance. The wearer gains +1k0 on Charm tests.</p>",
     "source": {

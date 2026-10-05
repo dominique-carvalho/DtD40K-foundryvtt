@@ -1,7 +1,7 @@
 {
   "name": "Covariant Shield Mk. III",
   "type": "shipComponent",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/covariant-shield-mk-iii.svg",
   "system": {
     "description": "<p>High Capacity, slow Regeneration; good against burst damage and highly disruptive enemies.</p>",
     "source": {

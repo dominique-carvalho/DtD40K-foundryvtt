@@ -1,7 +1,7 @@
 {
   "name": "Grenade Launcher",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/grenade-launcher.svg",
   "system": {
     "description": "<p>A gas-powered launcher that fires grenades, either in high arcs as suppressive fire at unseen targets or indirectly at foes. Its damage, penetration and special qualities come from the grenade loaded; grenades used as its ammunition need no additional proficiency.</p>",
     "source": {

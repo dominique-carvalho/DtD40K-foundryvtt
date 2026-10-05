@@ -1,7 +1,7 @@
 {
   "name": "Sigmar",
   "type": "deity",
-  "img": "icons/svg/sun.svg",
+  "img": "systems/dtd40k/assets/icons/deity/sigmar.svg",
   "system": {
     "description": "<p>Wrathful warrior-king and unifier, protector of his people and god of stable civilization; the most widely worshipped god among humans, with many squat followers.</p>",
     "source": {

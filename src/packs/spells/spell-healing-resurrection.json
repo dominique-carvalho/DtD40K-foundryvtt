@@ -1,7 +1,7 @@
 {
   "name": "Resurrection",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/resurrection.svg",
   "system": {
     "description": "<p>By spending five resource points the caster revives a touched corpse with 0 hit points. Fails, permanently, if the creature was ever resurrected before.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Slaanesh",
   "type": "deity",
-  "img": "icons/svg/fire.svg",
+  "img": "systems/dtd40k/assets/icons/deity/slaanesh.svg",
   "system": {
     "description": "<p>God of excess and self-fulfilment: indulge yourself and ignore advice and social mores; any pursuit taken to extremes, from art to perfection of skill, counts as worship.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Flamer",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/flamer.svg",
   "system": {
     "description": "<p>A fearsome projector of burning fuel that floods an area indiscriminately, ideal against foes behind cover or in tight spaces. Some models even work underwater or in vacuum.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Contingency",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/contingency.svg",
   "system": {
     "description": "<p>Right after finishing it the caster casts a second spell that is held until a trigger condition chosen now occurs. Targets are fixed at casting but may be described loosely. Only one Contingency may be active per character.</p>",
     "source": {

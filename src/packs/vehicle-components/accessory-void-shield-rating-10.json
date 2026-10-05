@@ -1,7 +1,7 @@
 {
   "name": "Void Shield (Rating 10)",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/void-shield-rating-10.svg",
   "system": {
     "description": "<p>Ranged attacks with Pen below the rating are fully negated unless the attacker has its own void shield; melee ignores it.</p>",
     "source": {

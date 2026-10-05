@@ -3,7 +3,7 @@
   "_key": "!items!dtdCe26038916cf2",
   "name": "Bishop",
   "type": "class",
-  "img": "icons/svg/holy-shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/bishop.svg",
   "folder": "dtdCFd94e8732b9c",
   "system": {
     "description": "<p>The top of the Cleric track, a high priest shielded by contempt for heresy who purges the unclean and commands five schools of divine magic with great focus.</p>",

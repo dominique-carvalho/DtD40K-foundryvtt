@@ -1,7 +1,7 @@
 {
   "name": "Dragon",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/dragon.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -243,7 +243,7 @@
     {
       "name": "Claws and Teeth",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/claws-and-teeth.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -286,7 +286,7 @@
     {
       "name": "Dragon Fire",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/dragon-fire.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -331,7 +331,10 @@
   "prototypeToken": {
     "name": "Dragon",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/dragon.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN39949b45d6e7",

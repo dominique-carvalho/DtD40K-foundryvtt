@@ -1,7 +1,7 @@
 {
   "name": "Helicopter",
   "type": "vehicle",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle/helicopter.svg",
   "system": {
     "size": 15,
     "speed": 7,
@@ -31,7 +31,7 @@
     {
       "name": "VTOL",
       "type": "vehicleComponent",
-      "img": "icons/svg/wing.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/vtol.svg",
       "system": {
         "description": "<p>Flexible flight drive that moves in three dimensions and, unlike Aerospace or Scramjet, can go slow or hold a hover.</p>",
         "source": {
@@ -71,7 +71,7 @@
     {
       "name": "Standard Frame",
       "type": "vehicleComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/standard-frame.svg",
       "system": {
         "description": "<p>Normal Standard frame: 10 HP and Resilience 10. Comes with a Cockpit.</p>",
         "source": {
@@ -111,7 +111,7 @@
     {
       "name": "Armor 5",
       "type": "vehicleComponent",
-      "img": "icons/svg/statue.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/armor-5.svg",
       "system": {
         "description": "<p>5 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
         "source": {
@@ -151,7 +151,7 @@
     {
       "name": "Passenger Space",
       "type": "vehicleComponent",
-      "img": "icons/svg/chest.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/passenger-space.svg",
       "system": {
         "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
         "source": {
@@ -197,7 +197,7 @@
     {
       "name": "Cargo Space",
       "type": "vehicleComponent",
-      "img": "icons/svg/chest.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/cargo-space.svg",
       "system": {
         "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
         "source": {
@@ -243,7 +243,7 @@
     {
       "name": "Sensor System (Standard)",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/sensor-system-standard.svg",
       "system": {
         "description": "<p>Pilot gets +5 on perception tests and auto-detects vehicles or ships lacking ECM within 10 km.</p>",
         "source": {
@@ -285,7 +285,7 @@
     {
       "name": "Light Punisher Gatling Cannon (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/light-punisher-gatling-cannon-macronized.svg",
       "system": {
         "description": "<p>Rotary-barrel autocannon deadly to lightly armoured vehicles and big living targets; banned against infantry in many Spheres.</p>",
         "source": {
@@ -343,7 +343,7 @@
     {
       "name": "Copilot Seat (Light Punisher Gatling Cannon)",
       "type": "vehicleComponent",
-      "img": "icons/svg/eye.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/copilot-seat-light-punisher-gatling-cannon.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -386,7 +386,10 @@
   "prototypeToken": {
     "name": "Helicopter",
     "actorLink": true,
-    "disposition": 0
+    "disposition": 0,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/vehicle/helicopter.svg"
+    }
   },
   "flags": {},
   "_id": "dtdW011041eb0084",

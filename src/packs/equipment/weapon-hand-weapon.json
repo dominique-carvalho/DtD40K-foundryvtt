@@ -1,7 +1,7 @@
 {
   "name": "Hand Weapon",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/hand-weapon.svg",
   "system": {
     "description": "<p>A catch-all profile for the many one-handed weapons such as broadswords, axes, maces and hammers. Choose whether it deals Rending (R) or Impact (I) damage when it is purchased.</p>",
     "source": {

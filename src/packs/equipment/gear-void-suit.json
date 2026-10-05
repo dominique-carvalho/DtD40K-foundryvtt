@@ -1,7 +1,7 @@
 {
   "name": "Void Suit",
   "type": "gear",
-  "img": "icons/svg/item-bag.svg",
+  "img": "systems/dtd40k/assets/icons/gear/void-suit.svg",
   "system": {
     "description": "<p>A sealed suit for surviving the harshest environments. It includes a rebreather, with all of its benefits, and also lets the wearer survive in vacuum.</p>",
     "source": {

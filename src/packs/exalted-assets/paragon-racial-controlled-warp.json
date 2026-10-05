@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsRacCW000000",
   "name": "Controlled Warp",
   "type": "feat",
-  "img": "icons/svg/wing.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/controlled-warp.svg",
   "folder": "dtdFldParRacial0",
   "system": {
     "category": "exaltedAsset",

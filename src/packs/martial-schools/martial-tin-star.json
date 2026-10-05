@@ -1,7 +1,7 @@
 {
   "name": "Tin Star",
   "type": "martialSchool",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/tin-star.svg",
   "system": {
     "description": "<p>A lawman's no-frills gunfighting style built on reliability and the quick draw.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Greater Servant",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/greater-servant.svg",
   "system": {
     "description": "<p>Like Lesser Servant, but the summoned being rates 4 in every characteristic and every relevant skill.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Darksteel",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/material/darksteel.svg",
   "system": {
     "description": "<p>A dark grey or black metal ringed by orbiting golden motes, so hard only the greatest artificers can shape it; anything made of it is completely indestructible. It follows the general magical-material rules (counts as Best, one hearthstone slot, magical damage).</p><p>Melee weapons gain +8 Pen; ranged weapons get a bonus equal to their RoF when attacking with a Full Auto burst; special ammunition gains +12 Pen; armour halves the Pen of weapons that hit you, except Darksteel ones. A bionic arm cannot be destroyed by critical damage (effects that would kill or destroy it only sever it) and its unarmed or natural attacks gain +8 Pen; bionic legs are protected the same way and give two raises to move others or resist being moved; a bionic heart ignores critical damage to the Gizzards and doubles their Resilience.</p>",
     "source": {

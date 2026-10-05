@@ -1,7 +1,7 @@
 {
   "name": "Divine Power",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/divine-power.svg",
   "system": {
     "description": "<p>Caster gains +1 Resilience and +2 Strength and recovers 1 hit point whenever one of their turns ends; when the scene ends they must immediately make an Alignment Check.</p>",
     "source": {

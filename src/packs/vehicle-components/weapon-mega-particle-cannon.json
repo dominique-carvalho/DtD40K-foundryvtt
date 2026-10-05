@@ -1,7 +1,7 @@
 {
   "name": "Mega Particle Cannon",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/mega-particle-cannon.svg",
   "system": {
     "description": "<p>Older, bulkier and stronger PPC whose beam ignores magnetic deflection.</p>",
     "source": {

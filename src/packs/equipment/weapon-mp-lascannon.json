@@ -1,7 +1,7 @@
 {
   "name": "MP Lascannon",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/mp-lascannon.svg",
   "system": {
     "description": "<p>A man-portable lascannon, a battlefield weapon whose enormous power packs let it punch through the heaviest armour at great range. Because the packs are carried separately, it is usually worked by a crew of two or more.</p>",
     "source": {

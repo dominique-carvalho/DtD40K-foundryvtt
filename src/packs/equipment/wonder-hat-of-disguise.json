@@ -1,7 +1,7 @@
 {
   "name": "Hat of Disguise",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/hat-of-disguise.svg",
   "system": {
     "description": "<p>A hat that changes the wearer's appearance at will and can itself take any headwear form, from a crown to a hairpin. Disguise tests made while wearing it get a free raise, and it removes the need for makeup or props, but it does not alter clothing.</p>",
     "source": {

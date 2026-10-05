@@ -1,7 +1,7 @@
 {
   "name": "Moradin",
   "type": "deity",
-  "img": "icons/svg/sun.svg",
+  "img": "systems/dtd40k/assets/icons/deity/moradin.svg",
   "system": {
     "description": "<p>Stoic, loyal creator god of family and hard work, worshipped mostly by squats and dwarves, who wants followers to leave lasting works and despises destroying others' legacies.</p>",
     "source": {

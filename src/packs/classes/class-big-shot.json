@@ -3,7 +3,7 @@
   "_key": "!items!dtdC8eb2571a1ec6",
   "name": "Big Shot",
   "type": "class",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/class/big-shot.svg",
   "folder": "dtdCFdac2d70a126",
   "system": {
     "description": "<p>Entry point of the Heavy track: a tough bruiser who hauls heavy guns around. A Big Shot pours fire at distant foes with Storm of Iron and settles close-range scraps with bare fists.</p>",

@@ -3,7 +3,7 @@
   "_key": "!items!dtdFd29880fba1fa",
   "name": "Halfling Agility",
   "type": "feat",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/racial-feat/halfling-agility.svg",
   "folder": "dtdFld53ef1123e7",
   "system": {
     "category": "racialFeat",

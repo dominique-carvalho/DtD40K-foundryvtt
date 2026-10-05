@@ -1,7 +1,7 @@
 {
   "name": "Steamboat-Class",
   "type": "shipComponent",
-  "img": "icons/svg/castle.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/steamboat-class.svg",
   "system": {
     "description": "<p>Cheapest and most common frame in the Wheel; a typical first command, adaptable to many loadouts.</p>",
     "source": {

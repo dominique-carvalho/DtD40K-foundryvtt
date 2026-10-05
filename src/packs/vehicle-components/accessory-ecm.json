@@ -1,7 +1,7 @@
 {
   "name": "ECM",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/ecm.svg",
   "system": {
     "description": "<p>Noisy sensor jamming toggled with a Half Action: long-range sensors (radar, lidar) cannot track the vehicle, though they clearly notice the interference.</p>",
     "source": {

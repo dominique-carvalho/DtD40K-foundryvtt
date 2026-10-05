@@ -3,7 +3,7 @@
   "_key": "!items!dtdCe7ed458ff1e1",
   "name": "Walking Gunshow",
   "type": "class",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/class/walking-gunshow.svg",
   "folder": "dtdCFdac2d70a126",
   "system": {
     "description": "<p>A Heavy who blasts foes with big guns at range and crushes them in a bear hug up close, too stubborn to go down.</p>",

@@ -1,7 +1,7 @@
 {
   "name": "Windhands Gemstone",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/windhands-gemstone.svg",
   "system": {
     "description": "<p>A hearthstone so clear it vanishes in clean water, sharpening the bearer's reflexes. When targeted by a ranged attack, the bearer may parry it instead of dodging.</p>",
     "source": {

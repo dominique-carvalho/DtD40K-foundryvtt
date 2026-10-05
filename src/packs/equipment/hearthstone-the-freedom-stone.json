@@ -1,7 +1,7 @@
 {
   "name": "The Freedom Stone",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/the-freedom-stone.svg",
   "system": {
     "description": "<p>A murky blue-black stone of shifting colours. Its bearer can never be physically restrained: bonds and knots come loose, and every grapple attempted against them automatically fails. It does nothing against confinement such as locked doors or barred gates.</p>",
     "source": {

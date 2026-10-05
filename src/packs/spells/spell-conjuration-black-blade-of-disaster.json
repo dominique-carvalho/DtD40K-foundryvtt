@@ -1,7 +1,7 @@
 {
   "name": "Black Blade of Disaster",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/black-blade-of-disaster.svg",
   "system": {
     "description": "<p>Opens a sword-shaped rift into a devouring void. It acts as a Power Sword with unlimited Penetration that always destroys ordinary weapons, so parrying it fails. It vanishes if it leaves the caster's hands.</p>",
     "source": {

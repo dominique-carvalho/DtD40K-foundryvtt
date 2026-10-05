@@ -1,7 +1,7 @@
 {
   "name": "Grey Knight",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/grey-knight.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -157,7 +157,7 @@
     {
       "name": "Power Sword",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/power-sword.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -200,7 +200,7 @@
     {
       "name": "Boltgun",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/boltgun.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -245,7 +245,10 @@
   "prototypeToken": {
     "name": "Grey Knight",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/grey-knight.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN4cf333e594cb",

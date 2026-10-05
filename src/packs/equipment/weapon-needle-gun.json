@@ -1,7 +1,7 @@
 {
   "name": "Needle Gun",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/needle-gun.svg",
   "system": {
     "description": "<p>A needle rifle, beloved of snipers for combining range, silence and lethality, though it is nearly useless against heavily armoured foes. Like the pistol, it can fire drug doses that deal no damage and instead inject the drug into the target.</p>",
     "source": {

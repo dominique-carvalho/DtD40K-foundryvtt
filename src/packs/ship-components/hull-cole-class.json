@@ -1,7 +1,7 @@
 {
   "name": "Cole-Class",
   "type": "shipComponent",
-  "img": "icons/svg/castle.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/cole-class.svg",
   "system": {
     "description": "<p>Warship built to carry the newest technology; fragile and somewhat underpowered for its many slots.</p>",
     "source": {

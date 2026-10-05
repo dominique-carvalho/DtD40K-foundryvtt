@@ -1,7 +1,7 @@
 {
   "name": "Commune",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/commune.svg",
   "system": {
     "description": "<p>Opens a conversation with any named person, ignoring distance and obstacles; the target can end it at any time. The description separately caps it at five minutes.</p>",
     "source": {

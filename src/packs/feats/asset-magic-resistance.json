@@ -3,7 +3,7 @@
   "_key": "!items!dtdF09855d990fab",
   "name": "Magic Resistance",
   "type": "feat",
-  "img": "icons/svg/mage-shield.svg",
+  "img": "systems/dtd40k/assets/icons/asset/magic-resistance.svg",
   "folder": "dtdFld9c04f67af9",
   "system": {
     "category": "asset",

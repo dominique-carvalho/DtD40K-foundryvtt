@@ -1,7 +1,7 @@
 {
   "name": "Magic Fang",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/magic-fang.svg",
   "system": {
     "description": "<p>Natural weapons and unarmed attacks of the touched creature gain one extra kept damage die and are treated as magical.</p>",
     "source": {

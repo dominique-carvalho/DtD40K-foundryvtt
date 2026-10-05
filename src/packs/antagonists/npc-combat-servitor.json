@@ -1,7 +1,7 @@
 {
   "name": "Combat Servitor",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/combat-servitor.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -127,7 +127,7 @@
     {
       "name": "Claw",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/claw.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -170,7 +170,7 @@
     {
       "name": "Multilas",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/multilas.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -215,7 +215,10 @@
   "prototypeToken": {
     "name": "Combat Servitor",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/combat-servitor.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNec9dea854e1d",

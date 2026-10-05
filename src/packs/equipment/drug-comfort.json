@@ -1,7 +1,7 @@
 {
   "name": "Comfort",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/comfort.svg",
   "system": {
     "description": "<p>A cheap, widely sold mood stabiliser, usually mixed into soothing foods or sweet drinks; heavy users become docile and constantly itchy.</p><p>While it is active the user may disregard the effects of any minor derangement, and whenever they would gain Insanity Points they gain 1 IP less.</p>",
     "source": {

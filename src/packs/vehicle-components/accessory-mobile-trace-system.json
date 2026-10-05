@@ -1,7 +1,7 @@
 {
   "name": "Mobile Trace System",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/mobile-trace-system.svg",
   "system": {
     "description": "<p>The vehicle mirrors the pilot's body movements (mostly on walkers or armed machines), so Trick Shots and Special Attacks become available for its mounted weapons.</p>",
     "source": {

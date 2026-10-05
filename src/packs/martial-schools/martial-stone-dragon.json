@@ -1,7 +1,7 @@
 {
   "name": "Stone Dragon",
   "type": "martialSchool",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/stone-dragon.svg",
   "system": {
     "description": "<p>A relentless, earth-rooted style of overwhelming force with two-handed weapons.</p>",
     "source": {

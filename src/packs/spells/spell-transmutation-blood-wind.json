@@ -1,7 +1,7 @@
 {
   "name": "Blood Wind",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/blood-wind.svg",
   "system": {
     "description": "<p>The caster's natural attacks gain Reach and can strike targets up to 10m per caster Level away.</p>",
     "source": {

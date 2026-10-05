@@ -3,7 +3,7 @@
   "_key": "!items!dtdC5ebeb46f621f",
   "name": "Cleric",
   "type": "class",
-  "img": "icons/svg/holy-shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/cleric.svg",
   "folder": "dtdCFd94e8732b9c",
   "system": {
     "description": "<p>The third step of the Cleric track, where a devoted caster grows into a true minister of the faith. It adds Channel Energy, Divine Ministration and True Grit to the Priest's holy magic across Abjuration, Divination, Healing, Necromancy and Transmutation.</p>",

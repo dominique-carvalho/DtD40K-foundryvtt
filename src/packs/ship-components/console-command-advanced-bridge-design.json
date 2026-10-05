@@ -1,7 +1,7 @@
 {
   "name": "Advanced Bridge Design",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/advanced-bridge-design.svg",
   "system": {
     "description": "<p>Holographic, self-adjusting bridge controls. Command Action tests gain +1k1.</p>",
     "source": {

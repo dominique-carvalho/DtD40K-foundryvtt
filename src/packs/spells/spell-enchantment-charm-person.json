@@ -1,7 +1,7 @@
 {
   "name": "Charm Person",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/charm-person.svg",
   "system": {
     "description": "<p>The target's Disposition toward the caster improves one step, as toward an old friend; resisted with Arcana + Willpower. Treating them well may make the friendship outlast the spell.</p>",
     "source": {

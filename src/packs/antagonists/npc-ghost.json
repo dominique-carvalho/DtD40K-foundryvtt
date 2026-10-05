@@ -1,7 +1,7 @@
 {
   "name": "Ghost",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/ghost.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -169,7 +169,10 @@
   "prototypeToken": {
     "name": "Ghost",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/ghost.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNd548a4388c64",

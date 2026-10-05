@@ -33,16 +33,16 @@ quickstart.md
 
 ## Phase 2: User Story 1 — Itens de compêndio (P1) 🎯 MVP
 
-- [ ] T007 [US1] `scripts/suggest-glyphs.mjs`: candidatos por palavras do nome e sinônimos por categoria → `src/icons/suggestions.json` (não versionado)
-- [ ] T008 [US1] Curadoria em `src/icons/curation.json`, por grupo: armas (equipamento) e armaduras; drogas, cibernéticos, equipamento geral e artefatos; magias; feats, Assets, Hindrances, feats raciais e Exalted Assets; raças, exaltações, classes, divindades e escolas marciais; componentes de veículo e de nave; tabelas. Baixar os glifos (`icons:fetch`)
-- [ ] T009 [US1] Rodar `build:icons` e `build:packs`; registrar os itens sem glifo próprio em `specs/024-compendium-icons/pendencias-curadoria.md` (SC-002 ≥ 90%)
+- [X] T007 [US1] `scripts/suggest-glyphs.mjs`: candidatos por palavras do nome e sinônimos por categoria → `src/icons/suggestions.json` (não versionado)
+- [X] T008 [US1] Curadoria em `src/icons/curation.json`, por grupo: armas (equipamento) e armaduras; drogas, cibernéticos, equipamento geral e artefatos; magias; feats, Assets, Hindrances, feats raciais e Exalted Assets; raças, exaltações, classes, divindades e escolas marciais; componentes de veículo e de nave; tabelas. Baixar os glifos (`icons:fetch`)
+- [X] T009 [US1] Rodar `build:icons` e `build:packs`; registrar os itens sem glifo próprio em `specs/024-compendium-icons/pendencias-curadoria.md` (SC-002 ≥ 90%)
 
 ---
 
 ## Phase 3: User Story 2 — Atores (P2)
 
-- [ ] T010 [US2] Curadoria dos 73 atores (NPCs, Minion Squads, naves, veículos) e dos itens embutidos sem equivalente no compêndio; retrato e token
-- [ ] T011 [US2] Rodar `build:icons`/`build:packs`; conferir no teste que os embutidos com equivalente usam o mesmo ícone
+- [X] T010 [US2] Curadoria dos 73 atores (NPCs, Minion Squads, naves, veículos) e dos itens embutidos sem equivalente no compêndio; retrato e token
+- [X] T011 [US2] Rodar `build:icons`/`build:packs`; conferir no teste que os embutidos com equivalente usam o mesmo ícone
 
 ---
 

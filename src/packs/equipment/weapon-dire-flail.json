@@ -1,7 +1,7 @@
 {
   "name": "Dire Flail",
   "type": "weapon",
-  "img": "systems/dtd40k/assets/icons/weapon-melee/dire-flail.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/dire-flail-equipment.svg",
   "system": {
     "description": "<p>A huge flail whose head can be as large as its wielder, swinging wildly on a long chain. It is a hazard to enemies and bystanders alike.</p>",
     "source": {

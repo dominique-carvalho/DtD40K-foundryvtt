@@ -1,7 +1,7 @@
 {
   "id": "dtd40k",
   "title": "Dungeons the Dragoning",
-  "description": "Unofficial game system for Dungeons the Dragoning 7.7a (LawfulNice): Roll &amp; Keep d10, characters, races and exaltations.",
+  "description": "Unofficial game system for Dungeons the Dragoning 7.7a (LawfulNice): Roll & Keep d10, characters, races and exaltations.",
   "version": "0.3.0",
   "compatibility": {
     "minimum": "13",
@@ -10,51 +10,32 @@
   "authors": [
     {
       "name": "dominique-carvalho",
-      "url": "https://github.com/dominique-carvalho",
-      "flags": {}
+      "url": "https://github.com/dominique-carvalho"
     }
   ],
   "esmodules": [
     "dtd40k.mjs"
   ],
   "styles": [
-    {
-      "src": "styles/fonts.css"
-    },
-    {
-      "src": "styles/tokens.css"
-    },
-    {
-      "src": "styles/dtd40k.css"
-    },
-    {
-      "src": "styles/components.css"
-    },
-    {
-      "src": "styles/chat.css"
-    },
-    {
-      "src": "styles/sheet-cogitator.css"
-    },
-    {
-      "src": "styles/sheet-illuminated.css"
-    },
-    {
-      "src": "styles/builder.css"
-    }
+    "styles/fonts.css",
+    "styles/tokens.css",
+    "styles/dtd40k.css",
+    "styles/components.css",
+    "styles/chat.css",
+    "styles/sheet-cogitator.css",
+    "styles/sheet-illuminated.css",
+    "styles/builder.css"
   ],
   "languages": [
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json",
-      "flags": {}
+      "path": "lang/en.json"
     },
     {
       "lang": "pt-BR",
       "name": "Português (Brasil)",
-      "path": "lang/pt-BR.json",
-      "flags": {}
+      "path": "lang/pt-BR.json"
     }
   ],
   "documentTypes": {
@@ -171,8 +152,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "exaltations",
@@ -183,8 +163,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "exalted-assets",
@@ -195,8 +174,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "feats",
@@ -207,8 +185,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "classes",
@@ -219,8 +196,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "equipment",
@@ -231,8 +207,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "combat-tables",
@@ -243,8 +218,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "spells",
@@ -255,8 +229,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "martial-schools",
@@ -267,8 +240,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "deities",
@@ -279,8 +251,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "antagonists",
@@ -291,8 +262,7 @@
       "ownership": {
         "PLAYER": "NONE",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "vehicle-components",
@@ -303,8 +273,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "vehicles",
@@ -315,8 +284,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "ship-components",
@@ -327,8 +295,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "name": "ships",
@@ -339,11 +306,11 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     }
   ],
   "grid": {
+    "distance": 1,
     "units": "m"
   },
   "primaryTokenAttribute": "hp",
@@ -351,7 +318,6 @@
   "initiative": "1d10 + @characteristics.dex.value + @characteristics.cmp.value + @modifiers.initiative",
   "url": "https://github.com/dominique-carvalho/DtD40K-foundryvtt",
   "manifest": "https://github.com/dominique-carvalho/DtD40K-foundryvtt/releases/latest/download/system.json",
-  "download": "https://github.com/dominique-carvalho/DtD40K-foundryvtt/releases/download/v0.3.0/dtd40k.zip",
-  "socket": true,
-  "flags": {}
+  "download": "https://github.com/dominique-carvalho/DtD40K-foundryvtt/releases/download/v0.1.0/dtd40k.zip",
+  "socket": true
 }

@@ -27,7 +27,7 @@ export function prepareMagicContext(actor, { isAdvance }) {
       over: state.slots[key].used > state.slots[key].max,
       advance: isAdvance ? advanceInfo(actor, "school", key, actor._source.system.magic.schools[key].value) : null,
       spells: known.map((s) => ({
-        id: s.id, name: s.name, level: s.system.level, comboOk: s.system.keywords.includes("comboOk"),
+        id: s.id, name: s.name, img: s.img, level: s.system.level, comboOk: s.system.keywords.includes("comboOk"),
         tn: s.system.tn.special === "none" ? "—" : s.system.tn.special === "mentalDefense" ? "MD" : s.system.tn.value,
         action: localize(`DTD.Magic.Action.${s.system.action}`)
       }))

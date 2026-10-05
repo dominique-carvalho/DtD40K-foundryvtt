@@ -1479,6 +1479,12 @@
   align-items: baseline;
 }
 
+/* Item icon at the start of the row (spec 024). */
+.dtd40k .equipment-name > .asset-img {
+  align-self: center;
+  flex: none;
+}
+
 .dtd40k .equipment-name .hint {
   font-size: 0.75rem;
 }

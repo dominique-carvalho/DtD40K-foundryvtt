@@ -16,6 +16,11 @@ const OUT = "assets/icons";
 const URL_ROOT = "systems/dtd40k/assets/icons";
 
 const readJson = (path) => JSON.parse(readFileSync(path, "utf8"));
+/** Write a generated text file only when its content changed (a CRLF checkout on Windows is not a change). */
+const writeIfChanged = (path, text) => {
+  if (existsSync(path) && readFileSync(path, "utf8").replaceAll("\r\n", "\n") === text) return;
+  writeFileSync(path, text);
+};
 const walk = (dir) => readdirSync(dir).flatMap((name) => {
   const path = join(dir, name);
   return statSync(path).isDirectory() ? walk(path) : path.endsWith(".json") ? [path] : [];
@@ -145,10 +150,10 @@ const credits = [
   "(CC0 where noted). Their original files are in `src/icons/glyphs`.",
   ""
 ].join("\n");
-writeFileSync("CREDITS.md", credits);
+writeIfChanged("CREDITS.md", credits);
 
 const uncurated = [...entries.values()].filter((e) => !e.curated).map((e) => e.key).sort();
-writeFileSync(join(ICONS, "uncurated.json"), `${JSON.stringify(uncurated, null, 1)}\n`);
+writeIfChanged(join(ICONS, "uncurated.json"), `${JSON.stringify(uncurated, null, 1)}\n`);
 
 const total = entries.size;
 console.log(`${total} documents, ${total - uncurated.length} with their own glyph (${Math.round(((total - uncurated.length) / total) * 100)}%).`);

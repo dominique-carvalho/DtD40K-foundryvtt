@@ -6,7 +6,7 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
 > Projeto de fã. As descrições exibidas são resumos com redação própria; nenhum texto integral
 > do livro é reproduzido.
 
-## Recursos (versão 0.1.0)
+## Recursos (versão 0.3.0)
 
 - **Ficha de personagem** no layout clássico da ficha oficial, com três modos:
   - **Edição** — características na grade 3×3 (Power / Finesse / Resistance × Mental / Físico /

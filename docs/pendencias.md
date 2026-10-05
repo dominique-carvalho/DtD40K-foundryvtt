@@ -49,6 +49,10 @@ Nenhuma regra mecânica pendente (o custo dos Exalted Assets entrou na 020). O q
 
 ## 5. Validação e manutenção
 
-- **Sem teste com jogador comum** (o mundo de teste só tem o Gamemaster): pedidos ao Mestre por socket (dano em alvo
-  alheio, efeitos de ataque especial) e as recusas que só valem para jogador.
-- Worktrees antigos (003–012) abertos; o repositório principal parado na branch `002-race-compendium` (já mesclada).
+- **Pouco teste com jogador comum**: o mundo de teste tem o usuário Player2 (jogador, sem permissão de criar atores),
+  usado só na validação do montador (023). Os pedidos ao Mestre por socket (dano em alvo alheio, efeitos de ataque
+  especial) e as recusas que só valem para jogador nas features 008–022 foram validados só como Mestre.
+- Trocar o link `Data/systems/dtd40k` pede reiniciar o Foundry por completo: ele resolve o caminho do sistema ao
+  iniciar o aplicativo (reabrir o mundo mantém os packs do caminho antigo).
+- Worktrees das features 003–024 removidos em 2026-10-05 (todos mesclados); as specs da 003, que só existiam no
+  worktree, foram trazidas para `specs/003-rules-7-7a-alignment`.

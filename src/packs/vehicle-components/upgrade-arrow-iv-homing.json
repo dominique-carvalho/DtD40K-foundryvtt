@@ -1,7 +1,7 @@
 {
   "name": "Arrow IV Homing",
   "type": "vehicleComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/arrow-iv-homing.svg",
   "system": {
     "description": "<p>Guided cruise missile: smaller blast but gains Homing so it cannot be dodged.</p><p>Blast (1), Homing, Recharge.</p>",
     "source": {

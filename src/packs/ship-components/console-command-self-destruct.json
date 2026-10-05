@@ -1,7 +1,7 @@
 {
   "name": "Self Destruct",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/self-destruct.svg",
   "system": {
     "description": "<p>Scuttling charges. The Captain arms them with any delay from instant (costs a Command Action) up to one day; the blast hits every ship within 5 VU for 10k10+100.</p>",
     "source": {

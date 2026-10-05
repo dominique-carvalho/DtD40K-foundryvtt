@@ -3,7 +3,7 @@
   "_key": "!items!dtdFa2e1dc4dd1d0",
   "name": "Squat Armor Proficiency",
   "type": "feat",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/racial-feat/squat-armor-proficiency.svg",
   "folder": "dtdFld6a6ced1218",
   "system": {
     "category": "racialFeat",

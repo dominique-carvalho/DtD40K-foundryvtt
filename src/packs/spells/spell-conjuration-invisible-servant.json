@@ -1,7 +1,7 @@
 {
   "name": "Invisible Servant",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/invisible-servant.svg",
   "system": {
     "description": "<p>Summons an unseen animating force for one hour that handles chores needing no skill test; it has an effective 1 in every characteristic.</p>",
     "source": {

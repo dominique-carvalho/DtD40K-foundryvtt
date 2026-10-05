@@ -1,7 +1,7 @@
 {
   "name": "Best Lightweight Frame",
   "type": "vehicleComponent",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/best-lightweight-frame.svg",
   "system": {
     "description": "<p>Best Lightweight frame: 20 HP and Resilience 6. Comes with a Cockpit.</p>",
     "source": {

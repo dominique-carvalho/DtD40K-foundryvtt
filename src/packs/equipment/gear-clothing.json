@@ -1,7 +1,7 @@
 {
   "name": "Clothing",
   "type": "gear",
-  "img": "icons/svg/item-bag.svg",
+  "img": "systems/dtd40k/assets/icons/gear/clothing.svg",
   "system": {
     "description": "<p>Any kind of garment, from rags and bodygloves to uniforms, work clothes and religious vestments. The SM sets the availability of any particular outfit, and finer fabrics, tailors and jewelry can always cost more.</p>",
     "source": {

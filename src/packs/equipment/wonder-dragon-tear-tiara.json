@@ -1,7 +1,7 @@
 {
   "name": "Dragon Tear Tiara",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/dragon-tear-tiara.svg",
   "system": {
     "description": "<p>A tiara of magical materials with three hearthstone settings resting on the wearer's forehead. Besides the benefits of any socketed hearthstones, the wearer gains +1k0 on all Perception tests, rising to +3k0 on Arcana tests to detect spells or identify magical effects.</p>",
     "source": {

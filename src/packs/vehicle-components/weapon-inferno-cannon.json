@@ -1,7 +1,7 @@
 {
   "name": "Inferno Cannon",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/inferno-cannon.svg",
   "system": {
     "description": "<p>Tank-sized flamer, used more for terror than real warfare.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Laspistol",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-pistol/laspistol.svg",
   "system": {
     "description": "<p>The ubiquitous las sidearm: light, small and hard to break. Examples range from gilded, engraved heirlooms to crude but tough models carried by criminals.</p>",
     "source": {

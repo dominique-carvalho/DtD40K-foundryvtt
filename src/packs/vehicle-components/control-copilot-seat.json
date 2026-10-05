@@ -1,7 +1,7 @@
 {
   "name": "Copilot Seat",
   "type": "vehicleComponent",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/copilot-seat.svg",
   "system": {
     "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
     "source": {

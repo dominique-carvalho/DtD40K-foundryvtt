@@ -1,6 +1,6 @@
 {
   "name": "Degeneration",
-  "img": "icons/svg/skull.svg",
+  "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
   "description": "<p>Roll 1d100 when a second Alignment Check fails (DtD 7.7a pp. 285–286); a result the character already has is rolled again. The book prints 59–62 and 62–69: 62 reads as Malign Sight.</p>",
   "formula": "1d100",
   "replacement": true,
@@ -9,7 +9,7 @@
     {
       "type": "text",
       "name": "Palsy (01–7)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Palsy</b>: Constant tremors and tics with no medical cause; -1 Dexterity.</p>",
       "weight": 1,
       "range": [
@@ -32,7 +32,7 @@
     {
       "type": "text",
       "name": "Dark-Hearted (08–11)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Dark-Hearted</b>: Grows spiteful and cruel; -1 Fellowship.</p>",
       "weight": 1,
       "range": [
@@ -55,7 +55,7 @@
     {
       "type": "text",
       "name": "Ill-fortuned (12–21)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Ill-fortuned</b>: Once per session the SM may make you reroll any roll other than an Alignment Check.</p>",
       "weight": 1,
       "range": [
@@ -77,7 +77,7 @@
     {
       "type": "text",
       "name": "Skin Affliction (22–28)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Skin Affliction</b>: Sores and boils; -2k0 on every social Test.</p>",
       "weight": 1,
       "range": [
@@ -101,7 +101,7 @@
     {
       "type": "text",
       "name": "Morbid (29–32)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Morbid</b>: Grim visions ruin focus; -1 Intelligence.</p>",
       "weight": 1,
       "range": [
@@ -124,7 +124,7 @@
     {
       "type": "text",
       "name": "Witch-mark (33–41)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Witch-mark</b>: A small, hideable deformity or mutation that brands the character as cursed.</p>",
       "weight": 1,
       "range": [
@@ -146,7 +146,7 @@
     {
       "type": "text",
       "name": "Wasted Frame (42–45)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Wasted Frame</b>: Pale and withering muscles; -1 Strength.</p>",
       "weight": 1,
       "range": [
@@ -169,7 +169,7 @@
     {
       "type": "text",
       "name": "Horrific Nightmare (46–54)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Horrific Nightmare</b>: Tormented sleep grants the Night Terrors hindrance; reroll if already held.</p>",
       "weight": 1,
       "range": [
@@ -191,7 +191,7 @@
     {
       "type": "text",
       "name": "Poor Health (55–58)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Poor Health</b>: Endless minor sickness and slow healing; -1 Constitution.</p>",
       "weight": 1,
       "range": [
@@ -214,7 +214,7 @@
     {
       "type": "text",
       "name": "Malign Sight (59–62)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Malign Sight</b>: Things seem to decay under a lingering gaze; -1 Wisdom.</p>",
       "weight": 1,
       "range": [
@@ -237,7 +237,7 @@
     {
       "type": "text",
       "name": "Ashen Taste (63–69)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Ashen Taste</b>: Food is revolting and barely nourishes; Fatigue effects are doubled.</p>",
       "weight": 1,
       "range": [
@@ -259,7 +259,7 @@
     {
       "type": "text",
       "name": "Blackouts (70–76)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Blackouts</b>: Unexplained lost time; when it happens and what occurs is the SM's decision.</p>",
       "weight": 1,
       "range": [
@@ -281,7 +281,7 @@
     {
       "type": "text",
       "name": "Distrustful (77–80)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Distrustful</b>: Open suspicion of everyone; -1 Charisma.</p>",
       "weight": 1,
       "range": [
@@ -304,7 +304,7 @@
     {
       "type": "text",
       "name": "Fell Obsession (81–85)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Fell Obsession</b>: Fixated on a dark focus at all times; -1 Willpower.</p>",
       "weight": 1,
       "range": [
@@ -327,7 +327,7 @@
     {
       "type": "text",
       "name": "Mood Swings (86–90)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Mood Swings</b>: Erratic swings of temper; -1 Composure.</p>",
       "weight": 1,
       "range": [
@@ -350,7 +350,7 @@
     {
       "type": "text",
       "name": "Blighted Mind (91–00)",
-      "img": "icons/svg/skull.svg",
+      "img": "systems/dtd40k/assets/icons/table/degeneration.svg",
       "description": "<p><b>Blighted Mind</b>: The mind cracks under guilt; gain a new minor derangement.</p>",
       "weight": 1,
       "range": [

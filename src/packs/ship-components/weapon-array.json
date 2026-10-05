@@ -1,7 +1,7 @@
 {
   "name": "Array",
   "type": "shipComponent",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/array.svg",
   "system": {
     "description": "<p>Very common broadside battery; highly accurate yet low damage.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
     "source": {

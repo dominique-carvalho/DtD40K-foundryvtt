@@ -1,7 +1,7 @@
 {
   "name": "Essence Union Dart",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/essence-union-dart.svg",
   "system": {
     "description": "<p>A rune-covered tracking dart paired with a ring; within a kilometre or two the ring pulses toward the dart. If the dart hits a target in combat and stays lodged (removing it takes a half action), the ring's wearer ignores penalties for being unable to see that target, such as darkness or smoke.</p>",
     "source": {

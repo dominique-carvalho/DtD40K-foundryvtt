@@ -1,7 +1,7 @@
 {
   "name": "Mesh",
   "type": "armor",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/armor/mesh.svg",
   "system": {
     "description": "<p>A light suit woven from countless linked thermoplas cells into a flexible, cloth-like fabric. On impact or contact with heat the weave briefly locks rigid, spreading the force of the blow across the suit.</p>",
     "source": {

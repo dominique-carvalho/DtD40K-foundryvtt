@@ -1,7 +1,7 @@
 {
   "name": "Plasma Gun",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/plasma-gun.svg",
   "system": {
     "description": "<p>A plasma rifle that feeds hydrogen fuel into a tiny fusion core and ejects it as a bolt of star-hot matter. Rare even in military service, it is as dangerous to its user as to the enemy, sometimes venting scalding heat back on whoever holds it.</p>",
     "source": {

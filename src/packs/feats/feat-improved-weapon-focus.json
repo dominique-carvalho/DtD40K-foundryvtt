@@ -3,7 +3,7 @@
   "_key": "!items!dtdFbce19409ca64",
   "name": "Improved Weapon Focus",
   "type": "feat",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/feat/improved-weapon-focus.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

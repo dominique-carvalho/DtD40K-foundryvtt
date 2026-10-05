@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsChoMoradin0",
   "name": "Mark of Moradin",
   "type": "feat",
-  "img": "icons/svg/statue.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/mark-of-moradin.svg",
   "folder": "dtdFldChoMark000",
   "system": {
     "category": "exaltedAsset",

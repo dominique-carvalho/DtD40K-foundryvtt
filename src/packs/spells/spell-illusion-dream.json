@@ -1,7 +1,7 @@
 {
   "name": "Dream",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/dream.svg",
   "system": {
     "description": "<p>Reaches a sleeping person through the Warp. A dream carries a single message; a nightmare denies all bed-rest benefits, including wound healing.</p>",
     "source": {

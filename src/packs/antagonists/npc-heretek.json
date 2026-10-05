@@ -1,7 +1,7 @@
 {
   "name": "Heretek",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/heretek.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -160,7 +160,7 @@
     {
       "name": "Laspistol",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-pistol/laspistol.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -203,7 +203,7 @@
     {
       "name": "Wrench",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/wrench.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -243,7 +243,10 @@
   "prototypeToken": {
     "name": "Heretek",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/heretek.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNc9f1f9b791b8",

@@ -1,7 +1,7 @@
 {
   "name": "Illusory Script",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/illusory-script.svg",
   "system": {
     "description": "<p>Writes a magical text showing one message to most readers while hiding a second message only intended recipients see. Writing takes the usual time; any size or surface.</p>",
     "source": {

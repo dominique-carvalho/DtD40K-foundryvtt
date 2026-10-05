@@ -1,7 +1,7 @@
 {
   "name": "Tinkerer",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/tinkerer.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -172,7 +172,7 @@
     {
       "name": "Laspistol",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-pistol/laspistol.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -215,7 +215,7 @@
     {
       "name": "Web Pistol",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-pistol/web-pistol.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -258,7 +258,7 @@
     {
       "name": "Katar",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/katar.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -298,7 +298,10 @@
   "prototypeToken": {
     "name": "Tinkerer",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/tinkerer.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN0e924bcf7c6e",

@@ -1,7 +1,7 @@
 {
   "name": "Grand Daiklave",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/grand-daiklave.svg",
   "system": {
     "description": "<p>Also called a battleblade or foecutter, this is the daiklave taken to its extreme, built on the idea that a dead enemy needs no defending against. Up to two metres long with a foot-wide blade, it is usable only thanks to the enchantments within it.</p>",
     "source": {

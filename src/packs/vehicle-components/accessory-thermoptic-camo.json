@@ -1,7 +1,7 @@
 {
   "name": "Thermoptic Camo",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/thermoptic-camo.svg",
   "system": {
     "description": "<p>Active camouflage that beats the eye but not radar: the vehicle can roll Stealth + Dexterity or Intelligence under the usual Stealth rules.</p>",
     "source": {

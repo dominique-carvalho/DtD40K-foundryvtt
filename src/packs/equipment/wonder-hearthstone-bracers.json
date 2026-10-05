@@ -1,7 +1,7 @@
 {
   "name": "Hearthstone Bracers",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/hearthstone-bracers.svg",
   "system": {
     "description": "<p>A pair of bracers, each with one hearthstone slot (two in total). They also give +2 AP, which adds to any other armour worn.</p>",
     "source": {

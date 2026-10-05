@@ -1,7 +1,7 @@
 {
   "name": "Destiny Knot",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/destiny-knot.svg",
   "system": {
     "description": "<p>Rare arcane web of cords threaded through the vessel. The Captain and Bridge Officers may burn personal Hero Points for rerolls on any test by the ship or its crew, even outside their own section (e.g. the captain rerolling a missed hit or a repair).</p>",
     "source": {

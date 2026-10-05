@@ -1,7 +1,7 @@
 {
   "name": "Defenestration",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/defenestration.svg",
   "system": {
     "description": "<p>Choose a victim within 100m and a wall no farther than 5m from it; the target is hurled into the wall and both take 4k2 E. If the wall's AP is below 5 x caster Level, the target smashes through, wrecking a wall section.</p>",
     "source": {

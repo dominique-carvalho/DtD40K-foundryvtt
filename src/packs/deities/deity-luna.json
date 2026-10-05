@@ -1,7 +1,7 @@
 {
   "name": "Luna",
   "type": "deity",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/deity/luna.svg",
   "system": {
     "description": "<p>Fickle moon goddess of change, independence and the true face behind civilized masks; like a mother she lets her children get hurt so they can grow.</p>",
     "source": {

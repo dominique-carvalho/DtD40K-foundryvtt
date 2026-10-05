@@ -1,7 +1,7 @@
 {
   "name": "HV Ammo",
   "type": "vehicleComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/hv-ammo.svg",
   "system": {
     "description": "<p>High-velocity rounds that double the gun's range.</p><p>Range Double.</p>",
     "source": {

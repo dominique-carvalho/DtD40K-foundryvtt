@@ -1,7 +1,7 @@
 {
   "name": "Screen",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/screen.svg",
   "system": {
     "description": "<p>Protects an area from scrying and remote viewing: the caster sets what remote observers see there, fooling cameras, satellites and magic. Direct viewing or interaction can grant a save when there is cause for suspicion.</p>",
     "source": {

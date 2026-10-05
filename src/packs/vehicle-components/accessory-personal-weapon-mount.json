@@ -1,7 +1,7 @@
 {
   "name": "Personal Weapon Mount",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/personal-weapon-mount.svg",
   "system": {
     "description": "<p>Holds one infantry-scale weapon, always braced; installing or removing it takes an hour.</p>",
     "source": {

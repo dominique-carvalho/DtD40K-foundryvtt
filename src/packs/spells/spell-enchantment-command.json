@@ -1,7 +1,7 @@
 {
   "name": "Command",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/command.svg",
   "system": {
     "description": "<p>Issue a single-word order; a target failing Arcana + Willpower must try to follow it with their next action. Clearly self-destructive orders are resisted automatically; if it cannot be finished in one combat action they do their best.</p>",
     "source": {

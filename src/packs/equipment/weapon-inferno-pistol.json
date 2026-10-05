@@ -1,7 +1,7 @@
 {
   "name": "Inferno Pistol",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-pistol/inferno-pistol.svg",
   "system": {
     "description": "<p>A compact melta pistol built on ancient technology that is almost impossible to copy. Owning one marks great status, and it is normally found only in the hands of the powerful and well-connected.</p>",
     "source": {

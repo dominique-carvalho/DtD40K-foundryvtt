@@ -17,7 +17,7 @@
     <ul class="equipment-list">
       {{#each s.spells as |sp|}}
       <li class="equipment-row">
-        <span class="equipment-name"><a data-action="openSpell" data-item-id="{{sp.id}}">{{sp.name}}</a>
+        <span class="equipment-name"><img class="asset-img" src="{{sp.img}}" alt=""> <a data-action="openSpell" data-item-id="{{sp.id}}">{{sp.name}}</a>
           <span class="hint">{{localize "DTD.Class.Level"}} {{sp.level}} · TN {{sp.tn}} · {{sp.action}}</span>
           {{#if sp.comboOk}}<span class="tag">Combo-OK</span>{{/if}}
         </span>

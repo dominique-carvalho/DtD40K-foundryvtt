@@ -1,7 +1,7 @@
 {
   "name": "Torment",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/torment.svg",
   "system": {
     "description": "<p>Every creature within 10m, caster and allies included, loses half of its remaining Hit Points; resisted with Arcana + Constitution. Undead get a free raise to resist.</p>",
     "source": {

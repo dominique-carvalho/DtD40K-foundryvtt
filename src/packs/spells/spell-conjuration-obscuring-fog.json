@@ -1,7 +1,7 @@
 {
   "name": "Obscuring Fog",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/obscuring-fog.svg",
   "system": {
     "description": "<p>Produces fog in up to three 5m cubes per caster level; vision is blocked beyond 2m and concealment always applies. It disperses naturally in roughly five minutes, sooner with wind or strong sun.</p>",
     "source": {

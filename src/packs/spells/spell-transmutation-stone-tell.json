@@ -1,7 +1,7 @@
 {
   "name": "Stone Tell",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/stone-tell.svg",
   "system": {
     "description": "<p>Stones give the caster information, mostly about things that touched or moved them and what lies hidden behind or beneath them; they describe fully when asked, limited by their viewpoint. Natural stone tells more than artificial.</p>",
     "source": {

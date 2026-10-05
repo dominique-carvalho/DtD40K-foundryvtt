@@ -3,7 +3,7 @@
   "_key": "!items!dtdFad181aa08ac3",
   "name": "Fleet of Foot",
   "type": "feat",
-  "img": "icons/svg/walk.svg",
+  "img": "systems/dtd40k/assets/icons/feat/fleet-of-foot.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

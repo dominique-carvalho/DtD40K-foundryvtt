@@ -119,7 +119,7 @@ export class ShipSheet extends HandlebarsApplicationMixin(foundry.applications.s
       layers: system.shield.layerCount ? system.shield.layers.map((l, n) => ({ n: n + 1, value: l.value, max: system.shield.max, disruption: l.disruption })) : null,
       round: system.state.round ?? {},
       distances: Object.entries(WARP_VOYAGE).map(([key, v]) => ({ key, label: `${v.distance} (TN ${v.tn})` })),
-      hangar: system.hangar.map((uuid) => { const v = foundry.utils.fromUuidSync(uuid); return { uuid, name: v?.name ?? localize("DTD.Vehicle.MissingActor"), img: v?.img ?? "icons/svg/mystery-man.svg" }; }),
+      hangar: system.hangar.map((uuid) => { const v = foundry.utils.fromUuidSync(uuid); return { uuid, name: v?.name ?? localize("DTD.Vehicle.MissingActor"), img: v?.img ?? CONFIG.DTD.ICONS.actor.vehicle }; }),
       fighterBay: parts.some((i) => i.system.automation?.key === "fighterBay"),
       enriched: {
         description: await foundry.applications.ux.TextEditor.implementation.enrichHTML(system.description, { relativeTo: actor, secrets: actor.isOwner })

@@ -1,7 +1,7 @@
 {
   "name": "Energy Aura",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/energy-aura.svg",
   "system": {
     "description": "<p>An aura strikes anyone the caster hits in melee, plus everyone within melee reach when the caster's turn ends, for 1k1 E +3 per Level. No focus item is named.</p>",
     "source": {

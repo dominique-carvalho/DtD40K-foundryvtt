@@ -1,7 +1,7 @@
 {
   "name": "Main Gauche",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/main-gauche.svg",
   "system": {
     "description": "<p>A basket-hilted parrying dagger, superb at blocking blows but somewhat worse than a normal knife at wounding.</p>",
     "source": {

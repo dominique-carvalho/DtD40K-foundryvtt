@@ -1,7 +1,7 @@
 {
   "name": "Elemental",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/elemental.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -312,7 +312,7 @@
     {
       "name": "Slam",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/slam.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -355,7 +355,7 @@
     {
       "name": "Fiery Slam",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/fiery-slam.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -401,7 +401,10 @@
   "prototypeToken": {
     "name": "Elemental",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/elemental.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN11d177d03ab6",

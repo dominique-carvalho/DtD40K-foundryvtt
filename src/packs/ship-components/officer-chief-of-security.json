@@ -1,7 +1,7 @@
 {
   "name": "Chief of Security",
   "type": "shipComponent",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/chief-of-security.svg",
   "system": {
     "description": "<p>Carries out the Captain's orders, guards prisoners and readies defenses against boarders. A boarding party this officer leads or defends against gets two extra raises when it succeeds.</p>",
     "source": {

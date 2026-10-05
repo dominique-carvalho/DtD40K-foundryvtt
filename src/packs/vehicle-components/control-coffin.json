@@ -1,7 +1,7 @@
 {
   "name": "COFFIN",
   "type": "vehicleComponent",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/coffin.svg",
   "system": {
     "description": "<p>A neural-link cockpit without windows; the pilot perceives through screens or a direct brain interface and gains 1 extra Reaction each round for vehicle use.</p>",
     "source": {

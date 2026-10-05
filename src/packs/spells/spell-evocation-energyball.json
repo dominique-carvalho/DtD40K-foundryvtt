@@ -1,7 +1,7 @@
 {
   "name": "Energyball",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/energyball.svg",
   "system": {
     "description": "<p>Attack out to 30m with Blast 10 for 2k1 E damage per Level.</p>",
     "source": {

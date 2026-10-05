@@ -1,7 +1,7 @@
 {
   "name": "Perfected Boots",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/perfected-boots.svg",
   "system": {
     "description": "<p>Self-fitting boots that stay warm and dry in any conditions and spare the wearer blisters and fatigue. The wearer can travel overland at an average of about 20 km per hour and has +2 Speed.</p>",
     "source": {

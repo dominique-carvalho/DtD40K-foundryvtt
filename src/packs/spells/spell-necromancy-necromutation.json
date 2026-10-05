@@ -1,7 +1,7 @@
 {
   "name": "Necromutation",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/necromutation.svg",
   "system": {
     "description": "<p>The caster drops to 0 hit points and receives no healing until the scene ends, yet cannot lose hit points for 1d10 rounds.</p>",
     "source": {

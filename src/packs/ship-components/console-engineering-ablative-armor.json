@@ -1,7 +1,7 @@
 {
   "name": "Ablative Armor",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/ablative-armor.svg",
   "system": {
     "description": "<p>Sacrificial plating: the first hull hit each combat is negated entirely (no damage, no crit roll).</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Lasgun",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/lasgun.svg",
   "system": {
     "description": "<p>The standard las rifle, built in countless patterns throughout nearly every Crystal Sphere. Its sturdiness and dependability make it the weapon of choice for armies and adventurers alike.</p>",
     "source": {

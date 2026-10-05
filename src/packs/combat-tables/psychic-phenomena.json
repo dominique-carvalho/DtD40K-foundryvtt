@@ -1,6 +1,6 @@
 {
   "name": "Psychic Phenomena",
-  "img": "icons/svg/lightning.svg",
+  "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
   "description": "<p>Roll 1d100 plus the casting modifiers (Push, Unsanctioned Unfettered, combos); 75 or more goes to the Perils of the Warp (DtD 7.7a p. 231).</p>",
   "formula": "1d100",
   "replacement": true,
@@ -9,7 +9,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 01-03",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Dark Foreboding: a faint breeze and a shared sense that something bad just happened somewhere in the galaxy. No mechanical effect.</p>",
       "weight": 1,
       "range": [
@@ -28,7 +28,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 04-05",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Spoilage: food and drink within a 5d10 meter radius go bad.</p>",
       "weight": 1,
       "range": [
@@ -47,7 +47,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 06-08",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Unnatural Decay: plants within 3d10 meters wither and die.</p>",
       "weight": 1,
       "range": [
@@ -66,7 +66,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 09-11",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Warp Echo: all sounds echo briefly, whatever the setting.</p>",
       "weight": 1,
       "range": [
@@ -85,7 +85,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 12-14",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Unholy Stench: a strange foul odour surrounds the caster.</p>",
       "weight": 1,
       "range": [
@@ -104,7 +104,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 15-17",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Hoarfrost: temperature drops; frost coats everything within 3d10 meters.</p>",
       "weight": 1,
       "range": [
@@ -123,7 +123,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 18-20",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Warp Mind: caster gains 1 Insanity Point.</p>",
       "weight": 1,
       "range": [
@@ -144,7 +144,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 21-23",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Aura of Taint: animals in a 1d100 meter radius grow agitated.</p>",
       "weight": 1,
       "range": [
@@ -163,7 +163,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 24-26",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Memory Worm: everyone with line of sight to the caster forgets something trivial.</p>",
       "weight": 1,
       "range": [
@@ -182,7 +182,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 27-29",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Distorted Reflections: mirrors and reflective surfaces within 5d10 meters warp or break.</p>",
       "weight": 1,
       "range": [
@@ -201,7 +201,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 30-32",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Bloody Tears: within 3d10 meters, wood and stone ooze blood; images of people seem to weep blood.</p>",
       "weight": 1,
       "range": [
@@ -220,7 +220,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 33-35",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Warp Mind: caster gains 1 Insanity Point (duplicate of 18-20).</p>",
       "weight": 1,
       "range": [
@@ -241,7 +241,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 36-38",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Shadow of the Warp: everyone within 1d100 meters, caster included, tests Willpower TN 20 or gains 1d5 insanity points.</p>",
       "weight": 1,
       "range": [
@@ -260,7 +260,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 39-41",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Mask of Fear: caster briefly looks horrific, with Fear 1 for what remains of this round.</p>",
       "weight": 1,
       "range": [
@@ -279,7 +279,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 42-44",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Warp Madness: every creature within 2d10 meters except the caster is Frenzied for a round unless it passes Willpower TN 20.</p>",
       "weight": 1,
       "range": [
@@ -298,7 +298,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 45-47",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Haunting Breeze: brief wind scatters light objects and makes fires flicker within 3d10 meters.</p>",
       "weight": 1,
       "range": [
@@ -317,7 +317,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 48-50",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Veil of Darkness: a 3d10 meter area falls into total darkness until the round ends.</p>",
       "weight": 1,
       "range": [
@@ -336,7 +336,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 51-53",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Breath Leech: everyone, caster included, is winded for one round: no Run or Charge actions.</p>",
       "weight": 1,
       "range": [
@@ -355,7 +355,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 54-56",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Spectral Gale: caster and anyone within 4d10 meters test Dexterity or Strength TN 10 or are knocked down.</p>",
       "weight": 1,
       "range": [
@@ -374,7 +374,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 57-59",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>The Earth Protests: everyone within 5d10 meters, caster included, tests Dexterity TN 15 or is knocked down.</p>",
       "weight": 1,
       "range": [
@@ -393,7 +393,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 60-62",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Tech Scorn: tech within 5d10 meters glitches briefly and ranged weapons jam; those with cybernetic implants (and prometheans) test Constitution TN 15 or lose 1d5 hit points.</p>",
       "weight": 1,
       "range": [
@@ -412,7 +412,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 63-65",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Psy Discharge: static in a 5d10 meter area raises hair and shorts unshielded electronics.</p>",
       "weight": 1,
       "range": [
@@ -431,7 +431,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 66-68",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Banshee Howl: glass shatters; every creature in the area tests Constitution TN 15 or is deafened for 1d10 rounds.</p>",
       "weight": 1,
       "range": [
@@ -450,7 +450,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 69-71",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Warp Ghosts: apparitions within 3d10 meters; everyone in the radius tests against Fear 1.</p>",
       "weight": 1,
       "range": [
@@ -469,7 +469,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 72-74",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>The Furies: caster is hurled down, loses 1d5 hit points and tests against Fear 2.</p>",
       "weight": 1,
       "range": [
@@ -493,7 +493,7 @@
     {
       "type": "text",
       "name": "Psychic Phenomena 75+",
-      "img": "icons/svg/lightning.svg",
+      "img": "systems/dtd40k/assets/icons/table/psychic-phenomena.svg",
       "description": "<p>Perils of the Warp: a rift tears open; go to the Perils table.</p>",
       "weight": 1,
       "range": [

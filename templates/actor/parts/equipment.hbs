@@ -22,6 +22,7 @@
         <a class="equip-toggle" data-action="toggleEquipped" data-item-id="{{w.id}}" data-tooltip="{{localize "DTD.Equipment.Equip"}}"><i class="fa-solid {{#if w.equipped}}fa-hand-holding{{else}}fa-box{{/if}}" inert></i></a>
         {{/if}}
         <span class="equipment-name">
+          <img class="asset-img" src="{{w.img}}" alt="">
           {{#if w.unarmed}}{{w.name}}{{else}}<a data-action="openEquipment" data-item-id="{{w.id}}">{{w.name}}</a>{{/if}}
           {{#if w.craftsmanship}}<span class="feat-badge">{{w.craftsmanship}}</span>{{/if}}
           {{#if w.material}}<span class="feat-badge granted">{{w.material}} · {{localize "DTD.Equipment.ArtifactRating" rating=w.rating}}</span>{{/if}}
@@ -61,6 +62,7 @@
       <li class="equipment-row{{#if a.equipped}} equipped{{/if}}{{#if a.inactive}} inactive{{/if}}">
         <a class="equip-toggle" data-action="toggleEquipped" data-item-id="{{a.id}}" data-tooltip="{{localize "DTD.Equipment.Wear"}}"><i class="fa-solid {{#if a.equipped}}fa-shield-halved{{else}}fa-box{{/if}}" inert></i></a>
         <span class="equipment-name">
+          <img class="asset-img" src="{{a.img}}" alt="">
           <a data-action="openEquipment" data-item-id="{{a.id}}">{{a.name}}</a>
           {{#if a.craftsmanship}}<span class="feat-badge">{{a.craftsmanship}}</span>{{/if}}
           {{#if a.material}}<span class="feat-badge granted">{{a.material}} · {{localize "DTD.Equipment.ArtifactRating" rating=a.rating}}</span>{{/if}}
@@ -88,6 +90,7 @@
         <a class="equip-toggle" data-action="toggleEquipped" data-item-id="{{g.id}}" data-tooltip="{{localize "DTD.Equipment.Equip"}}"><i class="fa-solid {{#if g.equipped}}fa-circle-check{{else}}fa-circle{{/if}}" inert></i></a>
         {{else}}<i class="fa-solid fa-gem equip-icon" inert></i>{{/if}}
         <span class="equipment-name">
+          <img class="asset-img" src="{{g.img}}" alt="">
           <a data-action="openEquipment" data-item-id="{{g.id}}">{{g.name}}</a>
           {{#if g.craftsmanship}}<span class="feat-badge">{{g.craftsmanship}}</span>{{/if}}
           {{#if g.material}}<span class="feat-badge granted">{{g.material}} · {{localize "DTD.Equipment.ArtifactRating" rating=g.rating}}</span>{{/if}}

@@ -1,7 +1,7 @@
 {
   "name": "Green Troops/Common Outlaws",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/green-troops-common-outlaws.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -139,7 +139,7 @@
     {
       "name": "Knife",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/knife.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -177,7 +177,7 @@
     {
       "name": "Autopistol",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-pistol/autopistol.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -217,7 +217,10 @@
   "prototypeToken": {
     "name": "Green Troops/Common Outlaws",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/green-troops-common-outlaws.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN20eaac06f4e4",

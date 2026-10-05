@@ -1,7 +1,7 @@
 {
   "name": "Storm Carapace",
   "type": "armor",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/armor/storm-carapace.svg",
   "system": {
     "description": "<p>An improved carapace with sealed joints and a resilient underlayer, supplied as one sealed suit and protecting slightly better than ordinary carapace.</p><p>While every piece of the suit is worn it also counts as a void suit, letting the wearer survive in vacuum.</p>",
     "source": {

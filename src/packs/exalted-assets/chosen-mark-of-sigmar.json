@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsChoSigmar00",
   "name": "Mark of Sigmar",
   "type": "feat",
-  "img": "icons/svg/lightning.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/mark-of-sigmar.svg",
   "folder": "dtdFldChoMark000",
   "system": {
     "category": "exaltedAsset",

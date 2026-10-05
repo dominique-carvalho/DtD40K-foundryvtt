@@ -1,7 +1,7 @@
 {
   "name": "Image",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/image.svg",
   "system": {
     "description": "<p>Makes an illusory image within 20m filling a 3m cube. Keeping it costs a half action every turn after the first; a full action lets it move within its cube. Wisdom + Perception reveals it as fake.</p>",
     "source": {

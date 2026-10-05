@@ -27,7 +27,7 @@ const format = (key, data) => game.i18n.format(key, data);
 export function blankDraft() {
   return {
     version: DRAFT_VERSION, step: "concept", released: [], ownerId: game.user.id,
-    concept: { name: "", concept: "", img: "icons/svg/mystery-man.svg" },
+    concept: { name: "", concept: "", img: CONFIG.DTD.ICONS.actor.character },
     race: { uuid: "", choice: { characteristic: "", skills: [] } },
     exaltation: { uuid: "", selection: { statuesque: "", element: "" } },
     priorities: { characteristic: [], skill: [] },

@@ -1,7 +1,7 @@
 {
   "name": "Regenerative Shield Mk. IV",
   "type": "shipComponent",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/regenerative-shield-mk-iv.svg",
   "system": {
     "description": "<p>Low Capacity but very fast recovery; outlasts weak-hitting foes indefinitely.</p>",
     "source": {

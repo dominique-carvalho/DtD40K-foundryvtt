@@ -1,7 +1,7 @@
 {
   "name": "Goremaul",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/goremaul.svg",
   "system": {
     "description": "<p>A massive two-handed hammer that demands great strength, delivering crushing blows capable of horrific damage with every swing.</p>",
     "source": {

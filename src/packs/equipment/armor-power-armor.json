@@ -1,7 +1,7 @@
 {
   "name": "Power Armor",
   "type": "armor",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/armor/power-armor.svg",
   "system": {
     "description": "<p>The heaviest, most advanced armor, driven by an internal power source that amplifies the wearer. While worn it grants +1 Strength and +1 Resilience, but its Static Defense penalty is increased by a further 2.</p><p>Power armor only works as a complete suit; it cannot be bought or worn as individual pieces.</p>",
     "source": {

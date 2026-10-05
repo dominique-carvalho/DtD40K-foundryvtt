@@ -1,7 +1,7 @@
 {
   "name": "Glyph",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/glyph.svg",
   "system": {
     "description": "<p>Places a glyph (replacing any earlier one) on something touched. The caster may later cast another spell through it as if through a portal, briefly seeing the far side; the glyph vanishes once used.</p>",
     "source": {

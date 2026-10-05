@@ -1,7 +1,7 @@
 {
   "name": "Pulse Rifle",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/pulse-rifle.svg",
   "system": {
     "description": "<p>A lightened, cut-down las carbine that trades bulk for more range and a higher rate of fire than a lasgun. It comes with a folding stock and handles easily in one hand.</p>",
     "source": {

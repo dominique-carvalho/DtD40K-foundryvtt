@@ -1,7 +1,7 @@
 {
   "name": "Walker Drive",
   "type": "vehicleComponent",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/walker-drive.svg",
   "system": {
     "description": "<p>Legged locomotion, the core technology behind giant robots: basically tanks with a top-heavy balance point.</p><p><strong>Leggy.</strong> Terrain that is normally impassible is treated only as difficult terrain.</p><p><strong>AMBAC.</strong> The pilot can stand the machine back up from prone with a Half Action.</p>",
     "source": {

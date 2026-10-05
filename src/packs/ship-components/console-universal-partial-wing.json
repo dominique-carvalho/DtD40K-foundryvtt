@@ -1,7 +1,7 @@
 {
   "name": "Partial Wing",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/partial-wing.svg",
   "system": {
     "description": "<p>Wing or antigrav assembly letting the ship fly in atmosphere and land on struts in a gravity well.</p>",
     "source": {

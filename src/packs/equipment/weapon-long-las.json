@@ -1,7 +1,7 @@
 {
   "name": "Long Las",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/long-las.svg",
   "system": {
     "description": "<p>A sniper's variant of the lasgun with a barrel up to twice as long, tuned for extra reach and precision. That length makes it awkward to handle at close quarters.</p>",
     "source": {

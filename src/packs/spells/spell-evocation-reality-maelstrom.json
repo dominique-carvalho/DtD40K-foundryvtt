@@ -1,7 +1,7 @@
 {
   "name": "Reality Maelstrom",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/reality-maelstrom.svg",
   "system": {
     "description": "<p>All creatures within 10m test Arcana + Willpower; those failing must roll Perils of the Warp.</p>",
     "source": {

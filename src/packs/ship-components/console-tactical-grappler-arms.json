@@ -1,7 +1,7 @@
 {
   "name": "Grappler Arms",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/grappler-arms.svg",
   "system": {
     "description": "<p>A Grapple attack can replace a Ram and latches onto the target. The bigger class controls the grapple (the grappler wins ties); only the controller moves, dragging the other along. No roll needed outside combat.</p>",
     "source": {

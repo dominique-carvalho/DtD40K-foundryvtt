@@ -1,7 +1,7 @@
 {
   "name": "Rod of Might",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/rod-of-might.svg",
   "system": {
     "description": "<p>A small rod, plain or ornate, with three functions: it can stretch several metres and sprout rungs to become a ladder, extend a short blade to serve as a Best-quality fencing sword, or lock itself in place in the air, becoming almost impossible to move until it is switched off.</p>",
     "source": {

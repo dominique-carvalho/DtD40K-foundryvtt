@@ -3,7 +3,7 @@
   "_key": "!items!dtdFcf050fc296f4",
   "name": "Power Attack",
   "type": "feat",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/feat/power-attack.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

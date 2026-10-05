@@ -1,7 +1,7 @@
 {
   "name": "Smoke Grenade",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-thrown/smoke-grenade.svg",
   "system": {
     "description": "<p>A grenade that bursts into thick black smoke, hiding targets from normal sight and optical sensors; better-quality versions may also block thermal and other spectral bands beyond human vision.</p>",
     "source": {

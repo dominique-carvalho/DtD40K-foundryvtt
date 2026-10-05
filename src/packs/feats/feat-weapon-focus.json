@@ -3,7 +3,7 @@
   "_key": "!items!dtdFfc50e516b01c",
   "name": "Weapon Focus",
   "type": "feat",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/feat/weapon-focus.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

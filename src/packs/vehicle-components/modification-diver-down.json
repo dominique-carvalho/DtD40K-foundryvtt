@@ -1,7 +1,7 @@
 {
   "name": "Diver Down",
   "type": "vehicleComponent",
-  "img": "icons/svg/hazard.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/diver-down.svg",
   "system": {
     "description": "<p>Needs Environmental Seals. Choose Subterranean (burrow through soil and rock, max Momentum 5, very hard materials may block it at SM call) or Submarine (move underwater at full top speed).</p><p>Options: Subterranean, Submarine.</p>",
     "source": {

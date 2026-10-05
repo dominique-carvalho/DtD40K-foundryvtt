@@ -1,7 +1,7 @@
 {
   "name": "Hunting Rifle",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/hunting-rifle.svg",
   "system": {
     "description": "<p>A precision rifle favoured by professional hunters and rich sportsmen. In trained hands it can bring down man or beast even at very long distances.</p>",
     "source": {

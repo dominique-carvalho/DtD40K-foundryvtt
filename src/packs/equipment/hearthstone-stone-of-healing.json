@@ -1,7 +1,7 @@
 {
   "name": "Stone of Healing",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/stone-of-healing.svg",
   "system": {
     "description": "<p>A mottled brown-and-green river stone that sharpens its bearer's medical skill, turning a novice into a capable surgeon and a physician into a brilliant healer. The bearer gains +1k1 on all Medicae rolls.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Medium Wards",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/medium-wards.svg",
   "system": {
     "description": "<p>Etched anti-magic runes giving Aura 10.</p>",
     "source": {

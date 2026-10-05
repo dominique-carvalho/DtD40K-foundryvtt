@@ -1,7 +1,7 @@
 {
   "name": "Krak Missile",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/krak-missile.svg",
   "system": {
     "description": "<p>An anti-armour missile for the missile launcher, using a concentrated charge to breach vehicles and fortifications rather than to spread a wide blast.</p>",
     "source": {

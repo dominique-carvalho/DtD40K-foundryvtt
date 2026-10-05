@@ -3,7 +3,7 @@
   "_key": "!items!dtdFec474b3aae57",
   "name": "Bad Luck",
   "type": "feat",
-  "img": "icons/svg/hazard.svg",
+  "img": "systems/dtd40k/assets/icons/hindrance/bad-luck.svg",
   "folder": "dtdFld93a5f8dd83",
   "system": {
     "category": "hindrance",

@@ -1,7 +1,7 @@
 {
   "name": "Improve Str +1",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/improve-str-1.svg",
   "system": {
     "description": "<p>Adds 1 Strength to the arms, up to 10.</p>",
     "source": {

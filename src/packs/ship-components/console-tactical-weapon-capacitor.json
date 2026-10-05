@@ -1,7 +1,7 @@
 {
   "name": "Weapon Capacitor",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/weapon-capacitor.svg",
   "system": {
     "description": "<p>Reactor-fed batteries boost the guns: every weapon except torpedoes gains +1k0 on its damage.</p>",
     "source": {

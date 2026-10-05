@@ -3,7 +3,7 @@
   "_key": "!items!dtdFc63d80b2e248",
   "name": "Rotate Shield Frequency",
   "type": "feat",
-  "img": "icons/svg/mage-shield.svg",
+  "img": "systems/dtd40k/assets/icons/feat/rotate-shield-frequency.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

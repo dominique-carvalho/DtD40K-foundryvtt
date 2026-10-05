@@ -1,7 +1,7 @@
 {
   "name": "Seacalm Gemstone",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/seacalm-gemstone.svg",
   "system": {
     "description": "<p>A fist-sized drop of azure seawater frozen in place. The bearer breathes water like air and cannot drown, and unless they go to truly abyssal depths neither the pressure nor the cold of the sea can harm them.</p>",
     "source": {

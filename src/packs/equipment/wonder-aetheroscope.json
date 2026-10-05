@@ -1,7 +1,7 @@
 {
   "name": "Aetheroscope",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/aetheroscope.svg",
   "system": {
     "description": "<p>Usually an orichalcum spyglass, though some versions are goggles or glasses with thin gemstone lenses. Looking through it shows the Umbra and the Warp, exposing hidden beings, psychic impressions and traces of magic.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Bag of Holding",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/bag-of-holding.svg",
   "system": {
     "description": "<p>A bag, sack, backpack or pouch that is bigger inside than outside: a typical one seems to fit roughly 0.25 cubic metres but really holds two, and nothing inside adds to its weight.</p>",
     "source": {

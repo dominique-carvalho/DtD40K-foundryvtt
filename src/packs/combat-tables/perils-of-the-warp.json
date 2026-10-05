@@ -1,6 +1,6 @@
 {
   "name": "Perils of the Warp",
-  "img": "icons/svg/portal.svg",
+  "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
   "description": "<p>Roll 1d100 when the Psychic Phenomena total reaches 75 (DtD 7.7a p. 232). 00 reads as 100.</p>",
   "formula": "1d100",
   "replacement": true,
@@ -9,7 +9,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 01-05",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Warp Whispers: everyone within 4d10 meters tests Willpower TN 25 or gains 1d10 Insanity Points.</p>",
       "weight": 1,
       "range": [
@@ -28,7 +28,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 06-09",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>The Gibbering: caster tests Willpower TN 20; on failure 1d5+1 Insanity Points plus 1d5 rounds stunned.</p>",
       "weight": 1,
       "range": [
@@ -55,7 +55,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 10-13",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Teleport Storm: everyone within 3d10 meters randomly swaps places with someone else.</p>",
       "weight": 1,
       "range": [
@@ -74,7 +74,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 14-18",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Power Drain: everyone within 3d10 meters loses all unspent hero points.</p>",
       "weight": 1,
       "range": [
@@ -93,7 +93,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 19-24",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Rending the Veil: sentient creatures within 1d100 meters test against Fear 3; lasts 1d5 rounds.</p>",
       "weight": 1,
       "range": [
@@ -112,7 +112,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 25-30",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Psy-Blast: caster is flung 1d10 meters up and falls to the ground.</p>",
       "weight": 1,
       "range": [
@@ -131,7 +131,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 31-38",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Blood Rain: in a 5d10 meter area everyone tests Strength TN 15 or is knocked down; for 1d5 rounds every spell cast there automatically triggers a Perils roll.</p>",
       "weight": 1,
       "range": [
@@ -150,7 +150,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 39-46",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Warp Burn: caster suffers a loss of 1d5 Hit Points plus 1d5 rounds stunned.</p>",
       "weight": 1,
       "range": [
@@ -175,7 +175,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 47-55",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>The Darkness: everyone within 5d10 meters is blind and deaf for 1d10 rounds.</p>",
       "weight": 1,
       "range": [
@@ -200,7 +200,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 56-58",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Locked In: caster falls catatonic; each round spends a full action testing Willpower TN 15, freed on success.</p>",
       "weight": 1,
       "range": [
@@ -223,7 +223,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 59-67",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Psychic Mirror: the spell resolves against the caster instead; a beneficial spell is cancelled and the caster loses 1d5 Hit Points.</p>",
       "weight": 1,
       "range": [
@@ -244,7 +244,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 68-72",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Psychic Concussion: caster is unconscious 1d5 rounds; everyone within 3d10 meters tests Willpower TN 15 or is stunned one round.</p>",
       "weight": 1,
       "range": [
@@ -268,7 +268,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 73-78",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Chronological Incontinence: caster vanishes, returns after 1d10 rounds and gains 1d5 Insanity Points.</p>",
       "weight": 1,
       "range": [
@@ -289,7 +289,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 79-82",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Soul Sear: no powers usable by the caster for an hour.</p>",
       "weight": 1,
       "range": [
@@ -308,7 +308,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 83-86",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Cataclysmic Blast: everyone within 1d10 meters, caster included, loses 1d5+2 Hit Points; caster cannot cast for 1d5 hours.</p>",
       "weight": 1,
       "range": [
@@ -329,7 +329,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 87-90",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Reality Quake: all within a 3d10 meter radius lose 1d10+3 hit points amid rotting, burning and freezing.</p>",
       "weight": 1,
       "range": [
@@ -350,7 +350,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 91-99",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Lost to the Warp: caster tests Willpower TN 30 or is taken into the warp, returning after 1d10 weeks on some inhabited planet with 3d10 Insanity Points; all later Perils rolls get +10.</p>",
       "weight": 1,
       "range": [
@@ -369,7 +369,7 @@
     {
       "type": "text",
       "name": "Perils of the Warp 00",
-      "img": "icons/svg/portal.svg",
+      "img": "systems/dtd40k/assets/icons/table/perils-of-the-warp.svg",
       "description": "<p>Destruction: caster is pulled into the Warp forever. Character is gone.</p>",
       "weight": 1,
       "range": [

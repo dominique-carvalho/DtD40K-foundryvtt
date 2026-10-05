@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsDraBoT00000",
   "name": "Blood of Tiamat",
   "type": "feat",
-  "img": "icons/svg/aura.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/blood-of-tiamat.svg",
   "folder": "dtdFldDraBlood00",
   "system": {
     "category": "exaltedAsset",

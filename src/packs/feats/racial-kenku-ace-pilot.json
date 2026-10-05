@@ -3,7 +3,7 @@
   "_key": "!items!dtdFcc900b1997e5",
   "name": "Ace Pilot",
   "type": "feat",
-  "img": "icons/svg/wing.svg",
+  "img": "systems/dtd40k/assets/icons/racial-feat/ace-pilot.svg",
   "folder": "dtdFld26c6a99191",
   "system": {
     "category": "racialFeat",

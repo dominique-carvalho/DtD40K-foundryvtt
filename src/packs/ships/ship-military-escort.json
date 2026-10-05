@@ -1,7 +1,7 @@
 {
   "name": "Military Escort",
   "type": "ship",
-  "img": "icons/svg/wing.svg",
+  "img": "systems/dtd40k/assets/icons/ship/military-escort.svg",
   "system": {
     "budget": {
       "holdings": 2
@@ -29,7 +29,7 @@
     {
       "name": "Sultana-Class",
       "type": "shipComponent",
-      "img": "icons/svg/castle.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/sultana-class.svg",
       "system": {
         "description": "<p>Very quick, agile military light frigate that can threaten larger vessels when well crewed.</p>",
         "source": {
@@ -120,7 +120,7 @@
     {
       "name": "Standard Shield Mk. I",
       "type": "shipComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/standard-shield-mk-i.svg",
       "system": {
         "description": "<p>Baseline bubble shield against which the others are compared.</p>",
         "source": {
@@ -211,7 +211,7 @@
     {
       "name": "Enhanced Sensors",
       "type": "shipComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/enhanced-sensors.svg",
       "system": {
         "description": "<p>Extra dishes and antennae improve detection; Sensors become +5.</p>",
         "source": {
@@ -305,7 +305,7 @@
     {
       "name": "Array",
       "type": "shipComponent",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/array.svg",
       "system": {
         "description": "<p>Very common broadside battery; highly accurate yet low damage.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
         "source": {
@@ -396,7 +396,7 @@
     {
       "name": "Array",
       "type": "shipComponent",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/array.svg",
       "system": {
         "description": "<p>Very common broadside battery; highly accurate yet low damage.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
         "source": {
@@ -487,7 +487,7 @@
     {
       "name": "Lance",
       "type": "shipComponent",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/lance.svg",
       "system": {
         "description": "<p>Typical lone weapon on Escorts; easy to aim but draining on crew attention.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
         "source": {
@@ -578,7 +578,7 @@
     {
       "name": "Helmsman",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/helmsman.svg",
       "system": {
         "description": "<p>Steers the ship toward its destination, either flying it personally or directing others. Supplies the kept dice for Manoeuver actions.</p>",
         "source": {
@@ -669,7 +669,7 @@
     {
       "name": "Tactical Officer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/tactical-officer.svg",
       "system": {
         "description": "<p>Runs the guns and keeps gunners and engineers working; supplies kept dice for Tactical actions and for fightercraft squads.</p>",
         "source": {
@@ -760,7 +760,7 @@
     {
       "name": "Chief Engineer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/chief-engineer.svg",
       "system": {
         "description": "<p>Handles power routing and emergency repairs. Without one, most repairs have to wait for a port.</p>",
         "source": {
@@ -851,7 +851,7 @@
     {
       "name": "Commanding Officer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/commanding-officer.svg",
       "system": {
         "description": "<p>Acts as captain of the bridge, issuing orders and collecting reports. Because the ship's true owner is usually someone else, this officer cannot represent the ship in Social Combat.</p>",
         "source": {
@@ -942,7 +942,7 @@
     {
       "name": "Chief Arcana Officer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/chief-arcana-officer.svg",
       "system": {
         "description": "<p>Operates sensors and exotic systems to spot objects, assess threats and help with warp travel (opens warp portals without a relay). A hired officer in this post may not double as Navigator; PCs and other NPCs are exempt.</p>",
         "source": {
@@ -1035,7 +1035,10 @@
   "prototypeToken": {
     "name": "Military Escort",
     "actorLink": true,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/ship/military-escort.svg"
+    }
   },
   "flags": {},
   "_id": "dtdY6d611aac1828",

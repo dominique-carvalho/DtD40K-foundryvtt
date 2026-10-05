@@ -1,7 +1,7 @@
 {
   "name": "Armoring Aura",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/armoring-aura.svg",
   "system": {
     "description": "<p>The touched creature receives Aura 1.</p>",
     "source": {

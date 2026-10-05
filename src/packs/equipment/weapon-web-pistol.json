@@ -1,7 +1,7 @@
 {
   "name": "Web Pistol",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-pistol/web-pistol.svg",
   "system": {
     "description": "<p>A hand webber that sprays filaments which expand into a sticky, nearly unbreakable net, tightening further as the victim struggles. It deals no damage; the webbing decays and falls away on its own after 1d10 rounds.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Climbing Kit",
   "type": "gear",
-  "img": "icons/svg/item-bag.svg",
+  "img": "systems/dtd40k/assets/icons/gear/climbing-kit.svg",
   "system": {
     "description": "<p>A compact spool of safety line ending in a magnetic or hooked clasp. While using it to descend a vertical surface, a character cannot fall.</p>",
     "source": {

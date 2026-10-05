@@ -1,7 +1,7 @@
 {
   "name": "False Life",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/false-life.svg",
   "system": {
     "description": "<p>Caster gets 1 temporary hit point, lost before normal hit points; it does not stack with itself or other temporary hit points.</p>",
     "source": {

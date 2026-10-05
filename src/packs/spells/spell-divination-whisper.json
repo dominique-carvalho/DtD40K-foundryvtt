@@ -1,7 +1,7 @@
 {
   "name": "Whisper",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/whisper.svg",
   "system": {
     "description": "<p>Sends a brief (about one sentence) message to a visible target; nobody else hears it.</p>",
     "source": {

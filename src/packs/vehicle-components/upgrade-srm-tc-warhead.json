@@ -1,7 +1,7 @@
 {
   "name": "SRM TC Warhead",
   "type": "vehicleComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/srm-tc-warhead.svg",
   "system": {
     "description": "<p>Tandem-Charge: if the hit removes at least 1 HP, the target also rolls for vehicle crit damage.</p><p>Special.</p>",
     "source": {

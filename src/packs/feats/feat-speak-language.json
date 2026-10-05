@@ -3,7 +3,7 @@
   "_key": "!items!dtdFe8c11543404d",
   "name": "Speak Language",
   "type": "feat",
-  "img": "icons/svg/sound.svg",
+  "img": "systems/dtd40k/assets/icons/feat/speak-language.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

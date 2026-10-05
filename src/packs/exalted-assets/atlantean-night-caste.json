@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsAtlNC000000",
   "name": "Night Caste",
   "type": "feat",
-  "img": "icons/svg/invisible.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/night-caste.svg",
   "folder": "dtdFldAtlCaste00",
   "system": {
     "category": "exaltedAsset",

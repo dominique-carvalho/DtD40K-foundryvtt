@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsChoLuna0000",
   "name": "Mark of Luna",
   "type": "feat",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/mark-of-luna.svg",
   "folder": "dtdFldChoMark000",
   "system": {
     "category": "exaltedAsset",

@@ -1,7 +1,7 @@
 {
   "name": "Wraithbone",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/material/wraithbone.svg",
   "system": {
     "description": "<p>Crystallised Warp energy that only sorcery can shape, porcelain-like yet tougher than steel and self-repairing; spells flow across its surface, so its pieces are usually smooth, single curved forms. It follows the general magical-material rules (counts as Best, one hearthstone slot, magical damage).</p><p>Melee weapons can deliver melee-range spells using the weapon skill and Level instead of Brawl, and a spell of half an action or longer can include an attack with the weapon; ranged weapons reload themselves completely each time your turn begins; special ammunition is a magical attack that ignores Armor and is reduced by Aura instead; armour AP also counts as Aura against spells. A bionic arm can parry Touch or Ranged Touch spells aimed at you and, if the parry succeeds, absorbs the spell and any combo; bionic legs let you walk on air at full speed in three dimensions for one scene once per session; a bionic heart lets you roll Psychic Phenomena twice and pick the result.</p>",
     "source": {

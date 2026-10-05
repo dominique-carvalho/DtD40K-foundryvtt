@@ -1,7 +1,7 @@
 {
   "name": "Hand Cannon",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-pistol/hand-cannon.svg",
   "system": {
     "description": "<p>An oversized revolver chambered for massive rounds, built as much to frighten with its thunderous report as to drop a target. Its violent kick imposes -1k0 on attack Tests unless the shooter steadies it with both hands.</p>",
     "source": {

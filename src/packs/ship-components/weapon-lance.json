@@ -1,7 +1,7 @@
 {
   "name": "Lance",
   "type": "shipComponent",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/lance.svg",
   "system": {
     "description": "<p>Typical lone weapon on Escorts; easy to aim but draining on crew attention.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
     "source": {

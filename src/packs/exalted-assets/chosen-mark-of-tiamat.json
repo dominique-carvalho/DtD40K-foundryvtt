@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsChoTiamat00",
   "name": "Mark of Tiamat",
   "type": "feat",
-  "img": "icons/svg/wing.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/mark-of-tiamat.svg",
   "folder": "dtdFldChoMark000",
   "system": {
     "category": "exaltedAsset",

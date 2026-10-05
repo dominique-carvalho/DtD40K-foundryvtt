@@ -1,7 +1,7 @@
 {
   "name": "Vulcan Mega-Bolter",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/vulcan-mega-bolter.svg",
   "system": {
     "description": "<p>Heavy rotary bolt gun with a very high fire rate, for infantry, light vehicles and buildings.</p>",
     "source": {

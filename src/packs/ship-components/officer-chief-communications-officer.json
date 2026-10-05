@@ -1,7 +1,7 @@
 {
   "name": "Chief Communications Officer",
   "type": "shipComponent",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/chief-communications-officer.svg",
   "system": {
     "description": "<p>Can take over part of the talking with other ships or ports on the Captain's behalf.</p>",
     "source": {

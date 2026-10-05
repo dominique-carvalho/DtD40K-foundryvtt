@@ -1,7 +1,7 @@
 {
   "name": "Silent Scope",
   "type": "martialSchool",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/silent-scope.svg",
   "system": {
     "description": "<p>A long-range sniper and assassin discipline against unsuspecting targets.</p>",
     "source": {

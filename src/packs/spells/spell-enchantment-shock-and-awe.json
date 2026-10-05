@@ -1,7 +1,7 @@
 {
   "name": "Shock and Awe",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/shock-and-awe.svg",
   "system": {
     "description": "<p>Chosen targets who see the caster drop 5 initiative. If they have already acted and the change would grant them another turn this round, that turn is skipped.</p>",
     "source": {

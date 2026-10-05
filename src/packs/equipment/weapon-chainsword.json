@@ -1,7 +1,7 @@
 {
   "name": "Chainsword",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/chainsword.svg",
   "system": {
     "description": "<p>A sword-shaped housing around a loop of fast-moving serrated teeth, usually exposed only along the curved front, which is thrust into the foe so the teeth chew through flesh and bone. Loud and plainly lethal, chain weapons can unnerve even fanatics.</p>",
     "source": {

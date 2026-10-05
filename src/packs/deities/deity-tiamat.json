@@ -1,7 +1,7 @@
 {
   "name": "Tiamat",
   "type": "deity",
-  "img": "icons/svg/fire.svg",
+  "img": "systems/dtd40k/assets/icons/deity/tiamat.svg",
   "system": {
     "description": "<p>The dead dragon empress, Bahamut's opposite and a goddess of power held by whoever is strong enough to seize it; her followers await her return.</p>",
     "source": {

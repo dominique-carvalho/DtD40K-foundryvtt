@@ -1,7 +1,7 @@
 {
   "name": "Mage Armor",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/mage-armor.svg",
   "system": {
     "description": "<p>The touched creature receives AP equal to the caster's Level. This armor does not stack with mundane armor and needs no proficiency.</p>",
     "source": {

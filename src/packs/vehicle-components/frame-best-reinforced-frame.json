@@ -1,7 +1,7 @@
 {
   "name": "Best Reinforced Frame",
   "type": "vehicleComponent",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/best-reinforced-frame.svg",
   "system": {
     "description": "<p>Best Reinforced frame: 35 HP and Resilience 13. Comes with a Cockpit.</p>",
     "source": {

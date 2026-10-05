@@ -3,7 +3,7 @@
   "_key": "!items!dtdExalWraith000",
   "name": "Wraith",
   "type": "exaltation",
-  "img": "icons/svg/invisible.svg",
+  "img": "systems/dtd40k/assets/icons/exaltation/wraith.svg",
   "system": {
     "description": "<p>A Wraith is a ghost with the rare ability to act on the world of the living. It shapes an ectoplasmic body that passes for alive and wears it like a suit, resembling who it was in life as far as its patchy memory allows. Its spiritual energy is limited and can be restored only in the Umbra, the shadowy land of the dead between reality and the howling Warp, so every Wraith must go back there now and then — or is driven there when its shell is destroyed.</p><p>Nobody knows exactly what makes a Wraith; unfinished business alone cannot be the answer, since countless people die with tasks undone and stay dead. Once risen, though, they are effectively immortal until someone manages to destroy them, which is hard for anyone unable to reach the Umbra. Slipping where others cannot and fearing no death, they make superb thieves and assassins.</p>",
     "fullText": "",

@@ -1,7 +1,7 @@
 {
   "name": "Suggestion",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/suggestion.svg",
   "system": {
     "description": "<p>Caster makes a simple request with magical pull. Requests within the target's nature allow no save; unusual ones allow a saving throw. Those who resist notice nothing odd beyond a strong urge to comply.</p>",
     "source": {

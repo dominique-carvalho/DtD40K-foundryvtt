@@ -3,7 +3,7 @@
   "_key": "!items!dtdF1c8b16d66c7d",
   "name": "Lend Expertise",
   "type": "feat",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/feat/lend-expertise.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

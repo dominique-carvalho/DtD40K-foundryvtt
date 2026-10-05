@@ -1,7 +1,7 @@
 {
   "name": "Battering Ram",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/battering-ram.svg",
   "system": {
     "description": "<p>A target within 30m tests Arcana + Strength and is shoved 2m per check on that test. Pushed farther than its speed, it falls prone. Flyers move double distance but are not knocked prone.</p>",
     "source": {

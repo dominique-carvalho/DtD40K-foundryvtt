@@ -3,7 +3,7 @@
   "_key": "!items!dtdCc22917880c65",
   "name": "Mech-Wright",
   "type": "class",
-  "img": "icons/svg/clockwork.svg",
+  "img": "systems/dtd40k/assets/icons/class/mech-wright.svg",
   "folder": "dtdCFd473201da26",
   "system": {
     "description": "<p>The Techpriest track begins with this engineer who starts trading flesh for machinery. Mech-Wrights receive Mechanicus implants and can unleash a Luminen Charge.</p>",

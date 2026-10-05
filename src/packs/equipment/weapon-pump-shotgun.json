@@ -1,7 +1,7 @@
 {
   "name": "Pump Shotgun",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/pump-shotgun.svg",
   "system": {
     "description": "<p>A pump-action shotgun, the lawman's choice: it keeps the punch of the double-barrelled model while holding more shells, and the sound of its action is famously intimidating.</p>",
     "source": {

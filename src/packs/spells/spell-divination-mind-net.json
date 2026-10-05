@@ -1,7 +1,7 @@
 {
   "name": "Mind Net",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/mind-net.svg",
   "system": {
     "description": "<p>Links allies telepathically: all can talk silently through it, and Divination spells may be cast as though standing at one another's location.</p>",
     "source": {

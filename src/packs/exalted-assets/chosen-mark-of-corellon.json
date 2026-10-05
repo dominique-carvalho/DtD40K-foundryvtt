@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsChoCorellon",
   "name": "Mark of Corellon",
   "type": "feat",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/mark-of-corellon.svg",
   "folder": "dtdFldChoMark000",
   "system": {
     "category": "exaltedAsset",

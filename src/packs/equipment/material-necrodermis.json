@@ -1,7 +1,7 @@
 {
   "name": "Necrodermis",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/material/necrodermis.svg",
   "system": {
     "description": "<p>A dull grey, soul-trapping metal that is alive: always cold, seeming to pulse like something wormlike, and unsettling to anyone nearby. It follows the general magical-material rules (counts as Best, one hearthstone slot, magical damage).</p><p>Melee and ranged weapons deal +1k0 damage and impose -2k1 on attempts to parry or dodge them; special ammunition gains the Toxic quality; armour imposes -2k0 on attacks against the wearer. A bionic arm sheds all its critical damage at the start of each round and gives your unarmed or natural attacks the Toxic quality; bionic legs heal their critical damage each round the same way and let you rise from prone for free when your turn begins, without provoking Opportunity Attacks; with a bionic heart, whenever a Hero Point is about to be burned to stay alive, roll 1d10: on 5 or less it is kept.</p>",
     "source": {

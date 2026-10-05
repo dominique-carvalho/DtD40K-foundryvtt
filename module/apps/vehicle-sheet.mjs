@@ -110,7 +110,7 @@ export class VehicleSheet extends HandlebarsApplicationMixin(foundry.application
         gunner: gunnerUuid(w.id), offline: offline.has(w.id)
       })),
       crew: crew.map((c) => ({
-        uuid: c.actorUuid, name: c.actor?.name ?? localize("DTD.Vehicle.MissingActor"), img: c.actor?.img ?? "icons/svg/mystery-man.svg",
+        uuid: c.actorUuid, name: c.actor?.name ?? localize("DTD.Vehicle.MissingActor"), img: c.actor?.img ?? CONFIG.DTD.ICONS.actor.character,
         role: c.role, roleOptions: VEHICLE_CREW_ROLES.map((r) => ({ value: r, label: localize(`DTD.Vehicle.Role.${r}`), selected: r === c.role })),
         weapons: c.weaponIds.map((id) => actor.items.get(id)?.name).filter(Boolean).join(", ")
       })),

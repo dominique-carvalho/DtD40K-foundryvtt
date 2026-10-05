@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsDaeH0000000",
   "name": "Hunger",
   "type": "feat",
-  "img": "icons/svg/blood.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/hunger.svg",
   "folder": "dtdFldDaeSin0000",
   "system": {
     "category": "exaltedAsset",

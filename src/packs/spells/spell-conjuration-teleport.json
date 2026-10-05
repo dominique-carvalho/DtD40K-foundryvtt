@@ -1,7 +1,7 @@
 {
   "name": "Teleport",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/teleport.svg",
   "system": {
     "description": "<p>Blink with unlimited range to any place the caster has previously seen. Unless very familiar with it, a Wisdom + Perception test (TN 25, SM may raise it) is needed. Crystal Spheres and shielded ships block it.</p>",
     "source": {

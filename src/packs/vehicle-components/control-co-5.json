@@ -1,7 +1,7 @@
 {
   "name": "Co/5",
   "type": "vehicleComponent",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/co-5.svg",
   "system": {
     "description": "<p>Raises the AI's dots to 5.</p>",
     "source": {

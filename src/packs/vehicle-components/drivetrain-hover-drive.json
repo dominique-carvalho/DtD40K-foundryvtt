@@ -1,7 +1,7 @@
 {
   "name": "Hover Drive",
   "type": "vehicleComponent",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/hover-drive.svg",
   "system": {
     "description": "<p>Matches wheels for pace and needs less road, but steers like someone skating on a frozen pond.</p><p><strong>Rise Above.</strong> Difficult terrain does not slow it, and it can travel across liquid surfaces as if on ground.</p><p><strong>Slide About.</strong> Handling is slippery: every Control Test needs 2 additional raises to pass.</p>",
     "source": {

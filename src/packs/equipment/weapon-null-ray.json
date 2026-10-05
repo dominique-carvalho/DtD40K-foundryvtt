@@ -1,7 +1,7 @@
 {
   "name": "Null Ray",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/null-ray.svg",
   "system": {
     "description": "<p>An ancient Syrneth rifle of glossy black material whose enchantments and arcane science cannot be reproduced. It projects a crackling violet beam that rips solid matter apart, is nearly impossible to defend against, and sells for fortunes on the rare occasions one appears.</p>",
     "source": {

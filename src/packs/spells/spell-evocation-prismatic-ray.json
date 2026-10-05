@@ -1,7 +1,7 @@
 {
   "name": "Prismatic Ray",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/prismatic-ray.svg",
   "system": {
     "description": "<p>Roll 1d10 three times for X, Y and Z: deals XkY E damage to as many as Z targets within 50m per Level.</p>",
     "source": {

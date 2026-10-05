@@ -1,7 +1,7 @@
 {
   "name": "Light Power",
   "type": "armor",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/armor/light-power.svg",
   "system": {
     "description": "<p>A lighter form of powered armor with its own power source. As power armor it grants +1 Strength and +1 Resilience while worn, but its Static Defense penalty is increased by a further 2.</p><p>Like all power armor it only functions as a complete suit and cannot be bought or worn as individual pieces.</p>",
     "source": {

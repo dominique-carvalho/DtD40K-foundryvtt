@@ -1,7 +1,7 @@
 {
   "name": "Energy Ray",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/energy-ray.svg",
   "system": {
     "description": "<p>A piercing line of energy out to 50m per Level; any target along the line may be struck for 5k3 E.</p>",
     "source": {

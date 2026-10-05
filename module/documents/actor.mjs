@@ -1,3 +1,5 @@
+import { ICONS } from "../config.mjs";
+import { defaultIconFor } from "../rules/icons.mjs";
 import { buildCharacteristicPool, buildSkillPool, rollModifiers } from "../rules/pool.mjs";
 import { computeDerived } from "../rules/derived.mjs";
 import { runTest } from "../rules/test.mjs";
@@ -11,6 +13,15 @@ import { alliesOf } from "./minion-service.mjs";
  * Actor document class for Dungeons the Dragoning.
  */
 export class DtdActor extends Actor {
+  /**
+   * Default portrait and token of an actor created without one (spec 024, research R7).
+   * @override
+   */
+  static getDefaultArtwork(actorData) {
+    const img = defaultIconFor(ICONS, "actor", actorData);
+    return img ? { img, texture: { src: img } } : super.getDefaultArtwork(actorData);
+  }
+
   /**
    * Names of the actor's feats: feat items, plus an NPC's stat-block feats (spec 022, research R10). Name checks of
    * feats with an effect in play read this list; NPC feats never create Active Effects (their numbers are printed).

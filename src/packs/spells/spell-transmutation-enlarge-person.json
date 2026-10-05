@@ -1,7 +1,7 @@
 {
   "name": "Enlarge Person",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/enlarge-person.svg",
   "system": {
     "description": "<p>The touched creature gains +1 Size; its gear resizes to match.</p>",
     "source": {

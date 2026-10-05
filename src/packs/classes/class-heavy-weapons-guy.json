@@ -3,7 +3,7 @@
   "_key": "!items!dtdCd20ca0d3d643",
   "name": "Heavy Weapons Guy",
   "type": "class",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/class/heavy-weapons-guy.svg",
   "folder": "dtdCFdac2d70a126",
   "system": {
     "description": "<p>The Heavy track's walking artillery, lugging big guns and pounding foes up close. Tough and stubborn, it learns Crack Shot, Bear Hug and Crushing Blow, plus the Setting Sun school and the Crisis Zone and Point Blank kata.</p>",

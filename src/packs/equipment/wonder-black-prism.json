@@ -1,7 +1,7 @@
 {
   "name": "Black Prism",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/black-prism.svg",
   "system": {
     "description": "<p>A tall prism of nearly unbreakable black stone riddled with twisting holes that give off a low growl only animals can hear. While it stands upright it repels and drives off ordinary animals and mindless undead; its odd weight makes it hard to topple by accident.</p>",
     "source": {

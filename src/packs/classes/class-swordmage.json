@@ -3,7 +3,7 @@
   "_key": "!items!dtdCcfdf0cb68240",
   "name": "Swordmage",
   "type": "class",
-  "img": "icons/svg/mage-shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/swordmage.svg",
   "folder": "dtdCFdaebebd4a00",
   "system": {
     "description": "<p>The Arcane Knight track's second class, blending swordplay and sorcery more tightly. Swordmages adopt the Iron Tower, generate mana and sense danger coming.</p>",

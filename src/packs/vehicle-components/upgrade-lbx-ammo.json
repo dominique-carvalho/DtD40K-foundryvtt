@@ -1,7 +1,7 @@
 {
   "name": "LBX Ammo",
   "type": "vehicleComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/lbx-ammo.svg",
   "system": {
     "description": "<p>Shotgun-style shells: range halved and the gun gains Scatter.</p><p>Range Half; Scatter.</p>",
     "source": {

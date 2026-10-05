@@ -3,7 +3,7 @@
   "_key": "!items!dtdFb1cdd670b898",
   "name": "Spell Shield",
   "type": "feat",
-  "img": "icons/svg/mage-shield.svg",
+  "img": "systems/dtd40k/assets/icons/feat/spell-shield.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

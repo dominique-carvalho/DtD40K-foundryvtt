@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsDraBoB00000",
   "name": "Blood of Bahamut",
   "type": "feat",
-  "img": "icons/svg/fire.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/blood-of-bahamut.svg",
   "folder": "dtdFldDraBlood00",
   "system": {
     "category": "exaltedAsset",

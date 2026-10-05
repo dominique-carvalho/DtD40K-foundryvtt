@@ -1,7 +1,7 @@
 {
   "name": "Living Vehicle",
   "type": "vehicleComponent",
-  "img": "icons/svg/hazard.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/living-vehicle.svg",
   "system": {
     "description": "<p>An organic machine: regains 1 HP daily, can stand itself up from prone, and adds 1 to Drive Rating when using a Walker Drive.</p>",
     "source": {

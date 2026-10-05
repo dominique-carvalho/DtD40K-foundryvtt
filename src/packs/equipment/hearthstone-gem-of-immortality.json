@@ -1,7 +1,7 @@
 {
   "name": "Gem of Immortality",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/gem-of-immortality.svg",
   "system": {
     "description": "<p>A deep black stone with a faint rainbow sheen. While carrying it the bearer does not age, is spared the ailments of old age, and cannot die of age or illness, though violence can still kill them. If the stone is lost, ageing simply resumes from where it stopped.</p>",
     "source": {

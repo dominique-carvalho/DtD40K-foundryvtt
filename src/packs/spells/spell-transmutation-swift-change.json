@@ -1,7 +1,7 @@
 {
   "name": "Swift Change",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/swift-change.svg",
   "system": {
     "description": "<p>Instantly swap into any clothing or armor being carried; a natural shapechanging ability (e.g. a werewolf's) can also be triggered this way.</p>",
     "source": {

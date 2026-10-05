@@ -1,7 +1,7 @@
 {
   "name": "Precognition",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/precognition.svg",
   "system": {
     "description": "<p>Grants one reroll of a failed roll. Usable on top of other reroll abilities, and any number may be spent on the same test.</p>",
     "source": {

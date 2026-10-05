@@ -1,7 +1,7 @@
 {
   "name": "Ballista",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/ballista.svg",
   "system": {
     "description": "<p>Giant crossbow shooting spear-sized bolts (called Bastilla in the text).</p>",
     "source": {

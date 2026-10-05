@@ -1,7 +1,7 @@
 {
   "name": "Borealis-Class",
   "type": "shipComponent",
-  "img": "icons/svg/castle.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/borealis-class.svg",
   "system": {
     "description": "<p>Mass-produced large civilian hull sold to anyone from mercenaries to merchants.</p>",
     "source": {

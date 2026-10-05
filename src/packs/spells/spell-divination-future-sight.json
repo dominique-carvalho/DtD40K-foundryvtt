@@ -1,7 +1,7 @@
 {
   "name": "Future Sight",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/future-sight.svg",
   "system": {
     "description": "<p>Caster gets a vague hint about the next major threat, enough to prepare; the SM need not name it. When the danger arrives (or is sidestepped), the spell warns the caster again that the moment has come.</p>",
     "source": {

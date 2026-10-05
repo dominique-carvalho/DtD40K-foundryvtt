@@ -1,7 +1,7 @@
 {
   "name": "Energy Burst",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/energy-burst.svg",
   "system": {
     "description": "<p>Attack out to 30m with Blast 2 dealing 3k2 E damage plus 2 per Level.</p>",
     "source": {

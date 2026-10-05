@@ -1,7 +1,7 @@
 {
   "name": "Jaunt",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/jaunt.svg",
   "system": {
     "description": "<p>Instant teleport of up to 10m; when triggered in response to an attack it counts as a dodge attempt.</p>",
     "source": {

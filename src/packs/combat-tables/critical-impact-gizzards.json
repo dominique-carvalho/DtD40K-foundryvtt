@@ -1,6 +1,6 @@
 {
   "name": "Critical — Impact — Gizzards",
-  "img": "icons/svg/blood.svg",
+  "img": "systems/dtd40k/assets/icons/table/critical-impact-gizzards.svg",
   "description": "<p>Critical Damage (Impact, Gizzards), DtD 7.7a p. 440. Use the row equal to the accumulated Critical Damage.</p>",
   "formula": "1d5",
   "replacement": true,
@@ -9,7 +9,7 @@
     {
       "type": "text",
       "name": "Impact Gizzards 1",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-impact-gizzards.svg",
       "description": "<p>Air knocked out: 1 Fatigue.</p>",
       "weight": 1,
       "range": [
@@ -30,7 +30,7 @@
     {
       "type": "text",
       "name": "Impact Gizzards 2",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-impact-gizzards.svg",
       "description": "<p>Heart nearly stops: 1d5 Fatigue; Stunned 1 round.</p>",
       "weight": 1,
       "range": [
@@ -55,7 +55,7 @@
     {
       "type": "text",
       "name": "Impact Gizzards 3",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-impact-gizzards.svg",
       "description": "<p>Thrown 1d5 m and Prone: 1d5 Fatigue; Stunned 2 rounds.</p>",
       "weight": 1,
       "range": [
@@ -81,7 +81,7 @@
     {
       "type": "text",
       "name": "Impact Gizzards 4",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-impact-gizzards.svg",
       "description": "<p>Organs ruptured, knocked down: Blood Loss; 1d10 Fatigue.</p>",
       "weight": 1,
       "range": [
@@ -106,7 +106,7 @@
     {
       "type": "text",
       "name": "Impact Gizzards 5",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-impact-gizzards.svg",
       "description": "<p>Organs pulped; dies instantly.</p>",
       "weight": 1,
       "range": [

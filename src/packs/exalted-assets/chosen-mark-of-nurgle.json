@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsChoNurgle00",
   "name": "Mark of Nurgle",
   "type": "feat",
-  "img": "icons/svg/acid.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/mark-of-nurgle.svg",
   "folder": "dtdFldChoMark000",
   "system": {
     "category": "exaltedAsset",

@@ -1,7 +1,7 @@
 {
   "name": "Driver (weapon type)",
   "type": "shipComponent",
-  "img": "icons/svg/aura.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/driver-weapon-type.svg",
   "system": {
     "description": "<p>Magnetic mass drivers (Array versions fire volleys): short-ranged, weak versus shields, dangerous to bare hulls.</p><p>Dis -1, Crit +3, Range Half, Cost -5 BP.</p>",
     "source": {

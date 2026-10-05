@@ -1,7 +1,7 @@
 {
   "name": "Super Bike",
   "type": "vehicle",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle/super-bike.svg",
   "system": {
     "size": 4,
     "speed": 11,
@@ -31,7 +31,7 @@
     {
       "name": "Wheeled Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/direction.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/wheeled-drive.svg",
       "system": {
         "description": "<p>The default ground drive; wheels are about as ancient as organised society itself.</p>",
         "source": {
@@ -71,7 +71,7 @@
     {
       "name": "Good Lightweight Frame",
       "type": "vehicleComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/good-lightweight-frame.svg",
       "system": {
         "description": "<p>Good Lightweight frame: 10 HP and Resilience 4. Comes with a Cockpit.</p>",
         "source": {
@@ -111,7 +111,7 @@
     {
       "name": "Armor 2",
       "type": "vehicleComponent",
-      "img": "icons/svg/statue.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/armor-2.svg",
       "system": {
         "description": "<p>2 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
         "source": {
@@ -151,7 +151,7 @@
     {
       "name": "Remote Uplink",
       "type": "vehicleComponent",
-      "img": "icons/svg/eye.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/remote-uplink.svg",
       "system": {
         "description": "<p>Hooks the pilot or a copilot station to off-site controls. A remote operator spends a Full Action to give the vehicle a Half Action; the linked copilot then cannot run systems, or the linked pilot is limited to a Half Action that turn.</p>",
         "source": {
@@ -193,7 +193,7 @@
     {
       "name": "Passenger Space",
       "type": "vehicleComponent",
-      "img": "icons/svg/chest.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/passenger-space.svg",
       "system": {
         "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
         "source": {
@@ -239,7 +239,7 @@
     {
       "name": "Afterburners",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/afterburners.svg",
       "system": {
         "description": "<p>Separate fuel for a burst of speed: Punch It becomes a Half Action; one use per scene for each purchase.</p>",
         "source": {
@@ -281,7 +281,7 @@
     {
       "name": "XL Engine (Rating 2) (Miniaturized)",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/xl-engine-rating-2-miniaturized.svg",
       "system": {
         "description": "<p>Oversized engine adding 2 to maximum Momentum, even beyond the usual cap of 10.</p>",
         "source": {
@@ -323,7 +323,7 @@
     {
       "name": "Open Topped",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/open-topped.svg",
       "system": {
         "description": "<p>Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.</p>",
         "source": {
@@ -369,7 +369,10 @@
   "prototypeToken": {
     "name": "Super Bike",
     "actorLink": true,
-    "disposition": 0
+    "disposition": 0,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/vehicle/super-bike.svg"
+    }
   },
   "flags": {},
   "_id": "dtdWcbe1943570fa",

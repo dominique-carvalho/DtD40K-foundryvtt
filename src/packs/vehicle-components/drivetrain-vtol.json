@@ -1,7 +1,7 @@
 {
   "name": "VTOL",
   "type": "vehicleComponent",
-  "img": "icons/svg/wing.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/vtol.svg",
   "system": {
     "description": "<p>Flexible flight drive that moves in three dimensions and, unlike Aerospace or Scramjet, can go slow or hold a hover.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Pict Recorder",
   "type": "gear",
-  "img": "icons/svg/item-bag.svg",
+  "img": "systems/dtd40k/assets/icons/gear/pict-recorder.svg",
   "system": {
     "description": "<p>A device that records and plays back live media, some models in holographic form. Certain versions are mounted on robotic frames to film dangerous events such as weapons tests or interrogations.</p>",
     "source": {

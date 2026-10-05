@@ -1,7 +1,7 @@
 {
   "name": "Mind Flayer",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/mind-flayer.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -205,7 +205,7 @@
     {
       "name": "Tentacles",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/tentacles.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -254,7 +254,10 @@
   "prototypeToken": {
     "name": "Mind Flayer",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/mind-flayer.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN2b8699ebd7a0",

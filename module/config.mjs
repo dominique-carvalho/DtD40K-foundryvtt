@@ -563,7 +563,54 @@ export const CUSTOMIZATION = {
 /** Dice kept by an officer who is not a character (p. 414). */
 export const SHIP_NPC_KEPT = 4;
 
+/**
+ * Default icons of documents created in the world (spec 024, research R7): by type, or "type:category" (gear, feat,
+ * vehicle and ship components; weapons by weaponType). Mirrors defaultFor of src/icons/categories.json (tested).
+ */
+const ICON_ROOT = "systems/dtd40k/assets/icons";
+export const ICONS = {
+  item: {
+    weapon: `${ICON_ROOT}/defaults/weapon-melee.svg`,
+    "weapon:melee": `${ICON_ROOT}/defaults/weapon-melee.svg`,
+    "weapon:pistol": `${ICON_ROOT}/defaults/weapon-pistol.svg`,
+    "weapon:basic": `${ICON_ROOT}/defaults/weapon-basic.svg`,
+    "weapon:heavy": `${ICON_ROOT}/defaults/weapon-heavy.svg`,
+    "weapon:thrown": `${ICON_ROOT}/defaults/weapon-thrown.svg`,
+    armor: `${ICON_ROOT}/defaults/armor.svg`,
+    "gear:drug": `${ICON_ROOT}/defaults/drug.svg`,
+    "gear:cybernetic": `${ICON_ROOT}/defaults/cybernetic.svg`,
+    "gear:hearthstone": `${ICON_ROOT}/defaults/hearthstone.svg`,
+    "gear:wonder": `${ICON_ROOT}/defaults/wonder.svg`,
+    "gear:material": `${ICON_ROOT}/defaults/material.svg`,
+    gear: `${ICON_ROOT}/defaults/gear.svg`,
+    "gear:gear": `${ICON_ROOT}/defaults/gear.svg`,
+    spell: `${ICON_ROOT}/defaults/spell.svg`,
+    "feat:hindrance": `${ICON_ROOT}/defaults/hindrance.svg`,
+    "feat:asset": `${ICON_ROOT}/defaults/asset.svg`,
+    "feat:racialFeat": `${ICON_ROOT}/defaults/racial-feat.svg`,
+    "feat:exaltedAsset": `${ICON_ROOT}/defaults/exalted-asset.svg`,
+    feat: `${ICON_ROOT}/defaults/feat.svg`,
+    "feat:feat": `${ICON_ROOT}/defaults/feat.svg`,
+    race: `${ICON_ROOT}/defaults/race.svg`,
+    exaltation: `${ICON_ROOT}/defaults/exaltation.svg`,
+    class: `${ICON_ROOT}/defaults/class.svg`,
+    deity: `${ICON_ROOT}/defaults/deity.svg`,
+    martialSchool: `${ICON_ROOT}/defaults/martial-school.svg`,
+    vehicleComponent: `${ICON_ROOT}/defaults/vehicle-component.svg`,
+    shipComponent: `${ICON_ROOT}/defaults/ship-component.svg`
+  },
+  actor: {
+    npc: `${ICON_ROOT}/defaults/npc.svg`,
+    minionSquad: `${ICON_ROOT}/defaults/minion-squad.svg`,
+    ship: `${ICON_ROOT}/defaults/ship.svg`,
+    squadron: `${ICON_ROOT}/defaults/squadron.svg`,
+    vehicle: `${ICON_ROOT}/defaults/vehicle.svg`,
+    character: `${ICON_ROOT}/defaults/character.svg`
+  }
+};
+
 export const DTD = {
+  ICONS,
   SHIP_CATEGORIES,
   SHIP_BUDGETS,
   HULL_CLASSES,

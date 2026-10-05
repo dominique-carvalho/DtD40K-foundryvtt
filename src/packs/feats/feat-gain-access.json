@@ -3,7 +3,7 @@
   "_key": "!items!dtdFdf4d9ae004a2",
   "name": "Gain Access",
   "type": "feat",
-  "img": "icons/svg/padlock.svg",
+  "img": "systems/dtd40k/assets/icons/feat/gain-access.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

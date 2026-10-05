@@ -1,7 +1,7 @@
 {
   "name": "High-Act Torpedo",
   "type": "shipComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/high-act-torpedo.svg",
   "system": {
     "description": "<p>Highly agile, fires in any direction. On a missed bombardment shot, roll scatter twice and pick either.</p><p>A purchase is a set of 5 warheads.</p>",
     "source": {

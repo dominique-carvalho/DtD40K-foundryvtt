@@ -1,7 +1,7 @@
 {
   "name": "Animal Power",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/animal-power.svg",
   "system": {
     "description": "<p>Choose Strength, Dexterity or Constitution: the target gains +1 in it.</p>",
     "source": {

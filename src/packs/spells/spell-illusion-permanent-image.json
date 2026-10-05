@@ -1,7 +1,7 @@
 {
   "name": "Permanent Image",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/permanent-image.svg",
   "system": {
     "description": "<p>An Image needing no maintenance; persists until dispelled.</p>",
     "source": {

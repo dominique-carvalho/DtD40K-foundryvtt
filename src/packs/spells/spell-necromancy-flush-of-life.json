@@ -1,7 +1,7 @@
 {
   "name": "Flush of Life",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/flush-of-life.svg",
   "system": {
     "description": "<p>Until scene end the touched corpse appears alive but comatose, even under close examination. An undead caster may target themself.</p>",
     "source": {

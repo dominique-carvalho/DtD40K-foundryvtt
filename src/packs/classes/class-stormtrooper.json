@@ -3,7 +3,7 @@
   "_key": "!items!dtdC117751dead82",
   "name": "Stormtrooper",
   "type": "class",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/stormtrooper.svg",
   "folder": "dtdCFd29e9d6f032",
   "system": {
     "description": "<p>The elite of the Guardsman track, a shock soldier who pairs heavy specialization with firearms and relentless grit to break enemy lines.</p>",

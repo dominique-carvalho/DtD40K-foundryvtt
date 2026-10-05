@@ -1,7 +1,7 @@
 {
   "name": "Torpedo Tube",
   "type": "shipComponent",
-  "img": "icons/svg/barrel.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/torpedo-tube.svg",
   "system": {
     "description": "<p>Fills one Front or Rear hardpoint and stores up to five torpedoes; the loaded torpedo supplies all combat stats. Reloading during combat is normally impossible without a specialty console.</p>",
     "source": {

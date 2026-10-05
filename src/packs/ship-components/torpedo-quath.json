@@ -1,7 +1,7 @@
 {
   "name": "Quath Torpedo",
   "type": "shipComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/quath-torpedo.svg",
   "system": {
     "description": "<p>Automatically passes through shields to strike the hull, but its Crit drops to 0 when it does so.</p><p>A purchase is a set of 5 warheads.</p>",
     "source": {

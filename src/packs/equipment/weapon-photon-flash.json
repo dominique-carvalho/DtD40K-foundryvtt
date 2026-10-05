@@ -1,7 +1,7 @@
 {
   "name": "Photon Flash",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-thrown/photon-flash.svg",
   "system": {
     "description": "<p>A flash grenade that goes off like a tiny star, blinding everyone nearby and overwhelming most visors and vision protection. Anyone caught without eye protection is typically left blind and helpless for a short while.</p>",
     "source": {

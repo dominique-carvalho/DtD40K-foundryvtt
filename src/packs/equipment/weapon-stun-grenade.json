@@ -1,7 +1,7 @@
 {
   "name": "Stun Grenade",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-thrown/stun-grenade.svg",
   "system": {
     "description": "<p>A non-lethal flashbang combining a loud detonation with a bright flash to briefly disable targets before an assault. Anyone in the blast must succeed on a Constitution Test at TN 15 or lose 1d5 rounds to being stunned; wearing suitable eye and ear protection drops the TN to 10.</p>",
     "source": {

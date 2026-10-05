@@ -3,7 +3,7 @@
   "_key": "!items!dtdC20fbb1429671",
   "name": "Spellsword",
   "type": "class",
-  "img": "icons/svg/mage-shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/spellsword.svg",
   "folder": "dtdCFdaebebd4a00",
   "system": {
     "description": "<p>First class of the Arcane Knight track, a dabbler in both blade and spell. Spellswords imbue their weapon with arcane power and brand foes with an Arcane Mark.</p>",

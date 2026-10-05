@@ -1,7 +1,7 @@
 {
   "name": "Rebuke",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/rebuke.svg",
   "system": {
     "description": "<p>A target within 10m that follows a different god than the caster loses 1 hit point and 1 unspent hero point; followers of the same god are unaffected.</p>",
     "source": {

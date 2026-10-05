@@ -1,7 +1,7 @@
 {
   "name": "Ferocious Creature",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/ferocious-creature.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -129,7 +129,7 @@
     {
       "name": "Bite",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/bite.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -169,7 +169,10 @@
   "prototypeToken": {
     "name": "Ferocious Creature",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/ferocious-creature.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN1a01303de040",

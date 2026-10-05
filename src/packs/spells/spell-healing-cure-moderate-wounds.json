@@ -1,7 +1,7 @@
 {
   "name": "Cure Moderate Wounds",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/cure-moderate-wounds.svg",
   "system": {
     "description": "<p>The touched target regains one hit point for every resource point the caster pays (any amount).</p>",
     "source": {

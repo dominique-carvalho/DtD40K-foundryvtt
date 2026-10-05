@@ -1,7 +1,7 @@
 {
   "name": "Blindness",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/blindness.svg",
   "system": {
     "description": "<p>A touched target is blinded for one day unless it resists with Arcana + Willpower.</p>",
     "source": {

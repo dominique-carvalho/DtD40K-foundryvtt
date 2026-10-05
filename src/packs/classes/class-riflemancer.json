@@ -3,7 +3,7 @@
   "_key": "!items!dtdC9f5234d5f7fc",
   "name": "Riflemancer",
   "type": "class",
-  "img": "icons/svg/lightning.svg",
+  "img": "systems/dtd40k/assets/icons/class/riflemancer.svg",
   "folder": "dtdCFd1fb65dfd09",
   "system": {
     "description": "<p>Second step of the Magitek Gunman track, fusing firearms with spellcraft. Riflemancers weave minor magic into their shooting and dodge danger with Evasion.</p>",

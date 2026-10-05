@@ -3,7 +3,7 @@
   "_key": "!items!dtdC69497427e03b",
   "name": "Operations Officer",
   "type": "class",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/class/operations-officer.svg",
   "folder": "dtdCFd3d80d0dc1c",
   "system": {
     "description": "<p>A ship-crew class for the engineer who keeps a vessel running. Operations Officers work miracles on failing systems and bodge repairs together from whatever is at hand.</p>",

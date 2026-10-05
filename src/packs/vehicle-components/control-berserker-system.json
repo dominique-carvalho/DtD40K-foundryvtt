@@ -1,7 +1,7 @@
 {
   "name": "Berserker System",
   "type": "vehicleComponent",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/berserker-system.svg",
   "system": {
     "description": "<p>A usually outlawed kill-only AI override. It switches on as a Half Action or automatically when the pilot is incapacitated, then hunts and shoots every detected foe using 3 dots in all needed skills/attributes, staying on until the foes or the vehicle are gone.</p>",
     "source": {

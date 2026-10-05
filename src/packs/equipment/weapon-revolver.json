@@ -1,7 +1,7 @@
 {
   "name": "Revolver",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-pistol/revolver.svg",
   "system": {
     "description": "<p>A stub revolver of old, time-proven design, prized as a dependable backup gun.</p>",
     "source": {

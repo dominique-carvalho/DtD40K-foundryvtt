@@ -1,7 +1,7 @@
 {
   "name": "Obliterator",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/obliterator.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -159,7 +159,7 @@
     {
       "name": "MP Lascannon",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/mp-lascannon.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -202,7 +202,7 @@
     {
       "name": "Heavy Bolter",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/heavy-bolter.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -245,7 +245,7 @@
     {
       "name": "Crushing Fist",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/crushing-fist.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -285,7 +285,10 @@
   "prototypeToken": {
     "name": "Obliterator",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/obliterator.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN67aa6d9a1092",

@@ -1,7 +1,7 @@
 {
   "name": "Consecrate",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/consecrate.svg",
   "system": {
     "description": "<p>Creates a fixed 50m-radius zone: worshippers of the caster's pantheon inside get +1k0 on all tests, and the caster can reach allies with Healing spells at extended range while both stand inside.</p>",
     "source": {

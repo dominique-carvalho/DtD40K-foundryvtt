@@ -1,7 +1,7 @@
 {
   "name": "Blur",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/blur.svg",
   "system": {
     "description": "<p>The caster's outline wavers; Static Defense rises by 3.</p>",
     "source": {

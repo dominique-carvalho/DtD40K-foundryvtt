@@ -1,7 +1,7 @@
 {
   "name": "Majestic-Class",
   "type": "shipComponent",
-  "img": "icons/svg/castle.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/majestic-class.svg",
   "system": {
     "description": "<p>Command vessel with a domed forward bridge; most guns point aft since it was meant to fight while withdrawing.</p>",
     "source": {

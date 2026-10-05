@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsDraDD000000",
   "name": "Double Dragon",
   "type": "feat",
-  "img": "icons/svg/wing.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/double-dragon.svg",
   "folder": "dtdFldDraBlood00",
   "system": {
     "category": "exaltedAsset",

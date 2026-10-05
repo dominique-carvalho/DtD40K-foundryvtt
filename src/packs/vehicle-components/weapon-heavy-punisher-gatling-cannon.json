@@ -1,7 +1,7 @@
 {
   "name": "Heavy Punisher Gatling Cannon",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/heavy-punisher-gatling-cannon.svg",
   "system": {
     "description": "<p>Heavier rotary cannon with double the rate of the Light model.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Unaligned",
   "type": "deity",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/deity/unaligned.svg",
   "system": {
     "description": "<p>People who back no god, from doubt, abandonment or disbelief; they lack divine protection but mostly avoid divine wrath by going unnoticed.</p>",
     "source": {

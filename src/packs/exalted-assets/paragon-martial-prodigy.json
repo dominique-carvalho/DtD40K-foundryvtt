@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsParMP000000",
   "name": "Martial Prodigy",
   "type": "feat",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/martial-prodigy.svg",
   "folder": "dtdFldParagon000",
   "system": {
     "category": "exaltedAsset",

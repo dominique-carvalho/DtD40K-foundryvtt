@@ -1,7 +1,7 @@
 {
   "name": "Aspect Warrior",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/aspect-warrior.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -165,7 +165,7 @@
     {
       "name": "Fencing Sword",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/fencing-sword.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -208,7 +208,7 @@
     {
       "name": "Lighting Gun",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/lighting-gun.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -257,7 +257,10 @@
   "prototypeToken": {
     "name": "Aspect Warrior",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/aspect-warrior.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNbe0d4b6ac14f",

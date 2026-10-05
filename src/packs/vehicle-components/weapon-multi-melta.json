@@ -1,7 +1,7 @@
 {
   "name": "Multi-Melta",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/multi-melta.svg",
   "system": {
     "description": "<p>Bank of meltas acting as one heat cannon; enormous power, very short reach, no personal armour helps.</p>",
     "source": {

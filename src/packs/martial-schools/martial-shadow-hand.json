@@ -1,7 +1,7 @@
 {
   "name": "Shadow Hand",
   "type": "martialSchool",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/shadow-hand.svg",
   "system": {
     "description": "<p>A deceptive assassin's style of surprise and misdirection with small, concealable blades.</p>",
     "source": {

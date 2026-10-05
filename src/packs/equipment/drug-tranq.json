@@ -1,7 +1,7 @@
 {
   "name": "Tranq",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/tranq.svg",
   "system": {
     "description": "<p>A catch-all name for sedatives, used medically and as non-lethal Needle weapon rounds for hunting or self-defence; very tough targets may shrug it off.</p><p>A dosed target suffers one fatigue level, then must pass a Constitution test at TN 15 or suffer 1d10 further levels of fatigue. This fatigue recovers normally.</p>",
     "source": {

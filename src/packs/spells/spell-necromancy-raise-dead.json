@@ -1,7 +1,7 @@
 {
   "name": "Raise Dead",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/raise-dead.svg",
   "system": {
     "description": "<p>Spending a Resource Point turns a touched humanoid corpse into an undead horror; if intact it can briefly pass as a sick living person. It always uses a Walkin' Dead statblock (Chapter 17).</p>",
     "source": {

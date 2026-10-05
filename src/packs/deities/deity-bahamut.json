@@ -1,7 +1,7 @@
 {
   "name": "Bahamut",
   "type": "deity",
-  "img": "icons/svg/sun.svg",
+  "img": "systems/dtd40k/assets/icons/deity/bahamut.svg",
   "system": {
     "description": "<p>The platinum dragon, an ascended mortal ruling over nobility and righteous authority, popular with rulers and Dragonborn; he values protecting the weak from the strong.</p>",
     "source": {

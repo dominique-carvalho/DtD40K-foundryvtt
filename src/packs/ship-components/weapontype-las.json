@@ -1,7 +1,7 @@
 {
   "name": "Las (weapon type)",
   "type": "shipComponent",
-  "img": "icons/svg/aura.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/las-weapon-type.svg",
   "system": {
     "description": "<p>Default type with no modifiers.</p><p>No modifiers.</p>",
     "source": {

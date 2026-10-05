@@ -1,7 +1,7 @@
 {
   "name": "Wall of Force",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/wall-of-force.svg",
   "system": {
     "description": "<p>Creates an immobile, practically indestructible force plane (max length 20m) placed within 50m. It deals no damage; where it would overlap a creature or object it leaves that space open, possibly creating a gap.</p>",
     "source": {

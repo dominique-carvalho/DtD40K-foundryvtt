@@ -1,7 +1,7 @@
 {
   "name": "Chief Medical Officer",
   "type": "shipComponent",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/chief-medical-officer.svg",
   "system": {
     "description": "<p>Keeps the crew healthy. Triage (Arcana action) costs this officer no action. Each journey, once, restores 1d10 hit points and Crew. Also enables 6+ on 1d10 checks in the Nightmare and Plague warp encounters.</p>",
     "source": {

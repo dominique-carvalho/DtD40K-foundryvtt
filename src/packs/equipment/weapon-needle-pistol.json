@@ -1,7 +1,7 @@
 {
   "name": "Needle Pistol",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-pistol/needle-pistol.svg",
   "system": {
     "description": "<p>A near-silent pistol that uses a weak laser to fire crystal slivers laced with toxins, with no muzzle flash, making it an assassin's tool. It can also be loaded with doses of a drug: such a shot inflicts no damage and injects the drug in its place.</p>",
     "source": {

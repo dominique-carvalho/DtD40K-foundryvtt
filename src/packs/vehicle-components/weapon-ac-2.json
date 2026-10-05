@@ -1,7 +1,7 @@
 {
   "name": "AC/2",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/ac-2.svg",
   "system": {
     "description": "<p>Smallest standard autocannon calibre; long reach and able to load special ammunition.</p>",
     "source": {

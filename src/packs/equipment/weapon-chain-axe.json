@@ -1,7 +1,7 @@
 {
   "name": "Chain Axe",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/chain-axe.svg",
   "system": {
     "description": "<p>A heavy chain-toothed axe that inflicts terrible wounds with each blow. It can have one or two edges, each with its own chain loop, so a double-sided one keeps working if one side jams.</p>",
     "source": {

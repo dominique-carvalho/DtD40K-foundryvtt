@@ -1,7 +1,7 @@
 {
   "name": "Krak Grenade",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-thrown/krak-grenade.svg",
   "system": {
     "description": "<p>A shaped-charge grenade whose concentrated explosive punches through vehicles, bunkers and other armoured targets. It has almost no blast, so it is a poor choice against infantry or moving targets.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Omnissiah",
   "type": "deity",
-  "img": "icons/svg/sun.svg",
+  "img": "systems/dtd40k/assets/icons/deity/omnissiah.svg",
   "system": {
     "description": "<p>God of technology and the machine spirits in every device, seen as a Wheel-wide machine; its faithful treat machines like people and seek efficiency.</p>",
     "source": {

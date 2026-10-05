@@ -1,7 +1,7 @@
 {
   "name": "Ballistic Submarine",
   "type": "vehicle",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle/ballistic-submarine.svg",
   "system": {
     "size": 26,
     "speed": 2,
@@ -31,7 +31,7 @@
     {
       "name": "Naval Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/direction.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/naval-drive.svg",
       "system": {
         "description": "<p>Boats; a technology as old as the wheel, confined to water.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p>",
         "source": {
@@ -73,7 +73,7 @@
     {
       "name": "Reinforced Frame",
       "type": "vehicleComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/reinforced-frame.svg",
       "system": {
         "description": "<p>Normal Reinforced frame: 15 HP and Resilience 11. Comes with a Cockpit.</p>",
         "source": {
@@ -113,7 +113,7 @@
     {
       "name": "Armor 11",
       "type": "vehicleComponent",
-      "img": "icons/svg/statue.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/armor-11.svg",
       "system": {
         "description": "<p>11 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
         "source": {
@@ -153,7 +153,7 @@
     {
       "name": "Hidden Compartment",
       "type": "vehicleComponent",
-      "img": "icons/svg/chest.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/hidden-compartment.svg",
       "system": {
         "description": "<p>One chosen Cargo Space cannot be detected by outside scans.</p>",
         "source": {
@@ -193,7 +193,7 @@
     {
       "name": "Passenger Space",
       "type": "vehicleComponent",
-      "img": "icons/svg/chest.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/passenger-space.svg",
       "system": {
         "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
         "source": {
@@ -239,7 +239,7 @@
     {
       "name": "ECM",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/ecm.svg",
       "system": {
         "description": "<p>Noisy sensor jamming toggled with a Half Action: long-range sensors (radar, lidar) cannot track the vehicle, though they clearly notice the interference.</p>",
         "source": {
@@ -280,7 +280,7 @@
     {
       "name": "Thermoptic Camo",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/thermoptic-camo.svg",
       "system": {
         "description": "<p>Active camouflage that beats the eye but not radar: the vehicle can roll Stealth + Dexterity or Intelligence under the usual Stealth rules.</p>",
         "source": {
@@ -320,7 +320,7 @@
     {
       "name": "Environmental Seals",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/environmental-seals.svg",
       "system": {
         "description": "<p>Airtight, pressurised hull with its own air supply; unaffected by gas, flooding/water damage and fire.</p>",
         "source": {
@@ -365,7 +365,7 @@
     {
       "name": "Sensor System (Advanced)",
       "type": "vehicleComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/sensor-system-advanced.svg",
       "system": {
         "description": "<p>Pilot gets +10 on perception tests and auto-detects vehicles or ships lacking ECM within 20 km.</p>",
         "source": {
@@ -407,7 +407,7 @@
     {
       "name": "Diver Down (Submarine)",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/diver-down-submarine.svg",
       "system": {
         "description": "<p>Needs Environmental Seals. Choose Subterranean (burrow through soil and rock, max Momentum 5, very hard materials may block it at SM call) or Submarine (move underwater at full top speed).</p><p>Options: Subterranean, Submarine.</p>",
         "source": {
@@ -447,7 +447,7 @@
     {
       "name": "Flawed (Inefficient Controls)",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/flawed-inefficient-controls.svg",
       "system": {
         "description": "<p>Move costs a Full Action and Punch It is unavailable.</p>",
         "source": {
@@ -490,7 +490,7 @@
     {
       "name": "Flawed (Unstable)",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/flawed-unstable.svg",
       "system": {
         "description": "<p>Control tests suffer 2 checks.</p>",
         "source": {
@@ -532,7 +532,7 @@
     {
       "name": "Arrow IV Launcher (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/arrow-iv-launcher-macronized.svg",
       "system": {
         "description": "<p>Self-contained missile artillery; the one vehicle launcher strong enough to threaten starships.</p>",
         "source": {
@@ -596,7 +596,10 @@
   "prototypeToken": {
     "name": "Ballistic Submarine",
     "actorLink": true,
-    "disposition": 0
+    "disposition": 0,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/vehicle/ballistic-submarine.svg"
+    }
   },
   "flags": {},
   "_id": "dtdWf815ba76983e",

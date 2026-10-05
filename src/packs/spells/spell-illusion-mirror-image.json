@@ -1,7 +1,7 @@
 {
   "name": "Mirror Image",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/mirror-image.svg",
   "system": {
     "description": "<p>Creates 1 duplicate that stays near the caster. Attackers randomly determine whether they hit the caster or an image; a struck image is destroyed.</p>",
     "source": {

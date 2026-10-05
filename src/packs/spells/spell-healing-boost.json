@@ -1,7 +1,7 @@
 {
   "name": "Boost",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/boost.svg",
   "system": {
     "description": "<p>An ally within 10m immediately gets a half action; their initiative position is unchanged.</p>",
     "source": {

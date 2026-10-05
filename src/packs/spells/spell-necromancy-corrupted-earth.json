@@ -1,7 +1,7 @@
 {
   "name": "Corrupted Earth",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/corrupted-earth.svg",
   "system": {
     "description": "<p>A 50m-radius zone: those not worshipping the caster's pantheon take -1k0 to every test; the caster may hit foes inside with Necromancy spells at extended range while also inside.</p>",
     "source": {

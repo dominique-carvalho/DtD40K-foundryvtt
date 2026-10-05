@@ -1,7 +1,7 @@
 {
   "name": "Disjunction",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/disjunction.svg",
   "system": {
     "description": "<p>Works like Dispel; on a successful counter the enemy caster is also barred from casting through the close of its following turn.</p>",
     "source": {

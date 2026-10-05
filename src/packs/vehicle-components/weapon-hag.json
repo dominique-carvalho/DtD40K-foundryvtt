@@ -1,7 +1,7 @@
 {
   "name": "HAG",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/hag.svg",
   "system": {
     "description": "<p>Hyper-Assault Gauss: a railgun variant spraying explosive submunitions in place of one slug.</p>",
     "source": {

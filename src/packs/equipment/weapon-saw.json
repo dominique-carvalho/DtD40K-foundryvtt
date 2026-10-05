@@ -1,7 +1,7 @@
 {
   "name": "SAW",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/saw.svg",
   "system": {
     "description": "<p>The Squad Automatic Weapon, a belt-hungry support gun common on low-tech worlds and among hive gangs. It fires only on full auto and is meant for mowing down crowds or harassing lightly armoured vehicles.</p>",
     "source": {

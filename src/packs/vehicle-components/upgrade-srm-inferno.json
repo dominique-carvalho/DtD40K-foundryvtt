@@ -1,7 +1,7 @@
 {
   "name": "SRM Inferno",
   "type": "vehicleComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/srm-inferno.svg",
   "system": {
     "description": "<p>Sticky burning-gel missiles; the SRM gains Incendiary.</p><p>Incendiary.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Multiphasic Shield Mk. I",
   "type": "shipComponent",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/multiphasic-shield-mk-i.svg",
   "system": {
     "description": "<p>Newer design of several weak overlapping layers (four to seven by Mark); attackers must knock them down one by one.</p>",
     "source": {

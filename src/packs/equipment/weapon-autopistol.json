@@ -1,7 +1,7 @@
 {
   "name": "Autopistol",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-pistol/autopistol.svg",
   "system": {
     "description": "<p>A small, fast-cycling automatic sidearm that fits in a coat pocket, which is why street gangs and outlaws carry it so often.</p>",
     "source": {

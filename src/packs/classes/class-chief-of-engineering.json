@@ -3,7 +3,7 @@
   "_key": "!items!dtdC1ce46c467720",
   "name": "Chief of Engineering",
   "type": "class",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/class/chief-of-engineering.svg",
   "folder": "dtdCFd3d80d0dc1c",
   "system": {
     "description": "<p>The officer who keeps a ship's machinery and shields running, whatever the damage. Built around Tech-Use and Crafts, it leads repair crews with Engineering Team Leader and improvises fixes with Jerry Rig.</p>",

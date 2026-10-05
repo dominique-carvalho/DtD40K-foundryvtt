@@ -1,7 +1,7 @@
 {
   "name": "AC/20",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/ac-20.svg",
   "system": {
     "description": "<p>Biggest standard calibre, carried only by the largest, most lethal units.</p>",
     "source": {

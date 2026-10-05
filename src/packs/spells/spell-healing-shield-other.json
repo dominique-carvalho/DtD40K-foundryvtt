@@ -1,7 +1,7 @@
 {
   "name": "Shield Other",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/shield-other.svg",
   "system": {
     "description": "<p>For 24 hours, hit points the touched target would lose may be taken by the caster instead, at the caster's option.</p>",
     "source": {

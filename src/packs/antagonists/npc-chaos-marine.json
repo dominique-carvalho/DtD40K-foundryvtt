@@ -1,7 +1,7 @@
 {
   "name": "Chaos Marine",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/chaos-marine.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -149,7 +149,7 @@
     {
       "name": "Chainsword",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/chainsword.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -192,7 +192,7 @@
     {
       "name": "Boltgun",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/boltgun.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -237,7 +237,10 @@
   "prototypeToken": {
     "name": "Chaos Marine",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/chaos-marine.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNf626e52cd36d",

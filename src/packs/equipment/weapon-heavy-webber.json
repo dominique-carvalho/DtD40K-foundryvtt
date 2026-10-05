@@ -1,7 +1,7 @@
 {
   "name": "Heavy Webber",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/heavy-webber.svg",
   "system": {
     "description": "<p>The most widely used web weapon, deployed to subdue lawbreakers without killing them; each shot can blanket a small group, and several can pin down whole crowds. It deals no damage, and the webbing dissolves by itself after 1d5 hours.</p>",
     "source": {

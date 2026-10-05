@@ -1,7 +1,7 @@
 {
   "name": "Lightning Gun",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/lightning-gun.svg",
   "system": {
     "description": "<p>Among the least complex and most frequently found Syrneth relics, it sprays a broad cone of crackling electricity much like a shotgun blast. Like all Syrneth arms it seems to repair itself over time and stays as good as new.</p>",
     "source": {

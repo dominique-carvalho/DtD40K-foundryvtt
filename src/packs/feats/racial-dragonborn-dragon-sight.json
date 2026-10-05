@@ -3,7 +3,7 @@
   "_key": "!items!dtdF88ccf1b94afe",
   "name": "Dragon Sight",
   "type": "feat",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/racial-feat/dragon-sight.svg",
   "folder": "dtdFld18a473cdba",
   "system": {
     "category": "racialFeat",

@@ -1,7 +1,7 @@
 {
   "name": "Death Ward",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/death-ward.svg",
   "system": {
     "description": "<p>Once during the duration, a death the touched target would suffer is averted. Ongoing lethal conditions (vacuum, lava and the like) are not prevented.</p>",
     "source": {

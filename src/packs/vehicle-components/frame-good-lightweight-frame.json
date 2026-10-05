@@ -1,7 +1,7 @@
 {
   "name": "Good Lightweight Frame",
   "type": "vehicleComponent",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/good-lightweight-frame.svg",
   "system": {
     "description": "<p>Good Lightweight frame: 10 HP and Resilience 4. Comes with a Cockpit.</p>",
     "source": {

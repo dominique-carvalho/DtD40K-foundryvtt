@@ -1,7 +1,7 @@
 {
   "name": "Knock",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/knock.svg",
   "system": {
     "description": "<p>Every mundane (non-magical) lock on the touched object is disabled.</p>",
     "source": {

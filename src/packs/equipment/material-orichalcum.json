@@ -1,7 +1,7 @@
 {
   "name": "Orichalcum",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/material/orichalcum.svg",
   "system": {
     "description": "<p>A sun-warm golden magical metal, difficult to mine and forge, associated with glory, order and perfection; its artifacts are simply better all round. As with all magical materials, its bonuses replace normal quality (the item counts as Best), it adds a hearthstone slot and deals magical damage.</p><p>Melee weapons get +2k0 on attack, damage and parry rolls; ranged weapons gain Reliable and +1k1 on attack rolls; special ammunition gains Reliable, +1k0 on attack and damage, Pen 4 and +10 m range; armour gets +1 Max Dex, +2 AP and +2 Aura. A bionic arm grants +1k1 on Strength, Dexterity and Brawl tests made with it, bionic legs grant +2 Speed, +2 extra AP on the legs and +2k1 on Athletics, and a bionic heart grants +1 Hero Point.</p>",
     "source": {

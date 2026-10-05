@@ -3,7 +3,7 @@
   "_key": "!items!dtdC17a58eebf24b",
   "name": "Sheriff",
   "type": "class",
-  "img": "icons/svg/castle.svg",
+  "img": "systems/dtd40k/assets/icons/class/sheriff.svg",
   "folder": "dtdCFd97d6f8d323",
   "system": {
     "description": "<p>Second step of the Sheriff track, the hardened lawman. Sheriffs fire double taps, endure punishment and stay alert for threats.</p>",

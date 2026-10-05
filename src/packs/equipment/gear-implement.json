@@ -1,7 +1,7 @@
 {
   "name": "Implement",
   "type": "gear",
-  "img": "icons/svg/item-bag.svg",
+  "img": "systems/dtd40k/assets/icons/gear/implement.svg",
   "system": {
     "description": "<p>A focus such as a wand, rod, staff, orb or holy symbol, that clerics and sorcerers use to channel and strengthen their magic.</p><p>An implement is not required to cast, though for some casters it is part of their training, taste or personal style.</p>",
     "source": {

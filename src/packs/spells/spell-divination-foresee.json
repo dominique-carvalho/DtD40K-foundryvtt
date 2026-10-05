@@ -1,7 +1,7 @@
 {
   "name": "Foresee",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/foresee.svg",
   "system": {
     "description": "<p>May replace a Dodge test.</p>",
     "source": {

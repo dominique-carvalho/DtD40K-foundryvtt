@@ -1,7 +1,7 @@
 {
   "name": "Fire Pearl",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/fire-pearl.svg",
   "system": {
     "description": "<p>A centimetre-wide orange gem that glows like a coal. Squeezing it and concentrating ignites something flammable within 3 m, and a fire it is placed in burns twice as long as usual, which makes it prized by travellers in the wilds.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Scorpion Tank",
   "type": "vehicle",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle/scorpion-tank.svg",
   "system": {
     "size": 14,
     "speed": 4,
@@ -31,7 +31,7 @@
     {
       "name": "Tracked Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/direction.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/tracked-drive.svg",
       "system": {
         "description": "<p>Treads handle rough ground far better than wheels, at the price of a much slower top speed.</p><p><strong>Caterpillar.</strong> No movement penalty from difficult terrain.</p><p><strong>Tough.</strong> Crit Damage rolls happen only per 10 HP lost instead of per 5 wounds.</p>",
         "source": {
@@ -73,7 +73,7 @@
     {
       "name": "Reinforced Frame",
       "type": "vehicleComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/reinforced-frame.svg",
       "system": {
         "description": "<p>Normal Reinforced frame: 15 HP and Resilience 11. Comes with a Cockpit.</p>",
         "source": {
@@ -113,7 +113,7 @@
     {
       "name": "Armor 10",
       "type": "vehicleComponent",
-      "img": "icons/svg/statue.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/armor-10.svg",
       "system": {
         "description": "<p>10 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
         "source": {
@@ -153,7 +153,7 @@
     {
       "name": "Flawed (Overheating)",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/flawed-overheating.svg",
       "system": {
         "description": "<p>Loses 1 HP in each round with Momentum over 6 or in which Punch It is used.</p>",
         "source": {
@@ -196,7 +196,7 @@
     {
       "name": "Flawed (Unstable)",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/flawed-unstable.svg",
       "system": {
         "description": "<p>Control tests suffer 2 checks.</p>",
         "source": {
@@ -238,7 +238,7 @@
     {
       "name": "SRM (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/srm-macronized.svg",
       "system": {
         "description": "<p>Short Range Missiles: direct-fire, less complex, trading reach for impact; good against troops and vehicles.</p>",
         "source": {
@@ -296,7 +296,7 @@
     {
       "name": "SRM TC Warhead",
       "type": "vehicleComponent",
-      "img": "icons/svg/explosion.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/srm-tc-warhead.svg",
       "system": {
         "description": "<p>Tandem-Charge: if the hit removes at least 1 HP, the target also rolls for vehicle crit damage.</p><p>Special.</p>",
         "source": {
@@ -342,7 +342,7 @@
     {
       "name": "Light Punisher Gatling Cannon",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/light-punisher-gatling-cannon.svg",
       "system": {
         "description": "<p>Rotary-barrel autocannon deadly to lightly armoured vehicles and big living targets; banned against infantry in many Spheres.</p>",
         "source": {
@@ -400,7 +400,7 @@
     {
       "name": "Copilot Seat (Light Punisher Gatling Cannon)",
       "type": "vehicleComponent",
-      "img": "icons/svg/eye.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/copilot-seat-light-punisher-gatling-cannon.svg",
       "system": {
         "description": "<p>Chosen weapons or systems are operated from this station and no longer from the pilot's; the copilot gets 1 Half Action per round to run them.</p>",
         "source": {
@@ -443,7 +443,10 @@
   "prototypeToken": {
     "name": "Scorpion Tank",
     "actorLink": true,
-    "disposition": 0
+    "disposition": 0,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/vehicle/scorpion-tank.svg"
+    }
   },
   "flags": {},
   "_id": "dtdW915e3e2ec000",

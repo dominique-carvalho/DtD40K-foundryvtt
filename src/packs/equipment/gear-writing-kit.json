@@ -1,7 +1,7 @@
 {
   "name": "Writing Kit",
   "type": "gear",
-  "img": "icons/svg/item-bag.svg",
+  "img": "systems/dtd40k/assets/icons/gear/writing-kit.svg",
   "system": {
     "description": "<p>An assortment of paper, inks and quills.</p>",
     "source": {

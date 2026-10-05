@@ -1,7 +1,7 @@
 {
   "name": "Energy Grasp",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/energy-grasp.svg",
   "system": {
     "description": "<p>The caster's hand glows; make an unarmed melee attack whose damage roll is Evocation + Charisma.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Nurgle",
   "type": "deity",
-  "img": "icons/svg/fire.svg",
+  "img": "systems/dtd40k/assets/icons/deity/nurgle.svg",
   "system": {
     "description": "<p>A doting, grandfatherly god of despair, disease and decay who treats rot as one more form of life and urges kindness in life's short span.</p>",
     "source": {

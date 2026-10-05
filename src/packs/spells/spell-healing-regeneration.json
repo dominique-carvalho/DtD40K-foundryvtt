@@ -1,7 +1,7 @@
 {
   "name": "Regeneration",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/regeneration.svg",
   "system": {
     "description": "<p>A touched target missing a limb who then rests in bed for a week may regrow one lost limb over that week.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Burning Blood",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/burning-blood.svg",
   "system": {
     "description": "<p>Corrodes a living creature's blood: it loses 1 hit point as each of its turns ends, lasting (caster Level) rounds. No effect on bloodless beings (robots, Modrons, undead).</p>",
     "source": {

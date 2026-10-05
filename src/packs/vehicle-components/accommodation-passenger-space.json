@@ -1,7 +1,7 @@
 {
   "name": "Passenger Space",
   "type": "vehicleComponent",
-  "img": "icons/svg/chest.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/passenger-space.svg",
   "system": {
     "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
     "source": {

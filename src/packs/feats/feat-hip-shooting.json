@@ -3,7 +3,7 @@
   "_key": "!items!dtdF999f50d1c96e",
   "name": "Hip Shooting",
   "type": "feat",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/feat/hip-shooting.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

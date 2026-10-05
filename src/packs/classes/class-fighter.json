@@ -3,7 +3,7 @@
   "_key": "!items!dtdC812bfff4d6d2",
   "name": "Fighter",
   "type": "class",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/class/fighter.svg",
   "folder": "dtdCFd1ee77afc60",
   "system": {
     "description": "<p>A seasoned Fighter who has mastered melee, controlling the fight with Combat Master and Wall of Steel while taking punishment without flinching.</p>",

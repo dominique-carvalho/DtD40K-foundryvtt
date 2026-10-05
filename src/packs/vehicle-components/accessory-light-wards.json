@@ -1,7 +1,7 @@
 {
   "name": "Light Wards",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/light-wards.svg",
   "system": {
     "description": "<p>Etched anti-magic runes giving Aura 5.</p>",
     "source": {

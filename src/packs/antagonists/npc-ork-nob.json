@@ -1,7 +1,7 @@
 {
   "name": "Ork Nob",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/ork-nob.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -147,7 +147,7 @@
     {
       "name": "Big Choppa",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/big-choppa.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -185,7 +185,7 @@
     {
       "name": "SAW",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/saw.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -225,7 +225,10 @@
   "prototypeToken": {
     "name": "Ork Nob",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/ork-nob.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN706f11c94519",

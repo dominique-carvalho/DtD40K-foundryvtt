@@ -1,7 +1,7 @@
 {
   "name": "Jewel of the Hungry Fire",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/jewel-of-the-hungry-fire.svg",
   "system": {
     "description": "<p>An orange-red gem glowing like banked coals that absorbs heat and flame. The bearer is comfortable in extreme heat, such as deserts, and is immune to fire.</p>",
     "source": {

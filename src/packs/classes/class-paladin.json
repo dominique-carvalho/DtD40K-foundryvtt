@@ -3,7 +3,7 @@
   "_key": "!items!dtdC9cd289ff4870",
   "name": "Paladin",
   "type": "class",
-  "img": "icons/svg/angel.svg",
+  "img": "systems/dtd40k/assets/icons/class/paladin.svg",
   "folder": "dtdCFd34623d0231",
   "system": {
     "description": "<p>An armored holy knight of the Paladin track who holds the front line with Wall of Steel and blade mastery, backed by the standing of a religious order.</p>",

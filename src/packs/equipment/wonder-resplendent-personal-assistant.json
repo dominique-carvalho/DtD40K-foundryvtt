@@ -1,7 +1,7 @@
 {
   "name": "Resplendent Personal Assistant",
   "type": "gear",
-  "img": "icons/svg/mystery-man-black.svg",
+  "img": "systems/dtd40k/assets/icons/wonder/resplendent-personal-assistant.svg",
   "system": {
     "description": "<p>A bracelet that merges a microframe computer, sensor pack and small fabricator. It performs the functions of a Chrono, Data Slate, Combi-Tool, Torch, Multikey and Pict Recorder, never runs out of power, keeps its own time, and has a magical compass and altimeter that work in any environment.</p>",
     "source": {

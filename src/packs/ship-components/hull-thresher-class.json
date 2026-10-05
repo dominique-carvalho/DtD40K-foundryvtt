@@ -1,7 +1,7 @@
 {
   "name": "Thresher-Class",
   "type": "shipComponent",
-  "img": "icons/svg/castle.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/thresher-class.svg",
   "system": {
     "description": "<p>Flexible line ship between the light escorts and the big hulls; often refitted for new roles.</p>",
     "source": {

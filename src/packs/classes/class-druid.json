@@ -3,7 +3,7 @@
   "_key": "!items!dtdC7a0de1d2cf00",
   "name": "Druid",
   "type": "class",
-  "img": "icons/svg/oak.svg",
+  "img": "systems/dtd40k/assets/icons/class/druid.svg",
   "folder": "dtdCFd867ca5a053",
   "system": {
     "description": "<p>The Druid track's full nature priest, able to heal, transform and read the wild. It channels divine energy, gains animal traits via Nekomimi Mode, and casts from Healing, Transmutation and Divination.</p>",

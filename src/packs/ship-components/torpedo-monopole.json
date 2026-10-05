@@ -1,7 +1,7 @@
 {
   "name": "Monopole Torpedo",
   "type": "shipComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/monopole-torpedo.svg",
   "system": {
     "description": "<p>Magnetic burst warhead. A ship it hits, shielded or not, loses 10 from both Maneuverability and Acceleration during the next 1d10 rounds; further hits do not stack.</p><p>A purchase is a set of 5 warheads.</p>",
     "source": {

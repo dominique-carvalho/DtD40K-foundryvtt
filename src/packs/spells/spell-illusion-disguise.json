@@ -1,7 +1,7 @@
 {
   "name": "Disguise",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/disguise.svg",
   "system": {
     "description": "<p>Replaces the Disguise skill; the magic test result sets the disguise quality.</p>",
     "source": {

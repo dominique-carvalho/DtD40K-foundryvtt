@@ -1,7 +1,7 @@
 {
   "name": "Incendiary Cloud",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/incendiary-cloud.svg",
   "system": {
     "description": "<p>Cloud of churning flame, up to two 5m cubes per caster level; blocks sight beyond 2m and always conceals. Breathing creatures starting a turn in it or crossing it are set on Fire. Dissipates in about five minutes normally.</p>",
     "source": {

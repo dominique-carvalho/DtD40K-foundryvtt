@@ -1,7 +1,7 @@
 {
   "name": "Targeting Computer",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/targeting-computer.svg",
   "system": {
     "description": "<p>Fire-control computer helping gunners aim. All Ballistics tests +5.</p>",
     "source": {

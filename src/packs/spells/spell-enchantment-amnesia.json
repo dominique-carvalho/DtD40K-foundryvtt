@@ -1,7 +1,7 @@
 {
   "name": "Amnesia",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/amnesia.svg",
   "system": {
     "description": "<p>On a failed save the target forgets an event the caster picks. The caster may supply a replacement account in any level of detail; the target accepts it and fills gaps by itself.</p>",
     "source": {

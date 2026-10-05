@@ -1,7 +1,7 @@
 {
   "name": "Medkit",
   "type": "gear",
-  "img": "icons/svg/item-bag.svg",
+  "img": "systems/dtd40k/assets/icons/gear/medkit.svg",
   "system": {
     "description": "<p>A kit of patches, antiseptics and synth-skin, essential for any medic. A character who has a medkit at hand gains a free raise on Medicae Tests.</p>",
     "source": {

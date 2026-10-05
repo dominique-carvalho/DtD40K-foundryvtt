@@ -1,7 +1,7 @@
 {
   "name": "Hither",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/hither.svg",
   "system": {
     "description": "<p>A club drug that boosts attraction pheromones and lowers inhibitions, giving the user a hard-to-define glow; it is seldom addictive.</p><p>The user gains +2k1 on Charm tests, but the TN of any Willpower or Wisdom test they make to resist temptation rises by 10.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Railgun",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/railgun.svg",
   "system": {
     "description": "<p>Magnetic slug thrower with long reach and punch; a natural sniper gun.</p>",
     "source": {

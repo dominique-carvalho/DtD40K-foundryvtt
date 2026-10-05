@@ -1,7 +1,7 @@
 {
   "name": "Monodrone Modron",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/monodrone-modron.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -233,7 +233,7 @@
     {
       "name": "Gauss Flayer",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/gauss-flayer.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -276,7 +276,7 @@
     {
       "name": "Melee Attachment",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/melee-attachment.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -316,7 +316,10 @@
   "prototypeToken": {
     "name": "Monodrone Modron",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/monodrone-modron.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNc78345f6447a",

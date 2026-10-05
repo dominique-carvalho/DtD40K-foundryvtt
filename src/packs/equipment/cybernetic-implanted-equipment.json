@@ -1,7 +1,7 @@
 {
   "name": "Implanted Equipment",
   "type": "gear",
-  "img": "icons/svg/clockwork.svg",
+  "img": "systems/dtd40k/assets/icons/cybernetic/implanted-equipment.svg",
   "system": {
     "description": "<p>Almost any item of gear can be built into the body, working exactly like the implanted item at whatever quality was chosen. Weapons and armor cannot be implanted this way.</p><p>Its availability sits one step above that of the normal item.</p>",
     "source": {

@@ -1,0 +1,2 @@
+# Ícones gerados (spec 024): LF fixo para o build-icons comparar bytes em qualquer SO
+*.svg text eol=lf

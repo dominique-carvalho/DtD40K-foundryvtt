@@ -3,7 +3,7 @@
   "_key": "!items!dtdC9b229f20a6b8",
   "name": "Marksman",
   "type": "class",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/class/marksman.svg",
   "folder": "dtdCFd6fe71ac156",
   "system": {
     "description": "<p>Second step of the Operator track, refining the sniper into a precision killer. Marksmen specialize in one weapon, shoot at great range and strike unaware targets with Sneak Attack.</p>",

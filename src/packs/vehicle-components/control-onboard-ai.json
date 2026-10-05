@@ -1,7 +1,7 @@
 {
   "name": "Onboard AI",
   "type": "vehicleComponent",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/onboard-ai.svg",
   "system": {
     "description": "<p>A virtual crew member with 3 dots in relevant piloting/technical skills and traits. Each round it has 1 Half Action (Aid Another, or a vehicle action when nobody is piloting) and 1 Reaction; once per scene it may add a Half Action or swap its Half for a Full Action.</p>",
     "source": {

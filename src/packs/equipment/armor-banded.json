@@ -1,7 +1,7 @@
 {
   "name": "Banded",
   "type": "armor",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/armor/banded.svg",
   "system": {
     "description": "<p>Primitive heavy armor of horizontal steel strips: it leaves plenty of freedom to move but protects less than full plate.</p><p>Like all primitive armor, its rarity counts one step lower when it is chosen as an Artifact.</p>",
     "source": {

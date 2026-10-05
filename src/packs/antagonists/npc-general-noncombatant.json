@@ -1,7 +1,7 @@
 {
   "name": "General Noncombatant",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/general-noncombatant.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -111,7 +111,7 @@
     {
       "name": "Unarmed",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/unarmed.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -156,7 +156,10 @@
   "prototypeToken": {
     "name": "General Noncombatant",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/general-noncombatant.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN84dbc9f8151d",

@@ -1,7 +1,7 @@
 {
   "name": "The Speech Gemstone",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/the-speech-gemstone.svg",
   "system": {
     "description": "<p>A cobalt-blue, egg-shaped stone that seems to whisper in foreign tongues. The bearer can speak any language, even dead ones, but gains no ability to understand it; Syrneth alone remains beyond its reach.</p>",
     "source": {

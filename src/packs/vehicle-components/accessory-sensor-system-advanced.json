@@ -1,7 +1,7 @@
 {
   "name": "Sensor System (Advanced)",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/sensor-system-advanced.svg",
   "system": {
     "description": "<p>Pilot gets +10 on perception tests and auto-detects vehicles or ships lacking ECM within 20 km.</p>",
     "source": {

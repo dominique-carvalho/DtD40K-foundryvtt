@@ -1,7 +1,7 @@
 {
   "name": "Zombie Plague",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/zombie-plague.svg",
   "system": {
     "description": "<p>Raise Dead whose zombie spreads the curse: anything it kills is also subject to Zombie Plague, possibly spawning a horde.</p>",
     "source": {

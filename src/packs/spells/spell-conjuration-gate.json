@@ -1,7 +1,7 @@
 {
   "name": "Gate",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/gate.svg",
   "system": {
     "description": "<p>As Porte, but the destination need not be in line of effect. It uses one of the two allowed portal slots. Unfamiliar destinations require a Wisdom + Perception test at TN 25 (SM may increase).</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "White Raven",
   "type": "martialSchool",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/white-raven.svg",
   "system": {
     "description": "<p>A leadership and teamwork style that sets foes up for allies, using cavalry weapons.</p>",
     "source": {

@@ -1,6 +1,6 @@
 {
   "name": "Critical — Rending — Arm",
-  "img": "icons/svg/blood.svg",
+  "img": "systems/dtd40k/assets/icons/table/critical-rending-arm.svg",
   "description": "<p>Critical Damage (Rending, Arm), DtD 7.7a p. 441. Use the row equal to the accumulated Critical Damage.</p>",
   "formula": "1d5",
   "replacement": true,
@@ -9,7 +9,7 @@
     {
       "type": "text",
       "name": "Rending Arm 1",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-rending-arm.svg",
       "description": "<p>Whatever this arm held is torn loose.</p>",
       "weight": 1,
       "range": [
@@ -28,7 +28,7 @@
     {
       "type": "text",
       "name": "Rending Arm 2",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-rending-arm.svg",
       "description": "<p>As 1, plus 2 Fatigue.</p>",
       "weight": 1,
       "range": [
@@ -49,7 +49,7 @@
     {
       "type": "text",
       "name": "Rending Arm 3",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-rending-arm.svg",
       "description": "<p>1d5 fingers cut off: 3 Fatigue; Con TN 20 or lose use of the hand.</p>",
       "weight": 1,
       "range": [
@@ -75,7 +75,7 @@
     {
       "type": "text",
       "name": "Rending Arm 4",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-rending-arm.svg",
       "description": "<p>Arm cut off: missing an arm and Blood Loss.</p>",
       "weight": 1,
       "range": [
@@ -99,7 +99,7 @@
     {
       "type": "text",
       "name": "Rending Arm 5",
-      "img": "icons/svg/blood.svg",
+      "img": "systems/dtd40k/assets/icons/table/critical-rending-arm.svg",
       "description": "<p>Cut through arm into torso; killed instantly.</p>",
       "weight": 1,
       "range": [

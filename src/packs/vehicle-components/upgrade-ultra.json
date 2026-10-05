@@ -1,7 +1,7 @@
 {
   "name": "Ultra",
   "type": "vehicleComponent",
-  "img": "icons/svg/explosion.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/ultra.svg",
   "system": {
     "description": "<p>Rapid-firing upgrade; the autocannon gains Storm.</p><p>Storm.</p>",
     "source": {

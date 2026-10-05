@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsAtlDC000000",
   "name": "Dawn Caste",
   "type": "feat",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/dawn-caste.svg",
   "folder": "dtdFldAtlCaste00",
   "system": {
     "category": "exaltedAsset",

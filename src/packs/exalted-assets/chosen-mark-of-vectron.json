@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsChoVectron0",
   "name": "Mark of Vectron",
   "type": "feat",
-  "img": "icons/svg/regen.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/mark-of-vectron.svg",
   "folder": "dtdFldChoMark000",
   "system": {
     "category": "exaltedAsset",

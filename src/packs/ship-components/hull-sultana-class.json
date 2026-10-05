@@ -1,7 +1,7 @@
 {
   "name": "Sultana-Class",
   "type": "shipComponent",
-  "img": "icons/svg/castle.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/sultana-class.svg",
   "system": {
     "description": "<p>Very quick, agile military light frigate that can threaten larger vessels when well crewed.</p>",
     "source": {

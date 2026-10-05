@@ -1,7 +1,7 @@
 {
   "name": "Officer's Cutlass",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/officers-cutlass.svg",
   "system": {
     "description": "<p>A fencing sword with a built-in shock generator whose power cells upset its balance, but the ability to disable a foe without killing may be worth the cost.</p>",
     "source": {

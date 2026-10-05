@@ -3,7 +3,7 @@
   "_key": "!items!dtdC1b276aa28dfc",
   "name": "Master Fight Guy",
   "type": "class",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/class/master-fight-guy.svg",
   "folder": "dtdCFd1ee77afc60",
   "system": {
     "description": "<p>The ultimate melee warrior of the Fighter track, striking with Lightning Attacks, counters and blademaster technique across four Sword Schools.</p>",

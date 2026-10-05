@@ -3,7 +3,7 @@
   "_key": "!items!dtdF544e345fd3de",
   "name": "Spell Mastery",
   "type": "feat",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/feat/spell-mastery.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

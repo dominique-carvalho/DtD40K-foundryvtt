@@ -1,7 +1,7 @@
 {
   "name": "Diamond Mind",
   "type": "martialSchool",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/diamond-mind.svg",
   "system": {
     "description": "<p>A style of mental speed and perception that wins the fight in the mind first, using fencing blades.</p>",
     "source": {

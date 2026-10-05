@@ -1,7 +1,7 @@
 {
   "name": "Scry",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/scry.svg",
   "system": {
     "description": "<p>Needs an item owned by, or a body part of, the target, who may resist with Arcana + Willpower. On success the caster sees and hears the target and about 10m around; maintaining costs a half action each round.</p>",
     "source": {

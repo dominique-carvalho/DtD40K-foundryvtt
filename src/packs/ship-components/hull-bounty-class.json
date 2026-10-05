@@ -1,7 +1,7 @@
 {
   "name": "Bounty-Class",
   "type": "shipComponent",
-  "img": "icons/svg/castle.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/bounty-class.svg",
   "system": {
     "description": "<p>Fewer guns than the Belle but even tougher, with a big crew and strong engineering and arcana; used as heavy scouts and first responders.</p>",
     "source": {

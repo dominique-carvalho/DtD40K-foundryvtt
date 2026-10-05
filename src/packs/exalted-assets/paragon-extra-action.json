@@ -3,7 +3,7 @@
   "_key": "!items!dtdAsParEA000000",
   "name": "Extra Action",
   "type": "feat",
-  "img": "icons/svg/lightning.svg",
+  "img": "systems/dtd40k/assets/icons/exalted-asset/extra-action.svg",
   "folder": "dtdFldParagon000",
   "system": {
     "category": "exaltedAsset",

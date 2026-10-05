@@ -1,7 +1,7 @@
 {
   "name": "Avasculate",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/avasculate.svg",
   "system": {
     "description": "<p>One creature within 30m saves with Arcana + Constitution; on failure it loses half its remaining hit points (round down).</p>",
     "source": {

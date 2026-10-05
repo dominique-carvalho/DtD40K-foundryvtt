@@ -1,7 +1,7 @@
 {
   "name": "Standard Frame",
   "type": "vehicleComponent",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/standard-frame.svg",
   "system": {
     "description": "<p>Normal Standard frame: 10 HP and Resilience 10. Comes with a Cockpit.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Hand Flamer",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-pistol/hand-flamer.svg",
   "system": {
     "description": "<p>A pistol-sized flamer for personal fighting at close quarters, where its tiny range and poor accuracy matter little. Its ignited fuel is hard to put out.</p>",
     "source": {

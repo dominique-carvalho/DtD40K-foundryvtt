@@ -3,7 +3,7 @@
   "_key": "!items!dtdF62d7ce8a7be9",
   "name": "Spell Specialization",
   "type": "feat",
-  "img": "icons/svg/mage-shield.svg",
+  "img": "systems/dtd40k/assets/icons/feat/spell-specialization.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

@@ -3,7 +3,7 @@
   "_key": "!items!dtdFf68d88bc2103",
   "name": "Combat Sense",
   "type": "feat",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/feat/combat-sense.svg",
   "folder": "dtdFld1fc032693b",
   "system": {
     "category": "feat",

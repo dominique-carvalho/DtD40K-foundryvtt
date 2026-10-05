@@ -1,7 +1,7 @@
 {
   "name": "Cultist",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/cultist.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -130,7 +130,7 @@
     {
       "name": "Hand Weapon",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/hand-weapon.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -170,7 +170,10 @@
   "prototypeToken": {
     "name": "Cultist",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/cultist.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNd5d488766876",

@@ -1,7 +1,7 @@
 {
   "name": "Dragon Form",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/dragon-form.svg",
   "system": {
     "description": "<p>Caster becomes a dragon: +3 Size, -1 Dexterity, +2 Strength, a 2k3 bite, Flyer (2x Speed) and a Flamer-profile breath usable once per round; can still cast and speak.</p>",
     "source": {

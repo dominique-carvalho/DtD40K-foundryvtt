@@ -1,7 +1,7 @@
 {
   "name": "Alpha",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/alpha.svg",
   "system": {
     "description": "<p>A snorted white powder favoured by executives and thugs alike, Alpha floods the body with threat pheromones and a sense of dominance, leaving users brash and forgetful of anything learned while high.</p><p>The user can go several days without any sleep. For one scene they also roll +1k1 on offensive social combat rolls and +1k1 on rolls to resist fear.</p>",
     "source": {

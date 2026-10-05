@@ -3,7 +3,7 @@
   "_key": "!items!dtdFe2f4a140f55c",
   "name": "Enemy",
   "type": "feat",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/hindrance/enemy.svg",
   "folder": "dtdFld93a5f8dd83",
   "system": {
     "category": "hindrance",

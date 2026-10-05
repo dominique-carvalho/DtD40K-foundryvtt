@@ -1,7 +1,7 @@
 {
   "name": "Charm",
   "type": "gear",
-  "img": "icons/svg/item-bag.svg",
+  "img": "systems/dtd40k/assets/icons/gear/charm.svg",
   "system": {
     "description": "<p>A good-luck token, keepsake or holy relic meant to earn the favor of the gods, from saintly bones to blessed bolter casings. True relics are nearly impossible to tell from fakes.</p><p>A charm grants no mechanical bonus, but when the story calls for misfortune to strike a random character, the SM may spare one who carries a charm; if everyone has one, the SM decides whose is strongest.</p>",
     "source": {

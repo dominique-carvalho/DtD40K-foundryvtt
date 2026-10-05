@@ -1,7 +1,7 @@
 {
   "name": "The Monkey Stone",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/the-monkey-stone.svg",
   "system": {
     "description": "<p>A red-brown, bark-textured stone that grants the nimbleness of a tree-dwelling primate. When balancing, leaping or climbing, the bearer lowers the difficulty of Athletics and Acrobatics rolls by 5, to a minimum of 5.</p>",
     "source": {

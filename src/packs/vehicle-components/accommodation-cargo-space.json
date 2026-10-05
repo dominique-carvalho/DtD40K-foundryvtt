@@ -1,7 +1,7 @@
 {
   "name": "Cargo Space",
   "type": "vehicleComponent",
-  "img": "icons/svg/chest.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/cargo-space.svg",
   "system": {
     "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
     "source": {

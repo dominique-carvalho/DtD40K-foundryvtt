@@ -57,7 +57,8 @@ export async function createCustomWeapon(build, { actor = null, name }) {
   const status = game.user.isGM ? "" : "pending";
   const data = {
     name: name || localize("DTD.WeaponBuilder.DefaultName"), type: "weapon",
-    img: made.result.system.weaponType === "melee" ? "icons/svg/sword.svg" : "icons/svg/target.svg",
+    // The default icon of its weapon type (spec 024).
+    img: CONFIG.DTD.ICONS.item[`weapon:${made.result.system.weaponType}`] ?? CONFIG.DTD.ICONS.item.weapon,
     system: { ...made.system, custom: { ...made.system.custom, status } }
   };
   const item = actor ? (await actor.createEmbeddedDocuments("Item", [data]))[0] : await Item.create(data);

@@ -1,7 +1,7 @@
 {
   "name": "Geas",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/geas.svg",
   "system": {
     "description": "<p>As Command, but a target that fails to resist obeys even suicidal orders and may carry out extended tasks through the rest of the scene rather than only its next action.</p>",
     "source": {

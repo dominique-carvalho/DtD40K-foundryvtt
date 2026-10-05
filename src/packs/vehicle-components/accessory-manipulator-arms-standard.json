@@ -1,7 +1,7 @@
 {
   "name": "Manipulator Arms (Standard)",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/manipulator-arms-standard.svg",
   "system": {
     "description": "<p>Big limbs that do most things hands can (doors, grapples, hauling) and allow vehicle-scale melee weapons; bad at small or delicate work. Base Strength 6.</p>",
     "source": {

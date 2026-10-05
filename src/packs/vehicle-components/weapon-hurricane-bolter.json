@@ -1,7 +1,7 @@
 {
   "name": "Hurricane Bolter",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/hurricane-bolter.svg",
   "system": {
     "description": "<p>Cluster of boltguns on one coaxial turret; a recent anti-infantry design from basic parts.</p>",
     "source": {

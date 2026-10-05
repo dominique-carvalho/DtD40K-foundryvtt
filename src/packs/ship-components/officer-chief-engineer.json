@@ -1,7 +1,7 @@
 {
   "name": "Chief Engineer",
   "type": "shipComponent",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/chief-engineer.svg",
   "system": {
     "description": "<p>Handles power routing and emergency repairs. Without one, most repairs have to wait for a port.</p>",
     "source": {

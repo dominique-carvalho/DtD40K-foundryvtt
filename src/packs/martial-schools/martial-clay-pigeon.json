@@ -1,7 +1,7 @@
 {
   "name": "Clay Pigeon",
   "type": "martialSchool",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/clay-pigeon.svg",
   "system": {
     "description": "<p>A showy, precise pistol art of ricochets and angles, born as a carnival act.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Corellon",
   "type": "deity",
-  "img": "icons/svg/eye.svg",
+  "img": "systems/dtd40k/assets/icons/deity/corellon.svg",
   "system": {
     "description": "<p>Snobbish god of excellence and of Elves and Eldarin, teaching they are the finest of all peoples; he rejects failure yet holds that only quitting counts as failing.</p>",
     "source": {

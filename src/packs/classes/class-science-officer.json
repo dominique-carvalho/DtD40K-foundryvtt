@@ -3,7 +3,7 @@
   "_key": "!items!dtdC3b22f9ffe2c9",
   "name": "Science Officer",
   "type": "class",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/class/science-officer.svg",
   "folder": "dtdCFd3d80d0dc1c",
   "system": {
     "description": "<p>A ship-crew class for the analyst who reads sensors and data. Science Officers perform detailed analysis and gain access to secured systems.</p>",

@@ -1,7 +1,7 @@
 {
   "name": "Ramming Prow",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/ramming-prow.svg",
   "system": {
     "description": "<p>Massive armored prow. Rams deal +1k1, the ramming ship takes no damage and skips its crit roll, and the target's crit roll gets +2.</p>",
     "source": {

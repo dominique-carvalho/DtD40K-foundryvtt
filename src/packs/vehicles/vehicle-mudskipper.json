@@ -1,7 +1,7 @@
 {
   "name": "Mudskipper",
   "type": "vehicle",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle/mudskipper.svg",
   "system": {
     "size": 6,
     "speed": 4,
@@ -31,7 +31,7 @@
     {
       "name": "Naval Drive",
       "type": "vehicleComponent",
-      "img": "icons/svg/direction.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/naval-drive.svg",
       "system": {
         "description": "<p>Boats; a technology as old as the wheel, confined to water.</p><p><strong>Islandhome.</strong> Leaving the water counts as a crash.</p>",
         "source": {
@@ -73,7 +73,7 @@
     {
       "name": "Standard Frame",
       "type": "vehicleComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/standard-frame.svg",
       "system": {
         "description": "<p>Normal Standard frame: 10 HP and Resilience 10. Comes with a Cockpit.</p>",
         "source": {
@@ -113,7 +113,7 @@
     {
       "name": "Armor 2",
       "type": "vehicleComponent",
-      "img": "icons/svg/statue.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/armor-2.svg",
       "system": {
         "description": "<p>2 Armor Points on every location. Vehicle armor works like personal armor and gives no protection against spells; it uses no Equipment Slots.</p>",
         "source": {
@@ -153,7 +153,7 @@
     {
       "name": "Cargo Space",
       "type": "vehicleComponent",
-      "img": "icons/svg/chest.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/cargo-space.svg",
       "system": {
         "description": "<p>Empty storage with tie-down points; volume per purchase depends on Size: 0.5 m3 (Size 1-10), 2 m3 (11-20), 10 m3 (21-30).</p>",
         "source": {
@@ -199,7 +199,7 @@
     {
       "name": "Passenger Space",
       "type": "vehicleComponent",
-      "img": "icons/svg/chest.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/passenger-space.svg",
       "system": {
         "description": "<p>Basic seating (one cabin or rows of seats); seats per purchase depend on Size: 1 (Size 1-10), 5 (11-20), 50 (21-30).</p>",
         "source": {
@@ -245,7 +245,7 @@
     {
       "name": "Open Topped",
       "type": "vehicleComponent",
-      "img": "icons/svg/hazard.svg",
+      "img": "systems/dtd40k/assets/icons/vehicle-component/open-topped.svg",
       "system": {
         "description": "<p>Crew and passengers are not screened by the hull: they can shoot out with personal weapons and be shot at; cannot have Environmental Seals.</p>",
         "source": {
@@ -289,7 +289,7 @@
     {
       "name": "Multilas (Macronized)",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-heavy/multilas-macronized.svg",
       "system": {
         "description": "<p>Pulsed rapid-fire laser, mainly an anti-infantry tool.</p>",
         "source": {
@@ -344,7 +344,10 @@
   "prototypeToken": {
     "name": "Mudskipper",
     "actorLink": true,
-    "disposition": 0
+    "disposition": 0,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/vehicle/mudskipper.svg"
+    }
   },
   "flags": {},
   "_id": "dtdWaae35eee1363",

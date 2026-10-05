@@ -3,7 +3,7 @@
   "_key": "!items!dtdExalChosen000",
   "name": "Chosen",
   "type": "exaltation",
-  "img": "icons/svg/holy-shield.svg",
+  "img": "systems/dtd40k/assets/icons/exaltation/chosen.svg",
   "system": {
     "description": "<p>The Chosen are mortals picked by a god to carry a spark of its own divinity. They are its champions, counted among the most important of its servants and often found at the very top of its church, and the longer they serve the less human and the more godlike (or devilish) they become.</p><p>Their power flows from Faith, which is bounded by their Devotion as well as their level, and from Favor, restored by a daily ritual. Because the Blessed Pantheon and the Ruinous Powers are sworn foes, being Chosen also means inheriting the enemies of one's patron.</p>",
     "fullText": "",

@@ -1,7 +1,7 @@
 {
   "name": "Fluffy Bunnies",
   "type": "minionSquad",
-  "img": "icons/svg/pawprint.svg",
+  "img": "systems/dtd40k/assets/icons/minion-squad/fluffy-bunnies.svg",
   "system": {
     "threatRating": 1,
     "count": 6,
@@ -27,7 +27,10 @@
   "prototypeToken": {
     "name": "Fluffy Bunnies",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/minion-squad/fluffy-bunnies.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN6cb3e0717500",

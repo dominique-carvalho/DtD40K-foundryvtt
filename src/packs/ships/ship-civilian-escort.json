@@ -1,7 +1,7 @@
 {
   "name": "Civilian Escort",
   "type": "ship",
-  "img": "icons/svg/wing.svg",
+  "img": "systems/dtd40k/assets/icons/ship/civilian-escort.svg",
   "system": {
     "budget": {
       "holdings": 1
@@ -29,7 +29,7 @@
     {
       "name": "Steamboat-Class",
       "type": "shipComponent",
-      "img": "icons/svg/castle.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/steamboat-class.svg",
       "system": {
         "description": "<p>Cheapest and most common frame in the Wheel; a typical first command, adaptable to many loadouts.</p>",
         "source": {
@@ -120,7 +120,7 @@
     {
       "name": "Standard Shield Mk. I",
       "type": "shipComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/standard-shield-mk-i.svg",
       "system": {
         "description": "<p>Baseline bubble shield against which the others are compared.</p>",
         "source": {
@@ -211,7 +211,7 @@
     {
       "name": "Warpsbane Hull",
       "type": "shipComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/warpsbane-hull.svg",
       "system": {
         "description": "<p>Silver warding hexagrams over the hull bolster the Geller Field; such ships usually carry a shrine to one God. Warp Encounter rolls get -2.</p>",
         "source": {
@@ -305,7 +305,7 @@
     {
       "name": "Helmsman",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/helmsman.svg",
       "system": {
         "description": "<p>Steers the ship toward its destination, either flying it personally or directing others. Supplies the kept dice for Manoeuver actions.</p>",
         "source": {
@@ -396,7 +396,7 @@
     {
       "name": "Tactical Officer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/tactical-officer.svg",
       "system": {
         "description": "<p>Runs the guns and keeps gunners and engineers working; supplies kept dice for Tactical actions and for fightercraft squads.</p>",
         "source": {
@@ -487,7 +487,7 @@
     {
       "name": "Chief Engineer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/chief-engineer.svg",
       "system": {
         "description": "<p>Handles power routing and emergency repairs. Without one, most repairs have to wait for a port.</p>",
         "source": {
@@ -578,7 +578,7 @@
     {
       "name": "Commanding Officer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/commanding-officer.svg",
       "system": {
         "description": "<p>Acts as captain of the bridge, issuing orders and collecting reports. Because the ship's true owner is usually someone else, this officer cannot represent the ship in Social Combat.</p>",
         "source": {
@@ -669,7 +669,7 @@
     {
       "name": "Chief Arcana Officer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/chief-arcana-officer.svg",
       "system": {
         "description": "<p>Operates sensors and exotic systems to spot objects, assess threats and help with warp travel (opens warp portals without a relay). A hired officer in this post may not double as Navigator; PCs and other NPCs are exempt.</p>",
         "source": {
@@ -762,7 +762,10 @@
   "prototypeToken": {
     "name": "Civilian Escort",
     "actorLink": true,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/ship/civilian-escort.svg"
+    }
   },
   "flags": {},
   "_id": "dtdYda869612cef0",

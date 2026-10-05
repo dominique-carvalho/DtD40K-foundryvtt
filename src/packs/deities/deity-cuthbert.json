@@ -1,7 +1,7 @@
 {
   "name": "Cuthbert",
   "type": "deity",
-  "img": "icons/svg/sun.svg",
+  "img": "systems/dtd40k/assets/icons/deity/cuthbert.svg",
   "system": {
     "description": "<p>God of law as Order itself, of oaths and trust; laws must be obeyed whether fair or not, and oath-breakers face his personal curse.</p>",
     "source": {

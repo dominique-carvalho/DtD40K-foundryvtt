@@ -1,7 +1,7 @@
 {
   "name": "Grav Bomb",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-thrown/grav-bomb.svg",
   "system": {
     "description": "<p>An extremely rare grenade that releases a burst of gravitons. Everyone in the blast must pass a Dexterity Test at TN 15 or be dragged to its centre, suffering falling damage equal to the distance they are pulled.</p>",
     "source": {

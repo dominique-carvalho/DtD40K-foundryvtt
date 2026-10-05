@@ -1,7 +1,7 @@
 {
   "name": "Energy Meteors",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/energy-meteors.svg",
   "system": {
     "description": "<p>Attack out to 120m with Burst 10 for 6k4 E; one copy is made per dot the caster has in Evocation.</p>",
     "source": {

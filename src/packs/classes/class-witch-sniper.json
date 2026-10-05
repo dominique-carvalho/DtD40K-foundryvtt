@@ -3,7 +3,7 @@
   "_key": "!items!dtdC967235833f8e",
   "name": "Witch-Sniper",
   "type": "class",
-  "img": "icons/svg/lightning.svg",
+  "img": "systems/dtd40k/assets/icons/class/witch-sniper.svg",
   "folder": "dtdCFd1fb65dfd09",
   "system": {
     "description": "<p>The peak of the Magitek Gunman track, a spell-slinging marksman who fires Spell Bullets and third-tier elemental rounds with sniper precision.</p>",

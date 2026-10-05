@@ -1,7 +1,7 @@
 {
   "name": "Blink",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/blink.svg",
   "system": {
     "description": "<p>Teleports the caster to a visible spot up to 40m away.</p>",
     "source": {

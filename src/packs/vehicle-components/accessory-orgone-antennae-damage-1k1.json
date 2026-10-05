@@ -1,7 +1,7 @@
 {
   "name": "Orgone Antennae (Damage +1k1)",
   "type": "vehicleComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/orgone-antennae-damage-1k1.svg",
   "system": {
     "description": "<p>As Basic, and damaging spells channeled through it gain +1k1 damage.</p>",
     "source": {

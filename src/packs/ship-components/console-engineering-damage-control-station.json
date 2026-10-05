@@ -1,7 +1,7 @@
 {
   "name": "Damage Control Station",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/damage-control-station.svg",
   "system": {
     "description": "<p>Damage displays and bypass computers. Emergency Repair may be taken on top of another Engineering action, each paying Crew normally.</p>",
     "source": {

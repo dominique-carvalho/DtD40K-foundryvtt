@@ -1,7 +1,7 @@
 {
   "name": "Improved Shields",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/improved-shields.svg",
   "system": {
     "description": "<p>Frequency auto-rotation hardens the shields: maximum Capacity +10, or one additional layer for Multiphasic shields.</p>",
     "source": {

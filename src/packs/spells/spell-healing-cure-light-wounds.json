@@ -1,7 +1,7 @@
 {
   "name": "Cure Light Wounds",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/cure-light-wounds.svg",
   "system": {
     "description": "<p>Spending one resource point during the casting restores 1 hit point to the target.</p>",
     "source": {

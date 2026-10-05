@@ -1,7 +1,7 @@
 {
   "name": "Frenzor",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/frenzor.svg",
   "system": {
     "description": "<p>A widespread combat and sports enhancer (spelled Frenzon in the rules text) that makes the user strong, nearly numb to pain and prone to lashing out at the slightest irritation; users flush red and show swollen veins.</p><p>For one scene the user gains the Frenzy feat and takes -1 to Fellowship, Wisdom and Intelligence.</p>",
     "source": {

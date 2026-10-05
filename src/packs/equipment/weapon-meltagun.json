@@ -1,7 +1,7 @@
 {
   "name": "Meltagun",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-basic/meltagun.svg",
   "system": {
     "description": "<p>The most widespread melta weapon, emitting a short-ranged blast of heat that turns targets to slag. Few tools cut through armour as well, so it is often used to breach bulkheads as well as to kill.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Golden Marble",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/golden-marble.svg",
   "system": {
     "description": "<p>A hearthstone resembling an oversized golden marble. If the bearer concentrates and taps it while picturing a place the marble has been, it pulls gently toward that location, guiding the bearer back along the route it travelled.</p>",
     "source": {

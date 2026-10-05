@@ -1,7 +1,7 @@
 {
   "name": "Gem of the Calm Heart",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/gem-of-the-calm-heart.svg",
   "system": {
     "description": "<p>A blood-red, teardrop-shaped stone that cools the bearer's temper so they act from reason instead of anger. The bearer gains the Common Sense feat.</p>",
     "source": {

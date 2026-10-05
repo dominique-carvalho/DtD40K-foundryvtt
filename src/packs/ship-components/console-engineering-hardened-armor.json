@@ -1,7 +1,7 @@
 {
   "name": "Hardened Armor",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/hardened-armor.svg",
   "system": {
     "description": "<p>Plain extra armor that any shipyard can fit. +10 Hull Strength; can be bought more than once.</p>",
     "source": {

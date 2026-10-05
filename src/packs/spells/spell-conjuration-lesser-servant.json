@@ -1,7 +1,7 @@
 {
   "name": "Lesser Servant",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/lesser-servant.svg",
   "system": {
     "description": "<p>Summons a feeble helper creature with 2 in every characteristic and 2 ranks in relevant skills.</p>",
     "source": {

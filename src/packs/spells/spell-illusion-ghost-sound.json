@@ -1,7 +1,7 @@
 {
   "name": "Ghost Sound",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/ghost-sound.svg",
   "system": {
     "description": "<p>Produces a sound, from whisper to shout, at a point in line of sight up to 20m off.</p>",
     "source": {

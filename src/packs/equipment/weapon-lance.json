@@ -1,7 +1,7 @@
 {
   "name": "Lance",
   "type": "weapon",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-melee/lance.svg",
   "system": {
     "description": "<p>A stout-hafted spear designed for mounted combat, used mainly to ride down other cavalry rather than infantry. Wielded from horseback it deals +0k1 damage.</p>",
     "source": {

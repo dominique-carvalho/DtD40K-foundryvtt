@@ -1,7 +1,7 @@
 {
   "name": "Essex-Class",
   "type": "shipComponent",
-  "img": "icons/svg/castle.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/essex-class.svg",
   "system": {
     "description": "<p>Fleet backbone that can operate alone far from resupply on exploration or combat duty.</p>",
     "source": {

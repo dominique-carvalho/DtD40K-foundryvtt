@@ -1,7 +1,7 @@
 {
   "name": "The Walkin' Dead",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/the-walkin-dead.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -117,7 +117,7 @@
     {
       "name": "Claws and Teeth",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/claws-and-teeth.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -162,7 +162,10 @@
   "prototypeToken": {
     "name": "The Walkin' Dead",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/the-walkin-dead.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNafa71790b89b",

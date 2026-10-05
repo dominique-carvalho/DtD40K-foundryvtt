@@ -1,7 +1,7 @@
 {
   "name": "Fire Warrior",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/fire-warrior.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -149,7 +149,7 @@
     {
       "name": "Knife",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/knife.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -187,7 +187,7 @@
     {
       "name": "Pulse Rifle",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/pulse-rifle.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -236,7 +236,10 @@
   "prototypeToken": {
     "name": "Fire Warrior",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/fire-warrior.svg"
+    }
   },
   "flags": {},
   "_id": "dtdNab17665680af",

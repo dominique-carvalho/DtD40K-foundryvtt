@@ -1,7 +1,7 @@
 {
   "name": "Ruby Ray",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/ruby-ray.svg",
   "system": {
     "description": "<p>Shields a target, trying to return the first single-target spell aimed at them to its caster. Cast ahead of time it lasts one round and can cover allies; as a reaction, self only. A stronger incoming Focus Power roll shatters it without reflecting.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "Ork Freeboota",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/dtd40k/assets/icons/npc/ork-freeboota.svg",
   "system": {
     "characteristics": {
       "str": {
@@ -143,7 +143,7 @@
     {
       "name": "Choppa",
       "type": "weapon",
-      "img": "icons/svg/sword.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-melee/choppa.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -181,7 +181,7 @@
     {
       "name": "Autogun",
       "type": "weapon",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/weapon-basic/autogun.svg",
       "system": {
         "description": "",
         "quantity": 1,
@@ -221,7 +221,10 @@
   "prototypeToken": {
     "name": "Ork Freeboota",
     "actorLink": false,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/npc/ork-freeboota.svg"
+    }
   },
   "flags": {},
   "_id": "dtdN24bbc6b29a9c",

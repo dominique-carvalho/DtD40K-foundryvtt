@@ -1,7 +1,7 @@
 {
   "name": "Exploding Runes",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/exploding-runes.svg",
   "system": {
     "description": "<p>Runes written on an object detonate when read by anyone other than the caster or those the caster declared safe while casting, hitting everyone in Blast (3) for 8k4 X damage.</p>",
     "source": {

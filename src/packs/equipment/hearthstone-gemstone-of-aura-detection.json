@@ -1,7 +1,7 @@
 {
   "name": "Gemstone of Aura Detection",
   "type": "gear",
-  "img": "icons/svg/ice-aura.svg",
+  "img": "systems/dtd40k/assets/icons/hearthstone/gemstone-of-aura-detection.svg",
   "system": {
     "description": "<p>A round light-blue gem that lets the bearer read the aura of a target within 20 m by concentrating and rolling Wisdom + Perception against TN 10. Success gives vague impressions of the strongest emotion; two or more raises show the target's emotions and whether they are Exalted. A suspicious target may resist with Willpower + Arcana, their result becoming the TN.</p>",
     "source": {

@@ -3,7 +3,7 @@
   "_key": "!items!dtdC69db172fceaa",
   "name": "Sergeant",
   "type": "class",
-  "img": "icons/svg/shield.svg",
+  "img": "systems/dtd40k/assets/icons/class/sergeant.svg",
   "folder": "dtdCFd29e9d6f032",
   "system": {
     "description": "<p>The Guardsman track's veteran rifleman and squad leader. Hardened and quick to react, it gains Deadeye Shot, Hip Shooting and Fast Reflexes along with the Tin Star, Silent Scope and Point Blank kata.</p>",

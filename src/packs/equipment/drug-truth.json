@@ -1,7 +1,7 @@
 {
   "name": "Truth",
   "type": "gear",
-  "img": "icons/svg/pill.svg",
+  "img": "systems/dtd40k/assets/icons/drug/truth.svg",
   "system": {
     "description": "<p>An interrogation drug developed for police and state agents; it also brings on drowsiness and hallucinations, which questioners consider a bonus.</p><p>For one scene the subject must pass a Willpower test at TN 15 each time they try to deliberately tell a lie.</p>",
     "source": {

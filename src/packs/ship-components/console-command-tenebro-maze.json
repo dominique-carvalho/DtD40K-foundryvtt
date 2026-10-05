@@ -1,7 +1,7 @@
 {
   "name": "Tenebro-Maze",
   "type": "shipComponent",
-  "img": "icons/svg/upgrade.svg",
+  "img": "systems/dtd40k/assets/icons/ship-component/tenebro-maze.svg",
   "system": {
     "description": "<p>Hidden and decoyed systems. Each critical damage roll against your ship is rolled twice and your captain picks the result.</p>",
     "source": {

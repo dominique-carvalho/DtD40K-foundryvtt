@@ -1,7 +1,7 @@
 {
   "name": "Speak with Dead",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/speak-with-dead.svg",
   "system": {
     "description": "<p>The touched corpse answers a single question, at most once per day; the answer is truthful but may be vague.</p>",
     "source": {

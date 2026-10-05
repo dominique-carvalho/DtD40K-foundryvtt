@@ -1,7 +1,7 @@
 {
   "name": "Wheeled Drive",
   "type": "vehicleComponent",
-  "img": "icons/svg/direction.svg",
+  "img": "systems/dtd40k/assets/icons/vehicle-component/wheeled-drive.svg",
   "system": {
     "description": "<p>The default ground drive; wheels are about as ancient as organised society itself.</p>",
     "source": {

@@ -1,7 +1,7 @@
 {
   "name": "AC/10",
   "type": "weapon",
-  "img": "icons/svg/target.svg",
+  "img": "systems/dtd40k/assets/icons/weapon-heavy/ac-10.svg",
   "system": {
     "description": "<p>Heavier autocannon, a cheap and effective choice for bigger units.</p>",
     "source": {

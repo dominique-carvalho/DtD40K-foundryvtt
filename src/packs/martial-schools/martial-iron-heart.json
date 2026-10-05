@@ -1,7 +1,7 @@
 {
   "name": "Iron Heart",
   "type": "martialSchool",
-  "img": "icons/svg/sword.svg",
+  "img": "systems/dtd40k/assets/icons/martial-school/iron-heart.svg",
   "system": {
     "description": "<p>Pure, perfected swordsmanship that raises ordinary strikes to supernatural precision, using Ordinary weapons.</p>",
     "source": {

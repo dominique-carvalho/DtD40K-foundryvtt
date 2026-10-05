@@ -1,7 +1,7 @@
 {
   "name": "Transport Cruiser",
   "type": "ship",
-  "img": "icons/svg/wing.svg",
+  "img": "systems/dtd40k/assets/icons/ship/transport-cruiser.svg",
   "system": {
     "budget": {
       "holdings": 3
@@ -29,7 +29,7 @@
     {
       "name": "Borealis-Class",
       "type": "shipComponent",
-      "img": "icons/svg/castle.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/borealis-class.svg",
       "system": {
         "description": "<p>Mass-produced large civilian hull sold to anyone from mercenaries to merchants.</p>",
         "source": {
@@ -120,7 +120,7 @@
     {
       "name": "Resilient Shield Mk. II",
       "type": "shipComponent",
-      "img": "icons/svg/shield.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/resilient-shield-mk-ii.svg",
       "system": {
         "description": "<p>Hybrid of Covariant and Standard. Its key feature: every weapon firing at it has Disruption reduced to 0.</p>",
         "source": {
@@ -211,7 +211,7 @@
     {
       "name": "Murder Servitors",
       "type": "shipComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/murder-servitors.svg",
       "system": {
         "description": "<p>Skull-faced killing machines for repelling boarders: 5 extra Crew usable only against boarding actions.</p>",
         "source": {
@@ -305,7 +305,7 @@
     {
       "name": "Partial Wing",
       "type": "shipComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/partial-wing.svg",
       "system": {
         "description": "<p>Wing or antigrav assembly letting the ship fly in atmosphere and land on struts in a gravity well.</p>",
         "source": {
@@ -400,7 +400,7 @@
     {
       "name": "Diplomatic Quarters",
       "type": "shipComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/diplomatic-quarters.svg",
       "system": {
         "description": "<p>Luxurious guest suite fit for almost any social or diplomatic event. Nobody inside, crew included, can become jaded there unless they leave in anger and lose 1 Resolve.</p>",
         "source": {
@@ -494,7 +494,7 @@
     {
       "name": "Library Computer",
       "type": "shipComponent",
-      "img": "icons/svg/upgrade.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/library-computer.svg",
       "system": {
         "description": "<p>Huge onboard database. After a few minutes with the main computer, a character can attempt Lore tests untrained and gets +1k1 on all Lore tests.</p>",
         "source": {
@@ -588,7 +588,7 @@
     {
       "name": "Turret",
       "type": "shipComponent",
-      "img": "icons/svg/target.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/turret.svg",
       "system": {
         "description": "<p>Rotates fully, covering flanks or letting rear mounts threaten the front.</p><p>Pick its weapon type and mount (forward or rear) when it is installed.</p>",
         "source": {
@@ -679,7 +679,7 @@
     {
       "name": "Helmsman",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/helmsman.svg",
       "system": {
         "description": "<p>Steers the ship toward its destination, either flying it personally or directing others. Supplies the kept dice for Manoeuver actions.</p>",
         "source": {
@@ -770,7 +770,7 @@
     {
       "name": "Tactical Officer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/tactical-officer.svg",
       "system": {
         "description": "<p>Runs the guns and keeps gunners and engineers working; supplies kept dice for Tactical actions and for fightercraft squads.</p>",
         "source": {
@@ -861,7 +861,7 @@
     {
       "name": "Chief Engineer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/chief-engineer.svg",
       "system": {
         "description": "<p>Handles power routing and emergency repairs. Without one, most repairs have to wait for a port.</p>",
         "source": {
@@ -952,7 +952,7 @@
     {
       "name": "Commanding Officer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/commanding-officer.svg",
       "system": {
         "description": "<p>Acts as captain of the bridge, issuing orders and collecting reports. Because the ship's true owner is usually someone else, this officer cannot represent the ship in Social Combat.</p>",
         "source": {
@@ -1043,7 +1043,7 @@
     {
       "name": "Chief Arcana Officer",
       "type": "shipComponent",
-      "img": "icons/svg/mystery-man.svg",
+      "img": "systems/dtd40k/assets/icons/ship-component/chief-arcana-officer.svg",
       "system": {
         "description": "<p>Operates sensors and exotic systems to spot objects, assess threats and help with warp travel (opens warp portals without a relay). A hired officer in this post may not double as Navigator; PCs and other NPCs are exempt.</p>",
         "source": {
@@ -1136,7 +1136,10 @@
   "prototypeToken": {
     "name": "Transport Cruiser",
     "actorLink": true,
-    "disposition": -1
+    "disposition": -1,
+    "texture": {
+      "src": "systems/dtd40k/assets/icons/ship/transport-cruiser.svg"
+    }
   },
   "flags": {},
   "_id": "dtdYa09470a3bf77",

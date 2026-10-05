@@ -1,7 +1,7 @@
 {
   "name": "Consume Soul",
   "type": "spell",
-  "img": "icons/svg/book.svg",
+  "img": "systems/dtd40k/assets/icons/spell/consume-soul.svg",
   "system": {
     "description": "<p>On a creature dead under a minute: the caster devours its soul, regains a resource point, and the creature cannot be resurrected while the caster exists.</p>",
     "source": {

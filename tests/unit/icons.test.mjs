@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { ICON_COLORS, assignPaths, categoryFor, composeIcon, glyphFor, glyphPaths, slugify } from "../../scripts/lib/icons.mjs";
+import { ICON_COLORS, assignPaths, categoryFor, compactPath, composeIcon, glyphFor, glyphPaths, slugify } from "../../scripts/lib/icons.mjs";
 
 /**
  * Icon pipeline (spec 024, contracts/icon-pipeline.md): pure helpers that compose the Cogitator plate, pick the
@@ -35,6 +35,31 @@ describe("glyphPaths", () => {
 
   it("refuses a file without glyph paths", () => {
     expect(() => glyphPaths('<svg><path d="M0 0h512v512H0z"/></svg>')).toThrow();
+  });
+});
+
+describe("compactPath", () => {
+  it("keeps one decimal and the numbers apart", () => {
+    expect(compactPath("M491.844 22.533-83.42 14.865L196.572")).toBe("M491.8 22.5-83.4 14.9L196.6");
+    expect(compactPath("a.5.5 0 0 1")).toBe("a.5.5 0 0 1");
+    expect(compactPath("1.2.04")).toBe("1.2 0");
+    expect(compactPath("5.05.96")).toBe("5.1 1");
+    expect(compactPath("c-.046 24.127")).toBe("c0 24.1");
+    expect(compactPath("20.5.006.032.022.06")).toBe("20.5 0 0 0 .1");
+  });
+
+  it("keeps every versioned glyph number for number (within the rounding)", () => {
+    const numbers = (d) => [...d.matchAll(/[-+]?(?:\d*\.\d+|\d+\.?)(?:e[-+]?\d+)?/gi)].map(([n]) => Number(n));
+    const broken = [];
+    for (const author of readdirSync("src/icons/glyphs").filter((a) => !a.endsWith(".txt"))) {
+      for (const file of readdirSync(join("src/icons/glyphs", author))) {
+        const d = glyphPaths(readFileSync(join("src/icons/glyphs", author, file), "utf8")).map((p) => p.d).join(" M");
+        const a = numbers(d);
+        const b = numbers(compactPath(d));
+        if (a.length !== b.length || a.some((x, i) => Math.abs(x - b[i]) > 0.0501)) broken.push(`${author}/${file}`);
+      }
+    }
+    expect(broken).toEqual([]);
   });
 });
 

@@ -48,13 +48,38 @@ export function glyphPaths(glyphSvg) {
 }
 
 /**
+ * Path data with one decimal: the glyph is drawn at ~1/10 of its 512 grid, so the rest is invisible and only weighs on
+ * the release package (SC-006).
+ * @param {string} d
+ * @returns {string}
+ */
+export function compactPath(d) {
+  // SVG numbers may touch ("1.2.04", "5-3"): tokenize, round, and write each one so it cannot merge with the last.
+  let out = "";
+  let last = null;
+  for (const [token, number] of d.matchAll(/([-+]?(?:\d+\.?\d*|\.\d+)(?:e[-+]?\d+)?)|[a-df-z]|[^\s,]/gi)) {
+    if (number === undefined) {
+      out += token;
+      last = null;
+      continue;
+    }
+    const value = Math.round(Number(number) * 10) / 10;
+    const text = String(value === 0 ? 0 : value).replace(/^(-?)0\./, "$1.");
+    const merges = last !== null && (/^\d/.test(text) || (text.startsWith(".") && !last.includes(".")));
+    out += (merges ? " " : "") + text;
+    last = text;
+  }
+  return out;
+}
+
+/**
  * The final SVG of an icon: plate, rim, fillet, rivets and glyph (research R2). 512 px wide so tokens stay sharp.
  * @param {{glyphSvg: string, color: string}} input
  * @returns {string}
  */
 export function composeIcon({ glyphSvg, color }) {
   if (!Object.values(ICON_COLORS).includes(color)) throw new Error(`Color ${color} is not a design token.`);
-  const glyph = glyphPaths(glyphSvg).map(({ d, fillRule }) => `<path d="${d}" fill="${color}"${fillRule ? ` fill-rule="${fillRule}"` : ""}/>`).join("");
+  const glyph = glyphPaths(glyphSvg).map(({ d, fillRule }) => `<path d="${compactPath(d)}" fill="${color}"${fillRule ? ` fill-rule="${fillRule}"` : ""}/>`).join("");
   return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512">'
     + `<path d="M30 2H70L98 30V70L70 98H30L2 70V30Z" fill="${PLATE}"/>`
     + `<path d="M31 6H69L94 31V69L69 94H31L6 69V31Z" fill="none" stroke="${RIM}" stroke-width="2.5"/>`

@@ -53,7 +53,7 @@ export async function deploy(ship, count) {
   }
   if (!(await takeShipAction(ship, SHIP_ACTIONS.find((a) => a.key === "deployFightercraft")))) return null;
   const squadron = existing ?? await Actor.create({
-    name: format("DTD.Ship.SquadronName", { name: ship.name }), type: "squadron", img: "icons/svg/wing.svg",
+    name: format("DTD.Ship.SquadronName", { name: ship.name }), type: "squadron",
     system: { count: 0, shipUuid: ship.uuid }, prototypeToken: { actorLink: true, disposition: ship.prototypeToken.disposition }, ownership: ship.ownership
   });
   await squadron.update({ "system.count": squadron.system.count + n });

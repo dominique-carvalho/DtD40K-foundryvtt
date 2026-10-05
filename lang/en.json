@@ -2775,6 +2775,19 @@
         "missingSkills": "missing skills",
         "missingFeats": "missing feats"
       }
+    },
+    "Icons": {
+      "Menu": {
+        "Name": "Compendium icons",
+        "Label": "Update icons",
+        "Hint": "World items and actors that came from the system compendiums and still use a Foundry image take the system icons. Custom images and tokens already on scenes are kept."
+      },
+      "Update": {
+        "Title": "Update icons",
+        "Confirm": "{total} images will change: {item} items, {actor} actors, {token} prototype tokens and {embedded} items carried by actors. Custom images are kept. Continue?",
+        "Nothing": "Every document from the system compendiums already uses the system icons.",
+        "Done": "{total} images updated."
+      }
     }
   }
 }

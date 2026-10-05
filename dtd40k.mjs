@@ -2,6 +2,7 @@
  * Dungeons the Dragoning — Foundry VTT system entry point.
  */
 import { DTD } from "./module/config.mjs";
+import { UpdateIconsMenu } from "./module/apps/update-icons.mjs";
 import { CharacterData } from "./module/data/character-data.mjs";
 import { NpcData } from "./module/data/npc-data.mjs";
 import { MinionSquadData } from "./module/data/minion-squad-data.mjs";
@@ -70,6 +71,12 @@ import { EquipmentSheet } from "./module/apps/equipment-sheet.mjs";
 Hooks.once("init", () => {
   console.log("dtd40k | Initializing Dungeons the Dragoning system");
   CONFIG.DTD = DTD;
+
+  // GM: bring the world's compendium documents to the system icons (spec 024, FR-010).
+  game.settings.registerMenu("dtd40k", "updateIcons", {
+    name: "DTD.Icons.Menu.Name", label: "DTD.Icons.Menu.Label", hint: "DTD.Icons.Menu.Hint",
+    icon: "fa-solid fa-image", type: UpdateIconsMenu, restricted: true
+  });
 
   CONFIG.Actor.documentClass = DtdActor;
   CONFIG.Actor.dataModels.character = CharacterData;

@@ -42,7 +42,7 @@ export function prepareEquipmentContext(actor) {
   const armor = actor.system.armor;
 
   const weapons = [
-    { ...weaponPools(actor, null), id: "unarmed", name: localize("DTD.Attack.Unarmed"), unarmed: true, equipped: true, img: "icons/svg/combat.svg" },
+    { ...weaponPools(actor, null), id: "unarmed", name: localize("DTD.Attack.Unarmed"), unarmed: true, equipped: true, img: CONFIG.DTD.ICONS.item["weapon:melee"] },
     ...items.filter((item) => item.type === "weapon" && !inactiveFormItem(item)).map((item) => {
       const pools = weaponPools(actor, item);
       return {

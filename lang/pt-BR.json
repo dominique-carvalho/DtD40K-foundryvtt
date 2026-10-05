@@ -2775,6 +2775,19 @@
         "missingSkills": "faltam perícias",
         "missingFeats": "faltam feats"
       }
+    },
+    "Icons": {
+      "Menu": {
+        "Name": "Ícones dos compêndios",
+        "Label": "Atualizar ícones",
+        "Hint": "Itens e atores do mundo que vieram dos compêndios do sistema e ainda usam imagem do Foundry passam a usar os ícones do sistema. Imagens personalizadas e tokens já colocados nas cenas são mantidos."
+      },
+      "Update": {
+        "Title": "Atualizar ícones",
+        "Confirm": "{total} imagens vão mudar: {item} itens, {actor} atores, {token} tokens de protótipo e {embedded} itens carregados por atores. Imagens personalizadas são mantidas. Continuar?",
+        "Nothing": "Todos os documentos dos compêndios do sistema já usam os ícones do sistema.",
+        "Done": "{total} imagens atualizadas."
+      }
     }
   }
 }

@@ -48,10 +48,10 @@ quickstart.md
 
 ## Phase 4: User Story 3 — Padrões do mundo e atualização (P3)
 
-- [ ] T012 [P] [US3] Testes de `planIconUpdates` (itens, atores, embutidos, token; preserva imagem personalizada; ignora origem de fora do sistema); confirmar que falham
-- [ ] T013 [US3] `module/rules/icons.mjs` (PURO): `planIconUpdates`; T012 passa
-- [ ] T014 [US3] `DTD.ICONS` em `module/config.mjs`; `getDefaultArtwork` em `DtdItem` e `DtdActor`; serviços com ícone fixo (alignment, martial, squadron, weapon-craft, vehicle, builder) passam a usar `DTD.ICONS`
-- [ ] T015 [US3] `module/apps/update-icons.mjs` + `registerMenu` (Mestre): monta o plano pelos índices dos compêndios, confirma com contagens, aplica em lote; i18n `DTD.Icons.*` (en, pt-BR)
+- [X] T012 [P] [US3] Testes de `planIconUpdates` (itens, atores, embutidos, token; preserva imagem personalizada; ignora origem de fora do sistema); confirmar que falham
+- [X] T013 [US3] `module/rules/icons.mjs` (PURO): `planIconUpdates`; T012 passa
+- [X] T014 [US3] `DTD.ICONS` em `module/config.mjs`; `getDefaultArtwork` em `DtdItem` e `DtdActor`; serviços com ícone fixo (alignment, martial, squadron, weapon-craft, vehicle, builder) passam a usar `DTD.ICONS`
+- [X] T015 [US3] `module/apps/update-icons.mjs` + `registerMenu` (Mestre): monta o plano pelos índices dos compêndios, confirma com contagens, aplica em lote; i18n `DTD.Icons.*` (en, pt-BR)
 
 ---
 

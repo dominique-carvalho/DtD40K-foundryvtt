@@ -1,3 +1,5 @@
+import { ICONS } from "../config.mjs";
+import { defaultIconFor } from "../rules/icons.mjs";
 import { syncClassCompletion } from "./class-service.mjs";
 import { grantFeats, releaseGrants } from "./feat-service.mjs";
 
@@ -5,6 +7,15 @@ import { grantFeats, releaseGrants } from "./feat-service.mjs";
  * Item document class for Dungeons the Dragoning.
  */
 export class DtdItem extends Item {
+  /**
+   * Default icon of an item created without one (spec 024, research R7): the Cogitator plate of its category.
+   * @override
+   */
+  static getDefaultArtwork(itemData) {
+    const img = defaultIconFor(ICONS, "item", itemData);
+    return img ? { img } : super.getDefaultArtwork(itemData);
+  }
+
   /** Item types a character holds at most once, with the warning shown otherwise. */
   static UNIQUE_TYPES = {
     race: "DTD.Race.OnlyOne",

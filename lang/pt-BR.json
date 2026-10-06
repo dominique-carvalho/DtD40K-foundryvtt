@@ -2771,12 +2771,14 @@
         "notEnough": "XP insuficiente.",
         "wrongRarity": "Um item não é da raridade da vaga.",
         "artifact": "Artefatos não são equipamento inicial.",
-        "tooMany": "Itens demais numa vaga."
+        "tooMany": "Itens demais numa vaga.",
+        "inheritanceOver": "Os itens herdados passam da nota de Inheritance."
       },
       "Warning": {
         "unspent": "Há pontos não gastos.",
         "emptySlots": "Há vagas de equipamento vazias.",
-        "missing": "Um valor em 4 ou mais está sem especialidade (uma compra de XP pode tê-lo subido)."
+        "missing": "Um valor em 4 ou mais está sem especialidade (uma compra de XP pode tê-lo subido).",
+        "unnamedBacking": "Um Backing sem o nome da organização não entra no personagem."
       },
       "ClassReason": {
         "creationLevel": "não é nível 1",
@@ -2802,7 +2804,9 @@
         "level": "Nível",
         "or": "ou",
         "capLevel": "até o nível"
-      }
+      },
+      "InheritanceUse": "Usado: {used} de {max} (um item Uncommon ocupa 1).",
+      "InheritanceNone": "Suba a Inheritance no passo Backgrounds para escolher os itens herdados."
     },
     "Icons": {
       "Menu": {

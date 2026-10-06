@@ -6,7 +6,7 @@
  * pp. 280–283 (Backgrounds); specs/023-character-builder/contracts/rules-api.md.
  */
 import { BACKGROUND_XP, CHARACTERISTICS, CREATION, SKILLS, STARTING_SLOTS, STARTING_XP } from "../config.mjs";
-import { backgroundCost } from "./backgrounds.mjs";
+import { backgroundCost, inheritanceFits, inheritanceUsed } from "./backgrounds.mjs";
 import { checkClassEntry } from "./class.mjs";
 import { needsSelection, validateExaltationSelection } from "./exaltation.mjs";
 import { validateRaceChoice } from "./race.mjs";
@@ -101,12 +101,14 @@ export function availableClasses({ classes, skills, feats = [] }) {
 
 /**
  * Backgrounds (FR-008, pp. 15–16): 7 free dots, none above 3 for free; then 50 XP per dot 1–3 and 100 per dot 4–5;
- * at most 5 dots of Artifacts.
- * @param {{backgrounds: Record<string, number>, wealth: number, artifacts?: {value: number}[]}} input
- * @returns {{ok: boolean, reasons: string[], xp: number, free: number}}
+ * at most 5 dots of Artifacts. Each Backing (spec 027) is a Background of its own; one without a name only warns.
+ * @param {{backgrounds: Record<string, number>, wealth: number, artifacts?: {value: number}[],
+ *   backings?: {name: string, value: number}[]}} input
+ * @returns {{ok: boolean, reasons: string[], warnings: string[], xp: number, free: number}}
  */
-export function validateBackgrounds({ backgrounds, wealth = 0, artifacts = [] }) {
-  const ratings = [wealth, ...Object.values(backgrounds ?? {}), ...artifacts.map((a) => a.value)].filter((v) => v > 0);
+export function validateBackgrounds({ backgrounds, wealth = 0, artifacts = [], backings = [] }) {
+  const ratings = [wealth, ...Object.values(backgrounds ?? {}), ...artifacts.map((a) => a.value), ...backings.map((b) => b.value)].filter((v) => v > 0);
+  const warnings = backings.some((b) => !b.name?.trim()) ? ["unnamedBacking"] : [];
   const reasons = new Set();
   let dotsUsed = 0;
   let xp = 0;
@@ -119,7 +121,22 @@ export function validateBackgrounds({ backgrounds, wealth = 0, artifacts = [] })
     }
   }
   if (artifacts.reduce((sum, a) => sum + (a.value ?? 0), 0) > BACKGROUND_XP.artifactCreationMax) reasons.add("artifactCap");
-  return result([...reasons], { xp, free: Math.min(dotsUsed, BACKGROUND_XP.freeDots) });
+  return result([...reasons], { warnings, xp, free: Math.min(dotsUsed, BACKGROUND_XP.freeDots) });
+}
+
+/**
+ * Inheritance items (spec 027, p. 282): counted by rarity and checked with the sheet's rule (inheritanceFits); no
+ * artifacts. `used` and `max` are rank-1 slots (one Uncommon each; 2^(rating − 1) of them).
+ * @param {{level: number, items: {system: {rarity: string}, artifact?: boolean}[]}} input
+ * @returns {{ok: boolean, reasons: string[], picks: Record<string, number>, used: number, max: number}}
+ */
+export function inheritanceItems({ level, items }) {
+  const reasons = [];
+  const picks = {};
+  for (const item of items) picks[item.system.rarity] = (picks[item.system.rarity] ?? 0) + 1;
+  if (items.some((i) => i.artifact)) reasons.push("artifact");
+  if (!inheritanceFits(level, picks)) reasons.push("inheritanceOver");
+  return result(reasons, { picks, used: inheritanceUsed(picks) || 0, max: level > 0 ? 2 ** (level - 1) : 0 });
 }
 
 /**
@@ -249,6 +266,6 @@ export function buildPlan({ draft }) {
   add("assets", Boolean(draft.assets?.length));
   add("exaltedAsset", Boolean(draft.exaltedAsset?.uuid));
   add("purchases", Boolean(draft.purchases?.length));
-  add("equipment", Boolean(draft.equipment?.length));
+  add("equipment", Boolean(draft.equipment?.length || draft.inheritance?.length));
   return plan;
 }

@@ -33,10 +33,10 @@ export function blankDraft() {
     priorities: { characteristic: [], skill: [] },
     characteristic: {}, skill: {}, specialties: {},
     class: { uuid: "" },
-    backgrounds: {}, wealth: 0, artifacts: [],
+    backgrounds: {}, wealth: 0, artifacts: [], backings: [],
     deity: { uuid: "" },
     hindrances: [], assets: [], exaltedAsset: { uuid: "" },
-    purchases: [], equipment: []
+    purchases: [], equipment: [], inheritance: []
   };
 }
 
@@ -122,6 +122,13 @@ export async function applyPlan(actor, draft, docs) {
         const instance = actor._source.system.backgrounds.artifacts.at(-1);
         for (let i = 1; i < artifact.value; i++) await raiseBackground(actor, "artifact", { id: instance?.id ?? "" });
       }
+      // Backings (spec 027): one instance per named organization, bought like the Artifacts.
+      for (const backing of draft.backings ?? []) {
+        if (!backing.name?.trim() || !backing.value) continue;
+        await addInstance(actor, "backing", backing.name);
+        const instance = actor._source.system.backgrounds.backings.at(-1);
+        for (let i = 1; i < backing.value; i++) await raiseBackground(actor, "backing", { id: instance?.id ?? "" });
+      }
       return true;
     },
     hindrances: async () => { for (const h of draft.hindrances) await addFeat(actor, get(h.uuid)); return true; },
@@ -135,7 +142,17 @@ export async function applyPlan(actor, draft, docs) {
       return true;
     },
     equipment: async () => {
+      // Inheritance (spec 027, research R5): the picks first, so the sheet opens the extra starting slots; set
+      // directly, as the builder already checked them (or the GM released the step).
+      const inherited = (draft.inheritance ?? []).map((p) => get(p.uuid)).filter(Boolean);
+      if (inherited.length) {
+        const picks = Object.fromEntries(Object.keys(actor._source.system.backgrounds.inheritancePicks).map((key) => [key, 0]));
+        for (const item of inherited) if (item.system.rarity in picks) picks[item.system.rarity] += 1;
+        await actor.update({ "system.backgrounds.inheritancePicks": picks });
+      }
       for (const pick of draft.equipment) if (pick.uuid) await addEquipment(actor, get(pick.uuid), { starting: true });
+      // An inherited item without a slot left (released above the rating) is still added, outside the picks.
+      for (const item of inherited) if (!(await addEquipment(actor, item, { starting: true }))) await addEquipment(actor, item, { starting: false });
       return true;
     }
   };

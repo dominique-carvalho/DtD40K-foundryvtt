@@ -56,13 +56,24 @@ export function canRaise({ creation, isGM, to, artifactTotal }) {
  * @returns {boolean}
  */
 export function inheritanceFits(level, picks) {
+  const used = inheritanceUsed(picks);
+  if (Number.isNaN(used)) return false;
+  if (!used) return true;
+  return level > 0 && used <= 2 ** (level - 1);
+}
+
+/**
+ * Rank-1 slots the Inheritance picks fill (each rank-1 kind rounded up to whole slots); NaN for an unknown rarity.
+ * @param {Record<string, number>} picks  count by rarity
+ * @returns {number}
+ */
+export function inheritanceUsed(picks) {
   let used = 0;
   for (const [key, count] of Object.entries(picks)) {
     if (!count) continue;
     const size = INHERITANCE_SLOTS[key];
-    if (size === undefined) return false;
+    if (size === undefined) return NaN;
     used += size < 1 ? Math.ceil(count * size) : count * size;
   }
-  if (!used) return true;
-  return level > 0 && used <= 2 ** (level - 1);
+  return used;
 }

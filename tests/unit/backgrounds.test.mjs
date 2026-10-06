@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { BACKGROUND_TEXT, backgroundCost, canRaise, creationDots, inheritanceFits } from "../../module/rules/backgrounds.mjs";
+import { BACKGROUND_TEXT, backgroundCost, canRaise, creationDots, inheritanceFits, inheritanceUsed } from "../../module/rules/backgrounds.mjs";
 import { BACKGROUNDS } from "../../module/config.mjs";
 
 const empty = () => ({
@@ -69,5 +69,14 @@ describe("inheritanceFits (p. 282)", () => {
     expect(inheritanceFits(5, { anyNonArtifact: 1 })).toBe(true);
     expect(inheritanceFits(5, { mythicRare: 2 })).toBe(true);
     expect(inheritanceFits(4, { anyNonArtifact: 1 })).toBe(false);
+  });
+});
+
+describe("inheritanceUsed (spec 027)", () => {
+  it("counts rank-1 slots, rounding each rank-1 kind up", () => {
+    expect(inheritanceUsed({})).toBe(0);
+    expect(inheritanceUsed({ uncommon: 1 })).toBe(1);
+    expect(inheritanceUsed({ common: 3 })).toBe(2);
+    expect(inheritanceUsed({ rare: 1, ubiquitous: 1 })).toBe(3);
   });
 });

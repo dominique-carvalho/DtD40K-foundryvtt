@@ -104,8 +104,9 @@ Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do 
   Elemental, Gauss Weapon, Possession); Minion Squads agem no turno; formas alternativas (Warform, composição do
   Elemental), Resource Stat e editores na aba Antagonista.
 - **Montador de personagem**: botão "Novo personagem" na aba de atores abre um assistente na ordem do livro
-  (conceito, raça, exaltação, características e perícias por prioridade, especialidades, classe, backgrounds,
-  divindade, Assets e Hindrances, Exalted Asset, XP inicial, equipamento por raridade), com resumo lateral, bloqueio
+  (conceito, raça, exaltação, características e perícias por prioridade, especialidades, classe, backgrounds com
+  Artifacts e Backings por organização, divindade, Assets e Hindrances, Exalted Asset, XP inicial, equipamento por
+  raridade e itens herdados pela Inheritance, conferidos pela nota), com resumo lateral, bloqueio
   das escolhas fora da regra (o Mestre libera) e rascunho salvo. Cada escolha traz uma descrição curta: linha com XP e
   requisitos nas listas (Assets, Hindrances, classes, feats, backgrounds, equipamento) e painel com os fatos principais
   da raça, exaltação, divindade e Exalted Asset selecionados, para não precisar consultar o livro. Jogadores sem permissão de criar atores têm o

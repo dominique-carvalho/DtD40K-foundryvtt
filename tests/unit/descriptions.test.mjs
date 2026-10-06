@@ -33,6 +33,11 @@ describe("plainText, shortLine and firstParagraph", () => {
     expect(shortLine("")).toBe("");
   });
 
+  it("does not end a sentence inside parentheses or at an abbreviation", () => {
+    expect(shortLine(doc("feats", "Intolerance").system.description)).toMatch(/^You cannot abide a particular kind of people \(Orks, sorcerers, politicians, etc\.\) and avoid them whenever you can\.$/);
+    expect(shortLine("<p>Glows near a strong aura (e.g. Exalted). It is warm.</p>")).toBe("Glows near a strong aura (e.g. Exalted).");
+  });
+
   it("takes the first paragraph with text, skipping headings", () => {
     expect(firstParagraph(doc("races", "Tiefling").system.description)).toMatch(/^Tieflings are the Aasimar's counterpart/);
   });

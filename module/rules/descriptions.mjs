@@ -25,8 +25,12 @@ function clip(text, max) {
   return `${(space > max / 2 ? cut.slice(0, space) : cut).replace(/[\s,;:—-]+$/, "")}…`;
 }
 
-/** Sentences of a text (a period, ! or ? followed by a space). */
-const sentences = (text) => text.match(/[^.!?]+(?:[.!?]+(?=\s|$)|$)/g)?.map((s) => s.trim()).filter(Boolean) ?? [];
+/**
+ * Sentences of a text: a period, ! or ? (maybe closing a quote or parenthesis), a space and a capital; "e.g.", "i.e.",
+ * "etc." and similar abbreviations do not end a sentence.
+ */
+const sentences = (text) => text.split(/(?<!\b(?:e\.g|i\.e|etc|vs|cf|approx)\.)(?<=[.!?]["')\]]?)\s+(?=["'(]?[A-Z0-9])/)
+  .map((s) => s.trim()).filter(Boolean);
 
 /**
  * One line: the first sentence, plus the next one when the first is only a label (under 30 characters), within `max`.

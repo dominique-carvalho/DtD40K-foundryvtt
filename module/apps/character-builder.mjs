@@ -401,7 +401,10 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
     // A selector that does not change the draft shows the line of its option without re-rendering (spec 026).
     for (const select of this.element.querySelectorAll("select[data-describe]")) {
       const line = this.element.querySelector(select.dataset.describe);
-      const show = () => { if (line) line.textContent = select.selectedOptions[0]?.dataset.desc ?? ""; };
+      const show = () => {
+        const option = select.selectedOptions[0];
+        if (line) line.textContent = option?.dataset.desc ? `${option.text}: ${option.dataset.desc}` : "";
+      };
       select.addEventListener("change", show);
       show();
     }

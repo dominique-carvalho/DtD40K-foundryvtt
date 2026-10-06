@@ -53,7 +53,7 @@ description: "Task list for 026-builder-descriptions"
 ## Phase 5: Polish
 
 - [X] T012 `npm test`, `npm run lint`, chaves i18n; README (montador com descrições)
-- [ ] T013 Validar o quickstart no Foundry e registrar em `quickstart.md`
+- [X] T013 Validar o quickstart no Foundry e registrar em `quickstart.md`
 
 ## Dependencies
 

@@ -49,7 +49,7 @@ description: "Task list for 027-builder-backing-inheritance"
 ## Phase 4: Polish
 
 - [X] T013 `npm test`, `npm run lint`, chaves i18n; README (montador com Backing e Inheritance); `docs/pendencias.md` (023: Backings e picks de Inheritance saem do texto; 026: Backing sem campo sai)
-- [ ] T014 `npm run build:packs` no worktree com o Foundry fechado, link para o worktree; validar o quickstart no Foundry e registrar em `quickstart.md`
+- [X] T014 `npm run build:packs` no worktree com o Foundry fechado, link para o worktree; validar o quickstart no Foundry e registrar em `quickstart.md`
 
 ## Dependencies
 

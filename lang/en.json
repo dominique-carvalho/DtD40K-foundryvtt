@@ -2801,8 +2801,7 @@
         "pantheon": "Pantheon",
         "level": "Level",
         "or": "or",
-        "capLevel": "up to the Level",
-        "capDevotion": "up to the Devotion"
+        "capLevel": "up to the Level"
       }
     },
     "Icons": {

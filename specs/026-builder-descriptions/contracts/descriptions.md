@@ -25,6 +25,7 @@ Casos de teste (`tests/unit/descriptions.test.mjs`):
 - `templates/apps/builder/step.hbs`:
   - linhas `builder-desc`/`builder-facts` nas listas;
   - `.builder-detail` nos passos de cartões;
-  - `data-desc` nas `<option>` de compra de feat e de equipamento, com a linha do selecionado.
+  - `data-desc` nas `<option>` de compra de feat (`select[data-describe]`), com a linha do selecionado;
+  - no equipamento, a linha do item escolhido já vem renderizada abaixo da vaga (a troca re-renderiza).
 - `module/apps/character-builder.mjs`: `#stepView` monta `desc`, `facts` e `detail`; `_onRender` atualiza a linha dos
   seletores sem re-renderizar.

@@ -7,6 +7,7 @@ import { characteristicOptions } from "../rules/race.mjs";
 import { statuesqueOptions } from "../rules/exaltation.mjs";
 import { SINGLE_BACKGROUNDS } from "../rules/backgrounds.mjs";
 import { languagesHint } from "../rules/creation.mjs";
+import { classFacts, exaltationFacts, featFacts, firstParagraph, itemNumbers, raceFacts, shortLine } from "../rules/descriptions.mjs";
 import { blankDraft, finish, loadDraft, saveDraft } from "../documents/builder-service.mjs";
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
@@ -196,24 +197,49 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
     return context;
   }
 
+  /**
+   * Short line, XP and prerequisites of a feat, Asset, Hindrance or Exalted Asset (spec 026).
+   * @returns {{desc: string, xp: string, requires: string, requiresList: string, facts: string}}
+   */
+  #featInfo(doc) {
+    const { xp, requires } = featFacts(doc);
+    const info = {
+      desc: shortLine(doc.system.description),
+      xp: xp === null ? "" : `${xp > 0 ? "+" : "−"}${Math.abs(xp)} XP`,
+      requires: requires.length ? `${localize("DTD.Builder.Fact.requires")}: ${requires.join(", ")}` : "",
+      requiresList: requires.join(", ")
+    };
+    return { ...info, facts: [info.xp, info.requires].filter(Boolean).join(" · ") };
+  }
+
   /** Data of the current step's template. */
   #stepView(step, s) {
     const d = this.draft;
     const charLabel = (key) => localize(CHARACTERISTICS[key].label);
     const skillLabel = (key) => localize(SKILLS[key].label);
+    const or = ` ${localize("DTD.Builder.Fact.or")} `;
+    const fact = (key, value) => ({ label: localize(`DTD.Builder.Fact.${key}`), value });
+    // Panel of the selected card (spec 026): title, facts and a paragraph.
+    const detail = (doc, facts, text) => (doc ? { title: doc.name, facts, text } : null);
     const pick = (docs, uuid) => docs.map((doc) => ({ uuid: doc.uuid, name: doc.name, img: doc.img, selected: doc.uuid === uuid }));
     switch (step) {
       case "race": return {
         list: pick(this.data.races, d.race.uuid),
+        detail: s.race && detail(s.race, raceFacts(s.race.system).map(({ key, value }) => fact(key,
+          key === "characteristic" ? (value === "any" ? localize("DTD.Builder.Fact.anyCharacteristic") : value.map(charLabel).join(or))
+            : key === "skills" ? value.map(skillLabel).join(", ")
+              : key === "power" ? `${value.name}: ${value.text}` : value)), firstParagraph(s.race.system.description)),
         choice: s.race ? {
           characteristics: characteristicOptions(s.race.system).map((key) => ({ key, label: charLabel(key), selected: key === d.race.choice.characteristic })),
           skillChoose: s.race.system.skillBonus.choose,
-          skills: Object.keys(SKILLS).filter((k) => !s.race.system.skillBonus.skills.includes(k)).map((key) => ({ key, label: skillLabel(key), checked: d.race.choice.skills.includes(key) })),
-          description: s.race.system.description ?? ""
+          skills: Object.keys(SKILLS).filter((k) => !s.race.system.skillBonus.skills.includes(k)).map((key) => ({ key, label: skillLabel(key), checked: d.race.choice.skills.includes(key) }))
         } : null
       };
       case "exaltation": return {
         list: pick(this.data.exaltations, d.exaltation.uuid),
+        detail: s.exaltation && detail(s.exaltation, exaltationFacts(s.exaltation.system).map(({ key, value }) => fact(key,
+          key === "powerStat" ? (value.cap === "level" ? `${value.name} (${localize("DTD.Builder.Fact.capLevel")})` : value.name)
+            : key === "powers" ? value.join(", ") : value)), firstParagraph(s.exaltation.system.description)),
         statuesque: s.exaltation?.system.staticPowers?.some((p) => p.automation === "statuesque")
           ? statuesqueOptions(s.race ? { ...s.race.system, choice: d.race.choice } : null).map((key) => ({ key, label: charLabel(key), selected: key === d.exaltation.selection.statuesque })) : null,
         elements: s.exaltation?.system.staticPowers?.some((p) => p.automation === "bloodQuickening")
@@ -254,45 +280,70 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
       }
       case "class": return {
         list: availableClasses({ classes: this.data.classes.map((c) => ({ uuid: c.uuid, name: c.name, system: c.system })), skills: s.values.skill })
-          .map((c) => ({ ...c, selected: c.uuid === d.class.uuid, reasonText: c.reasons.map((r) => localize(`DTD.Builder.ClassReason.${r}`)).join(", ") }))
+          .map((c) => {
+            const system = this.#doc(c.uuid).system;
+            const cf = classFacts(system);
+            const reqs = [...cf.skills.map((r) => `${r.keys.map(skillLabel).join(or)} ${r.value}`), ...cf.feats];
+            return {
+              ...c, selected: c.uuid === d.class.uuid, reasonText: c.reasons.map((r) => localize(`DTD.Builder.ClassReason.${r}`)).join(", "),
+              desc: shortLine(system.description),
+              facts: [`${localize("DTD.Builder.Fact.level")} ${cf.level}`, reqs.length ? `${localize("DTD.Builder.Fact.requires")}: ${reqs.join(", ")}` : ""].filter(Boolean).join(" · ")
+            };
+          })
           .sort((a, b) => Number(b.allowed) - Number(a.allowed) || a.name.localeCompare(b.name))
       };
       case "backgrounds": return {
-        rows: [{ key: "wealth", label: localize("DTD.Background.wealth.label"), value: d.wealth, field: "wealth" },
-          ...SINGLE_BACKGROUNDS.map((key) => ({ key, label: localize(`DTD.Background.${key}.label`), value: d.backgrounds[key] ?? 0, field: `backgrounds.${key}` }))],
+        rows: [{ key: "wealth", value: d.wealth, field: "wealth" },
+          ...SINGLE_BACKGROUNDS.map((key) => ({ key, value: d.backgrounds[key] ?? 0, field: `backgrounds.${key}` }))]
+          .map((r) => ({ ...r, label: localize(`DTD.Background.${r.key}.label`), hint: localize(`DTD.Background.${r.key}.hint`) })),
+        artifactHint: localize("DTD.Background.artifact.hint"),
         artifacts: d.artifacts.map((a, index) => ({ ...a, index })),
         free: s.backgrounds.free, xp: s.backgrounds.xp
       };
-      case "alignment": return {
-        pantheons: Object.entries(PANTHEONS).map(([key, def]) => ({
-          key, label: localize(def.label ?? def),
-          deities: this.data.deities.filter((g) => g.system.pantheon === key).map((g) => ({ uuid: g.uuid, name: g.name, img: g.img, selected: g.uuid === d.deity.uuid }))
-        })).filter((p) => p.deities.length)
-      };
+      case "alignment": {
+        const deity = this.#doc(d.deity.uuid);
+        return {
+          detail: detail(deity, deity ? [fact("pantheon", localize(PANTHEONS[deity.system.pantheon]?.label ?? deity.system.pantheon))] : [], deity?.system.summary ?? ""),
+          pantheons: Object.entries(PANTHEONS).map(([key, def]) => ({
+            key, label: localize(def.label ?? def),
+            deities: this.data.deities.filter((g) => g.system.pantheon === key).map((g) => ({ uuid: g.uuid, name: g.name, img: g.img, selected: g.uuid === d.deity.uuid }))
+          })).filter((p) => p.deities.length)
+        };
+      }
       case "feats": return {
-        hindrances: this.data.hindrances.map((h) => ({ uuid: h.uuid, name: h.name, checked: d.hindrances.some((x) => x.uuid === h.uuid) })),
-        assets: this.data.assets.map((a) => ({ uuid: a.uuid, name: a.name, checked: d.assets.some((x) => x.uuid === a.uuid) }))
+        hindrances: this.data.hindrances.map((h) => ({ uuid: h.uuid, name: h.name, checked: d.hindrances.some((x) => x.uuid === h.uuid), ...this.#featInfo(h) })),
+        assets: this.data.assets.map((a) => ({ uuid: a.uuid, name: a.name, checked: d.assets.some((x) => x.uuid === a.uuid), ...this.#featInfo(a) }))
       };
-      case "exaltedAsset": return {
-        list: this.data.exaltedAssets.filter((a) => {
-          const req = a.system.prerequisites ?? {};
-          return (!req.exaltation || req.exaltation === s.exaltation?.name) && (!req.race || req.race === s.race?.name);
-        }).map((a) => ({ uuid: a.uuid, name: a.name, img: a.img, selected: a.uuid === d.exaltedAsset.uuid }))
-      };
+      case "exaltedAsset": {
+        const asset = this.#doc(d.exaltedAsset.uuid);
+        const info = asset && this.#featInfo(asset);
+        return {
+          detail: asset && detail(asset, [fact("xp", info.xp), ...(info.requiresList ? [fact("requires", info.requiresList)] : [])],
+            firstParagraph(asset.system.description)),
+          list: this.data.exaltedAssets.filter((a) => {
+            const req = a.system.prerequisites ?? {};
+            return (!req.exaltation || req.exaltation === s.exaltation?.name) && (!req.race || req.race === s.race?.name);
+          }).map((a) => ({ uuid: a.uuid, name: a.name, img: a.img, selected: a.uuid === d.exaltedAsset.uuid }))
+        };
+      }
       case "xp": return {
         balance: s.balance,
         entries: s.purchases.entries.map((e, index) => ({
           index, cost: e.cost, allowed: e.allowed, reason: e.reason ? localize(`DTD.XP.Error.${e.reason}`) : "",
           label: e.kind === "feat" ? this.#doc(e.uuid)?.name ?? "?" : e.kind === "powerStat" ? localize("DTD.Exaltation.PowerStat")
             : e.kind === "characteristic" ? charLabel(e.key) : e.kind === "skill" ? skillLabel(e.key)
-              : localize((e.kind === "school" ? MAGIC_SCHOOLS : MARTIAL_SCHOOLS)[e.key]?.label ?? e.key)
+              : localize((e.kind === "school" ? MAGIC_SCHOOLS : MARTIAL_SCHOOLS)[e.key]?.label ?? e.key),
+          desc: e.kind === "feat" && this.#doc(e.uuid) ? shortLine(this.#doc(e.uuid).system.description) : ""
         })),
         characteristics: Object.keys(CHARACTERISTICS).map((key) => ({ key, label: charLabel(key) })),
         skills: Object.keys(SKILLS).map((key) => ({ key, label: skillLabel(key) })),
         schools: Object.entries(MAGIC_SCHOOLS).map(([key, def]) => ({ key, label: localize(def.label) })),
         martial: Object.entries(MARTIAL_SCHOOLS).map(([key, def]) => ({ key, label: localize(def.label) })),
         feats: this.data.feats.filter((f) => f.system.category === "feat" || f.system.prerequisites?.race === s.race?.name)
-          .map((f) => ({ uuid: f.uuid, name: f.name })).sort((a, b) => a.name.localeCompare(b.name))
+          .map((f) => {
+            const info = this.#featInfo(f);
+            return { uuid: f.uuid, name: f.name, desc: [info.desc, info.requires].filter(Boolean).join(" · ") };
+          }).sort((a, b) => a.name.localeCompare(b.name))
       };
       case "equipment": {
         const slots = [];
@@ -300,8 +351,11 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
           for (let i = 0; i < max; i++) {
             const pickIndex = d.equipment.findIndex((p) => p.slot === slot && p.n === i);
             const picked = pickIndex >= 0 ? d.equipment[pickIndex].uuid : "";
+            const item = this.#doc(picked);
             slots.push({
               slot, n: i, label: localize(`DTD.Rarity.${slot}`),
+              // Main numbers and effect of the chosen item (spec 026).
+              desc: item ? [itemNumbers(item), shortLine(item.system.effectText || item.system.description, 140)].filter(Boolean).join(" — ") : "",
               options: this.data.equipment.filter((e) => e.system.rarity === slot && !ARTIFACT_CATEGORIES.includes(e.system.category))
                 .map((e) => ({ uuid: e.uuid, name: e.name, selected: e.uuid === picked })).sort((a, b) => a.name.localeCompare(b.name))
             });
@@ -343,6 +397,13 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
     for (const input of this.element.querySelectorAll("[data-field]")) {
       if (input.dataset.action) continue;
       input.addEventListener("change", (event) => this.#onField(event.currentTarget));
+    }
+    // A selector that does not change the draft shows the line of its option without re-rendering (spec 026).
+    for (const select of this.element.querySelectorAll("select[data-describe]")) {
+      const line = this.element.querySelector(select.dataset.describe);
+      const show = () => { if (line) line.textContent = select.selectedOptions[0]?.dataset.desc ?? ""; };
+      select.addEventListener("change", show);
+      show();
     }
   }
 

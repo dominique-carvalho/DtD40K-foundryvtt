@@ -433,3 +433,12 @@
   flex-basis: 100%;
   margin: 0;
 }
+
+.dtd40k.character-builder .builder-background {
+  margin-bottom: 0.35rem;
+}
+
+.dtd40k.character-builder .builder-background .builder-desc,
+.dtd40k.character-builder .builder-slot-desc {
+  margin: -0.1rem 0 0.35rem;
+}

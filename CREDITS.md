@@ -1,5 +1,11 @@
 # Credits
 
+## System art
+
+The system background and icon (`assets/ui/`) are a remastered version of the *Dungeons the Dragoning 40,000 7th
+Edition* logo by LawfulNice. *Dungeons the Dragoning* and its logo belong to LawfulNice;
+they are used here for this unofficial fan project.
+
 ## Icons
 
 The compendium icons combine a plate drawn for Dungeons the Dragoning 40K (the Scriptorium Machina design system)

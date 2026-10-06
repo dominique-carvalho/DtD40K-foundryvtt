@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
+import { inheritanceFits } from "../../module/rules/backgrounds.mjs";
 import {
-  BUILDER_STEPS, availableClasses, buildPlan, equipmentSlots, previewCharacter, pricePurchases, validateBackgrounds,
+  BUILDER_STEPS, availableClasses, buildPlan, equipmentSlots, inheritanceItems, previewCharacter, pricePurchases, validateBackgrounds,
   validateConcept, validateExaltation, validateFeats, validateRace, validateRatings, validateSpecialties, xpBalance
 } from "../../module/rules/builder.mjs";
 
@@ -171,5 +172,57 @@ describe("preview and plan (R1, R3)", () => {
   it("orders the plan and skips empty steps", () => {
     const plan = buildPlan({ draft: { race: { uuid: "r" }, exaltation: { uuid: "e" }, class: { uuid: "c" }, deity: { uuid: "d" }, hindrances: [], assets: [], purchases: [], equipment: [] } });
     expect(plan.map((s) => s.op)).toEqual(["race", "exaltation", "ratings", "specialties", "class", "deity", "backgrounds"]);
+  });
+});
+
+describe("Backing (spec 027, US1)", () => {
+  it("counts each Backing like any other Background", () => {
+    const out = validateBackgrounds({ backgrounds: { allies: 1 }, wealth: 3, backings: [{ name: "Harmonium", value: 2 }, { name: "Doomguard", value: 1 }] });
+    expect(out.free).toBe(7);
+    expect(out.xp).toBe(0);
+    expect(validateBackgrounds({ backgrounds: {}, wealth: 0, backings: [{ name: "Harmonium", value: 4 }] }).xp).toBe(100);
+    expect(validateBackgrounds({ backgrounds: {}, wealth: 0, backings: [{ name: "Harmonium", value: 6 }] }).reasons).toEqual(["atMax"]);
+  });
+
+  it("warns about a Backing without a name", () => {
+    expect(validateBackgrounds({ backgrounds: {}, wealth: 0, backings: [{ name: " ", value: 1 }] }).warnings).toEqual(["unnamedBacking"]);
+    expect(validateBackgrounds({ backgrounds: {}, wealth: 0, backings: [{ name: "Harmonium", value: 1 }] }).warnings).toEqual([]);
+    expect(validateBackgrounds({ backgrounds: {}, wealth: 0 }).warnings).toEqual([]);
+  });
+});
+
+describe("inheritanceItems (spec 027, US2)", () => {
+  const item = (rarity, artifact = false) => ({ system: { rarity }, artifact });
+
+  it("fits a rarer item or two choices of the rank below", () => {
+    expect(inheritanceItems({ level: 2, items: [item("rare")] })).toMatchObject({ ok: true, picks: { rare: 1 }, used: 2, max: 2 });
+    expect(inheritanceItems({ level: 2, items: [item("uncommon"), item("uncommon")] }).ok).toBe(true);
+    expect(inheritanceItems({ level: 2, items: [item("uncommon"), item("uncommon"), item("uncommon")] }))
+      .toMatchObject({ ok: false, reasons: ["inheritanceOver"], used: 3, max: 2 });
+    expect(inheritanceItems({ level: 1, items: Array(4).fill(item("veryCommon")) }).ok).toBe(true);
+    expect(inheritanceItems({ level: 1, items: Array(5).fill(item("veryCommon")) }).reasons).toEqual(["inheritanceOver"]);
+  });
+
+  it("refuses items without Inheritance and artifacts", () => {
+    expect(inheritanceItems({ level: 0, items: [item("common")] }).reasons).toEqual(["inheritanceOver"]);
+    expect(inheritanceItems({ level: 0, items: [] })).toMatchObject({ ok: true, used: 0, max: 0 });
+    expect(inheritanceItems({ level: 3, items: [item("rare", true)] }).reasons).toEqual(["artifact"]);
+  });
+
+  it("agrees with the sheet's check (SC-003)", () => {
+    const rarities = ["ubiquitous", "veryCommon", "common", "uncommon", "rare", "veryRare", "mythicRare"];
+    for (let level = 0; level <= 5; level++) {
+      for (const a of rarities) for (const b of rarities) for (const n of [1, 2, 3]) {
+        const items = [item(a), ...Array(n).fill(item(b))];
+        const picks = {};
+        for (const i of items) picks[i.system.rarity] = (picks[i.system.rarity] ?? 0) + 1;
+        expect(inheritanceItems({ level, items }).ok).toBe(inheritanceFits(level, picks));
+      }
+    }
+  });
+
+  it("plans the equipment step for inherited items alone", () => {
+    const plan = buildPlan({ draft: { hindrances: [], assets: [], purchases: [], equipment: [], inheritance: [{ uuid: "x" }] } });
+    expect(plan.map((p) => p.op)).toContain("equipment");
   });
 });

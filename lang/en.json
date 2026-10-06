@@ -2771,12 +2771,14 @@
         "notEnough": "Not enough XP.",
         "wrongRarity": "An item does not match its slot's rarity.",
         "artifact": "Artifacts are not starting gear.",
-        "tooMany": "Too many items in a slot."
+        "tooMany": "Too many items in a slot.",
+        "inheritanceOver": "The inherited items exceed the Inheritance rating."
       },
       "Warning": {
         "unspent": "Some dots are not spent.",
         "emptySlots": "Some equipment slots are empty.",
-        "missing": "A rating at 4 or more has no specialty (an XP purchase may have raised it)."
+        "missing": "A rating at 4 or more has no specialty (an XP purchase may have raised it).",
+        "unnamedBacking": "A Backing without an organization name is not added to the character."
       },
       "ClassReason": {
         "creationLevel": "not Level 1",
@@ -2802,7 +2804,9 @@
         "level": "Level",
         "or": "or",
         "capLevel": "up to the Level"
-      }
+      },
+      "InheritanceUse": "Used: {used} of {max} (one Uncommon item fills 1).",
+      "InheritanceNone": "Raise Inheritance in the Backgrounds step to pick inherited items."
     },
     "Icons": {
       "Menu": {

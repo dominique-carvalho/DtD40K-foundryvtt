@@ -442,3 +442,15 @@
 .dtd40k.character-builder .builder-slot-desc {
   margin: -0.1rem 0 0.35rem;
 }
+
+/* ---------- Inheritance (spec 027) ---------- */
+
+.dtd40k.character-builder .builder-inheritance-use {
+  margin: 0.2rem 0 0.4rem;
+  font-family: var(--dtd-font-data);
+  font-size: var(--dtd-text-sm);
+}
+
+.dtd40k.character-builder .builder-inheritance-use.over {
+  color: var(--dtd-failure);
+}

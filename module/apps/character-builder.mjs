@@ -1,6 +1,6 @@
-import { CHARACTERISTICS, CREATION, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, PANTHEONS, SKILLS, STARTING_SLOTS } from "../config.mjs";
+import { CHARACTERISTICS, CREATION, MAGIC_SCHOOLS, MARTIAL_SCHOOLS, PANTHEONS, RARITIES, SKILLS, STARTING_SLOTS } from "../config.mjs";
 import {
-  BUILDER_STEPS, availableClasses, equipmentSlots, previewCharacter, pricePurchases, validateBackgrounds, validateConcept,
+  BUILDER_STEPS, availableClasses, equipmentSlots, inheritanceItems, previewCharacter, pricePurchases, validateBackgrounds, validateConcept,
   validateExaltation, validateFeats, validateRace, validateRatings, validateSpecialties, xpBalance
 } from "../rules/builder.mjs";
 import { characteristicOptions } from "../rules/race.mjs";
@@ -41,7 +41,11 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
       addPurchase: CharacterBuilder.#onAddPurchase,
       removePurchase: CharacterBuilder.#onRemovePurchase,
       addArtifact: CharacterBuilder.#onAddArtifact,
-      removeArtifact: CharacterBuilder.#onRemoveArtifact
+      removeArtifact: CharacterBuilder.#onRemoveArtifact,
+      addBacking: CharacterBuilder.#onAddBacking,
+      removeBacking: CharacterBuilder.#onRemoveBacking,
+      addInheritance: CharacterBuilder.#onAddInheritance,
+      removeInheritance: CharacterBuilder.#onRemoveInheritance
     }
   };
 
@@ -120,7 +124,7 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
       assets: d.assets.map((a) => this.#doc(a.uuid)).filter(Boolean),
       exaltedAsset: this.#doc(d.exaltedAsset.uuid), exaltation: exaltation?.name ?? "", race: race?.name ?? ""
     });
-    const backgrounds = validateBackgrounds({ backgrounds: d.backgrounds, wealth: d.wealth, artifacts: d.artifacts });
+    const backgrounds = validateBackgrounds({ backgrounds: d.backgrounds, wealth: d.wealth, artifacts: d.artifacts, backings: d.backings });
     const purchases = pricePurchases({
       purchases: d.purchases.map((p) => (p.kind === "feat" ? { ...p, feat: this.#doc(p.uuid) ?? { name: "", system: { prerequisites: {} } } } : p)),
       values, cls, race: race ? { name: race.name } : null, owned: [], released: d.released.includes("xp")
@@ -160,12 +164,20 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
         }
         case "equipment": {
           const eq = equipmentSlots({ picks: d.equipment.map((p) => ({ slot: p.slot, item: this.#equipmentInfo(this.#doc(p.uuid)) })).filter((p) => p.item) });
-          return { ...eq, warnings: eq.empty ? ["emptySlots"] : [] };
+          // Inherited items (spec 027): blocked above the Inheritance rating, the GM may release.
+          const inheritance = this.#inheritance();
+          return { ok: eq.ok && inheritance.ok, reasons: [...new Set([...eq.reasons, ...inheritance.reasons])], warnings: eq.empty ? ["emptySlots"] : [] };
         }
         default: return { ok: true, reasons: [] };
       }
     })();
     return { ok: out.ok, reasons: out.reasons ?? [], warnings: out.warnings ?? [], released: d.released.includes(step) };
+  }
+
+  /** Inherited items of the draft checked against the Inheritance rating (spec 027). */
+  #inheritance() {
+    const items = this.draft.inheritance.map((p) => this.#equipmentInfo(this.#doc(p.uuid))).filter(Boolean);
+    return inheritanceItems({ level: this.draft.backgrounds.inheritance ?? 0, items });
   }
 
   /** Rarity and artifact flag of an equipment document. */
@@ -298,6 +310,8 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
           .map((r) => ({ ...r, label: localize(`DTD.Background.${r.key}.label`), hint: localize(`DTD.Background.${r.key}.hint`) })),
         artifactHint: localize("DTD.Background.artifact.hint"),
         artifacts: d.artifacts.map((a, index) => ({ ...a, index })),
+        backingHint: localize("DTD.Background.backing.hint"),
+        backings: d.backings.map((b, index) => ({ ...b, index })),
         free: s.backgrounds.free, xp: s.backgrounds.xp
       };
       case "alignment": {
@@ -361,7 +375,27 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
             });
           }
         }
-        return { slots };
+        // Inherited items (spec 027): any non-artifact item, grouped by rarity, repeats allowed.
+        const level = d.backgrounds.inheritance ?? 0;
+        const use = this.#inheritance();
+        const groups = Object.keys(RARITIES).map((rarity) => ({
+          label: localize(`DTD.Rarity.${rarity}`),
+          items: this.data.equipment.filter((e) => e.system.rarity === rarity && !ARTIFACT_CATEGORIES.includes(e.system.category)).sort((a, b) => a.name.localeCompare(b.name))
+        })).filter((g) => g.items.length);
+        const inheritance = {
+          level, hint: localize("DTD.Background.inheritance.hint"),
+          use: level > 0 ? format("DTD.Builder.InheritanceUse", { used: use.used, max: use.max }) : "",
+          over: use.reasons.includes("inheritanceOver"),
+          rows: d.inheritance.map((p, index) => {
+            const item = this.#doc(p.uuid);
+            return {
+              index, rarity: item ? localize(`DTD.Rarity.${item.system.rarity}`) : "",
+              desc: item ? [itemNumbers(item), shortLine(item.system.effectText || item.system.description, 140)].filter(Boolean).join(" — ") : "",
+              groups: groups.map((g) => ({ label: g.label, options: g.items.map((e) => ({ uuid: e.uuid, name: e.name, selected: e.uuid === p.uuid })) }))
+            };
+          })
+        };
+        return { slots, inheritance };
       }
       case "review": return {
         checks: BUILDER_STEPS.filter((k) => k !== "review").map((key) => {
@@ -425,9 +459,11 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
       const set = new Set(this.draft.race.choice.skills);
       if (input.checked) set.add(input.value); else set.delete(input.value);
       this.draft.race.choice.skills = [...set];
-    } else if (path.startsWith("artifacts.")) {
-      const [, index, field] = path.split(".");
-      this.draft.artifacts[Number(index)][field] = field === "value" ? Math.max(0, Number(input.value) || 0) : input.value;
+    } else if (path.startsWith("artifacts.") || path.startsWith("backings.")) {
+      const [list, index, field] = path.split(".");
+      this.draft[list][Number(index)][field] = field === "value" ? Math.max(0, Number(input.value) || 0) : input.value;
+    } else if (path.startsWith("inheritance.")) {
+      this.draft.inheritance[Number(path.split(".")[1])] = { uuid: value };
     } else if (path.startsWith("equipment.")) {
       const [, slot, n] = path.split(".");
       this.draft.equipment = this.draft.equipment.filter((p) => !(p.slot === slot && p.n === Number(n)));
@@ -534,6 +570,26 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
 
   static async #onRemoveArtifact(event, target) {
     this.draft.artifacts.splice(Number(target.dataset.index), 1);
+    await this.#changed();
+  }
+
+  static async #onAddBacking() {
+    this.draft.backings.push({ name: "", value: 1 });
+    await this.#changed();
+  }
+
+  static async #onRemoveBacking(event, target) {
+    this.draft.backings.splice(Number(target.dataset.index), 1);
+    await this.#changed();
+  }
+
+  static async #onAddInheritance() {
+    this.draft.inheritance.push({ uuid: "" });
+    await this.#changed();
+  }
+
+  static async #onRemoveInheritance(event, target) {
+    this.draft.inheritance.splice(Number(target.dataset.index), 1);
     await this.#changed();
   }
 }

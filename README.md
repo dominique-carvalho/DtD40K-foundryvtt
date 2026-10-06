@@ -1,156 +1,155 @@
 # DtD40K-foundryvtt
 
-Sistema de jogo **não oficial** para [Foundry VTT](https://foundryvtt.com/) do RPG
-*Dungeons the Dragoning* (LawfulNice), revisão **7.7a** — um sistema **Roll & Keep** com d10.
+An **unofficial** [Foundry VTT](https://foundryvtt.com/) game system for *Dungeons the Dragoning* (LawfulNice),
+revision **7.7a** — a d10 **Roll & Keep** game.
 
-> Projeto de fã. As descrições exibidas são resumos com redação própria; nenhum texto integral
-> do livro é reproduzido.
+> Fan project. The descriptions shown are summaries in our own words; no full text from the book is reproduced.
 
-## Recursos (versão 0.5.0)
+## Features (version 0.6.0)
 
-- **Ficha de personagem** no layout clássico da ficha oficial, com três modos:
-  - **Edição** — características na grade 3×3 (Power / Finesse / Resistance × Mental / Físico /
-    Social) e 27 perícias em 3 colunas, com pontos clicáveis, especialidades e ajustes do Mestre
-    (bônus e substituição dos valores derivados).
-  - **Jogo** — cabeçalho fixo com HP, Resolve, defesas e Hero Points; perícias com busca e filtro
-    "só treinadas"; clique para rolar, com a parada (ex.: `6k3`) ao lado de cada item.
-  - **Evolução** — como o modo Jogo, com um botão `+custo` em cada característica, perícia e no Power
-    Stat para comprar com XP (sem cobrança no modo Edição).
-- **Valores derivados** calculados automaticamente: Static Defense, Hit Points, Mental Defense,
-  Resolve, Speed, Resilience e Fatigue máxima; iniciativas de combate e social no rodapé.
-- **Rolagem Roll & Keep**: 10 explode e soma no mesmo dado, conversão acima de 10 dados, perícia
-  sem treino, característica 0, raises e checks, cartão no chat e suporte ao Dice So Nice.
-- **Diálogo de rolagem**: TN, troca de característica, modificadores, free raises, stunt (+1k1/+2k2/+3k3),
-  especialidade (rerrola 1s) e modo de rolagem. **Shift + clique** rola direto.
-- **Raças**: compêndio *Races* com as 16 raças da 7.7a. Arrastar uma raça para a ficha aplica
-  Size e bônus como Active Effects (com escolha da característica), poderes simples automatizados
-  e contador de usos por cena; aba *Traços* com o poder, os modificadores (o Mestre liga/desliga)
-  e um ícone "i" com descrição e ambientação.
-- **Exaltações**: compêndio *Exaltations* com as 9 exaltações da 7.7a e *Exalted Assets* com os
-  75 assets (em pastas por grupo). Arrastar uma exaltação para a ficha cria o Power Stat (teto =
-  Level), a reserva do recurso com o máximo calculado, os poderes liberados por ponto, o limite de
-  gasto por rodada, a Tell da cena e as escolhas do Paragon e do Dragonblooded; assets validam
-  exaltação, raça e o limite de um (exceto Paragon), com efeitos simples automatizados, e custam 100 XP
-  (o da Perfection é grátis), com desfazer pelo histórico de XP.
-- **Feats, Assets e Hindrances**: compêndio *Feats* com as 274 entradas do cap. 7 da 7.7a (181 feats, 49
-  feats raciais por raça, 22 assets e 22 hindrances). Arrastar para a ficha pede a subcategoria dos feats de
-  grupo, confere repetição, raça, dependências e o limite de 2 hindrances (o Mestre pode incluir mesmo
-  assim), aplica 15 efeitos simples como modificadores desligáveis e concede automaticamente os feats que
-  raças, exaltações e assets dão — removidos junto com a origem.
-- **Classes e XP**: compêndio *Classes* com as 103 classes do cap. 6 da 7.7a (18 trilhas e 13 avulsas).
-  Arrastar uma classe para a ficha confere Level e pré-requisitos (o Mestre pode iniciar mesmo assim); a aba
-  *Classe e XP* mostra o progresso nos feats obrigatórios, conclui a classe com o bônus (os simples como
-  modificadores desligáveis, feats concedidos) e deriva o Level da classe mais alta. O modo **Evolução**
-  compra características, perícias, feats e Power Stat com os custos da 7.7a, restritos às listas da classe
-  (Free Study em dobro), com histórico de XP, prêmios do Mestre e desfazer.
-- **Equipamento**: compêndio *Equipment* com os 170 itens dos caps. XIII e XIV da 7.7a (armas, armaduras, gear,
-  cibernéticos, drogas, materiais mágicos, Wonders e Hearthstones). Aba *Equipamento* com inventário e itens
-  equipados: armadura dá AP por localização e aplica a penalidade de proficiência e o Max Dex; armas rolam ataque
-  (perícia + Level se proficiente) e dano com diálogo de alcance, mira e modo de tiro, qualidades, emperramento e
-  localização; efeitos de itens só valem equipados (desligáveis pelo Mestre). Aquisição pelo teste de Wealth com
-  qualidade, tentativas, Liquid Wealth e Wealth Strain; vagas do equipamento inicial; drogas com doses e vício;
-  materiais mágicos e encaixe de hearthstones.
-- **Combate**: aba *Combate* com as 38 ações do cap. XVII (turno controlado: ação completa ou duas meias diferentes,
-  livres e 1 reação por rodada), condições da 7.7a como status effects com efeitos numéricos, Critical Damage,
-  ferimentos, fadiga, descanso e Hero Point contra a morte. O cartão de dano ganha **Aplicar** (cobertura, AP − Pen,
-  Resilience, HP e críticos das 20 tabelas do compêndio *Combat Tables*, com Desfazer); o cartão de ataque ganha
-  Dodge e Parry; iniciativa com o desempate do livro; combate social (Resolve, Jaded, Refute), testes de medo com a
-  Shock Table e insanidade com Trauma Test e derangements.
-- **Magia**: compêndio *Spells* com as 126 magias do cap. VIII em 9 escolas; escolas compradas com XP no modo Evolução
-  (lista da classe, teto no Level) e cada ponto libera uma magia; aba *Magia* com Focus Power (Fettered, Unfettered,
-  Push), keywords, dano de magia contra Aura, resistência do alvo, efeitos simples, Psychic Phenomena e Perils of the
-  Warp rolados e aplicados, magias sustentadas cobradas no turno, Spell Combos e Implement Focus.
-- **Sword Schools e Gun Kata**: compêndio *Martial Schools* com as 9 Sword Schools e os 6 Gun Kata dos caps. IX–X;
-  escolas compradas com XP (lista da classe, teto no Level), Martial Adept e Gunslinger Level, passivas numéricas como
-  efeitos; aba *Marcial* com o montador de Special Attacks e Trick Shots (orçamento de Style Points, 50 XP por ponto)
-  e o uso em combate: restrições de uso, teste de perícia, bônus de ataque/dano/Pen, qualidades e efeitos no alvo.
-- **Backgrounds e Alinhamento**: os 11 Backgrounds na aba *Traços* com 7 pontos de criação e XP 50/100 (só na
-  criação), Artifact e Backing nomeados, Wealth da aquisição, Inheritance somando itens iniciais e rolagem de Contacts;
-  compêndio *Deities* (21 deuses em 3 panteões) arrastado para a ficha; Alignment Check, recuperar Devotion, troca de
-  alinhamento e Degeneration rolada, registrada por ponto de Devotion e com efeitos aplicados.
-- **NPCs e Minions**: atores NPC com o bloco do livro (valores como impressos), armas embutidas no ataque/dano/Aplicar,
-  condições, turno e magia; traits automatizados (armadura, Aura, Regeneration, Fear, Amorphous, Mindless, Undead,
-  Caster); compêndio *Antagonists* com as 47 fichas e 4 Minion Squads; squads com ataque (minions)k(TR), dano
-  5 × (DR + raises), baixas no Aplicar e bônus de minions aliados a um herói.
-- **Veículos**: compêndio *Vehicle Components* (componentes e 27 armas de veículo do cap. XV em 8 pastas) e *Vehicles*
-  (16 veículos de exemplo); ator de veículo montado por arraste com orçamento em VP, slots e avisos, tração ativa e
-  tripulação ligada a personagens e NPCs; ações de veículo pelo turno de quem age (Move, Punch It com stunts, Skirmish
-  e Barrage com a perícia do atirador, Evasive Maneuvers, Ramming, Jury Rig), Control Test e Out of Control, dano pelo
-  Aplicar com críticos de veículo e explosão, perseguições por cartão de chat e ciclo de reparo.
-- **Naves**: compêndio *Ship Components* (cascos, bases customizáveis, oficiais, consoles, escudos, armas e torpedos do
-  cap. XVI) e *Ships* (6 naves de NPC); montador com BP por Holdings, customização, slots e avisos, oficiais ligados a
-  personagens e NPCs; combate de naves no tracker (uma manobra e uma ação por departamento, Crew comprometida por
-  rodada, dados mantidos pelo oficial), ataques e Aplicar de nave (escudo, Disruption, Hull e Crit Chart), Evasive,
-  ramming e abordagem; caças, bombardeio, viagem pelo Warp com encontros, hangar de veículos e reparos.
-- **Criação de armas**: montador (templates, tipos e mods do Story Master) com prévia do perfil, raridade e TN; armas
-  de jogador aguardam a aprovação do Mestre e podem ser fabricadas (materiais por Wealth, depois Crafts); Red-Dot Sight,
-  Motion Predictor, Breacher, Nonlethal, Unstable e Orgone Array entram no ataque.
-- **Criação guiada**: painel na ficha durante a criação com os pontos 6/4/2 e 8/6/4 (máx. 4 e 3), XP inicial,
-  especialidades e checklist das etapas; máximo 5 nas notas (6 pelas exceções do livro); classe de nível 1, Assets e
-  Hindrances só na criação; encerrar pede confirmação quando falta algo.
-- **Ações de combate**: Suppressing Fire e Overwatch com a zona de 45° como template no mapa, testes de Pinning pelo
-  cartão e a rajada no início do turno do atirador; testes opostos (Bull Rush, Knock Down, Disarm, Feint); Grapple
-  completo com as opções de cada lado; Delay fora do turno; condição Em cobertura com o AP da cobertura.
-- **Perigos e XP**: ferramentas do Mestre para queda (dano direto, Critical Damage da queda fatal, Catfall e
-  Acrobatics), sufocamento e marcha forçada por intervalo com imunes detectados, e XP para o grupo pela tabela de
-  Encounter Difficulty ou por sessão.
-- **Munição**: tiros no pente e pentes de reserva por arma, gasto por tiro, rajada (ROF efetivo com o que restar) e
-  Suppressing Fire, lançadores gastando a granada ou o míssil, recarga pelo tempo da arma com progresso, emperrar
-  travando a arma até o Clear Jam.
-- **Traits de NPC no mapa e no turno**: Flyer voa por padrão e cai se ficar Stunned, Unconscious ou Prone; Phasing
-  incorpóreo atravessa paredes e só sofre dano de magia ou Power Field; Dark Sight dá visão no escuro e ignora a
-  escuridão (+5 SD); Crawler ignora terreno difícil; Auto-Stabilized faz Full Auto Burst como meia ação; aviso de
-  alcance com elevação. Habilidades de ataque rolam pela ficha (Mind Blast em cone, Frightful Presence, calor do
-  Elemental, Gauss Weapon, Possession); Minion Squads agem no turno; formas alternativas (Warform, composição do
-  Elemental), Resource Stat e editores na aba Antagonista.
-- **Montador de personagem**: botão "Novo personagem" na aba de atores abre um assistente na ordem do livro
-  (conceito, raça, exaltação, características e perícias por prioridade, especialidades, classe, backgrounds com
-  Artifacts e Backings por organização, divindade, Assets e Hindrances, Exalted Asset, XP inicial, equipamento por
-  raridade e itens herdados pela Inheritance, conferidos pela nota), com resumo lateral, bloqueio
-  das escolhas fora da regra (o Mestre libera) e rascunho salvo. Cada escolha traz uma descrição curta: linha com XP e
-  requisitos nas listas (Assets, Hindrances, classes, feats, backgrounds, equipamento) e painel com os fatos principais
-  da raça, exaltação, divindade e Exalted Asset selecionados, para não precisar consultar o livro. Jogadores sem permissão de criar atores têm o
-  personagem criado pelo Mestre conectado.
-- **Visual Scriptorium Machina**: ficha de personagem em dois layouts, Cogitador (padrão: trilho lateral com os
-  recursos sempre à vista) e Iluminura (página de códice), escolhidos no menu de ficha; cartões de chat com dados em
-  facetas de d10; variantes clara (pergaminho) e escura (cogitador) que seguem o tema do Foundry; fontes livres
-  empacotadas. Detalhes em `docs/design-system.md`.
-- **Ícones próprios**: todos os itens, atores e tabelas dos compêndios têm ícone na placa Cogitador (octógono de ferro,
-  aro de latão e glifo na cor da categoria); itens e atores criados no mundo nascem com o ícone do tipo, e o Mestre
-  atualiza os documentos antigos do mundo em Configurações → Ícones dos compêndios. As 30 condições e os efeitos do
-  sistema usam um selo redondo (disco de ferro, anel na cor da gravidade: dano, incapacidade, restrição, postura
-  favorável); os efeitos dos itens usam o ícone do item.
-- Interface em **português (pt-BR)** e **inglês**.
+- **Character sheet** in the classic layout of the official sheet, with three modes:
+  - **Edit** — characteristics in the 3×3 grid (Power / Finesse / Resistance × Mental / Physical / Social) and 27
+    skills in 3 columns, with clickable dots, specialties and GM adjustments (bonuses and overrides of the derived
+    values).
+  - **Play** — fixed header with HP, Resolve, defenses and Hero Points; skills with search and a "trained only"
+    filter; click to roll, with the pool (e.g. `6k3`) next to each entry.
+  - **Advance** — like Play, with a `+cost` button on each characteristic, skill and the Power Stat to buy with XP
+    (no charge in Edit mode).
+- **Derived values** computed automatically: Static Defense, Hit Points, Mental Defense, Resolve, Speed, Resilience
+  and maximum Fatigue; combat and social initiative in the footer.
+- **Roll & Keep dice**: 10s explode onto the same die, conversion above 10 dice, untrained skills, characteristic 0,
+  raises and checks, chat card and Dice So Nice support.
+- **Roll dialog**: TN, characteristic swap, modifiers, free raises, stunts (+1k1/+2k2/+3k3), specialty (reroll 1s)
+  and roll mode. **Shift + click** rolls directly.
+- **Races**: *Races* compendium with the 16 races of 7.7a. Dropping a race on the sheet applies Size and bonuses as
+  Active Effects (with the characteristic choice), automates the simple powers and counts uses per scene; the
+  *Traits* tab shows the power, the modifiers (the GM toggles them) and an "i" icon with description and lore.
+- **Exaltations**: *Exaltations* compendium with the 9 exaltations of 7.7a and *Exalted Assets* with the 75 assets
+  (in folders by group). Dropping an exaltation on the sheet creates the Power Stat (capped by Level), the resource
+  pool with its computed maximum, the powers unlocked per dot, the spending limit per round, the scene's Tell and the
+  Paragon and Dragonblooded choices; assets check exaltation, race and the one-asset limit (except Paragon), automate
+  simple effects and cost 100 XP (Perfection's is free), with undo from the XP log.
+- **Feats, Assets and Hindrances**: *Feats* compendium with the 274 entries of ch. 7 of 7.7a (181 feats, 49 racial
+  feats by race, 22 assets and 22 hindrances). Dropping one on the sheet asks for the subcategory of group feats,
+  checks repeats, race, dependencies and the 2-hindrance limit (the GM may add it anyway), applies 15 simple effects
+  as toggleable modifiers and grants the feats that races, exaltations and assets give — removed with their source.
+- **Classes and XP**: *Classes* compendium with the 103 classes of ch. 6 of 7.7a (18 tracks and 13 standalone).
+  Dropping a class on the sheet checks Level and prerequisites (the GM may start it anyway); the *Class & XP* tab
+  shows progress on the mandatory feats, completes the class with its bonus (simple ones as toggleable modifiers,
+  granted feats) and derives Level from the highest class. **Advance** mode buys characteristics, skills, feats and
+  the Power Stat at the 7.7a costs, limited to the class lists (Free Study at double cost), with an XP log, GM awards
+  and undo.
+- **Equipment**: *Equipment* compendium with the 170 items of chs. XIII and XIV of 7.7a (weapons, armor, gear,
+  cybernetics, drugs, magic materials, Wonders and Hearthstones). *Equipment* tab with inventory and equipped items:
+  armor gives AP by location and applies the proficiency penalty and Max Dex; weapons roll attack (skill + Level if
+  proficient) and damage with a range, aim and fire-mode dialog, qualities, jams and hit location; item effects only
+  apply while equipped (the GM can toggle them). Acquisition through the Wealth test with craftsmanship, attempts,
+  Liquid Wealth and Wealth Strain; starting equipment slots; drugs with doses and addiction; magic materials and
+  hearthstone sockets.
+- **Combat**: *Combat* tab with the 38 actions of ch. XVII (controlled turn: one full action or two different half
+  actions, free actions and 1 reaction per round), 7.7a conditions as status effects with numeric effects, Critical
+  Damage, wounds, fatigue, rest and the Hero Point against death. The damage card gets **Apply** (cover, AP − Pen,
+  Resilience, HP and criticals from the 20 tables of the *Combat Tables* compendium, with Undo); the attack card gets
+  Dodge and Parry; initiative with the book's tie-breaker; social combat (Resolve, Jaded, Refute), fear tests with
+  the Shock Table and insanity with the Trauma Test and derangements.
+- **Magic**: *Spells* compendium with the 126 spells of ch. VIII in 9 schools; schools bought with XP in Advance mode
+  (class list, capped by Level), each dot unlocking a spell; *Magic* tab with Focus Power (Fettered, Unfettered,
+  Push), keywords, spell damage against Aura, target resistance, simple effects, Psychic Phenomena and Perils of the
+  Warp rolled and applied, sustained spells charged each turn, Spell Combos and Implement Focus.
+- **Sword Schools and Gun Kata**: *Martial Schools* compendium with the 9 Sword Schools and 6 Gun Kata of chs.
+  IX–X; schools bought with XP (class list, capped by Level), Martial Adept and Gunslinger Level, numeric passives as
+  effects; *Martial* tab with the Special Attack and Trick Shot builder (Style Point budget, 50 XP per point) and their
+  use in combat: usage restrictions, skill test, attack/damage/Pen bonuses, qualities and effects on the target.
+- **Backgrounds and Alignment**: the 11 Backgrounds in the *Traits* tab with 7 creation dots and 50/100 XP (only at
+  creation), named Artifacts and Backings, Wealth from acquisition, Inheritance adding starting picks and the Contacts
+  roll; *Deities* compendium (21 gods in 3 pantheons) dropped on the sheet; Alignment Check, Devotion recovery,
+  alignment change and rolled Degeneration, recorded per Devotion dot with its effects applied.
+- **NPCs and Minions**: NPC actors with the book's stat block (values as printed), built-in weapons in attack, damage
+  and Apply, conditions, turn and magic; automated traits (armor, Aura, Regeneration, Fear, Amorphous, Mindless,
+  Undead, Caster); *Antagonists* compendium with the 47 stat blocks and 4 Minion Squads; squads attacking with
+  (minions)k(TR), damage 5 × (DR + raises), casualties on Apply and allied minion bonuses to a hero.
+- **Vehicles**: *Vehicle Components* compendium (components and the 27 vehicle weapons of ch. XV in 8 folders) and
+  *Vehicles* (16 sample vehicles); vehicle actor built by drag and drop with a VP budget, slots and warnings, active
+  drive and crew linked to characters and NPCs; vehicle actions on the acting crew member's turn (Move, Punch It with
+  stunts, Skirmish and Barrage with the gunner's skill, Evasive Maneuvers, Ramming, Jury Rig), Control Test and Out of
+  Control, damage through Apply with vehicle criticals and explosions, chases through chat cards and the repair cycle.
+- **Ships**: *Ship Components* compendium (hulls, customizable bases, officers, consoles, shields, weapons and
+  torpedoes of ch. XVI) and *Ships* (6 NPC ships); builder with BP by Holdings, customization, slots and warnings,
+  officers linked to characters and NPCs; ship combat in the tracker (one maneuver and one action per department, Crew
+  committed per round, dice kept by the officer), ship attacks and Apply (shield, Disruption, Hull and Crit Chart),
+  Evasive, ramming and boarding; fighters, bombardment, Warp travel with encounters, vehicle hangar and repairs.
+- **Weapon crafting**: builder (Story Master templates, types and mods) with a preview of the profile, rarity and TN;
+  player weapons wait for GM approval and can be crafted (materials through Wealth, then Crafts); Red-Dot Sight,
+  Motion Predictor, Breacher, Nonlethal, Unstable and Orgone Array affect the attack.
+- **Guided creation**: panel on the sheet during creation with the 6/4/2 and 8/6/4 dots (max 4 and 3), starting XP,
+  specialties and a checklist of the steps; ratings capped at 5 (6 by the book's exceptions); Level 1 class, Assets
+  and Hindrances only at creation; ending creation asks for confirmation when something is missing.
+- **Combat actions**: Suppressing Fire and Overwatch with the 45° zone as a map template, Pinning tests from the card
+  and the burst at the start of the shooter's turn; opposed tests (Bull Rush, Knock Down, Disarm, Feint); full Grapple
+  with each side's options; Delay outside the turn; the In Cover condition with the cover's AP.
+- **Hazards and XP**: GM tools for falling (direct damage, the fatal fall's Critical Damage, Catfall and Acrobatics),
+  suffocation and forced march per interval with immune actors detected, and party XP from the Encounter Difficulty
+  table or per session.
+- **Ammunition**: rounds in the magazine and spare magazines per weapon, spent per shot, bursts (effective ROF with
+  what is left) and Suppressing Fire, launchers spending the grenade or missile, reloading over the weapon's time with
+  progress, jams locking the weapon until Clear Jam.
+- **NPC traits on the map and in the turn**: Flyer flies by default and falls when Stunned, Unconscious or Prone;
+  incorporeal Phasing passes through walls and only takes damage from magic or Power Fields; Dark Sight sees in the
+  dark and ignores darkness (+5 SD); Crawler ignores difficult terrain; Auto-Stabilized makes Full Auto Burst a half
+  action; range warning with elevation. Attack abilities roll from the sheet (Mind Blast in a cone, Frightful
+  Presence, Elemental heat, Gauss Weapon, Possession); Minion Squads act in the turn; alternate forms (Warform,
+  Elemental composition), Resource Stat and editors in the Antagonist tab.
+- **Character builder**: a "New character" button in the Actors tab opens a wizard in the book's order (concept,
+  race, exaltation, characteristics and skills by priority, specialties, class, backgrounds with Artifacts and
+  Backings by organization, deity, Assets and Hindrances, Exalted Asset, starting XP, equipment by rarity and the items
+  inherited through Inheritance, checked against the rating), with a side summary, blocking of choices outside the
+  rules (the GM releases them) and a saved draft. Every choice comes with a short description: a line with XP and
+  requirements in the lists (Assets, Hindrances, classes, feats, backgrounds, equipment) and a panel with the key facts
+  of the selected race, exaltation, deity and Exalted Asset, so players don't need the book. Players who may not
+  create actors get the character created by the connected GM.
+- **Visual Scriptorium Machina**: character sheet in two layouts, Cogitator (default: side rail with the resources
+  always in view) and Illuminated (codex page), picked from the sheet menu; chat cards with dice on d10 facets; light
+  (parchment) and dark (cogitator) variants that follow the Foundry theme; bundled free fonts. Details in
+  `docs/design-system.md`.
+- **Custom icons**: every item, actor and table in the compendiums has an icon on the Cogitator plate (iron octagon,
+  brass rim and a glyph in the category color); items and actors created in the world start with their type's icon,
+  and the GM updates older world documents in Settings → Compendium icons. The 30 conditions and the system's effects
+  use a round seal (iron disc, ring in the color of the severity: damage, incapacitation, restraint, favorable
+  stance); item effects use the item's icon.
+- Interface in **English** and **Brazilian Portuguese (pt-BR)**.
 
-## Requisitos
+## Requirements
 
-- Foundry VTT **v13** (testado no 13.351).
+- Foundry VTT **v13** (tested on 13.351).
 
-## Instalação
+## Installation
 
-### Pelo manifesto
+### From the manifest
 
-Em *Game Systems → Install System*, cole o endereço do manifesto:
+In *Game Systems → Install System*, paste the manifest URL:
 
 ```text
 https://github.com/dominique-carvalho/DtD40K-foundryvtt/releases/latest/download/system.json
 ```
 
-O manifesto aponta sempre para a release mais recente; o Foundry avisa quando há atualização.
+The manifest always points to the latest release; Foundry tells you when an update is available.
 
-### Local (desenvolvimento)
+### Local (development)
 
-Crie um *junction* da pasta do repositório para `Data/systems/dtd40k` (não exige administrador):
+Build the compendiums first (see [Compendiums](#compendiums)), then create a *junction* from the repository folder to
+`Data/systems/dtd40k` (no administrator rights needed):
 
 ```powershell
-New-Item -ItemType Junction -Path "$env:LOCALAPPDATA\FoundryVTT\Data\systems\dtd40k" -Target "C:\caminho\para\DtD40K-foundryvtt"
+New-Item -ItemType Junction -Path "$env:LOCALAPPDATA\FoundryVTT\Data\systems\dtd40k" -Target "C:\path\to\DtD40K-foundryvtt"
 ```
 
-Reinicie o Foundry: **Dungeons the Dragoning** aparece em *Game Systems*.
+Restart Foundry completely: **Dungeons the Dragoning** shows up in *Game Systems*. Foundry resolves the system's path
+when the application starts, so changing the junction also needs a full restart (reopening the world keeps the old
+path). CSS, templates and language files reload without a restart (`flags.hotReload` in `system.json`).
 
-## Desenvolvimento
+## Development
 
-Requer Node.js 20+.
+Requires Node.js 20+.
 
 ```bash
 npm install
@@ -168,68 +167,85 @@ npm run lint
 npm run test:coverage
 ```
 
-Estrutura principal:
+Main layout:
 
-| Caminho | Conteúdo |
+| Path | Contents |
 |---|---|
-| `module/config.mjs`, `module/rules/` | Regras puras (sem Foundry), cobertas por testes Vitest |
-| `module/data/`, `module/documents/` | Modelos de dados (personagem, raça), documentos `Actor`/`Item` e serviço de raça |
-| `module/dice/` | Adaptador de rolagem (Roll do Foundry, chat, Dice So Nice) |
-| `module/apps/` | Fichas de personagem e de raça (ApplicationV2) e diálogo de rolagem (DialogV2) |
-| `templates/`, `styles/`, `lang/` | Handlebars, CSS e traduções |
-| `src/packs/`, `scripts/` | Fonte JSON dos compêndios e scripts de build/extract |
-| `specs/`, `docs/` | Especificações (Spec Kit) e análise das regras |
+| `module/config.mjs`, `module/rules/` | Pure rules (no Foundry), covered by Vitest tests |
+| `module/data/`, `module/documents/` | Data models, `Actor`/`Item` documents and the services that apply rules to them |
+| `module/dice/` | Roll adapter (Foundry Roll, chat, Dice So Nice) |
+| `module/apps/` | Sheets, builders, the character builder and dialogs (ApplicationV2) |
+| `templates/`, `styles/`, `lang/` | Handlebars, CSS and translations |
+| `src/packs/`, `src/icons/`, `scripts/` | JSON source of the compendiums, icon sources and build/extract scripts |
+| `specs/`, `docs/` | Specifications (Spec Kit, in Portuguese) and rules analysis |
 
-O desenvolvimento segue o fluxo [Spec Kit](https://github.com/github/spec-kit) e a constituição
-em `.specify/memory/constitution.md`. A referência de regras é a **DtD 7.7a**; a análise está em
-[`docs/analise-dtd.md`](docs/analise-dtd.md).
+Development follows the [Spec Kit](https://github.com/github/spec-kit) flow and the constitution in
+`.specify/memory/constitution.md`. The rules reference is **DtD 7.7a**; the analysis is in
+[`docs/analise-dtd.md`](docs/analise-dtd.md) and what is still missing in [`docs/pendencias.md`](docs/pendencias.md)
+(both in Portuguese).
 
-## Compêndios
+## Compendiums
 
-A fonte dos compêndios fica em `src/packs/<nome>/*.json` (um arquivo por documento, versionado).
-O Foundry lê a versão compilada em LevelDB em `packs/<nome>/`, que **não é versionada** e é
-gerada com:
+The compendium source lives in `src/packs/<name>/*.json` (one file per document, versioned). Foundry reads the
+compiled LevelDB version in `packs/<name>/`, which is **not versioned** and is built with:
 
 ```bash
 npm run build:packs
 ```
 
-- **Feche o Foundry por completo** antes do build (sair do mundo não basta: o servidor pode continuar segurando o LOCK do pack). Se o pack estiver em uso, o build avisa e não altera nada.
-- Depois do build, abra o Foundry e confira o compêndio (ex.: 16 raças).
-- Nunca edite `packs/` à mão; altere os JSON em `src/packs/` e rode o build de novo.
-- Para editar um compêndio pelo Foundry: clique com o botão direito no compêndio → "Alternar trava de edição", edite os itens, feche o Foundry e rode `npm run extract:packs` para gravar as mudanças de volta em `src/packs/` (depois revise o diff e faça o commit).
-- Compêndios atuais: `races` (16 raças do cap. 4 da DtD 7.7a), `exaltations` e `exalted-assets` (cap. 5), `feats` (cap. 7), `classes` (103 classes do cap. 6) `equipment` (170 itens dos caps. XIII–XIV) `combat-tables` (22 tabelas do cap. XVII e as 2 do Warp) `spells` (126 magias do cap. VIII) `martial-schools` (15 escolas dos caps. IX–X) `deities` (21 deuses do cap. XII; a tabela Degeneration fica em `combat-tables`) `antagonists` (47 NPCs e 4 Minion Squads do cap. XX, só para o Mestre), `vehicle-components` (131 componentes, armas e munições do cap. XV), `vehicles` (16 veículos de exemplo), `ship-components` (104 peças do cap. XVI) e `ships` (6 naves de NPC).
+- **Close Foundry completely** before building (leaving the world is not enough: the server may keep the pack's
+  LOCK). If a pack is in use, the build warns and changes nothing.
+- A new checkout or worktree needs this build **before** Foundry points to it; otherwise Foundry creates empty
+  databases there.
+- After the build, open Foundry and check the compendium (e.g. 16 races).
+- Never edit `packs/` by hand; change the JSON in `src/packs/` and build again.
+- To edit a compendium in Foundry: right-click the compendium → "Toggle Edit Lock", edit the items, close Foundry and
+  run `npm run extract:packs` to write the changes back to `src/packs/` (then review the diff and commit).
+- Current compendiums: `races` (16 races, ch. 4 of DtD 7.7a), `exaltations` and `exalted-assets` (ch. 5), `feats`
+  (ch. 7), `classes` (103 classes, ch. 6), `equipment` (170 items, chs. XIII–XIV), `combat-tables` (22 tables of
+  ch. XVII and the 2 Warp tables), `spells` (126 spells, ch. VIII), `martial-schools` (15 schools, chs. IX–X),
+  `deities` (21 gods, ch. XII; the Degeneration table is in `combat-tables`), `antagonists` (47 NPCs and 4 Minion
+  Squads, ch. XX, GM only), `vehicle-components` (131 components, weapons and ammunition, ch. XV), `vehicles`
+  (16 sample vehicles), `ship-components` (104 parts, ch. XVI) and `ships` (6 NPC ships).
 
-## Ícones
+Foundry may rewrite the linked checkout's `system.json` (formatting only); restore it with
+`git checkout -- system.json` before committing.
 
-Os ícones são gerados a partir de `src/icons/` (`categories.json`: cor e glifo padrão de cada categoria;
-`curation.json`: o glifo de cada documento; `conditions.json`: grupo e glifo dos selos das condições e dos efeitos;
-`glyphs/`: os glifos do game-icons.net usados) em `assets/icons/`:
+## Icons
+
+Icons are generated from `src/icons/` (`categories.json`: each category's color and default glyph; `curation.json`:
+each document's glyph; `conditions.json`: group and glyph of the condition and effect seals; `glyphs/`: the
+game-icons.net glyphs in use) into `assets/icons/`:
 
 ```bash
 npm run build:icons
 ```
 
-- Rode antes de `npm run build:packs`: ele também grava o caminho dos ícones nos JSON de `src/packs`. Sem mudança, não altera nada.
-- Documento novo sem glifo próprio usa o padrão da categoria e entra em `src/icons/uncurated.json`; para escolher, rode `npm run icons:suggest` (candidatos em `src/icons/suggestions.json`), anote em `curation.json` e baixe o glifo com `npm run icons:fetch` (único passo com rede).
-- O teste `tests/unit/icons.test.mjs` falha se algum documento de compêndio ficar com imagem do Foundry ou sem arquivo.
+- Run it before `npm run build:packs`: it also writes the icon paths into the JSON in `src/packs`. Without changes,
+  it touches nothing.
+- A new document without its own glyph uses its category's default and is listed in `src/icons/uncurated.json`; to
+  pick one, run `npm run icons:suggest` (candidates in `src/icons/suggestions.json`), note it in `curation.json` and
+  download the glyph with `npm run icons:fetch` (the only step that uses the network).
+- `tests/unit/icons.test.mjs` fails if any compendium document is left with a Foundry image or a missing file.
 
-## Publicar uma versão
+## Releasing a version
 
-O workflow [`.github/workflows/release.yml`](.github/workflows/release.yml) roda quando uma release
-é publicada no GitHub. Ele roda lint e testes, compila os compêndios, grava a versão e o link de
-download no `system.json` e anexa `system.json` + `dtd40k.zip` à release.
+The [`.github/workflows/release.yml`](.github/workflows/release.yml) workflow runs when a release is published on
+GitHub. It runs lint and tests, builds the compendiums, writes the version and download link into `system.json` and
+attaches `system.json` + `dtd40k.zip` to the release.
 
-1. Atualize `version` em `system.json` e `package.json` e faça o commit na `main`.
-2. Publique a release com a tag `vX.Y.Z` (a mesma versão):
+1. Update `version` in `system.json`, `package.json` and `package-lock.json` and the version in this README, and merge
+   it into `main`.
+2. Publish the release with the tag `vX.Y.Z` (the same version):
 
 ```bash
-gh release create v0.1.0 --title "v0.1.0" --generate-notes
+gh release create v0.6.0 --title "v0.6.0" --notes-file notes.md
 ```
 
-3. Acompanhe o workflow em *Actions*; ao terminar, o manifesto `releases/latest/download/system.json` já aponta para a nova versão.
+3. Follow the workflow in *Actions*; when it ends, the `releases/latest/download/system.json` manifest points to the
+   new version.
 
-## Licença
+## License
 
-Sem licença definida por enquanto. *Dungeons the Dragoning* pertence a LawfulNice. Os glifos dos ícones são do
-[game-icons.net](https://game-icons.net) (CC BY 3.0); autores em [`CREDITS.md`](CREDITS.md).
+No license defined yet. *Dungeons the Dragoning* belongs to LawfulNice. The icon glyphs come from
+[game-icons.net](https://game-icons.net) (CC BY 3.0); authors in [`CREDITS.md`](CREDITS.md).

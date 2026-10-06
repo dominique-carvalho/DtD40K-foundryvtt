@@ -1,6 +1,6 @@
 {
   "name": "dtd40k",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Dungeons the Dragoning game system for Foundry VTT",
   "private": true,
   "type": "module",

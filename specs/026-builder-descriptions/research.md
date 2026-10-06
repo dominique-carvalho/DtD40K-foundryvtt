@@ -17,7 +17,7 @@
 Novo módulo `module/rules/descriptions.mjs`, sem Foundry:
 - `plainText(html)`: tira as tags e as entidades e normaliza os espaços.
 - `shortLine(html, max = 180)`: vai até o fim da primeira frase; se passar de `max`, corta na última palavra e põe "…";
-  se a primeira frase for curta (< 60), inclui a seguinte, desde que caiba.
+  se a primeira frase for só um rótulo (< 30), inclui a seguinte, desde que caiba.
 - `firstParagraph(html, max = 420)`: o primeiro `<p>` que não é um título.
 - `raceFacts(system)`: `[{ key, value }]` com o bônus de característica (opções ou "qualquer"), as perícias e a
   escolha, o tamanho, e o poder (nome e texto curto).

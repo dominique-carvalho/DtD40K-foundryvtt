@@ -358,3 +358,78 @@
   background: var(--dtd-seal);
   border-color: var(--dtd-seal-deep);
 }
+
+/* ---------- Descriptions (spec 026) ---------- */
+
+.dtd40k.character-builder .builder-desc {
+  display: block;
+  margin-top: 0.1rem;
+  font-size: var(--dtd-text-xs);
+  line-height: 1.35;
+  color: var(--dtd-ink-muted);
+}
+
+.dtd40k.character-builder .builder-facts {
+  display: block;
+  font-family: var(--dtd-font-data);
+  font-size: var(--dtd-text-xs);
+  color: var(--dtd-ink-subtle);
+}
+
+/* Lists with a description: one entry per row so the line has room. */
+.dtd40k.character-builder .builder-checks.described {
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 0.45rem 1rem;
+}
+
+.dtd40k.character-builder .builder-list li .builder-desc {
+  flex-basis: 100%;
+}
+
+.dtd40k.character-builder .builder-list li:has(.builder-desc) {
+  flex-wrap: wrap;
+}
+
+.dtd40k.character-builder .builder-detail {
+  margin: 0.2rem 0 0.9rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--dtd-paper-raised);
+  border: 1px solid var(--dtd-paper-edge);
+  border-left: 3px solid var(--dtd-seal);
+  border-radius: 0;
+}
+
+.dtd40k.character-builder .builder-detail h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--dtd-font-display);
+  font-size: var(--dtd-text-sm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.dtd40k.character-builder .builder-detail dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.15rem 0.6rem;
+  margin: 0 0 0.4rem;
+  font-size: var(--dtd-text-sm);
+}
+
+.dtd40k.character-builder .builder-detail dt {
+  color: var(--dtd-ink-subtle);
+}
+
+.dtd40k.character-builder .builder-detail dd {
+  margin: 0;
+}
+
+.dtd40k.character-builder .builder-detail p {
+  margin: 0;
+  font-size: var(--dtd-text-sm);
+  line-height: 1.45;
+}
+
+.dtd40k.character-builder .builder-select-desc {
+  flex-basis: 100%;
+  margin: 0;
+}

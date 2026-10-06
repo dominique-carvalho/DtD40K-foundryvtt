@@ -1462,37 +1462,48 @@
     },
     "Background": {
       "allies": {
-        "label": "Allies"
+        "label": "Allies",
+        "hint": "Cada ponto é um aliado de poder parecido com o seu (um Exaltado, um daemon, uma IA rebelde…) que ajuda sem arriscar a vida, e quer favores de volta."
       },
       "artifact": {
-        "label": "Artifact"
+        "label": "Artifact",
+        "hint": "Um item de poder mágico ou Syrneth; o valor (1–5) é o custo em pontos. No máximo 5 pontos de Artifacts na criação."
       },
       "backing": {
-        "label": "Backing"
+        "label": "Backing",
+        "hint": "Posto numa organização; nas missões dela, cada ponto vale o dobro em Backgrounds temporários que ela empresta."
       },
       "contacts": {
-        "label": "Contacts"
+        "label": "Contacts",
+        "hint": "Cada ponto é um contato importante bem posicionado e um dado (com Charisma ou Fellowship) para achar ajuda menor; nada sai de graça."
       },
       "fame": {
-        "label": "Fame"
+        "label": "Fame",
+        "hint": "Quanto você é conhecido: 1 uma cidade ou subcultura, 3 um país inteiro, 5 outras crystal spheres. Abre portas e chama atenção."
       },
       "followers": {
-        "label": "Followers"
+        "label": "Followers",
+        "hint": "Mortais leais: 1 até 5, 2 vinte, 3 cem, 4 mil, 5 dez mil. Para mantê-los, Wealth, Backing ou Holdings no mesmo valor."
       },
       "holdings": {
-        "label": "Holdings"
+        "label": "Holdings",
+        "hint": "Propriedade, veículo ou spelljammer: 1 uma casa, loja ou nave pequena, 3 um castelo ou nave média, 5 uma megacorporação ou encouraçado antigo. Exige equipe."
       },
       "inheritance": {
-        "label": "Inheritance"
+        "label": "Inheritance",
+        "hint": "Equipamento inicial acima do seu alcance: 1 um item Uncommon (ou 2 Common…), 2 um Rare, 3 um Very Rare, 4 um Mythic Rare, 5 qualquer item não artefato."
       },
       "mentor": {
-        "label": "Mentor"
+        "label": "Mentor",
+        "hint": "Um patrono e professor que espera obediência: 1 um pouco mais sábio que você, 3 influente e bem mais forte, 5 um poder cujos inimigos vão caçar você."
       },
       "status": {
-        "label": "Status"
+        "label": "Status",
+        "hint": "Reputação entre os Exaltados: 1 conhecido por alguns, 2 respeitado, 3 consultado, 4 seguido, 5 uma referência."
       },
       "wealth": {
-        "label": "Wealth"
+        "label": "Wealth",
+        "hint": "Renda e poder de compra: 1 classe média, 2 confortável, com um criado, 3 rico, 4 príncipe mercador, 5 praticamente sem limite."
       },
       "Title": "Backgrounds",
       "Dots": "Pontos de criação {used}/{max}",
@@ -2774,6 +2785,24 @@
         "alreadyTaken": "já feita",
         "missingSkills": "faltam perícias",
         "missingFeats": "faltam feats"
+      },
+      "Fact": {
+        "characteristic": "Característica",
+        "anyCharacteristic": "qualquer (+1)",
+        "skills": "Perícias",
+        "chooseSkills": "Escolha de perícias",
+        "size": "Tamanho",
+        "power": "Poder racial",
+        "powerStat": "Power Stat",
+        "resource": "Recurso",
+        "powers": "Poderes de posto 1",
+        "xp": "XP",
+        "requires": "Exige",
+        "pantheon": "Panteão",
+        "level": "Nível",
+        "or": "ou",
+        "capLevel": "até o nível",
+        "capDevotion": "até a Devotion"
       }
     },
     "Icons": {

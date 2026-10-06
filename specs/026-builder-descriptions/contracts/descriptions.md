@@ -2,12 +2,12 @@
 
 ```js
 plainText(html) → string
-shortLine(html, max = 180) → string            // até o fim da 1ª frase (inclui a 2ª se a 1ª < 60), "…" se cortar
+shortLine(html, max = 180) → string            // até o fim da 1ª frase (inclui a 2ª se a 1ª < 30), "…" se cortar
 firstParagraph(html, max = 420) → string        // 1º <p> com texto, cortado como shortLine
 raceFacts(system) → { key, value }[]            // characteristic, skills, chooseSkills, size, power
 exaltationFacts(system) → { key, value }[]      // powerStat, resource, powers
 featFacts(feat) → { xp: number|null, requires: string[] }   // xp: −100 Asset/feat, +N Hindrance
-classFacts(system) → { level: number, requires: string[] }  // perícias "Brawl 3", feats
+classFacts(system) → { level, skills: { keys, value }[], feats: string[] }  // o app formata "Brawl 3"
 itemNumbers(item) → string                      // arma, armadura, droga, demais
 ```
 

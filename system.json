@@ -2,7 +2,7 @@
   "id": "dtd40k",
   "title": "Dungeons the Dragoning",
   "description": "Unofficial game system for Dungeons the Dragoning 7.7a (LawfulNice): Roll & Keep d10, characters, races and exaltations.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "compatibility": {
     "minimum": "13",
     "verified": "13"

@@ -5,7 +5,7 @@ revision **7.7a** — a d10 **Roll & Keep** game.
 
 > Fan project. The descriptions shown are summaries in our own words; no full text from the book is reproduced.
 
-## Features (version 0.6.0)
+## Features (version 0.6.1)
 
 - **Character sheet** in the classic layout of the official sheet, with three modes:
   - **Edit** — characteristics in the 3×3 grid (Power / Finesse / Resistance × Mental / Physical / Social) and 27
@@ -247,5 +247,6 @@ gh release create v0.6.0 --title "v0.6.0" --notes-file notes.md
 
 ## License
 
-No license defined yet. *Dungeons the Dragoning* belongs to LawfulNice. The icon glyphs come from
+No license defined yet. *Dungeons the Dragoning* and its logo (the system background and icon) belong to LawfulNice.
+The icon glyphs come from
 [game-icons.net](https://game-icons.net) (CC BY 3.0); authors in [`CREDITS.md`](CREDITS.md).

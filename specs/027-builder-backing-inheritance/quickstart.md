@@ -34,10 +34,10 @@ restaurado (idêntico ao backup).
 | 2 | Harmonium 2, Doomguard 1, Wealth 3, Allies 1 e Inheritance 2: "Free dots used: 7 of 7 · XP spent on Backgrounds: 100" (9 pontos até 3, dois pagos) |
 | 3 | Harmonium em 4: 250 XP (três pontos pagos a 50 e o 4º a 100) |
 | 4 | Doomguard removido sem afetar Harmonium; Backing sem nome mostra o aviso "A Backing without an organization name…" |
-| 5 | Rascunho do Gamemaster (anterior à 027) com Inheritance 3: abre sem erro, listas vazias, "Used: 0 of 4" |
+| 5 | Inheritance 0: seção com o título "Inheritance 0", o texto da 026 e "Raise Inheritance in the Backgrounds step…", sem botão + nem seletores |
 | 6 | Inheritance 2: Bionic Heart (Rare) "Used: 2 of 2"; trocado por Alpha + Ballistic Mechadendrite (Uncommon) "2 of 2"; seletor com 7 grupos de raridade, sem artefatos (32 de 69 Rare); linha de descrição em cada item |
 | 7 | Terceiro Uncommon: "Used: 3 of 2" em vermelho, motivo "The inherited items exceed the Inheritance rating." e botão Release (GM) |
 | 8 | Concluído "Teste 027": Backings Harmonium 2 e Doomguard 1; log de XP dos Backgrounds somando 100 (igual ao montador); Inheritance 2 com contagem `uncommon: 2`; Medicae Mechadendrite, Alpha e Ballistic Mechadendrite no inventário, todos em vaga Uncommon |
-| 9 | Ver item 5 |
+| 9 | Rascunho do Gamemaster (anterior à 027) com Inheritance 3: abre sem erro, listas vazias, "Used: 0 of 4" |
 
 Não testado no Foundry: o recurso de adicionar sem vaga (passo liberado acima da nota para um jogador sem ser Mestre).

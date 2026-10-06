@@ -24,7 +24,7 @@ description: "Task list for 027-builder-backing-inheritance"
 - [X] T001 [P] `tests/unit/builder.test.mjs` e `tests/unit/backgrounds.test.mjs`: casos de [contracts/builder.md](contracts/builder.md) (Backing na conta, `unnamedBacking`, `inheritanceItems` com notas 0–2, artefato, igualdade com `inheritanceFits`, `buildPlan` só com itens herdados, `inheritanceUsed`); confirmar que falham
 - [X] T002 `module/rules/backgrounds.mjs`: extrair `inheritanceUsed(picks)` de `inheritanceFits` (mesmo comportamento)
 - [X] T003 `module/documents/builder-service.mjs`: `blankDraft` com `backings: []` e `inheritance: []`
-- [X] T004 [P] i18n (en, pt-BR): `DTD.Builder.Backings`, `AddBacking`, `Inheritance`, `InheritanceUse`, `AddInheritance`, `Reason.inheritanceOver`, `Reason.artifact` (se faltar), `Warning.unnamedBacking`
+- [X] T004 [P] i18n (en, pt-BR): `DTD.Builder.InheritanceUse`, `InheritanceNone`, `Reason.inheritanceOver`, `Warning.unnamedBacking` (títulos e textos reaproveitam `DTD.Background.backing/inheritance.*` e `Reason.artifact`)
 
 ---
 

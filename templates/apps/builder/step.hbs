@@ -1,3 +1,10 @@
+{{#*inline "builderDetail"}}
+<div class="builder-detail">
+  <h3>{{title}}</h3>
+  {{#if facts.length}}<dl>{{#each facts as |f|}}<dt>{{f.label}}</dt><dd>{{f.value}}</dd>{{/each}}</dl>{{/if}}
+  {{#if text}}<p>{{text}}</p>{{/if}}
+</div>
+{{/inline}}
 <section class="builder-step builder-step-{{step}}">
   <h2 class="section-title">{{localize (concat "DTD.Builder.Step." step)}}</h2>
   <p class="hint">{{localize (concat "DTD.Builder.Help." step)}}</p>
@@ -22,6 +29,7 @@
     <li class="hint">{{localize "DTD.Builder.Empty"}}</li>
     {{/each}}
   </ul>
+  {{#if view.detail}}{{> builderDetail view.detail}}{{/if}}
   {{/if}}
 
   {{#if (and (eq step "race") view.choice)}}
@@ -93,6 +101,7 @@
     <li class="{{#if c.selected}}selected{{/if}}{{#unless c.allowed}} disabled{{/unless}}">
       <a data-action="pick" data-field="class.uuid" data-value="{{c.uuid}}">{{c.name}}</a>
       {{#unless c.allowed}}<span class="hint">{{c.reasonText}}</span>{{/unless}}
+      <small class="builder-desc">{{c.desc}} <span class="builder-facts">{{c.facts}}</span></small>
     </li>
     {{/each}}
   </ul>
@@ -101,9 +110,13 @@
   {{#if (eq step "backgrounds")}}
   <p class="hint">{{localize "DTD.Builder.FreeDots" free=view.free}} · {{localize "DTD.Builder.BackgroundXp" xp=view.xp}}</p>
   {{#each view.rows as |r|}}
-  <label class="builder-rating"><span>{{r.label}}</span><input type="number" min="0" max="5" data-field="{{r.field}}" value="{{r.value}}"></label>
+  <div class="builder-background">
+    <label class="builder-rating"><span>{{r.label}}</span><input type="number" min="0" max="5" data-field="{{r.field}}" value="{{r.value}}"></label>
+    <small class="builder-desc">{{r.hint}}</small>
+  </div>
   {{/each}}
   <h3 class="section-title">{{localize "DTD.Background.artifact.label"}} <a class="pool-button" data-action="addArtifact"><i class="fa-solid fa-plus" inert></i></a></h3>
+  <p class="builder-desc">{{view.artifactHint}}</p>
   {{#each view.artifacts as |a|}}
   <div class="builder-rating">
     <input type="text" data-field="artifacts.{{a.index}}.name" value="{{a.name}}" placeholder="{{localize "Name"}}">
@@ -114,6 +127,7 @@
   {{/if}}
 
   {{#if (eq step "alignment")}}
+  {{#if view.detail}}{{> builderDetail view.detail}}{{/if}}
   {{#each view.pantheons as |p|}}
   <h3 class="section-title">{{p.label}}</h3>
   <ul class="builder-cards">
@@ -126,9 +140,9 @@
 
   {{#if (eq step "feats")}}
   <h3 class="section-title">{{localize "DTD.Builder.Hindrances"}}</h3>
-  <div class="builder-checks">{{#each view.hindrances as |h|}}<label class="{{#if h.checked}}selected{{/if}}"><a data-action="toggle" data-field="hindrances" data-value="{{h.uuid}}"><i class="fa-regular {{#if h.checked}}fa-square-check{{else}}fa-square{{/if}}" inert></i> {{h.name}}</a></label>{{/each}}</div>
+  <div class="builder-checks described">{{#each view.hindrances as |h|}}<label class="{{#if h.checked}}selected{{/if}}"><a data-action="toggle" data-field="hindrances" data-value="{{h.uuid}}"><i class="fa-regular {{#if h.checked}}fa-square-check{{else}}fa-square{{/if}}" inert></i> {{h.name}}</a><small class="builder-desc">{{h.desc}}</small><span class="builder-facts">{{h.facts}}</span></label>{{/each}}</div>
   <h3 class="section-title">{{localize "DTD.Builder.Assets"}}</h3>
-  <div class="builder-checks">{{#each view.assets as |a|}}<label class="{{#if a.checked}}selected{{/if}}"><a data-action="toggle" data-field="assets" data-value="{{a.uuid}}"><i class="fa-regular {{#if a.checked}}fa-square-check{{else}}fa-square{{/if}}" inert></i> {{a.name}}</a></label>{{/each}}</div>
+  <div class="builder-checks described">{{#each view.assets as |a|}}<label class="{{#if a.checked}}selected{{/if}}"><a data-action="toggle" data-field="assets" data-value="{{a.uuid}}"><i class="fa-regular {{#if a.checked}}fa-square-check{{else}}fa-square{{/if}}" inert></i> {{a.name}}</a><small class="builder-desc">{{a.desc}}</small><span class="builder-facts">{{a.facts}}</span></label>{{/each}}</div>
   {{/if}}
 
   {{#if (eq step "xp")}}
@@ -144,15 +158,17 @@
     </select>
     <select name="purchase-characteristic">{{#each view.characteristics as |o|}}<option value="{{o.key}}">{{o.label}}</option>{{/each}}</select>
     <select name="purchase-skill">{{#each view.skills as |o|}}<option value="{{o.key}}">{{o.label}}</option>{{/each}}</select>
-    <select name="purchase-feat">{{#each view.feats as |o|}}<option value="{{o.uuid}}">{{o.name}}</option>{{/each}}</select>
+    <select name="purchase-feat" data-describe=".builder-select-desc">{{#each view.feats as |o|}}<option value="{{o.uuid}}" data-desc="{{o.desc}}">{{o.name}}</option>{{/each}}</select>
     <select name="purchase-school">{{#each view.schools as |o|}}<option value="{{o.key}}">{{o.label}}</option>{{/each}}</select>
     <select name="purchase-martial">{{#each view.martial as |o|}}<option value="{{o.key}}">{{o.label}}</option>{{/each}}</select>
     <button type="button" data-action="addPurchase"><i class="fa-solid fa-plus" inert></i> {{localize "DTD.Builder.Buy"}}</button>
+    <p class="builder-desc builder-select-desc"></p>
   </div>
   <ol class="builder-list">
     {{#each view.entries as |e|}}
     <li class="{{#unless e.allowed}}disabled{{/unless}}">{{e.label}} · <b>{{e.cost}} XP</b>{{#if e.reason}} <span class="hint">{{e.reason}}</span>{{/if}}
-      <a data-action="removePurchase" data-index="{{e.index}}"><i class="fa-solid fa-trash" inert></i></a></li>
+      <a data-action="removePurchase" data-index="{{e.index}}"><i class="fa-solid fa-trash" inert></i></a>
+      {{#if e.desc}}<small class="builder-desc">{{e.desc}}</small>{{/if}}</li>
     {{/each}}
   </ol>
   {{/if}}
@@ -162,6 +178,7 @@
   <label class="builder-rating"><span>{{s.label}}</span>
     <select data-field="equipment.{{s.slot}}.{{s.n}}"><option value="">—</option>{{#each s.options as |o|}}<option value="{{o.uuid}}" {{#if o.selected}}selected{{/if}}>{{o.name}}</option>{{/each}}</select>
   </label>
+  {{#if s.desc}}<small class="builder-desc builder-slot-desc">{{s.desc}}</small>{{/if}}
   {{/each}}
   {{/if}}
 

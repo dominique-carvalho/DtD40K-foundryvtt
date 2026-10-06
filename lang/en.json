@@ -1462,37 +1462,48 @@
     },
     "Background": {
       "allies": {
-        "label": "Allies"
+        "label": "Allies",
+        "hint": "Each dot is one ally about as powerful as you (an Exalt, a daemon, a rogue AI…) who helps without risking their life, and wants favors back."
       },
       "artifact": {
-        "label": "Artifact"
+        "label": "Artifact",
+        "hint": "A magic or Syrneth item of power; its rating (1–5) is its cost in dots. At most 5 dots of Artifacts at creation."
       },
       "backing": {
-        "label": "Backing"
+        "label": "Backing",
+        "hint": "Rank in an organization; on its missions each dot counts double in temporary Backgrounds it lends you."
       },
       "contacts": {
-        "label": "Contacts"
+        "label": "Contacts",
+        "hint": "Each dot is one well-placed major contact plus one die (with Charisma or Fellowship) to find minor help; nothing comes free."
       },
       "fame": {
-        "label": "Fame"
+        "label": "Fame",
+        "hint": "How widely you are known: 1 a city or subculture, 3 a whole nation, 5 other crystal spheres. Opens doors, draws attention."
       },
       "followers": {
-        "label": "Followers"
+        "label": "Followers",
+        "hint": "Loyal mortals: 1 up to 5, 2 twenty, 3 a hundred, 4 a thousand, 5 ten thousand. Needs Wealth, Backing or Holdings as high to keep."
       },
       "holdings": {
-        "label": "Holdings"
+        "label": "Holdings",
+        "hint": "Property, vehicle or spelljammer: 1 a house, shop or shuttle, 3 a castle or medium ship, 5 a megacorporation or ancient battleship. Needs staff."
       },
       "inheritance": {
-        "label": "Inheritance"
+        "label": "Inheritance",
+        "hint": "Extra starting gear beyond your means: 1 one Uncommon (or 2 Common…), 2 one Rare, 3 one Very Rare, 4 one Mythic Rare, 5 any non-artifact."
       },
       "mentor": {
-        "label": "Mentor"
+        "label": "Mentor",
+        "hint": "A patron and teacher who expects obedience: 1 a bit wiser than you, 3 influential and much stronger, 5 a power whose foes will hunt you."
       },
       "status": {
-        "label": "Status"
+        "label": "Status",
+        "hint": "Standing among the Exalted: 1 known by some, 2 respected, 3 consulted, 4 followed, 5 a luminary."
       },
       "wealth": {
-        "label": "Wealth"
+        "label": "Wealth",
+        "hint": "Income and buying power: 1 middle class, 2 comfortable with a servant, 3 rich, 4 a merchant prince, 5 practically limitless."
       },
       "Title": "Backgrounds",
       "Dots": "Creation dots {used}/{max}",
@@ -2774,6 +2785,23 @@
         "alreadyTaken": "already taken",
         "missingSkills": "missing skills",
         "missingFeats": "missing feats"
+      },
+      "Fact": {
+        "characteristic": "Characteristic",
+        "anyCharacteristic": "any (+1)",
+        "skills": "Skills",
+        "chooseSkills": "Choose skills",
+        "size": "Size",
+        "power": "Racial power",
+        "powerStat": "Power Stat",
+        "resource": "Resource",
+        "powers": "Rank 1 powers",
+        "xp": "XP",
+        "requires": "Requires",
+        "pantheon": "Pantheon",
+        "level": "Level",
+        "or": "or",
+        "capLevel": "up to the Level"
       }
     },
     "Icons": {

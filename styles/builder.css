@@ -380,6 +380,10 @@
 }
 
 /* List rows: name and icon together on the left; the blocking reason takes the rest, aligned right. */
+.dtd40k.character-builder .builder-list li {
+  align-items: center;
+}
+
 .dtd40k.character-builder .builder-list .builder-name {
   flex: none;
 }
@@ -431,6 +435,11 @@
 
 .dtd40k.character-builder .builder-purchase .builder-info {
   align-self: center;
+}
+
+/* Equipment slots keep the icon's column even when empty, so the selectors line up. */
+.dtd40k.character-builder .builder-info-slot {
+  min-width: 1rem;
 }
 
 /* ---------- Inheritance (spec 027) ---------- */

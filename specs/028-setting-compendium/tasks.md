@@ -53,7 +53,7 @@ scratchpad, que grava `src/packs/setting/`.
 ## Phase 5: Polish
 
 - [X] T010 `npm test`, `npm run lint`; README (compêndio Setting); `docs/pendencias.md` (cap. XVIII sai da seção 1; integrações Backing/Warp como pendência)
-- [ ] T011 `npm run build:packs` no worktree com o Foundry fechado, link para o worktree; validar o quickstart como Mestre e como Player2 e registrar em `quickstart.md`
+- [X] T011 `npm run build:packs` no worktree com o Foundry fechado, link para o worktree; validar o quickstart como Mestre e como Player2 e registrar em `quickstart.md`
 
 ## Dependencies
 

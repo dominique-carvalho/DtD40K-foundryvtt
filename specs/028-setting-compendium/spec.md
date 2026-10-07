@@ -41,7 +41,7 @@ para o Mestre.
 
 1. **Given** o compêndio de cenário, **When** aberto, **Then** as 15 esferas do capítulo estão numa pasta própria, uma entrada por esfera.
 2. **Given** uma esfera, **When** aberta, **Then** tem as páginas condições físicas, habitantes, locais e ganchos de aventura, cada uma com um resumo curto em redação própria.
-3. **Given** um jogador (não Mestre), **When** abre uma esfera, **Then** vê condições, habitantes e locais, mas não a página de ganchos.
+3. **Given** um jogador (não Mestre), **When** abre uma esfera, **Then** lê condições, habitantes e locais; na página de ganchos vê só o aviso de que o conteúdo é do Mestre.
 
 ---
 
@@ -92,12 +92,12 @@ entrada correspondente dos compêndios do sistema.
 
 - **FR-001**: O sistema MUST ter um compêndio de cenário com entradas de diário para a história do Wheel, a cosmologia, Sigil e cada uma das 15 esferas de cristal do capítulo, organizadas em pastas (História, Cosmologia, Sigil, Esferas).
 - **FR-002**: Cada esfera MUST ter as páginas condições físicas, habitantes, locais e ganchos de aventura.
-- **FR-003**: A página de ganchos de cada esfera MUST ser visível só para o Mestre; as demais páginas, para todos.
+- **FR-003**: O conteúdo da página de ganchos de cada esfera MUST ser visível só para o Mestre (o jogador vê só um aviso); as demais páginas, para todos. (Plano: no compêndio o Foundry ignora a permissão por página; o conteúdo vai num bloco secreto, que só o dono — o Mestre — vê.)
 - **FR-004**: A entrada de Sigil MUST trazer a visão geral, a Lady of Pain, cada facção com a filosofia resumida e o líder, e os locais.
 - **FR-005**: Os textos MUST ser resumos curtos em redação própria (um a dois parágrafos por bloco), sem trechos copiados do livro, verificados pelo mesmo teste de trechos repetidos dos demais compêndios.
 - **FR-006**: Deuses, raças e exaltações citados que existem nos compêndios MUST virar links para essas entradas (a primeira citação em cada página).
 - **FR-007**: Um teste MUST conferir a quantidade de entradas e páginas, a visibilidade dos ganchos e que todos os links apontam para entradas existentes.
-- **FR-008**: As entradas MUST ter ícones no padrão dos compêndios do sistema.
+- **FR-008**: As pastas do compêndio MUST usar as cores do design system. (Plano: diários não têm imagem no Foundry v13, então não há ícone por entrada.)
 
 ### Key Entities
 
@@ -110,7 +110,7 @@ entrada correspondente dos compêndios do sistema.
 ### Measurable Outcomes
 
 - **SC-001**: As 15 esferas, a história, a cosmologia e Sigil estão no compêndio (18 entradas), e cada esfera tem as 4 páginas.
-- **SC-002**: Nenhuma página de ganchos aparece para um jogador; todas aparecem para o Mestre.
+- **SC-002**: Nenhum gancho de aventura aparece para um jogador; todos aparecem para o Mestre.
 - **SC-003**: 0 trechos de 6 palavras em comum com o texto do capítulo; cada bloco com no máximo 2 parágrafos.
 - **SC-004**: 100% dos links abrem a entrada certa; nenhum link quebrado.
 - **SC-005**: O Mestre encontra uma esfera e lê o essencial dela em menos de 1 minuto.

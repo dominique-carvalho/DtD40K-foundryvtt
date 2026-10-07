@@ -361,33 +361,33 @@
 
 /* ---------- Descriptions (spec 026) ---------- */
 
-.dtd40k.character-builder .builder-desc {
-  display: block;
-  margin-top: 0.1rem;
+/* Info icon next to a name: the short description shows as a tooltip on hover. */
+.dtd40k.character-builder .builder-info {
+  margin-left: 0.15rem;
   font-size: var(--dtd-text-xs);
-  line-height: 1.35;
-  color: var(--dtd-ink-muted);
+  color: var(--dtd-ink-subtle);
+  cursor: help;
+}
+
+.dtd40k.character-builder .builder-info:hover {
+  color: var(--dtd-seal);
 }
 
 .dtd40k.character-builder .builder-facts {
-  display: block;
   font-family: var(--dtd-font-data);
   font-size: var(--dtd-text-xs);
   color: var(--dtd-ink-subtle);
 }
 
-/* Lists with a description: one entry per row so the line has room. */
-.dtd40k.character-builder .builder-checks.described {
-  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
-  gap: 0.45rem 1rem;
+/* List rows: name and icon together on the left; the blocking reason takes the rest, aligned right. */
+.dtd40k.character-builder .builder-list .builder-name {
+  flex: none;
 }
 
-.dtd40k.character-builder .builder-list li .builder-desc {
-  flex-basis: 100%;
-}
-
-.dtd40k.character-builder .builder-list li:has(.builder-desc) {
-  flex-wrap: wrap;
+.dtd40k.character-builder .builder-list li .hint {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: right;
 }
 
 .dtd40k.character-builder .builder-detail {
@@ -429,18 +429,8 @@
   line-height: 1.45;
 }
 
-.dtd40k.character-builder .builder-select-desc {
-  flex-basis: 100%;
-  margin: 0;
-}
-
-.dtd40k.character-builder .builder-background {
-  margin-bottom: 0.35rem;
-}
-
-.dtd40k.character-builder .builder-background .builder-desc,
-.dtd40k.character-builder .builder-slot-desc {
-  margin: -0.1rem 0 0.35rem;
+.dtd40k.character-builder .builder-purchase .builder-info {
+  align-self: center;
 }
 
 /* ---------- Inheritance (spec 027) ---------- */

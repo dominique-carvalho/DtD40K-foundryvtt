@@ -210,8 +210,9 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
   }
 
   /**
-   * Short line, XP and prerequisites of a feat, Asset, Hindrance or Exalted Asset (spec 026).
-   * @returns {{desc: string, xp: string, requires: string, requiresList: string, facts: string}}
+   * Short line, XP and prerequisites of a feat, Asset, Hindrance or Exalted Asset (spec 026); `tip` joins them for the
+   * info icon next to the name.
+   * @returns {{desc: string, xp: string, requires: string, requiresList: string, facts: string, tip: string}}
    */
   #featInfo(doc) {
     const { xp, requires } = featFacts(doc);
@@ -221,7 +222,8 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
       requires: requires.length ? `${localize("DTD.Builder.Fact.requires")}: ${requires.join(", ")}` : "",
       requiresList: requires.join(", ")
     };
-    return { ...info, facts: [info.xp, info.requires].filter(Boolean).join(" · ") };
+    const facts = [info.xp, info.requires].filter(Boolean).join(" · ");
+    return { ...info, facts, tip: [info.desc, facts].filter(Boolean).join(" — ") };
   }
 
   /** Data of the current step's template. */
@@ -298,8 +300,8 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
             const reqs = [...cf.skills.map((r) => `${r.keys.map(skillLabel).join(or)} ${r.value}`), ...cf.feats];
             return {
               ...c, selected: c.uuid === d.class.uuid, reasonText: c.reasons.map((r) => localize(`DTD.Builder.ClassReason.${r}`)).join(", "),
-              desc: shortLine(system.description),
-              facts: [`${localize("DTD.Builder.Fact.level")} ${cf.level}`, reqs.length ? `${localize("DTD.Builder.Fact.requires")}: ${reqs.join(", ")}` : ""].filter(Boolean).join(" · ")
+              tip: [shortLine(system.description), `${localize("DTD.Builder.Fact.level")} ${cf.level}`,
+                reqs.length ? `${localize("DTD.Builder.Fact.requires")}: ${reqs.join(", ")}` : ""].filter(Boolean).join(" — ")
             };
           })
           .sort((a, b) => Number(b.allowed) - Number(a.allowed) || a.name.localeCompare(b.name))
@@ -432,12 +434,14 @@ export class CharacterBuilder extends HandlebarsApplicationMixin(ApplicationV2) 
       if (input.dataset.action) continue;
       input.addEventListener("change", (event) => this.#onField(event.currentTarget));
     }
-    // A selector that does not change the draft shows the line of its option without re-rendering (spec 026).
+    // A selector that does not change the draft updates its info icon without re-rendering (spec 026).
     for (const select of this.element.querySelectorAll("select[data-describe]")) {
       const line = this.element.querySelector(select.dataset.describe);
       const show = () => {
         const option = select.selectedOptions[0];
-        if (line) line.textContent = option?.dataset.desc ? `${option.text}: ${option.dataset.desc}` : "";
+        if (!line) return;
+        line.dataset.tooltip = option?.dataset.desc ?? "";
+        line.hidden = !option?.dataset.desc;
       };
       select.addEventListener("change", show);
       show();

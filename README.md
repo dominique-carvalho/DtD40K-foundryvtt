@@ -5,7 +5,7 @@ revision **7.7a** — a d10 **Roll & Keep** game.
 
 > Fan project. The descriptions shown are summaries in our own words; no full text from the book is reproduced.
 
-## Features (version 0.6.1)
+## Features (version 0.7.0)
 
 - **Character sheet** in the classic layout of the official sheet, with three modes:
   - **Edit** — characteristics in the 3×3 grid (Power / Finesse / Resistance × Mental / Physical / Social) and 27

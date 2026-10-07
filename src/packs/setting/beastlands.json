@@ -1,0 +1,96 @@
+{
+  "_id": "dtdJ723b1f51ad6b",
+  "_key": "!journal!dtdJ723b1f51ad6b",
+  "name": "Beastlands",
+  "folder": "dtdJ0954c03477b8",
+  "pages": [
+    {
+      "_id": "dtdJ05e0945b9aaf",
+      "_key": "!journal.pages!dtdJ723b1f51ad6b.dtdJ05e0945b9aaf",
+      "name": "Physical Conditions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Beastlands hold seven untamed worlds, all teeming with life, even the lone gas giant. Every planet carries nearly the same ecosystem, adapted to local conditions, perhaps because some ancient catastrophe bred extreme hardiness, though the evidence is thin. There are scattered ruins and odd power readings, but every survey and colony has failed, since the biosphere turns violently on intruders and grows stronger the more it is resisted. Active scans almost always provoke it.</p><p>The life here behaves like a planetary immune system acting from microbes up to orbit. Its tricks seem supernatural yet are pure biology: trees that launch fuel-filled shells as missiles capable of reaching orbit, and mirrored leaves that focus sunlight into heat beams. Animals, deadlier than dragons, cooperate against outsiders with no apparent hivemind, then return to ordinary predation once left alone. One terraforming attempt ended so badly that no one has tried again.</p>",
+        "format": 1
+      },
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJa2df8edc681e",
+      "_key": "!journal.pages!dtdJ723b1f51ad6b.dtdJa2df8edc681e",
+      "name": "Inhabitants",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The only true inhabitants are the hyper-evolved plants and animals, and nothing else lasts long before being eaten. A handful of heavily armed scientists still study them, working quickly and quietly, because even small disturbances can set the whole ecosystem on a rampage against them.</p>",
+        "format": 1
+      },
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ9a5fc23080a5",
+      "_key": "!journal.pages!dtdJ723b1f51ad6b.dtdJ9a5fc23080a5",
+      "name": "Locations",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Mothership, the kilometers-long wreck of the failed terraforming mission, drifts in-system; most of its tens of thousands of crew became biomass, and its corridors are now cave-like tunnels of fungus and metal-armored vines roamed by strange small beasts. The Sargasso Asteroids gather at Lagrange points, bound in webs of weedy growth; they are relatively safe for sampling, though rocks sometimes break loose on suspiciously accurate courses toward nearby ships.</p><p>The Great Circle is the system's only known ruin, a sealed ring twenty kilometers around that plants never overgrow and no expedition has entered. The Variable Gravity Well lies on a moon of the gas giant, where something buried emits warp energy that bends gravity unpredictably; a mound of dead giant predators shields the site, and the wildlife attacks anything approaching.</p>",
+        "format": 1
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ5b6d3f7bbc32",
+      "_key": "!journal.pages!dtdJ723b1f51ad6b.dtdJ5b6d3f7bbc32",
+      "name": "Adventure Seeds",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Story Master only: adventure seeds for this sphere.</p><section class=\"secret\" id=\"secret-dtdJ5b6d3f7bbc32\"><p>Humanoids blending traits of every known race have appeared on one planet: hidden natives, a fresh evolution, or rumored survivalist cultists? Returning researchers are disappearing while Beastlands-like creatures surface on their homeworlds, suggesting a dormant infection spreading across the Wheel.</p><p>Probes record time running faster inside the sphere the longer it stays unopened, which might explain how its life became so advanced. Unknown ships with organic polymer hulls and strange plasma weapons have been sighted around the Beastlands, one destroyed after attacking a @UUID[Compendium.dtd40k.races.Item.dtdRaceHuman0000]{Human} vessel, and they may be tied to space monsters raiding neighboring spheres.</p></section>",
+        "format": 1
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "sort": 900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dtd40k": {
+      "setting": {
+        "kind": "sphere",
+        "source": "DtD 7.7a pp. 480–482"
+      }
+    }
+  }
+}

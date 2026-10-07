@@ -1,13 +1,11 @@
 # Pendências — o que falta implementar (DtD 7.7a)
 
-Levantamento de 2026-09-27, depois da feature 012 (PRs 1–12 na `main`); atualizado com as features 013 (Veículos), 014 (Naves), 015 (Criação de armas), 016 (Criação guiada), 017 (Ações de combate), 018 (Perigos e XP), 019 (Munição), 020 (Custo dos Exalted Assets), 021 (Design system), 022 (Traits de NPC), 023 (Montador de personagem), 024 (Ícones dos compêndios), 025 (Ícones das condições), 026 (Descrições no montador) e 027 (Backing e Inheritance no montador). Cruza os capítulos da 7.7a com o que cada
+Levantamento de 2026-09-27, depois da feature 012 (PRs 1–12 na `main`); atualizado com as features 013 (Veículos), 014 (Naves), 015 (Criação de armas), 016 (Criação guiada), 017 (Ações de combate), 018 (Perigos e XP), 019 (Munição), 020 (Custo dos Exalted Assets), 021 (Design system), 022 (Traits de NPC), 023 (Montador de personagem), 024 (Ícones dos compêndios), 025 (Ícones das condições), 026 (Descrições no montador), 027 (Backing e Inheritance no montador) e 028 (Compêndio de cenário). Cruza os capítulos da 7.7a com o que cada
 feature entregou e com o que as specs deixaram fora de escopo ou como texto. Atualizar a cada feature.
 
 ## 1. Capítulos sem implementação
 
-| Capítulo | Conteúdo |
-|---|---|
-| **XVIII Cenário** | Ambientação sem regra mecânica (no máximo um compêndio de consulta) |
+Nenhum: o cap. XVIII (Cenário), só de ambientação, entrou como o compêndio de consulta *Setting* na 028.
 
 ## 2. Regras de jogo ainda não automatizadas
 
@@ -38,6 +36,7 @@ Nenhuma regra mecânica pendente (o custo dos Exalted Assets entrou na 020). O q
 | 021 Design system | NPC, minion, esquadrão, veículo, nave, itens e diálogos só com tokens e componentes (layout de antes); mensagens simples de chat em `<p>` sem cartão; proposta C (Dossiê) não feita |
 | 023 Montador de personagem | feats e assets com sub-categoria (Enemy, Peer…) pedem a escolha ao concluir; idiomas ficam para a ficha; quantidade de consumíveis 1 (o Mestre ajusta); itens do exemplo que não existem no compêndio (Biofoam) |
 | 026 Descrições no montador | descrições dos compêndios só em inglês; raças e exaltações mostram só o primeiro parágrafo; equipamento sem linha nas opções do seletor (só no item escolhido) |
+| 028 Compêndio de cenário | só consulta (resumos curtos); facções de Sigil como sugestão no Backing do montador e esfera de destino na viagem pelo Warp não ligadas; ganchos de aventura num bloco secreto (o jogador vê a página com um aviso), porque o Foundry ignora a permissão por página dentro de compêndios |
 | 027 Backing e Inheritance no montador | missões e Backgrounds temporários do Backing com o Mestre; item herdado liberado acima da nota entra no inventário sem vaga inicial |
 | 024–025 Ícones | sem arte ilustrada de retrato ou token; tokens já colocados nas cenas não são atualizados pelo menu; efeitos antigos de técnicas marciais e do Barrel Roll (duram até o próximo turno) não são reconhecidos pelo menu; divisão das condições por gravidade é premissa (spec 025) |
 | 013 Veículos | efeitos da maioria dos componentes (AI de bordo, COFFIN/SYNC, Berserker, ECM, Void Shield, Jump Jets, Afterburners por cena, Orgone Antennae, reatores), munições e modos de arma, terreno difícil e voo (queda e recuperação), Vault the Curb/Slip By/Pick Up, desvirar o veículo, compra de componentes com Wealth; Trick Shots com Mobile Trace System; pacotes de armas do Battlemecha |

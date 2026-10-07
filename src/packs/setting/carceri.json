@@ -1,0 +1,96 @@
+{
+  "_id": "dtdJ1450269057cd",
+  "_key": "!journal!dtdJ1450269057cd",
+  "name": "Carceri",
+  "folder": "dtdJ0954c03477b8",
+  "pages": [
+    {
+      "_id": "dtdJbd8973a05935",
+      "_key": "!journal.pages!dtdJ1450269057cd.dtdJbd8973a05935",
+      "name": "Physical Conditions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Carceri is a unique nest of Crystal Spheres set one within another like Russian dolls, each layer holding machinery usually credited to the Syrneth, though some scholars think it older. No one has reached the core, and every shell is harder to breach, but each one opened has yielded valuable technology. A dark nebula far from its portal relay hides it. The outer shell is easy to enter but funnels ships inward. Space between shells is compressed and grows exponentially with depth, from a few kilometres in the first layer to tens of thousands further in, yet inner spheres barely shrink, so there may be hundreds of layers.</p><p>Hazards abound: violent electrical storms whose bolts wreck small ships and fry systems, debris fields of razor-edged hull fragments, and black acid rain or snow that eats through hulls despite there being no atmosphere. Warp turbulence brings nightmares to anyone who sleeps, haunting them for life. In the deeper layers time itself is compressed, with cause and effect crowding together faster than perception can follow. Easily reached ruins have long been looted, pushing treasure hunters ever deeper.</p>",
+        "format": 1
+      },
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJe43fcb29e325",
+      "_key": "!journal.pages!dtdJ1450269057cd.dtdJe43fcb29e325",
+      "name": "Inhabitants",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Nobody sane lives in Carceri, and every @UUID[Compendium.dtd40k.races.Item.dtdRaceHuman0000]{Human} colony attempt has failed. The only visitors are reckless treasure hunters and gatecrashers chasing Syrneth relics. The native creatures are among the most dangerous known: giant insect-like scavengers that strip wrecked ships for anything edible, and large flying jellyfish predators that shrug off concentrated fire and seem to leech the life out of their prey.</p>",
+        "format": 1
+      },
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ1441802f18ce",
+      "_key": "!journal.pages!dtdJ1450269057cd.dtdJ1441802f18ce",
+      "name": "Locations",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Vault is a windowless, unlit iron sphere with a single dock, where the Factions send people who must disappear; no one has ever escaped, and its iron-fisted warden, Staccato Thaman, intends to keep it so. Rostok is a filthy station cobbled from scrapped hulls, the gatecrashers' supply stop and rumour mill, kept running by retired gatecrasher Sidorovich, where gear, salvage and the odd Syrneth artifact change hands.</p><p>Shipyard X-18, three layers down, fires on anyone approaching uninvited; rumours tie it to pirates, perhaps in league with a government, and it is building prototype ships with a novel navigation system meant to breach the deepest layers. Agathys is the sixth layer, the deepest reliably reached and partly mapped. Tales of passing beyond it are doubted, since the course corrections needed seem possible only for a computer, and neither the program nor the ship yet exists.</p>",
+        "format": 1
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ9d3c09d3129b",
+      "_key": "!journal.pages!dtdJ1450269057cd.dtdJ9d3c09d3129b",
+      "name": "Adventure Seeds",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Story Master only: adventure seeds for this sphere.</p><section class=\"secret\" id=\"secret-dtdJ9d3c09d3129b\"><p>A circle of mages has developed time-bending magic inspired by Carceri's strange properties and might share hints with someone persuasive or impressive enough. Beyond Agathys, at the deepest point, a monolith supposedly grants wishes to those who reach it, though it exacts a price and some petitioners got exactly what they asked for, to their horror.</p><p>In the void between shells, uncanny music offers power to listeners in exchange for betraying or killing someone close to them, with each offer tailored to its hearer. Wild rumours claim the Syrne hid not a weapon but their race's future deep within, and a few unreliable sources even insist they have met living Syrne.</p></section>",
+        "format": 1
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "sort": 1100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dtd40k": {
+      "setting": {
+        "kind": "sphere",
+        "source": "DtD 7.7a pp. 485–488"
+      }
+    }
+  }
+}

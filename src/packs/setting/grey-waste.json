@@ -1,0 +1,96 @@
+{
+  "_id": "dtdJ406b75cd2df1",
+  "_key": "!journal!dtdJ406b75cd2df1",
+  "name": "The Grey Waste",
+  "folder": "dtdJ0954c03477b8",
+  "pages": [
+    {
+      "_id": "dtdJ233988e63b92",
+      "_key": "!journal.pages!dtdJ406b75cd2df1.dtdJ233988e63b92",
+      "name": "Physical Conditions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Easy to navigate and wedged between the Abyss and Mount Celestia, the Grey Waste is a permanent front in the Blood War between Order and Chaos. Its three systems, around the pale stars Oinos, Niflheim and Pluton, have been pounded into gravel and drifting rocks. Both the Ruinous Powers and the Blessed Pantheon fight for it chiefly to deny it to the other, feeding endless ships and soldiers into pointless battles on floating fragments, the largest a few thousand kilometres wide and most barely a dozen.</p><p>Local physics forbids colour: everything appears in tones of grey. This cripples ship instruments that rely on coloured warnings or status readouts, and it wears on the mind. Visitors develop Waste Syndrome, losing hope, ambition and dreams, with symptoms much like post-traumatic stress, which is common enough here anyway.</p>",
+        "format": 1
+      },
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJa45102ff1872",
+      "_key": "!journal.pages!dtdJ406b75cd2df1.dtdJa45102ff1872",
+      "name": "Inhabitants",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Only two groups live here permanently: the dead and the larvae, and it is unclear which outnumber the other. Larvae are parasites that outlived their ruined homeworld by feeding on the plentiful corpses of fallen soldiers, mostly @UUID[Compendium.dtd40k.races.Item.dtdRaceAasimar00]{Aasimar} and @UUID[Compendium.dtd40k.races.Item.dtdRaceTiefling0]{Tiefling}. On their own they pose little threat.</p>",
+        "format": 1
+      },
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ955cb359d60f",
+      "_key": "!journal.pages!dtdJ406b75cd2df1.dtdJ955cb359d60f",
+      "name": "Locations",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Port at the Center sits at a stable point where the outer orbits cross. Its owner, Dandy Will, keeps it neutral by being useful to both sides, especially through medicine, and has won treaties banning combat there. He favours no god, but @UUID[Compendium.dtd40k.deities.Item.dtdD8426adac726d]{Vectron} has many followers here, making the port an informal pilgrimage site. Khin-Oin is a spine-like tower nearly eighty kilometres tall piercing an asteroid; the sphere's key fortress, it changes hands often, and only mercenaries have held it for long.</p><p>Death of Innocence is a ramshackle town of salvage and emergency shelters on a remote kilometre-wide rock, a refuge for deserters, war criminals and the shell-shocked. It is run by Viliki Cainor, a @UUID[Compendium.dtd40k.races.Item.dtdRaceHuman0000]{Human} veteran disillusioned with the war, whose warmth and optimism hold it together. Aeaea, the last intact planetoid, is constantly contested, its craters mostly from orbital bombardment.</p>",
+        "format": 1
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ51c578ed6d84",
+      "_key": "!journal.pages!dtdJ406b75cd2df1.dtdJ51c578ed6d84",
+      "name": "Adventure Seeds",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Story Master only: adventure seeds for this sphere.</p><section class=\"secret\" id=\"secret-dtdJ51c578ed6d84\"><p>A mysterious, wealthy and powerful group attends the Blood War's biggest battles to wager on them, and interferes when the fighting turns dull. Larvae left undisturbed long enough transform into lovely but lethal, spiteful creatures whose faces mimic the dead they ate and whose wings show those lives' worst regrets.</p><p>A wasting plague that ruins body, mind and reputedly soul is spreading; a cure would fetch a fortune, and finding its maker, if it is an escaped weapon, even more. Elsewhere, a necromancer has raised Corpus, a city whose walls, floors and furniture are fused undead bodies; it is fairly safe, but its mysterious creator is said to wield an artifact of great power.</p></section>",
+        "format": 1
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "sort": 1500000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dtd40k": {
+      "setting": {
+        "kind": "sphere",
+        "source": "DtD 7.7a pp. 496–498"
+      }
+    }
+  }
+}

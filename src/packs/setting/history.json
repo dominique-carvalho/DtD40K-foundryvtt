@@ -1,0 +1,134 @@
+{
+  "_id": "dtdJ7374af706996",
+  "_key": "!journal!dtdJ7374af706996",
+  "name": "History of the Wheel",
+  "folder": "dtdJ7661c8812ff2",
+  "pages": [
+    {
+      "_id": "dtdJ36511fb173b5",
+      "_key": "!journal.pages!dtdJ7374af706996.dtdJ36511fb173b5",
+      "name": "The War in Heaven (40,000 Years Ago)",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Syrne were the first people to master magic and technology well enough to reach beyond their home. Nearly ageless and deeply patient, they drew on warp power for countless purposes, built the Portal Relays, and are credited with uplifting most of the thinking species now active in the Astral Sea, among them the @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin}, @UUID[Compendium.dtd40k.races.Item.dtdRaceGnome0000]{Gnomes}, @UUID[Compendium.dtd40k.races.Item.dtdRaceOrk000000]{Orks} and Dragons.</p><p>Their downfall came in a struggle the Eldarin remember as the War in Heaven. Against them stood the C'tan, bodiless energy beings bound to the material universe, who chained the orderly Modrons inside necrodermis shells and sent them on Great Marches to exterminate life. The Syrne answered by raising the Eldarin as troops, later creating the Orks and, as their last and greatest weapon, the Dragons. No one knows how it ended: the Modrons were frozen in Mechanus and similar clockwork worlds, the C'tan fell dormant, the Syrne vanished entirely and the Portal Network went dark. Only half-mythic Eldarin records hint at Great Devourers, the so-called Reapers, as the cause.</p>",
+        "format": 1
+      },
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJe2a3d317e399",
+      "_key": "!journal.pages!dtdJ7374af706996.dtdJe2a3d317e399",
+      "name": "The Draconic Ascendency (10,000 Years Ago)",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>With their makers gone, the uplifted races went their own ways. The @UUID[Compendium.dtd40k.races.Item.dtdRaceOrk000000]{Orks} fell to fighting one another for the sheer love of battle. Some @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin} broke out of their Crystal Spheres in vast Craftworlds, restored many Portal Relays and stumbled upon Sigil, where the Lady of Pain already held her throne of blades.</p><p>The Dragons, refusing to be mere custodians of Syrneth ruins, conquered world after world with their own might and their uplifted @UUID[Compendium.dtd40k.races.Item.dtdRaceDragonbor]{Dragonborn} armies, building an empire under the god @UUID[Compendium.dtd40k.deities.Item.dtdDdc8e2b04a46d]{Bahamut}. Draconic pride soon split it apart: in the @UUID[Compendium.dtd40k.deities.Item.dtdD5f8c6c4a40a4]{Tiamat} Heresy roughly half of all dragons followed the warlord Tiamat against him, and she was slain upon Mount Celestia. The empire did not survive, but its lasting mark is that dragons now dwell in almost every Crystal Sphere.</p>",
+        "format": 1
+      },
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ3f1864758ae9",
+      "_key": "!journal.pages!dtdJ7374af706996.dtdJ3f1864758ae9",
+      "name": "The War of the Monster's Fall (7,000 Years Ago)",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Little is recorded of this age, yet it began the @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin} decline. Masters of the universe after the Dragon Empire broke, they kept reviving Portal Relays until they reopened one the Syrne had deliberately wrecked, long before the Eldarin existed, to wall off a lethal race. That sealed Crystal Sphere is Pandemonium, now forbidden to all, and from it poured the Aboleth, monstrous enslavers the Eldarin were not ready to face.</p><p>The gods ended the war by shaping the first @UUID[Compendium.dtd40k.races.Item.dtdRaceAasimar00]{Aasimar} and @UUID[Compendium.dtd40k.races.Item.dtdRaceTiefling0]{Tieflings}, fearless warriors in mighty armor armed with divinely granted weapons, tactics and relics. They drove the Aboleth back, sealed Pandemonium and shut its relay down again. Since then it has been law that no Portal Relay may be opened before the sphere beyond it is carefully studied, and the Eldarin were left without a purpose.</p>",
+        "format": 1
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ158d9cb4b5d2",
+      "_key": "!journal.pages!dtdJ7374af706996.dtdJ158d9cb4b5d2",
+      "name": "The Fall of the Eldarin (5,000 Years Ago)",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Unchallenged, the @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin} sank into decadence; their excesses wrecked what government remained on the homeworlds, and the Craftworlds severed ties. Centuries of worship through extreme sensation and self-indulgent rites fed a new deity until @UUID[Compendium.dtd40k.deities.Item.dtdD4cd53b93a093]{Slaanesh} was born, and the violence of that birth tore the Eldarin homeworlds and their sphere into the wound called the Abyss. Most Elven gods perished; @UUID[Compendium.dtd40k.deities.Item.dtdDc182cec5e0b4]{Corellon} survived, by fighting or by hiding depending on the teller, and Kaela Mensha Caine fell last, his blood scattered across the cosmos.</p><p>The Eldarin people broke into three. The true Eldarin escaped on their Craftworlds and now wander in migrant fleets. The Elves, bound to gravity and stripped of their old powers, are seen by the Eldarin as lost kin. The @UUID[Compendium.dtd40k.races.Item.dtdRaceDarkEldar]{Dark Eldarin} survive through oaths to the spider queen @UUID[Compendium.dtd40k.deities.Item.dtdDb4b4672a0d21]{Lolth} and raid as pirates from hidden enclaves.</p>",
+        "format": 1
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJc949d9536052",
+      "_key": "!journal.pages!dtdJ7374af706996.dtdJc949d9536052",
+      "name": "The Council Era (1,000 Years Ago)",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin} collapse left room for others to rise. A Council of Eldarin, Elves, @UUID[Compendium.dtd40k.races.Item.dtdRaceSquat0000]{Squats} and @UUID[Compendium.dtd40k.races.Item.dtdRaceDragonbor]{Dragonborn} took shape, governing from Sigil under the gaze of the Lady of Pain, with @UUID[Compendium.dtd40k.races.Item.dtdRaceAasimar00]{Aasimar} and @UUID[Compendium.dtd40k.races.Item.dtdRaceTiefling0]{Tieflings} as its enforcers, though feuds between their patron gods kept them fighting each other more often than any outside foe.</p><p>Sigil flourished. The original four seats grew to a dozen as Factions built around philosophies took charge of the city and, through it, the wider universe. Being so divided, the Factions mostly spend their effort cancelling out one another's schemes and get little else done.</p>",
+        "format": 1
+      },
+      "sort": 500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJb312c8748e8d",
+      "_key": "!journal.pages!dtdJ7374af706996.dtdJb312c8748e8d",
+      "name": "The Age of the Imperium (Current Day)",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The modern era begins with Humanity. Studying Syrneth ruins on their homeworld of Th'ah, @UUID[Compendium.dtd40k.races.Item.dtdRaceHuman0000]{Humans} built spelljamming ships and left their Crystal Sphere unaided. Early voyages were slow and often fatal, but they learned to wake Portal Relays and travel through the Warp, carving out a small empire. Their first contact with the @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin} came while opening an unknown relay; a brief war followed, and a human counterattack destroyed the Eldarin splinter fleet after it had seized just one sphere. The Council stepped in and revealed the wider Astral Sea to Humanity, and the sheer shock of it ended the war.</p><p>Humans remain bold explorers and a major driver of change; several Sigil Factions are led by humans, and their weight on the Council stirs envy in other races. @UUID[Compendium.dtd40k.races.Item.dtdRaceOrk000000]{Orks}, Eldarin pirates and dragon raids are minor troubles, but darker threats loom: the Modrons may be stirring for another Great March, whole Crystal Spheres have been stripped of life, perhaps by the Reapers, and Law and Chaos still fight their endless Blood War.</p>",
+        "format": 1
+      },
+      "sort": 600000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dtd40k": {
+      "setting": {
+        "kind": "history",
+        "source": "DtD 7.7a pp. 454–457"
+      }
+    }
+  }
+}

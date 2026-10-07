@@ -172,7 +172,7 @@ describe("compendium icons (FR-001, FR-011)", () => {
   });
   const docs = readdirSync("src/packs").flatMap((pack) => walk(join("src/packs", pack))
     .map((file) => ({ pack, file, doc: JSON.parse(readFileSync(file, "utf8")) })))
-    .filter(({ doc }) => !String(doc._key ?? "").startsWith("!folders"));
+    .filter(({ doc }) => !String(doc._key ?? "").startsWith("!folders") && !String(doc._key ?? "").startsWith("!journal!"));
   const images = docs.flatMap(({ file, doc }) => [
     { file, field: "img", value: doc.img },
     ...(doc.prototypeToken ? [{ file, field: "prototypeToken.texture.src", value: doc.prototypeToken.texture?.src }] : []),

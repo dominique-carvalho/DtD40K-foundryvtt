@@ -1,0 +1,134 @@
+{
+  "_id": "dtdJ588831654178",
+  "_key": "!journal!dtdJ588831654178",
+  "name": "The Great Wheel",
+  "folder": "dtdJbd060cc434a0",
+  "pages": [
+    {
+      "_id": "dtdJ3727a036f435",
+      "_key": "!journal.pages!dtdJ588831654178.dtdJ3727a036f435",
+      "name": "The Great Wheel",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The galaxy itself is the Great Wheel: thousands of Crystal Spheres adrift in the Astral Sea, laid out in a spiral with Sigil at the center. It is the ultimate frontier, a dark expanse dotted with scattered outposts of civilization. Most of it remains uncharted, and each unexplored sphere is like a sealed vault that may hold riches, deadly peril, or more often a generous helping of both.</p>",
+        "format": 1
+      },
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ05a1a1bf5b38",
+      "_key": "!journal.pages!dtdJ588831654178.dtdJ05a1a1bf5b38",
+      "name": "The Astral Sea",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Astral Sea is a cold, dead void broken only by Crystal Spheres, glowing bubbles big enough to hold one world or dozens. Their shells are a serious hazard: spelljamming ships that do not know the safe routes smash into them. Crossing the open Sea offers no shortcuts at all, only raw distance, and a trip between spheres can take years even for the swiftest vessel. On the other hand, the void itself is harmless, since nothing lives out there to threaten travelers.</p>",
+        "format": 1
+      },
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ4d41afa74273",
+      "_key": "!journal.pages!dtdJ588831654178.dtdJ4d41afa74273",
+      "name": "The Portal Network",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Few travelers rely on the Astral Sea. The Portal Network links many Crystal Spheres through Portal Relays, enormous Syrne constructs that predate human civilization and open fast routes into the Warp, a chaotic limbo of elemental storm shaped by passing thoughts and desires, and it rips apart any unshielded person or object. Despite that, it cuts journeys between spheres from years to a few weeks. Sigil shines as a fixed beacon even inside the Warp, letting ships navigate, which is why it counts as the hub of the whole network.</p>",
+        "format": 1
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ840dbfa85d34",
+      "_key": "!journal.pages!dtdJ588831654178.dtdJ840dbfa85d34",
+      "name": "Spelljamming Ships",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Without Spelljamming ships, crossing the Great Wheel is nearly impossible; hardly any creature can escape a gravity well unaided, let alone break through a Crystal Sphere or cross the Warp, true dragons being the obvious exception. Each ship blends technology and sorcery in proportions set by its builders' skill and culture. Under its own power a ship can cross space, but without a Portal Relay into the Warp its reach is tiny, and even neighbouring spheres may be decades apart.</p><p>Every people builds in its own style: the heavy-prowed warships of the human Imperium, the elegant skeletal wraithbone hulls of the @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin}, and the cobbled-together wrecks flown by the @UUID[Compendium.dtd40k.races.Item.dtdRaceOrk000000]{Orks}. No two peoples build quite alike, so the hull itself announces where a ship came from.</p>",
+        "format": 1
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ08a8e4a67ebe",
+      "_key": "!journal.pages!dtdJ588831654178.dtdJ08a8e4a67ebe",
+      "name": "The Warp",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Warp, also called Limbo or the Immaterium, is a parallel realm beneath physical reality: a boundless ocean of energy and seething elemental matter that holds the stray thoughts, emotions, memories and convictions of the living. It powers all magic, and some fear that sorcerers who drag its energy into the world endanger reality itself, perhaps even causing the Syrneth fall. Its key use is travel: a ship enters through a Portal Relay and, guided by a Navigator and the beacon of Sigil, can reach almost any point of the Great Wheel in weeks rather than generations.</p><p>It is also arguably the deadliest thing in existence. Its currents batter hulls, unshielded eyes risk madness or possession, and if a ship's protective fields fail, warp creatures board to corrupt or slaughter the crew. Without a Navigator, jumps are limited to roughly five light years. A jump feels like about two weeks aboard, but months, often around a year for distant points, may pass outside, and no one knows until the jump ends.</p>",
+        "format": 1
+      },
+      "sort": 500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ2776fbb3acec",
+      "_key": "!journal.pages!dtdJ588831654178.dtdJ2776fbb3acec",
+      "name": "The Umbra",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Umbra is the shallows of the Warp, a shadowy reflection of the real universe lying just behind a thin veil. Its landscape mirrors the physical world in dark form, tinted by the past of each location and the feelings tied to it, devoid of people, and quietly shifting to match reality when unobserved.</p><p>Spirits and many supernatural creatures can slip back and forth across that veil, and ghosts and lesser daemons use it to stir up trouble. Harm done there does not directly affect the material counterpart, though strange echoes occur; something destroyed on the other side, for instance, tends to suffer bad luck in reality.</p>",
+        "format": 1
+      },
+      "sort": 600000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "sort": 200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dtd40k": {
+      "setting": {
+        "kind": "cosmology",
+        "source": "DtD 7.7a pp. 457–459"
+      }
+    }
+  }
+}

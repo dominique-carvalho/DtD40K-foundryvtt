@@ -1,0 +1,96 @@
+{
+  "_id": "dtdJd9171ec8964d",
+  "_key": "!journal!dtdJd9171ec8964d",
+  "name": "Arborea",
+  "folder": "dtdJ0954c03477b8",
+  "pages": [
+    {
+      "_id": "dtdJd15aac3e9d82",
+      "_key": "!journal.pages!dtdJd9171ec8964d.dtdJd15aac3e9d82",
+      "name": "Physical Conditions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Arborea is a tourist magnet. Its resort world Ossa, once wet and quake-prone, now enjoys engineered weather and tectonic stabilisers, famous for tropical beaches and welcoming hosts. The system circles two suns: Rah, a large white star, and Risa, a small orange one that is impossibly young; Syrne ruins and @UUID[Compendium.dtd40k.races.Item.dtdRaceElf000000]{Elf} and @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin} lore suggest the Syrne ignited a former gas giant, likely to ease terraforming. Three worlds are habitable. Ossa's sea is mostly under a meter deep, cut by old rifts, a few still holding magma.</p><p>Arvandor, the first world, is a closed Elf preserve: an oversized forest of giant trees, huge trout and wolves two meters at the shoulder, where only invited guests are safe. The third world, Pelion, is a dusty, thin-aired waste under strict quarantine, hiding a secretive Elven settlement rumoured to guard something tied to its failed terraforming. A rainbow nebula lights the night sky, Arvandor has one great moon, the other inhabited worlds have many small ones, and the system's gas giant bears celebrated rings.</p>",
+        "format": 1
+      },
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ415726e0d2a9",
+      "_key": "!journal.pages!dtdJd9171ec8964d.dtdJ415726e0d2a9",
+      "name": "Inhabitants",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The natives are Elves, @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin} who settled the system ages ago and have little wish to leave. Less obvious to visitors is how crowded the system is with nature spirits, with faeries and elementals turning up everywhere. Locals offer small sacrifices to keep the elementals content, and many of Ossa's parties and rituals actually exist to keep tourists in the spirits' good graces, so joining in is more than politeness.</p>",
+        "format": 1
+      },
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ3dfa4f1f60c9",
+      "_key": "!journal.pages!dtdJd9171ec8964d.dtdJ3dfa4f1f60c9",
+      "name": "Locations",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Realm of @UUID[Compendium.dtd40k.deities.Item.dtdDc182cec5e0b4]{Corellon} on Arvandor has no borders or buildings; the restless god roams at will and shows up to outdo anyone praised too loudly. Aumaan, on Pelion, is a fortified Elven base built around a Syrne ruin and its Metatron ore, the psychoactive isotope used in Portal Relays; its Custodian, Nephythys, is secretly building giant humanoid war machines. The Gilded Hall on Ossa is a golden palace whose beauty affects each viewer differently; force is banned, only persuasion, and some guests never manage to leave.</p><p>Arvandor also hosts the Tribe of Tribes, the largest @UUID[Compendium.dtd40k.exaltations.Item.dtdExalWerewolf0]{Werewolf} society in the Wheel, where new werewolves are inducted, learn control and settle disputes under their ruler, the Marrok. Master Weather Control, staffed by thousands, keeps Ossa's climate mild through constant tiny corrections, since a lapse of minutes could unleash a storm on a world with almost no solid shelter. Its head, the mage Nautilla Colchea, is reportedly bored and may resign to travel.</p>",
+        "format": 1
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ52641e997d3e",
+      "_key": "!journal.pages!dtdJd9171ec8964d.dtdJ52641e997d3e",
+      "name": "Adventure Seeds",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Story Master only: adventure seeds for this sphere.</p><section class=\"secret\" id=\"secret-dtdJ52641e997d3e\"><p>A pungent flower common on Ossa inflames passions, and the Elves cultivate it, perhaps for blackmail or amusement, just as Faction leaders gather there for a summit. Somewhere on Arvandor a wandering pool of glowing gold reportedly reverses aging, revealing itself only to seekers who have proven worthy through long questing.</p><p>An Elven experiment using holofields and nerve interlinks to give each tourist a personal paradise has failed, leaving thousands dreaming in a trap that kills them on waking; someone must enter and resist its lures. Pirates flying advanced humanoid war machines are raiding nearby systems, and suspicion falls on Arborea despite official denials: has Nephythys gone rogue, or were her prototypes stolen?</p></section>",
+        "format": 1
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "sort": 600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dtd40k": {
+      "setting": {
+        "kind": "sphere",
+        "source": "DtD 7.7a pp. 468–470"
+      }
+    }
+  }
+}

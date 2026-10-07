@@ -1,0 +1,96 @@
+{
+  "_id": "dtdJa23df95077a9",
+  "_key": "!journal!dtdJa23df95077a9",
+  "name": "Arcadia",
+  "folder": "dtdJ0954c03477b8",
+  "pages": [
+    {
+      "_id": "dtdJaf0e41aa59a2",
+      "_key": "!journal.pages!dtdJa23df95077a9.dtdJaf0e41aa59a2",
+      "name": "Physical Conditions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Arcadia is a key breadbasket sphere. Its two habitable worlds have been terraformed into flat, gentle farmland with managed seas, shipping crops and grain throughout the Great Wheel. Orbits are regular, physics normal, the sun a cheerful yellow, the wildlife tame and the people friendly. The catch is order: the planetary militias tolerate no deviation, and natives obey every sign, keep to marked roads and never exceed their station. Recently the militia has tightened its grip further, and sorcery is now frowned upon, which in Arcadia is dangerous.</p><p>There were once three planets. Natives insist there have only ever been two, yet the third orbit holds a still-glowing, unspread debris field. Rumour says a botched sorcerous working meant to stop anyone from thinking out of line destroyed it; officially the militia cordon merely protects ships from natural hazards, and approaching within several light-seconds is punishable by death. Visitors may stay as long as they obey, and residents seem so content they never wish to leave.</p>",
+        "format": 1
+      },
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJac22565558f5",
+      "_key": "!journal.pages!dtdJa23df95077a9.dtdJac22565558f5",
+      "name": "Inhabitants",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Arcadia's population is mixed, including @UUID[Compendium.dtd40k.races.Item.dtdRaceHuman0000]{Human}, @UUID[Compendium.dtd40k.races.Item.dtdRaceElf000000]{Elf}, @UUID[Compendium.dtd40k.races.Item.dtdRaceSquat0000]{Squat}, @UUID[Compendium.dtd40k.races.Item.dtdRaceHalfling0]{Halfling} and @UUID[Compendium.dtd40k.races.Item.dtdRaceAasimar00]{Aasimar} settlers, all laboring together for the common good. Even the animals cooperate: farm livestock willingly queue up for slaughter. Outsiders find this deeply disturbing, but to the locals it is simply natural, since serving that purpose is what the animals exist for.</p>",
+        "format": 1
+      },
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ8f90fc135515",
+      "_key": "!journal.pages!dtdJa23df95077a9.dtdJ8f90fc135515",
+      "name": "Locations",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Abellio is an almost perfectly smooth grassland world, its relief spanning barely a hundred meters; every tree stands in an orchard, every field holds livestock, and reefs keep fish schools in neat order. It seems it would keep running even without people. Buxenus is closed behind passes and endless bureaucracy unless one is invited; it hosts the militia headquarters and rumoured kennel-like reeducation camps. The Great Mirror, thousands of kilometers wide and constantly repaired, beams extra sunlight onto Abellio so night is only a brief dusk.</p><p>Nemausus, the vanished third planet, is now a spreading cloud of sorcery-tainted rubble flickering with violet energy. A permanent militia fleet guards it and gives intruders a single warning before opening fire. Arcadian records claim the field has existed for billions of years, while outside records show Nemausus was a trading post just two centuries ago.</p>",
+        "format": 1
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJbab5d8821e7d",
+      "_key": "!journal.pages!dtdJa23df95077a9.dtdJbab5d8821e7d",
+      "name": "Adventure Seeds",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Story Master only: adventure seeds for this sphere.</p><section class=\"secret\" id=\"secret-dtdJbab5d8821e7d\"><p>Arcadia is suspiciously orderly, and closely observed behaviour of its people and animals resembles logic gates; some suspect both worlds form a vast computer with an unknown purpose, though observers tend to be expelled. Nemausus was destroyed on purpose as a last resort, reportedly because modrons were waking to tidy things up, and more may be dormant elsewhere.</p><p>Buxenus is guarded because its crops include valuable medicinal and recreational herbs, mostly used to sedate newcomers and erase feelings that clash with Arcadian norms. Perhaps too much order breaks the mind: rumours speak of seasonal farm festivals with burnt offerings of crops, animals, or people who fail to fit in.</p></section>",
+        "format": 1
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "sort": 700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dtd40k": {
+      "setting": {
+        "kind": "sphere",
+        "source": "DtD 7.7a pp. 470–473"
+      }
+    }
+  }
+}

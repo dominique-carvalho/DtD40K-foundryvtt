@@ -1,0 +1,96 @@
+{
+  "_id": "dtdJ513c96486d49",
+  "_key": "!journal!dtdJ513c96486d49",
+  "name": "Sigil",
+  "folder": "dtdJ959b6d983c7e",
+  "pages": [
+    {
+      "_id": "dtdJ834777257494",
+      "_key": "!journal.pages!dtdJ513c96486d49.dtdJ834777257494",
+      "name": "Overview",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Sigil, also called the City of Doors or the Hub, sits at the center of the cosmos and shines in the Warp as a fixed beacon that makes travel across the infinities possible. Physically it is a huge torus floating free outside the Crystal Spheres, its inner face crowded with buildings. Like the portal relays, with which it shares much technology, it is regarded as the finest work of the Syrne, and it is the Great Wheel's capital of politics, culture and commerce.</p><p>Officially the city is neutral: no wars are fought there and no armies march through, so even bitter foes such as @UUID[Compendium.dtd40k.races.Item.dtdRaceAasimar00]{Aasimar} and @UUID[Compendium.dtd40k.races.Item.dtdRaceTiefling0]{Tiefling} may drink at the same table. That neutrality does not mean safety. Street violence is frequent and falls mostly on the reckless and the poor, while the Harmonium enforces order. Every people and creed passes through, making Sigil a bewildering, half-controlled jumble where anything at all can be bought or found.</p>",
+        "format": 1
+      },
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJd9cf63b43189",
+      "_key": "!journal.pages!dtdJ513c96486d49.dtdJd9cf63b43189",
+      "name": "The Lady of Pain",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The silent, undying ruler of Sigil is the Lady of Pain; some claim the city's light in the Warp comes from her, though she has never said. She rarely issues commands, relaying any orders via her servants, the dabus; yet her rulings are final and defiance means a quick death. No god may manifest in the city; @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin} recall a single forgotten god of travel who tried, after which all his followers were found flayed, their souls gone.</p><p>She leaves daily administration to the Council and the Factions but acts against any genuine threat: calling up powerful Warp entities, killing dabus, trying to wreck the station or stirring revolt against her. Factions are not exempt. Once there were fifteen, and those that grew too ambitious vanished in a single night together with every member.</p>",
+        "format": 1
+      },
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ873640379f09",
+      "_key": "!journal.pages!dtdJ513c96486d49.dtdJ873640379f09",
+      "name": "Factions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Factions are belief-based organizations, closer to philosophies or political parties than to nations, that each run part of Sigil under a Factol while the Lady of Pain watches.</p><ul><li><strong>Believers of the Source</strong> (Factol Ambar): The Godsmen hold that everything can ascend; life is a test, and those who fail are reborn to try again until the whole Wheel empties and falls apart. Based in the Great Foundry, they arbitrate disputes and keep rival faiths from fighting.</li><li><strong>Bleak Cabal</strong> (Factol Lhar): The Bleakers see no inherent meaning in existence beyond what each being projects onto the void, so people can rely only on one another. They staff charities, orphanages, sanitariums and soup kitchens.</li><li><strong>Doomguard</strong> (Factol Pentar): Entropy is the destiny of all things, and the universe exists to wind down to a final rest; those who repair and preserve oppose its natural course. They hold Sigil's armory and decide where the weapons go.</li><li><strong>Dustmen</strong> (Factol Skall): Everyone is already dead, whether they realize it or not, and should come to understand this so-called life before passing on. Rumor holds that their Factol is a @UUID[Compendium.dtd40k.exaltations.Item.dtdExalVampire00]{Vampire}; they collect Sigil's dead at the Mortuary.</li><li><strong>Fated</strong> (Duke Rowan Darkwood): The Takers believe the multiverse belongs to whoever seizes it and that hard work, not luck, earns rewards. They keep the Hall of Records, logging deeds, births and deaths, and are resented as the city's tax collectors.</li><li><strong>Fraternity of Order</strong> (Factol Haskar): The Guvners think every level of reality runs on laws, and that mastering them and their loopholes grants power beyond sorcery. They staff Sigil's courts, from minor ward courts up to the Council's High Court.</li><li><strong>Harmonium</strong> (Factol Sarin): The Hardheads believe peace comes from everyone sharing one view, theirs, and will crack heads to impose it. They serve as the city watch, though the Doomguard's control of the Armory keeps heavy weapons out of their reach.</li><li><strong>Mercykillers</strong> (Alisohn Nilesia): Justice is absolute: every crime must be punished, mercy is a crutch of the weak, and a cleansed Wheel would be perfect. Their young Factol is among the cruelest they have had, restrained only by calmer subordinates.</li><li><strong>Sign of One</strong> (Factol Darius): Each individual is unique and may be the mind dreaming reality into being. The Signers manage the Hall of Speakers, the chamber where laws are made and feuds and treaties settled, and their Factol is respected for keeping business impartial.</li><li><strong>Society of Sensation</strong> (Factol Erin): The Sensates, a huge and influential faction, hold that only direct sensory experience reveals truth. They run the Civic Festhall and keep entertainment flowing; their Factol rose to power quickly after arriving in Sigil.</li><li><strong>Transcendent Order</strong> (Factol Rhys): The Ciphers train body and mind until right action comes instinctively, uniting the self with the universe. Their Factol is an enigmatic @UUID[Compendium.dtd40k.races.Item.dtdRaceTiefling0]{Tiefling}, and they act as Sigil's most widely trusted diplomats and advisors.</li><li><strong>The Verdant Guild</strong> (Strongbow): Wild places underpin all life and must be shielded from civilization and destruction; members wear animal masks. They oversee the market and customs, and their @UUID[Compendium.dtd40k.races.Item.dtdRaceElf000000]{Elf} Factol reportedly wishes to step down.</li></ul>",
+        "format": 1
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJdea0dab0cbcf",
+      "_key": "!journal.pages!dtdJ513c96486d49.dtdJdea0dab0cbcf",
+      "name": "Locations",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Most of Sigil's landmarks are faction headquarters and civic offices. Newcomers usually see the Sorting House first, where the Verdant Guild scans luggage with auspexes for contraband. The Godsmen work from the Great Foundry, the Dustmen keep bodies in the Mortuary until someone claims them, and the Doomguard control the Armory. The Fated maintain the Hall of Records, the city's register of deeds, births and deaths, from which taxes are also collected.</p><p>Government happens in the Hall of Speakers, run by the Sign of One, where faction leaders draft city law and broker treaties, while the Fraternity of Order presides over every court, the Council's High Court included. For leisure, the Sensates' Civic Festhall offers almost any experience imaginable, from @UUID[Compendium.dtd40k.races.Item.dtdRaceTiefling0]{Tiefling} ballet to staged debates between dragons and the people who hunt them.</p>",
+        "format": 1
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dtd40k": {
+      "setting": {
+        "kind": "sigil",
+        "source": "DtD 7.7a pp. 460–464"
+      }
+    }
+  }
+}

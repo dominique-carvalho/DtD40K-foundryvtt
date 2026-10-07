@@ -1,0 +1,96 @@
+{
+  "_id": "dtdJ96a5f3806fc9",
+  "_key": "!journal!dtdJ96a5f3806fc9",
+  "name": "Elysium",
+  "folder": "dtdJ0954c03477b8",
+  "pages": [
+    {
+      "_id": "dtdJdce3cc7de4d1",
+      "_key": "!journal.pages!dtdJ96a5f3806fc9.dtdJdce3cc7de4d1",
+      "name": "Physical Conditions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Elysium is a compact sphere of six Maiden Worlds, each fertile, lovely and fully habitable, tended by the @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin} as something between a garden and a wilderness. Natural dangers are almost nonexistent: no predators that hunt people, no toxic plants, no lava seas or poisonous skies, and the space between planets is swept clean of every speck of debris. The real hazard is the Eldarin themselves, who claim the sphere, guard it fiercely and expect visitors to respect their laws and leave the land undisturbed. They build no permanent towns, preferring orbital stations and their ships.</p><p>Each world has its own single climate. The first is a desert rich in hidden food and water, suited to meditation; the second a steaming jungle whose beasts, tamed by millennia of breeding, never harm Eldarin or most sentients; the third rolling grassland with boulders, vines and sculpted dwarf trees; the fourth a temperate forest full of rivers and seas; the fifth a cooler conifer forest of light snow and seasonal thaws; and the sixth a glacial tundra of wind-carved ice pillars, another quiet retreat.</p>",
+        "format": 1
+      },
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ289cb9b595aa",
+      "_key": "!journal.pages!dtdJ96a5f3806fc9.dtdJ289cb9b595aa",
+      "name": "Inhabitants",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Wildlife is plentiful, hand-picked by the @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin} for beauty and interest, along with humble creatures like worms and ants that keep the ecosystems running. Eldarin are always present, and this is one of the rare places where members of different craftworlds mix. Other races are actively driven off, usually with lethal force. A proven ally may be granted a visit, the highest honour the Eldarin can bestow, though such guests are discreetly watched the whole time.</p>",
+        "format": 1
+      },
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ8c36036e667e",
+      "_key": "!journal.pages!dtdJ96a5f3806fc9.dtdJ8c36036e667e",
+      "name": "Locations",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Place names are condensed from far longer @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin} originals. The World Harbour, a skeletal station beyond the sixth planet, is the only dock able to hold a world-ship; major repairs happen there in secret, and new world-ships of wraithbone are grown there over centuries, though none in living memory. The Array is a solar net around the sun powering weather machines that fix each world's biome; a sect of very young and very old Eldarin who never depart maintains it, and nearly every Eldarin serves a stint there.</p><p>The Axis, a hollowed asteroid, is the nearest thing the Eldarin have to a capital, hosting formal gatherings that blend diplomacy with courtship. Its commander, Haman Karn, is a young warrior and leader rumoured to have recently Exalted, and she would happily see other races wiped out. The Cradle is a heavily fortified station where Eldarin young are raised, with automated systems to protect them even if every guard dies; rumour speaks of millions of artificial wombs, yet the race keeps shrinking.</p>",
+        "format": 1
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ4f3202f836fb",
+      "_key": "!journal.pages!dtdJ96a5f3806fc9.dtdJ4f3202f836fb",
+      "name": "Adventure Seeds",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Story Master only: adventure seeds for this sphere.</p><section class=\"secret\" id=\"secret-dtdJ4f3202f836fb\"><p>Beneath the worlds lie vast catacombs holding the remains and treasures of mighty @UUID[Compendium.dtd40k.races.Item.dtdRaceEldarin00]{Eldarin}, a fortune for any tomb robber who can get in and out alive. Secretly, the Eldarin are losing control of their Maiden Worlds: a monstrous predator has appeared on the second world, killing dozens of warriors and growing stronger, and they will pay handsomely for its death, though hunters should secure guaranteed safe passage first. Finally, the dwindling Eldarin seek new blood, and the heroes must safely bring two guests to Elysium, a @UUID[Compendium.dtd40k.races.Item.dtdRaceDarkEldar]{Dark Eldarin} Archon and an @UUID[Compendium.dtd40k.races.Item.dtdRaceElf000000]{Elf} prince, while thwarting their schemes.</p></section>",
+        "format": 1
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "sort": 1300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dtd40k": {
+      "setting": {
+        "kind": "sphere",
+        "source": "DtD 7.7a pp. 491–493"
+      }
+    }
+  }
+}

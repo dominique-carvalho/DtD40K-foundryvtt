@@ -111,6 +111,10 @@ revision **7.7a** — a d10 **Roll & Keep** game.
   always in view) and Illuminated (codex page), picked from the sheet menu; chat cards with dice on d10 facets; light
   (parchment) and dark (cogitator) variants that follow the Foundry theme; bundled free fonts. Details in
   `docs/design-system.md`.
+- **Setting**: *Setting* compendium of journals summarizing ch. XVIII in our own words — the history of the Wheel,
+  the cosmology (Astral Sea, portals, spelljamming ships, Warp, Umbra), Sigil with the Lady of Pain and the 12 factions,
+  and the 15 notable crystal spheres (physical conditions, inhabitants, locations and adventure seeds, the seeds visible
+  only to the GM). Gods, races and exaltations mentioned link to their compendium entries.
 - **Custom icons**: every item, actor and table in the compendiums has an icon on the Cogitator plate (iron octagon,
   brass rim and a glyph in the category color); items and actors created in the world start with their type's icon,
   and the GM updates older world documents in Settings → Compendium icons. The 30 conditions and the system's effects
@@ -206,7 +210,7 @@ npm run build:packs
   ch. XVII and the 2 Warp tables), `spells` (126 spells, ch. VIII), `martial-schools` (15 schools, chs. IX–X),
   `deities` (21 gods, ch. XII; the Degeneration table is in `combat-tables`), `antagonists` (47 NPCs and 4 Minion
   Squads, ch. XX, GM only), `vehicle-components` (131 components, weapons and ammunition, ch. XV), `vehicles`
-  (16 sample vehicles), `ship-components` (104 parts, ch. XVI) and `ships` (6 NPC ships).
+  (16 sample vehicles), `ship-components` (104 parts, ch. XVI) `ships` (6 NPC ships) and `setting` (18 journals summarizing ch. XVIII).
 
 Foundry may rewrite the linked checkout's `system.json` (formatting only); restore it with
 `git checkout -- system.json` before committing.

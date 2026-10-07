@@ -15,7 +15,7 @@
 | Campo | Valor |
 |---|---|
 | `_id`, `_key` | id estável; `!journal!<id>` |
-| `name` | ex.: "History of the Wheel", "The Great Wheel", "Sigil", "Baatorian" |
+| `name` | ex.: "History of the Wheel", "The Great Wheel", "Sigil", "Baator" |
 | `folder` | id da pasta |
 | `pages` | páginas embutidas (abaixo), em ordem |
 | `flags.dtd40k.setting` | `{ kind: "history" \| "cosmology" \| "sigil" \| "sphere", source: "DtD 7.7a p. N" }` |

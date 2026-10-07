@@ -1,0 +1,96 @@
+{
+  "_id": "dtdJ957108c2c0df",
+  "_key": "!journal!dtdJ957108c2c0df",
+  "name": "Mount Celestia",
+  "folder": "dtdJ0954c03477b8",
+  "pages": [
+    {
+      "_id": "dtdJ0cfdb15c00b7",
+      "_key": "!journal.pages!dtdJ957108c2c0df.dtdJ0cfdb15c00b7",
+      "name": "Physical Conditions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Mount Celestia is a mountain as large as a solar system, rising from an ocean that occupies half its Crystal Sphere. It is the stronghold of the Blessed Pantheon, much as the Abyss is for the Ruinous Powers, and home of the @UUID[Compendium.dtd40k.races.Item.dtdRaceAasimar00]{Aasimar}. Gravity is personal: dubbed 'Intelligent Falling', it seems to press on each visitor according to their guilt, while strong magical resistance lightens it or nearly cancels it. Objects fall normally. Nothing can fly up the slope; ships hover just above sea level, and the only way up is to walk or climb.</p><p>The mountain rises in seven planet-sized terraces called Traverses, beginning at a white-sand shore. Each higher Traverse looks radiant and close but grows harder to reach, veiled in haze. The gods dwell at the summit, and no climber has returned from it; the faithful call it paradise, but it is more likely the hidden heart of the Pantheon's war effort. Aasimar enforce divine law with quick, generally fair justice: fines, jail, exile, or swift execution. Otherwise the weather is mild and warm with gentle rain.</p>",
+        "format": 1
+      },
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJ8760c17e4590",
+      "_key": "!journal.pages!dtdJ957108c2c0df.dtdJ8760c17e4590",
+      "name": "Inhabitants",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Nearly every sentient race lives here except @UUID[Compendium.dtd40k.races.Item.dtdRaceTiefling0]{Tieflings}, who are politely asked to leave once and then exiled. Animals are all small and docile; nothing is more threatening than the sheep that farmers keep on the lower Traverses. Native-born @UUID[Compendium.dtd40k.races.Item.dtdRaceAasimar00]{Aasimar} act as an upper class, though they insist everyone stands equal.</p>",
+        "format": 1
+      },
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJfc0fa7898db5",
+      "_key": "!journal.pages!dtdJ957108c2c0df.dtdJfc0fa7898db5",
+      "name": "Locations",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Fortress of @UUID[Compendium.dtd40k.deities.Item.dtdD5e616e9a954a]{Sigmar}: a continent-sized palace around an enormous golden throne, guarded by the Custodes, millennia-old @UUID[Compendium.dtd40k.races.Item.dtdRaceAasimar00]{Aasimar} @UUID[Compendium.dtd40k.exaltations.Item.dtdExalChosen000]{Chosen}; his large army is usually away on crusade, and every feature of the land is planned and useful, visitors included. Bahamut's Palace: a roving palace made of treasure and guarded by a small but elite dragon host. The Soulforge: Moradin's forge, where @UUID[Compendium.dtd40k.races.Item.dtdRaceSquat0000]{Squats} say their souls are made and Aasimar are reforged, losing their old memories. The Unconquered Sun: Pelor's blinding orichalcum sphere at the summit, a maze to intruders.</p><p>The Halls of Justice: Cuthbert's realm sits on the first Traverse, a vast prison where captives are 'reformed' toward proper faith under an aura that compels obedience; @UUID[Compendium.dtd40k.deities.Item.dtdD422d06b5a269]{Cuthbert} himself is never seen, reading his book of every transgression. The God Machine: a secret facility deep beneath the mountain where Tech-Priests study and worship a talking, intelligent device tied to the @UUID[Compendium.dtd40k.deities.Item.dtdD44ece04a8b8b]{Omnissiah}, or perhaps the Omnissiah itself. Entrants must swear an oath to Cuthbert to keep its secrets, and only senior Tech-Priests are admitted.</p>",
+        "format": 1
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dtdJe2d83845828f",
+      "_key": "!journal.pages!dtdJ957108c2c0df.dtdJe2d83845828f",
+      "name": "Adventure Seeds",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Story Master only: adventure seeds for this sphere.</p><section class=\"secret\" id=\"secret-dtdJe2d83845828f\"><p>A wealthy man wants a friend broken out of Cuthbert's prison, since the prisoner knows where loot from a great relic heist is hidden; once freed, he must also be deprogrammed. A Traverse has turned to the Grey Council and the Blessed Pantheon is purging it, apparently not for the first time, with the heroes trapped in the middle.</p><p>On the first Traverse, someone is brewing an addictive drug from Moradin's divine forge-energy; the heroes can profit or shut the alchemist down. Elsewhere, a band of Pelor's paladin women guarding a minor shrine faces knights of another order claiming it, and holy war looms unless someone steps in.</p></section>",
+        "format": 1
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "sort": 1700000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dtd40k": {
+      "setting": {
+        "kind": "sphere",
+        "source": "DtD 7.7a pp. 500–503"
+      }
+    }
+  }
+}

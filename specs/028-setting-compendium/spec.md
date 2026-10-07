@@ -34,7 +34,7 @@ abre a mesma esfera lê tudo, menos os ganchos.
 
 **Why this priority**: as 15 esferas são a maior parte do capítulo e o que o Mestre mais consulta durante o jogo.
 
-**Independent Test**: abrir "Baatorian" como Mestre e como jogador; conferir as páginas e que os ganchos só aparecem
+**Independent Test**: abrir "Baator" como Mestre e como jogador; conferir as páginas e que os ganchos só aparecem
 para o Mestre.
 
 **Acceptance Scenarios**:

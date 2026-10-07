@@ -32,6 +32,6 @@
 ## Notes
 
 - As três decisões (profundidade, integrações, visibilidade) foram tomadas pelo usuário antes da spec.
-- O levantamento do capítulo confirmou 15 esferas (Abyssal, Acheronian, Arborean, Arcadian, Baatorian, Beastlands,
-  Bytopian, Carcerian, Celestian, Commorraghan, Elysian, Gehennan, Grey Waste, Mechanian, Pandemonium) e nenhuma regra
+- O levantamento do capítulo confirmou 15 esferas (Abyss, Acheron, Arborea, Arcadia, Baator, Beastlands,
+  Bytopia, Carceri, Commorragh, Elysium, Gehenna, The Grey Waste, Mechanus, Mount Celestia, Pandemonium) e nenhuma regra
   mecânica (sem rolagem, TN ou modificador).

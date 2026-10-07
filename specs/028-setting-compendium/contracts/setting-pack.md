@@ -10,8 +10,8 @@
 ## Teste `tests/unit/setting.test.mjs`
 
 - 4 pastas `JournalEntry` e 18 diários, cada um numa pasta existente.
-- As 15 esferas: Abyssal, Acheronian, Arborean, Arcadian, Baatorian, Beastlands, Bytopian, Carcerian, Celestian,
-  Commorraghan, Elysian, Gehennan, Grey Waste, Mechanian, Pandemonium; cada uma com as 4 páginas na ordem.
+- As 15 esferas: Abyss, Acheron, Arborea, Arcadia, Baator, Beastlands, Bytopia, Carceri, Commorragh, Elysium, Gehenna,
+  The Grey Waste, Mechanus, Mount Celestia, Pandemonium; cada uma com as 4 páginas na ordem.
 - Página Adventure Seeds: um aviso fora do segredo e todo o resto dentro de `<section class="secret">`; nenhuma outra
   página tem segredo.
 - Todo `@UUID[Compendium.dtd40k.<pack>.Item.<id>]` aponta para um documento existente em `src/packs/<pack>`, e cada
